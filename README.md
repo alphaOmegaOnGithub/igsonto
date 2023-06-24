@@ -7,6 +7,15 @@ Goal: This work aims at the definition of an ontology-based framework (IGONTO) t
 Tooling: For this work the tools set to use is; protégé as the authoring tool, Allegro-Graph the triple store, Allegro-Gruff the Graph-UI, Alfresco the artefact repository. Use the AS-Gitlab project “ https://gitlab-as.informatik.uni-stuttgart.de/as/devotigdl” to capture source code developed, progress and to document lessons learned.
 
 # Expected deliverables and results:
+1.	Create an ontology using the IG vocabulary terms related to the following categories (Organization, Subject / Role,  Goal , Objectives, Activities, Data, Capability) as listed in Table 1 below. For each concept class (term) defined its object properties (relations), data properties (characteristics, capabilities and restrictions) together with annotations extracted from the EU GDPR articles. 
+2.	Transfer the sematic schema created in 1) in to the AllegroGaph triple store and add a number of individuals derived from the classes listed in the categories (Architecture & Design, System, Lifecycle, workflow, Processes, Operations) Table 1 also with objects, data properties and required annotations.
+3.	 Finally develop SPARQL queries that are able to answer the following questions: 
+o	What are the obligations mandated by GDPR for a firm operating in the EU?
+o	What are the responsibilities of the data controller and processors according to GDPR? 
+o	What are the rights of the Data Subject according to GDPR? 
+o	Given the rights of the Data Subject what are the inferred data lifecycle processes required such to satisfy the stated requirements? 
+o	… 
+
 
 # Approach
 
@@ -35,7 +44,21 @@ returns meaningful results.
 Please familiarize yourself with the current IGONTO framework and semantic model as described in the following related work.
 
 
-Fig:01 IGONTO an ontology on information governance – high level  sematic model.
+## Table 1: IG Vocabulary Terms,  Taxonomy and Categories
+
+Top Level Category / Sub-Category	Maturity Levels
+Organization 	Business Units, Development, Records Management, Legal, Risk & Compliance, Privacy, Security	Initial (L1) Repeatable (L2)
+Defined (L3)    Managed (L4)      Optimized (L5)
+Subject / Role 	Stake-holder, Steering Committee, IG Leadership, CSO, CCO, Data Subject, Data Processor, Data Controller, Data Protection Officer (DPO),  	
+Goal 	Accountability, Integrity, Protection, Compliance, Organizational Communication 	
+Objectives:	Requirement, Functional Requirement, Operational Requirement, Availability, Retention, Disposition, Project Management,  Maturity, , Technology	
+Activities:	Planning (P), Control (C), Development (D), Operations (O), Acquire, Implement , Deliver, Support, Monitor, Measure, Evaluate, Report.	
+Data	Data, Metadata, Content, Information, Record, Policy, Rule, Metric, Maturity Level, 	
+Capability:	Data Inventory and Mapping, Privacy Impact Assessments (PIAs), Lawful Basis for Processing, Data Subject Rights, Data Breach Management, Vendor Management, Data Retention and Erasure, Data Security and Privacy Controls, Auditing and Monitoring	
+Architecture & Design 	Information Architecture, Technology Architecture, Design, Model, Component, Taxonomy, Metadata, Formats, Protocols, Information Security, Content Services, APIs, Search, Metric, Policy, Rules, Procedure, Roles, Benchmarking, Accountability, Access Control, 	
+System	Information (Collection, Access), ECM System (Repository, Archive, Catalog), RDBMS, Database, Full-Text Engine, Information Retrieval, 	
+Lifecycle,  workflow,  Process:	Information Lifecycle Management, (Capture, collaboration, version control, Archiving), Identification, Processing, Review, Analysis, Preservation, Protection,  Privacy, Search, Records Lifecycle Management (retention, storage, holds, disposal), eDiscovery (case management) 	
+Operations	Administration, Lifecycle Management, Support, Infrastructure, Provisioning, Deployment, Orchestration, Change Management, Training, Help desk, DAQs, Application, Software, SLA, Licensing, Network, Connectivity, Hosting, Cloud, Servers, 	
 
 
 Fig:02 
