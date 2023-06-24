@@ -10,11 +10,11 @@ Tooling: For this work the tools set to use is; protégé as the authoring tool,
 1.	Create an ontology using the IG vocabulary terms related to the following categories (Organization, Subject / Role,  Goal , Objectives, Activities, Data, Capability) as listed in Table 1 below. For each concept class (term) defined its object properties (relations), data properties (characteristics, capabilities and restrictions) together with annotations extracted from the EU GDPR articles. 
 2.	Transfer the sematic schema created in 1) in to the AllegroGaph triple store and add a number of individuals derived from the classes listed in the categories (Architecture & Design, System, Lifecycle, workflow, Processes, Operations) Table 1 also with objects, data properties and required annotations.
 3.	 Finally develop SPARQL queries that are able to answer the following questions: 
-o	What are the obligations mandated by GDPR for a firm operating in the EU?
-o	What are the responsibilities of the data controller and processors according to GDPR? 
-o	What are the rights of the Data Subject according to GDPR? 
-o	Given the rights of the Data Subject what are the inferred data lifecycle processes required such to satisfy the stated requirements? 
-o	… 
+    -	What are the obligations mandated by GDPR for a firm operating in the EU?
+    -	What are the responsibilities of the data controller and processors according to GDPR? 
+    -	What are the rights of the Data Subject according to GDPR? 
+    -	Given the rights of the Data Subject what are the inferred data lifecycle processes required such to satisfy the stated requirements? 
+    -	… 
 
 
 # Approach
