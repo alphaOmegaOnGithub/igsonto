@@ -65,7 +65,7 @@ Operations	Administration, Lifecycle Management, Support, Infrastructure, Provis
 ![Image](../images/igontoTab01.png?raw=true)
 
 **Table01:**
-![Image](../images/igontoTab02.png?raw=true)
+![Image](../images/igontoTab02a.png?raw=true)
 
 
 
