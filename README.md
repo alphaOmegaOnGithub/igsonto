@@ -66,7 +66,7 @@ Operations	Administration, Lifecycle Management, Support, Infrastructure, Provis
 
 
 **Table02:**
-![Image](../images/igontoTab02a.png?raw=true)
+![Image](https://gitlab-as.informatik.uni-stuttgart.de/megaco/devotigdl/-/blob/master/images/igontoTab02.png)
 
 https://gitlab-as.informatik.uni-stuttgart.de/megaco/devotigdl/-/blob/master/images/igontoTab02.png
 
