@@ -61,7 +61,7 @@ Lifecycle,  workflow,  Process:	Information Lifecycle Management, (Capture, coll
 Operations	Administration, Lifecycle Management, Support, Infrastructure, Provisioning, Deployment, Orchestration, Change Management, Training, Help desk, DAQs, Application, Software, SLA, Licensing, Network, Connectivity, Hosting, Cloud, Servers, 	
 
 
-Fig:02 
+https://gitlab-as.informatik.uni-stuttgart.de/megaco/devotigdl/-/blob/master/images/igontoTab01.png
 
 
 # References
