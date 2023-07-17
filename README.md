@@ -61,8 +61,8 @@ Lifecycle,  workflow,  Process:	Information Lifecycle Management, (Capture, coll
 Operations	Administration, Lifecycle Management, Support, Infrastructure, Provisioning, Deployment, Orchestration, Change Management, Training, Help desk, DAQs, Application, Software, SLA, Licensing, Network, Connectivity, Hosting, Cloud, Servers, 	
 
 
-![**Table01:**] (images/igontoTab01.png)
-
+![**Table01:**] (../images/igontoTab01.png)
+![Image](../images/igontoTab01.png?raw=true)
 
 # References
 Mega., C. (2023). An Ontology-based Knowledge Management Model on Information Governance. Proceedings of the 25th International Conference on Enterprise Information Systems - Volume 2: ICEIS (S. 168-178). SciTePress. doi:10.5220/0011985000003467
