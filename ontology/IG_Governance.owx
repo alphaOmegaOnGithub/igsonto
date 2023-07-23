@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/IG/Governance"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/IG/Governance">
+    <Prefix name="" IRI="http://www.semanticweb.org/IG/Governance/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Business_Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CCO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CSO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Change_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DPO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Development"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronic_Records_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Enterprise_Risk_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Executive_Sponsor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GDPR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Goal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Capability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Chief_Officer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Leadership"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Policy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Programm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Strategic_Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IG_Team"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information_Risk_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LHN_Requirements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Legal_Hold_Notification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Long_Term_Digital_Preservation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Maturity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metrics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Privacy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Project_Manager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Records_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risk_Profile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Role"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Security"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Senior_Records_Officer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stakeholder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Steering_Commitee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Supervisor_Authority"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TOSCA_Capability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#accountableForStrageticPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#clearsObstaclesFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#collaboratesInLTDP"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#collaboratesWithOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contactPersonForSupervisor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#createsRiskPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ensures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasData"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGoal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLHNRequirements"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#leadsRIM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#leadsSecurity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#managesIGProgramm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#memberOfOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#organizesTeam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participateInIGProgramm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#setsRulesForDataController"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Accountability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Auditing_And_Monitoring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Compliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Breach_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Data_Subject_Rights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Defined"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Initial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Integrity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Optimized"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Organizational_Communication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Privacy_Impact_Assesments"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Protection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Repeatable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendor_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#managed"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Business_Unit"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CCO"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CSO"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Change_Management"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DPO"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Controller"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Processor"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_Subject"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Development"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronic_Records_Management"/>
+        <Class IRI="#Records_Management"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Enterprise_Risk_Management"/>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Executive_Sponsor"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IG_Capability"/>
+        <Class IRI="#Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IG_Chief_Officer"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IG_Leadership"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Information_Risk_Management"/>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Legal"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Long_Term_Digital_Preservation"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Privacy"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Project_Manager"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Records_Management"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Security"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Senior_Records_Officer"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stakeholder"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Steering_Commitee"/>
+        <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TOSCA_Capability"/>
+        <Class IRI="#Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <Class IRI="#Records_Management"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Business_Unit"/>
+        <Class IRI="#Change_Management"/>
+        <Class IRI="#Development"/>
+        <Class IRI="#Legal"/>
+        <Class IRI="#Privacy"/>
+        <Class IRI="#Records_Management"/>
+        <Class IRI="#Security"/>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CCO"/>
+        <Class IRI="#CSO"/>
+        <Class IRI="#DPO"/>
+        <Class IRI="#Data_Controller"/>
+        <Class IRI="#Data_Processor"/>
+        <Class IRI="#Data_Subject"/>
+        <Class IRI="#Executive_Sponsor"/>
+        <Class IRI="#IG_Leadership"/>
+        <Class IRI="#Project_Manager"/>
+        <Class IRI="#Stakeholder"/>
+        <Class IRI="#Steering_Commitee"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Electronic_Records_Management"/>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Enterprise_Risk_Management"/>
+        <Class IRI="#Information_Risk_Management"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Goal"/>
+        <Class IRI="#Maturity"/>
+        <Class IRI="#Organization"/>
+        <Class IRI="#Role"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Goal"/>
+        <NamedIndividual IRI="#Accountability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Auditing_And_Monitoring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Goal"/>
+        <NamedIndividual IRI="#Compliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Data_Breach_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Data_Subject_Rights"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#Defined"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#Initial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Goal"/>
+        <NamedIndividual IRI="#Integrity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#Optimized"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Goal"/>
+        <NamedIndividual IRI="#Organizational_Communication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Privacy_Impact_Assesments"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Goal"/>
+        <NamedIndividual IRI="#Protection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#Repeatable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#Vendor_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#managed"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#accountableForStrageticPlan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#clearsObstaclesFor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#collaboratesInLTDP"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#collaboratesWithOrganization"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contactPersonForSupervisor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#createsRiskPlan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ensures"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasData"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasGoal"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLHNRequirements"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#leadsRIM"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#leadsSecurity"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#managesIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#memberOfOrganization"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#organizesTeam"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#participateInIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#setsRulesForDataController"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#accountableForStrageticPlan"/>
+        <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#clearsObstaclesFor"/>
+        <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#collaboratesInLTDP"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#collaboratesWithOrganization"/>
+        <Class IRI="#Steering_Commitee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contactPersonForSupervisor"/>
+        <Class IRI="#DPO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#createsRiskPlan"/>
+        <Class IRI="#Steering_Commitee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
+        <Class IRI="#IG_Policy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ensures"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
+        <Class IRI="#Data_Controller"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
+        <Class IRI="#Data_Controller"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasData"/>
+        <Class IRI="#Data_Subject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="#Maturity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLHNRequirements"/>
+        <Class IRI="#Legal_Hold_Notification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <Class IRI="#CCO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#leadsRIM"/>
+        <Class IRI="#Senior_Records_Officer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#leadsSecurity"/>
+        <Class IRI="#CSO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#managesIGProgramm"/>
+        <Class IRI="#IG_Chief_Officer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#memberOfOrganization"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#organizesTeam"/>
+        <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#participateInIGProgramm"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
+        <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
+        <Class IRI="#Change_Management"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#setsRulesForDataController"/>
+        <Class IRI="#GDPR"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#accountableForStrageticPlan"/>
+        <Class IRI="#IG_Strategic_Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#clearsObstaclesFor"/>
+        <Class IRI="#IG_Chief_Officer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#clearsObstaclesFor"/>
+        <Class IRI="#Steering_Commitee"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#collaboratesInLTDP"/>
+        <Class IRI="#Long_Term_Digital_Preservation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#collaboratesWithOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
+        <Class IRI="#Metrics"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contactPersonForSupervisor"/>
+        <Class IRI="#Supervisor_Authority"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#createsRiskPlan"/>
+        <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
+        <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ensures"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
+        <Class IRI="#Data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
+        <Class IRI="#LHN_Requirements"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
+        <Class IRI="#Data_Processor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasData"/>
+        <Class IRI="#Data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGoal"/>
+        <Class IRI="#Goal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
+        <Class IRI="#Risk_Profile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLHNRequirements"/>
+        <Class IRI="#LHN_Requirements"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <Class IRI="#Risk_&amp;_Compliance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#leadsRIM"/>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#leadsSecurity"/>
+        <Class IRI="#Security"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#managesIGProgramm"/>
+        <Class IRI="#IG_Programm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#memberOfOrganization"/>
+        <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#organizesTeam"/>
+        <Class IRI="#IG_Team"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#participateInIGProgramm"/>
+        <Class IRI="#IG_Programm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
+        <Class IRI="#IG_Programm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
+        <Class IRI="#Stakeholder"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#setsRulesForDataController"/>
+        <Class IRI="#Data_Controller"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
