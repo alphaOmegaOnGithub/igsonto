@@ -12,6 +12,13 @@
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="Governance" IRI="http://www.semanticweb.org/IG/Governance#"/>
+    <Declaration>
+        <Class IRI="#AccessControl"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Audit"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#Business_Unit"/>
     </Declaration>
@@ -38,6 +45,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Data_Processor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Data_Retention_Policy"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Data_Subject"/>
@@ -82,6 +92,9 @@
         <Class IRI="#IG_Team"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ISO"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
     </Declaration>
     <Declaration>
@@ -101,6 +114,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Maturity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Metadata"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Metrics"/>
@@ -151,6 +167,9 @@
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#clearsObstaclesFor"/>
     </Declaration>
     <Declaration>
@@ -167,6 +186,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#createsRiskPlan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#definesPracticesFor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
@@ -196,7 +221,19 @@
         <ObjectProperty IRI="#hasLHNRequirements"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasTechnicalNeedsDesription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#involvesArticle"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDefinedBy"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#leadsRIM"/>
@@ -208,7 +245,13 @@
         <ObjectProperty IRI="#managesIGProgramm"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#memberOfOrganization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#organizesTeam"/>
@@ -220,19 +263,52 @@
         <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#responsibleForCapability"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#sellsChangesToStakeholder"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#setsRulesForDataController"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#technicalRequirementFor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#capabilityDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Accountability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Article_30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Article_32"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Article_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Audit_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Auditing_And_Monitoring"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Compliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DataController1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Data_Breach_Management"/>
@@ -244,6 +320,9 @@
         <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
     </Declaration>
     <Declaration>
@@ -253,6 +332,21 @@
         <NamedIndividual IRI="#Defined"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ERM_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISO_17000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISO_23081"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Initial"/>
     </Declaration>
     <Declaration>
@@ -260,6 +354,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Managed"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Optimized"/>
@@ -279,9 +376,14 @@
     <Declaration>
         <NamedIndividual IRI="#Vendor_Management"/>
     </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#managed"/>
-    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AccessControl"/>
+        <Class IRI="#Security"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Audit"/>
+        <Class IRI="#Security"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Business_Unit"/>
         <Class IRI="#Organization"/>
@@ -432,8 +534,32 @@
         <Class IRI="#Role"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AccessControl"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Goal"/>
         <NamedIndividual IRI="#Accountability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GDPR"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GDPR"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GDPR"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Audit"/>
+        <NamedIndividual IRI="#Audit_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#IG_Capability"/>
@@ -442,6 +568,10 @@
     <ClassAssertion>
         <Class IRI="#Goal"/>
         <NamedIndividual IRI="#Compliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Data_Controller"/>
+        <NamedIndividual IRI="#DataController1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#IG_Capability"/>
@@ -456,6 +586,10 @@
         <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Data_Retention_Policy"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
     </ClassAssertion>
@@ -468,6 +602,26 @@
         <NamedIndividual IRI="#Defined"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Electronic_Records_Management"/>
+        <NamedIndividual IRI="#ERM_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_17000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_23081"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Maturity"/>
         <NamedIndividual IRI="#Initial"/>
     </ClassAssertion>
@@ -478,6 +632,10 @@
     <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#Managed"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Maturity"/>
@@ -503,12 +661,168 @@
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Vendor_Management"/>
     </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#managed"/>
-    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGoal"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Managed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Audit_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#ERM_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#ISO_17000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Audit_1"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Audit_1"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#responsibleForCapability"/>
+        <NamedIndividual IRI="#DataController1"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#ISO_17000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#defines"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capabilityDescription"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <Literal>Electronic records are part of  The RMP.</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -533,6 +847,14 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#createsRiskPlan"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defines"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#definesPracticesFor"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -572,7 +894,23 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTechnicalNeedsDesription"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isDefinedBy"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -588,7 +926,15 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#memberOfOrganization"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -604,6 +950,14 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#responsibleForCapability"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#sellsChangesToStakeholder"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -611,9 +965,37 @@
         <ObjectProperty IRI="#setsRulesForDataController"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#technicalRequirementFor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
+        <ObjectProperty IRI="#involvesArticle"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#defines"/>
+        <ObjectProperty IRI="#isDefinedBy"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#definesPracticesFor"/>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <ObjectProperty IRI="#technicalRequirementFor"/>
+    </InverseObjectProperties>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
         <Class IRI="#Executive_Sponsor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
+        <Class IRI="#GDPR"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#clearsObstaclesFor"/>
@@ -638,6 +1020,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#createsRiskPlan"/>
         <Class IRI="#Steering_Commitee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#definesPracticesFor"/>
+        <Class IRI="#ISO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
@@ -676,8 +1062,20 @@
         <Class IRI="#Legal_Hold_Notification"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
         <Class IRI="#CCO"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <Class IRI="#Data_Retention_Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#leadsRIM"/>
@@ -692,8 +1090,16 @@
         <Class IRI="#IG_Chief_Officer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+        <Class IRI="#Maturity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#memberOfOrganization"/>
         <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <Class IRI="#Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#organizesTeam"/>
@@ -708,6 +1114,18 @@
         <Class IRI="#Executive_Sponsor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <Class IRI="#Data_Retention_Policy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#responsibleForCapability"/>
+        <Class IRI="#Role"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#sellsChangesToStakeholder"/>
         <Class IRI="#Change_Management"/>
     </ObjectPropertyDomain>
@@ -718,6 +1136,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
         <Class IRI="#IG_Strategic_Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#articleInvolvedIn"/>
+        <Class IRI="#Data_Retention_Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#clearsObstaclesFor"/>
@@ -746,6 +1172,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#createsRiskPlan"/>
         <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#definesPracticesFor"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#definesPracticesFor"/>
+        <Class IRI="#Data_Retention_Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
@@ -784,8 +1218,16 @@
         <Class IRI="#LHN_Requirements"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <Class IRI="#Maturity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
         <Class IRI="#Risk_&amp;_Compliance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <Class IRI="#GDPR"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#leadsRIM"/>
@@ -800,8 +1242,20 @@
         <Class IRI="#IG_Programm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#memberOfOrganization"/>
         <Class IRI="#Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <Class IRI="#Data_Retention_Policy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <Class IRI="#Electronic_Records_Management"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#organizesTeam"/>
@@ -816,6 +1270,14 @@
         <Class IRI="#IG_Programm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <Class IRI="#ISO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#responsibleForCapability"/>
+        <Class IRI="#Capability"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#sellsChangesToStakeholder"/>
         <Class IRI="#Stakeholder"/>
     </ObjectPropertyRange>
@@ -823,9 +1285,18 @@
         <ObjectProperty IRI="#setsRulesForDataController"/>
         <Class IRI="#Data_Controller"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#capabilityDescription"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal></Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
