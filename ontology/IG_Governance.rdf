@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Governance="http://www.semanticweb.org/IG/Governance#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/IG/Governance"/>
     
 
@@ -27,6 +28,18 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Executive_Sponsor"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Strategic_Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#articleInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#articleInvolvedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/IG/Governance#involvesArticle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
     </owl:ObjectProperty>
     
 
@@ -88,6 +101,27 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Steering_Commitee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Information_Asset_Risk_Mitigation_Plan"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#defines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#defines">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/IG/Governance#isDefinedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#definesPracticesFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#definesPracticesFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/IG/Governance#practicesDefinedInIso"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
     </owl:ObjectProperty>
     
 
@@ -182,12 +216,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#hasTechnicalNeedsDesription -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#hasTechnicalNeedsDesription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#inMaturityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#inMaturityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/IG/Governance#maturityLevelDefinedFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Maturity"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#involvedInRiskAndCompliance -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#involvedInRiskAndCompliance">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#CCO"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Risk_&amp;_Compliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#involvesArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#involvesArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#isDefinedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#isDefinedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -222,12 +294,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#maturityLevelDefinedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#maturityLevelDefinedFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Maturity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#memberOfOrganization -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#memberOfOrganization">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Role"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/IG/Governance#technicalRequirementFor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Electronic_Records_Management"/>
     </owl:ObjectProperty>
     
 
@@ -262,6 +356,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#practicesDefinedInIso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#practicesDefinedInIso">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#responsibleForCapability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#responsibleForCapability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#sellsChangesToStakeholder -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#sellsChangesToStakeholder">
@@ -282,6 +397,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#technicalRequirementFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#technicalRequirementFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#capabilityDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#capabilityDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -290,6 +432,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#AccessControl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#AccessControl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Audit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Audit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Security"/>
+    </owl:Class>
     
 
 
@@ -358,6 +516,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data_Processor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Role"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Data_Retention_Policy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
     
 
 
@@ -463,6 +627,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#ISO -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#ISO"/>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Information_Asset_Risk_Mitigation_Plan -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Information_Asset_Risk_Mitigation_Plan"/>
@@ -508,6 +678,12 @@
     <!-- http://www.semanticweb.org/IG/Governance#Maturity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Maturity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Metadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Metadata"/>
     
 
 
@@ -632,10 +808,99 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#AC_1_3_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#AC_1_3_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+        <Governance:hasGoal rdf:resource="http://www.semanticweb.org/IG/Governance#Accountability"/>
+        <Governance:inMaturityLevel rdf:resource="http://www.semanticweb.org/IG/Governance#Managed"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
+        <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#AccessControl_1"/>
+        <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Audit_1"/>
+        <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy"/>
+        <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#ERM_1"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_17000"/>
+        <Governance:capabilityDescription>Electronic records are part of  The RMP.</Governance:capabilityDescription>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/IG/Governance#AC_1_3_3"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/IG/Governance#AccessControl_1"/>
+        <rdfs:comment>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/IG/Governance#AC_1_3_3"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/IG/Governance#Audit_1"/>
+        <rdfs:comment>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/IG/Governance#AC_1_3_3"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy"/>
+        <rdfs:comment>Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes.</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/IG/Governance#AC_1_3_3"/>
+        <owl:annotatedProperty rdf:resource="http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/IG/Governance#ERM_1"/>
+        <rdfs:comment>An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#AccessControl_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#AccessControl_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#AccessControl"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Accountability -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Accountability">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Article_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Article_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Article_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Audit_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Audit_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Audit"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
     </owl:NamedIndividual>
     
 
@@ -652,6 +917,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Compliance">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Goal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#DataController1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#DataController1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Controller"/>
+        <Governance:responsibleForCapability rdf:resource="http://www.semanticweb.org/IG/Governance#AC_1_3_3"/>
     </owl:NamedIndividual>
     
 
@@ -680,6 +954,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_17000"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Data_Security_And_Privacy_Controls -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Data_Security_And_Privacy_Controls">
@@ -704,6 +990,52 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#ERM_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#ERM_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Electronic_Records_Management"/>
+        <Governance:defines rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
+        <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
+        <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#ISO_15489 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#ISO_15489">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#ISO_17000 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#ISO_17000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#ISO_23081 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#ISO_23081">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#ISO_27001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#ISO_27001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#ISO"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Initial -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Initial">
@@ -724,6 +1056,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Lawful_Basis_For_Processing">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Managed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Managed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Maturity"/>
     </owl:NamedIndividual>
     
 
@@ -773,14 +1113,9 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Vendor_Management">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/IG/Governance#managed -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#managed">
-        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Maturity"/>
-    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
     
 
 
@@ -834,5 +1169,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
