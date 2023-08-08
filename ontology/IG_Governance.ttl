@@ -9,764 +9,1447 @@
 
 <http://www.semanticweb.org/IG/Governance> rdf:type owl:Ontology .
 
+
 #################################################################
+#
 #    Object Properties
+#
 #################################################################
+
 
 ###  http://www.semanticweb.org/IG/Governance#accountableForStrageticPlan
+
 Governance:accountableForStrageticPlan rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty ;
+                                       
                                        rdfs:domain Governance:Executive_Sponsor ;
-                                       rdfs:range Governance:IG_Strategic_Plan .
-
-
-###  http://www.semanticweb.org/IG/Governance#articleInvolvedIn
-Governance:articleInvolvedIn rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             owl:inverseOf Governance:involvesArticle ;
-                             rdfs:domain Governance:GDPR ;
-                             rdfs:range Governance:Capability ,
-                                        Governance:Data_Retention_Policy .
-
-
-###  http://www.semanticweb.org/IG/Governance#clearsObstaclesFor
-Governance:clearsObstaclesFor rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf owl:topObjectProperty ;
-                              rdfs:domain Governance:Executive_Sponsor ;
-                              rdfs:range Governance:IG_Chief_Officer ,
-                                         Governance:Steering_Commitee .
-
-
-###  http://www.semanticweb.org/IG/Governance#collaboratesInLTDP
-Governance:collaboratesInLTDP rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf owl:topObjectProperty ;
-                              rdfs:domain Governance:Stakeholder ;
-                              rdfs:range Governance:Long_Term_Digital_Preservation .
-
-
-###  http://www.semanticweb.org/IG/Governance#collaboratesWithOrganization
-Governance:collaboratesWithOrganization rdf:type owl:ObjectProperty ;
-                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                        rdfs:domain Governance:Steering_Commitee ;
-                                        rdfs:range Governance:Organization .
-
-
-###  http://www.semanticweb.org/IG/Governance#consultaionNeededForMetrics
-Governance:consultaionNeededForMetrics rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                       rdfs:domain Governance:Stakeholder ;
-                                       rdfs:range Governance:Metrics .
-
-
-###  http://www.semanticweb.org/IG/Governance#contactPersonForSupervisor
-Governance:contactPersonForSupervisor rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                      rdfs:domain Governance:DPO ;
-                                      rdfs:range Governance:Supervisor_Authority .
-
-
-###  http://www.semanticweb.org/IG/Governance#createsRiskPlan
-Governance:createsRiskPlan rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty ;
-                           rdfs:domain Governance:Steering_Commitee ;
-                           rdfs:range Governance:Information_Asset_Risk_Mitigation_Plan .
-
-
-###  http://www.semanticweb.org/IG/Governance#defines
-Governance:defines rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   owl:inverseOf Governance:isDefinedBy .
-
-
-###  http://www.semanticweb.org/IG/Governance#definesPracticesFor
-Governance:definesPracticesFor rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf owl:topObjectProperty ;
-                               owl:inverseOf Governance:practicesDefinedInIso ;
-                               rdfs:domain Governance:ISO ;
-                               rdfs:range Governance:Capability ,
-                                          Governance:Data_Retention_Policy .
-
-
-###  http://www.semanticweb.org/IG/Governance#drivenByExcutiveSponsor
-Governance:drivenByExcutiveSponsor rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                   rdfs:domain Governance:IG_Policy ;
-                                   rdfs:range Governance:Executive_Sponsor .
-
-
-###  http://www.semanticweb.org/IG/Governance#ensures
-Governance:ensures rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain Governance:Organization ;
-                   rdfs:range Governance:Goal .
-
-
-###  http://www.semanticweb.org/IG/Governance#ensuresGDPRComplianceForDataController
-Governance:ensuresGDPRComplianceForDataController rdf:type owl:ObjectProperty ;
-                                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                                  rdfs:domain Governance:Data_Controller ;
-                                                  rdfs:range Governance:Data .
-
-
-###  http://www.semanticweb.org/IG/Governance#givesInputToLHNRequirements
-Governance:givesInputToLHNRequirements rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                       rdfs:domain Governance:Stakeholder ;
-                                       rdfs:range Governance:LHN_Requirements .
-
-
-###  http://www.semanticweb.org/IG/Governance#givesInstructionsToDataProcessor
-Governance:givesInstructionsToDataProcessor rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf owl:topObjectProperty ;
-                                            rdfs:domain Governance:Data_Controller ;
-                                            rdfs:range Governance:Data_Processor .
-
-
-###  http://www.semanticweb.org/IG/Governance#hasData
-Governance:hasData rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain Governance:Data_Subject ;
-                   rdfs:range Governance:Data .
-
-
-###  http://www.semanticweb.org/IG/Governance#hasGoal
-Governance:hasGoal rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain Governance:Maturity ;
-                   rdfs:range Governance:Goal .
-
-
-###  http://www.semanticweb.org/IG/Governance#hasInputOnRiskProfile
-Governance:hasInputOnRiskProfile rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf owl:topObjectProperty ;
-                                 rdfs:domain Governance:Stakeholder ;
-                                 rdfs:range Governance:Risk_Profile .
-
-
-###  http://www.semanticweb.org/IG/Governance#hasLHNRequirements
-Governance:hasLHNRequirements rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf owl:topObjectProperty ;
-                              rdfs:domain Governance:Legal_Hold_Notification ;
-                              rdfs:range Governance:LHN_Requirements .
-
-
-###  http://www.semanticweb.org/IG/Governance#hasTechnicalNeedsDesription
-Governance:hasTechnicalNeedsDesription rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:range Governance:IG_Strategic_Plan ;
+                                       
                                        rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#inMaturityLevel
-Governance:inMaturityLevel rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty ;
-                           owl:inverseOf Governance:maturityLevelDefinedFor ;
-                           rdfs:domain Governance:Capability ;
-                           rdfs:range Governance:Maturity .
+
+###  http://www.semanticweb.org/IG/Governance#articleInvolvedIn
+
+Governance:articleInvolvedIn rdf:type owl:ObjectProperty ;
+                             
+                             rdfs:range Governance:Capability ,
+                                        Governance:Data_Retention_Policy ;
+                             
+                             rdfs:domain Governance:GDPR ;
+                             
+                             owl:inverseOf Governance:involvesArticle ;
+                             
+                             rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#involvedInRiskAndCompliance
-Governance:involvedInRiskAndCompliance rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                       rdfs:domain Governance:CCO ;
-                                       rdfs:range <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> .
+
+###  http://www.semanticweb.org/IG/Governance#clearsObstaclesFor
+
+Governance:clearsObstaclesFor rdf:type owl:ObjectProperty ;
+                              
+                              rdfs:domain Governance:Executive_Sponsor ;
+                              
+                              rdfs:range Governance:IG_Chief_Officer ,
+                                         Governance:Steering_Commitee ;
+                              
+                              rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#involvesArticle
-Governance:involvesArticle rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf owl:topObjectProperty ;
-                           rdfs:domain Governance:Capability ,
-                                       Governance:Data_Retention_Policy ;
-                           rdfs:range Governance:GDPR .
+
+###  http://www.semanticweb.org/IG/Governance#collaboratesInLTDP
+
+Governance:collaboratesInLTDP rdf:type owl:ObjectProperty ;
+                              
+                              rdfs:range Governance:Long_Term_Digital_Preservation ;
+                              
+                              rdfs:domain Governance:Stakeholder ;
+                              
+                              rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#isDefinedBy
-Governance:isDefinedBy rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf owl:topObjectProperty .
+
+###  http://www.semanticweb.org/IG/Governance#collaboratesWithOrganization
+
+Governance:collaboratesWithOrganization rdf:type owl:ObjectProperty ;
+                                        
+                                        rdfs:range Governance:Organization ;
+                                        
+                                        rdfs:domain Governance:Steering_Commitee ;
+                                        
+                                        rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#leadsRIM
-Governance:leadsRIM rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdfs:domain Governance:Senior_Records_Officer ;
-                    rdfs:range <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> .
+
+###  http://www.semanticweb.org/IG/Governance#consultaionNeededForMetrics
+
+Governance:consultaionNeededForMetrics rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:range Governance:Metrics ;
+                                       
+                                       rdfs:domain Governance:Stakeholder ;
+                                       
+                                       rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#leadsSecurity
-Governance:leadsSecurity rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
-                         rdfs:domain Governance:CSO ;
-                         rdfs:range Governance:Security .
+
+###  http://www.semanticweb.org/IG/Governance#contactPersonForSupervisor
+
+Governance:contactPersonForSupervisor rdf:type owl:ObjectProperty ;
+                                      
+                                      rdfs:domain Governance:DPO ;
+                                      
+                                      rdfs:range Governance:Supervisor_Authority ;
+                                      
+                                      rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#managesIGProgramm
-Governance:managesIGProgramm rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain Governance:IG_Chief_Officer ;
-                             rdfs:range Governance:IG_Programm .
+
+###  http://www.semanticweb.org/IG/Governance#createsRiskPlan
+
+Governance:createsRiskPlan rdf:type owl:ObjectProperty ;
+                           
+                           rdfs:range Governance:Information_Asset_Risk_Mitigation_Plan ;
+                           
+                           rdfs:domain Governance:Steering_Commitee ;
+                           
+                           rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#maturityLevelDefinedFor
-Governance:maturityLevelDefinedFor rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                   rdfs:domain Governance:Maturity ;
-                                   rdfs:range Governance:Capability .
+
+###  http://www.semanticweb.org/IG/Governance#defines
+
+Governance:defines rdf:type owl:ObjectProperty ;
+                   
+                   owl:inverseOf Governance:isDefinedBy ;
+                   
+                   rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#memberOfOrganization
-Governance:memberOfOrganization rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf owl:topObjectProperty ;
-                                rdfs:domain Governance:Role ;
-                                rdfs:range Governance:Organization .
+
+###  http://www.semanticweb.org/IG/Governance#definesPracticesFor
+
+Governance:definesPracticesFor rdf:type owl:ObjectProperty ;
+                               
+                               rdfs:range Governance:Capability ,
+                                          Governance:Data_Retention_Policy ;
+                               
+                               rdfs:domain Governance:ISO ;
+                               
+                               owl:inverseOf Governance:practicesDefinedInIso ;
+                               
+                               rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement
-Governance:needsTechnicalRequirement rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                     owl:inverseOf Governance:technicalRequirementFor ;
-                                     rdfs:domain Governance:Capability ;
-                                     rdfs:range Governance:Data_Retention_Policy ,
-                                                Governance:Electronic_Records_Management .
 
+###  http://www.semanticweb.org/IG/Governance#drivenByExcutiveSponsor
 
-###  http://www.semanticweb.org/IG/Governance#organizesTeam
-Governance:organizesTeam rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
-                         rdfs:domain Governance:Executive_Sponsor ;
-                         rdfs:range Governance:IG_Team .
-
-
-###  http://www.semanticweb.org/IG/Governance#participateInIGProgramm
-Governance:participateInIGProgramm rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf owl:topObjectProperty ;
-                                   rdfs:domain Governance:Stakeholder ;
-                                   rdfs:range Governance:IG_Programm .
-
-
-###  http://www.semanticweb.org/IG/Governance#paysPeriodicAttentionToIGProgramm
-Governance:paysPeriodicAttentionToIGProgramm rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                             rdfs:domain Governance:Executive_Sponsor ;
-                                             rdfs:range Governance:IG_Programm .
-
-
-###  http://www.semanticweb.org/IG/Governance#practicesDefinedInIso
-Governance:practicesDefinedInIso rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf owl:topObjectProperty ;
-                                 rdfs:domain Governance:Capability ,
-                                             Governance:Data_Retention_Policy ;
-                                 rdfs:range Governance:ISO .
-
-
-###  http://www.semanticweb.org/IG/Governance#responsibleForCapability
-Governance:responsibleForCapability rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                    rdfs:domain Governance:Role ;
-                                    rdfs:range Governance:Capability .
-
-
-###  http://www.semanticweb.org/IG/Governance#sellsChangesToStakeholder
-Governance:sellsChangesToStakeholder rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                     rdfs:domain Governance:Change_Management ;
-                                     rdfs:range Governance:Stakeholder .
-
-
-###  http://www.semanticweb.org/IG/Governance#setsRulesForDataController
-Governance:setsRulesForDataController rdf:type owl:ObjectProperty ;
-                                      rdfs:subPropertyOf owl:topObjectProperty ;
-                                      rdfs:domain Governance:GDPR ;
-                                      rdfs:range Governance:Data_Controller .
-
-
-###  http://www.semanticweb.org/IG/Governance#technicalRequirementFor
-Governance:technicalRequirementFor rdf:type owl:ObjectProperty ;
+Governance:drivenByExcutiveSponsor rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:range Governance:Executive_Sponsor ;
+                                   
+                                   rdfs:domain Governance:IG_Policy ;
+                                   
                                    rdfs:subPropertyOf owl:topObjectProperty .
 
 
+
+###  http://www.semanticweb.org/IG/Governance#ensures
+
+Governance:ensures rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range Governance:Goal ;
+                   
+                   rdfs:domain Governance:Organization ;
+                   
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#ensuresGDPRComplianceForDataController
+
+Governance:ensuresGDPRComplianceForDataController rdf:type owl:ObjectProperty ;
+                                                  
+                                                  rdfs:range Governance:Data ;
+                                                  
+                                                  rdfs:domain Governance:Data_Controller ;
+                                                  
+                                                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#givesInputToLHNRequirements
+
+Governance:givesInputToLHNRequirements rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:range Governance:LHN_Requirements ;
+                                       
+                                       rdfs:domain Governance:Stakeholder ;
+                                       
+                                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#givesInstructionsToDataProcessor
+
+Governance:givesInstructionsToDataProcessor rdf:type owl:ObjectProperty ;
+                                            
+                                            rdfs:domain Governance:Data_Controller ;
+                                            
+                                            rdfs:range Governance:Data_Processor ;
+                                            
+                                            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#hasData
+
+Governance:hasData rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range Governance:Data ;
+                   
+                   rdfs:domain Governance:Data_Subject ;
+                   
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#hasGoal
+
+Governance:hasGoal rdf:type owl:ObjectProperty ;
+                   
+                   rdfs:range Governance:Goal ;
+                   
+                   rdfs:domain Governance:Maturity ;
+                   
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#hasInputOnRiskProfile
+
+Governance:hasInputOnRiskProfile rdf:type owl:ObjectProperty ;
+                                 
+                                 rdfs:range Governance:Risk_Profile ;
+                                 
+                                 rdfs:domain Governance:Stakeholder ;
+                                 
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#hasLHNRequirements
+
+Governance:hasLHNRequirements rdf:type owl:ObjectProperty ;
+                              
+                              rdfs:range Governance:LHN_Requirements ;
+                              
+                              rdfs:domain Governance:Legal_Hold_Notification ;
+                              
+                              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#hasTechnicalNeedsDesription
+
+Governance:hasTechnicalNeedsDesription rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#inMaturityLevel
+
+Governance:inMaturityLevel rdf:type owl:ObjectProperty ;
+                           
+                           rdfs:domain Governance:Capability ;
+                           
+                           rdfs:range Governance:Maturity ;
+                           
+                           owl:inverseOf Governance:maturityLevelDefinedFor ;
+                           
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#involvedInRiskAndCompliance
+
+Governance:involvedInRiskAndCompliance rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:domain Governance:CCO ;
+                                       
+                                       rdfs:range <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> ;
+                                       
+                                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#involvesArticle
+
+Governance:involvesArticle rdf:type owl:ObjectProperty ;
+                           
+                           rdfs:domain Governance:Capability ,
+                                       Governance:Data_Retention_Policy ;
+                           
+                           rdfs:range Governance:GDPR ;
+                           
+                           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#isDefinedBy
+
+Governance:isDefinedBy rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#leadsRIM
+
+Governance:leadsRIM rdf:type owl:ObjectProperty ;
+                    
+                    rdfs:range <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> ;
+                    
+                    rdfs:domain Governance:Senior_Records_Officer ;
+                    
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#leadsSecurity
+
+Governance:leadsSecurity rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:domain Governance:CSO ;
+                         
+                         rdfs:range Governance:Security ;
+                         
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#managesIGProgramm
+
+Governance:managesIGProgramm rdf:type owl:ObjectProperty ;
+                             
+                             rdfs:domain Governance:IG_Chief_Officer ;
+                             
+                             rdfs:range Governance:IG_Programm ;
+                             
+                             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#maturityLevelDefinedFor
+
+Governance:maturityLevelDefinedFor rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:range Governance:Capability ;
+                                   
+                                   rdfs:domain Governance:Maturity ;
+                                   
+                                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#memberOfOrganization
+
+Governance:memberOfOrganization rdf:type owl:ObjectProperty ;
+                                
+                                rdfs:range Governance:Organization ;
+                                
+                                rdfs:domain Governance:Role ;
+                                
+                                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#needsTechnicalRequirement
+
+Governance:needsTechnicalRequirement rdf:type owl:ObjectProperty ;
+                                     
+                                     rdfs:domain Governance:Capability ;
+                                     
+                                     rdfs:range Governance:Data_Retention_Policy ,
+                                                Governance:Electronic_Records_Management ;
+                                     
+                                     owl:inverseOf Governance:technicalRequirementFor ;
+                                     
+                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#organizesTeam
+
+Governance:organizesTeam rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:domain Governance:Executive_Sponsor ;
+                         
+                         rdfs:range Governance:IG_Team ;
+                         
+                         rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#participateInIGProgramm
+
+Governance:participateInIGProgramm rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:range Governance:IG_Programm ;
+                                   
+                                   rdfs:domain Governance:Stakeholder ;
+                                   
+                                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#paysPeriodicAttentionToIGProgramm
+
+Governance:paysPeriodicAttentionToIGProgramm rdf:type owl:ObjectProperty ;
+                                             
+                                             rdfs:domain Governance:Executive_Sponsor ;
+                                             
+                                             rdfs:range Governance:IG_Programm ;
+                                             
+                                             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#practicesDefinedInIso
+
+Governance:practicesDefinedInIso rdf:type owl:ObjectProperty ;
+                                 
+                                 rdfs:domain Governance:Capability ,
+                                             Governance:Data_Retention_Policy ;
+                                 
+                                 rdfs:range Governance:ISO ;
+                                 
+                                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#responsibleForCapability
+
+Governance:responsibleForCapability rdf:type owl:ObjectProperty ;
+                                    
+                                    rdfs:range Governance:Capability ;
+                                    
+                                    rdfs:domain Governance:Role ;
+                                    
+                                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#sellsChangesToStakeholder
+
+Governance:sellsChangesToStakeholder rdf:type owl:ObjectProperty ;
+                                     
+                                     rdfs:domain Governance:Change_Management ;
+                                     
+                                     rdfs:range Governance:Stakeholder ;
+                                     
+                                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#setsRulesForDataController
+
+Governance:setsRulesForDataController rdf:type owl:ObjectProperty ;
+                                      
+                                      rdfs:range Governance:Data_Controller ;
+                                      
+                                      rdfs:domain Governance:GDPR ;
+                                      
+                                      rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#technicalRequirementFor
+
+Governance:technicalRequirementFor rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+
+
 #################################################################
+#
 #    Data properties
+#
 #################################################################
 
+
 ###  http://www.semanticweb.org/IG/Governance#capabilityDescription
+
 Governance:capabilityDescription rdf:type owl:DatatypeProperty ;
+                                 
                                  rdfs:subPropertyOf owl:topDataProperty .
 
 
+
+
+
 #################################################################
+#
 #    Classes
+#
 #################################################################
 
+
 ###  http://www.semanticweb.org/IG/Governance#AccessControl
+
 Governance:AccessControl rdf:type owl:Class ;
+                         
                          rdfs:subClassOf Governance:Security .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Audit
+
 Governance:Audit rdf:type owl:Class ;
+                 
                  rdfs:subClassOf Governance:Security .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Business_Unit
+
 Governance:Business_Unit rdf:type owl:Class ;
+                         
                          rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#CCO
+
 Governance:CCO rdf:type owl:Class ;
+               
                rdfs:subClassOf Governance:Role .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#CSO
+
 Governance:CSO rdf:type owl:Class ;
+               
                rdfs:subClassOf Governance:Role .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Capability
+
 Governance:Capability rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Change_Management
+
 Governance:Change_Management rdf:type owl:Class ;
+                             
                              rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#DPO
+
 Governance:DPO rdf:type owl:Class ;
+               
                rdfs:subClassOf Governance:Role .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data
+
 Governance:Data rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Controller
+
 Governance:Data_Controller rdf:type owl:Class ;
+                           
                            rdfs:subClassOf Governance:Role .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Mapping_And_Classification_System
+
+Governance:Data_Mapping_And_Classification_System rdf:type owl:Class ;
+                                                  
+                                                  rdfs:subClassOf Governance:Tools .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Processor
+
 Governance:Data_Processor rdf:type owl:Class ;
+                          
                           rdfs:subClassOf Governance:Role .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Retention_Policy
+
 Governance:Data_Retention_Policy rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Subject
+
 Governance:Data_Subject rdf:type owl:Class ;
+                        
                         rdfs:subClassOf Governance:Role .
 
 
+
+###  http://www.semanticweb.org/IG/Governance#Database_Management_System
+
+Governance:Database_Management_System rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf Governance:Records_Management .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Development
+
 Governance:Development rdf:type owl:Class ;
+                       
                        rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Electronic_Records_Management
+
 Governance:Electronic_Records_Management rdf:type owl:Class ;
+                                         
                                          rdfs:subClassOf Governance:Records_Management ;
+                                         
                                          owl:disjointWith <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Enterprise_Risk_Management
+
 Governance:Enterprise_Risk_Management rdf:type owl:Class ;
+                                      
                                       rdfs:subClassOf <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> ;
+                                      
                                       owl:disjointWith Governance:Information_Risk_Management .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Executive_Sponsor
+
 Governance:Executive_Sponsor rdf:type owl:Class ;
+                             
                              rdfs:subClassOf Governance:Role .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#GDPR
+
 Governance:GDPR rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Goal
+
 Governance:Goal rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Capability
+
 Governance:IG_Capability rdf:type owl:Class ;
+                         
                          rdfs:subClassOf Governance:Capability .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Chief_Officer
+
 Governance:IG_Chief_Officer rdf:type owl:Class ;
+                            
                             rdfs:subClassOf Governance:Role .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Leadership
+
 Governance:IG_Leadership rdf:type owl:Class ;
+                         
                          rdfs:subClassOf Governance:Role .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Policy
+
 Governance:IG_Policy rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Programm
+
 Governance:IG_Programm rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Strategic_Plan
+
 Governance:IG_Strategic_Plan rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Team
+
 Governance:IG_Team rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#ISO
+
 Governance:ISO rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Information_Asset_Risk_Mitigation_Plan
+
 Governance:Information_Asset_Risk_Mitigation_Plan rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Information_Risk_Management
+
 Governance:Information_Risk_Management rdf:type owl:Class ;
+                                       
                                        rdfs:subClassOf <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#LHN_Requirements
+
 Governance:LHN_Requirements rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Legal
+
 Governance:Legal rdf:type owl:Class ;
+                 
                  rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Legal_Hold_Notification
+
 Governance:Legal_Hold_Notification rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Long_Term_Digital_Preservation
+
 Governance:Long_Term_Digital_Preservation rdf:type owl:Class ;
+                                          
                                           rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Maturity
+
 Governance:Maturity rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Metadata
+
 Governance:Metadata rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Metrics
+
 Governance:Metrics rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Organization
+
 Governance:Organization rdf:type owl:Class .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Privacy
+
 Governance:Privacy rdf:type owl:Class ;
+                   
                    rdfs:subClassOf Governance:Organization .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Project_Manager
+
 Governance:Project_Manager rdf:type owl:Class ;
+                           
                            rdfs:subClassOf Governance:Role .
 
 
-###  http://www.semanticweb.org/IG/Governance#Records_Management
-Governance:Records_Management rdf:type owl:Class ;
-                              rdfs:subClassOf Governance:Organization .
-
-
-###  http://www.semanticweb.org/IG/Governance#Risk_Profile
-Governance:Risk_Profile rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/IG/Governance#Role
-Governance:Role rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/IG/Governance#Security
-Governance:Security rdf:type owl:Class ;
-                    rdfs:subClassOf Governance:Organization .
-
-
-###  http://www.semanticweb.org/IG/Governance#Senior_Records_Officer
-Governance:Senior_Records_Officer rdf:type owl:Class ;
-                                  rdfs:subClassOf Governance:Role .
-
-
-###  http://www.semanticweb.org/IG/Governance#Stakeholder
-Governance:Stakeholder rdf:type owl:Class ;
-                       rdfs:subClassOf Governance:Role .
-
-
-###  http://www.semanticweb.org/IG/Governance#Steering_Commitee
-Governance:Steering_Commitee rdf:type owl:Class ;
-                             rdfs:subClassOf Governance:Role .
-
-
-###  http://www.semanticweb.org/IG/Governance#Supervisor_Authority
-Governance:Supervisor_Authority rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/IG/Governance#TOSCA_Capability
-Governance:TOSCA_Capability rdf:type owl:Class ;
-                            rdfs:subClassOf Governance:Capability .
-
 
 ###  http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management
+
 <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> rdf:type owl:Class ;
+                                                                             
                                                                              rdfs:subClassOf Governance:Records_Management .
 
 
+
+###  http://www.semanticweb.org/IG/Governance#Records_Management
+
+Governance:Records_Management rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf Governance:Organization .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Reporting_And_Analysis_System
+
+Governance:Reporting_And_Analysis_System rdf:type owl:Class ;
+                                         
+                                         rdfs:subClassOf Governance:Tools .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Risk_&_Compliance
+
 <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> rdf:type owl:Class ;
+                                                             
                                                              rdfs:subClassOf Governance:Organization .
 
 
+
+###  http://www.semanticweb.org/IG/Governance#Risk_Profile
+
+Governance:Risk_Profile rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Role
+
+Governance:Role rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Security
+
+Governance:Security rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf Governance:Organization .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Senior_Records_Officer
+
+Governance:Senior_Records_Officer rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf Governance:Role .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Stakeholder
+
+Governance:Stakeholder rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf Governance:Role .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Steering_Commitee
+
+Governance:Steering_Commitee rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf Governance:Role .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Supervisor_Authority
+
+Governance:Supervisor_Authority rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TOSCA_Capability
+
+Governance:TOSCA_Capability rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf Governance:Capability .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Tools
+
+Governance:Tools rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Workflow_Tools
+
+Governance:Workflow_Tools rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf Governance:Tools .
+
+
+
+
+
 #################################################################
+#
 #    Individuals
+#
 #################################################################
 
-###  http://www.semanticweb.org/IG/Governance#AC_1_3_3
-Governance:AC_1_3_3 rdf:type owl:NamedIndividual ,
-                             Governance:IG_Capability ;
+
+###  http://www.semanticweb.org/IG/Governance#1_SubStandard
+
+<http://www.semanticweb.org/IG/Governance#1_SubStandard> rdf:type Governance:Maturity ,
+                                                                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#2_InDevelopment
+
+<http://www.semanticweb.org/IG/Governance#2_InDevelopment> rdf:type Governance:Maturity ,
+                                                                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#3_Essential
+
+<http://www.semanticweb.org/IG/Governance#3_Essential> rdf:type Governance:Maturity ,
+                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#4_Proactive
+
+<http://www.semanticweb.org/IG/Governance#4_Proactive> rdf:type Governance:Maturity ,
+                                                                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#5_Transformational
+
+<http://www.semanticweb.org/IG/Governance#5_Transformational> rdf:type Governance:Maturity ,
+                                                                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#AC_1_2_4
+
+Governance:AC_1_2_4 rdf:type Governance:IG_Capability ,
+                             owl:NamedIndividual ;
+                    
+                    Governance:capabilityDescription " A senior officer is appointed RM and responsible for the RMP." ;
+                    
+                    Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                    
+                    Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                    
                     Governance:hasGoal Governance:Accountability ;
-                    Governance:inMaturityLevel Governance:Managed ;
+                    
+                    Governance:involvesArticle Governance:Article_32 ,
+                                               Governance:Article_5 ;
+                    
+                    Governance:needsTechnicalRequirement Governance:Data_Retention_Policy_Dummy ;
+                    
+                    Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                     Governance:ISO_15939 ,
+                                                     Governance:ISO_27001 ;
+                    
+                    Governance:needsTechnicalRequirement Governance:Records_Information_Management_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " A systematic metadata management system enables accurate identification and management of records in accordance with RMP requirements." ;
+  owl:annotatedSource Governance:AC_1_2_4 ;
+  owl:annotatedTarget Governance:Records_Information_Management_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing automated retention and disposition processes ensures that records are managed and disposed of in compliance with RMP requirements and legal obligations." ;
+  owl:annotatedSource Governance:AC_1_2_4 ;
+  owl:annotatedTarget Governance:Data_Retention_Policy_Dummy ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An effective Access Control system ensures that the senior officer appointed as the Records Manager (RM) has appropriate access rights and responsibilities for the Records Management Program (RMP), ensuring the integrity and security of recorded information." ;
+  owl:annotatedSource Governance:AC_1_2_4 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#AC_1_3_3
+
+Governance:AC_1_3_3 rdf:type Governance:IG_Capability ,
+                             owl:NamedIndividual ;
+                    
+                    Governance:capabilityDescription "Electronic records are part of  The RMP." ;
+                    
+                    Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                    
+                    Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                    
+                    Governance:hasGoal Governance:Accountability ;
+                    
                     Governance:involvesArticle Governance:Article_30 ,
                                                Governance:Article_32 ,
                                                Governance:Article_5 ;
-                    Governance:needsTechnicalRequirement Governance:AccessControl_1 ,
-                                                         Governance:Audit_1 ,
+                    
+                    Governance:needsTechnicalRequirement Governance:Audit_1 ,
                                                          Governance:Data_Retention_Policy_Dummy ,
                                                          Governance:ERM_1 ;
+                    
                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
-                                                     Governance:ISO_17000 ;
-                    Governance:capabilityDescription "Electronic records are part of  The RMP." .
-
+                                                     Governance:ISO_17000 .
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource Governance:AC_1_3_3 ;
-   owl:annotatedProperty Governance:needsTechnicalRequirement ;
-   owl:annotatedTarget Governance:AccessControl_1 ;
-   rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities."
- ] .
-
+  rdfs:comment "An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management" ;
+  owl:annotatedSource Governance:AC_1_3_3 ;
+  owl:annotatedTarget Governance:ERM_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource Governance:AC_1_3_3 ;
-   owl:annotatedProperty Governance:needsTechnicalRequirement ;
-   owl:annotatedTarget Governance:Audit_1 ;
-   rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities."
- ] .
-
+  rdfs:comment "Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes." ;
+  owl:annotatedSource Governance:AC_1_3_3 ;
+  owl:annotatedTarget Governance:Data_Retention_Policy_Dummy ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource Governance:AC_1_3_3 ;
-   owl:annotatedProperty Governance:needsTechnicalRequirement ;
-   owl:annotatedTarget Governance:Data_Retention_Policy_Dummy ;
-   rdfs:comment "Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes."
- ] .
-
+  rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities." ;
+  owl:annotatedSource Governance:AC_1_3_3 ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource Governance:AC_1_3_3 ;
-   owl:annotatedProperty Governance:needsTechnicalRequirement ;
-   owl:annotatedTarget Governance:ERM_1 ;
-   rdfs:comment "An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management"
- ] .
+  rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities." ;
+  owl:annotatedSource Governance:AC_1_3_3 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#AC_1_4_5
+
+Governance:AC_1_4_5 rdf:type Governance:IG_Capability ,
+                             owl:NamedIndividual ;
+                    
+                    Governance:capabilityDescription "The accountability goals are met." ;
+                    
+                    Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                    
+                    Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                    
+                    Governance:hasGoal Governance:Accountability ;
+                    
+                    Governance:involvesArticle Governance:Article_30 ,
+                                               Governance:Article_32 ,
+                                               Governance:Article_5 ;
+                    
+                    Governance:needsTechnicalRequirement Governance:Audit_1 ,
+                                                         Governance:Data_Mapping_And_Classification_System_1 ;
+                    
+                    Governance:practicesDefinedInIso Governance:ISO_27001 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An audit trail provides a transparent record of data processing activities and helps in meeting accountability requirements." ;
+  owl:annotatedSource Governance:AC_1_4_5 ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing strong access controls and authentication mechanisms ensures that only authorized personnel can access and manipulate data, contributing to accountability and data protection." ;
+  owl:annotatedSource Governance:AC_1_4_5 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A robust data mapping and classification system is crucial for identifying, categorizing, and labeling data according to its sensitivity and importance, which is essential for meeting accountability goals." ;
+  owl:annotatedSource Governance:AC_1_4_5 ;
+  owl:annotatedTarget Governance:Data_Mapping_And_Classification_System_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#AC_1_5_3
+
+Governance:AC_1_5_3 rdf:type Governance:IG_Capability ,
+                             owl:NamedIndividual ;
+                    
+                    Governance:capabilityDescription "IG drives information-driven processes." ;
+                    
+                    Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                    
+                    Governance:hasGoal Governance:Accountability ;
+                    
+                    Governance:involvesArticle Governance:Article_24 ,
+                                               Governance:Article_30 ,
+                                               Governance:Article_32 ,
+                                               Governance:Article_5 ,
+                                               Governance:Article_6 ;
+                    
+                    Governance:needsTechnicalRequirement Governance:Database_Management_System_1 ;
+                    
+                    Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                     Governance:ISO_15489 ,
+                                                     Governance:ISO_15939 ,
+                                                     Governance:ISO_23081 ;
+                    
+                    Governance:needsTechnicalRequirement Governance:Records_Information_Management_1 ,
+                                                         Governance:Reporting_And_Analysis_System_1 ,
+                                                         Governance:Workflow_Tools_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A DMS enables efficient management, storage, retrieval, and sharing of documents and data, which is essential for information-driven processes." ;
+  owl:annotatedSource Governance:AC_1_5_3 ;
+  owl:annotatedTarget Governance:Database_Management_System_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "RIM is responsible for the management and maintenance of metadata associated with records. Metadata allows for the identification, classification, and retrieval of documents and data, enhancing the efficiency of information-driven processes." ;
+  owl:annotatedSource Governance:AC_1_5_3 ;
+  owl:annotatedTarget Governance:Records_Information_Management_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency." ;
+  owl:annotatedSource Governance:AC_1_5_3 ;
+  owl:annotatedTarget Governance:Workflow_Tools_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement." ;
+  owl:annotatedSource Governance:AC_1_5_3 ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#AccessControl_1
-Governance:AccessControl_1 rdf:type owl:NamedIndividual ,
-                                    Governance:AccessControl ;
+
+Governance:AccessControl_1 rdf:type Governance:AccessControl ,
+                                    owl:NamedIndividual ;
+                           
                            Governance:involvesArticle Governance:Article_30 ,
                                                       Governance:Article_32 ;
+                           
                            Governance:practicesDefinedInIso Governance:ISO_27001 .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Accountability
-Governance:Accountability rdf:type owl:NamedIndividual ,
-                                   Governance:Goal .
+
+Governance:Accountability rdf:type Governance:Goal ,
+                                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_24
+
+Governance:Article_24 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Article_30
-Governance:Article_30 rdf:type owl:NamedIndividual ,
-                               Governance:GDPR .
+
+Governance:Article_30 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Article_32
-Governance:Article_32 rdf:type owl:NamedIndividual ,
-                               Governance:GDPR .
+
+Governance:Article_32 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Article_5
-Governance:Article_5 rdf:type owl:NamedIndividual ,
-                              Governance:GDPR .
+
+Governance:Article_5 rdf:type Governance:GDPR ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_6
+
+Governance:Article_6 rdf:type Governance:GDPR ,
+                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Audit_1
-Governance:Audit_1 rdf:type owl:NamedIndividual ,
-                            Governance:Audit ;
+
+Governance:Audit_1 rdf:type Governance:Audit ,
+                            owl:NamedIndividual ;
+                   
                    Governance:involvesArticle Governance:Article_30 ,
-                                              Governance:Article_32 .
+                                              Governance:Article_32 ;
+                   
+                   Governance:practicesDefinedInIso Governance:ISO_27001 .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Auditing_And_Monitoring
-Governance:Auditing_And_Monitoring rdf:type owl:NamedIndividual ,
-                                            Governance:IG_Capability .
+
+Governance:Auditing_And_Monitoring rdf:type Governance:IG_Capability ,
+                                            owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Compliance
-Governance:Compliance rdf:type owl:NamedIndividual ,
-                               Governance:Goal .
+
+Governance:Compliance rdf:type Governance:Goal ,
+                               owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#DataController1
-Governance:DataController1 rdf:type owl:NamedIndividual ,
-                                    Governance:Data_Controller ;
+
+Governance:DataController1 rdf:type Governance:Data_Controller ,
+                                    owl:NamedIndividual ;
+                           
                            Governance:responsibleForCapability Governance:AC_1_3_3 .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Breach_Management
-Governance:Data_Breach_Management rdf:type owl:NamedIndividual ,
-                                           Governance:IG_Capability .
+
+Governance:Data_Breach_Management rdf:type Governance:IG_Capability ,
+                                           owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Inventory_And_Mapping
-Governance:Data_Inventory_And_Mapping rdf:type owl:NamedIndividual ,
-                                               Governance:IG_Capability .
+
+Governance:Data_Inventory_And_Mapping rdf:type Governance:IG_Capability ,
+                                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Mapping_And_Classification_System_1
+
+Governance:Data_Mapping_And_Classification_System_1 rdf:type Governance:Data_Mapping_And_Classification_System ,
+                                                             owl:NamedIndividual ;
+                                                    
+                                                    Governance:involvesArticle Governance:Article_30 ,
+                                                                               Governance:Article_32 ;
+                                                    
+                                                    Governance:practicesDefinedInIso Governance:ISO_27001 .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Retention_And_Erasure
-Governance:Data_Retention_And_Erasure rdf:type owl:NamedIndividual ,
-                                               Governance:IG_Capability .
+
+Governance:Data_Retention_And_Erasure rdf:type Governance:IG_Capability ,
+                                               owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Retention_Policy_Dummy
-Governance:Data_Retention_Policy_Dummy rdf:type owl:NamedIndividual ,
-                                                Governance:Data_Retention_Policy ;
+
+Governance:Data_Retention_Policy_Dummy rdf:type Governance:Data_Retention_Policy ,
+                                                owl:NamedIndividual ;
+                                       
                                        Governance:involvesArticle Governance:Article_30 ,
                                                                   Governance:Article_5 ;
+                                       
                                        Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                        Governance:ISO_15939 ,
                                                                         Governance:ISO_17000 .
 
 
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Security_And_Privacy_Controls
-Governance:Data_Security_And_Privacy_Controls rdf:type owl:NamedIndividual ,
-                                                       Governance:IG_Capability .
+
+Governance:Data_Security_And_Privacy_Controls rdf:type Governance:IG_Capability ,
+                                                       owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Subject_Rights
-Governance:Data_Subject_Rights rdf:type owl:NamedIndividual ,
-                                        Governance:IG_Capability .
+
+Governance:Data_Subject_Rights rdf:type Governance:IG_Capability ,
+                                        owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IG/Governance#Defined
-Governance:Defined rdf:type owl:NamedIndividual ,
-                            Governance:Maturity .
+
+###  http://www.semanticweb.org/IG/Governance#Database_Management_System_1
+
+Governance:Database_Management_System_1 rdf:type Governance:Database_Management_System ,
+                                                 owl:NamedIndividual ;
+                                        
+                                        Governance:involvedInRiskAndCompliance Governance:Article_5 ,
+                                                                               Governance:Article_6 ;
+                                        
+                                        Governance:practicesDefinedInIso Governance:ISO_15489 .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#ERM_1
-Governance:ERM_1 rdf:type owl:NamedIndividual ,
-                          Governance:Electronic_Records_Management ;
-                 Governance:defines Governance:Data_Retention_Policy_Dummy ;
+
+Governance:ERM_1 rdf:type Governance:Electronic_Records_Management ,
+                          owl:NamedIndividual ;
+                 
                  Governance:involvesArticle Governance:Article_30 ,
                                             Governance:Article_5 ;
+                 
+                 Governance:defines Governance:Data_Retention_Policy_Dummy ;
+                 
                  Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                   Governance:ISO_23081 ,
                                                   Governance:ISO_27001 .
 
 
+
+###  http://www.semanticweb.org/IG/Governance#ISO_14271
+
+Governance:ISO_14271 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#ISO_15489
-Governance:ISO_15489 rdf:type owl:NamedIndividual ,
-                              Governance:ISO .
+
+Governance:ISO_15489 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#ISO_15939
+
+Governance:ISO_15939 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#ISO_17000
-Governance:ISO_17000 rdf:type owl:NamedIndividual ,
-                              Governance:ISO .
+
+Governance:ISO_17000 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#ISO_23081
-Governance:ISO_23081 rdf:type owl:NamedIndividual ,
-                              Governance:ISO .
+
+Governance:ISO_23081 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#ISO_27001
-Governance:ISO_27001 rdf:type owl:NamedIndividual ,
-                              Governance:ISO .
 
+Governance:ISO_27001 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
 
-###  http://www.semanticweb.org/IG/Governance#Initial
-Governance:Initial rdf:type owl:NamedIndividual ,
-                            Governance:Maturity .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Integrity
-Governance:Integrity rdf:type owl:NamedIndividual ,
-                              Governance:Goal .
+
+Governance:Integrity rdf:type Governance:Goal ,
+                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Lawful_Basis_For_Processing
-Governance:Lawful_Basis_For_Processing rdf:type owl:NamedIndividual ,
-                                                Governance:IG_Capability .
 
+Governance:Lawful_Basis_For_Processing rdf:type Governance:IG_Capability ,
+                                                owl:NamedIndividual .
 
-###  http://www.semanticweb.org/IG/Governance#Managed
-Governance:Managed rdf:type owl:NamedIndividual ,
-                            Governance:Maturity .
-
-
-###  http://www.semanticweb.org/IG/Governance#Optimized
-Governance:Optimized rdf:type owl:NamedIndividual ,
-                              Governance:Maturity .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Organizational_Communication
-Governance:Organizational_Communication rdf:type owl:NamedIndividual ,
-                                                 Governance:Goal .
+
+Governance:Organizational_Communication rdf:type Governance:Goal ,
+                                                 owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Privacy_Impact_Assesments
-Governance:Privacy_Impact_Assesments rdf:type owl:NamedIndividual ,
-                                              Governance:IG_Capability .
+
+Governance:Privacy_Impact_Assesments rdf:type Governance:IG_Capability ,
+                                              owl:NamedIndividual .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Protection
-Governance:Protection rdf:type owl:NamedIndividual ,
-                               Governance:Goal .
+
+Governance:Protection rdf:type Governance:Goal ,
+                               owl:NamedIndividual .
 
 
-###  http://www.semanticweb.org/IG/Governance#Repeatable
-Governance:Repeatable rdf:type owl:NamedIndividual ,
-                               Governance:Maturity .
+
+###  http://www.semanticweb.org/IG/Governance#Records_Information_Management_1
+
+Governance:Records_Information_Management_1 rdf:type <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> ,
+                                                     owl:NamedIndividual ;
+                                            
+                                            Governance:involvesArticle Governance:Article_30 ,
+                                                                       Governance:Article_5 ;
+                                            
+                                            Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                             Governance:ISO_23081 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Reporting_And_Analysis_System_1
+
+Governance:Reporting_And_Analysis_System_1 rdf:type Governance:Reporting_And_Analysis_System ,
+                                                    owl:NamedIndividual ;
+                                           
+                                           Governance:involvesArticle Governance:Article_24 ;
+                                           
+                                           Governance:practicesDefinedInIso Governance:ISO_15939 .
+
 
 
 ###  http://www.semanticweb.org/IG/Governance#Vendor_Management
-Governance:Vendor_Management rdf:type owl:NamedIndividual ,
-                                      Governance:IG_Capability .
+
+Governance:Vendor_Management rdf:type Governance:IG_Capability ,
+                                      owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Workflow_Tools_1
+
+Governance:Workflow_Tools_1 rdf:type Governance:Workflow_Tools ,
+                                     owl:NamedIndividual ;
+                            
+                            Governance:involvesArticle Governance:Article_32 ;
+                            
+                            Governance:practicesDefinedInIso Governance:ISO_14271 .
+
 
 
 [ rdfs:comment ""
 ] .
 
+
 #################################################################
+#
 #    General axioms
+#
 #################################################################
+
 
 [ rdf:type owl:AllDisjointClasses ;
-   owl:members ( Governance:Business_Unit
-                 Governance:Change_Management
-                 Governance:Development
-                 Governance:Legal
-                 Governance:Privacy
-                 Governance:Records_Management
-                 Governance:Security
-                 <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance>
-               )
- ] .
-
-
+  owl:members ( Governance:Goal
+                Governance:Maturity
+                Governance:Organization
+                Governance:Role
+              )
+] .
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( Governance:CCO
                 Governance:CSO
@@ -781,15 +1464,20 @@ Governance:Vendor_Management rdf:type owl:NamedIndividual ,
                 Governance:Steering_Commitee
               )
 ] .
-
-
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( Governance:Goal
-                Governance:Maturity
-                Governance:Organization
-                Governance:Role
+  owl:members ( Governance:Business_Unit
+                Governance:Change_Management
+                Governance:Development
+                Governance:Legal
+                Governance:Privacy
+                Governance:Records_Management
+                <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance>
+                Governance:Security
               )
 ] .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+
+###  Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net
+

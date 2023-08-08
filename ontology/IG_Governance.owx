@@ -1,10 +1,20 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/IG/Governance"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/IG/Governance">
     <Prefix name="" IRI="http://www.semanticweb.org/IG/Governance/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
@@ -44,6 +54,9 @@
         <Class IRI="#Data_Controller"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Data_Mapping_And_Classification_System"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Data_Processor"/>
     </Declaration>
     <Declaration>
@@ -51,6 +64,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Data_Subject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Database_Management_System"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Development"/>
@@ -131,7 +147,16 @@
         <Class IRI="#Project_Manager"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Records_Management"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reporting_And_Analysis_System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Risk_&amp;_Compliance"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Risk_Profile"/>
@@ -158,10 +183,10 @@
         <Class IRI="#TOSCA_Capability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <Class IRI="#Tools"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class IRI="#Workflow_Tools"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
@@ -281,13 +306,40 @@
         <DataProperty IRI="#capabilityDescription"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#1_SubStandard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#2_InDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#3_Essential"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#4_Proactive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#5_Transformational"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#AC_1_3_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AC_1_5_3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AccessControl_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Accountability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Article_24"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Article_30"/>
@@ -297,6 +349,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Article_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Article_6"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Audit_1"/>
@@ -317,6 +372,9 @@
         <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
     </Declaration>
     <Declaration>
@@ -329,13 +387,19 @@
         <NamedIndividual IRI="#Data_Subject_Rights"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Defined"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ERM_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#ISO_14271"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ISO_15489"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ISO_15939"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ISO_17000"/>
@@ -347,19 +411,10 @@
         <NamedIndividual IRI="#ISO_27001"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Initial"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Integrity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Managed"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Optimized"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Organizational_Communication"/>
@@ -371,10 +426,16 @@
         <NamedIndividual IRI="#Protection"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Repeatable"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Vendor_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Workflow_Tools_1"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AccessControl"/>
@@ -409,12 +470,20 @@
         <Class IRI="#Role"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Data_Mapping_And_Classification_System"/>
+        <Class IRI="#Tools"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Data_Processor"/>
         <Class IRI="#Role"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Data_Subject"/>
         <Class IRI="#Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Database_Management_System"/>
+        <Class IRI="#Records_Management"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Development"/>
@@ -465,7 +534,19 @@
         <Class IRI="#Role"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
         <Class IRI="#Records_Management"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Records_Management"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reporting_And_Analysis_System"/>
+        <Class IRI="#Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Risk_&amp;_Compliance"/>
         <Class IRI="#Organization"/>
     </SubClassOf>
     <SubClassOf>
@@ -489,12 +570,8 @@
         <Class IRI="#Capability"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
-        <Class IRI="#Records_Management"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Risk_&amp;_Compliance"/>
-        <Class IRI="#Organization"/>
+        <Class IRI="#Workflow_Tools"/>
+        <Class IRI="#Tools"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Business_Unit"/>
@@ -503,8 +580,8 @@
         <Class IRI="#Legal"/>
         <Class IRI="#Privacy"/>
         <Class IRI="#Records_Management"/>
-        <Class IRI="#Security"/>
         <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class IRI="#Security"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#CCO"/>
@@ -534,8 +611,40 @@
         <Class IRI="#Role"/>
     </DisjointClasses>
     <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#1_SubStandard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#2_InDevelopment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#3_Essential"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#4_Proactive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Maturity"/>
+        <NamedIndividual IRI="#5_Transformational"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IG_Capability"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#AccessControl"/>
@@ -544,6 +653,10 @@
     <ClassAssertion>
         <Class IRI="#Goal"/>
         <NamedIndividual IRI="#Accountability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GDPR"/>
+        <NamedIndividual IRI="#Article_24"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#GDPR"/>
@@ -556,6 +669,10 @@
     <ClassAssertion>
         <Class IRI="#GDPR"/>
         <NamedIndividual IRI="#Article_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#GDPR"/>
+        <NamedIndividual IRI="#Article_6"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Audit"/>
@@ -582,6 +699,10 @@
         <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Data_Mapping_And_Classification_System"/>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
     </ClassAssertion>
@@ -598,8 +719,8 @@
         <NamedIndividual IRI="#Data_Subject_Rights"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#Defined"/>
+        <Class IRI="#Database_Management_System"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Electronic_Records_Management"/>
@@ -607,7 +728,15 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_14271"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
         <NamedIndividual IRI="#ISO_15489"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ISO"/>
+        <NamedIndividual IRI="#ISO_15939"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ISO"/>
@@ -622,24 +751,12 @@
         <NamedIndividual IRI="#ISO_27001"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#Initial"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Goal"/>
         <NamedIndividual IRI="#Integrity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#Managed"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#Optimized"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Goal"/>
@@ -654,13 +771,83 @@
         <NamedIndividual IRI="#Protection"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#Repeatable"/>
+        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Reporting_And_Analysis_System"/>
+        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#IG_Capability"/>
         <NamedIndividual IRI="#Vendor_Management"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Workflow_Tools"/>
+        <NamedIndividual IRI="#Workflow_Tools_1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGoal"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#4_Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Implementing automated retention and disposition processes ensures that records are managed and disposed of in compliance with RMP requirements and legal obligations.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> A systematic metadata management system enables accurate identification and management of records in accordance with RMP requirements.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">An effective Access Control system ensures that the senior officer appointed as the Records Manager (RM) has appropriate access rights and responsibilities for the Records Management Program (RMP), ensuring the integrity and security of recorded information.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <NamedIndividual IRI="#ISO_15939"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasGoal"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
@@ -669,12 +856,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inMaturityLevel"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Managed"/>
+        <NamedIndividual IRI="#3_Essential"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <NamedIndividual IRI="#Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
@@ -684,30 +871,21 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <NamedIndividual IRI="#Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management</Literal>
         </Annotation>
         <ObjectProperty IRI="#needsTechnicalRequirement"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#ERM_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
-        </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Audit_1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes.</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes.</Literal>
         </Annotation>
         <ObjectProperty IRI="#needsTechnicalRequirement"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
@@ -716,11 +894,20 @@
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
         </Annotation>
         <ObjectProperty IRI="#needsTechnicalRequirement"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_3_3"/>
+        <NamedIndividual IRI="#Audit_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#practicesDefinedInIso"/>
@@ -733,14 +920,162 @@
         <NamedIndividual IRI="#ISO_17000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGoal"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#5_Transformational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
         <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">A robust data mapping and classification system is crucial for identifying, categorizing, and labeling data according to its sensitivity and importance, which is essential for meeting accountability goals.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">An audit trail provides a transparent record of data processing activities and helps in meeting accountability requirements.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#Audit_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Implementing strong access controls and authentication mechanisms ensures that only authorized personnel can access and manipulate data, contributing to accountability and data protection.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <NamedIndividual IRI="#ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasGoal"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inMaturityLevel"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#3_Essential"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Article_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Workflow_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">RIM is responsible for the management and maintenance of metadata associated with records. Metadata allows for the identification, classification, and retrieval of documents and data, enhancing the efficiency of information-driven processes.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">A DMS enables efficient management, storage, retrieval, and sharing of documents and data, which is essential for information-driven processes.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement.</Literal>
+        </Annotation>
+        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#ISO_14271"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <NamedIndividual IRI="#ISO_15939"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#AccessControl_1"/>
         <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual IRI="#Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#practicesDefinedInIso"/>
@@ -750,12 +1085,17 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#Audit_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <NamedIndividual IRI="#Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#Audit_1"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Audit_1"/>
+        <NamedIndividual IRI="#ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#responsibleForCapability"/>
@@ -764,8 +1104,18 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
         <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual IRI="#ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
@@ -773,14 +1123,39 @@
         <NamedIndividual IRI="#Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <NamedIndividual IRI="#Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#practicesDefinedInIso"/>
         <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
         <NamedIndividual IRI="#ISO_17000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <NamedIndividual IRI="#Article_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <NamedIndividual IRI="#ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#defines"/>
@@ -790,12 +1165,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <NamedIndividual IRI="#Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#involvesArticle"/>
         <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <NamedIndividual IRI="#Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#practicesDefinedInIso"/>
@@ -812,10 +1187,65 @@
         <NamedIndividual IRI="#ERM_1"/>
         <NamedIndividual IRI="#ISO_27001"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <NamedIndividual IRI="#Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <NamedIndividual IRI="#Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <NamedIndividual IRI="#ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <NamedIndividual IRI="#ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+        <NamedIndividual IRI="#Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+        <NamedIndividual IRI="#ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#involvesArticle"/>
+        <NamedIndividual IRI="#Workflow_Tools_1"/>
+        <NamedIndividual IRI="#Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <NamedIndividual IRI="#Workflow_Tools_1"/>
+        <NamedIndividual IRI="#ISO_14271"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capabilityDescription"/>
+        <NamedIndividual IRI="#AC_1_2_4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> A senior officer is appointed RM and responsible for the RMP.</Literal>
+    </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#capabilityDescription"/>
         <NamedIndividual IRI="#AC_1_3_3"/>
-        <Literal>Electronic records are part of  The RMP.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electronic records are part of  The RMP.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capabilityDescription"/>
+        <NamedIndividual IRI="#AC_1_4_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The accountability goals are met.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#capabilityDescription"/>
+        <NamedIndividual IRI="#AC_1_5_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IG drives information-driven processes.</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#accountableForStrageticPlan"/>
@@ -1291,12 +1721,12 @@
     </SubDataPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2147483649"/>
-        <Literal></Literal>
+        <AnonymousIndividual nodeID="_:http://www.semanticweb.org/IG/genid5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
