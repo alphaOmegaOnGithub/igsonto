@@ -10,12 +10,11 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/IG/Governance"
+     xml:base="http://www.w3.org/2002/07/owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="http://www.semanticweb.org/IG/Governance">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
     <Prefix name="" IRI="http://www.semanticweb.org/IG/Governance/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -24,1704 +23,3054 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="Governance" IRI="http://www.semanticweb.org/IG/Governance#"/>
     <Declaration>
-        <Class IRI="#AccessControl"/>
+        <Class abbreviatedIRI="Governance:AccessControl"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Audit"/>
+        <Class abbreviatedIRI="Governance:Audit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Business_Unit"/>
+        <Class abbreviatedIRI="Governance:Business_Unit"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CCO"/>
+        <Class abbreviatedIRI="Governance:CCO"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CSO"/>
+        <Class abbreviatedIRI="Governance:CIGO"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Capability"/>
+        <Class abbreviatedIRI="Governance:CSO"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Change_Management"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DPO"/>
+        <Class abbreviatedIRI="Governance:Change_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data"/>
+        <Class abbreviatedIRI="Governance:Collaboration_Tools"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data_Controller"/>
+        <Class abbreviatedIRI="Governance:DPO"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data_Mapping_And_Classification_System"/>
+        <Class abbreviatedIRI="Governance:Data"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data_Processor"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data_Retention_Policy"/>
+        <Class abbreviatedIRI="Governance:Data_Mapping_And_Classification_System"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Data_Subject"/>
+        <Class abbreviatedIRI="Governance:Data_Processor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Database_Management_System"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Development"/>
+        <Class abbreviatedIRI="Governance:Data_Sharing_Protocols"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Electronic_Records_Management"/>
+        <Class abbreviatedIRI="Governance:Data_Subject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Enterprise_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:Database_Management_System"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Executive_Sponsor"/>
+        <Class abbreviatedIRI="Governance:Development"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GDPR"/>
+        <Class abbreviatedIRI="Governance:Disposition_Policies_And_Procedures"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Goal"/>
+        <Class abbreviatedIRI="Governance:Document_Management_System"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Capability"/>
+        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Chief_Officer"/>
+        <Class abbreviatedIRI="Governance:Enterprise_Risk_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Leadership"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Policy"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Programm"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Strategic_Plan"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#IG_Team"/>
+        <Class abbreviatedIRI="Governance:IG_Chief_Officer"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ISO"/>
+        <Class abbreviatedIRI="Governance:IG_Leadership"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
+        <Class abbreviatedIRI="Governance:IG_Policy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Information_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:IG_Programm"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#LHN_Requirements"/>
+        <Class abbreviatedIRI="Governance:IG_Strategic_Plan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Legal"/>
+        <Class abbreviatedIRI="Governance:IG_Team"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Legal_Hold_Notification"/>
+        <Class abbreviatedIRI="Governance:ISO"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Long_Term_Digital_Preservation"/>
+        <Class abbreviatedIRI="Governance:Information_Asset_Risk_Mitigation_Plan"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Maturity"/>
+        <Class abbreviatedIRI="Governance:Information_Risk_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Metadata"/>
+        <Class abbreviatedIRI="Governance:LHN_Requirements"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Metrics"/>
+        <Class abbreviatedIRI="Governance:Legal"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Legal_Hold_Notification"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Privacy"/>
+        <Class abbreviatedIRI="Governance:Long_Term_Digital_Preservation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Project_Manager"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <Class abbreviatedIRI="Governance:Metadata"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Records_Management"/>
+        <Class abbreviatedIRI="Governance:Metadata_Framework"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Reporting_And_Analysis_System"/>
+        <Class abbreviatedIRI="Governance:Metrics"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Risk_Profile"/>
+        <Class abbreviatedIRI="Governance:Privacy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Project_Manager"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Security"/>
+        <Class abbreviatedIRI="Governance:Records-_&amp;_Information_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Senior_Records_Officer"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Stakeholder"/>
+        <Class abbreviatedIRI="Governance:Records_Retention_Schedule"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Steering_Commitee"/>
+        <Class abbreviatedIRI="Governance:Reporting_And_Analysis_System"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Supervisor_Authority"/>
+        <Class abbreviatedIRI="Governance:Review_Cycles"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TOSCA_Capability"/>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Tools"/>
+        <Class abbreviatedIRI="Governance:Risk_Profile"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Workflow_Tools"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#accountableForStrageticPlan"/>
+        <Class abbreviatedIRI="Governance:Security"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
+        <Class abbreviatedIRI="Governance:Senior_Records_Officer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#clearsObstaclesFor"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#collaboratesInLTDP"/>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#collaboratesWithOrganization"/>
+        <Class abbreviatedIRI="Governance:Supervisor_Authority"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
+        <Class abbreviatedIRI="Governance:TOSCA_Capability"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#contactPersonForSupervisor"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#createsRiskPlan"/>
+        <Class abbreviatedIRI="Governance:Training"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#defines"/>
+        <Class abbreviatedIRI="Governance:Workflow_Tools"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#definesPracticesFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:accountableForStrageticPlan"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#ensures"/>
+        <ObjectProperty abbreviatedIRI="Governance:clearsObstaclesFor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesInLTDP"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesWithOrganization"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
+        <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasData"/>
+        <ObjectProperty abbreviatedIRI="Governance:contactPersonForSupervisor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasGoal"/>
+        <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
+        <ObjectProperty abbreviatedIRI="Governance:defines"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasLHNRequirements"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasTechnicalNeedsDesription"/>
+        <ObjectProperty abbreviatedIRI="Governance:drivenByExcutiveSponsor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#inMaturityLevel"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensures"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensuresGDPRComplianceForDataController"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#involvesArticle"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInputToLHNRequirements"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#isDefinedBy"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInstructionsToDataProcessor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#leadsRIM"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasData"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#leadsSecurity"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#managesIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasLHNRequirements"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#memberOfOrganization"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasTechnicalNeedsDesription"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#organizesTeam"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#participateInIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
+        <ObjectProperty abbreviatedIRI="Governance:isDefinedBy"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsRIM"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#responsibleForCapability"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsSecurity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:managesIGProgramm"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#setsRulesForDataController"/>
+        <ObjectProperty abbreviatedIRI="Governance:maturityLevelDefinedFor"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#technicalRequirementFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:memberOfOrganization"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#capabilityDescription"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#1_SubStandard"/>
+        <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#2_InDevelopment"/>
+        <ObjectProperty abbreviatedIRI="Governance:participateInIGProgramm"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#3_Essential"/>
+        <ObjectProperty abbreviatedIRI="Governance:paysPeriodicAttentionToIGProgramm"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#4_Proactive"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#5_Transformational"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AC_1_2_4"/>
+        <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AC_1_3_3"/>
+        <ObjectProperty abbreviatedIRI="Governance:setsRulesForDataController"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AC_1_4_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:technicalRequirementFor"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AC_1_5_3"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:1_SubStandard"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Accountability"/>
+        <NamedIndividual abbreviatedIRI="Governance:2_InDevelopment"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Article_24"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:4_Proactive"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Article_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Article_6"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Audit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Auditing_And_Monitoring"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Compliance"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#DataController1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Breach_Management"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Data_Subject_Rights"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_14271"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_17000"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_23081"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Integrity"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Organizational_Communication"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Privacy_Impact_Assesments"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Protection"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Auditing_And_Monitoring"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Vendor_Management"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Inventory_And_Mapping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_And_Erasure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Security_And_Privacy_Controls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject_Rights"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Leadership_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Strategic_Plan_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Integrity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Lawful_Basis_For_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Organizational_Communication"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assesments"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Protection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Vendor_Management"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#AccessControl"/>
-        <Class IRI="#Security"/>
+        <Class abbreviatedIRI="Governance:AccessControl"/>
+        <Class abbreviatedIRI="Governance:Security"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Audit"/>
-        <Class IRI="#Security"/>
+        <Class abbreviatedIRI="Governance:Audit"/>
+        <Class abbreviatedIRI="Governance:Security"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Business_Unit"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Business_Unit"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CCO"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:CCO"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CSO"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:CIGO"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Change_Management"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:CSO"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DPO"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Change_Management"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Data_Controller"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Collaboration_Tools"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Data_Mapping_And_Classification_System"/>
-        <Class IRI="#Tools"/>
+        <Class abbreviatedIRI="Governance:DPO"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Data_Processor"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Data_Subject"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Data_Mapping_And_Classification_System"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Database_Management_System"/>
-        <Class IRI="#Records_Management"/>
+        <Class abbreviatedIRI="Governance:Data_Processor"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Development"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Electronic_Records_Management"/>
-        <Class IRI="#Records_Management"/>
+        <Class abbreviatedIRI="Governance:Data_Sharing_Protocols"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Enterprise_Risk_Management"/>
-        <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class abbreviatedIRI="Governance:Data_Subject"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Executive_Sponsor"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Database_Management_System"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IG_Capability"/>
-        <Class IRI="#Capability"/>
+        <Class abbreviatedIRI="Governance:Development"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IG_Chief_Officer"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Disposition_Policies_And_Procedures"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#IG_Leadership"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Document_Management_System"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Information_Risk_Management"/>
-        <Class IRI="#Risk_&amp;_Compliance"/>
+        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Legal"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Enterprise_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Long_Term_Digital_Preservation"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Privacy"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Project_Manager"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:IG_Chief_Officer"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
-        <Class IRI="#Records_Management"/>
+        <Class abbreviatedIRI="Governance:IG_Leadership"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Records_Management"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Information_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Reporting_And_Analysis_System"/>
-        <Class IRI="#Tools"/>
+        <Class abbreviatedIRI="Governance:Legal"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Risk_&amp;_Compliance"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Long_Term_Digital_Preservation"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Security"/>
-        <Class IRI="#Organization"/>
+        <Class abbreviatedIRI="Governance:Metadata_Framework"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Senior_Records_Officer"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Privacy"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Stakeholder"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Project_Manager"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Steering_Commitee"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Records-_&amp;_Information_Management"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#TOSCA_Capability"/>
-        <Class IRI="#Capability"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Workflow_Tools"/>
-        <Class IRI="#Tools"/>
+        <Class abbreviatedIRI="Governance:Records_Retention_Schedule"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Reporting_And_Analysis_System"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Review_Cycles"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Security"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Senior_Records_Officer"/>
+        <Class abbreviatedIRI="Governance:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
+        <Class abbreviatedIRI="Governance:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
+        <Class abbreviatedIRI="Governance:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:TOSCA_Capability"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Training"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:Workflow_Tools"/>
+        <Class abbreviatedIRI="Governance:Tools"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#Business_Unit"/>
-        <Class IRI="#Change_Management"/>
-        <Class IRI="#Development"/>
-        <Class IRI="#Legal"/>
-        <Class IRI="#Privacy"/>
-        <Class IRI="#Records_Management"/>
-        <Class IRI="#Risk_&amp;_Compliance"/>
-        <Class IRI="#Security"/>
+        <Class abbreviatedIRI="Governance:Business_Unit"/>
+        <Class abbreviatedIRI="Governance:Change_Management"/>
+        <Class abbreviatedIRI="Governance:Development"/>
+        <Class abbreviatedIRI="Governance:Legal"/>
+        <Class abbreviatedIRI="Governance:Privacy"/>
+        <Class abbreviatedIRI="Governance:Records_Management"/>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
+        <Class abbreviatedIRI="Governance:Security"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#CCO"/>
-        <Class IRI="#CSO"/>
-        <Class IRI="#DPO"/>
-        <Class IRI="#Data_Controller"/>
-        <Class IRI="#Data_Processor"/>
-        <Class IRI="#Data_Subject"/>
-        <Class IRI="#Executive_Sponsor"/>
-        <Class IRI="#IG_Leadership"/>
-        <Class IRI="#Project_Manager"/>
-        <Class IRI="#Stakeholder"/>
-        <Class IRI="#Steering_Commitee"/>
+        <Class abbreviatedIRI="Governance:CCO"/>
+        <Class abbreviatedIRI="Governance:CSO"/>
+        <Class abbreviatedIRI="Governance:DPO"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
+        <Class abbreviatedIRI="Governance:Data_Processor"/>
+        <Class abbreviatedIRI="Governance:Data_Subject"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
+        <Class abbreviatedIRI="Governance:IG_Leadership"/>
+        <Class abbreviatedIRI="Governance:Project_Manager"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Electronic_Records_Management"/>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
+        <Class abbreviatedIRI="Governance:Records-_&amp;_Information_Management"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Enterprise_Risk_Management"/>
-        <Class IRI="#Information_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:Enterprise_Risk_Management"/>
+        <Class abbreviatedIRI="Governance:Information_Risk_Management"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#Goal"/>
-        <Class IRI="#Maturity"/>
-        <Class IRI="#Organization"/>
-        <Class IRI="#Role"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#1_SubStandard"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <NamedIndividual abbreviatedIRI="Governance:1_SubStandard"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#2_InDevelopment"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <NamedIndividual abbreviatedIRI="Governance:2_InDevelopment"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#3_Essential"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#4_Proactive"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <NamedIndividual abbreviatedIRI="Governance:4_Proactive"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Maturity"/>
-        <NamedIndividual IRI="#5_Transformational"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AccessControl"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Goal"/>
-        <NamedIndividual IRI="#Accountability"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#GDPR"/>
-        <NamedIndividual IRI="#Article_24"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#GDPR"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#GDPR"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#GDPR"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#GDPR"/>
-        <NamedIndividual IRI="#Article_6"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Audit"/>
-        <NamedIndividual IRI="#Audit_1"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Auditing_And_Monitoring"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Goal"/>
-        <NamedIndividual IRI="#Compliance"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Data_Controller"/>
-        <NamedIndividual IRI="#DataController1"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Data_Breach_Management"/>
+        <Class abbreviatedIRI="Governance:AccessControl"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Data_Inventory_And_Mapping"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Data_Mapping_And_Classification_System"/>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Data_Retention_And_Erasure"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Data_Retention_Policy"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Data_Security_And_Privacy_Controls"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Data_Subject_Rights"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Database_Management_System"/>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Electronic_Records_Management"/>
-        <NamedIndividual IRI="#ERM_1"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_14271"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <Class abbreviatedIRI="Governance:Audit"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_17000"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Auditing_And_Monitoring"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_23081"/>
+        <Class abbreviatedIRI="Governance:CIGO"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#ISO"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <Class abbreviatedIRI="Governance:Collaboration_Tools"/>
+        <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Goal"/>
-        <NamedIndividual IRI="#Integrity"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Lawful_Basis_For_Processing"/>
+        <Class abbreviatedIRI="Governance:DPO"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Goal"/>
-        <NamedIndividual IRI="#Organizational_Communication"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
+        <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Privacy_Impact_Assesments"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach_Management"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Goal"/>
-        <NamedIndividual IRI="#Protection"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Inventory_And_Mapping"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <Class abbreviatedIRI="Governance:Data_Mapping_And_Classification_System"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Reporting_And_Analysis_System"/>
-        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_And_Erasure"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#IG_Capability"/>
-        <NamedIndividual IRI="#Vendor_Management"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Workflow_Tools"/>
-        <NamedIndividual IRI="#Workflow_Tools_1"/>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Security_And_Privacy_Controls"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Data_Sharing_Protocols"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject_Rights"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Database_Management_System"/>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Disposition_Policies_And_Procedures"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Document_Management_System"/>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Leadership"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Leadership_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Policy"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Programm"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Strategic_Plan"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Strategic_Plan_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:ISO"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <NamedIndividual abbreviatedIRI="Governance:Integrity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Lawful_Basis_For_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Metadata_Framework"/>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <NamedIndividual abbreviatedIRI="Governance:Organizational_Communication"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assesments"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Goal"/>
+        <NamedIndividual abbreviatedIRI="Governance:Protection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Records-_&amp;_Information_Management"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Records_Retention_Schedule"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Reporting_And_Analysis_System"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Review_Cycles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Senior_Records_Officer"/>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Supervisor_Authority"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Training"/>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:IG_Capability"/>
+        <NamedIndividual abbreviatedIRI="Governance:Vendor_Management"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Workflow_Tools"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasGoal"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#Accountability"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#4_Proactive"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Establishing a records retention schedule ensures that records are retained for the appropriate duration, in alignment with legal, regulatory, and business requirements.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">A metadata framework allows consistent and structured metadata assignment to records, facilitating their identification, classification, and retrieval, which is essential for effective records management.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">A robust DMS provides a centralized platform for creating, storing, managing, and retrieving records. It ensures proper organization, version control, and accessibility of records within the RMP.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">It is crucial to have skilled and knowledgeable Information Governance (IG) professionals who possess expertise in various aspects of IG, including data protection, privacy, records management, and compliance. These professionals play a pivotal role in overseeing and managing the IG program.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> Clear role definitions and well-defined responsibilities for IG professionals within the organization are essential. This involves outlining their authority, tasks, and accountability to ensure effective oversight of the IG program.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">IG professionals must collaborate with various stakeholders, including legal, compliance, IT, and business units, to ensure that the IG program is well-integrated and aligned with organizational goals.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> IG professionals require access to appropriate tools, technologies, and resources to manage and supervise the IG program efficiently. This includes access to data management software, analytics tools, compliance monitoring systems, and relevant documentation.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">An IG Steering Committee, composed of representatives from different departments, ensures cross-functional collaboration and coordination in IG efforts. It provides oversight, direction, and decision-making for IG initiatives.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> A well-defined and comprehensive Information Governance (IG) strategic plan and policy framework outlines the principles, objectives, and guidelines for IG initiatives within the organization. It ensures a structured approach to IG implementation and decision-making.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Strategic_Plan_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Active involvement and support from senior management and the Governing Board demonstrate the organization&apos;s commitment to IG. Their engagement helps allocate resources, make strategic decisions, and prioritize IG initiatives.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Leadership_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">The individuals in the RIM role need access to the necessary tools and systems to carry out their responsibilities effectively. This includes access to records management software, document repositories, and other technology platforms that support RIM activities.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">RIM personnel should receive proper training and have the necessary knowledge to fulfill their role effectively. This includes training on records management principles, legal requirements, privacy considerations, and technology usage.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:4_Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Implementing automated retention and disposition processes ensures that records are managed and disposed of in compliance with RMP requirements and legal obligations.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral"> A systematic metadata management system enables accurate identification and management of records in accordance with RMP requirements.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">An effective Access Control system ensures that the senior officer appointed as the Records Manager (RM) has appropriate access rights and responsibilities for the Records Management Program (RMP), ensuring the integrity and security of recorded information.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasGoal"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Accountability"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#3_Essential"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Clearly defining the role and responsibilities of the Chief Information Governance Officer (CIGO) is essential for effective leadership and management of information governance initiatives. The CIGO plays a central role in developing and implementing IG strategies, policies, and processes.
+
+Effective communication and collaboration skills are vital for the CIGO to engage with senior leadership, departments, and external stakeholders. Collaboration ensures that IG goals align with organizational objectives and that IG initiatives are integrated into business processes.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">GDPR Article 39 emphasizes the role of the Data Protection Officer (DPO) in an organization. While the CIGO is not explicitly mentioned in GDPR, the DPO&apos;s responsibilities and expertise are relevant to the CIGO&apos;s role in overseeing data protection and privacy aspects.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> GDPR Article 35 emphasizes the importance of consulting with data protection authorities when conducting data protection impact assessments, which may require collaboration led by the CIGO.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#ERM_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#Audit_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
-        <NamedIndividual IRI="#ISO_17000"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasGoal"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Accountability"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#5_Transformational"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:4_Proactive"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Collaboration among various stakeholders, including legal, compliance, IT, and business units, is essential for the successful integration of the RMP within the IGP. This collaboration ensures that records management practices align with organizational goals and regulatory requirements.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">The Information Governance Program should be well-documented, outlining its objectives, scope, policies, procedures, and key components such as the Records Management Program (RMP). This documentation provides a clear roadmap for the implementation and management of the IGP.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">The reporting structure within the organization must clearly establish the link between the CIGO, RM, and the governing body. This ensures that information governance issues are properly communicated, managed, and escalated as needed.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> The governing body of the organization, such as a board of directors or executive management, must have a structure that includes roles for the Chief Information Governance Officer (CIGO) and the Records Manager (RM). This ensures that these key positions are formally integrated into the leadership and decision-making processes of the organization.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral"> The governing body of the organization, such as a board of directors or executive management, must have a structure that includes roles for the Chief Information Governance Officer (CIGO) and the Records Manager (RM). This ensures that these key positions are formally integrated into the leadership and decision-making processes of the organization.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Integrating RIM officers into cross-functional workflows helps ensure that records management requirements are met throughout the information lifecycle, enhancing compliance, transparency, and accountability.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Implement collaboration tools and platforms that enable seamless communication and interaction between Records and Information Management (RIM) officers and other key officers across various departments. These tools facilitate the exchange of information, decision-making, and collaboration on records management initiatives.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Establish clear protocols and guidelines for sharing records and information between different departments or officers. These protocols should address data formats, access controls, security measures, and privacy considerations to ensure proper handling and sharing of information.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:4_Proactive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Well-documented disposition policies and procedures should be established to guide the periodic review of records management (RM)-related issues and disposition practices. These documents outline the criteria and processes for reviewing records and making decisions about their retention or disposal.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Establishing regular review cycles is essential to ensure that disposition policies and RM-related issues are systematically assessed and updated. This involves defining the frequency of reviews and establishing a clear schedule for periodic evaluations.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Collaboration among stakeholders, including legal, compliance, business units, and records management professionals, is essential for the meaningful review of disposition policies and RM-related issues. Stakeholders should actively participate in the review process.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Utilizing technology solutions, such as records management software and workflow tools, can streamline the review process for disposition policies and RM-related issues. These tools facilitate document tracking, collaboration, and reporting.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">A robust data mapping and classification system is crucial for identifying, categorizing, and labeling data according to its sensitivity and importance, which is essential for meeting accountability goals.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">An audit trail provides a transparent record of data processing activities and helps in meeting accountability requirements.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#Audit_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Implementing strong access controls and authentication mechanisms ensures that only authorized personnel can access and manipulate data, contributing to accountability and data protection.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasGoal"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Accountability"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#3_Essential"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Article_24"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Article_6"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Workflow_Tools_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">RIM is responsible for the management and maintenance of metadata associated with records. Metadata allows for the identification, classification, and retrieval of documents and data, enhancing the efficiency of information-driven processes.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">A DMS enables efficient management, storage, retrieval, and sharing of documents and data, which is essential for information-driven processes.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement.</Literal>
         </Annotation>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#ISO_14271"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#ISO_23081"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:5_Transformational"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#AccessControl_1"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Audit_1"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Audit_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Audit_1"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">A formal process for regular review and revision of accountability goals should be in place. This includes predefined intervals for assessing the effectiveness and relevance of established goals and making updates as necessary.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#responsibleForCapability"/>
-        <NamedIndividual IRI="#DataController1"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Clear and well-documented accountability goals must be established within the organization&apos;s Information Governance framework. These goals define the organization&apos;s commitments to accountability, data protection, and compliance.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Engaging relevant stakeholders, including senior management, legal, and data protection officers, in the review and revision process is crucial. Their input ensures that accountability goals reflect the organization&apos;s strategic direction and compliance requirements.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Data_Mapping_And_Classification_System_1"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Accountability"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:3_Essential"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#ISO_17000"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Understanding what data is processed, where it&apos;s stored, and who accesses it is essential for setting effective accountability goals. Data mapping helps identify risks and assess compliance.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
-        <NamedIndividual IRI="#Article_6"/>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">Well-documented policies and procedures define the specific accountability goals, set expectations, and provide a reference for implementation and monitoring. These documents ensure a consistent understanding and execution of accountability across the organization.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Database_Management_System_1"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#defines"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#Data_Retention_Policy_Dummy"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#ISO_23081"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#ERM_1"/>
-        <NamedIndividual IRI="#ISO_27001"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
-        <NamedIndividual IRI="#Article_5"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
-        <NamedIndividual IRI="#Article_30"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
-        <NamedIndividual IRI="#ISO_23081"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Records_Information_Management_1"/>
-        <NamedIndividual IRI="#ISO_15489"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
-        <NamedIndividual IRI="#Article_24"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Reporting_And_Analysis_System_1"/>
-        <NamedIndividual IRI="#ISO_15939"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Audit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <NamedIndividual IRI="#Workflow_Tools_1"/>
-        <NamedIndividual IRI="#Article_32"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <NamedIndividual IRI="#Workflow_Tools_1"/>
-        <NamedIndividual IRI="#ISO_14271"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:CIGO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
+        <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Mapping_And_Classification_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Database_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:defines"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Leadership_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Leadership_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Policy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:IG_Programm_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15939"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Stakeholder_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:ISO_14271"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#capabilityDescription"/>
-        <NamedIndividual IRI="#AC_1_2_4"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A records management program (RMP)  is established.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">IG professional supervises IG program.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_1_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SMgmnt and Governing Board place great emphasis on IG.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The RIM role is assigned</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_4"/>
         <Literal datatypeIRI="&rdf;PlainLiteral"> A senior officer is appointed RM and responsible for the RMP.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#capabilityDescription"/>
-        <NamedIndividual IRI="#AC_1_3_3"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_2_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">There is a Chief Information Governance Officer (CIGO) appointed.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_3"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">Electronic records are part of  The RMP.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#capabilityDescription"/>
-        <NamedIndividual IRI="#AC_1_4_5"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">RMP is an element of the IGP.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_3_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">CIGO and RM are member of the governing body.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> RIM is engaged with other officers.   </Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> Disposition policies and RM-related issues are reviewed periodically.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_4_5"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">The accountability goals are met.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#capabilityDescription"/>
-        <NamedIndividual IRI="#AC_1_5_3"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_3"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">IG drives information-driven processes.</Literal>
     </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_5_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The accountability goals are periodically reviewed and revised.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <NamedIndividual abbreviatedIRI="Governance:AC_1_6_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> Accountabiliy goals are defined.</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#accountableForStrageticPlan"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:accountableForStrageticPlan"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#clearsObstaclesFor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:clearsObstaclesFor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#collaboratesInLTDP"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesInLTDP"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#collaboratesWithOrganization"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesWithOrganization"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#contactPersonForSupervisor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:contactPersonForSupervisor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#createsRiskPlan"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#defines"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:defines"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#definesPracticesFor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:drivenByExcutiveSponsor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#ensures"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensures"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensuresGDPRComplianceForDataController"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInputToLHNRequirements"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInstructionsToDataProcessor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasData"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasData"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasGoal"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasLHNRequirements"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasLHNRequirements"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasTechnicalNeedsDesription"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasTechnicalNeedsDesription"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#isDefinedBy"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:isDefinedBy"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#leadsRIM"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsRIM"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#leadsSecurity"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsSecurity"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#managesIGProgramm"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:managesIGProgramm"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:maturityLevelDefinedFor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#memberOfOrganization"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:memberOfOrganization"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#organizesTeam"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#participateInIGProgramm"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:participateInIGProgramm"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:paysPeriodicAttentionToIGProgramm"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#responsibleForCapability"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#setsRulesForDataController"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:setsRulesForDataController"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#technicalRequirementFor"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:technicalRequirementFor"/>
+        <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
-        <ObjectProperty IRI="#involvesArticle"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#defines"/>
-        <ObjectProperty IRI="#isDefinedBy"/>
+        <ObjectProperty abbreviatedIRI="Governance:defines"/>
+        <ObjectProperty abbreviatedIRI="Governance:isDefinedBy"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#definesPracticesFor"/>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <ObjectProperty abbreviatedIRI="Governance:maturityLevelDefinedFor"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <ObjectProperty IRI="#technicalRequirementFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <ObjectProperty abbreviatedIRI="Governance:technicalRequirementFor"/>
     </InverseObjectProperties>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#accountableForStrageticPlan"/>
-        <Class IRI="#Executive_Sponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:accountableForStrageticPlan"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
-        <Class IRI="#GDPR"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#clearsObstaclesFor"/>
-        <Class IRI="#Executive_Sponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:clearsObstaclesFor"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#collaboratesInLTDP"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesInLTDP"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#collaboratesWithOrganization"/>
-        <Class IRI="#Steering_Commitee"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesWithOrganization"/>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#contactPersonForSupervisor"/>
-        <Class IRI="#DPO"/>
+        <ObjectProperty abbreviatedIRI="Governance:contactPersonForSupervisor"/>
+        <Class abbreviatedIRI="Governance:DPO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#createsRiskPlan"/>
-        <Class IRI="#Steering_Commitee"/>
+        <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#definesPracticesFor"/>
-        <Class IRI="#ISO"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
+        <Class abbreviatedIRI="Governance:ISO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
-        <Class IRI="#IG_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:drivenByExcutiveSponsor"/>
+        <Class abbreviatedIRI="Governance:IG_Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ensures"/>
-        <Class IRI="#Organization"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensures"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
-        <Class IRI="#Data_Controller"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensuresGDPRComplianceForDataController"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInputToLHNRequirements"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
-        <Class IRI="#Data_Controller"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInstructionsToDataProcessor"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasData"/>
-        <Class IRI="#Data_Subject"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasData"/>
+        <Class abbreviatedIRI="Governance:Data_Subject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasGoal"/>
-        <Class IRI="#Maturity"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLHNRequirements"/>
-        <Class IRI="#Legal_Hold_Notification"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasLHNRequirements"/>
+        <Class abbreviatedIRI="Governance:Legal_Hold_Notification"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
-        <Class IRI="#CCO"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
+        <Class abbreviatedIRI="Governance:CCO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <Class IRI="#Data_Retention_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#leadsRIM"/>
-        <Class IRI="#Senior_Records_Officer"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsRIM"/>
+        <Class abbreviatedIRI="Governance:Senior_Records_Officer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#leadsSecurity"/>
-        <Class IRI="#CSO"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsSecurity"/>
+        <Class abbreviatedIRI="Governance:CSO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#managesIGProgramm"/>
-        <Class IRI="#IG_Chief_Officer"/>
+        <ObjectProperty abbreviatedIRI="Governance:managesIGProgramm"/>
+        <Class abbreviatedIRI="Governance:IG_Chief_Officer"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
-        <Class IRI="#Maturity"/>
+        <ObjectProperty abbreviatedIRI="Governance:maturityLevelDefinedFor"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#memberOfOrganization"/>
-        <Class IRI="#Role"/>
+        <ObjectProperty abbreviatedIRI="Governance:memberOfOrganization"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#organizesTeam"/>
-        <Class IRI="#Executive_Sponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#participateInIGProgramm"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:participateInIGProgramm"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
-        <Class IRI="#Executive_Sponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:paysPeriodicAttentionToIGProgramm"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <Class IRI="#Data_Retention_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#responsibleForCapability"/>
-        <Class IRI="#Role"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
+        <Class abbreviatedIRI="Governance:Role"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
-        <Class IRI="#Change_Management"/>
+        <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
+        <Class abbreviatedIRI="Governance:Change_Management"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#setsRulesForDataController"/>
-        <Class IRI="#GDPR"/>
+        <ObjectProperty abbreviatedIRI="Governance:setsRulesForDataController"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#accountableForStrageticPlan"/>
-        <Class IRI="#IG_Strategic_Plan"/>
+        <ObjectProperty abbreviatedIRI="Governance:accountableForStrageticPlan"/>
+        <Class abbreviatedIRI="Governance:IG_Strategic_Plan"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#articleInvolvedIn"/>
-        <Class IRI="#Data_Retention_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:articleInvolvedIn"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#clearsObstaclesFor"/>
-        <Class IRI="#IG_Chief_Officer"/>
+        <ObjectProperty abbreviatedIRI="Governance:clearsObstaclesFor"/>
+        <Class abbreviatedIRI="Governance:IG_Chief_Officer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#clearsObstaclesFor"/>
-        <Class IRI="#Steering_Commitee"/>
+        <ObjectProperty abbreviatedIRI="Governance:clearsObstaclesFor"/>
+        <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#collaboratesInLTDP"/>
-        <Class IRI="#Long_Term_Digital_Preservation"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesInLTDP"/>
+        <Class abbreviatedIRI="Governance:Long_Term_Digital_Preservation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#collaboratesWithOrganization"/>
-        <Class IRI="#Organization"/>
+        <ObjectProperty abbreviatedIRI="Governance:collaboratesWithOrganization"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#consultaionNeededForMetrics"/>
-        <Class IRI="#Metrics"/>
+        <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
+        <Class abbreviatedIRI="Governance:Metrics"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#contactPersonForSupervisor"/>
-        <Class IRI="#Supervisor_Authority"/>
+        <ObjectProperty abbreviatedIRI="Governance:contactPersonForSupervisor"/>
+        <Class abbreviatedIRI="Governance:Supervisor_Authority"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#createsRiskPlan"/>
-        <Class IRI="#Information_Asset_Risk_Mitigation_Plan"/>
+        <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
+        <Class abbreviatedIRI="Governance:Information_Asset_Risk_Mitigation_Plan"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#definesPracticesFor"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#definesPracticesFor"/>
-        <Class IRI="#Data_Retention_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#drivenByExcutiveSponsor"/>
-        <Class IRI="#Executive_Sponsor"/>
+        <ObjectProperty abbreviatedIRI="Governance:drivenByExcutiveSponsor"/>
+        <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#ensures"/>
-        <Class IRI="#Goal"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensures"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#ensuresGDPRComplianceForDataController"/>
-        <Class IRI="#Data"/>
+        <ObjectProperty abbreviatedIRI="Governance:ensuresGDPRComplianceForDataController"/>
+        <Class abbreviatedIRI="Governance:Data"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#givesInputToLHNRequirements"/>
-        <Class IRI="#LHN_Requirements"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInputToLHNRequirements"/>
+        <Class abbreviatedIRI="Governance:LHN_Requirements"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#givesInstructionsToDataProcessor"/>
-        <Class IRI="#Data_Processor"/>
+        <ObjectProperty abbreviatedIRI="Governance:givesInstructionsToDataProcessor"/>
+        <Class abbreviatedIRI="Governance:Data_Processor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasData"/>
-        <Class IRI="#Data"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasData"/>
+        <Class abbreviatedIRI="Governance:Data"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasGoal"/>
-        <Class IRI="#Goal"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
+        <Class abbreviatedIRI="Governance:Goal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasInputOnRiskProfile"/>
-        <Class IRI="#Risk_Profile"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
+        <Class abbreviatedIRI="Governance:Risk_Profile"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLHNRequirements"/>
-        <Class IRI="#LHN_Requirements"/>
+        <ObjectProperty abbreviatedIRI="Governance:hasLHNRequirements"/>
+        <Class abbreviatedIRI="Governance:LHN_Requirements"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#inMaturityLevel"/>
-        <Class IRI="#Maturity"/>
+        <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+        <Class abbreviatedIRI="Governance:Maturity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#involvedInRiskAndCompliance"/>
-        <Class IRI="#Risk_&amp;_Compliance"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
+        <Class abbreviatedIRI="Governance:Risk_&amp;_Compliance"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#involvesArticle"/>
-        <Class IRI="#GDPR"/>
+        <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#leadsRIM"/>
-        <Class IRI="#Records-_&amp;_Information_Management"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsRIM"/>
+        <Class abbreviatedIRI="Governance:Records-_&amp;_Information_Management"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#leadsSecurity"/>
-        <Class IRI="#Security"/>
+        <ObjectProperty abbreviatedIRI="Governance:leadsSecurity"/>
+        <Class abbreviatedIRI="Governance:Security"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#managesIGProgramm"/>
-        <Class IRI="#IG_Programm"/>
+        <ObjectProperty abbreviatedIRI="Governance:managesIGProgramm"/>
+        <Class abbreviatedIRI="Governance:IG_Programm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#maturityLevelDefinedFor"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:maturityLevelDefinedFor"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#memberOfOrganization"/>
-        <Class IRI="#Organization"/>
+        <ObjectProperty abbreviatedIRI="Governance:memberOfOrganization"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <Class IRI="#Data_Retention_Policy"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#needsTechnicalRequirement"/>
-        <Class IRI="#Electronic_Records_Management"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
+        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#organizesTeam"/>
-        <Class IRI="#IG_Team"/>
+        <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
+        <Class abbreviatedIRI="Governance:IG_Team"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#participateInIGProgramm"/>
-        <Class IRI="#IG_Programm"/>
+        <ObjectProperty abbreviatedIRI="Governance:participateInIGProgramm"/>
+        <Class abbreviatedIRI="Governance:IG_Programm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#paysPeriodicAttentionToIGProgramm"/>
-        <Class IRI="#IG_Programm"/>
+        <ObjectProperty abbreviatedIRI="Governance:paysPeriodicAttentionToIGProgramm"/>
+        <Class abbreviatedIRI="Governance:IG_Programm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#practicesDefinedInIso"/>
-        <Class IRI="#ISO"/>
+        <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
+        <Class abbreviatedIRI="Governance:ISO"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#responsibleForCapability"/>
-        <Class IRI="#Capability"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#sellsChangesToStakeholder"/>
-        <Class IRI="#Stakeholder"/>
+        <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
+        <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#setsRulesForDataController"/>
-        <Class IRI="#Data_Controller"/>
+        <ObjectProperty abbreviatedIRI="Governance:setsRulesForDataController"/>
+        <Class abbreviatedIRI="Governance:Data_Controller"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
-        <DataProperty IRI="#capabilityDescription"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
+        <DataProperty IRI="topDataProperty"/>
     </SubDataPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:http://www.semanticweb.org/IG/genid5"/>
+        <AnonymousIndividual nodeID="_:http://www.semanticweb.org/IG/genid14"/>
         <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
     </AnnotationAssertion>
 </Ontology>
