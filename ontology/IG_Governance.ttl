@@ -277,7 +277,7 @@ Governance:involvedInRiskAndCompliance rdf:type owl:ObjectProperty ;
                                        
                                        rdfs:domain Governance:CCO ;
                                        
-                                       rdfs:range <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> ;
+                                       rdfs:range Governance:Risk_And_Compliance ;
                                        
                                        rdfs:subPropertyOf owl:topObjectProperty .
 
@@ -308,7 +308,7 @@ Governance:isDefinedBy rdf:type owl:ObjectProperty ;
 
 Governance:leadsRIM rdf:type owl:ObjectProperty ;
                     
-                    rdfs:range <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> ;
+                    rdfs:range Governance:Records_And_Information_Management ;
                     
                     rdfs:domain Governance:Senior_Records_Officer ;
                     
@@ -552,6 +552,14 @@ Governance:Capability rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Chain_Of_Custody_Tracking
+
+Governance:Chain_Of_Custody_Tracking rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf Governance:Tools .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Change_Management
 
 Governance:Change_Management rdf:type owl:Class ;
@@ -606,6 +614,22 @@ Governance:Data_Processor rdf:type owl:Class ;
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Data_Quality_Assurance_Framework
+
+Governance:Data_Quality_Assurance_Framework rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf Governance:Tools .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Quality_Management
+
+Governance:Data_Quality_Management rdf:type owl:Class ;
+                                   
+                                   rdfs:subClassOf Governance:Tools .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Retention_Policy
 
 Governance:Data_Retention_Policy rdf:type owl:Class ;
@@ -619,6 +643,14 @@ Governance:Data_Retention_Policy rdf:type owl:Class ;
 Governance:Data_Sharing_Protocols rdf:type owl:Class ;
                                   
                                   rdfs:subClassOf Governance:Tools .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Storage
+
+Governance:Data_Storage rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf Governance:Tools .
 
 
 
@@ -646,6 +678,14 @@ Governance:Development rdf:type owl:Class ;
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Digital_Signatures_And_Timestamps
+
+Governance:Digital_Signatures_And_Timestamps rdf:type owl:Class ;
+                                             
+                                             rdfs:subClassOf Governance:Tools .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Disposition_Policies_And_Procedures
 
 Governance:Disposition_Policies_And_Procedures rdf:type owl:Class ;
@@ -668,7 +708,15 @@ Governance:Electronic_Records_Management rdf:type owl:Class ;
                                          
                                          rdfs:subClassOf Governance:Records_Management ;
                                          
-                                         owl:disjointWith <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> .
+                                         owl:disjointWith Governance:Records_And_Information_Management .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Employee_Engagement_Platforms
+
+Governance:Employee_Engagement_Platforms rdf:type owl:Class ;
+                                         
+                                         rdfs:subClassOf Governance:Tools .
 
 
 
@@ -676,7 +724,7 @@ Governance:Electronic_Records_Management rdf:type owl:Class ;
 
 Governance:Enterprise_Risk_Management rdf:type owl:Class ;
                                       
-                                      rdfs:subClassOf <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> ;
+                                      rdfs:subClassOf Governance:Risk_And_Compliance ;
                                       
                                       owl:disjointWith Governance:Information_Risk_Management .
 
@@ -756,6 +804,14 @@ Governance:ISO rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Incident_Response_And_Remediation_Protocol
+
+Governance:Incident_Response_And_Remediation_Protocol rdf:type owl:Class ;
+                                                      
+                                                      rdfs:subClassOf Governance:Tools .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Information_Asset_Risk_Mitigation_Plan
 
 Governance:Information_Asset_Risk_Mitigation_Plan rdf:type owl:Class .
@@ -766,7 +822,7 @@ Governance:Information_Asset_Risk_Mitigation_Plan rdf:type owl:Class .
 
 Governance:Information_Risk_Management rdf:type owl:Class ;
                                        
-                                       rdfs:subClassOf <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> .
+                                       rdfs:subClassOf Governance:Risk_And_Compliance .
 
 
 
@@ -824,6 +880,14 @@ Governance:Metrics rdf:type owl:Class .
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Monitoring
+
+Governance:Monitoring rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf Governance:Security .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Organization
 
 Governance:Organization rdf:type owl:Class .
@@ -846,11 +910,11 @@ Governance:Project_Manager rdf:type owl:Class ;
 
 
 
-###  http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management
+###  http://www.semanticweb.org/IG/Governance#Records_And_Information_Management
 
-<http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> rdf:type owl:Class ;
-                                                                             
-                                                                             rdfs:subClassOf Governance:Records_Management .
+Governance:Records_And_Information_Management rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf Governance:Records_Management .
 
 
 
@@ -886,11 +950,11 @@ Governance:Review_Cycles rdf:type owl:Class ;
 
 
 
-###  http://www.semanticweb.org/IG/Governance#Risk_&_Compliance
+###  http://www.semanticweb.org/IG/Governance#Risk_And_Compliance
 
-<http://www.semanticweb.org/IG/Governance#Risk_&_Compliance> rdf:type owl:Class ;
-                                                             
-                                                             rdfs:subClassOf Governance:Organization .
+Governance:Risk_And_Compliance rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf Governance:Organization .
 
 
 
@@ -903,6 +967,14 @@ Governance:Risk_Profile rdf:type owl:Class .
 ###  http://www.semanticweb.org/IG/Governance#Role
 
 Governance:Role rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Search_And_Retrieval_System
+
+Governance:Search_And_Retrieval_System rdf:type owl:Class ;
+                                       
+                                       rdfs:subClassOf Governance:Tools .
 
 
 
@@ -1040,9 +1112,9 @@ Governance:AC_1_1_3 rdf:type Governance:IG_Capability ,
                     Governance:needsTechnicalRequirement Governance:Metadata_Framework_1 ,
                                                          Governance:Records_Retention_Schedule_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "A metadata framework allows consistent and structured metadata assignment to records, facilitating their identification, classification, and retrieval, which is essential for effective records management." ;
+  rdfs:comment "Establishing a records retention schedule ensures that records are retained for the appropriate duration, in alignment with legal, regulatory, and business requirements." ;
   owl:annotatedSource Governance:AC_1_1_3 ;
-  owl:annotatedTarget Governance:Metadata_Framework_1 ;
+  owl:annotatedTarget Governance:Records_Retention_Schedule_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1052,9 +1124,9 @@ Governance:AC_1_1_3 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Establishing a records retention schedule ensures that records are retained for the appropriate duration, in alignment with legal, regulatory, and business requirements." ;
+  rdfs:comment "A metadata framework allows consistent and structured metadata assignment to records, facilitating their identification, classification, and retrieval, which is essential for effective records management." ;
   owl:annotatedSource Governance:AC_1_1_3 ;
-  owl:annotatedTarget Governance:Records_Retention_Schedule_1 ;
+  owl:annotatedTarget Governance:Metadata_Framework_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1087,12 +1159,6 @@ Governance:AC_1_1_4 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Stakeholder_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment " IG professionals require access to appropriate tools, technologies, and resources to manage and supervise the IG program efficiently. This includes access to data management software, analytics tools, compliance monitoring systems, and relevant documentation." ;
-  owl:annotatedSource Governance:AC_1_1_4 ;
-  owl:annotatedTarget Governance:AccessControl_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment "It is crucial to have skilled and knowledgeable Information Governance (IG) professionals who possess expertise in various aspects of IG, including data protection, privacy, records management, and compliance. These professionals play a pivotal role in overseeing and managing the IG program." ;
   owl:annotatedSource Governance:AC_1_1_4 ;
   owl:annotatedTarget Governance:DPO_1 ;
@@ -1102,6 +1168,12 @@ Governance:AC_1_1_4 rdf:type Governance:IG_Capability ,
   rdfs:comment " Clear role definitions and well-defined responsibilities for IG professionals within the organization are essential. This involves outlining their authority, tasks, and accountability to ensure effective oversight of the IG program." ;
   owl:annotatedSource Governance:AC_1_1_4 ;
   owl:annotatedTarget Governance:IG_Programm_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " IG professionals require access to appropriate tools, technologies, and resources to manage and supervise the IG program efficiently. This includes access to data management software, analytics tools, compliance monitoring systems, and relevant documentation." ;
+  owl:annotatedSource Governance:AC_1_1_4 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1137,12 +1209,6 @@ Governance:AC_1_1_5 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Steering_Commitee_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Active involvement and support from senior management and the Governing Board demonstrate the organization's commitment to IG. Their engagement helps allocate resources, make strategic decisions, and prioritize IG initiatives." ;
-  owl:annotatedSource Governance:AC_1_1_5 ;
-  owl:annotatedTarget Governance:IG_Leadership_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment " A well-defined and comprehensive Information Governance (IG) strategic plan and policy framework outlines the principles, objectives, and guidelines for IG initiatives within the organization. It ensures a structured approach to IG implementation and decision-making." ;
   owl:annotatedSource Governance:AC_1_1_5 ;
   owl:annotatedTarget Governance:IG_Strategic_Plan_1 ;
@@ -1152,6 +1218,12 @@ Governance:AC_1_1_5 rdf:type Governance:IG_Capability ,
   rdfs:comment "An IG Steering Committee, composed of representatives from different departments, ensures cross-functional collaboration and coordination in IG efforts. It provides oversight, direction, and decision-making for IG initiatives." ;
   owl:annotatedSource Governance:AC_1_1_5 ;
   owl:annotatedTarget Governance:Steering_Commitee_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Active involvement and support from senior management and the Governing Board demonstrate the organization's commitment to IG. Their engagement helps allocate resources, make strategic decisions, and prioritize IG initiatives." ;
+  owl:annotatedSource Governance:AC_1_1_5 ;
+  owl:annotatedTarget Governance:IG_Leadership_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1179,15 +1251,15 @@ Governance:AC_1_2_3 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Training_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "RIM personnel should receive proper training and have the necessary knowledge to fulfill their role effectively. This includes training on records management principles, legal requirements, privacy considerations, and technology usage." ;
-  owl:annotatedSource Governance:AC_1_2_3 ;
-  owl:annotatedTarget Governance:Training_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment "The individuals in the RIM role need access to the necessary tools and systems to carry out their responsibilities effectively. This includes access to records management software, document repositories, and other technology platforms that support RIM activities." ;
   owl:annotatedSource Governance:AC_1_2_3 ;
   owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "RIM personnel should receive proper training and have the necessary knowledge to fulfill their role effectively. This includes training on records management principles, legal requirements, privacy considerations, and technology usage." ;
+  owl:annotatedSource Governance:AC_1_2_3 ;
+  owl:annotatedTarget Governance:Training_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1217,6 +1289,12 @@ Governance:AC_1_2_4 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Records_Information_Management_1 .
 [ rdf:type owl:Axiom ;
+  rdfs:comment "An effective Access Control system ensures that the senior officer appointed as the Records Manager (RM) has appropriate access rights and responsibilities for the Records Management Program (RMP), ensuring the integrity and security of recorded information." ;
+  owl:annotatedSource Governance:AC_1_2_4 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
   rdfs:comment " A systematic metadata management system enables accurate identification and management of records in accordance with RMP requirements." ;
   owl:annotatedSource Governance:AC_1_2_4 ;
   owl:annotatedTarget Governance:Records_Information_Management_1 ;
@@ -1226,12 +1304,6 @@ Governance:AC_1_2_4 rdf:type Governance:IG_Capability ,
   rdfs:comment "Implementing automated retention and disposition processes ensures that records are managed and disposed of in compliance with RMP requirements and legal obligations." ;
   owl:annotatedSource Governance:AC_1_2_4 ;
   owl:annotatedTarget Governance:Data_Retention_Policy_Dummy ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "An effective Access Control system ensures that the senior officer appointed as the Records Manager (RM) has appropriate access rights and responsibilities for the Records Management Program (RMP), ensuring the integrity and security of recorded information." ;
-  owl:annotatedSource Governance:AC_1_2_4 ;
-  owl:annotatedTarget Governance:AccessControl_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1261,17 +1333,17 @@ Governance:AC_1_2_5 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Supervisor_Authority_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment " GDPR Article 35 emphasizes the importance of consulting with data protection authorities when conducting data protection impact assessments, which may require collaboration led by the CIGO." ;
-  owl:annotatedSource Governance:AC_1_2_5 ;
-  owl:annotatedTarget Governance:Supervisor_Authority_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment """Clearly defining the role and responsibilities of the Chief Information Governance Officer (CIGO) is essential for effective leadership and management of information governance initiatives. The CIGO plays a central role in developing and implementing IG strategies, policies, and processes.
 
 Effective communication and collaboration skills are vital for the CIGO to engage with senior leadership, departments, and external stakeholders. Collaboration ensures that IG goals align with organizational objectives and that IG initiatives are integrated into business processes.""" ;
   owl:annotatedSource Governance:AC_1_2_5 ;
   owl:annotatedTarget Governance:CIGO_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " GDPR Article 35 emphasizes the importance of consulting with data protection authorities when conducting data protection impact assessments, which may require collaboration led by the CIGO." ;
+  owl:annotatedSource Governance:AC_1_2_5 ;
+  owl:annotatedTarget Governance:Supervisor_Authority_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1307,9 +1379,9 @@ Governance:AC_1_3_3 rdf:type Governance:IG_Capability ,
                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                      Governance:ISO_17000 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities." ;
+  rdfs:comment "An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management" ;
   owl:annotatedSource Governance:AC_1_3_3 ;
-  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedTarget Governance:ERM_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1319,15 +1391,15 @@ Governance:AC_1_3_3 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "An ERM (Electronic Records Management) enables efficient management of electronic records by facilitating the capture, storage, processing, and access to these records. Also the metadata defining and capturing is done by the Records Management" ;
-  owl:annotatedSource Governance:AC_1_3_3 ;
-  owl:annotatedTarget Governance:ERM_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment "Clear and actionable guidelines for the retention of electronic records ensure compliance with retention periods and processing purposes." ;
   owl:annotatedSource Governance:AC_1_3_3 ;
   owl:annotatedTarget Governance:Data_Retention_Policy_Dummy ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Access control and audit trails ensure the security and traceability of electronic records, preventing unauthorized access and monitoring processing activities." ;
+  owl:annotatedSource Governance:AC_1_3_3 ;
+  owl:annotatedTarget Governance:Audit_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1397,15 +1469,15 @@ Governance:AC_1_3_5 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "The reporting structure within the organization must clearly establish the link between the CIGO, RM, and the governing body. This ensures that information governance issues are properly communicated, managed, and escalated as needed." ;
-  owl:annotatedSource Governance:AC_1_3_5 ;
-  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment " The governing body of the organization, such as a board of directors or executive management, must have a structure that includes roles for the Chief Information Governance Officer (CIGO) and the Records Manager (RM). This ensures that these key positions are formally integrated into the leadership and decision-making processes of the organization." ;
   owl:annotatedSource Governance:AC_1_3_5 ;
   owl:annotatedTarget Governance:CIGO_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "The reporting structure within the organization must clearly establish the link between the CIGO, RM, and the governing body. This ensures that information governance issues are properly communicated, managed, and escalated as needed." ;
+  owl:annotatedSource Governance:AC_1_3_5 ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1433,6 +1505,12 @@ Governance:AC_1_4_3 rdf:type Governance:IG_Capability ,
                     
                     Governance:needsTechnicalRequirement Governance:Workflow_Tools_1 .
 [ rdf:type owl:Axiom ;
+  rdfs:comment "Establish clear protocols and guidelines for sharing records and information between different departments or officers. These protocols should address data formats, access controls, security measures, and privacy considerations to ensure proper handling and sharing of information." ;
+  owl:annotatedSource Governance:AC_1_4_3 ;
+  owl:annotatedTarget Governance:Data_Sharing_Protocols_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
   rdfs:comment "Integrating RIM officers into cross-functional workflows helps ensure that records management requirements are met throughout the information lifecycle, enhancing compliance, transparency, and accountability." ;
   owl:annotatedSource Governance:AC_1_4_3 ;
   owl:annotatedTarget Governance:Workflow_Tools_1 ;
@@ -1442,12 +1520,6 @@ Governance:AC_1_4_3 rdf:type Governance:IG_Capability ,
   rdfs:comment "Implement collaboration tools and platforms that enable seamless communication and interaction between Records and Information Management (RIM) officers and other key officers across various departments. These tools facilitate the exchange of information, decision-making, and collaboration on records management initiatives." ;
   owl:annotatedSource Governance:AC_1_4_3 ;
   owl:annotatedTarget Governance:Collaboration_Tools_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Establish clear protocols and guidelines for sharing records and information between different departments or officers. These protocols should address data formats, access controls, security measures, and privacy considerations to ensure proper handling and sharing of information." ;
-  owl:annotatedSource Governance:AC_1_4_3 ;
-  owl:annotatedTarget Governance:Data_Sharing_Protocols_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1477,9 +1549,9 @@ Governance:AC_1_4_4 rdf:type Governance:IG_Capability ,
                                                          Governance:Stakeholder_1 ,
                                                          Governance:Workflow_Tools_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Utilizing technology solutions, such as records management software and workflow tools, can streamline the review process for disposition policies and RM-related issues. These tools facilitate document tracking, collaboration, and reporting." ;
+  rdfs:comment "Well-documented disposition policies and procedures should be established to guide the periodic review of records management (RM)-related issues and disposition practices. These documents outline the criteria and processes for reviewing records and making decisions about their retention or disposal." ;
   owl:annotatedSource Governance:AC_1_4_4 ;
-  owl:annotatedTarget Governance:Workflow_Tools_1 ;
+  owl:annotatedTarget Governance:Disposition_Policies_And_Procedures_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1489,9 +1561,9 @@ Governance:AC_1_4_4 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Well-documented disposition policies and procedures should be established to guide the periodic review of records management (RM)-related issues and disposition practices. These documents outline the criteria and processes for reviewing records and making decisions about their retention or disposal." ;
+  rdfs:comment "Utilizing technology solutions, such as records management software and workflow tools, can streamline the review process for disposition policies and RM-related issues. These tools facilitate document tracking, collaboration, and reporting." ;
   owl:annotatedSource Governance:AC_1_4_4 ;
-  owl:annotatedTarget Governance:Disposition_Policies_And_Procedures_1 ;
+  owl:annotatedTarget Governance:Workflow_Tools_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1525,15 +1597,15 @@ Governance:AC_1_4_5 rdf:type Governance:IG_Capability ,
                     
                     Governance:practicesDefinedInIso Governance:ISO_27001 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Implementing strong access controls and authentication mechanisms ensures that only authorized personnel can access and manipulate data, contributing to accountability and data protection." ;
-  owl:annotatedSource Governance:AC_1_4_5 ;
-  owl:annotatedTarget Governance:AccessControl_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
   rdfs:comment "An audit trail provides a transparent record of data processing activities and helps in meeting accountability requirements." ;
   owl:annotatedSource Governance:AC_1_4_5 ;
   owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing strong access controls and authentication mechanisms ensures that only authorized personnel can access and manipulate data, contributing to accountability and data protection." ;
+  owl:annotatedSource Governance:AC_1_4_5 ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1573,15 +1645,9 @@ Governance:AC_1_5_3 rdf:type Governance:IG_Capability ,
                                                          Governance:Reporting_And_Analysis_System_1 ,
                                                          Governance:Workflow_Tools_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement." ;
+  rdfs:comment "RIM is responsible for the management and maintenance of metadata associated with records. Metadata allows for the identification, classification, and retrieval of documents and data, enhancing the efficiency of information-driven processes." ;
   owl:annotatedSource Governance:AC_1_5_3 ;
-  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
-  owl:annotatedProperty Governance:needsTechnicalRequirement
-] .
-[ rdf:type owl:Axiom ;
-  rdfs:comment "Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency." ;
-  owl:annotatedSource Governance:AC_1_5_3 ;
-  owl:annotatedTarget Governance:Workflow_Tools_1 ;
+  owl:annotatedTarget Governance:Records_Information_Management_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1591,9 +1657,15 @@ Governance:AC_1_5_3 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "RIM is responsible for the management and maintenance of metadata associated with records. Metadata allows for the identification, classification, and retrieval of documents and data, enhancing the efficiency of information-driven processes." ;
+  rdfs:comment "An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement." ;
   owl:annotatedSource Governance:AC_1_5_3 ;
-  owl:annotatedTarget Governance:Records_Information_Management_1 ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency." ;
+  owl:annotatedSource Governance:AC_1_5_3 ;
+  owl:annotatedTarget Governance:Workflow_Tools_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1622,9 +1694,9 @@ Governance:AC_1_5_5 rdf:type Governance:IG_Capability ,
                     Governance:needsTechnicalRequirement Governance:Review_Cyles_1 ,
                                                          Governance:Stakeholder_1 .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "A formal process for regular review and revision of accountability goals should be in place. This includes predefined intervals for assessing the effectiveness and relevance of established goals and making updates as necessary." ;
+  rdfs:comment "Clear and well-documented accountability goals must be established within the organization's Information Governance framework. These goals define the organization's commitments to accountability, data protection, and compliance." ;
   owl:annotatedSource Governance:AC_1_5_5 ;
-  owl:annotatedTarget Governance:Review_Cyles_1 ;
+  owl:annotatedTarget Governance:IG_Programm_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
@@ -1634,9 +1706,9 @@ Governance:AC_1_5_5 rdf:type Governance:IG_Capability ,
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 [ rdf:type owl:Axiom ;
-  rdfs:comment "Clear and well-documented accountability goals must be established within the organization's Information Governance framework. These goals define the organization's commitments to accountability, data protection, and compliance." ;
+  rdfs:comment "A formal process for regular review and revision of accountability goals should be in place. This includes predefined intervals for assessing the effectiveness and relevance of established goals and making updates as necessary." ;
   owl:annotatedSource Governance:AC_1_5_5 ;
-  owl:annotatedTarget Governance:IG_Programm_1 ;
+  owl:annotatedTarget Governance:Review_Cyles_1 ;
   owl:annotatedProperty Governance:needsTechnicalRequirement
 ] .
 
@@ -1686,9 +1758,11 @@ Governance:AccessControl_1 rdf:type Governance:AccessControl ,
                            
                            Governance:involvesArticle Governance:Article_24 ,
                                                       Governance:Article_30 ,
-                                                      Governance:Article_32 ;
+                                                      Governance:Article_32 ,
+                                                      Governance:Article_5 ;
                            
-                           Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                           Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                            Governance:ISO_15489 ,
                                                             Governance:ISO_27000 ,
                                                             Governance:ISO_27001 .
 
@@ -1701,9 +1775,44 @@ Governance:Accountability rdf:type Governance:Goal ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Article_12
+
+Governance:Article_12 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_15
+
+Governance:Article_15 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_17
+
+Governance:Article_17 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_20
+
+Governance:Article_20 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Article_24
 
 Governance:Article_24 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_25
+
+Governance:Article_25 rdf:type Governance:GDPR ,
                                owl:NamedIndividual .
 
 
@@ -1718,6 +1827,13 @@ Governance:Article_30 rdf:type Governance:GDPR ,
 ###  http://www.semanticweb.org/IG/Governance#Article_32
 
 Governance:Article_32 rdf:type Governance:GDPR ,
+                               owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Article_33
+
+Governance:Article_33 rdf:type Governance:GDPR ,
                                owl:NamedIndividual .
 
 
@@ -1769,10 +1885,16 @@ Governance:Article_6 rdf:type Governance:GDPR ,
 Governance:Audit_1 rdf:type Governance:Audit ,
                             owl:NamedIndividual ;
                    
-                   Governance:involvesArticle Governance:Article_30 ,
-                                              Governance:Article_32 ;
+                   Governance:involvesArticle Governance:Article_24 ,
+                                              Governance:Article_30 ,
+                                              Governance:Article_32 ,
+                                              Governance:Article_5 ;
                    
-                   Governance:practicesDefinedInIso Governance:ISO_27001 .
+                   Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                    Governance:ISO_15939 ,
+                                                    Governance:ISO_17000 ,
+                                                    Governance:ISO_27000 ,
+                                                    Governance:ISO_27001 .
 
 
 
@@ -1795,6 +1917,32 @@ Governance:CIGO_1 rdf:type Governance:CIGO ,
                   Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                    Governance:ISO_23081 ,
                                                    Governance:ISO_27001 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Chain_Of_Custody_Tracking_1
+
+Governance:Chain_Of_Custody_Tracking_1 rdf:type Governance:Chain_Of_Custody_Tracking ,
+                                                owl:NamedIndividual ;
+                                       
+                                       Governance:involvesArticle Governance:Article_30 ,
+                                                                  Governance:Article_5 ;
+                                       
+                                       Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                        Governance:ISO_15939 ,
+                                                                        Governance:ISO_17000 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Change_Management_1
+
+Governance:Change_Management_1 rdf:type Governance:Change_Management ,
+                                        owl:NamedIndividual ;
+                               
+                               Governance:involvesArticle Governance:Article_5 ;
+                               
+                               Governance:practicesDefinedInIso Governance:ISO_15000 ,
+                                                                Governance:ISO_15939 .
 
 
 
@@ -1853,12 +2001,45 @@ Governance:Data_Inventory_And_Mapping rdf:type Governance:IG_Capability ,
 Governance:Data_Mapping_And_Classification_System_1 rdf:type Governance:Data_Mapping_And_Classification_System ,
                                                              owl:NamedIndividual ;
                                                     
-                                                    Governance:involvesArticle Governance:Article_30 ,
-                                                                               Governance:Article_32 ;
+                                                    Governance:involvesArticle Governance:Article_24 ,
+                                                                               Governance:Article_30 ,
+                                                                               Governance:Article_32 ,
+                                                                               Governance:Article_5 ;
                                                     
                                                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                                                     Governance:ISO_15489 ,
                                                                                      Governance:ISO_15939 ,
+                                                                                     Governance:ISO_23081 ,
                                                                                      Governance:ISO_27001 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Quality_Assurance_Framework_1
+
+Governance:Data_Quality_Assurance_Framework_1 rdf:type Governance:Data_Quality_Assurance_Framework ,
+                                                       owl:NamedIndividual ;
+                                              
+                                              Governance:involvesArticle Governance:Article_30 ,
+                                                                         Governance:Article_5 ;
+                                              
+                                              Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                                               Governance:ISO_15000 ,
+                                                                               Governance:ISO_15489 ,
+                                                                               Governance:ISO_23081 ,
+                                                                               Governance:ISO_27001 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Quality_Management_1
+
+Governance:Data_Quality_Management_1 rdf:type Governance:Data_Quality_Management ,
+                                              owl:NamedIndividual ;
+                                     
+                                     Governance:involvesArticle Governance:Article_5 ;
+                                     
+                                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                      Governance:ISO_15939 ,
+                                                                      Governance:ISO_23081 .
 
 
 
@@ -1901,6 +2082,17 @@ Governance:Data_Sharing_Protocols_1 rdf:type Governance:Data_Sharing_Protocols ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Data_Storage_1
+
+Governance:Data_Storage_1 rdf:type Governance:Data_Storage ,
+                                   owl:NamedIndividual ;
+                          
+                          Governance:involvesArticle Governance:Article_32 ;
+                          
+                          Governance:practicesDefinedInIso Governance:ISO_27000 .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Data_Subject_Rights
 
 Governance:Data_Subject_Rights rdf:type Governance:IG_Capability ,
@@ -1917,6 +2109,24 @@ Governance:Database_Management_System_1 rdf:type Governance:Database_Management_
                                                                                Governance:Article_6 ;
                                         
                                         Governance:practicesDefinedInIso Governance:ISO_15489 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Digital_Signatures_And_Timestamps_1
+
+Governance:Digital_Signatures_And_Timestamps_1 rdf:type Governance:Digital_Signatures_And_Timestamps ,
+                                                        owl:NamedIndividual ;
+                                               
+                                               Governance:practicesDefinedInIso Governance:Article_30 ;
+                                               
+                                               Governance:involvesArticle Governance:Article_32 ,
+                                                                          Governance:Article_5 ;
+                                               
+                                               Governance:practicesDefinedInIso Governance:Article_5 ,
+                                                                                Governance:ISO_14271 ,
+                                                                                Governance:ISO_17000 ,
+                                                                                Governance:ISO_27000 ,
+                                                                                Governance:ISO_27001 .
 
 
 
@@ -1938,9 +2148,12 @@ Governance:Disposition_Policies_And_Procedures_1 rdf:type Governance:Disposition
 Governance:Document_Management_System_1 rdf:type Governance:Document_Management_System ,
                                                  owl:NamedIndividual ;
                                         
-                                        Governance:involvesArticle Governance:Article_5 ;
+                                        Governance:involvesArticle Governance:Article_17 ,
+                                                                   Governance:Article_5 ;
                                         
-                                        Governance:practicesDefinedInIso Governance:ISO_15489 .
+                                        Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                         Governance:ISO_17000 ,
+                                                                         Governance:ISO_23081 .
 
 
 
@@ -1960,6 +2173,17 @@ Governance:ERM_1 rdf:type Governance:Electronic_Records_Management ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Employee_Engagement_Platforms_1
+
+Governance:Employee_Engagement_Platforms_1 rdf:type Governance:Employee_Engagement_Platforms ,
+                                                    owl:NamedIndividual ;
+                                           
+                                           Governance:involvesArticle Governance:Article_39 ;
+                                           
+                                           Governance:practicesDefinedInIso Governance:ISO_14271 .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#IG_Leadership_1
 
 Governance:IG_Leadership_1 rdf:type Governance:IG_Leadership ,
@@ -1976,11 +2200,13 @@ Governance:IG_Leadership_1 rdf:type Governance:IG_Leadership ,
 Governance:IG_Policy_1 rdf:type Governance:IG_Policy ,
                                 owl:NamedIndividual ;
                        
-                       Governance:involvesArticle Governance:Article_24 ,
+                       Governance:involvesArticle Governance:Article_12 ,
+                                                  Governance:Article_24 ,
                                                   Governance:Article_30 ,
                                                   Governance:Article_5 ;
                        
-                       Governance:practicesDefinedInIso Governance:ISO_23081 ,
+                       Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                        Governance:ISO_23081 ,
                                                         Governance:ISO_27000 .
 
 
@@ -1990,7 +2216,9 @@ Governance:IG_Policy_1 rdf:type Governance:IG_Policy ,
 Governance:IG_Programm_1 rdf:type Governance:IG_Programm ,
                                   owl:NamedIndividual ;
                          
-                         Governance:involvesArticle Governance:Article_24 ,
+                         Governance:involvesArticle Governance:Article_12 ,
+                                                    Governance:Article_15 ,
+                                                    Governance:Article_24 ,
                                                     Governance:Article_5 ;
                          
                          Governance:practicesDefinedInIso Governance:ISO_15489 ,
@@ -2002,13 +2230,387 @@ Governance:IG_Programm_1 rdf:type Governance:IG_Programm ,
 ###  http://www.semanticweb.org/IG/Governance#IG_Strategic_Plan_1
 
 Governance:IG_Strategic_Plan_1 rdf:type Governance:IG_Strategic_Plan ,
-                                        owl:NamedIndividual .
+                                        owl:NamedIndividual ;
+                               
+                               Governance:involvesArticle Governance:Article_24 ,
+                                                          Governance:Article_5 ;
+                               
+                               Governance:practicesDefinedInIso Governance:ISO_15000 ,
+                                                                Governance:ISO_15489 ,
+                                                                Governance:ISO_15939 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_1_3
+
+Governance:INT_1_1_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization has a formal process to ensure that the required level of authenticity and chain of custody can be applied to its systems and processes." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_17 ,
+                                                Governance:Article_32 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Digital_Signatures_And_Timestamps_1 ,
+                                                          Governance:Document_Management_System_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:hasGoal Governance:Integrity .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Digital signatures and timestamps play a crucial role in ensuring the authenticity and integrity of digital records and transactions. They provide evidence of the origin, identity, and time of creation or modification of digital data." ;
+  owl:annotatedTarget Governance:Digital_Signatures_And_Timestamps_1 ;
+  owl:annotatedSource Governance:INT_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing strict access controls and maintaining comprehensive logs helps ensure the traceability of who accessed what information and when. This is crucial for maintaining the chain of custody." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:INT_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A robust DMS helps in maintaining a structured approach to document storage, access, version control, and retention. This supports the chain of custody by ensuring proper handling of documents throughout their lifecycle." ;
+  owl:annotatedTarget Governance:Document_Management_System_1 ;
+  owl:annotatedSource Governance:INT_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_1_4
+
+Governance:INT_1_1_4 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "There is a clear definition of metadata requirements for all systems, business applications, and paper records that are needed to ensure the authenticity of records." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                     
+                     Governance:involvesArticle Governance:Article_30 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Data_Mapping_And_Classification_System_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ;
+                     
+                     Governance:hasGoal Governance:Integrity ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Metadata_Framework_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment """Classifying records aids in tracking and authenticating records throughout their lifecycle. This enhances their traceability and ensures their authenticity.
+Mapping data elements and cross-referencing records between systems and applications helps maintain the integrity and authenticity of records across different contexts.""" ;
+  owl:annotatedTarget Governance:Data_Mapping_And_Classification_System_1 ;
+  owl:annotatedSource Governance:INT_1_1_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing a metadata framework ensures consistent and standardized metadata attributes are defined and associated with all records. Metadata provides context, provenance, and authenticity information essential for ensuring the integrity of records." ;
+  owl:annotatedSource Governance:INT_1_1_4 ;
+  owl:annotatedTarget Governance:Metadata_Framework_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_1_5
+
+Governance:INT_1_1_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "There is a formal, defined process for introducing new record-generating systems and the capture of their metadata and other authenticity requirements, including chain of custody." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:involvesArticle Governance:Article_30 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Chain_Of_Custody_Tracking_1 ,
+                                                          Governance:Data_Quality_Assurance_Framework_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ;
+                     
+                     Governance:hasGoal Governance:Integrity .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implement processes for validating and ensuring the quality of captured metadata, including authenticity attributes. Metadata must remain accurate and consistent to support the authenticity of records." ;
+  owl:annotatedTarget Governance:Data_Quality_Assurance_Framework_1 ;
+  owl:annotatedSource Governance:INT_1_1_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implement a mechanism for capturing and tracking the chain of custody information as records move through different stages and systems. This ensures the ability to demonstrate the authenticity and integrity of records throughout their lifecycle." ;
+  owl:annotatedTarget Governance:Chain_Of_Custody_Tracking_1 ;
+  owl:annotatedSource Governance:INT_1_1_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_2_3
+
+Governance:INT_1_2_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Appropriate data elements to demonstrate compliance with the policy are captured." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Data_Mapping_And_Classification_System_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ;
+                     
+                     Governance:hasGoal Governance:Integrity ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Metadata_Framework_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A comprehensive metadata framework is crucial for capturing and managing relevant data elements that demonstrate compliance. Metadata provides context to data, enabling proper classification, searchability, and tracking of data in line with organizational policies." ;
+  owl:annotatedSource Governance:INT_1_2_3 ;
+  owl:annotatedTarget Governance:Metadata_Framework_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Properly classifying and mapping data elements according to their sensitivity and purpose aids in demonstrating compliance with data handling policies and GDPR principles." ;
+  owl:annotatedTarget Governance:Data_Mapping_And_Classification_System_1 ;
+  owl:annotatedSource Governance:INT_1_2_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_2_4
+
+Governance:INT_1_2_4 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Metadata requirements include security and signature requirements and chain of custody as needed to demonstrate authenticity." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                     
+                     Governance:involvesArticle Governance:Article_30 ,
+                                                Governance:Article_32 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Chain_Of_Custody_Tracking_1 ,
+                                                          Governance:Digital_Signatures_And_Timestamps_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:hasGoal Governance:Integrity .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Integrating digital signatures within metadata supports the ability to verify the authenticity and integrity of records over time. Digital signatures provide a strong mechanism for ensuring the validity of records." ;
+  owl:annotatedTarget Governance:Digital_Signatures_And_Timestamps_1 ;
+  owl:annotatedSource Governance:INT_1_2_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing a mechanism for tracking the chain of custody ensures that the record's journey from creation to storage is documented and verifiable. This is crucial for demonstrating authenticity and maintaining data integrity." ;
+  owl:annotatedTarget Governance:Chain_Of_Custody_Tracking_1 ;
+  owl:annotatedSource Governance:INT_1_2_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_2_5
+
+Governance:INT_1_2_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "This level is easily and regularly audited." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_30 ,
+                                                Governance:Article_32 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Audit_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:hasGoal Governance:Integrity .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " Implement an audit trail mechanism that captures relevant activities, changes, and access to records and their metadata. This enables easy monitoring and tracking of actions related to records, supporting transparency, accountability, and auditability." ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedSource Governance:INT_1_2_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implement access controls and authorization mechanisms to ensure that only authorized individuals have access to records and their metadata. This safeguards the integrity of records and supports auditability." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:INT_1_2_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_3_3
+
+Governance:INT_1_3_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization has defined specific goals related to integrity." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Audit_1 ,
+                                                          Governance:Data_Quality_Management_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:hasGoal Governance:Integrity ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Monitoring_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Regular monitoring of data processes and systems are essential to ensure that integrity goals are met and maintained over time. It provides visibility into data handling practices and identifies any deviations from established integrity standards." ;
+  owl:annotatedSource Governance:INT_1_3_3 ;
+  owl:annotatedTarget Governance:Monitoring_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implementing access controls ensures that the organization's data remains accurate, consistent, and unaltered. These controls prevent unauthorized changes, corruption, or tampering of data, supporting the achievement of specific integrity goals." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:INT_1_3_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Proper data quality management processes ensure that data is accurate, reliable, and fit for its intended purpose. Defining integrity goals requires consistent data quality assessments, validations, and cleansing." ;
+  owl:annotatedTarget Governance:Data_Quality_Management_1 ;
+  owl:annotatedSource Governance:INT_1_3_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Regular auditing of data processes and systems are essential to ensure that integrity goals are met and maintained over time. It provides visibility into data handling practices and identifies any deviations from established integrity standards." ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedSource Governance:INT_1_3_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_3_4
+
+Governance:INT_1_3_4 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The metadata definition process is an integral part of the records management practice in the organization." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                     
+                     Governance:involvesArticle Governance:Article_30 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_17000 ,
+                                                      Governance:ISO_23081 ;
+                     
+                     Governance:hasGoal Governance:Integrity ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Metadata_1 ,
+                                                          Governance:Records_Information_Management_1 .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Integrating the metadata schema with the organization's records management system ensures that metadata is consistently captured, updated, and accessible throughout the records' lifecycle. This integration enhances records management practices and supports compliance with GDPR's requirements for data minimization and accurate records." ;
+  owl:annotatedSource Governance:INT_1_3_4 ;
+  owl:annotatedTarget Governance:Records_Information_Management_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Developing a comprehensive metadata schema that includes attributes relevant to records management ensures that essential information is captured and associated with records. This metadata schema provides the context, classification, and management details required for effective records management." ;
+  owl:annotatedSource Governance:INT_1_3_4 ;
+  owl:annotatedTarget Governance:Metadata_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#INT_1_3_5
+
+Governance:INT_1_3_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization’s stated goals related to integrity have been met. The organization can consistently and confidently demonstrate the accuracy and authenticity of its records." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:involvesArticle Governance:Article_32 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Data_Quality_Assurance_Framework_1 ,
+                                                          Governance:Digital_Signatures_And_Timestamps_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:hasGoal Governance:Integrity .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " Integrate digital signatures within record systems to provide an additional layer of authenticity and tamper-evident protection. This enhances confidence in the accuracy and authenticity of records." ;
+  owl:annotatedTarget Governance:Digital_Signatures_And_Timestamps_1 ;
+  owl:annotatedSource Governance:INT_1_3_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Implement automated data validation mechanisms to ensure the accuracy and integrity of records. This involves real-time or batch validation of data against predefined rules or standards, minimizing the risk of errors and ensuring compliance with stated integrity goals." ;
+  owl:annotatedTarget Governance:Data_Quality_Assurance_Framework_1 ;
+  owl:annotatedSource Governance:INT_1_3_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
 
 
 
 ###  http://www.semanticweb.org/IG/Governance#ISO_14271
 
 Governance:ISO_14271 rdf:type Governance:ISO ,
+                              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#ISO_15000
+
+Governance:ISO_15000 rdf:type Governance:ISO ,
                               owl:NamedIndividual .
 
 
@@ -2055,6 +2657,17 @@ Governance:ISO_27001 rdf:type Governance:ISO ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Incident_Response_And_Remediation_Protocol_1
+
+Governance:Incident_Response_And_Remediation_Protocol_1 rdf:type Governance:Incident_Response_And_Remediation_Protocol ,
+                                                                 owl:NamedIndividual ;
+                                                        
+                                                        Governance:involvesArticle Governance:Article_33 ;
+                                                        
+                                                        Governance:practicesDefinedInIso Governance:ISO_27001 .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Integrity
 
 Governance:Integrity rdf:type Governance:Goal ,
@@ -2069,14 +2682,59 @@ Governance:Lawful_Basis_For_Processing rdf:type Governance:IG_Capability ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#Metadata_1
+
+Governance:Metadata_1 rdf:type Governance:Metadata ,
+                               owl:NamedIndividual ;
+                      
+                      Governance:involvesArticle Governance:Article_30 ,
+                                                 Governance:Article_5 ;
+                      
+                      Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                       Governance:ISO_15939 ,
+                                                       Governance:ISO_23081 .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Metadata_Framework_1
 
 Governance:Metadata_Framework_1 rdf:type Governance:Metadata_Framework ,
                                          owl:NamedIndividual ;
                                 
-                                Governance:involvesArticle Governance:Article_30 ;
+                                Governance:involvesArticle Governance:Article_30 ,
+                                                           Governance:Article_5 ;
                                 
-                                Governance:practicesDefinedInIso Governance:ISO_23081 .
+                                Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                 Governance:ISO_17000 ,
+                                                                 Governance:ISO_23081 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Metrics_1
+
+Governance:Metrics_1 rdf:type Governance:Metrics ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Monitoring_1
+
+Governance:Monitoring_1 rdf:type Governance:Monitoring ,
+                                 owl:NamedIndividual ;
+                        
+                        Governance:involvesArticle Governance:Article_24 ,
+                                                   Governance:Article_5 ;
+                        
+                        Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                         Governance:ISO_17000 ,
+                                                         Governance:ISO_27000 ,
+                                                         Governance:ISO_27001 .
 
 
 
@@ -2103,13 +2761,14 @@ Governance:Protection rdf:type Governance:Goal ,
 
 ###  http://www.semanticweb.org/IG/Governance#Records_Information_Management_1
 
-Governance:Records_Information_Management_1 rdf:type <http://www.semanticweb.org/IG/Governance#Records-_&_Information_Management> ,
+Governance:Records_Information_Management_1 rdf:type Governance:Records_And_Information_Management ,
                                                      owl:NamedIndividual ;
                                             
                                             Governance:involvesArticle Governance:Article_30 ,
                                                                        Governance:Article_5 ;
                                             
                                             Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                                             Governance:ISO_17000 ,
                                                                              Governance:ISO_23081 .
 
 
@@ -2130,9 +2789,12 @@ Governance:Records_Retention_Schedule_1 rdf:type Governance:Records_Retention_Sc
 Governance:Reporting_And_Analysis_System_1 rdf:type Governance:Reporting_And_Analysis_System ,
                                                     owl:NamedIndividual ;
                                            
-                                           Governance:involvesArticle Governance:Article_24 ;
+                                           Governance:involvesArticle Governance:Article_24 ,
+                                                                      Governance:Article_33 ,
+                                                                      Governance:Article_5 ;
                                            
-                                           Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                           Governance:practicesDefinedInIso Governance:ISO_15000 ,
+                                                                            Governance:ISO_15489 ,
                                                                             Governance:ISO_15939 .
 
 
@@ -2146,7 +2808,31 @@ Governance:Review_Cyles_1 rdf:type Governance:Review_Cycles ,
                           
                           Governance:involvesArticle Governance:Article_5 ;
                           
-                          Governance:practicesDefinedInIso Governance:ISO_15489 .
+                          Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                           Governance:ISO_27001 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Risk_And_Compliance_1
+
+Governance:Risk_And_Compliance_1 rdf:type Governance:Risk_And_Compliance ,
+                                          owl:NamedIndividual ;
+                                 
+                                 Governance:involvesArticle Governance:Article_24 ;
+                                 
+                                 Governance:practicesDefinedInIso Governance:ISO_17000 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Search_And_Retrieval_System_1
+
+Governance:Search_And_Retrieval_System_1 rdf:type Governance:Search_And_Retrieval_System ,
+                                                  owl:NamedIndividual ;
+                                         
+                                         Governance:involvesArticle Governance:Article_15 ,
+                                                                    Governance:Article_20 ;
+                                         
+                                         Governance:practicesDefinedInIso Governance:ISO_15489 .
 
 
 
@@ -2194,15 +2880,495 @@ Governance:Supervisor_Authority_1 rdf:type Governance:Supervisor_Authority ,
 
 
 
+###  http://www.semanticweb.org/IG/Governance#TRA_1_1_3
+
+Governance:TRA_1_1_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Transparency in recordkeeping is taken seriously and information is readily and systematically available when needed." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_15 ,
+                                                Governance:Article_20 ,
+                                                Governance:Article_30 ,
+                                                Governance:Article_32 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Audit_1 ,
+                                                          Governance:Data_Storage_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27000 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Records_Information_Management_1 ,
+                                                          Governance:Search_And_Retrieval_System_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Audit trails provide an essential tool for monitoring and ensuring compliance with regulations." ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedSource Governance:TRA_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Robust metadata management is crucial for transparency in recordkeeping as it ensures that relevant information about records, including creation, modification, access, and retention, is accurately captured and organized. Proper metadata management enhances searchability and retrievability of records, facilitating transparency.  Metadata management is a core element of effective records management, ensuring accurate classification, retrieval, and preservation of records." ;
+  owl:annotatedTarget Governance:Records_Information_Management_1 ;
+  owl:annotatedSource Governance:TRA_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Secure and scalable data storage ensures that records are stored in a manner that prevents unauthorized access, tampering, or loss. It also enables efficient retrieval of records when needed, enhancing transparency." ;
+  owl:annotatedTarget Governance:Data_Storage_1 ;
+  owl:annotatedSource Governance:TRA_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Effective search and retrieval mechanisms enable quick and accurate access to records, supporting transparency by providing the ability to locate relevant information promptly." ;
+  owl:annotatedTarget Governance:Search_And_Retrieval_System_1 ;
+  owl:annotatedSource Governance:TRA_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Logging and auditing contribute to identifying and addressing security breaches and incidents." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:TRA_1_1_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_1_4
+
+Governance:TRA_1_1_4 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Transparency is an essential part of the corporate culture and is emphasized in training." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                     
+                     Governance:involvesArticle Governance:Article_25 ,
+                                                Governance:Article_39 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Employee_Engagement_Platforms_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Training_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment """Tailored training modules ensure that transparency concepts are customized to various roles and departments, making the training more relevant and impactful. 
+Continuous learning and assessment ensure that transparency concepts are reinforced over time and that employees are regularly updated on evolving practices.""" ;
+  owl:annotatedSource Governance:TRA_1_1_4 ;
+  owl:annotatedTarget Governance:Training_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An integrated communication platform ensures that transparency principles are effectively communicated to employees across the organization, embedding transparency into the corporate culture." ;
+  owl:annotatedTarget Governance:Employee_Engagement_Platforms_1 ;
+  owl:annotatedSource Governance:TRA_1_1_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_1_5
+
+Governance:TRA_1_1_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization’s senior management considers transparency as a key component of information governance." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:IG_Policy_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Reporting_And_Analysis_System_1 ,
+                                                          Governance:Review_Cyles_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An executive dashboard and reporting system provides senior management with real-time insights into transparency initiatives and compliance efforts. It allows them to make informed decisions, allocate resources, and demonstrate commitment to transparency." ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedSource Governance:TRA_1_1_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A compliance review framework ensures that transparency initiatives are regularly assessed against regulatory requirements and organizational objectives. This enables senior management to assess the effectiveness of transparency efforts." ;
+  owl:annotatedTarget Governance:Review_Cyles_1 ;
+  owl:annotatedSource Governance:TRA_1_1_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Transparent information governance policies clearly outline the organization's commitment to transparency and the specific measures in place to achieve it. These policies guide senior management's understanding of their role in fostering transparency." ;
+  owl:annotatedTarget Governance:IG_Policy_1 ;
+  owl:annotatedSource Governance:TRA_1_1_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_2_3
+
+Governance:TRA_1_2_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "There is a written policy regarding transparency." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:involvesArticle Governance:Article_12 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:IG_Policy_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A documented policy framework provides clear guidance on transparency, ensuring that all stakeholders understand their roles and responsibilities in maintaining transparency, and fostering a culture of openness." ;
+  owl:annotatedTarget Governance:IG_Policy_1 ;
+  owl:annotatedSource Governance:TRA_1_2_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_2_4
+
+Governance:TRA_1_2_4 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization monitors compliance on a regular basis." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_30 ,
+                                                Governance:Article_33 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Audit_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Incident_Response_And_Remediation_Protocol_1 ,
+                                                          Governance:Monitoring_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Periodic data audits verify the accuracy, completeness, and transparency of data processing practices, ensuring that the organization adheres to established policies and regulations." ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedSource Governance:TRA_1_2_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An automated compliance monitoring system ensures that the organization can efficiently track adherence to transparency and data protection requirements, proactively identifying and addressing non-compliance." ;
+  owl:annotatedTarget Governance:Monitoring_1 ;
+  owl:annotatedSource Governance:TRA_1_2_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An incident response and remediation protocol ensures that any compliance breaches or data incidents are promptly identified, reported, and addressed, minimizing potential harm and demonstrating accountability." ;
+  owl:annotatedTarget Governance:Incident_Response_And_Remediation_Protocol_1 ;
+  owl:annotatedSource Governance:TRA_1_2_4 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_2_5
+
+Governance:TRA_1_2_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization’s stated goals related to transparency have been met." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Data_Quality_Assurance_Framework_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_15000 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Metrics_1 ,
+                                                          Governance:Reporting_And_Analysis_System_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An analysis and reporting system allows the organization to track progress towards its transparency goals, identify areas for improvement, and provide evidence of goal attainment." ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedSource Governance:TRA_1_2_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A data quality assurance framework ensures that the data used to measure transparency goals is accurate, complete, and reliable, enhancing the credibility of goal attainment." ;
+  owl:annotatedTarget Governance:Data_Quality_Assurance_Framework_1 ;
+  owl:annotatedSource Governance:TRA_1_2_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Transparent performance metrics clearly define how transparency goals are measured, providing a clear understanding of the criteria and standards for goal attainment." ;
+  owl:annotatedTarget Governance:Metrics_1 ;
+  owl:annotatedSource Governance:TRA_1_2_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_3_3
+
+Governance:TRA_1_3_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Employees are educated on the importance of Transparency and the specifics of the organization’s commitment to transparency." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_39 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Employee_Engagement_Platforms_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_14271 ,
+                                                      Governance:ISO_27000 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Training_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Employee engagement platforms facilitate communication and interaction, allowing employees to access resources, ask questions, and engage in discussions related to transparency and data protection." ;
+  owl:annotatedTarget Governance:Employee_Engagement_Platforms_1 ;
+  owl:annotatedSource Governance:TRA_1_3_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A comprehensive training and awareness program ensures that employees understand the significance of transparency, their roles in promoting it, and the organization's commitment. Well-informed employees contribute to a culture of transparency and responsible data handling." ;
+  owl:annotatedSource Governance:TRA_1_3_3 ;
+  owl:annotatedTarget Governance:Training_1 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_3_5
+
+Governance:TRA_1_3_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization # has implemented a continuous improvement process to ensure transparency is maintained over time." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Change_Management_1 ,
+                                                          Governance:IG_Strategic_Plan_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15000 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_17000 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Risk_And_Compliance_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A well-defined change management process ensures that updates, enhancements, or modifications to transparency initiatives are effectively planned, communicated, and implemented without disrupting existing processes." ;
+  owl:annotatedTarget Governance:Change_Management_1 ;
+  owl:annotatedSource Governance:TRA_1_3_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A robust strategic plan provides a structured approach to managing and improving data quality, integrity, and availability. This is essential for maintaining transparency over time as it ensures that data used for transparency initiatives remains accurate and reliable." ;
+  owl:annotatedTarget Governance:IG_Strategic_Plan_1 ;
+  owl:annotatedSource Governance:TRA_1_3_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment " Regular risk assessments help identify potential gaps, vulnerabilities, and emerging risks that may impact transparency initiatives. Continuous monitoring of risks ensures that transparency efforts are adaptable and can be improved over time." ;
+  owl:annotatedTarget Governance:Risk_And_Compliance_1 ;
+  owl:annotatedSource Governance:TRA_1_3_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_4_3
+
+Governance:TRA_1_4_3 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "The organization has defined specific goals related to Transparency." ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
+                     
+                     Governance:involvesArticle Governance:Article_24 ,
+                                                Governance:Article_33 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:IG_Strategic_Plan_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15000 ,
+                                                      Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Reporting_And_Analysis_System_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Data analytics and reporting tools facilitate the measurement and reporting of progress toward transparency goals, allowing the organization to track achievements and identify areas for improvement." ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedSource Governance:TRA_1_4_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Establishing specific goals related to transparency provides a clear direction for the organization's efforts, ensuring a focused and measurable approach to promoting transparency in data handling and governance." ;
+  owl:annotatedTarget Governance:IG_Strategic_Plan_1 ;
+  owl:annotatedSource Governance:TRA_1_4_3 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_4_5
+
+Governance:TRA_1_4_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Software tools that are in place assist in transparency." ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:IG_Programm_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_15939 ,
+                                                      Governance:ISO_23081 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Reporting_And_Analysis_System_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Strong access control and authentication mechanisms ensure that only authorized personnel can access and utilize software tools, safeguarding sensitive information and maintaining transparency." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:TRA_1_4_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A well defined IG Programm with an Information Management System (IMS) provides a centralized platform for managing and organizing information assets, facilitating transparency by ensuring easy access, retrieval, and sharing of information." ;
+  owl:annotatedTarget Governance:IG_Programm_1 ;
+  owl:annotatedSource Governance:TRA_1_4_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Reporting and analysis tools enable organizations to analyze and visualize data related to transparency efforts, allowing for informed decision-making and identification of areas for improvement." ;
+  owl:annotatedTarget Governance:Reporting_And_Analysis_System_1 ;
+  owl:annotatedSource Governance:TRA_1_4_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#TRA_1_5_5
+
+Governance:TRA_1_5_5 rdf:type Governance:IG_Capability ,
+                              owl:NamedIndividual ;
+                     
+                     Governance:capabilityDescription "Requestors, courts, and other legitimately interested parties are consistently satisfied with the transparency of the processes and the response" ;
+                     
+                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#5_Transformational> ;
+                     
+                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ;
+                     
+                     Governance:involvesArticle Governance:Article_12 ,
+                                                Governance:Article_15 ,
+                                                Governance:Article_30 ,
+                                                Governance:Article_5 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Audit_1 ,
+                                                          Governance:Data_Mapping_And_Classification_System_1 ;
+                     
+                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                      Governance:ISO_27001 ;
+                     
+                     Governance:needsTechnicalRequirement Governance:Monitoring_1 ;
+                     
+                     Governance:hasGoal Governance:Transparency .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "An audit trail and logging mechanism captures and records activities related to requests, processes, and responses. This ensures transparency, accountability, and the ability to trace interactions." ;
+  owl:annotatedTarget Governance:Audit_1 ;
+  owl:annotatedSource Governance:TRA_1_5_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Access controls ensure that requests and responses are handled according to their sensitivity and that only authorized personnel can access and manage the information." ;
+  owl:annotatedTarget Governance:AccessControl_1 ;
+  owl:annotatedSource Governance:TRA_1_5_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "Data classification ensures that requests and responses are handled according to their sensitivity." ;
+  owl:annotatedTarget Governance:Data_Mapping_And_Classification_System_1 ;
+  owl:annotatedSource Governance:TRA_1_5_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+[ rdf:type owl:Axiom ;
+  rdfs:comment "A robust monitoring (with a good Case Management System) allows for systematic tracking, monitoring, and documentation of requests and inquiries from various parties. It ensures that processes are transparent and that responses are managed efficiently." ;
+  owl:annotatedTarget Governance:Monitoring_1 ;
+  owl:annotatedSource Governance:TRA_1_5_5 ;
+  owl:annotatedProperty Governance:needsTechnicalRequirement
+] .
+
+
+
 ###  http://www.semanticweb.org/IG/Governance#Training_1
 
 Governance:Training_1 rdf:type Governance:Training ,
                                owl:NamedIndividual ;
                       
-                      Governance:involvesArticle Governance:Article_39 ;
+                      Governance:involvesArticle Governance:Article_24 ,
+                                                 Governance:Article_25 ,
+                                                 Governance:Article_39 ;
                       
                       Governance:practicesDefinedInIso Governance:ISO_15489 ,
+                                                       Governance:ISO_15939 ,
+                                                       Governance:ISO_23081 ,
                                                        Governance:ISO_27000 .
+
+
+
+###  http://www.semanticweb.org/IG/Governance#Transparency
+
+Governance:Transparency rdf:type Governance:Goal ,
+                                 owl:NamedIndividual .
 
 
 
@@ -2239,20 +3405,6 @@ Governance:Workflow_Tools_1 rdf:type Governance:Workflow_Tools ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( Governance:CCO
-                Governance:CSO
-                Governance:DPO
-                Governance:Data_Controller
-                Governance:Data_Processor
-                Governance:Data_Subject
-                Governance:Executive_Sponsor
-                Governance:IG_Leadership
-                Governance:Project_Manager
-                Governance:Stakeholder
-                Governance:Steering_Commitee
-              )
-] .
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( Governance:Goal
                 Governance:Maturity
                 Governance:Organization
@@ -2266,8 +3418,22 @@ Governance:Workflow_Tools_1 rdf:type Governance:Workflow_Tools ,
                 Governance:Legal
                 Governance:Privacy
                 Governance:Records_Management
-                <http://www.semanticweb.org/IG/Governance#Risk_&_Compliance>
+                Governance:Risk_And_Compliance
                 Governance:Security
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( Governance:CCO
+                Governance:CSO
+                Governance:DPO
+                Governance:Data_Controller
+                Governance:Data_Processor
+                Governance:Data_Subject
+                Governance:Executive_Sponsor
+                Governance:IG_Leadership
+                Governance:Project_Manager
+                Governance:Stakeholder
+                Governance:Steering_Commitee
               )
 ] .
 
