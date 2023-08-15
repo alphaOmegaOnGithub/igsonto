@@ -5568,10 +5568,6 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
         <Class abbreviatedIRI="Governance:Data_Subject"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
-        <Class abbreviatedIRI="Governance:Maturity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
         <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
@@ -5724,10 +5720,6 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
         <Class abbreviatedIRI="Governance:Data"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Governance:hasGoal"/>
-        <Class abbreviatedIRI="Governance:Goal"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
         <Class abbreviatedIRI="Governance:Risk_Profile"/>
     </ObjectPropertyRange>
@@ -5809,7 +5801,7 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
     </SubDataPropertyOf>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
         <Literal></Literal>
     </AnnotationAssertion>
 </Ontology>

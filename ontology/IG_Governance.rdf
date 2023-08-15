@@ -196,8 +196,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#hasGoal">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Maturity"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Goal"/>
     </owl:ObjectProperty>
     
 
