@@ -136,9 +136,7 @@ Governance:hasData rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/IG/Governance#hasGoal
 Governance:hasGoal rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf owl:topObjectProperty ;
-                   rdfs:domain Governance:Maturity ;
-                   rdfs:range Governance:Goal .
+                   rdfs:subPropertyOf owl:topObjectProperty .
 
 
 ###  http://www.semanticweb.org/IG/Governance#hasInputOnRiskProfile
