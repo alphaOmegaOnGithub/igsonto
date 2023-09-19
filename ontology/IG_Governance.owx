@@ -266,6 +266,15 @@
         <Class abbreviatedIRI="Governance:GDPR"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="Governance:Goal"/>
     </Declaration>
     <Declaration>
@@ -530,6 +539,9 @@
         <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:defines"/>
     </Declaration>
     <Declaration>
@@ -567,6 +579,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
@@ -623,6 +638,9 @@
         <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
     </Declaration>
     <Declaration>
@@ -638,7 +656,13 @@
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="Governance:chapter"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="Governance:processDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:1_SubStandard"/>
@@ -740,6 +764,9 @@
         <NamedIndividual abbreviatedIRI="Governance:AVA_1_5_3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Access"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </Declaration>
     <Declaration>
@@ -752,16 +779,52 @@
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_16"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_2"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
@@ -770,10 +833,25 @@
         <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
@@ -788,6 +866,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
     </Declaration>
     <Declaration>
@@ -797,7 +878,37 @@
         <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
@@ -806,16 +917,163 @@
         <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_68"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_84"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_94"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_95"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_96"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_97"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_98"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Article_99"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Asset_Database_1"/>
@@ -935,6 +1193,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Centralized_Instructions_Repository_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Certification"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Documentation_1"/>
     </Declaration>
     <Declaration>
@@ -942,6 +1203,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Code_Of_Conduct"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
@@ -969,6 +1233,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Corrective_Action_Management_System_1"/>
@@ -1022,7 +1289,13 @@
         <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Breach_Management"/>
@@ -1052,6 +1325,12 @@
         <NamedIndividual abbreviatedIRI="Governance:Data_Privacy_Masking_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Quality_Assurance_Framework_1"/>
     </Declaration>
     <Declaration>
@@ -1071,6 +1350,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Storage_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Subject_Rights"/>
@@ -1124,10 +1406,64 @@
         <NamedIndividual abbreviatedIRI="Governance:Enterprise_Risk_Management_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Erasure"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Exception_Handling_System_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_Of_Chapter_That_Include_These_Articles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_That_Include_All_Keywords"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_That_Include_One_Of_The_Given_Keywords"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Give_Every_Capability_And_Their_Requirements"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Every_Capability_That_Involves_These_Articles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Every_GDPR_Keyword"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Hold_Enforcement_Automation_System_1"/>
@@ -1292,10 +1628,16 @@
         <NamedIndividual abbreviatedIRI="Governance:IT_Planning_And_Strategy_Framework_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Impact_Assessment"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_And_Remediation_Protocol_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_Plan_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
@@ -1311,6 +1653,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Lawful_Basis_For_Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Lawfulness"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Laws_Mapping_And_Compliance_Tracking_1"/>
@@ -1379,6 +1724,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Metrics_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
     </Declaration>
     <Declaration>
@@ -1434,6 +1782,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Penetration_Testing_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Portability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
@@ -1541,6 +1895,15 @@
         <NamedIndividual abbreviatedIRI="Governance:Process_System_Provisioning_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Profiling"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Protection"/>
     </Declaration>
     <Declaration>
@@ -1601,6 +1964,9 @@
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Record"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </Declaration>
     <Declaration>
@@ -1608,6 +1974,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Rectification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Remote_Wiping_1"/>
@@ -1619,6 +1988,12 @@
         <NamedIndividual abbreviatedIRI="Governance:Request_Management_System_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Restrictions"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Retention_Rule_Management_System_1"/>
     </Declaration>
     <Declaration>
@@ -1626,6 +2001,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Revisitation_And_Refinement_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Risk_And_Compliance_1"/>
@@ -1653,6 +2031,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
@@ -1950,7 +2331,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Governance:Database_Management_System"/>
-        <Class abbreviatedIRI="Governance:Records_Management"/>
+        <Class abbreviatedIRI="Governance:Data_Management_And_Governance_Tools"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Governance:Deadline_Tracking"/>
@@ -2027,6 +2408,18 @@
     <SubClassOf>
         <Class abbreviatedIRI="Governance:Executive_Sponsor"/>
         <Class abbreviatedIRI="Governance:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <Class abbreviatedIRI="Governance:GDPR"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="Governance:Hold_Enforcement_Automation_System"/>
@@ -2438,6 +2831,10 @@
         <NamedIndividual abbreviatedIRI="Governance:AVA_1_5_3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Access"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:AccessControl"/>
         <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
     </ClassAssertion>
@@ -2454,92 +2851,400 @@
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_68"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR"/>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_84"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_94"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_95"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_96"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_97"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_98"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Articles"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_99"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Asset_Database"/>
@@ -2698,6 +3403,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Centralized_Instructions_Repository_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Certification"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Chain_Of_Custody_Documentation"/>
         <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Documentation_1"/>
     </ClassAssertion>
@@ -2708,6 +3417,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Change_Management"/>
         <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Code_Of_Conduct"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Collaboration_Tools"/>
@@ -2744,6 +3457,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Corrective_Action_Management_System"/>
@@ -2814,8 +3531,16 @@
         <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Controller"/>
         <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:IG_Capability"/>
@@ -2854,6 +3579,14 @@
         <NamedIndividual abbreviatedIRI="Governance:Data_Privacy_Masking_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Quality_Assurance_Framework"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Quality_Assurance_Framework_1"/>
     </ClassAssertion>
@@ -2880,6 +3613,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Storage"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Storage_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:IG_Capability"/>
@@ -2950,12 +3687,84 @@
         <NamedIndividual abbreviatedIRI="Governance:Enterprise_Risk_Management_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Erasure"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Exception_Handling_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Exception_Handling_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_Of_Chapter_That_Include_These_Articles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_That_Include_All_Keywords"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Articles_That_Include_One_Of_The_Given_Keywords"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Query"/>
         <NamedIndividual abbreviatedIRI="Governance:Give_Every_Capability_And_Their_Requirements"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Every_Capability_That_Involves_These_Articles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Give_Every_GDPR_Keyword"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Hold_Enforcement_Automation_System"/>
@@ -3174,12 +3983,20 @@
         <NamedIndividual abbreviatedIRI="Governance:IT_Planning_And_Strategy_Framework_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Impact_Assessment"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Incident_Response_And_Remediation_Protocol"/>
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_And_Remediation_Protocol_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Incident_Response_Plan"/>
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_Plan_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Information_Risk_Management"/>
@@ -3200,6 +4017,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:IG_Capability"/>
         <NamedIndividual abbreviatedIRI="Governance:Lawful_Basis_For_Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Lawfulness"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Laws_Mapping_And_Compliance_Tracking"/>
@@ -3290,6 +4111,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Metrics_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Monitoring"/>
         <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
     </ClassAssertion>
@@ -3364,6 +4189,14 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Penetration_Testing"/>
         <NamedIndividual abbreviatedIRI="Governance:Penetration_Testing_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Portability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Privacy"/>
@@ -3506,6 +4339,18 @@
         <NamedIndividual abbreviatedIRI="Governance:Process_System_Provisioning_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Profiling"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Goal"/>
         <NamedIndividual abbreviatedIRI="Governance:Protection"/>
     </ClassAssertion>
@@ -3586,6 +4431,10 @@
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Record"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Records_And_Information_Management"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ClassAssertion>
@@ -3596,6 +4445,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Records_Retention_Schedule"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Rectification"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Remote_Wiping"/>
@@ -3610,6 +4463,14 @@
         <NamedIndividual abbreviatedIRI="Governance:Request_Management_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Restrictions"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Retention_Rule_Management_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Retention_Rule_Management_System_1"/>
     </ClassAssertion>
@@ -3620,6 +4481,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Revisitation_And_Refinement"/>
         <NamedIndividual abbreviatedIRI="Governance:Revisitation_And_Refinement_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Risk_And_Compliance"/>
@@ -3656,6 +4521,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Steering_Commitee"/>
         <NamedIndividual abbreviatedIRI="Governance:Steering_Commitee_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Supervisor_Authority"/>
@@ -5718,6 +6587,16 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:ISO_27002"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Remote_Wiping_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:AccessControl_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Authentication_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">The Access Control subcategory within the Security department uses &quot;Digital Signatures &amp; Timestamps&quot; as part of its security measures. Digital signatures and timestamps are employed to ensure the integrity of access control mechanisms and authentication processes. They help validate the legitimacy of access requests and actions taken, providing an added layer of security and accountability in controlling data and system access.</Literal>
@@ -5805,6 +6684,1166 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_10"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_10"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <NamedIndividual abbreviatedIRI="Governance:Access"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_16"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:Rectification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:Erasure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:Erasure"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:Rectification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_2"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <NamedIndividual abbreviatedIRI="Governance:Portability"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+        <NamedIndividual abbreviatedIRI="Governance:Profiling"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
+        <NamedIndividual abbreviatedIRI="Governance:Restrictions"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:Record"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <NamedIndividual abbreviatedIRI="Governance:Impact_Assessment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection_Officer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <NamedIndividual abbreviatedIRI="Governance:Code_Of_Conduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <NamedIndividual abbreviatedIRI="Governance:Code_Of_Conduct"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <NamedIndividual abbreviatedIRI="Governance:Certification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+        <NamedIndividual abbreviatedIRI="Governance:Certification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_68"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_84"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_94"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_95"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_96"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_97"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_98"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_99"/>
+        <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_11"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -6187,6 +8226,21 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
         <NamedIndividual abbreviatedIRI="Governance:Business_Unit_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Employee_Engagement_Platforms_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Business_Unit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Key_Performance_Indicators_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Business_Unit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Cost_Calculations_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Business_Unit_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:SLA_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -7996,13 +10050,33 @@ Version control and change tracking capabilities in the DMS help maintain the in
         <NamedIndividual abbreviatedIRI="Governance:ISO_15000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Workflow_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Learning_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">The Change Management department is responsible for designing and implementing &quot;Training&quot; programs. These programs aim to educate employees and stakeholders about changes in processes, technologies, or procedures within the organization. Change Management ensures that training materials are developed, delivered, and assessed effectively to support smooth transitions.</Literal>
         </Annotation>
-        <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
         <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Revisitation_And_Refinement_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -9723,15 +11797,6 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">The Development department is responsible for the design and implementation of collaboration tools. This includes creating software platforms or applications that allow employees to collaborate seamlessly, share files, and exchange information in real-time. The development ensures the technical implementation and adaptation to the requirements of the organization.</Literal>
-        </Annotation>
-        <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
-        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">The Development department is responsible for designing and implementing the &quot;Search and Retrieval System.&quot; This system involves creating software-based tools or platforms that enable users to efficiently search for and retrieve specific information, documents, or data within an organization&apos;s repositories. Development ensures the system&apos;s user interface, search algorithms, and integration capabilities are optimized for seamless retrieval.</Literal>
         </Annotation>
         <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
@@ -9773,6 +11838,70 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
         <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Digital_Signatures_And_Timestamps_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Testing_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Integration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Version_Control_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Content_Authoring_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">The Development department is responsible for the design and implementation of collaboration tools. This includes creating software platforms or applications that allow employees to collaborate seamlessly, share files, and exchange information in real-time. The development ensures the technical implementation and adaptation to the requirements of the organization.</Literal>
+        </Annotation>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Quality_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_Matters_Testing_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Quality_Assurance_Framework_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Deadline_Tracking_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:IT_Planning_And_Strategy_Framework_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Metadata_Framework_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Storage_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -9938,6 +12067,46 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Chain_Of_Custody_Logging_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Tracking_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Record_Flagging_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Backup_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Inventory_Of_Evidence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Documentation_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -10148,6 +12317,16 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <ObjectProperty abbreviatedIRI="Governance:canBeInvolvedWith"/>
         <NamedIndividual abbreviatedIRI="Governance:Enterprise_Risk_Management_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Enterprise_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disaster_Recovery_Plan_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Enterprise_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -12014,6 +14193,116 @@ Ensure that the auditing process complies with relevant ISO standards, including
         <NamedIndividual abbreviatedIRI="Governance:ISO_27035"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Inventory_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Suspension_Procedures_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Discovery_And_Scanninig_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Penetration_Testing_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Erasure_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance_Reporting_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Analytics_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Data_Collection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Incident_Response_Plan_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Digital_Signatures_And_Timestamps_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Confirmation_Tracking_Mechanism_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compliance_Tagging_And_Classification_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Data_Culling_And_Scoping_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Classification_And_Tagging_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Corrective_Action_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Exception_Handling_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Incident_Response_And_Remediation_Protocol_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Risk_Assessment_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Loss_Prevention_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Notification_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information_Risk_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Security_Assessment_Framework_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
             <Literal datatypeIRI="&rdf;PlainLiteral">The Information Risk Management subcategory within the Risk and Compliance department exclusively uses the &quot;Incident Response and Remediation Protocol.&quot; This protocol guides the department in managing and responding to information security incidents to minimize risks, protect sensitive data, and maintain regulatory compliance.</Literal>
@@ -12157,6 +14446,51 @@ Ensure that the auditing process complies with relevant ISO standards, including
         <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
         <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_Hold_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:eDiscovery_Integration_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Laws_Mapping_And_Compliance_Tracking_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Syndication_System_For_Hold_Release_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Early_Case_Assessment_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Shared_Library_Of_Country_Protocols_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_Hold_Inventory_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_Registry_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Employee_Engagement_Platforms_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -13475,6 +15809,26 @@ Also having objective criteria for data culling (e.g., keywords, date ranges, fi
         <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
         <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_And_Remediation_Protocol_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Storage_Utilization_Reporting_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Security_Information_And_Event_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:System_Log_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
@@ -14820,13 +17174,39 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal datatypeIRI="&rdf;PlainLiteral">The Privacy department is responsible for designing and implementing &quot;Data Sharing Protocols.&quot; These protocols establish guidelines and procedures for sharing sensitive data both within and outside the organization. They ensure that data sharing practices align with privacy regulations, consent requirements, and data protection principles.</Literal>
-        </Annotation>
-        <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assessment_Tools_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
         <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Sharing_Protocols_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Employee_Interviews_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Employee_Self_Service_Portal_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Privacy_Masking_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_Laws_And_Policies_Repository_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Privacy_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Request_Management_System_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <Annotation>
@@ -17168,6 +19548,71 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <NamedIndividual abbreviatedIRI="Governance:Review_Cyles_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Centralized_Instructions_Repository_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Retention_Rule_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Retention_Schedule_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Asset_Database_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Lifeycle_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Data_Retention_And_Disposa_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Retention_Policy_Dummy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Centralized_Data_Source_Catalog_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Enterprise_Content_Management_System_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Automated_Retention_Execution_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Disposition_Policies_And_Procedures_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Centralized_Data_Repository_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+        <NamedIndividual abbreviatedIRI="Governance:Designation_Interface_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Lifeycle_Management_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
@@ -18698,6 +21143,501 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
         <Literal datatypeIRI="&rdf;PlainLiteral">The organization has defined specific goals related to availability.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-1-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_10"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-10-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_11"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-11-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_12"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-12-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-13-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-14-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-15-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_16"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-16-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-17-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-18-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-19-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_2"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-2-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-20-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-21-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_22"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-22-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_23"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-23-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_24"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-24-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_25"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-25-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_26"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-26-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_27"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-27-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_28"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-28-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_29"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-29-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_3"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-3-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-30-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_31"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-31-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-32-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-33-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-34-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-35-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_36"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-36-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_37"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-37-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_38"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-38-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_39"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-39-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_4"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-4-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_40"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-40-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_41"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-41-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_42"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-42-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_43"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-43-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-44-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-45-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-46-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-47-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-48-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-49-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-5-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-50-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-51-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-52-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-53-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-54-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-55-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-56-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-57-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-58-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-59-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-6-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-60-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-61-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-62-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-63-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-64-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-65-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-66-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-67-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_68"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-68-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-69-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_7"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-7-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-70-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-71-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-72-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-73-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-74-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-75-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-76-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-77-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-78-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-79-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_8"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-8-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-80-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-81-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-82-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-83-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_84"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-84-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-85-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-86-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-87-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-88-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-89-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-9-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-90-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-91-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-92-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-93-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_94"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-94-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_95"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-95-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_96"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-96-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_97"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-97-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_98"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-98-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:provenance"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_99"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://gdpr-info.eu/art-99-gdpr/</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
         <NamedIndividual abbreviatedIRI="Governance:COMP_1_1_3"/>
         <Literal datatypeIRI="&rdf;PlainLiteral">The organization has identified all relevant compliance laws and regulations.</Literal>
@@ -19453,7 +22393,11 @@ great value in the protection of information.</Literal>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="Governance:responsibleForCapability"/>
-        <ObjectProperty IRI="topObjectProperty"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleForTool"/>
+        <ObjectProperty abbreviatedIRI="Governance:responsibleFor"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="Governance:sellsChangesToStakeholder"/>
@@ -19562,10 +22506,6 @@ great value in the protection of information.</Literal>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <Class abbreviatedIRI="Governance:Capability"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
-        <Class abbreviatedIRI="Governance:CCO"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -19716,10 +22656,6 @@ great value in the protection of information.</Literal>
         <Class abbreviatedIRI="Governance:Maturity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Governance:involvedInRiskAndCompliance"/>
-        <Class abbreviatedIRI="Governance:Risk_And_Compliance"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <Class abbreviatedIRI="Governance:GDPR"/>
     </ObjectPropertyRange>
@@ -19745,11 +22681,7 @@ great value in the protection of information.</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
-        <Class abbreviatedIRI="Governance:Data_Retention_Policy"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
-        <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
+        <Class IRI="Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
@@ -19783,6 +22715,75 @@ great value in the protection of information.</Literal>
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
         <DataProperty IRI="topDataProperty"/>
     </SubDataPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Give_Articles_Of_Chapter_That_Include_These_Articles</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Returns all articles of a certain GDPR chapter that includes the user 
+articles
+
+User Input: ?inputArticle
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT DISTINCT ?articles ?chapter WHERE {
+  ?inputArticle igonto:definedInChapter ?chapter. 
+  ?articles  igonto:definedInChapter ?chapter. 
+  FILTER (?inputArticle IN (igonto:Article_15, igonto:Article_25, igonto:Article_17))
+}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Give_Articles_That_Include_All_Keywords</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Returns articles that inlcude all keywords the user provided.
+
+User Input: ?filterKeyword, (COUNT(DISTINCT ?filterKeyword) = ?)
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT DISTINCT ?article
+WHERE {
+  ?article igonto:includesKeyword ?keyword.
+  
+  FILTER (
+    ?keyword IN (igonto:Right, igonto:Data_Subject)
+  )
+  {
+    SELECT ?article
+    WHERE {
+      ?article igonto:includesKeyword ?filterKeyword.
+      FILTER (?filterKeyword IN (igonto:Right, igonto:Data_Subject))
+    }
+    GROUP BY ?article
+    HAVING (COUNT(DISTINCT ?filterKeyword) = 2)  # Adjust this number to match the number of required keywords
+  }
+}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Give_Articles_That_Include_One_Of_The_Given_Keywords</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Gives articles that include one of the given keywords from the user
+
+Input: ?keyword
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT DISTINCT ?articles WHERE{
+  ?articles igonto:includesKeyword ?keyword
+  FILTER (?keyword IN (igonto:Right, igonto:Data_Subject))
+}</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Governance:Give_Every_Capability_And_Their_Requirements</AbbreviatedIRI>
@@ -19822,7 +22823,41 @@ GROUP BY ?maturityLevel ?capability ?framework ?process ?description ?comment</L
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:http://www.w3.org/2002/07/genid507"/>
+        <AbbreviatedIRI>Governance:Give_Every_Capability_That_Involves_These_Articles</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Returns every capability that involves certain articles.
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT ?capability ?description ?article WHERE {
+  ?capability a igonto:IG_Capability;
+              igonto:involvesArticle ?article;
+              igonto:capabilityDescription ?description.
+  FILTER (?article IN (igonto:Article_15, igonto:Article_25, igonto:Article_17))
+}ORDER BY ?article</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Give_Every_GDPR_Keyword</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Returns every keyword there exist in the GDPR Articles
+
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT ?keyword WHERE{
+  ?keyword a igonto:GDPR_Keywords.
+}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AnonymousIndividual nodeID="_:http://www.w3.org/2002/07/genid600"/>
         <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
     </AnnotationAssertion>
 </Ontology>
