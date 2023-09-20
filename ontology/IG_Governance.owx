@@ -776,6 +776,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Analytics_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Archieving"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
     </Declaration>
     <Declaration>
@@ -1202,6 +1205,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Tracking_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Chair"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
     </Declaration>
     <Declaration>
@@ -1211,7 +1217,19 @@
         <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Commission"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Committee"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Communication_Platforms_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Compensation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Competence"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Compliance"/>
@@ -1226,7 +1244,13 @@
         <NamedIndividual abbreviatedIRI="Governance:Compliance_Tagging_And_Classification_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Confidentiality"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Confirmation_Tracking_Mechanism_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Consistency"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Content_Authoring_Tools_1"/>
@@ -1236,6 +1260,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Cooperation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Corrective_Action_Management_System_1"/>
@@ -1364,6 +1391,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Deadline_Tracking_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Delegation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Designation_Interface_1"/>
     </Declaration>
     <Declaration>
@@ -1382,10 +1412,16 @@
         <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Documents"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Early_Case_Assessment_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Employee"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Employee_Engagement_Platforms_1"/>
@@ -1409,10 +1445,16 @@
         <NamedIndividual abbreviatedIRI="Governance:Erasure"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Exception_Handling_System_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Fines"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_1"/>
@@ -1637,6 +1679,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Incident_Response_Plan_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Independence"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Information"/>
     </Declaration>
     <Declaration>
@@ -1647,6 +1692,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Inventory_Of_Evidence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Joint_Operations"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Key_Performance_Indicators_1"/>
@@ -1730,6 +1778,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:National_ID_Number"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Organizational_Communication"/>
     </Declaration>
     <Declaration>
@@ -1781,10 +1832,16 @@
         <NamedIndividual abbreviatedIRI="Governance:PRO_1_6_3"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Penalties"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Penetration_Testing_1"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Portability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Powers"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Principles"/>
@@ -1824,6 +1881,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Privacy_Laws_And_Policies_Repository_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Proceedings"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Process_Accidental_Data_Leakage_1"/>
@@ -1985,6 +2045,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Reports"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Request_Management_System_1"/>
     </Declaration>
     <Declaration>
@@ -2015,6 +2078,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Search_And_Retrieval_System_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Secretariat"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Security_Assessment_Framework_1"/>
     </Declaration>
     <Declaration>
@@ -2037,6 +2103,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Suspension"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Suspension_Procedures_1"/>
@@ -2085,6 +2154,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Transparency"/>
@@ -2847,6 +2919,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Analytics_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Archieving"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Archieving"/>
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
     </ClassAssertion>
@@ -3415,6 +3491,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Chain_Of_Custody_Tracking_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Chair"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Change_Management"/>
         <NamedIndividual abbreviatedIRI="Governance:Change_Management_1"/>
     </ClassAssertion>
@@ -3427,8 +3507,24 @@
         <NamedIndividual abbreviatedIRI="Governance:Collaboration_Tools_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Commission"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Committee"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Communication_Platforms"/>
         <NamedIndividual abbreviatedIRI="Governance:Communication_Platforms_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compensation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Competence"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Goal"/>
@@ -3447,8 +3543,16 @@
         <NamedIndividual abbreviatedIRI="Governance:Compliance_Tagging_And_Classification_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Confidentiality"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Confirmation_Tracking_Mechanism"/>
         <NamedIndividual abbreviatedIRI="Governance:Confirmation_Tracking_Mechanism_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Consistency"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Content_Authoring_Tools"/>
@@ -3461,6 +3565,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
         <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Cooperation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Corrective_Action_Management_System"/>
@@ -3631,6 +3739,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Deadline_Tracking_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Delegation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Designation_Interface"/>
         <NamedIndividual abbreviatedIRI="Governance:Designation_Interface_1"/>
     </ClassAssertion>
@@ -3655,12 +3767,20 @@
         <NamedIndividual abbreviatedIRI="Governance:Document_Management_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Documents"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Electronic_Records_Management"/>
         <NamedIndividual abbreviatedIRI="Governance:ERM_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Early_Case_Assessment"/>
         <NamedIndividual abbreviatedIRI="Governance:Early_Case_Assessment_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Employee"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Employee_Engagement_Platforms"/>
@@ -3692,11 +3812,19 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
         <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Exception_Handling_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Exception_Handling_System_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Fines"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Chapters"/>
@@ -3996,6 +4124,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Independence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
         <NamedIndividual abbreviatedIRI="Governance:Information"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -4009,6 +4141,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Inventory_Of_Evidence"/>
         <NamedIndividual abbreviatedIRI="Governance:Inventory_Of_Evidence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Joint_Operations"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Key_Performance_Indicators"/>
@@ -4119,6 +4255,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Monitoring_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:National_ID_Number"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Goal"/>
         <NamedIndividual abbreviatedIRI="Governance:Organizational_Communication"/>
     </ClassAssertion>
@@ -4187,12 +4327,20 @@
         <NamedIndividual abbreviatedIRI="Governance:PRO_1_6_3"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Penalties"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Penetration_Testing"/>
         <NamedIndividual abbreviatedIRI="Governance:Penetration_Testing_1"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
         <NamedIndividual abbreviatedIRI="Governance:Portability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Powers"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
@@ -4245,6 +4393,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Privacy_Laws_And_Policies_Repository"/>
         <NamedIndividual abbreviatedIRI="Governance:Privacy_Laws_And_Policies_Repository_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Proceedings"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Process"/>
@@ -4459,6 +4611,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Reporting_And_Analysis_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reports"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Request_Management_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Request_Management_System_1"/>
     </ClassAssertion>
@@ -4499,6 +4655,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Search_And_Retrieval_System_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Secretariat"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Security_Assessment_Framework"/>
         <NamedIndividual abbreviatedIRI="Governance:Security_Assessment_Framework_1"/>
     </ClassAssertion>
@@ -4529,6 +4689,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Supervisor_Authority"/>
         <NamedIndividual abbreviatedIRI="Governance:Supervisor_Authority_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Suspension"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Suspension_Procedures"/>
@@ -4593,6 +4757,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Training"/>
         <NamedIndividual abbreviatedIRI="Governance:Training_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Goal"/>
@@ -7491,9 +7659,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_44"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7501,9 +7694,44 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_46"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_47"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7511,9 +7739,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_48"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_49"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7541,9 +7794,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
+        <NamedIndividual abbreviatedIRI="Governance:Transfer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_50"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_51"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7551,9 +7829,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_52"/>
+        <NamedIndividual abbreviatedIRI="Governance:Competence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_53"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7561,9 +7859,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_54"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+        <NamedIndividual abbreviatedIRI="Governance:Competence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_55"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7571,9 +7889,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+        <NamedIndividual abbreviatedIRI="Governance:Competence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_56"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+        <NamedIndividual abbreviatedIRI="Governance:Monitoring"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_57"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7581,9 +7924,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_58"/>
+        <NamedIndividual abbreviatedIRI="Governance:Powers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_6"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_59"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reports"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7606,9 +7969,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_60"/>
+        <NamedIndividual abbreviatedIRI="Governance:Cooperation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_61"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7616,9 +7999,24 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_62"/>
+        <NamedIndividual abbreviatedIRI="Governance:Joint_Operations"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_63"/>
+        <NamedIndividual abbreviatedIRI="Governance:Consistency"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7626,9 +8024,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_64"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_65"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7636,9 +8059,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_66"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+        <NamedIndividual abbreviatedIRI="Governance:Information"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_67"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7646,9 +8094,24 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_68"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+        <NamedIndividual abbreviatedIRI="Governance:Independence"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_69"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7671,9 +8134,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_70"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_71"/>
+        <NamedIndividual abbreviatedIRI="Governance:Reports"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7681,9 +8164,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_72"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_73"/>
+        <NamedIndividual abbreviatedIRI="Governance:Chair"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7691,9 +8194,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+        <NamedIndividual abbreviatedIRI="Governance:Chair"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_74"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+        <NamedIndividual abbreviatedIRI="Governance:Responsibility"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_75"/>
+        <NamedIndividual abbreviatedIRI="Governance:Secretariat"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7701,9 +8229,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_7"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Data_Protection_Board"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_76"/>
+        <NamedIndividual abbreviatedIRI="Governance:Confidentiality"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_77"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7711,9 +8264,44 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_78"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <NamedIndividual abbreviatedIRI="Governance:Controller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_79"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7736,9 +8324,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_80"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+        <NamedIndividual abbreviatedIRI="Governance:Suspension"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_81"/>
+        <NamedIndividual abbreviatedIRI="Governance:Proceedings"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7746,9 +8354,39 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
+        <NamedIndividual abbreviatedIRI="Governance:Compensation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_82"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Subject"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+        <NamedIndividual abbreviatedIRI="Governance:Fines"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_83"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7756,9 +8394,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_8"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_84"/>
+        <NamedIndividual abbreviatedIRI="Governance:Penalties"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_85"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7766,9 +8424,34 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+        <NamedIndividual abbreviatedIRI="Governance:Documents"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+        <NamedIndividual abbreviatedIRI="Governance:National_ID_Number"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_87"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7776,9 +8459,44 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+        <NamedIndividual abbreviatedIRI="Governance:Right"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_88"/>
+        <NamedIndividual abbreviatedIRI="Governance:Employee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <NamedIndividual abbreviatedIRI="Governance:Processing"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <NamedIndividual abbreviatedIRI="Governance:Archieving"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
+        <NamedIndividual abbreviatedIRI="Governance:Principles"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7801,9 +8519,24 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+        <NamedIndividual abbreviatedIRI="Governance:European_Union"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_90"/>
+        <NamedIndividual abbreviatedIRI="Governance:Supervisor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_9"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_91"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Protection"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
@@ -7811,9 +8544,29 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+        <NamedIndividual abbreviatedIRI="Governance:Delegation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_92"/>
+        <NamedIndividual abbreviatedIRI="Governance:Commission"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
         <NamedIndividual abbreviatedIRI="Governance:GDPR_Chapter_10"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+        <NamedIndividual abbreviatedIRI="Governance:Committee"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
+        <NamedIndividual abbreviatedIRI="Governance:Article_93"/>
+        <NamedIndividual abbreviatedIRI="Governance:Commission"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:definedInChapter"/>
