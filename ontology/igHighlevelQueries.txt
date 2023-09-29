@@ -1,0 +1,9 @@
+
+Select BusinessUnit, Process, Description, Level, Risk, Consequence
+GroupBy BusinessUnit, Level ;
+
+Select Level, Process, Blueprint, Design, Component, Description 
+GroupBy Process ;   
+
+Select Component, Design, ServiceTemplate, DeploymentTemplate, Description 
+GroupBy Component ;   
