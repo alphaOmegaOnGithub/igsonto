@@ -1,9 +1,16 @@
 
+Select business (smal, medium, large), jurisdiction,  regulation, standard  
+
 Select BusinessUnit, Process, Description, Level, Risk, Consequence
 GroupBy BusinessUnit, Level ;
 
 Select Level, Process, Blueprint, Design, Component, Description 
 GroupBy Process ;   
 
-Select Component, Design, ServiceTemplate, DeploymentTemplate, Description 
+Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description 
 GroupBy Component ;   
+
+Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description 
+GroupBy Component ;   
+
+
