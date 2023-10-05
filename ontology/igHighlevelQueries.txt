@@ -1,16 +1,56 @@
-
+Q:
 Select business (smal, medium, large), jurisdiction,  regulation, standard  
+Example result:
 
-Select BusinessUnit, Process, Description, Level, Risk, Consequence
-GroupBy BusinessUnit, Level ;
+Q:
+Select BusinessUnit, Process, Description, Level, Risk, Consequence GroupBy BusinessUnit, Level ;
+Example result:
 
-Select Level, Process, Blueprint, Design, Component, Description 
-GroupBy Process ;   
+Q:
+Select BusinessUnit, Process, Description, Level, Risk, Consequence GroupBy BusinessUnit, Level ;
+Example result:
 
-Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description 
-GroupBy Component ;   
+Q:
+Select Level, Process, Blueprint, Design, Component, Description GroupBy Process ;   
+Example result:
 
-Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description 
-GroupBy Component ;   
+Q: 
+Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description GroupBy Component ;   
+Example result:
+
+Q: My firm must implement a corporate wide IG strategy with a minimal maturity level of 3, 
+what are the necessary design components  required?
+Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description  GroupBy Component ;   
+Result:
+	Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description
+     
+
+Q: My firm has business offices in Germany and deals with customer PII data, contracts and context information, what are the IG regulation we have to comply with ? 
+
+Select ?Regulation ?Principles ?”Capabilities” ?”Maturity level” 
+	Where ?Company ?”has business in” ?Country: DE . AND ?”Maturity Level” > 2 .  
+
+Result: 
+ Regulation Principles:     Capabilities:                                               Maturity Level: 
+  DSGVO     Accountability   A records management program (RMP) is established.             3 
+  DSGVO     Retention        Employees understand how to classify records appropriately.    4 
+  GDPR      Accountability   A  records management program (RMP)  is established.           3   
 
 
+Note: A DG program must be able to measure progress and success through metrics that demonstrate who, how and how much business value was added and IG objectives were attained.
+Typical metrics are: Value, Effectiveness, Sustainability
+
+Q: What are the key metrics that an IG program hast to monitor and repot on ? 
+
+
+ Tables/entities: 
+ 
+ Organization:	Name	Type (ISO/Association/Agency/Research/Industry) Framework Description
+ 
+ Regulation: 	Regulator Jurisdiction Country Year State() Description
+ 
+ Vendor:		Name	Type	Products	Services	Platform  
+ 
+ 
+
+ 
