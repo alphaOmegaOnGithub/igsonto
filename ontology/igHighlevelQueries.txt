@@ -1,31 +1,31 @@
-Q:
+Q1:
 Select business (smal, medium, large), jurisdiction,  regulation, standard  
 Example result:
 
-Q:
+Q2:
 Select BusinessUnit, Process, Description, Level, Risk, Consequence GroupBy BusinessUnit, Level ;
 Example result:
 
-Q:
+Q3:
 Select BusinessUnit, Process, Description, Level, Risk, Consequence GroupBy BusinessUnit, Level ;
 Example result:
 
-Q:
+Q4:
 Select Level, Process, Blueprint, Design, Component, Description GroupBy Process ;   
 Example result:
 
-Q: 
+Q5: 
 Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description GroupBy Component ;   
 Example result:
 
-Q: My firm must implement a corporate wide IG strategy with a minimal maturity level of 3, 
+Q6: My firm must implement a corporate wide IG strategy with a minimal maturity level of 3, 
 what are the necessary design components  required?
 Select Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description  GroupBy Component ;   
 Result:
 	Component, Design, Service, ServiceTemplate, DeploymentTemplate, Description
      
 
-Q: My firm has business offices in Germany and deals with customer PII data, contracts and context information, what are the IG regulation we have to comply with ? 
+Q7: My firm has business offices in Germany and deals with customer PII data, contracts and context information, what are the IG regulation we have to comply with ? 
 
 Select ?Regulation ?Principles ?”Capabilities” ?”Maturity level” 
 	Where ?Company ?”has business in” ?Country: DE . AND ?”Maturity Level” > 2 .  
@@ -40,7 +40,7 @@ Result:
 Note: A DG program must be able to measure progress and success through metrics that demonstrate who, how and how much business value was added and IG objectives were attained.
 Typical metrics are: Value, Effectiveness, Sustainability
 
-Q: What are the key metrics that an IG program hast to monitor and repot on ? 
+Q8: What are the key metrics that an IG program hast to monitor and repot on ? 
 
 
  Tables/entities: 
