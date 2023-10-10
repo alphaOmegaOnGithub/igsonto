@@ -43,13 +43,27 @@ Typical metrics are: Value, Effectiveness, Sustainability
 Q8: What are the key metrics that an IG program hast to monitor and repot on ? 
 
 
- Tables/entities: 
+ Tables/Entities: 
  
- Organization:	Name	Type (ISO/Association/Agency/Research/Industry) Framework Description
+ Organization:	Name	Type  					Framework 	Taxonomy  Maturity level Description	Reference
+				ISO		Standard Organization 
+				ARMA	Association
+				DARPA   Agency
+						Research
+						Industry
+
+Regulation: 	Name Regulator Jurisdiction Country Year 	State()		Description 						Reference
+				GDPR EU			EU			EU		2019	active		Global Data protection Regulation 
  
- Regulation: 	Regulator Jurisdiction Country Year State() Description
- 
- Vendor:		Name	Type	Products	Services	Platform  
+ Architeture: 	Domain 	  						Blueprint	Component	Design 	Pattern 	Origin 		Owner Description		
+				Enterprise Content Management 
+				Information Retrieval
+				Information Governance 
+				Business Analytics 
+				Business Intelligence
+				
+  Vendor:		Name	Type	Products	Services	Platform  
+
  
  
 
