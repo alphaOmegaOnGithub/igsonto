@@ -22,6 +22,9 @@
         <Class abbreviatedIRI="Governance:Archieving"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="Governance:Architecture"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="Governance:Asset_Database"/>
     </Declaration>
     <Declaration>
@@ -112,9 +115,6 @@
         <Class abbreviatedIRI="Governance:Company"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="Governance:Company_Capability"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="Governance:Company_Risks"/>
     </Declaration>
     <Declaration>
@@ -148,13 +148,13 @@
         <Class abbreviatedIRI="Governance:DPO"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI="Governance:Data"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI="Governance:Data_Classification_And_Tagging"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Governance:Data_Controller"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Governance:Data_Datatype"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Governance:Data_Discovery_And_Scanninig_Tools"/>
@@ -209,6 +209,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Governance:Deadline_Tracking"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Governance:Design"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="Governance:Designation_Interface"/>
@@ -544,6 +547,9 @@
         <ObjectProperty abbreviatedIRI="Governance:collaboratesWithOrganization"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:companyDoesNotNeed"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
     </Declaration>
     <Declaration>
@@ -557,6 +563,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:defines"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:definesArchitecture"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:definesDesign"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
@@ -649,6 +661,15 @@
         <ObjectProperty abbreviatedIRI="Governance:needsTechnicalRequirement"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:needsTheoreticallyRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:needsTheoreticallyRequirementRIM"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:notLinkedToOrganization"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:operatesIn"/>
     </Declaration>
     <Declaration>
@@ -688,7 +709,16 @@
         <ObjectProperty abbreviatedIRI="Governance:technicalRequirementFor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty abbreviatedIRI="Governance:uses"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Governance:Architecture_Datatype"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:Company"/>
@@ -697,13 +727,16 @@
         <DataProperty abbreviatedIRI="Governance:Country"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Governance:Design_Datatype"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:IG_Policy"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:IG_Strategic_Plan"/>
@@ -715,7 +748,7 @@
         <DataProperty abbreviatedIRI="Governance:Metadata"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:Process"/>
@@ -725,6 +758,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:Role"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Governance:architectureReference"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
@@ -803,6 +839,9 @@
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:dataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="Governance:designReference"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="Governance:metadataAccessRights"/>
@@ -1103,6 +1142,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Architecture_With_RIM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Architecture_Without_RIM"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
@@ -1552,7 +1597,7 @@
         <NamedIndividual abbreviatedIRI="Governance:Communication_Platforms_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="Governance:Company_TOSCA"/>
+        <NamedIndividual abbreviatedIRI="Governance:Company"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Compensation"/>
@@ -1586,9 +1631,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System_1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Governance:Continously_Use_Of_Data"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Controller"/>
@@ -1648,9 +1690,6 @@
         <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
     </Declaration>
     <Declaration>
@@ -1661,6 +1700,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Classification_And_Tagging_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Data_Discovery_And_Scanninig_Tools_1"/>
@@ -1729,6 +1771,12 @@
         <NamedIndividual abbreviatedIRI="Governance:Delegation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Design_With_RIM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Design_Without_RIM"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Designation_Interface_1"/>
     </Declaration>
     <Declaration>
@@ -1766,9 +1814,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Employee_Interviews_1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="Governance:Employee_Number_Larger_250"/>
     </Declaration>
     <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Employee_Self_Service_Portal_1"/>
@@ -2122,6 +2167,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Legal_Registry_1"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Manipulate_Company_Data"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Metadata_1"/>
     </Declaration>
     <Declaration>
@@ -2335,6 +2383,9 @@
         <NamedIndividual abbreviatedIRI="Governance:Q2"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual abbreviatedIRI="Governance:Q3"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Q7"/>
     </Declaration>
     <Declaration>
@@ -2524,9 +2575,6 @@
         <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual abbreviatedIRI="Governance:Sensible_Data"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual abbreviatedIRI="Governance:Shared_Library_Of_Country_Protocols_1"/>
     </Declaration>
     <Declaration>
@@ -2624,6 +2672,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#5_Transformational"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="Governance:AccessControl"/>
@@ -3365,6 +3416,14 @@
         <NamedIndividual abbreviatedIRI="Governance:Archieving_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Architecture"/>
+        <NamedIndividual abbreviatedIRI="Governance:Architecture_With_RIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Architecture"/>
+        <NamedIndividual abbreviatedIRI="Governance:Architecture_Without_RIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Articles"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_1"/>
     </ClassAssertion>
@@ -3962,7 +4021,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Company"/>
-        <NamedIndividual abbreviatedIRI="Governance:Company_TOSCA"/>
+        <NamedIndividual abbreviatedIRI="Governance:Company"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
@@ -4007,10 +4066,6 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System"/>
         <NamedIndividual abbreviatedIRI="Governance:Continous_Visibility_And_Monitoring_System_1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Governance:Company_Capability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Continously_Use_Of_Data"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
@@ -4089,10 +4144,6 @@
         <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Controller"/>
         <NamedIndividual abbreviatedIRI="Governance:DataController1"/>
     </ClassAssertion>
@@ -4107,6 +4158,10 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Classification_And_Tagging"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Classification_And_Tagging_1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:GDPR_Keywords"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Data_Discovery_And_Scanninig_Tools"/>
@@ -4197,6 +4252,14 @@
         <NamedIndividual abbreviatedIRI="Governance:Delegation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Design"/>
+        <NamedIndividual abbreviatedIRI="Governance:Design_With_RIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Design"/>
+        <NamedIndividual abbreviatedIRI="Governance:Design_Without_RIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Designation_Interface"/>
         <NamedIndividual abbreviatedIRI="Governance:Designation_Interface_1"/>
     </ClassAssertion>
@@ -4247,10 +4310,6 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Employee_Interviews"/>
         <NamedIndividual abbreviatedIRI="Governance:Employee_Interviews_1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Governance:Company_Capability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Employee_Number_Larger_250"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Employee_Self_Service_Portal"/>
@@ -4721,6 +4780,10 @@
         <NamedIndividual abbreviatedIRI="Governance:Legal_Registry_1"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Practice_Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Manipulate_Company_Data"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class abbreviatedIRI="Governance:Metadata"/>
         <NamedIndividual abbreviatedIRI="Governance:Metadata_1"/>
     </ClassAssertion>
@@ -5006,6 +5069,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Practice_Query"/>
+        <NamedIndividual abbreviatedIRI="Governance:Q3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="Governance:Practice_Query"/>
         <NamedIndividual abbreviatedIRI="Governance:Q7"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -5255,10 +5322,6 @@
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Senior_Records_Officer"/>
         <NamedIndividual abbreviatedIRI="Governance:Senior_Records_Officer_1"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class abbreviatedIRI="Governance:Company_Capability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Sensible_Data"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="Governance:Shared_Library_Of_Country_Protocols"/>
@@ -7494,7 +7557,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_13"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7514,7 +7577,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_14"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7539,7 +7602,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_15"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7564,7 +7627,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_17"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7594,7 +7657,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_18"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7619,7 +7682,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_19"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7654,7 +7717,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_20"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7679,7 +7742,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_21"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7919,7 +7982,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_32"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7954,12 +8017,12 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_33"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -7984,12 +8047,12 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_34"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data_Breach"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -8259,7 +8322,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_45"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -8359,7 +8422,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -9009,7 +9072,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_86"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -9069,7 +9132,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_89"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -9089,7 +9152,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_9"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data"/>
+        <NamedIndividual abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:includesKeyword"/>
@@ -11443,13 +11506,8 @@ Version control and change tracking capabilities in the DMS help maintain the in
         <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:hasCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Company_TOSCA"/>
-        <NamedIndividual abbreviatedIRI="Governance:Employee_Number_Larger_250"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:operatesIn"/>
-        <NamedIndividual abbreviatedIRI="Governance:Company_TOSCA"/>
+        <NamedIndividual abbreviatedIRI="Governance:Company"/>
         <NamedIndividual abbreviatedIRI="Governance:Germany"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -12668,16 +12726,6 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Continously_Use_Of_Data"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Sensible_Data"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:DPO_1"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
@@ -12881,11 +12929,6 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:Data_Processing_Register_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_30"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Data_Processing_Register_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Employee_Number_Larger_250"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -13098,6 +13141,16 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:Deadline_Tracking_1"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+        <NamedIndividual abbreviatedIRI="Governance:Design_With_RIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:notLinkedToOrganization"/>
+        <NamedIndividual abbreviatedIRI="Governance:Design_Without_RIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -19424,21 +19477,6 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Article_35"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assessment_Tools_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Continously_Use_Of_Data"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assessment_Tools_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Employee_Number_Larger_250"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:isRequiredForCompanyCapability"/>
-        <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assessment_Tools_1"/>
-        <NamedIndividual abbreviatedIRI="Governance:Sensible_Data"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:Privacy_Impact_Assessment_Tools_1"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
@@ -19529,7 +19567,7 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
         <NamedIndividual abbreviatedIRI="Governance:Process_Data_Quality_And_Data_Lineage_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
@@ -19539,7 +19577,7 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Development_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
         <NamedIndividual abbreviatedIRI="Governance:Process_Departmental_Information_Practice_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
@@ -19574,7 +19612,7 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Legal_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
         <NamedIndividual abbreviatedIRI="Governance:Process_Information_Retention_And_Disposal_Obligation_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
@@ -19599,7 +19637,7 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Privacy_and_Security_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
         <NamedIndividual abbreviatedIRI="Governance:Process_Realize_Information_Value_1"/>
         <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
@@ -20556,11 +20594,6 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P1_3"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P1_3"/>
         <NamedIndividual abbreviatedIRI="Governance:CGOC_02"/>
@@ -20617,6 +20650,11 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <NamedIndividual abbreviatedIRI="Governance:ISO_17000"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P1_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P1_4"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#4_Proactive"/>
@@ -20640,11 +20678,6 @@ Also regurlar reviews can identify emerging technologies and help the organizati
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P1_4"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P1_4"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -20690,6 +20723,11 @@ Also integrating retention schedules with records repositories, applications, ar
         <NamedIndividual abbreviatedIRI="Governance:ISO_15489"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P1_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P2_3"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#3_Essential"/>
@@ -20703,11 +20741,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P2_3"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P2_3"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -20772,6 +20805,11 @@ Also integrating retention schedules with records repositories, applications, ar
         <NamedIndividual abbreviatedIRI="Governance:ISO_23081"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P2_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P2_4"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#4_Proactive"/>
@@ -20805,11 +20843,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P2_4"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P2_4"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -20864,6 +20897,11 @@ Also integrating retention schedules with records repositories, applications, ar
         <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P2_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P3_3"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#3_Essential"/>
@@ -20892,11 +20930,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P3_3"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P3_3"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -20965,6 +20998,11 @@ Also integrating retention schedules with records repositories, applications, ar
         <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P3_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P3_4"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#4_Proactive"/>
@@ -20983,11 +21021,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P3_4"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P3_4"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -21070,6 +21103,11 @@ Also integrating retention schedules with records repositories, applications, ar
         <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P3_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_3"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#3_Essential"/>
@@ -21088,11 +21126,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_3"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_6"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P4_3"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -21163,6 +21196,11 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <NamedIndividual abbreviatedIRI="Governance:ISO_27001"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P4_3"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:inMaturityLevel"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
         <NamedIndividual IRI="http://www.semanticweb.org/IG/Governance#4_Proactive"/>
@@ -21171,11 +21209,6 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
         <NamedIndividual abbreviatedIRI="Governance:Article_5"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty abbreviatedIRI="Governance:linkedToBusinessUnit"/>
-        <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
-        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:linkedToFramework"/>
@@ -21242,6 +21275,11 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <ObjectProperty abbreviatedIRI="Governance:practicesDefinedInIso"/>
         <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
         <NamedIndividual abbreviatedIRI="Governance:ISO_27000"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <NamedIndividual abbreviatedIRI="Governance:RIM_P4_4"/>
+        <NamedIndividual abbreviatedIRI="Governance:Records_Information_Management_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty abbreviatedIRI="Governance:involvesArticle"/>
@@ -23439,6 +23477,11 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
         <Literal>The hold process is well-managed with defined roles and a repeatable process that is integrated into the organization’s information management and discovery processes.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="Governance:companyEmployeeNumber"/>
+        <NamedIndividual abbreviatedIRI="Governance:Company"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">200</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
         <NamedIndividual abbreviatedIRI="Governance:DIS_1_1_3"/>
         <Literal>Official procedures for records disposition and transfer are developed.</Literal>
@@ -24319,6 +24362,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Governance:needsTheoreticallyRequirementRIM"/>
+        <ObjectProperty abbreviatedIRI="Governance:needsTheoreticallyRequirement"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="Governance:organizesTeam"/>
         <ObjectProperty IRI="topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -24353,6 +24400,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="Governance:technicalRequirementFor"/>
         <ObjectProperty IRI="topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+        <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty abbreviatedIRI="Governance:uses"/>
@@ -24399,6 +24450,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <Class abbreviatedIRI="Governance:Steering_Commitee"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Governance:companyDoesNotNeed"/>
+        <Class abbreviatedIRI="Governance:Company"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
         <Class abbreviatedIRI="Governance:Stakeholder"/>
     </ObjectPropertyDomain>
@@ -24409,6 +24464,14 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
         <Class abbreviatedIRI="Governance:Steering_Commitee"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Governance:definesArchitecture"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Governance:definesDesign"/>
+        <Class abbreviatedIRI="Governance:Capability"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
@@ -24567,6 +24630,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <Class abbreviatedIRI="Governance:Organization"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Governance:companyDoesNotNeed"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:consultaionNeededForMetrics"/>
         <Class abbreviatedIRI="Governance:Metrics"/>
     </ObjectPropertyRange>
@@ -24577,6 +24644,14 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:createsRiskPlan"/>
         <Class abbreviatedIRI="Governance:Information_Asset_Risk_Mitigation_Plan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Governance:definesArchitecture"/>
+        <Class abbreviatedIRI="Governance:Architecture"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Governance:definesDesign"/>
+        <Class abbreviatedIRI="Governance:Design"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:definesPracticesFor"/>
@@ -24596,7 +24671,7 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:ensuresGDPRComplianceForDataController"/>
-        <Class abbreviatedIRI="Governance:Data"/>
+        <Class abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:givesInputToLHNRequirements"/>
@@ -24608,7 +24683,7 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:hasData"/>
-        <Class abbreviatedIRI="Governance:Data"/>
+        <Class abbreviatedIRI="Governance:Data_Datatype"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:hasInputOnRiskProfile"/>
@@ -24659,6 +24734,14 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <Class IRI="Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Governance:needsTheoreticallyRequirementRIM"/>
+        <Class abbreviatedIRI="Governance:Records_And_Information_Management"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Governance:notLinkedToOrganization"/>
+        <Class abbreviatedIRI="Governance:Organization"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="Governance:operatesIn"/>
         <Class abbreviatedIRI="Governance:Country"/>
     </ObjectPropertyRange>
@@ -24698,6 +24781,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <ObjectProperty abbreviatedIRI="Governance:setsRulesForDataController"/>
         <Class abbreviatedIRI="Governance:Data_Controller"/>
     </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="Governance:architectureReference"/>
+        <DataProperty abbreviatedIRI="Governance:Architecture_Datatype"/>
+    </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:capabilityDescription"/>
         <DataProperty IRI="topDataProperty"/>
@@ -24760,43 +24847,47 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataAccessRights"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataCreationDate"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataCustodian"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataDescription"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataFormat"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataLocation"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataName"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataOwner"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataSource"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:dataType"/>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty abbreviatedIRI="Governance:designReference"/>
+        <DataProperty abbreviatedIRI="Governance:Design_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metadataAccessRights"/>
@@ -24848,35 +24939,35 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricCurrentValue"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricDescription"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricLowerThreshhold"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricName"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricSource"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricTargetValue"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricUnit"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:metricUpperThreshhold"/>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:planApprovalDate"/>
@@ -24952,39 +25043,39 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programBudget"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programDescription"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programDocumentationLinks"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programEndDate"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programName"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programOwner"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programScope"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programStartDate"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:programStatus"/>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty abbreviatedIRI="Governance:regulationAuthority"/>
@@ -25059,6 +25150,10 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <DataProperty abbreviatedIRI="Governance:IG_Team"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Governance:Architecture_Datatype"/>
+        <Class abbreviatedIRI="Governance:Architecture"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty abbreviatedIRI="Governance:Company"/>
         <Class abbreviatedIRI="Governance:Company"/>
     </DataPropertyDomain>
@@ -25067,15 +25162,19 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <Class abbreviatedIRI="Governance:Country"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="Governance:Data"/>
-        <Class abbreviatedIRI="Governance:Data"/>
+        <DataProperty abbreviatedIRI="Governance:Data_Datatype"/>
+        <Class abbreviatedIRI="Governance:Data_Datatype"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="Governance:Design_Datatype"/>
+        <Class abbreviatedIRI="Governance:Design"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty abbreviatedIRI="Governance:IG_Policy"/>
         <Class abbreviatedIRI="Governance:IG_Policy"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="Governance:IG_Program"/>
+        <DataProperty abbreviatedIRI="Governance:IG_Program_Datatype"/>
         <Class abbreviatedIRI="Governance:IG_Programm"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -25091,7 +25190,7 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <Class abbreviatedIRI="Governance:Metadata"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="Governance:Metric"/>
+        <DataProperty abbreviatedIRI="Governance:Metric_Datatype"/>
         <Class abbreviatedIRI="Governance:Metrics"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -25106,6 +25205,212 @@ IG System Infrastructure, Information Retriebal System, Enterprise Content Repos
         <DataProperty abbreviatedIRI="Governance:Role"/>
         <Class abbreviatedIRI="Governance:Role"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="Governance:companyEmployeeNumber"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Company"/>
+                <Variable abbreviatedIRI=":company"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Records_And_Information_Management"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Design"/>
+                <Variable abbreviatedIRI=":design"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:notLinkedToOrganization"/>
+                <Variable abbreviatedIRI=":design"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:companyDoesNotNeed"/>
+                <Variable abbreviatedIRI=":company"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:IG_Capability"/>
+                <Variable abbreviatedIRI=":allCapabilities"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:definesDesign"/>
+                <Variable abbreviatedIRI=":allCapabilities"/>
+                <Variable abbreviatedIRI=":design"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Company"/>
+                <Variable abbreviatedIRI=":company"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:IG_Capability"/>
+                <Variable abbreviatedIRI=":capability"/>
+            </ClassAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable abbreviatedIRI=":employeeNumber"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+                <Variable abbreviatedIRI=":process"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:linkedToProcess"/>
+                <Variable abbreviatedIRI=":capability"/>
+                <Variable abbreviatedIRI=":process"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="Governance:companyEmployeeNumber"/>
+                <Variable abbreviatedIRI=":company"/>
+                <Variable abbreviatedIRI=":employeeNumber"/>
+            </DataPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:theoreticallyLinkedToRIM"/>
+                <Variable abbreviatedIRI=":capability"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+                <Variable abbreviatedIRI=":process"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:IG_Capability"/>
+                <Variable abbreviatedIRI=":capability"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+                <Variable abbreviatedIRI=":capability"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Company"/>
+                <Variable abbreviatedIRI=":company"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty abbreviatedIRI="Governance:companyEmployeeNumber"/>
+                <Variable abbreviatedIRI=":company"/>
+                <Variable abbreviatedIRI=":employeeNumber"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThan">
+                <Variable abbreviatedIRI=":employeeNumber"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">250</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Records_And_Information_Management"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:companyDoesNotNeed"/>
+                <Variable abbreviatedIRI=":company"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:IG_Capability"/>
+                <Variable abbreviatedIRI=":capability"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Records_And_Information_Management"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+                <Variable abbreviatedIRI=":capability"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:Design"/>
+                <Variable abbreviatedIRI=":design"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:linkedToOrganization"/>
+                <Variable abbreviatedIRI=":design"/>
+                <Variable abbreviatedIRI=":rim"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class abbreviatedIRI="Governance:IG_Capability"/>
+                <Variable abbreviatedIRI=":allCapabilities"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty abbreviatedIRI="Governance:definesDesign"/>
+                <Variable abbreviatedIRI=":allCapabilities"/>
+                <Variable abbreviatedIRI=":design"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Governance:Give_Articles_Of_Chapter_That_Include_These_Articles</AbbreviatedIRI>
@@ -25195,40 +25500,24 @@ SELECT ?capability ?description
        (GROUP_CONCAT(DISTINCT REPLACE(STR(?articles), &quot;http://www.semanticweb.org/IG/Governance#&quot;, &quot;&quot;) ; SEPARATOR=&quot;, &quot;) AS ?GDPR_Articles)
        ?framework ?process 
        ?comment
-       ?companyCapability
-       ?requirement
-       ?country
-       ?regulation
 WHERE {
-  {
-    ?annotation rdf:type owl:Axiom;
-                owl:annotatedSource ?capability;
-                owl:annotatedProperty igonto:needsTechnicalRequirement ;
-                owl:annotatedTarget ?object;
-                rdfs:comment ?comment.
-    OPTIONAL { ?capability igonto:hasGoal ?goal }.
-    ?capability igonto:linkedToFramework ?framework.
-    ?capability igonto:linkedToProcess ?process.
-    ?capability igonto:capabilityDescription ?description.
-    ?capability igonto:inMaturityLevel ?maturityLevel.
-    VALUES ?maturityLevel {igonto:3_Essential}
-    OPTIONAL { ?object a ?objectType }.
-    OPTIONAL { ?object igonto:involvesArticle ?articles }.
-    OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
-    FILTER (?objectType != owl:NamedIndividual)
-  } 
-  UNION
-  {
-    SELECT DISTINCT ?company ?companyCapability ?requirement ?country ?regulation WHERE {
-      ?company igonto:operatesIn ?country.
-      ?country igonto:isRegulatedBy ?regulation.
-      ?company igonto:hasCompanyCapability ?companyCapability.
-      ?requirement igonto:isRequiredForCompanyCapability ?companyCapability.
-      VALUES ?company {igonto:Company_TOSCA}
-    }
-  }
+  ?annotation rdf:type owl:Axiom;
+              owl:annotatedSource ?capability;
+              owl:annotatedProperty igonto:needsTechnicalRequirement ;
+              owl:annotatedTarget ?object;
+              rdfs:comment ?comment.
+  OPTIONAL { ?capability igonto:hasGoal ?goal }.
+  ?capability igonto:linkedToFramework ?framework.
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organizaiton.
+  ?capability igonto:capabilityDescription ?description.
+  ?capability igonto:inMaturityLevel igonto:3_Essential.
+  OPTIONAL { ?object a ?objectType }.
+  OPTIONAL { ?object igonto:involvesArticle ?articles }.
+  OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
+  FILTER (?objectType != owl:NamedIndividual)
 } 
-GROUP BY ?capability ?framework ?process ?description ?comment ?companyCapability ?requirement ?country ?regulation</Literal>
+GROUP BY ?capability ?framework ?process ?description ?comment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -25363,6 +25652,28 @@ SELECT ?regulation WHERE{
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Manipulate_Company_Data</AbbreviatedIRI>
+        <Literal>Manipulates company data (employeeNumber)
+
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+DELETE {
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}
+INSERT {
+  igonto:Company igonto:companyEmployeeNumber 200 .
+} WHERE {
+  igonto:Company a igonto:Company .
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>Governance:Preparation_Query_Give_All_Companies</AbbreviatedIRI>
         <Literal>Returns every company instance in the ontology.
 
@@ -25416,6 +25727,22 @@ SELECT * WHERE{
   ?process igonto:linkedToOrganization ?organization. 
   ?process igonto:riskDescription ?risk
 }ORDER BY ?organization ?process ?risk</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>Governance:Q3</AbbreviatedIRI>
+        <Literal>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT * WHERE{
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organization. 
+  ?capability igonto:definesDesign ?design.
+  ?process igonto:riskDescription ?risk
+}ORDER BY ?organization ?process ?risk ?design</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -25473,7 +25800,7 @@ GROUP BY ?capability ?goal ?framework ?process ?description ?comment ?maturityLe
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AnonymousIndividual nodeID="_:genid2147483648"/>
+        <AnonymousIndividual nodeID="_:genid2147483652"/>
         <Literal></Literal>
     </AnnotationAssertion>
 </Ontology>

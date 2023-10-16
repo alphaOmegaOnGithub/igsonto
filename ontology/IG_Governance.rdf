@@ -6,8 +6,28 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:Governance="http://www.semanticweb.org/IG/Governance#">
     <owl:Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -81,6 +101,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#companyDoesNotNeed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#companyDoesNotNeed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#consultaionNeededForMetrics -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#consultaionNeededForMetrics">
@@ -126,6 +155,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#definesArchitecture -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#definesArchitecture">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Architecture"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#definesDesign -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#definesDesign">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Capability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#definesPracticesFor -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#definesPracticesFor">
@@ -163,7 +210,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#ensuresGDPRComplianceForDataController">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Controller"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:ObjectProperty>
     
 
@@ -207,7 +254,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#hasData">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:ObjectProperty>
     
 
@@ -395,6 +442,29 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirementRIM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirementRIM">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Records_And_Information_Management"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#notLinkedToOrganization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#notLinkedToOrganization">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/IG/Governance#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#operatesIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#operatesIn">
@@ -515,6 +585,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#theoreticallyLinkedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#theoreticallyLinkedTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#theoreticallyLinkedToRIM -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#theoreticallyLinkedToRIM">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#theoreticallyLinkedTo"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#uses -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#uses">
@@ -534,6 +618,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#Architecture_Datatype -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Architecture_Datatype">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Architecture"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Company -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Company">
@@ -550,10 +642,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#Data -->
+    <!-- http://www.semanticweb.org/IG/Governance#Data_Datatype -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Data">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Data_Datatype">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Design_Datatype -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Design_Datatype">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
     </owl:DatatypeProperty>
     
 
@@ -566,9 +666,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#IG_Program -->
+    <!-- http://www.semanticweb.org/IG/Governance#IG_Program_Datatype -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#IG_Program">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Programm"/>
     </owl:DatatypeProperty>
     
@@ -598,9 +698,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#Metric -->
+    <!-- http://www.semanticweb.org/IG/Governance#Metric_Datatype -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Metric">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Metric_Datatype">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Metrics"/>
     </owl:DatatypeProperty>
     
@@ -626,6 +726,14 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#Role">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/IG/Governance#Role"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#architectureReference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#architectureReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Architecture_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -656,6 +764,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#companyEmployeeNumber">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -759,7 +868,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataAccessRights -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataAccessRights">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -767,7 +876,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataCreationDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataCreationDate">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -775,7 +884,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataCustodian -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataCustodian">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -783,7 +892,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataDescription -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataDescription">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -791,7 +900,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataFormat -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataFormat">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -799,7 +908,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataLocation -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataLocation">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -807,7 +916,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -815,7 +924,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataOwner -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataOwner">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -823,7 +932,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataSource -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataSource">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -831,7 +940,15 @@
     <!-- http://www.semanticweb.org/IG/Governance#dataType -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#dataType">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#designReference -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#designReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Design_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -935,7 +1052,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricCurrentValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricCurrentValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -943,7 +1060,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricDescription -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricDescription">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -951,7 +1068,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricLowerThreshhold -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricLowerThreshhold">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -959,7 +1076,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -967,7 +1084,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricSource -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricSource">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -975,7 +1092,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricTargetValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricTargetValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -983,7 +1100,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricUnit -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricUnit">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -991,7 +1108,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#metricUpperThreshhold -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#metricUpperThreshhold">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#Metric_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1143,7 +1260,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programBudget -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programBudget">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1151,7 +1268,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programDescription -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programDescription">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1159,7 +1276,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programDocumentationLinks -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programDocumentationLinks">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1167,7 +1284,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programEndDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programEndDate">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1175,7 +1292,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programName -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programName">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1183,7 +1300,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programOwner -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programOwner">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1191,7 +1308,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programScope -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programScope">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1199,7 +1316,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programStartDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programStartDate">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1207,7 +1324,7 @@
     <!-- http://www.semanticweb.org/IG/Governance#programStatus -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/IG/Governance#programStatus">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Program_Datatype"/>
     </owl:DatatypeProperty>
     
 
@@ -1394,6 +1511,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Archieving">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Management_And_Governance_Tools"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Architecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Architecture"/>
     
 
 
@@ -1633,12 +1756,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#Company_Capability -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Company_Capability"/>
-    
-
-
     <!-- http://www.semanticweb.org/IG/Governance#Company_Risks -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Company_Risks"/>
@@ -1723,12 +1840,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#Data -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data"/>
-    
-
-
     <!-- http://www.semanticweb.org/IG/Governance#Data_Classification_And_Tagging -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data_Classification_And_Tagging">
@@ -1742,6 +1853,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data_Controller">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Role"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Data_Datatype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
     
 
 
@@ -1886,6 +2003,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Deadline_Tracking">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/IG/Governance#Workflow_And_Process_Management_Tools"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Design -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#Design"/>
     
 
 
@@ -3841,6 +3964,22 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#Architecture_With_RIM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Architecture_With_RIM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Architecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Architecture_Without_RIM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Architecture_Without_RIM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Architecture"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Article_1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_1">
@@ -3892,7 +4031,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_13">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Information"/>
         <Governance:provenance>https://gdpr-info.eu/art-13-gdpr/</Governance:provenance>
@@ -3905,7 +4044,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_14">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Information"/>
         <Governance:provenance>https://gdpr-info.eu/art-14-gdpr/</Governance:provenance>
@@ -3919,7 +4058,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Access"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Right"/>
         <Governance:provenance>https://gdpr-info.eu/art-15-gdpr/</Governance:provenance>
@@ -3942,7 +4081,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_17">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Erasure"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Rectification"/>
@@ -3957,7 +4096,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_18">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Right"/>
@@ -3971,7 +4110,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_19">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Erasure"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Information"/>
@@ -3996,7 +4135,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_20">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Portability"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Right"/>
@@ -4010,7 +4149,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_21">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_3"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Right"/>
@@ -4166,7 +4305,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_4"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Controller"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Protection"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processor"/>
@@ -4182,8 +4321,8 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_4"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Controller"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Breach"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Responsibility"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Supervisor"/>
         <Governance:provenance>https://gdpr-info.eu/art-33-gdpr/</Governance:provenance>
@@ -4197,8 +4336,8 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_4"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Controller"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Breach"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Subject"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Responsibility"/>
         <Governance:provenance>https://gdpr-info.eu/art-34-gdpr/</Governance:provenance>
@@ -4360,7 +4499,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_45">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_5"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Protection"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Transfer"/>
         <Governance:provenance>https://gdpr-info.eu/art-45-gdpr/</Governance:provenance>
@@ -4425,7 +4564,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_5">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_2"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Principles"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:provenance>https://gdpr-info.eu/art-5-gdpr/</Governance:provenance>
@@ -4915,7 +5054,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_86">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_9"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Documents"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:provenance>https://gdpr-info.eu/art-86-gdpr/</Governance:provenance>
@@ -4954,7 +5093,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_9"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Archieving"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Principles"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:provenance>https://gdpr-info.eu/art-89-gdpr/</Governance:provenance>
@@ -4967,7 +5106,7 @@ Effective communication and collaboration skills are vital for the CIGO to engag
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Article_9">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Articles"/>
         <Governance:definedInChapter rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Chapter_2"/>
-        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data"/>
+        <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Datatype"/>
         <Governance:includesKeyword rdf:resource="http://www.semanticweb.org/IG/Governance#Processing"/>
         <Governance:provenance>https://gdpr-info.eu/art-9-gdpr/</Governance:provenance>
     </owl:NamedIndividual>
@@ -6351,12 +6490,12 @@ Version control and change tracking capabilities in the DMS help maintain the in
     
 
 
-    <!-- http://www.semanticweb.org/IG/Governance#Company_TOSCA -->
+    <!-- http://www.semanticweb.org/IG/Governance#Company -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Company_TOSCA">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Company">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
-        <Governance:hasCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250"/>
         <Governance:operatesIn rdf:resource="http://www.semanticweb.org/IG/Governance#Germany"/>
+        <Governance:companyEmployeeNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Governance:companyEmployeeNumber>
     </owl:NamedIndividual>
     
 
@@ -6463,14 +6602,6 @@ Version control and change tracking capabilities in the DMS help maintain the in
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Continous_Visibility_And_Monitoring_System"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/IG/Governance#Continously_Use_Of_Data -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Continously_Use_Of_Data">
-        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Company_Capability"/>
     </owl:NamedIndividual>
     
 
@@ -7127,18 +7258,8 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#DPO"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_39"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Continously_Use_Of_Data"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Sensible_Data"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/IG/Governance#Data -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Data">
-        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Keywords"/>
     </owl:NamedIndividual>
     
 
@@ -7179,6 +7300,14 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Data_Datatype -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Data_Datatype">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Keywords"/>
     </owl:NamedIndividual>
     
 
@@ -7274,7 +7403,6 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Data_Processing_Register_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Processing_Register"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250"/>
     </owl:NamedIndividual>
     
 
@@ -7445,6 +7573,24 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Delegation">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Design_With_RIM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Design_With_RIM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
+        <Governance:linkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Design_Without_RIM -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Design_Without_RIM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
+        <Governance:notLinkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
     </owl:NamedIndividual>
     
 
@@ -7624,14 +7770,6 @@ Detailed audit trails and logs help in tracking and verifying the execution of d
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250">
-        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Company_Capability"/>
     </owl:NamedIndividual>
     
 
@@ -8029,40 +8167,24 @@ SELECT ?capability ?description
        (GROUP_CONCAT(DISTINCT REPLACE(STR(?articles), &quot;http://www.semanticweb.org/IG/Governance#&quot;, &quot;&quot;) ; SEPARATOR=&quot;, &quot;) AS ?GDPR_Articles)
        ?framework ?process 
        ?comment
-       ?companyCapability
-       ?requirement
-       ?country
-       ?regulation
 WHERE {
-  {
-    ?annotation rdf:type owl:Axiom;
-                owl:annotatedSource ?capability;
-                owl:annotatedProperty igonto:needsTechnicalRequirement ;
-                owl:annotatedTarget ?object;
-                rdfs:comment ?comment.
-    OPTIONAL { ?capability igonto:hasGoal ?goal }.
-    ?capability igonto:linkedToFramework ?framework.
-    ?capability igonto:linkedToProcess ?process.
-    ?capability igonto:capabilityDescription ?description.
-    ?capability igonto:inMaturityLevel ?maturityLevel.
-    VALUES ?maturityLevel {igonto:3_Essential}
-    OPTIONAL { ?object a ?objectType }.
-    OPTIONAL { ?object igonto:involvesArticle ?articles }.
-    OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
-    FILTER (?objectType != owl:NamedIndividual)
-  } 
-  UNION
-  {
-    SELECT DISTINCT ?company ?companyCapability ?requirement ?country ?regulation WHERE {
-      ?company igonto:operatesIn ?country.
-      ?country igonto:isRegulatedBy ?regulation.
-      ?company igonto:hasCompanyCapability ?companyCapability.
-      ?requirement igonto:isRequiredForCompanyCapability ?companyCapability.
-      VALUES ?company {igonto:Company_TOSCA}
-    }
-  }
+  ?annotation rdf:type owl:Axiom;
+              owl:annotatedSource ?capability;
+              owl:annotatedProperty igonto:needsTechnicalRequirement ;
+              owl:annotatedTarget ?object;
+              rdfs:comment ?comment.
+  OPTIONAL { ?capability igonto:hasGoal ?goal }.
+  ?capability igonto:linkedToFramework ?framework.
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organizaiton.
+  ?capability igonto:capabilityDescription ?description.
+  ?capability igonto:inMaturityLevel igonto:3_Essential.
+  OPTIONAL { ?object a ?objectType }.
+  OPTIONAL { ?object igonto:involvesArticle ?articles }.
+  OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
+  FILTER (?objectType != owl:NamedIndividual)
 } 
-GROUP BY ?capability ?framework ?process ?description ?comment ?companyCapability ?requirement ?country ?regulation</rdfs:comment>
+GROUP BY ?capability ?framework ?process ?description ?comment</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -10194,6 +10316,32 @@ Also having objective criteria for data culling (e.g., keywords, date ranges, fi
     
 
 
+    <!-- http://www.semanticweb.org/IG/Governance#Manipulate_Company_Data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Manipulate_Company_Data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Practice_Query"/>
+        <rdfs:comment>Manipulates company data (employeeNumber)
+
+
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+DELETE {
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}
+INSERT {
+  igonto:Company igonto:companyEmployeeNumber 200 .
+} WHERE {
+  igonto:Company a igonto:Company .
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#Metadata_1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Metadata_1">
@@ -11563,9 +11711,6 @@ SELECT ?company WHERE{
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Privacy_Impact_Assessment_Tools_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Privacy_Impact_Assessment_Tools"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_35"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Continously_Use_Of_Data"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250"/>
-        <Governance:isRequiredForCompanyCapability rdf:resource="http://www.semanticweb.org/IG/Governance#Sensible_Data"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27000"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27701"/>
@@ -11674,7 +11819,7 @@ IG SW Pattern, IG Service Template (TOSCA), IG Implementation templates (Docker-
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Process_Data_Quality_And_Data_Lineage_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Process"/>
-        <Governance:linkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:processDescription>Ensuring data is accurate and fit to serve the business or compliance purpose for which it was designed or captured. Understanding and controlling data from its trusted original source and form throughout ist usage by other applications.
 Procedure to determine data provenance, trustworthy, accurate and kept immutable by control procedures.</Governance:processDescription>
         <Governance:riskDescription>Data elements in various systems cannot be trusted to be accurate and fit for the purpose it was designed or captured to serve. Inability to trace data elements throughout their lifecycle to determine containment of a data quality issue.</Governance:riskDescription>
@@ -11698,7 +11843,7 @@ Data Dictionary, Object Model,  Security Model, IG Model, Records Model</Governa
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Process_Departmental_Information_Practice_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Process"/>
-        <Governance:linkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:processDescription>Using an enterprise information taxonomy,cataloging what information each business organization values, generates or stores by class where they store it and how long it has utility to them; results in retention schedules for information and enables data source specific retention schedules that reflect both business value and regulatory requirements
 Enterporise Information Taxonomy, Determine Value, Risk, Cost, Data Source Catalog,  </Governance:processDescription>
         <Governance:riskDescription>IT ‘saves everything’ which increases discoverable mass, complexity and legal risk; IT disposes of information of business value undermining enterprise operation. Procedures for retention/disposal difficult to articulate and defend and unapplied by LoB.</Governance:riskDescription>
@@ -11783,7 +11928,7 @@ Procedures aiming at intrusion detection, prevention and damage recovery </Gover
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Process_Information_Retention_And_Disposal_Obligation_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Process"/>
-        <Governance:linkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:processDescription>Defining an information classification schema that reflects the organization structure; cataloging, updating and mapping the laws that apply to each class in the countries in which the organization operates to determine regulatory record keeping obligations; establishing and managing a network of records liaisons to ascertain the existence and location of records.
 Classificatiopn Systems (Schema), Catalog, Regulatory Record Keeping and Management System, Montoring and auditing Records (existence, management, access control, policies, rules, holds, retention, discposition,) </Governance:processDescription>
         <Governance:riskDescription>Unable to comply or demonstrate compliance with regulatory recordkeeping obligations. Disparate nomenclatures for records make application of retention schedules/procedures difficult to apply and audit.</Governance:riskDescription>
@@ -11848,7 +11993,7 @@ Procedures aiming at prevention and recovery.</Governance:processDescription>
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Process_Realize_Information_Value_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Process"/>
-        <Governance:linkedToOrganization rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:processDescription>Gaining timely access to and ability to apply information in the course of their work, including the ability to harness information of quality as it ages and the ability to use relevant information with or without author context to maximize the enterprise value of information. 
 Procedure that compute data value, risk and cost by business units ongoing using analyrics making predictions. Reporting, Monitoring, Auditing.  </Governance:processDescription>
         <Governance:riskDescription>Important business decisions are made on missing information or poor quality information, resulting in poor decisions. Information is not used shortly after its creation because business has forgotten the source or location of information or can’t find it, resulting in cost without corresponding value.</Governance:riskDescription>
@@ -11955,6 +12100,26 @@ SELECT * WHERE{
   ?process igonto:linkedToOrganization ?organization. 
   ?process igonto:riskDescription ?risk
 }ORDER BY ?organization ?process ?risk</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/IG/Governance#Q3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Q3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Practice_Query"/>
+        <rdfs:comment>PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
+
+SELECT * WHERE{
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organization. 
+  ?capability igonto:definesDesign ?design.
+  ?process igonto:riskDescription ?risk
+}ORDER BY ?organization ?process ?risk ?design</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -12532,7 +12697,6 @@ GROUP BY ?capability ?goal ?framework ?process ?description ?comment ?maturityLe
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_25"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Information_Retention_And_Disposal_Obligation_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Mapping_And_Classification_System_1"/>
@@ -12541,6 +12705,7 @@ GROUP BY ?capability ?goal ?framework ?process ?description ?comment ?maturityLe
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_17000"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Established retention period for regulated information. The specific or actual laws that dictate retention periods are known and clearly mapped to each record class so changes can be easily traced and decisions readily defended. Posted policy and schedules are role specific so that individuals can determine their obligations. Electronic and physical records are both retained and disposed against the schedule. Disaster recovery, retention, and preservation are all disentangled and severable in policy and practice.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12579,13 +12744,13 @@ GROUP BY ?capability ?goal ?framework ?process ?description ?comment ?maturityLe
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_50"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_6"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Information_Retention_And_Disposal_Obligation_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Legal_Hold_Management_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Retention_Schedule_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Shared_Library_Of_Country_Protocols_1"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Retention schedules reflect regulatory, policy and business value and encompass all forms of information enabling them to be executed on records repositories, application and archived data, backup media and physical records. Legal holds can be applied by record class and suspend automated disposal. There is a shared library of country protocols for eDiscovery, privacy, and retention to form a comprehensive view. Schedules align with and are systematically used to dispose of production and back up data whether structured, unstructured, electronic, physical, record or business information.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12617,7 +12782,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:inMaturityLevel rdf:resource="http://www.semanticweb.org/IG/Governance#3_Essential"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_30"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Departmental_Information_Practice_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Collaboration_Tools_1"/>
@@ -12628,6 +12792,7 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_17000"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Departmental liaisons work with their line of business to identify information of value, its duration of value and where it is managed; this informs more comprehensive retention schedules for all information (regulated, unregulated, electronic, physical). Business is able to request changes to master schedule and department/ country schedules at the rate of business change.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12662,7 +12827,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_35"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_6"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Departmental_Information_Practice_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Automated_Retention_Execution_1"/>
@@ -12671,6 +12835,7 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Retention schedules are automatically executed across the information environment. Cost and benefit are weighed in determining retention periods and the enterprise impact is considered. Schedule changes are syndicated to IT and directly to systems for execution of both retention and disposition. When business objectives or laws change, schedules are updated and stakeholders notified. Legal and IT have transparency to what information each line of business has where and for how long to inform eDiscovery and data management.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12704,7 +12869,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_35"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_6"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Realize_Information_Value_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#AccessControl_1"/>
@@ -12715,6 +12879,7 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Application data and business process data cam be searched by departmental staff in the course of their work from within the system</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12752,7 +12917,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_6"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Realize_Information_Value_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#AccessControl_1"/>
@@ -12765,6 +12929,7 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Search and analytics enable employees to realize value and to apply information to decisionmaking in real time even as context erodes across information sources and types; assertions on value and sources of information made in processes H, I and J are used to ensure accessibility and authenticity of information the business defined as valuable. The cost of information to the enterprise is consistent and appropriate over its lifecycle.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12808,7 +12973,6 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_32"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_6"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Data_Quality_And_Data_Lineage_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Data_Mapping_And_Classification_System_1"/>
@@ -12820,6 +12984,7 @@ Also integrating retention schedules with records repositories, applications, ar
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27001"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Data quality assessment conducted resulting in a management strategy tailored to its needs, and governance policies addressing specific data management requirements. Master datamap for 50% or more silos. A virtual data quality firewall is implemented to detect and quarantine bad data at the point of entry. ”Golden Sources” of key data elements identified, monitored and updated. Business intelligence solutions determine which data sets are most likely to be utilized and targeted for quality management and governance.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -12850,7 +13015,6 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
         <Governance:inMaturityLevel rdf:resource="http://www.semanticweb.org/IG/Governance#4_Proactive"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
-        <Governance:linkedToBusinessUnit rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:linkedToFramework rdf:resource="http://www.semanticweb.org/IG/Governance#CGOC_02"/>
         <Governance:linkedToProcess rdf:resource="http://www.semanticweb.org/IG/Governance#Process_Data_Quality_And_Data_Lineage_1"/>
         <Governance:needsTechnicalRequirement rdf:resource="http://www.semanticweb.org/IG/Governance#Analytics_1"/>
@@ -12861,6 +13025,7 @@ Also implementing a virtual data quality firewall at the point of entry helps pr
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15939"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_23081"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_27000"/>
+        <Governance:theoreticallyLinkedToRIM rdf:resource="http://www.semanticweb.org/IG/Governance#Records_Information_Management_1"/>
         <Governance:capabilityDescription>Data quality management processes are fully automated with complete audit trails. Master datamap is fully integrated and ubiquitous. Astute data management processes can collect and move data to a repository for cleansing. Advanced analytics used to predict the use and misuse of data.</Governance:capabilityDescription>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -13371,14 +13536,6 @@ This aligns with &quot;Incident Response and Remediation Protocol&quot; and &quo
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_39"/>
         <Governance:involvesArticle rdf:resource="http://www.semanticweb.org/IG/Governance#Article_5"/>
         <Governance:practicesDefinedInIso rdf:resource="http://www.semanticweb.org/IG/Governance#ISO_15489"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/IG/Governance#Sensible_Data -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/IG/Governance#Sensible_Data">
-        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Company_Capability"/>
     </owl:NamedIndividual>
     
 
@@ -14058,6 +14215,456 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
             <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Organization"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Role"/>
         </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/company">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/rim">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/design">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/allCapabilities">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/capability">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/employeeNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance/process">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Records_And_Information_Management"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#notLinkedToOrganization"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#companyDoesNotNeed"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/allCapabilities"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#definesDesign"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/allCapabilities"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/IG/Governance/employeeNumber"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#theoreticallyLinkedToRIM"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/process"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#linkedToProcess"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/process"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#companyEmployeeNumber"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/employeeNumber"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#theoreticallyLinkedToRIM"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#linkedToOrganization"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/process"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#linkedToOrganization"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Company"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#companyEmployeeNumber"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/employeeNumber"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/IG/Governance/employeeNumber"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Records_And_Information_Management"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#companyDoesNotNeed"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/company"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Records_And_Information_Management"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#linkedToOrganization"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/capability"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#Design"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#linkedToOrganization"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/rim"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#IG_Capability"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/allCapabilities"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/IG/Governance#definesDesign"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/IG/Governance/allCapabilities"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/IG/Governance/design"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
 </rdf:RDF>
 
