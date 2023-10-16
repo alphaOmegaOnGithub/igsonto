@@ -11,6 +11,14 @@
  ] .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -56,6 +64,12 @@ Governance:collaboratesWithOrganization rdf:type owl:ObjectProperty ;
                                         rdfs:range Governance:Organization .
 
 
+###  http://www.semanticweb.org/IG/Governance#companyDoesNotNeed
+Governance:companyDoesNotNeed rdf:type owl:ObjectProperty ;
+                              rdfs:domain Governance:Company ;
+                              rdfs:range Governance:Organization .
+
+
 ###  http://www.semanticweb.org/IG/Governance#consultaionNeededForMetrics
 Governance:consultaionNeededForMetrics rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
@@ -87,6 +101,18 @@ Governance:defines rdf:type owl:ObjectProperty ;
                    owl:inverseOf Governance:isDefinedBy .
 
 
+###  http://www.semanticweb.org/IG/Governance#definesArchitecture
+Governance:definesArchitecture rdf:type owl:ObjectProperty ;
+                               rdfs:domain Governance:Capability ;
+                               rdfs:range Governance:Architecture .
+
+
+###  http://www.semanticweb.org/IG/Governance#definesDesign
+Governance:definesDesign rdf:type owl:ObjectProperty ;
+                         rdfs:domain Governance:Capability ;
+                         rdfs:range Governance:Design .
+
+
 ###  http://www.semanticweb.org/IG/Governance#definesPracticesFor
 Governance:definesPracticesFor rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -114,7 +140,7 @@ Governance:ensures rdf:type owl:ObjectProperty ;
 Governance:ensuresGDPRComplianceForDataController rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf owl:topObjectProperty ;
                                                   rdfs:domain Governance:Data_Controller ;
-                                                  rdfs:range Governance:Data .
+                                                  rdfs:range Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#givesInputToLHNRequirements
@@ -144,7 +170,7 @@ Governance:hasCompanyCapability rdf:type owl:ObjectProperty .
 Governance:hasData rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain Governance:Data_Subject ;
-                   rdfs:range Governance:Data .
+                   rdfs:range Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#hasGoal
@@ -272,6 +298,21 @@ Governance:needsTechnicalRequirement rdf:type owl:ObjectProperty ;
                                      rdfs:range owl:Thing .
 
 
+###  http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirement
+Governance:needsTheoreticallyRequirement rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/IG/Governance#needsTheoreticallyRequirementRIM
+Governance:needsTheoreticallyRequirementRIM rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf Governance:needsTheoreticallyRequirement ;
+                                            rdfs:range Governance:Records_And_Information_Management .
+
+
+###  http://www.semanticweb.org/IG/Governance#notLinkedToOrganization
+Governance:notLinkedToOrganization rdf:type owl:ObjectProperty ;
+                                   rdfs:range Governance:Organization .
+
+
 ###  http://www.semanticweb.org/IG/Governance#operatesIn
 Governance:operatesIn rdf:type owl:ObjectProperty ;
                       rdfs:domain Governance:Company ;
@@ -354,6 +395,15 @@ Governance:technicalRequirementFor rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf owl:topObjectProperty .
 
 
+###  http://www.semanticweb.org/IG/Governance#theoreticallyLinkedTo
+Governance:theoreticallyLinkedTo rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/IG/Governance#theoreticallyLinkedToRIM
+Governance:theoreticallyLinkedToRIM rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf Governance:theoreticallyLinkedTo .
+
+
 ###  http://www.semanticweb.org/IG/Governance#uses
 Governance:uses rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty .
@@ -362,6 +412,11 @@ Governance:uses rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://www.semanticweb.org/IG/Governance#Architecture_Datatype
+Governance:Architecture_Datatype rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain Governance:Architecture .
+
 
 ###  http://www.semanticweb.org/IG/Governance#Company
 Governance:Company rdf:type owl:DatatypeProperty ;
@@ -373,9 +428,14 @@ Governance:Country rdf:type owl:DatatypeProperty ;
                    rdfs:domain Governance:Country .
 
 
-###  http://www.semanticweb.org/IG/Governance#Data
-Governance:Data rdf:type owl:DatatypeProperty ;
-                rdfs:domain Governance:Data .
+###  http://www.semanticweb.org/IG/Governance#Data_Datatype
+Governance:Data_Datatype rdf:type owl:DatatypeProperty ;
+                         rdfs:domain Governance:Data_Datatype .
+
+
+###  http://www.semanticweb.org/IG/Governance#Design_Datatype
+Governance:Design_Datatype rdf:type owl:DatatypeProperty ;
+                           rdfs:domain Governance:Design .
 
 
 ###  http://www.semanticweb.org/IG/Governance#IG_Policy
@@ -383,9 +443,9 @@ Governance:IG_Policy rdf:type owl:DatatypeProperty ;
                      rdfs:domain Governance:IG_Policy .
 
 
-###  http://www.semanticweb.org/IG/Governance#IG_Program
-Governance:IG_Program rdf:type owl:DatatypeProperty ;
-                      rdfs:domain Governance:IG_Programm .
+###  http://www.semanticweb.org/IG/Governance#IG_Program_Datatype
+Governance:IG_Program_Datatype rdf:type owl:DatatypeProperty ;
+                               rdfs:domain Governance:IG_Programm .
 
 
 ###  http://www.semanticweb.org/IG/Governance#IG_Strategic_Plan
@@ -403,9 +463,9 @@ Governance:Metadata rdf:type owl:DatatypeProperty ;
                     rdfs:domain Governance:Metadata .
 
 
-###  http://www.semanticweb.org/IG/Governance#Metric
-Governance:Metric rdf:type owl:DatatypeProperty ;
-                  rdfs:domain Governance:Metrics .
+###  http://www.semanticweb.org/IG/Governance#Metric_Datatype
+Governance:Metric_Datatype rdf:type owl:DatatypeProperty ;
+                           rdfs:domain Governance:Metrics .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Process
@@ -421,6 +481,11 @@ Governance:Regulation rdf:type owl:DatatypeProperty ;
 ###  http://www.semanticweb.org/IG/Governance#Role
 Governance:Role rdf:type owl:DatatypeProperty ;
                 rdfs:domain Governance:Role .
+
+
+###  http://www.semanticweb.org/IG/Governance#architectureReference
+Governance:architectureReference rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf Governance:Architecture_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#capabilityDescription
@@ -439,7 +504,8 @@ Governance:companyAddress rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/IG/Governance#companyEmployeeNumber
 Governance:companyEmployeeNumber rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf Governance:Company .
+                                 rdfs:subPropertyOf Governance:Company ;
+                                 rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/IG/Governance#companyFoundingDate
@@ -504,52 +570,57 @@ Governance:countryTimezone rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/IG/Governance#dataAccessRights
 Governance:dataAccessRights rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf Governance:Data .
+                            rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataCreationDate
 Governance:dataCreationDate rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf Governance:Data .
+                            rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataCustodian
 Governance:dataCustodian rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf Governance:Data .
+                         rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataDescription
 Governance:dataDescription rdf:type owl:DatatypeProperty ;
-                           rdfs:subPropertyOf Governance:Data .
+                           rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataFormat
 Governance:dataFormat rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf Governance:Data .
+                      rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataLocation
 Governance:dataLocation rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf Governance:Data .
+                        rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataName
 Governance:dataName rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf Governance:Data .
+                    rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataOwner
 Governance:dataOwner rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf Governance:Data .
+                     rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataSource
 Governance:dataSource rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf Governance:Data .
+                      rdfs:subPropertyOf Governance:Data_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#dataType
 Governance:dataType rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf Governance:Data .
+                    rdfs:subPropertyOf Governance:Data_Datatype .
+
+
+###  http://www.semanticweb.org/IG/Governance#designReference
+Governance:designReference rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf Governance:Design_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metadataAccessRights
@@ -614,42 +685,42 @@ Governance:metadataValue rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/IG/Governance#metricCurrentValue
 Governance:metricCurrentValue rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf Governance:Metric .
+                              rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricDescription
 Governance:metricDescription rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf Governance:Metric .
+                             rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricLowerThreshhold
 Governance:metricLowerThreshhold rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf Governance:Metric .
+                                 rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricName
 Governance:metricName rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf Governance:Metric .
+                      rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricSource
 Governance:metricSource rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf Governance:Metric .
+                        rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricTargetValue
 Governance:metricTargetValue rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf Governance:Metric .
+                             rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricUnit
 Governance:metricUnit rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf Governance:Metric .
+                      rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#metricUpperThreshhold
 Governance:metricUpperThreshhold rdf:type owl:DatatypeProperty ;
-                                 rdfs:subPropertyOf Governance:Metric .
+                                 rdfs:subPropertyOf Governance:Metric_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#planApprovalDate
@@ -744,47 +815,47 @@ Governance:processDescription rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/IG/Governance#programBudget
 Governance:programBudget rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf Governance:IG_Program .
+                         rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programDescription
 Governance:programDescription rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf Governance:IG_Program .
+                              rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programDocumentationLinks
 Governance:programDocumentationLinks rdf:type owl:DatatypeProperty ;
-                                     rdfs:subPropertyOf Governance:IG_Program .
+                                     rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programEndDate
 Governance:programEndDate rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf Governance:IG_Program .
+                          rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programName
 Governance:programName rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf Governance:IG_Program .
+                       rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programOwner
 Governance:programOwner rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf Governance:IG_Program .
+                        rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programScope
 Governance:programScope rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf Governance:IG_Program .
+                        rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programStartDate
 Governance:programStartDate rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf Governance:IG_Program .
+                            rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#programStatus
 Governance:programStatus rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf Governance:IG_Program .
+                         rdfs:subPropertyOf Governance:IG_Program_Datatype .
 
 
 ###  http://www.semanticweb.org/IG/Governance#provenance
@@ -898,6 +969,10 @@ Governance:Analytics rdf:type owl:Class ;
 ###  http://www.semanticweb.org/IG/Governance#Archieving
 Governance:Archieving rdf:type owl:Class ;
                       rdfs:subClassOf Governance:Data_Management_And_Governance_Tools .
+
+
+###  http://www.semanticweb.org/IG/Governance#Architecture
+Governance:Architecture rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Asset_Database
@@ -1048,10 +1123,6 @@ Governance:Communication_Platforms rdf:type owl:Class ;
 Governance:Company rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/IG/Governance#Company_Capability
-Governance:Company_Capability rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/IG/Governance#Company_Risks
 Governance:Company_Risks rdf:type owl:Class .
 
@@ -1105,10 +1176,6 @@ Governance:DPO rdf:type owl:Class ;
                rdfs:subClassOf Governance:Role .
 
 
-###  http://www.semanticweb.org/IG/Governance#Data
-Governance:Data rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/IG/Governance#Data_Classification_And_Tagging
 Governance:Data_Classification_And_Tagging rdf:type owl:Class ;
                                            rdfs:subClassOf Governance:Data_Management_And_Governance_Tools .
@@ -1117,6 +1184,10 @@ Governance:Data_Classification_And_Tagging rdf:type owl:Class ;
 ###  http://www.semanticweb.org/IG/Governance#Data_Controller
 Governance:Data_Controller rdf:type owl:Class ;
                            rdfs:subClassOf Governance:Role .
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Datatype
+Governance:Data_Datatype rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Discovery_And_Scanninig_Tools
@@ -1207,6 +1278,10 @@ Governance:Database_Management_System rdf:type owl:Class ;
 ###  http://www.semanticweb.org/IG/Governance#Deadline_Tracking
 Governance:Deadline_Tracking rdf:type owl:Class ;
                              rdfs:subClassOf Governance:Workflow_And_Process_Management_Tools .
+
+
+###  http://www.semanticweb.org/IG/Governance#Design
+Governance:Design rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Designation_Interface
@@ -2841,6 +2916,16 @@ Governance:Archieving_1 rdf:type owl:NamedIndividual ,
                                                          Governance:ISO_27001 .
 
 
+###  http://www.semanticweb.org/IG/Governance#Architecture_With_RIM
+Governance:Architecture_With_RIM rdf:type owl:NamedIndividual ,
+                                          Governance:Architecture .
+
+
+###  http://www.semanticweb.org/IG/Governance#Architecture_Without_RIM
+Governance:Architecture_Without_RIM rdf:type owl:NamedIndividual ,
+                                             Governance:Architecture .
+
+
 ###  http://www.semanticweb.org/IG/Governance#Article_1
 Governance:Article_1 rdf:type owl:NamedIndividual ,
                               Governance:GDPR_Articles ;
@@ -2879,7 +2964,7 @@ Governance:Article_12 rdf:type owl:NamedIndividual ,
 Governance:Article_13 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Information ;
                       Governance:provenance "https://gdpr-info.eu/art-13-gdpr/" .
@@ -2889,7 +2974,7 @@ Governance:Article_13 rdf:type owl:NamedIndividual ,
 Governance:Article_14 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Information ;
                       Governance:provenance "https://gdpr-info.eu/art-14-gdpr/" .
@@ -2900,7 +2985,7 @@ Governance:Article_15 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
                       Governance:includesKeyword Governance:Access ,
-                                                 Governance:Data ,
+                                                 Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Right ;
                       Governance:provenance "https://gdpr-info.eu/art-15-gdpr/" .
@@ -2917,7 +3002,7 @@ Governance:Article_16 rdf:type owl:NamedIndividual ,
 Governance:Article_17 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Erasure ,
                                                  Governance:Rectification ,
@@ -2929,7 +3014,7 @@ Governance:Article_17 rdf:type owl:NamedIndividual ,
 Governance:Article_18 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Processing ,
                                                  Governance:Right ;
@@ -2940,7 +3025,7 @@ Governance:Article_18 rdf:type owl:NamedIndividual ,
 Governance:Article_19 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Erasure ,
                                                  Governance:Information ,
@@ -2959,7 +3044,7 @@ Governance:Article_2 rdf:type owl:NamedIndividual ,
 Governance:Article_20 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Portability ,
                                                  Governance:Right ;
@@ -2970,7 +3055,7 @@ Governance:Article_20 rdf:type owl:NamedIndividual ,
 Governance:Article_21 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_3 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Processing ,
                                                  Governance:Right ;
@@ -3090,7 +3175,7 @@ Governance:Article_32 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_4 ;
                       Governance:includesKeyword Governance:Controller ,
-                                                 Governance:Data ,
+                                                 Governance:Data_Datatype ,
                                                  Governance:Data_Protection ,
                                                  Governance:Processing ,
                                                  Governance:Processor ,
@@ -3103,8 +3188,8 @@ Governance:Article_33 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_4 ;
                       Governance:includesKeyword Governance:Controller ,
-                                                 Governance:Data ,
                                                  Governance:Data_Breach ,
+                                                 Governance:Data_Datatype ,
                                                  Governance:Responsibility ,
                                                  Governance:Supervisor ;
                       Governance:provenance "https://gdpr-info.eu/art-33-gdpr/" .
@@ -3115,8 +3200,8 @@ Governance:Article_34 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_4 ;
                       Governance:includesKeyword Governance:Controller ,
-                                                 Governance:Data ,
                                                  Governance:Data_Breach ,
+                                                 Governance:Data_Datatype ,
                                                  Governance:Data_Subject ,
                                                  Governance:Responsibility ;
                       Governance:provenance "https://gdpr-info.eu/art-34-gdpr/" .
@@ -3242,7 +3327,7 @@ Governance:Article_44 rdf:type owl:NamedIndividual ,
 Governance:Article_45 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_5 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Data_Protection ,
                                                  Governance:Transfer ;
                       Governance:provenance "https://gdpr-info.eu/art-45-gdpr/" .
@@ -3292,7 +3377,7 @@ Governance:Article_49 rdf:type owl:NamedIndividual ,
 Governance:Article_5 rdf:type owl:NamedIndividual ,
                               Governance:GDPR_Articles ;
                      Governance:definedInChapter Governance:GDPR_Chapter_2 ;
-                     Governance:includesKeyword Governance:Data ,
+                     Governance:includesKeyword Governance:Data_Datatype ,
                                                 Governance:Principles ,
                                                 Governance:Processing ;
                      Governance:provenance "https://gdpr-info.eu/art-5-gdpr/" .
@@ -3662,7 +3747,7 @@ Governance:Article_85 rdf:type owl:NamedIndividual ,
 Governance:Article_86 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_9 ;
-                      Governance:includesKeyword Governance:Data ,
+                      Governance:includesKeyword Governance:Data_Datatype ,
                                                  Governance:Documents ,
                                                  Governance:Processing ;
                       Governance:provenance "https://gdpr-info.eu/art-86-gdpr/" .
@@ -3692,7 +3777,7 @@ Governance:Article_89 rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Articles ;
                       Governance:definedInChapter Governance:GDPR_Chapter_9 ;
                       Governance:includesKeyword Governance:Archieving ,
-                                                 Governance:Data ,
+                                                 Governance:Data_Datatype ,
                                                  Governance:Principles ,
                                                  Governance:Processing ;
                       Governance:provenance "https://gdpr-info.eu/art-89-gdpr/" .
@@ -3702,7 +3787,7 @@ Governance:Article_89 rdf:type owl:NamedIndividual ,
 Governance:Article_9 rdf:type owl:NamedIndividual ,
                               Governance:GDPR_Articles ;
                      Governance:definedInChapter Governance:GDPR_Chapter_2 ;
-                     Governance:includesKeyword Governance:Data ,
+                     Governance:includesKeyword Governance:Data_Datatype ,
                                                 Governance:Processing ;
                      Governance:provenance "https://gdpr-info.eu/art-9-gdpr/" .
 
@@ -4981,11 +5066,11 @@ Governance:Communication_Platforms_1 rdf:type owl:NamedIndividual ,
                                                                       Governance:ISO_27000 .
 
 
-###  http://www.semanticweb.org/IG/Governance#Company_TOSCA
-Governance:Company_TOSCA rdf:type owl:NamedIndividual ,
-                                  Governance:Company ;
-                         Governance:hasCompanyCapability Governance:Employee_Number_Larger_250 ;
-                         Governance:operatesIn Governance:Germany .
+###  http://www.semanticweb.org/IG/Governance#Company
+Governance:Company rdf:type owl:NamedIndividual ,
+                            Governance:Company ;
+                   Governance:operatesIn Governance:Germany ;
+                   Governance:companyEmployeeNumber 200 .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Compensation
@@ -5059,11 +5144,6 @@ Governance:Continous_Visibility_And_Monitoring_System_1 rdf:type owl:NamedIndivi
                                                                  Governance:Continous_Visibility_And_Monitoring_System ;
                                                         Governance:involvesArticle Governance:Article_5 ;
                                                         Governance:practicesDefinedInIso Governance:ISO_15489 .
-
-
-###  http://www.semanticweb.org/IG/Governance#Continously_Use_Of_Data
-Governance:Continously_Use_Of_Data rdf:type owl:NamedIndividual ,
-                                            Governance:Company_Capability .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Controller
@@ -5714,15 +5794,8 @@ Governance:DPO_1 rdf:type owl:NamedIndividual ,
                           Governance:DPO ;
                  Governance:involvesArticle Governance:Article_39 ,
                                             Governance:Article_5 ;
-                 Governance:isRequiredForCompanyCapability Governance:Continously_Use_Of_Data ,
-                                                           Governance:Sensible_Data ;
                  Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                   Governance:ISO_27001 .
-
-
-###  http://www.semanticweb.org/IG/Governance#Data
-Governance:Data rdf:type owl:NamedIndividual ,
-                         Governance:GDPR_Keywords .
 
 
 ###  http://www.semanticweb.org/IG/Governance#DataController1
@@ -5751,6 +5824,11 @@ Governance:Data_Classification_And_Tagging_1 rdf:type owl:NamedIndividual ,
                                                                               Governance:ISO_15489 ,
                                                                               Governance:ISO_23081 ,
                                                                               Governance:ISO_27001 .
+
+
+###  http://www.semanticweb.org/IG/Governance#Data_Datatype
+Governance:Data_Datatype rdf:type owl:NamedIndividual ,
+                                  Governance:GDPR_Keywords .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Discovery_And_Scanninig_Tools_1
@@ -5821,8 +5899,7 @@ Governance:Data_Privacy_Masking_1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/IG/Governance#Data_Processing_Register_1
 Governance:Data_Processing_Register_1 rdf:type owl:NamedIndividual ,
                                                Governance:Data_Processing_Register ;
-                                      Governance:involvesArticle Governance:Article_30 ;
-                                      Governance:isRequiredForCompanyCapability Governance:Employee_Number_Larger_250 .
+                                      Governance:involvesArticle Governance:Article_30 .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Data_Protection
@@ -5954,6 +6031,18 @@ Governance:Deadline_Tracking_1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/IG/Governance#Delegation
 Governance:Delegation rdf:type owl:NamedIndividual ,
                                Governance:GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/IG/Governance#Design_With_RIM
+Governance:Design_With_RIM rdf:type owl:NamedIndividual ,
+                                    Governance:Design ;
+                           Governance:linkedToOrganization Governance:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/IG/Governance#Design_Without_RIM
+Governance:Design_Without_RIM rdf:type owl:NamedIndividual ,
+                                       Governance:Design ;
+                              Governance:notLinkedToOrganization Governance:Records_Information_Management_1 .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Designation_Interface_1
@@ -6095,11 +6184,6 @@ Governance:Employee_Interviews_1 rdf:type owl:NamedIndividual ,
                                  Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                                   Governance:ISO_15939 ,
                                                                   Governance:ISO_27001 .
-
-
-###  http://www.semanticweb.org/IG/Governance#Employee_Number_Larger_250
-Governance:Employee_Number_Larger_250 rdf:type owl:NamedIndividual ,
-                                               Governance:Company_Capability .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Employee_Self_Service_Portal_1
@@ -6419,40 +6503,24 @@ SELECT ?capability ?description
        (GROUP_CONCAT(DISTINCT REPLACE(STR(?articles), \"http://www.semanticweb.org/IG/Governance#\", \"\") ; SEPARATOR=\", \") AS ?GDPR_Articles)
        ?framework ?process 
        ?comment
-       ?companyCapability
-       ?requirement
-       ?country
-       ?regulation
 WHERE {
-  {
-    ?annotation rdf:type owl:Axiom;
-                owl:annotatedSource ?capability;
-                owl:annotatedProperty igonto:needsTechnicalRequirement ;
-                owl:annotatedTarget ?object;
-                rdfs:comment ?comment.
-    OPTIONAL { ?capability igonto:hasGoal ?goal }.
-    ?capability igonto:linkedToFramework ?framework.
-    ?capability igonto:linkedToProcess ?process.
-    ?capability igonto:capabilityDescription ?description.
-    ?capability igonto:inMaturityLevel ?maturityLevel.
-    VALUES ?maturityLevel {igonto:3_Essential}
-    OPTIONAL { ?object a ?objectType }.
-    OPTIONAL { ?object igonto:involvesArticle ?articles }.
-    OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
-    FILTER (?objectType != owl:NamedIndividual)
-  } 
-  UNION
-  {
-    SELECT DISTINCT ?company ?companyCapability ?requirement ?country ?regulation WHERE {
-      ?company igonto:operatesIn ?country.
-      ?country igonto:isRegulatedBy ?regulation.
-      ?company igonto:hasCompanyCapability ?companyCapability.
-      ?requirement igonto:isRequiredForCompanyCapability ?companyCapability.
-      VALUES ?company {igonto:Company_TOSCA}
-    }
-  }
+  ?annotation rdf:type owl:Axiom;
+              owl:annotatedSource ?capability;
+              owl:annotatedProperty igonto:needsTechnicalRequirement ;
+              owl:annotatedTarget ?object;
+              rdfs:comment ?comment.
+  OPTIONAL { ?capability igonto:hasGoal ?goal }.
+  ?capability igonto:linkedToFramework ?framework.
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organizaiton.
+  ?capability igonto:capabilityDescription ?description.
+  ?capability igonto:inMaturityLevel igonto:3_Essential.
+  OPTIONAL { ?object a ?objectType }.
+  OPTIONAL { ?object igonto:involvesArticle ?articles }.
+  OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
+  FILTER (?objectType != owl:NamedIndividual)
 } 
-GROUP BY ?capability ?framework ?process ?description ?comment ?companyCapability ?requirement ?country ?regulation""" .
+GROUP BY ?capability ?framework ?process ?description ?comment""" .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Give_Every_Capability_And_Their_Requirements
@@ -8423,6 +8491,29 @@ Governance:Legal_Registry_1 rdf:type owl:NamedIndividual ,
                             Governance:practicesDefinedInIso Governance:ISO_14271 .
 
 
+###  http://www.semanticweb.org/IG/Governance#Manipulate_Company_Data
+Governance:Manipulate_Company_Data rdf:type owl:NamedIndividual ,
+                                            Governance:Practice_Query ;
+                                   rdfs:comment """Manipulates company data (employeeNumber)
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX igonto: <http://www.semanticweb.org/IG/Governance#>
+
+DELETE {
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}
+INSERT {
+  igonto:Company igonto:companyEmployeeNumber 200 .
+} WHERE {
+  igonto:Company a igonto:Company .
+  igonto:Company igonto:companyEmployeeNumber ?currentEmployeeNumber .
+}""" .
+
+
 ###  http://www.semanticweb.org/IG/Governance#Metadata_1
 Governance:Metadata_1 rdf:type owl:NamedIndividual ,
                                Governance:Metadata ;
@@ -9790,9 +9881,6 @@ Governance:Privacy_Impact_Assesments rdf:type owl:NamedIndividual ,
 Governance:Privacy_Impact_Assessment_Tools_1 rdf:type owl:NamedIndividual ,
                                                       Governance:Privacy_Impact_Assessment_Tools ;
                                              Governance:involvesArticle Governance:Article_35 ;
-                                             Governance:isRequiredForCompanyCapability Governance:Continously_Use_Of_Data ,
-                                                                                       Governance:Employee_Number_Larger_250 ,
-                                                                                       Governance:Sensible_Data ;
                                              Governance:practicesDefinedInIso Governance:ISO_27000 ,
                                                                               Governance:ISO_27001 ,
                                                                               Governance:ISO_27701 ,
@@ -9874,7 +9962,7 @@ Governance:Process_Data_On_Legal_Hold_1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/IG/Governance#Process_Data_Quality_And_Data_Lineage_1
 Governance:Process_Data_Quality_And_Data_Lineage_1 rdf:type owl:NamedIndividual ,
                                                             Governance:Process ;
-                                                   Governance:linkedToOrganization Governance:Records_Information_Management_1 ;
+                                                   Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                                                    Governance:processDescription """Ensuring data is accurate and fit to serve the business or compliance purpose for which it was designed or captured. Understanding and controlling data from its trusted original source and form throughout ist usage by other applications.
 Procedure to determine data provenance, trustworthy, accurate and kept immutable by control procedures.""" ;
                                                    Governance:riskDescription "Data elements in various systems cannot be trusted to be accurate and fit for the purpose it was designed or captured to serve. Inability to trace data elements throughout their lifecycle to determine containment of a data quality issue." .
@@ -9892,7 +9980,7 @@ Data Dictionary, Object Model,  Security Model, IG Model, Records Model""" ;
 ###  http://www.semanticweb.org/IG/Governance#Process_Departmental_Information_Practice_1
 Governance:Process_Departmental_Information_Practice_1 rdf:type owl:NamedIndividual ,
                                                                 Governance:Process ;
-                                                       Governance:linkedToOrganization Governance:Records_Information_Management_1 ;
+                                                       Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                                                        Governance:processDescription """Using an enterprise information taxonomy,cataloging what information each business organization values, generates or stores by class where they store it and how long it has utility to them; results in retention schedules for information and enables data source specific retention schedules that reflect both business value and regulatory requirements
 Enterporise Information Taxonomy, Determine Value, Risk, Cost, Data Source Catalog,  """ ;
                                                        Governance:riskDescription "IT ‘saves everything’ which increases discoverable mass, complexity and legal risk; IT disposes of information of business value undermining enterprise operation. Procedures for retention/disposal difficult to articulate and defend and unapplied by LoB." .
@@ -9956,7 +10044,7 @@ Governance:Process_Hold_Publication_1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/IG/Governance#Process_Information_Retention_And_Disposal_Obligation_1
 Governance:Process_Information_Retention_And_Disposal_Obligation_1 rdf:type owl:NamedIndividual ,
                                                                             Governance:Process ;
-                                                                   Governance:linkedToOrganization Governance:Records_Information_Management_1 ;
+                                                                   Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                                                                    Governance:processDescription """Defining an information classification schema that reflects the organization structure; cataloging, updating and mapping the laws that apply to each class in the countries in which the organization operates to determine regulatory record keeping obligations; establishing and managing a network of records liaisons to ascertain the existence and location of records.
 Classificatiopn Systems (Schema), Catalog, Regulatory Record Keeping and Management System, Montoring and auditing Records (existence, management, access control, policies, rules, holds, retention, discposition,) """ ;
                                                                    Governance:riskDescription "Unable to comply or demonstrate compliance with regulatory recordkeeping obligations. Disparate nomenclatures for records make application of retention schedules/procedures difficult to apply and audit." .
@@ -10003,7 +10091,7 @@ Governance:Process_Privacy_And_data_Protection_Obligation_1 rdf:type owl:NamedIn
 ###  http://www.semanticweb.org/IG/Governance#Process_Realize_Information_Value_1
 Governance:Process_Realize_Information_Value_1 rdf:type owl:NamedIndividual ,
                                                         Governance:Process ;
-                                               Governance:linkedToOrganization Governance:Records_Information_Management_1 ;
+                                               Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                                                Governance:processDescription """Gaining timely access to and ability to apply information in the course of their work, including the ability to harness information of quality as it ages and the ability to use relevant information with or without author context to maximize the enterprise value of information. 
 Procedure that compute data value, risk and cost by business units ongoing using analyrics making predictions. Reporting, Monitoring, Auditing.  """ ;
                                                Governance:riskDescription "Important business decisions are made on missing information or poor quality information, resulting in poor decisions. Information is not used shortly after its creation because business has forgotten the source or location of information or can’t find it, resulting in cost without corresponding value." .
@@ -10086,6 +10174,23 @@ SELECT * WHERE{
   ?process igonto:linkedToOrganization ?organization. 
   ?process igonto:riskDescription ?risk
 }ORDER BY ?organization ?process ?risk""" .
+
+
+###  http://www.semanticweb.org/IG/Governance#Q3
+Governance:Q3 rdf:type owl:NamedIndividual ,
+                       Governance:Practice_Query ;
+              rdfs:comment """PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX igonto: <http://www.semanticweb.org/IG/Governance#>
+
+SELECT * WHERE{
+  ?capability igonto:linkedToProcess ?process.
+  ?process igonto:linkedToOrganization ?organization. 
+  ?capability igonto:definesDesign ?design.
+  ?process igonto:riskDescription ?risk
+}ORDER BY ?organization ?process ?risk ?design""" .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Q7
@@ -10667,7 +10772,6 @@ Governance:RIM_P1_3 rdf:type owl:NamedIndividual ,
                     Governance:involvesArticle Governance:Article_25 ,
                                                Governance:Article_32 ,
                                                Governance:Article_5 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Information_Retention_And_Disposal_Obligation_1 ;
                     Governance:needsTechnicalRequirement Governance:Data_Mapping_And_Classification_System_1 ,
@@ -10676,6 +10780,7 @@ Governance:RIM_P1_3 rdf:type owl:NamedIndividual ,
                                                          Governance:Records_Information_Management_1 ;
                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                      Governance:ISO_17000 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Established retention period for regulated information. The specific or actual laws that dictate retention periods are known and clearly mapped to each record class so changes can be easily traced and decisions readily defended. Posted policy and schedules are role specific so that individuals can determine their obligations. Electronic and physical records are both retained and disposed against the schedule. Disaster recovery, retention, and preservation are all disentangled and severable in policy and practice." .
 
 [ rdf:type owl:Axiom ;
@@ -10715,13 +10820,13 @@ Governance:RIM_P1_4 rdf:type owl:NamedIndividual ,
                                                Governance:Article_5 ,
                                                Governance:Article_50 ,
                                                Governance:Article_6 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Information_Retention_And_Disposal_Obligation_1 ;
                     Governance:needsTechnicalRequirement Governance:Legal_Hold_Management_1 ,
                                                          Governance:Records_Retention_Schedule_1 ,
                                                          Governance:Shared_Library_Of_Country_Protocols_1 ;
                     Governance:practicesDefinedInIso Governance:ISO_15489 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Retention schedules reflect regulatory, policy and business value and encompass all forms of information enabling them to be executed on records repositories, application and archived data, backup media and physical records. Legal holds can be applied by record class and suspend automated disposal. There is a shared library of country protocols for eDiscovery, privacy, and retention to form a comprehensive view. Schedules align with and are systematically used to dispose of production and back up data whether structured, unstructured, electronic, physical, record or business information." .
 
 [ rdf:type owl:Axiom ;
@@ -10753,7 +10858,6 @@ Governance:RIM_P2_3 rdf:type owl:NamedIndividual ,
                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#3_Essential> ;
                     Governance:involvesArticle Governance:Article_30 ,
                                                Governance:Article_5 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Departmental_Information_Practice_1 ;
                     Governance:needsTechnicalRequirement Governance:Collaboration_Tools_1 ,
@@ -10764,6 +10868,7 @@ Governance:RIM_P2_3 rdf:type owl:NamedIndividual ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_17000 ,
                                                      Governance:ISO_23081 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Departmental liaisons work with their line of business to identify information of value, its duration of value and where it is managed; this informs more comprehensive retention schedules for all information (regulated, unregulated, electronic, physical). Business is able to request changes to master schedule and department/ country schedules at the rate of business change." .
 
 [ rdf:type owl:Axiom ;
@@ -10798,7 +10903,6 @@ Governance:RIM_P2_4 rdf:type owl:NamedIndividual ,
                                                Governance:Article_35 ,
                                                Governance:Article_5 ,
                                                Governance:Article_6 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Departmental_Information_Practice_1 ;
                     Governance:needsTechnicalRequirement Governance:Automated_Retention_Execution_1 ,
@@ -10807,6 +10911,7 @@ Governance:RIM_P2_4 rdf:type owl:NamedIndividual ,
                     Governance:practicesDefinedInIso Governance:ISO_15489 ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_27001 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Retention schedules are automatically executed across the information environment. Cost and benefit are weighed in determining retention periods and the enterprise impact is considered. Schedule changes are syndicated to IT and directly to systems for execution of both retention and disposition. When business objectives or laws change, schedules are updated and stakeholders notified. Legal and IT have transparency to what information each line of business has where and for how long to inform eDiscovery and data management." .
 
 [ rdf:type owl:Axiom ;
@@ -10840,7 +10945,6 @@ Governance:RIM_P3_3 rdf:type owl:NamedIndividual ,
                                                Governance:Article_35 ,
                                                Governance:Article_5 ,
                                                Governance:Article_6 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Realize_Information_Value_1 ;
                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ,
@@ -10851,6 +10955,7 @@ Governance:RIM_P3_3 rdf:type owl:NamedIndividual ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_23081 ,
                                                      Governance:ISO_27001 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Application data and business process data cam be searched by departmental staff in the course of their work from within the system" .
 
 [ rdf:type owl:Axiom ;
@@ -10889,7 +10994,6 @@ Governance:RIM_P3_4 rdf:type owl:NamedIndividual ,
                     Governance:involvesArticle Governance:Article_32 ,
                                                Governance:Article_5 ,
                                                Governance:Article_6 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Realize_Information_Value_1 ;
                     Governance:needsTechnicalRequirement Governance:AccessControl_1 ,
@@ -10902,6 +11006,7 @@ Governance:RIM_P3_4 rdf:type owl:NamedIndividual ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_23081 ,
                                                      Governance:ISO_27001 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Search and analytics enable employees to realize value and to apply information to decisionmaking in real time even as context erodes across information sources and types; assertions on value and sources of information made in processes H, I and J are used to ensure accessibility and authenticity of information the business defined as valuable. The cost of information to the enterprise is consistent and appropriate over its lifecycle." .
 
 [ rdf:type owl:Axiom ;
@@ -10947,7 +11052,6 @@ Governance:RIM_P4_3 rdf:type owl:NamedIndividual ,
                     Governance:involvesArticle Governance:Article_32 ,
                                                Governance:Article_5 ,
                                                Governance:Article_6 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Data_Quality_And_Data_Lineage_1 ;
                     Governance:needsTechnicalRequirement Governance:Data_Mapping_And_Classification_System_1 ,
@@ -10959,6 +11063,7 @@ Governance:RIM_P4_3 rdf:type owl:NamedIndividual ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_23081 ,
                                                      Governance:ISO_27001 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Data quality assessment conducted resulting in a management strategy tailored to its needs, and governance policies addressing specific data management requirements. Master datamap for 50% or more silos. A virtual data quality firewall is implemented to detect and quarantine bad data at the point of entry. ”Golden Sources” of key data elements identified, monitored and updated. Business intelligence solutions determine which data sets are most likely to be utilized and targeted for quality management and governance." .
 
 [ rdf:type owl:Axiom ;
@@ -10989,7 +11094,6 @@ Governance:RIM_P4_4 rdf:type owl:NamedIndividual ,
                              Governance:IG_Capability ;
                     Governance:inMaturityLevel <http://www.semanticweb.org/IG/Governance#4_Proactive> ;
                     Governance:involvesArticle Governance:Article_5 ;
-                    Governance:linkedToBusinessUnit Governance:Records_Information_Management_1 ;
                     Governance:linkedToFramework Governance:CGOC_02 ;
                     Governance:linkedToProcess Governance:Process_Data_Quality_And_Data_Lineage_1 ;
                     Governance:needsTechnicalRequirement Governance:Analytics_1 ,
@@ -11000,6 +11104,7 @@ Governance:RIM_P4_4 rdf:type owl:NamedIndividual ,
                                                      Governance:ISO_15939 ,
                                                      Governance:ISO_23081 ,
                                                      Governance:ISO_27000 ;
+                    Governance:theoreticallyLinkedToRIM Governance:Records_Information_Management_1 ;
                     Governance:capabilityDescription "Data quality management processes are fully automated with complete audit trails. Master datamap is fully integrated and ubiquitous. Astute data management processes can collect and move data to a repository for cleansing. Advanced analytics used to predict the use and misuse of data." .
 
 [ rdf:type owl:Axiom ;
@@ -11392,11 +11497,6 @@ Governance:Senior_Records_Officer_1 rdf:type owl:NamedIndividual ,
                                     Governance:involvesArticle Governance:Article_39 ,
                                                                Governance:Article_5 ;
                                     Governance:practicesDefinedInIso Governance:ISO_15489 .
-
-
-###  http://www.semanticweb.org/IG/Governance#Sensible_Data
-Governance:Sensible_Data rdf:type owl:NamedIndividual ,
-                                  Governance:Company_Capability .
 
 
 ###  http://www.semanticweb.org/IG/Governance#Shared_Library_Of_Country_Protocols_1
@@ -12002,5 +12102,255 @@ Governance:eDiscovery_Integration_1 rdf:type owl:NamedIndividual ,
               )
 ] .
 
+
+#################################################################
+#    Rules
+#################################################################
+
+:company rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:rim rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:design rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:allCapabilities rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:capability rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:employeeNumber rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:process rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Company ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :company
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Records_And_Information_Management ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :rim
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Design ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :design
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:notLinkedToOrganization ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :design ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:companyDoesNotNeed ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :company ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> Governance:IG_Capability ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :allCapabilities
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:definesDesign ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :allCapabilities ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :design
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Company ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :company
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> Governance:IG_Capability ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :capability
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :employeeNumber ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 250 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:theoreticallyLinkedToRIM ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :process ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:linkedToProcess ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :capability ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :process
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:companyEmployeeNumber ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :company ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> :employeeNumber
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:theoreticallyLinkedToRIM ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> :capability ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:linkedToOrganization ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :process ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> Governance:IG_Capability ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :capability
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:linkedToOrganization ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Company ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :company
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:companyEmployeeNumber ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :company ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :employeeNumber
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :employeeNumber ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 250 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Records_And_Information_Management ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :rim
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:companyDoesNotNeed ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :company ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> Governance:IG_Capability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :capability
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Records_And_Information_Management ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :rim
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:linkedToOrganization ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> Governance:Design ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :design
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:linkedToOrganization ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :design ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :rim
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> Governance:IG_Capability ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> :allCapabilities
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> Governance:definesDesign ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :allCapabilities ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :design
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
