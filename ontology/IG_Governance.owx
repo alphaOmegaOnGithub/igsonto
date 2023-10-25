@@ -26024,7 +26024,7 @@ PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
 
-SELECT * WHERE{
+SELECT * FROM igonto:small_enterprise WHERE{
   ?small_enterprise igonto:operatesIn ?country.
   ?country igonto:isRegulatedBy ?regulation.
   ?country igonto:belongsToJurisdiction ?jurisdiction.
@@ -26076,7 +26076,7 @@ PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
 
-SELECT * WHERE{
+SELECT *  FROM igonto:small_enterprise WHERE{
   ?small_enterprise igonto:enterpriseNeedsToFullfillCapability ?capability.
   ?capability igonto:linkedToProcess ?process.
   ?process igonto:processDescription ?description.
@@ -26136,7 +26136,7 @@ PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 PREFIX igonto: &lt;http://www.semanticweb.org/IG/Governance#&gt;
 
-SELECT ?small_enterprise ?capability ?process ?organizationUnit ?risk ?design ?architecture WHERE{
+SELECT ?small_enterprise ?capability ?process ?organizationUnit ?risk ?design ?architecture  FROM igonto:small_enterprise WHERE{
   ?small_enterprise igonto:enterpriseNeedsDesign ?design.
   ?small_enterprise igonto:enterpriseNeedsArchitecture ?architecture.
   ?small_enterprise igonto:enterpriseNeedsToFullfillCapability ?capability.
@@ -26241,6 +26241,7 @@ SELECT ?small_enterprise ?country ?regulation ?jurisdiction ?capability ?descrip
        (GROUP_CONCAT(DISTINCT REPLACE(STR(?articles), &quot;http://www.semanticweb.org/IG/Governance#&quot;, &quot;&quot;) ; SEPARATOR=&quot;, &quot;) AS ?GDPR_Articles)
        ?framework ?process 
        ?comment
+FROM igonto:small_enterprise
 WHERE {
   ?annotation rdf:type owl:Axiom;
               owl:annotatedSource ?capability;
