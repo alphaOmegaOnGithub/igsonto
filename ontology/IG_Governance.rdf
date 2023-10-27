@@ -42,6 +42,12 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#regulates -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#regulates"/>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#accountableForStrageticPlan -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/IG/Governance#accountableForStrageticPlan">
@@ -1548,6 +1554,62 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Catalog -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DB -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#DB">
+        <owl:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Database"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Database -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Database"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ObjectCatalog -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#ObjectCatalog"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RDBMS -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RDBMS"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RepositoryCatalog -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RepositoryCatalog"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Schema -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Schema"/>
+    
+
+
     <!-- http://www.semanticweb.org/IG/Governance#AccessControl -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/IG/Governance#AccessControl">
@@ -2936,6 +2998,94 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#CockroachDB -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CockroachDB">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#DB2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#DB2">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#EU -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#EU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#EU"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ObjectCatalog -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ObjectCatalog">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#ObjectDatabase -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#ObjectDatabase">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Oracle -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Oracle">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#PostgreSQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#PostgreSQL">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RepositoryDatabase -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RepositoryDatabase">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DB"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RespositoryCatalog -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RespositoryCatalog">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SQLServer -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SQLServer">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
     
 
 
@@ -14429,6 +14579,47 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#DB"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Database"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ObjectCatalog"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#RDBMS"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#RepositoryCatalog"/>
+            <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Schema"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Architecture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Capability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Country"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Data"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Design"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Enterprise"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Framework"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Goal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#IG_Policy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#IG_Programm"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#IG_Strategic_Plan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#IG_Team"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#ISO"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Jurisdiction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Maturity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Metadata"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Metrics"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Organization_Unit"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Process"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Query"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Regulation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Repository"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Risk_Profile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Role"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Rule"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Supervisor_Authority"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/IG/Governance#Tools"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
