@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/IG/Governance/"
      xml:base="http://www.semanticweb.org/IG/Governance/"
+     xmlns:igs="http://www.semanticweb.org/InformationGovernanceServices/"
+     xmlns:ont="http://www.co-ode.org/ontologies/ont.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -10,7 +12,11 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:Governance="http://www.semanticweb.org/IG/Governance#">
-    <owl:Ontology/>
+    <owl:Ontology>
+        <swrla:isRuleEnabled></swrla:isRuleEnabled>
+        <rdfs:comment>IGS An ontology and knledge schema on Information Governance Services IGS</rdfs:comment>
+        <rdfs:label>Information Governance Services Example</rdfs:label>
+    </owl:Ontology>
     
 
 
@@ -31,6 +37,12 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#publicClass -->
+
+    <owl:AnnotationProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#publicClass"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -39,6 +51,26 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isComposedOf"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isMadeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isMadeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#isUsedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#isUsedBy"/>
     
 
 
@@ -1592,6 +1624,12 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Record -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Record"/>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog"/>
@@ -1604,9 +1642,61 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Rule -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Rule">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">The class of SHACL rules. Never instantiated directly.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/shacl#"/>
+        <rdfs:label xml:lang="en">Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SPARQL_CONSTRUCT_executable -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#SPARQL_CONSTRUCT_executable">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#SPARQL_executable"/>
+        <rdfs:comment xml:lang="en">The class of SPARQL executables that are based on a CONSTRUCT query.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/shacl#"/>
+        <rdfs:label xml:lang="en">SPARQL CONSTRUCT executable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SPARQL_CONSTRUCT_rule -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#SPARQL_CONSTRUCT_rule">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rule"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#SPARQL_CONSTRUCT_executable"/>
+        <rdfs:comment xml:lang="en">The class of SHACL rules based on SPARQL CONSTRUCT queries.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/shacl#"/>
+        <rdfs:label xml:lang="en">SPARQL CONSTRUCT rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SPARQL_executable -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#SPARQL_executable">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/ont.owl#Schema -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Schema"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#A_rule_based_on_triple_(subject,_predicate,_object)_pattern. -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#A_rule_based_on_triple_(subject,_predicate,_object)_pattern.">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rule"/>
+        <rdfs:comment xml:lang="en">A rule based on triple (subject, predicate, object) pattern.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/shacl#"/>
+    </owl:Class>
     
 
 
@@ -2990,6 +3080,15 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Rule"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#SPARQL_executable"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3005,6 +3104,30 @@
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#CockroachDB">
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#DatabaseManagementSystems"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Country -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Country">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Country-Info -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Country-Info">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Country-label -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#Country-label">
+        <rdf:type rdf:resource="http://www.semanticweb.org/IG/Governance#Country"/>
     </owl:NamedIndividual>
     
 
@@ -3061,6 +3184,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog">
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+        <Governance:uses rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RecordsManagementSchema"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RecordsManagementMetada -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsManagementMetada"/>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#RecordsManagementSchema -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsManagementSchema">
+        <ont:isMadeOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#RecordsManagementMetada"/>
     </owl:NamedIndividual>
     
 
@@ -3077,6 +3215,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#RespositoryCatalog">
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/ont.owl#Catalog"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#SHACL_Rules -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/ont.owl#SHACL_Rules">
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     </owl:NamedIndividual>
     
 
@@ -14567,6 +14713,20 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
     </owl:NamedIndividual>
     <rdf:Description>
         <rdfs:comment></rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#RecordsCatalog">
+        <rdfs:comment>A records mangement catalog  including regulatory classification categories and related storage, location, retention and disposition policies  each of which containing specific rule where to store, how long to store, when to dispose, and how to expunge critical data in accordance with regulatory compliance.</rdfs:comment>
     </rdf:Description>
     
 
