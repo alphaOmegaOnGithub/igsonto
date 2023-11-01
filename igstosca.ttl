@@ -1,0 +1,1415 @@
+@prefix : <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix igso: <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23> .
+
+<http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23> rdf:type owl:Ontology ;
+                                                                                owl:versionIRI <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23/1.0> ;
+                                                                                rdfs:comment "Information Governance Services Ontology"@en ;
+                                                                                rdfs:label "igstosca ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23/example
+igso:example rdf:type owl:AnnotationProperty ;
+             rdfs:subPropertyOf rdfs:comment .
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#about
+rdf:about rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#keys
+:keys rdf:type rdfs:Datatype .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#stringarray
+:stringarray rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#token
+xsd:token owl:equivalentClass xsd:string .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#add_source
+:add_source rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#add_target
+:add_target rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#addresses
+:addresses rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:range :stringarray .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#admin_credential
+:admin_credential rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#admin_endpoint
+:admin_endpoint rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#algorithm
+:algorithm rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#application
+:application rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#architecture
+:architecture rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#attachment
+:attachment rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#attributes
+:attributes rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#binding
+:binding rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#capabilities
+:capabilities rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#configure
+:configure rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#configured
+:configured rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#configuring
+:configuring rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#constrains
+:constrains rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#cpu_frequency
+:cpu_frequency rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#create
+:create rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#created
+:created rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#creating
+:creating rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#credential
+:credential rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#data_endpoint
+:data_endpoint rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#database_endpoint
+:database_endpoint rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#default
+:default rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#default_instances
+:default_instances rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#delete
+:delete rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#deleting
+:deleting rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#derived_from
+:derived_from rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "description: This is an example of a single line description (no folding)." .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#device
+:device rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#disk_size
+:disk_size rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#distribution
+:distribution rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#dns_name
+:dns_name rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#end_time
+:end_time rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#endpoint
+:endpoint rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#error
+:error rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#file_ext
+:file_ext rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#floating
+:floating rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#host
+:host rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#in_range
+:in_range rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#initial
+:initial rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#initiator
+:initiator rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#interfaces
+:interfaces rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#ip_address
+:ip_address rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#keys
+:keys rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:range :keys .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#listen_port
+:listen_port rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#mac_address
+:mac_address rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#max_instances
+:max_instances rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#max_size
+:max_size rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#mem_size
+:mem_size rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#mime_type
+:mime_type rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#min_instances
+:min_instances rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#network_id
+:network_id rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#network_name
+:network_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#networks
+:networks rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#node
+:node rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#notes
+:notes rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#num_cpus
+:num_cpus rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#occurrences
+:occurrences rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#os
+:os rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#port
+:port rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#port_id
+:port_id rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#port_name
+:port_name rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#ports
+:ports rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#post_configure_source
+:post_configure_source rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#post_configure_target
+:post_configure_target rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#pre_configure_source
+:pre_configure_source rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#pre_configure_target
+:pre_configure_target rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#private_address
+:private_address rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#protocol
+:protocol rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#public_address
+:public_address rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#relationship
+:relationship rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#remove_target
+:remove_target rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#required
+:required rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#requirements
+:requirements rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#scalable
+:scalable rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#secure
+:secure rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#size
+:size rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#snapshot_id
+:snapshot_id rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#source
+:source rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#source_range
+:source_range rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#standard
+:standard rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#start
+:start rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#start_time
+:start_time rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:dateTimeStamp .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#started
+:started rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#starting
+:starting rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#state
+:state rdf:type owl:DatatypeProperty ;
+       igso:example """Simple declaration of an ‘event_object’ property declared to be a ‘json’ data type with its associated JSON Schema:
+
+properties:
+  event_object:
+    type: json
+    constraints:
+      schema: >
+        {
+          \"$schema\": \"http://json-schema.org/draft-04/schema#\",
+          \"title\": \"Event\",
+          \"description\": \"Example Event type schema\",
+          \"type\": \"object\",
+          \"properties\": {
+            \"uuid\": {
+              \"description\": \"The unique ID for the event.\",
+              \"type\": \"string\"
+            },
+            \"code\": {
+              \"type\": \"integer\"
+            },
+            \"message\": {
+              \"type\": \"string\"
+            }
+          },
+          \"required\": [\"uuid\", \"code\"]
+        }""" ;
+       rdfs:comment "As components (i.e., nodes) of TOSCA applications are deployed, instantiated and orchestrated over their lifecycle using normative lifecycle operations (see section 5.8 for normative lifecycle definitions) it is important define normative values for communicating the states of these components normatively between orchestration and workflow engines and any managers of these applications."@en ;
+       rdfs:label "state" .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#stop
+:stop rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#stopped
+:stopped rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#stopping
+:stopping rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :state .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#storage_endpoint
+:storage_endpoint rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#target
+:target rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#target_changed
+:target_changed rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#target_range
+:target_range rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#token
+:token rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#token_type
+:token_type rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#url_path
+:url_path rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#user
+:user rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#valid_source_types
+:valid_source_types rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#valid_target_types
+:valid_target_types rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#volume_id
+:volume_id rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Artifact
+:IGSO.Artifact rdf:type owl:Class ;
+               rdfs:subClassOf :IGSO.Entities ;
+               rdfs:label "Artifact"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Capability
+:IGSO.Capability rdf:type owl:Class ;
+                 rdfs:subClassOf :IGSO.Entities ;
+                 rdfs:label "Capability"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.DataType
+:IGSO.DataType rdf:type owl:Class ;
+               rdfs:subClassOf :IGSO.Entities ;
+               rdfs:label "DataType"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Docker.Runtime
+:IGSO.Docker.Runtime rdf:type owl:Class ;
+                     rdfs:subClassOf :IGSO.Node.Root ,
+                                     :TOSCA.Node.SoftwareComponent.Container.Runtime ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty owl:topObjectProperty ;
+                                       owl:allValuesFrom :TOSCA.Node.SoftwareComponent.Container.Runtime
+                                     ] ;
+                     rdfs:label "Docker.Runtime"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Entities
+:IGSO.Entities rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Group
+:IGSO.Group rdf:type owl:Class ;
+            rdfs:subClassOf :IGSO.Entities ;
+            rdfs:label "Group"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Interface
+:IGSO.Interface rdf:type owl:Class ;
+                rdfs:subClassOf :IGSO.Entities ;
+                rdfs:label "Interface"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Node
+:IGSO.Node rdf:type owl:Class ;
+           rdfs:subClassOf :IGSO.Entities ;
+           rdfs:label "Node"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Node.Root
+:IGSO.Node.Root rdf:type owl:Class ;
+                rdfs:subClassOf :IGSO.Node ;
+                rdfs:label "IGSO.Node.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.NodeTemplate
+:IGSO.NodeTemplate rdf:type owl:Class ;
+                   rdfs:subClassOf :IGSO.Template ;
+                   owl:disjointWith :IGSO.ServiceTemplate ;
+                   rdfs:label "NodeTemplate"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Policy
+:IGSO.Policy rdf:type owl:Class ;
+             rdfs:subClassOf :IGSO.Entities ;
+             rdfs:label "Policy"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.RDBMS
+:IGSO.RDBMS rdf:type owl:Class ;
+            rdfs:subClassOf :IGSO.Node.Root ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty owl:topObjectProperty ;
+                              owl:allValuesFrom :TOSCA.Node.SoftwareComponent.DBMS
+                            ] ;
+            rdfs:label "IGS.RDBMS"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Relationship
+:IGSO.Relationship rdf:type owl:Class ;
+                   rdfs:subClassOf :IGSO.Entities ;
+                   rdfs:label "Relationship"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.ServiceTemplate
+:IGSO.ServiceTemplate rdf:type owl:Class ;
+                      rdfs:subClassOf :IGSO.Template ;
+                      rdfs:label "ServiceTemplate"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#IGSO.Template
+:IGSO.Template rdf:type owl:Class ;
+               rdfs:subClassOf :IGSO.Entities ;
+               rdfs:label "Template"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA
+:TOSCA rdf:type owl:Class ;
+       rdfs:comment "TOSCA YAML 1.3 Entities"@en ;
+       rdfs:label "TOSCA Entities"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact
+:TOSCA.Artifact rdf:type owl:Class ;
+                rdfs:subClassOf :TOSCA ;
+                owl:disjointWith :TOSCA.DataType ;
+                rdfs:label "Artifact"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Deployment
+:TOSCA.Artifact.Deployment rdf:type owl:Class ;
+                           rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Deployment.Image
+:TOSCA.Artifact.Deployment.Image rdf:type owl:Class ;
+                                 rdfs:subClassOf :TOSCA.Artifact.Deployment ;
+                                 owl:disjointWith :TOSCA.Artifact:Deployment.Image.VM .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.File
+:TOSCA.Artifact.File rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Implementation
+:TOSCA.Artifact.Implementation rdf:type owl:Class ;
+                               rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Implementation.Bash
+:TOSCA.Artifact.Implementation.Bash rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Implementation.Python
+:TOSCA.Artifact.Implementation.Python rdf:type owl:Class ;
+                                      rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Root
+:TOSCA.Artifact.Root rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.Artifact .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Template
+:TOSCA.Artifact.Template rdf:type owl:Class ;
+                         rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Template.Ansible
+:TOSCA.Artifact.Template.Ansible rdf:type owl:Class ;
+                                 rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Template.DockeCompose
+:TOSCA.Artifact.Template.DockeCompose rdf:type owl:Class ;
+                                      rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Template.Helm
+:TOSCA.Artifact.Template.Helm rdf:type owl:Class ;
+                              rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact.Template.Kubernetes
+:TOSCA.Artifact.Template.Kubernetes rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.Artifact.Root .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability
+:TOSCA.Capability rdf:type owl:Class ;
+                  rdfs:subClassOf :TOSCA ;
+                  rdfs:label "Capability"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Attachment
+:TOSCA.Capability.Attachment rdf:type owl:Class ;
+                             rdfs:subClassOf :TOSCA.Capability.Root ;
+                             rdfs:label "Capability.Attachment"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Container
+:TOSCA.Capability.Container rdf:type owl:Class ;
+                            rdfs:subClassOf :TOSCA.Capability.Root ;
+                            rdfs:label "Capability.Container"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Container.Compute
+:TOSCA.Capability.Container.Compute rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.Capability.Container ;
+                                    rdfs:label "Container.Compute"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Endpoint
+:TOSCA.Capability.Endpoint rdf:type owl:Class ;
+                           rdfs:subClassOf :TOSCA.Capability.Root ;
+                           rdfs:label "Capability.Endpoint"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Endpoint.Admin
+:TOSCA.Capability.Endpoint.Admin rdf:type owl:Class ;
+                                 rdfs:subClassOf :TOSCA.Capability.Endpoint ;
+                                 rdfs:label "Endpoint.Admin"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Endpoint.Database
+:TOSCA.Capability.Endpoint.Database rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.Capability.Endpoint ;
+                                    rdfs:label "Endpoint.Database"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Endpoint.Public
+:TOSCA.Capability.Endpoint.Public rdf:type owl:Class ;
+                                  rdfs:subClassOf :TOSCA.Capability.Endpoint ;
+                                  rdfs:label "Endpoint.Public"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Network
+:TOSCA.Capability.Network rdf:type owl:Class ;
+                          rdfs:subClassOf :TOSCA.Capability.Root ;
+                          rdfs:label "Capability.Network"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Network.Bindable
+:TOSCA.Capability.Network.Bindable rdf:type owl:Class ;
+                                   rdfs:subClassOf :TOSCA.Capability.Node ;
+                                   rdfs:label "Capability.Node.Network.Bindable"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Node
+:TOSCA.Capability.Node rdf:type owl:Class ;
+                       rdfs:subClassOf :TOSCA.Capability.Root ;
+                       rdfs:label "Capability.Node"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.OperatingSystem
+:TOSCA.Capability.OperatingSystem rdf:type owl:Class ;
+                                  rdfs:subClassOf :TOSCA.Capability.Root ;
+                                  rdfs:label "Capability.OperatingSystem"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Root
+:TOSCA.Capability.Root rdf:type owl:Class ;
+                       rdfs:subClassOf :TOSCA.Capability ;
+                       rdfs:label "Capability.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Scalable
+:TOSCA.Capability.Scalable rdf:type owl:Class ;
+                           rdfs:subClassOf :TOSCA.Capability.Root ;
+                           rdfs:label "Capability.Scalable"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Capability.Storage
+:TOSCA.Capability.Storage rdf:type owl:Class ;
+                          rdfs:subClassOf :TOSCA.Capability.Root ;
+                          rdfs:label "Capability.Storage"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType
+:TOSCA.DataType rdf:type owl:Class ;
+                rdfs:subClassOf :TOSCA ;
+                rdfs:label "DataType"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Credential
+:TOSCA.DataType.Credential rdf:type owl:Class ;
+                           rdfs:subClassOf :TOSCA.DataType.Root ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :keys ;
+                                             owl:someValuesFrom :keys
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :protocol ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :token ;
+                                             owl:someValuesFrom xsd:token
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :token_type ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :user ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ;
+                           igso:example """# OpenStack SSH Keypair
+
+<some_tosca_entity>:
+  properties:
+    my_ssh_keypair:  # type: Credential
+      protocol: ssh
+      token_type: identifier
+      # token is a reference (ID) to an existing keypair (already installed)      
+      token: <keypair_id>"""@en ;
+                           rdfs:label "Credential"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.JSON
+:TOSCA.DataType.JSON rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.DataType ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :derived_from ;
+                                       owl:someValuesFrom xsd:string
+                                     ] .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Network.NetworkInfo
+:TOSCA.DataType.Network.NetworkInfo rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.DataType ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :addresses ;
+                                                      owl:someValuesFrom :stringarray
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :network_id ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :network_name ;
+                                                      owl:someValuesFrom xsd:string
+                                                    ] .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Network.PortDef
+:TOSCA.DataType.Network.PortDef rdf:type owl:Class ;
+                                rdfs:subClassOf :TOSCA.DataType .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Network.PortInfo
+:TOSCA.DataType.Network.PortInfo rdf:type owl:Class ;
+                                 rdfs:subClassOf :TOSCA.DataType .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Network.PortSpec
+:TOSCA.DataType.Network.PortSpec rdf:type owl:Class ;
+                                 rdfs:subClassOf :TOSCA.DataType .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.Root
+:TOSCA.DataType.Root rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.DataType ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :description ;
+                                       owl:someValuesFrom owl:rational
+                                     ] .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.TimeInterval
+:TOSCA.DataType.TimeInterval rdf:type owl:Class ;
+                             rdfs:subClassOf :TOSCA.DataType.Root ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :end_time ;
+                                               owl:someValuesFrom xsd:dateTimeStamp
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :start_time ;
+                                               owl:someValuesFrom xsd:dateTimeStamp
+                                             ] ;
+                             rdfs:label "TimeInterval"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.DataType.XML
+:TOSCA.DataType.XML rdf:type owl:Class ;
+                    rdfs:subClassOf :TOSCA.DataType .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Group
+:TOSCA.Group rdf:type owl:Class ;
+             rdfs:subClassOf :TOSCA ;
+             rdfs:label "Group"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Group.Root
+:TOSCA.Group.Root rdf:type owl:Class ;
+                  rdfs:subClassOf :TOSCA.Group ;
+                  rdfs:label "Group.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Interface
+:TOSCA.Interface rdf:type owl:Class ;
+                 rdfs:subClassOf :TOSCA ;
+                 rdfs:label "Interface"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Interface.Node.Lifecycle.Standardard
+:TOSCA.Interface.Node.Lifecycle.Standardard rdf:type owl:Class ;
+                                            rdfs:subClassOf :TOSCA.Interface .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Interface.Relationship.Configure
+:TOSCA.Interface.Relationship.Configure rdf:type owl:Class ;
+                                        rdfs:subClassOf :TOSCA.Interface .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Interface.Root
+:TOSCA.Interface.Root rdf:type owl:Class ;
+                      rdfs:subClassOf :TOSCA.Interface .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node
+:TOSCA.Node rdf:type owl:Class ;
+            rdfs:subClassOf :TOSCA ;
+            rdfs:label "Node"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.AbstractCompute
+:TOSCA.Node.AbstractCompute rdf:type owl:Class ;
+                            rdfs:subClassOf :TOSCA.Node.Root ;
+                            rdfs:label "Node.AbstractCompute"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.AbstractStorage
+:TOSCA.Node.AbstractStorage rdf:type owl:Class ;
+                            rdfs:subClassOf :TOSCA.Node.Root ;
+                            rdfs:label "Node.AbstractStorage"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.AbstractStorage.BlockStorage
+:TOSCA.Node.AbstractStorage.BlockStorage rdf:type owl:Class ;
+                                         rdfs:subClassOf :TOSCA.Node.AbstractStorage ;
+                                         owl:disjointWith :TOSCA.Node.AbstractStorage.ObjectStorage ;
+                                         rdfs:label "Node.AbstractStorage.BlockStorage"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.AbstractStorage.ObjectStorage
+:TOSCA.Node.AbstractStorage.ObjectStorage rdf:type owl:Class ;
+                                          rdfs:subClassOf :TOSCA.Node.AbstractStorage ;
+                                          rdfs:label "Node.AbstractStorage.ObjectStorage"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.Application
+:TOSCA.Node.Application rdf:type owl:Class ;
+                        rdfs:subClassOf :TOSCA.Node.Root ;
+                        rdfs:label "Node.Application"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.Compute
+:TOSCA.Node.Compute rdf:type owl:Class ;
+                    rdfs:subClassOf :TOSCA.Node.AbstractCompute ;
+                    rdfs:label "Node.Compute"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.Database
+:TOSCA.Node.Database rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.Node.Root ;
+                     rdfs:label "Node.Database"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.LoadBalancer
+:TOSCA.Node.LoadBalancer rdf:type owl:Class ;
+                         rdfs:subClassOf :TOSCA.Node.Root ;
+                         rdfs:label "Node.LoadBalancer"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.Root
+:TOSCA.Node.Root rdf:type owl:Class ;
+                 rdfs:subClassOf :TOSCA.Node ;
+                 rdfs:label "Node.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.SoftwareComponent
+:TOSCA.Node.SoftwareComponent rdf:type owl:Class ;
+                              rdfs:subClassOf :TOSCA.Node.Root ;
+                              rdfs:label "Node.SoftwareComponent"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.SoftwareComponent.Container.Runtime
+:TOSCA.Node.SoftwareComponent.Container.Runtime rdf:type owl:Class ;
+                                                rdfs:subClassOf :TOSCA.Node.SoftwareComponent ;
+                                                rdfs:label "Node.SoftwareComponent.Container.Runtime"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.SoftwareComponent.DBMS
+:TOSCA.Node.SoftwareComponent.DBMS rdf:type owl:Class ;
+                                   rdfs:subClassOf :TOSCA.Node.SoftwareComponent ;
+                                   rdfs:label "Node.SoftwareComponent.DBMS"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.SoftwareComponent.WebServer
+:TOSCA.Node.SoftwareComponent.WebServer rdf:type owl:Class ;
+                                        rdfs:subClassOf :TOSCA.Node.SoftwareComponent ;
+                                        rdfs:label "Node.SoftwareComponent.WebServer"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Node.WebApplication
+:TOSCA.Node.WebApplication rdf:type owl:Class ;
+                           rdfs:subClassOf :TOSCA.Node.Root ;
+                           rdfs:label "Node.WebApplication"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy
+:TOSCA.Policy rdf:type owl:Class ;
+              rdfs:subClassOf :TOSCA ;
+              rdfs:label "Policy"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy.Performance
+:TOSCA.Policy.Performance rdf:type owl:Class ;
+                          rdfs:subClassOf :TOSCA.Policy.Root ;
+                          rdfs:label "Policy.Performance"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy.Placement
+:TOSCA.Policy.Placement rdf:type owl:Class ;
+                        rdfs:subClassOf :TOSCA.Policy.Root ;
+                        rdfs:label "Policy.Placement"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy.Root
+:TOSCA.Policy.Root rdf:type owl:Class ;
+                   rdfs:subClassOf :TOSCA.Policy ;
+                   rdfs:label "Policy.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy.Scaling
+:TOSCA.Policy.Scaling rdf:type owl:Class ;
+                      rdfs:subClassOf :TOSCA.Policy.Root ;
+                      rdfs:label "Policy.Scaling"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Policy.Update
+:TOSCA.Policy.Update rdf:type owl:Class ;
+                     rdfs:subClassOf :TOSCA.Policy.Root ;
+                     rdfs:label "Policy.Update"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship
+:TOSCA.Relationship rdf:type owl:Class ;
+                    rdfs:subClassOf :TOSCA ;
+                    rdfs:label "Relationship"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.AttachesTo
+:TOSCA.Relationship.AttachesTo rdf:type owl:Class ;
+                               rdfs:subClassOf :TOSCA.Relationship.Root ;
+                               rdfs:label "Relationship.AttachesTo"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.ConnectsTo
+:TOSCA.Relationship.ConnectsTo rdf:type owl:Class ;
+                               rdfs:subClassOf :TOSCA.Relationship.Root ;
+                               rdfs:label "Relationship.ConnectsTo"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.DependsOn
+:TOSCA.Relationship.DependsOn rdf:type owl:Class ;
+                              rdfs:subClassOf :TOSCA.Relationship.Root ;
+                              rdfs:label "Relationship.DependsOn"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.HostedOn
+:TOSCA.Relationship.HostedOn rdf:type owl:Class ;
+                             rdfs:subClassOf :TOSCA.Relationship.Root ;
+                             rdfs:label "Relationship.HostedOn"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.Root
+:TOSCA.Relationship.Root rdf:type owl:Class ;
+                         rdfs:subClassOf :TOSCA.Relationship ;
+                         rdfs:label "Relationship.Root"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Relationship.RoutesTo
+:TOSCA.Relationship.RoutesTo rdf:type owl:Class ;
+                             rdfs:subClassOf :TOSCA.Relationship.ConnectsTo ;
+                             rdfs:label "Relationship.RoutesTo"@en .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#TOSCA.Artifact:Deployment.Image.VM
+:TOSCA.Artifact:Deployment.Image.VM rdf:type owl:Class ;
+                                    rdfs:subClassOf :TOSCA.Artifact.Deployment .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#CockroachDB
+:CockroachDB rdf:type owl:NamedIndividual ,
+                      :IGSO.RDBMS .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#DB2
+:DB2 rdf:type owl:NamedIndividual ,
+              :IGSO.RDBMS .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#Oracle
+:Oracle rdf:type owl:NamedIndividual ,
+                 :IGSO.RDBMS .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#PostgreSQL
+:PostgreSQL rdf:type owl:NamedIndividual ,
+                     :IGSO.RDBMS .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#RDBMS
+:RDBMS rdf:type owl:NamedIndividual ,
+                :IGSO.RDBMS ;
+       rdfs:label "RDBMS"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:keys rdfs:isDefinedBy "map of strings"@en ;
+      rdfs:label "keys"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :IGSO.Artifact
+                :IGSO.Capability
+                :IGSO.DataType
+                :IGSO.Entities
+                :IGSO.Group
+                :IGSO.Interface
+                :IGSO.Node
+                :IGSO.Policy
+                :IGSO.Relationship
+                :IGSO.Template
+                :TOSCA
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact
+                :TOSCA.Capability
+                :TOSCA.DataType
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact
+                :TOSCA.Capability
+                :TOSCA.DataType
+                :TOSCA.Group
+                :TOSCA.Group.Root
+                :TOSCA.Interface
+                :TOSCA.Node
+                :TOSCA.Policy
+                :TOSCA.Policy.Root
+                :TOSCA.Relationship
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact
+                :TOSCA.Capability
+                :TOSCA.DataType
+                :TOSCA.Interface
+                :TOSCA.Node
+                :TOSCA.Relationship
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact
+                :TOSCA.Capability
+                :TOSCA.DataType
+                :TOSCA.Interface
+                :TOSCA.Relationship
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact
+                :TOSCA.Capability
+                :TOSCA.DataType
+                :TOSCA.Relationship
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Artifact.Deployment
+                :TOSCA.Artifact.File
+                :TOSCA.Artifact.Implementation
+                :TOSCA.Artifact.Implementation.Bash
+                :TOSCA.Artifact.Implementation.Python
+                :TOSCA.Artifact.Root
+                :TOSCA.Artifact.Template
+                :TOSCA.Artifact.Template.Ansible
+                :TOSCA.Artifact.Template.DockeCompose
+                :TOSCA.Artifact.Template.Helm
+                :TOSCA.Artifact.Template.Kubernetes
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Capability.Attachment
+                :TOSCA.Capability.Container
+                :TOSCA.Capability.Endpoint
+                :TOSCA.Capability.Network
+                :TOSCA.Capability.Node
+                :TOSCA.Capability.OperatingSystem
+                :TOSCA.Capability.Root
+                :TOSCA.Capability.Scalable
+                :TOSCA.Capability.Storage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Capability.Endpoint.Admin
+                :TOSCA.Capability.Endpoint.Database
+                :TOSCA.Capability.Endpoint.Public
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.DataType.Credential
+                :TOSCA.DataType.JSON
+                :TOSCA.DataType.Network.NetworkInfo
+                :TOSCA.DataType.Network.PortDef
+                :TOSCA.DataType.Network.PortInfo
+                :TOSCA.DataType.Network.PortSpec
+                :TOSCA.DataType.Root
+                :TOSCA.DataType.TimeInterval
+                :TOSCA.DataType.XML
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Interface.Node.Lifecycle.Standardard
+                :TOSCA.Interface.Relationship.Configure
+                :TOSCA.Interface.Root
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Node.AbstractCompute
+                :TOSCA.Node.AbstractStorage
+                :TOSCA.Node.Application
+                :TOSCA.Node.Database
+                :TOSCA.Node.LoadBalancer
+                :TOSCA.Node.Root
+                :TOSCA.Node.SoftwareComponent
+                :TOSCA.Node.WebApplication
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Node.SoftwareComponent.Container.Runtime
+                :TOSCA.Node.SoftwareComponent.DBMS
+                :TOSCA.Node.SoftwareComponent.WebServer
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Policy.Performance
+                :TOSCA.Policy.Placement
+                :TOSCA.Policy.Scaling
+                :TOSCA.Policy.Update
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TOSCA.Relationship.AttachesTo
+                :TOSCA.Relationship.ConnectsTo
+                :TOSCA.Relationship.DependsOn
+                :TOSCA.Relationship.HostedOn
+                :TOSCA.Relationship.Root
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
