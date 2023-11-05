@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/cm/igs/2023/11/igso-foundation#"
+     xml:base="http://www.example.org/cm/igs/2023/11/igso-foundation"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+     xmlns:cmns-dt="https://www.omg.org/spec/Commons/DatesAndTimes/"
+     xmlns:cmns-cls="https://www.omg.org/spec/Commons/Classifiers/"
+     xmlns:cmns-col="https://www.omg.org/spec/Commons/Collections/"
+     xmlns:igso-fnd="http://www.example.org/cm/igs/2023/11/igso-foundation/"
+     xmlns:Analytics="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"
+     xmlns:cmns-cxtdsg="https://www.omg.org/spec/Commons/ContextualDesignators/"
+     xmlns:AnnotationVocabulary="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:IdentifiersAndIndices="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation/">
+        <owl:versionIRI rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation/1.0"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>IGS Information Governance Services ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#confers -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#confers"/>
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#commitment -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#commitment"/>
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#thin-in-role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#mutual_contractual_agreement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#mutual_contractual_agreement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#fibo-ind-ei-ei:agreement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#thin-in-role -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#thin-in-role"/>
+    
+
+
+    <!-- http://www.example.org/cm/igs/2023/11/igso-foundation#fibo-ind-ei-ei:agreement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igs/2023/11/igso-foundation#fibo-ind-ei-ei:agreement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#confers"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#commitment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.example.org/cm/igs/2023/11/igso-foundation#has_party_in_role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/Strategy -->
+
+    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/Strategy">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/Asset"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

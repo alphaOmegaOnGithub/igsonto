@@ -1,6 +1,7 @@
 @prefix : <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix 1.0: <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23/1.0#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -9,6 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix agentontology: <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2023-04-07/AgentOntology#> .
 @base <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#> .
 
 <http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23> rdf:type owl:Ontology ;
@@ -91,9 +93,19 @@ xsd:token owl:equivalentClass xsd:string .
 :has_file_extention rdf:type owl:ObjectProperty .
 
 
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#has_member
+:has_member rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
 ###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#has_mimetype
 :has_mimetype rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#has_part
+:has_part rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################
@@ -1774,6 +1786,11 @@ owl:topDataProperty rdfs:range xsd:string .
                                     rdfs:label "Artifact:Deployment.Image.VM"@en .
 
 
+###  http://www.semanticweb.org/cmcsadmin/ontologies/2023/10/igstosca-ontology-23#agentontology:Country
+:agentontology:Country rdf:type owl:Class ;
+                       rdfs:label "Country"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1904,6 +1921,16 @@ owl:topDataProperty rdfs:range xsd:string .
   owl:members ( :DSGVO
                 :GDPR
                 :US_Privacy_Act
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DomainThing
+                :IGSO.Entities
+                :TOSCA
+                :Utility
+                :agentontology:Country
               )
 ] .
 

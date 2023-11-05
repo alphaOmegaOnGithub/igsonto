@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/dcat" uri="file:/D:/dev/gitlab-as/ig-dslprj/w3c/dcat2.rdf"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.example.org/cm/igs/2023/11/igso-foundation" uri="igso-foundation.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.semanticweb.org/IG/Governance/" uri="IG_Governance.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.w3.org/2002/07/owl#" uri="IG_Governance.owx"/>
+    </group>
+</catalog>
