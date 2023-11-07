@@ -2,8 +2,39 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/dcat" uri="file:/D:/dev/gitlab-as/ig-dslprj/w3c/dcat2.rdf"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.example.org/cm/igs/2023/11/igso-foundation" uri="igso-foundation.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.semanticweb.org/IG/Governance/" uri="IG_Governance.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1699198985248" name="http://www.w3.org/2002/07/owl#" uri="IG_Governance.owx"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="http://www.example.org/cm/igs/2023/11/igso-foundation" uri="igso-foundation.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/" uri="igso-foundation-Corporations.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/" uri="igso-foundation-FFunctionalentities.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/" uri="igso-foundation-GocEntitiies.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/" uri="igso-foundation-CoprorateBodies.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/" uri="igso-foundation-FormalBusinessOrg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/" uri="igso-foundation-LEEntitiies.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/" uri="igso-foundation-LegalPerson.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/ControlParties/" uri="igso-foundation-ControlParties.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/" uri="igso-foundation-CorporateControl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/" uri="igso-foundation-CorporateOwnership.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/" uri="igso-foundation-Executives.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/" uri="igso-foundation-OwenershipParties.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/" uri="igso-foundation-Debt.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/" uri="igso-foundation-FinancialInstruments.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegistrationAuthorities/" uri="igso-foundation-RegAuthorities.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/" uri="igso-foundation-RegulatoryAgencies.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/" uri="igso-foundation-CurrencyAccount.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/" uri="igso-foundation-People.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/" uri="igso-foundation-Agreements.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/" uri="igso-foundation-Contracts.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/" uri="igso-foundation-IdentifiersAndIndices.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/" uri="igso-foundation-BusinesDates.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/" uri="igso-foundation-Jurisdiction.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/" uri="igso-foundation-LegalCapacity.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/" uri="igso-foundation-Contronls.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/" uri="igso-foundation-Parties.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/" uri="igso-foundation-Addresses.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/" uri="igso-foundation-Locations.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/" uri="igso-foundation-PpaymentAndSchedules.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/" uri="igso-foundation-ProdAndServices.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/" uri="igso-foundation-EconomicIndicators.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/" uri="igso-foundation-Incators.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1699213039877" name="https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/" uri="igso-foundation-LangRepres.rdf"/>
     </group>
 </catalog>

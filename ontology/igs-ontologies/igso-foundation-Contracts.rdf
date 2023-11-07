@@ -388,6 +388,34 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/BirthCertificate -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/BirthCertificate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/isEvidenceFor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/PlaceOfBirth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/DeathCertificate -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/DeathCertificate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/isEvidenceFor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/DateOfDeath"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/IdentityDocument -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/IdentityDocument">
@@ -436,6 +464,30 @@
         <rdfs:label xml:lang="en">breach of contract</rdfs:label>
         <skos:definition xml:lang="en">classifier of events representing a violation of an express, or implied, condition of a contract to do or not to do something, without a legitimate excuse</skos:definition>
         <cmns-av:explanatoryNote xml:lang="en">Examples of events that are considered a breach of contract include discovery of misrepresentation, not completing a job, not paying in full or on time, failing to deliver all the goods, substituting inferior or significantly different goods, not providing a bond when required, being late without excuse, or any act that demonstrates that a party will not complete required work (&apos;anticipatory breach.&apos;) Breach of contract is one of the most common causes of law suits for damages and/or court-ordered &apos;specific performance&apos; of the contract. A breach of contract frequently invalidates the contract.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/BreachOfCovenant -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/BreachOfCovenant">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/OccurrenceKind"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/refersTo"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ContractualCommitment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/"/>
+        <rdfs:label xml:lang="en">breach of covenant</rdfs:label>
+        <skos:definition xml:lang="en">classifier of events representing breaking a promise specified in a contract to do or not to do something, without a legitimate excuse</skos:definition>
+        <cmns-av:explanatoryNote xml:lang="en">In the case of a breach of a covenant or warranty, the contract remains binding and damages only are recoverable for the breach, whereas a breach of contract typically invalidates the entire contract.</cmns-av:explanatoryNote>
     </owl:Class>
     
 
@@ -607,6 +659,7 @@
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/MutualContractualAgreement">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/MutualAgreement"/>
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/UnilateralContract"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/"/>
         <rdfs:label>mutual contractual agreement</rdfs:label>
         <skos:definition>contract between named parties whose individual rights and obligations are not transferable to another party without prior written permission</skos:definition>
@@ -627,6 +680,18 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Representation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Representation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ContractualCommitment"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/"/>
+        <rdfs:label xml:lang="en">representation</rdfs:label>
+        <skos:definition xml:lang="en">contractual element that is a statement made by a party to the contract, before or at the time of making the contract, in regard to some fact, circumstance, or state of affairs pertinent to the contract, which the counterparty(ies) rely on, or is influential in bringing about the contract</skos:definition>
+        <cmns-av:explanatoryNote>A party may later claim misrepresentation if a false representation has been made. They may be entitled to rescind the contract, which means that the contract would be set aside and the receiving party may also be entitled to damages to put them back into the position they would have been had the contract never been entered into.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/TermSheet -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/TermSheet">
@@ -641,6 +706,24 @@
         <rdfs:label>term sheet</rdfs:label>
         <skos:definition>nonbinding agreement setting forth the basic terms and conditions under which a proposed business deal may be made</skos:definition>
         <cmns-av:explanatoryNote>Term sheets state the intentions of the parties and are used to guide legal counsel in the preparation of proposed agreements or contracts.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/UnilateralContract -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/UnilateralContract">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/confers"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/UnilateralCommitment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/"/>
+        <rdfs:label>unilateral contract</rdfs:label>
+        <skos:definition>contract in which one party makes an express promise without securing a reciprocal agreement from the other party(ies)</skos:definition>
+        <cmns-av:explanatoryNote>In a unilateral, or one-sided, contract, one party, known as the offeror, makes a promise in exchange for an act (or abstention from acting) by another party, known as the offeree. If the offeree acts on the offeror&apos;s promise, the offeror is legally obligated to fulfill the contract, but an offeree cannot be forced to act (or not act), because no return promise has been made to the offeror. After an offeree has performed, only one enforceable promise exists, that of the offeror.</cmns-av:explanatoryNote>
     </owl:Class>
     
 

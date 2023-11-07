@@ -149,6 +149,17 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/BoardAgreement -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/BoardAgreement">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/OrganizationCoveringAgreement"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/"/>
+        <rdfs:label>board agreement</rdfs:label>
+        <skos:definition>formal, legally binding agreement between members of the Board of Directors of the organization</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/JointStockCompany -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/Corporations/Corporations/JointStockCompany">

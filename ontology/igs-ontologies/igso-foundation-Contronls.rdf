@@ -295,6 +295,18 @@
         <skos:definition>actor that exercises some form of control in the context of some situation</skos:definition>
         <skos:editorialNote>At this level of abstraction it is not defined whether the control is some degree of controlling interest, or some level of actual control (asserted or calculated) in some entity.</skos:editorialNote>
     </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/DeFactoControl -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/DeFactoControl">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/Control"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/"/>
+        <rdfs:label>de facto control</rdfs:label>
+        <skos:definition>control that exists informally and is accepted, although not formally recognized</skos:definition>
+        <cmns-av:explanatoryNote>For example, de facto acquisition or change of control means the acquisition, directly or indirectly, by any person or group of persons acting jointly or in concert, of beneficial ownership of, or control or direction over, sufficient voting shares of some legal entity to permit such person or persons to exercise, or to control or direct the voting of, 50 percent or more of the total number of votes in that entity.</cmns-av:explanatoryNote>
+    </owl:Class>
 </rdf:RDF>
 
 

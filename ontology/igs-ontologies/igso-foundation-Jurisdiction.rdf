@@ -97,6 +97,19 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/LegalAge -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/LegalAge">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/Jurisdiction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/Jurisdiction -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/Jurisdiction">
@@ -132,6 +145,19 @@
         <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.law.cornell.edu/wex/statute</cmns-av:adaptedFrom>
         <cmns-av:explanatoryNote>In the United States, statutes may also be called acts, such as the Civil Rights Act of 1964 or the Sarbanes-Oxley Act. Federal laws must be passed by both houses of Congress, the House of Representative and the Senate, and then usually require approval from the president before they can take effect.</cmns-av:explanatoryNote>
         <cmns-av:explanatoryNote>Statutes may originate with national, state legislatures or local municipalities. Statutory laws are subordinate to the higher constitutional laws of the land.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentificationScheme -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentificationScheme">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/isApplicableIn"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Law/Jurisdiction/Jurisdiction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
 </rdf:RDF>
 

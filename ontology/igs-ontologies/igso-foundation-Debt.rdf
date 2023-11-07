@@ -136,6 +136,7 @@
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/hasBorrower">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/hasContractParty"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Borrower"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>has borrower</rdfs:label>
         <skos:definition>relates a contract, such as a debt instrument or credit agreement, to one or more parties that are incurring the debt</skos:definition>
@@ -280,6 +281,7 @@
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/hasLender">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/hasContractParty"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Lender"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>has lender</rdfs:label>
         <skos:definition>relates a contract, such as a debt instrument or credit agreement, to one or more parties that are financing the debt</skos:definition>
@@ -329,6 +331,7 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/hasPrincipal -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/hasPrincipal">
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Principal"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>has principal</rdfs:label>
         <skos:definition>indicates the face value of an obligation, such as a bond or loan, that must be repaid at maturity, i.e., the base amount raised by a mortgage or other debt instrument</skos:definition>
@@ -377,6 +380,7 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isAmortizationOf -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isAmortizationOf">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is amortization of</rdfs:label>
         <skos:definition>links the process of reduction of debt or other costs through periodic charges to the relevant asset or liability</skos:definition>
@@ -420,6 +424,7 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isInterestOn -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isInterestOn">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Interest"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is interest on</rdfs:label>
         <skos:definition>links a monetary amount that is the cost of using credit to the debt that it applies to</skos:definition>
@@ -430,6 +435,8 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwed -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwed">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is owed</rdfs:label>
         <skos:definition>links a creditor to a debt that is outstanding and payable to them</skos:definition>
@@ -441,6 +448,8 @@
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwedBy">
         <owl:inverseOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/owes"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is owed by</rdfs:label>
         <skos:definition>links a debt to the party that owes it</skos:definition>
@@ -451,6 +460,8 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwedTo -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwedTo">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is owed to</rdfs:label>
         <skos:definition>links a debt to the party to which it is payable</skos:definition>
@@ -461,6 +472,7 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isPrincipalOf -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isPrincipalOf">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Principal"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>is principal of</rdfs:label>
         <skos:definition>links the value of a debt, excluding any interest or other costs of using credit, to the debt that it applies to</skos:definition>
@@ -471,6 +483,8 @@
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/owes -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/owes">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>owes</rdfs:label>
         <skos:definition>links a party to a debt that they owe</skos:definition>
@@ -493,10 +507,54 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Accrual">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/ThingInRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Interest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>accrual</rdfs:label>
         <skos:definition>the process of accumulating interest or other income that has been earned but not paid</skos:definition>
         <cmns-av:explanatoryNote>There are legal contractual terms for the accrual of interest, as distinct from the payment of interest.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Roles/ThingInRole"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isAmortizationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>amortization</rdfs:label>
+        <skos:definition>the process of reduction of debt or other costs through periodic charges to assets or liabilities, such as through principal payments on mortgages</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Borrower -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Borrower">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ContractParty"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Customer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/owes"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>borrower</rdfs:label>
+        <skos:definition>party to a credit agreement that is obligated to repay the amount borrowed (principal) with interest and other fees according to the terms of the instrument</skos:definition>
     </owl:Class>
     
 
@@ -523,6 +581,13 @@
                 <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Designators/isDefinedIn"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/BorrowerIdentificationScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Identifiers/identifies"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Borrower"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
@@ -582,21 +647,25 @@
     
 
 
-    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/CollateralAgreement -->
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/CollateralAgreement">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/WrittenContract"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Obligee"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/involves"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Collateral"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwed"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/hasIdentity"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/LegalPerson"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
-        <rdfs:label>collateral agreement</rdfs:label>
-        <skos:definition>written contract that specifies terms, over and above those specified in a promissory note, loan, or other debt instrument, under which the collateral must be made available to the lender</skos:definition>
-        <skos:example>Examples include deeds of trust and uniform commercial code (UCC) agreements.</skos:example>
+        <rdfs:label>creditor</rdfs:label>
+        <skos:definition>a party to whom an obligation, such as an amount of money, or good, or performance of some service exists</skos:definition>
     </owl:Class>
     
 
@@ -610,6 +679,54 @@
         <rdfs:label>day-count convention</rdfs:label>
         <skos:definition>a business recurrence interval convention that is used to calculate the number of days in an interest payment, which applies to the amount of accrued interest or the present value for debt instruments</skos:definition>
         <cmns-av:explanatoryNote>Day-count conventions apply to swaps, mortgages and forward rate agreements as well as bonds, each of which has its own day-count convention, which varies depending on the type of instrument, whether the interest rate is fixed or floating, and the country of issuance. Among the most common conventions are 30/360 or 365, actual/360 or 365, and actual/actual. A 30/360 convention assumes 30 days in a month and 360 days in a year. An actual/360 convention assumes the actual number of days in the given month and 360 days in the year. An actual/ actual convention uses the actual number of days in the given interest period and year.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Commitment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwedBy"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isOwedTo"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>debt</rdfs:label>
+        <skos:definition>an obligation to pay something, such as an amount of money, good, service, or instrument</skos:definition>
+        <cmns-av:explanatoryNote>In cases where the debtor and payer are the same legal person, then a debt is equivalent to a payment obligation.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debtor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Obligor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/hasIdentity"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/LegalPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/owes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>debtor</rdfs:label>
+        <skos:definition>a party that owes a debt or other obligation to another party</skos:definition>
     </owl:Class>
     
 
@@ -640,6 +757,86 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/FullAmortization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/FullAmortization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>full amortization</rdfs:label>
+        <skos:definition>amortization in which the very last payment (which, if the schedule was calculated correctly, should be equal to all others) pays off all remaining principal and interest on the loan</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Interest -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Interest">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryAmount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isInterestOn"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/hasInterestRate"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/InterestRate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/hasDatePeriod"/>
+                <owl:allValuesFrom rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/DatePeriod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>interest</rdfs:label>
+        <skos:definition>the cost of using credit, or another&apos;s money, expressed as a rate per period of time, payable by a debtor to a creditor in consideration of the credit extended to the debtor</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Lender -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Lender">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Creditor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/ContractParty"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>lender</rdfs:label>
+        <skos:definition>a party that extends credit or money to a borrower with the expectation of being repaid, usually with interest</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/ManagedInterestRate -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/ManagedInterestRate">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/VariableInterestRate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isManagedBy"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/FinancialServiceProvider"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>managed interest rate</rdfs:label>
+        <skos:definition>a variable interest rate charged by a financial institution for borrowing that is not prescribed as a margin over base rate but is set from time to time by the institution</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/NegativeAmortization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/NegativeAmortization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>negative amortization</rdfs:label>
+        <skos:definition>amortization in which the payments made do not cover the interest due</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/NonPhysicalCollateral -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/NonPhysicalCollateral">
@@ -656,6 +853,17 @@
         <rdfs:label>non-physical collateral</rdfs:label>
         <skos:definition>asset pledged as collateral that is a financial asset, rather than physical asset</skos:definition>
         <skos:example>Examples of non-physical collateral include, but are not limited to, bank deposits, accounts receivable, stocks, bonds, other securities, and the like.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/PartialAmortization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/PartialAmortization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Amortization"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>partial amortization</rdfs:label>
+        <skos:definition>amortization in which the very last payment the last payment due may be a large balloon payment of all remaining principal and interest</skos:definition>
     </owl:Class>
     
 
@@ -679,10 +887,42 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Principal -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Principal">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryAmount"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/NegotiableCommodity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/isPrincipalOf"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/Debt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
+        <rdfs:label>principal</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.finra.org/investors/bond-glossary#p"/>
+        <skos:definition>with respect to a debt: the value of an obligation, such as a bond or loan, raised and that must be repaid at maturity; for investments: the original amount of money invested, separate from any associated interest, dividends or capital gains</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/RateResetTimeOfDay -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/RateResetTimeOfDay">
         <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/TimeOfDay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/hasBusinessCenter"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/BusinessCenter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/"/>
         <rdfs:label>rate reset time of day</rdfs:label>
         <skos:definition>time of day that an interest rate is reset, as indicated by some interest rate authority or market data provider</skos:definition>

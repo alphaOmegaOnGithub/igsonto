@@ -586,6 +586,18 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentificationScheme -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/TaxIdentificationScheme">
+        <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/Commons/Identifiers/IdentificationScheme"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"/>
+        <rdfs:label>tax identification scheme</rdfs:label>
+        <skos:definition>identification scheme used to identify taxpayers in some jurisdiction</skos:definition>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.oecd-ilibrary.org/taxation/standard-for-automatic-exchange-of-financial-account-information-in-tax-matters-second-edition_9789264267992-en</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/Undergoer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/Undergoer">

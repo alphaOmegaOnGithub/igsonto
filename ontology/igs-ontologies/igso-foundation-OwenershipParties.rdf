@@ -219,6 +219,17 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/DirectConsolidation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/DirectConsolidation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/EntityOwnership"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/"/>
+        <rdfs:label>direct consolidation</rdfs:label>
+        <skos:definition>direct ownership recorded as accounting consolidation, by some party of some other formal organization</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/EntityOwner -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/EntityOwner">
@@ -285,6 +296,53 @@
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/"/>
         <rdfs:label>entity ownership</rdfs:label>
         <skos:definition>ownership by some party of an interest in some non-governmental formal organization</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/ForeignBranchOwnership -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/ForeignBranchOwnership">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/EntityOwnership"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/"/>
+        <rdfs:label>foreign branch ownership</rdfs:label>
+        <skos:definition>ownership by some party of some formal organization or organizational sub-unit that is a foreign affiliate and legally part of the owning entity</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/InvestmentEquity -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/InvestmentEquity">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/AccountingEquity/OwnersEquity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isHeldBy"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/Investor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/"/>
+        <rdfs:label>investment equity</rdfs:label>
+        <skos:definition>equity that represents an ownership interest in some entity, but may or may not take the form of shareholders&apos;s equity</skos:definition>
+        <skos:editorialNote>Typically an investment in some entity may take the form of shares (issued or privately held), i.e., shareholders&apos; equity, or it may take the form of some capital amount which is not reflected in shareholders&apos; equity. In each case, there would typically be a contractual basis for the investment setting out what controls or other benefits accrue to the investor.</skos:editorialNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/Investor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/Investor">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/EntityOwner"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/holds"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/InvestmentEquity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/"/>
+        <rdfs:label>investor</rdfs:label>
+        <skos:definition>a party that owns some stake in some organization by way of investment</skos:definition>
+        <skos:editorialNote>This is regardless of whether or not the investor is also a constitutional owner (e.g. shareholder) in the entity.</skos:editorialNote>
     </owl:Class>
     
 
