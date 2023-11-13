@@ -1,0 +1,302 @@
+@prefix : <http://www.semanticweb.org/igonto/information#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix information: <http://www.semanticweb.org/igonto/information> .
+@base <http://www.semanticweb.org/igonto/information#> .
+
+<http://www.semanticweb.org/igonto/information> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/igonto/information#classifiesData
+:classifiesData rdf:type owl:ObjectProperty ;
+                rdfs:domain :Record ;
+                rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#containsCost
+:containsCost rdf:type owl:ObjectProperty ;
+              rdfs:domain :Data ;
+              rdfs:range :Cost .
+
+
+###  http://www.semanticweb.org/igonto/information#containsFile
+:containsFile rdf:type owl:ObjectProperty ;
+              rdfs:domain :Container ,
+                          :Folder ;
+              rdfs:range :File .
+
+
+###  http://www.semanticweb.org/igonto/information#containsRisk
+:containsRisk rdf:type owl:ObjectProperty ;
+              rdfs:domain :Data ;
+              rdfs:range :Risk .
+
+
+###  http://www.semanticweb.org/igonto/information#containsValue
+:containsValue rdf:type owl:ObjectProperty ;
+               rdfs:domain :Data ;
+               rdfs:range :Value .
+
+
+###  http://www.semanticweb.org/igonto/information#definesSchedule
+:definesSchedule rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Rule ;
+                 rdfs:range :Schedule .
+
+
+###  http://www.semanticweb.org/igonto/information#employsRule
+:employsRule rdf:type owl:ObjectProperty ;
+             rdfs:domain :Policy ;
+             rdfs:range :Rule .
+
+
+###  http://www.semanticweb.org/igonto/information#grantsPriviligeToRole
+:grantsPriviligeToRole rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Policy ;
+                       rdfs:range :Role .
+
+
+###  http://www.semanticweb.org/igonto/information#hasEdition
+:hasEdition rdf:type owl:ObjectProperty ;
+            rdfs:domain :Document ;
+            rdfs:range :Edition .
+
+
+###  http://www.semanticweb.org/igonto/information#hasPrivilige
+:hasPrivilige rdf:type owl:ObjectProperty ;
+              rdfs:domain :Role ;
+              rdfs:range :Privilige .
+
+
+###  http://www.semanticweb.org/igonto/information#hasRecordControlStructure
+:hasRecordControlStructure rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Record ;
+                           rdfs:range :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#hasRendition
+:hasRendition rdf:type owl:ObjectProperty ;
+              rdfs:domain :Document ;
+              rdfs:range :Rendition .
+
+
+###  http://www.semanticweb.org/igonto/information#hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:domain :Item ;
+            rdfs:range :Version .
+
+
+###  http://www.semanticweb.org/igonto/information#needsPermission
+:needsPermission rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Data ;
+                 rdfs:range :Permission .
+
+
+###  http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure
+:usedOnRecordControlStructure rdf:type owl:ObjectProperty ;
+                              rdfs:domain :Schedule ;
+                              rdfs:range :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#usesDataDictionary
+:usesDataDictionary rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Record ;
+                    rdfs:range :Data_Dictionary .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/igonto/information#Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Audit_Data
+:Audit_Data rdf:type owl:Class ;
+            rdfs:subClassOf :Sensitive_Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Audit_Trail
+:Audit_Trail rdf:type owl:Class ;
+             rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Category
+:Category rdf:type owl:Class ;
+          rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Container
+:Container rdf:type owl:Class ;
+           rdfs:subClassOf :Record .
+
+
+###  http://www.semanticweb.org/igonto/information#Content
+:Content rdf:type owl:Class ;
+         rdfs:subClassOf :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Control_Data
+:Control_Data rdf:type owl:Class ;
+              rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Cost
+:Cost rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Data
+:Data rdf:type owl:Class ;
+      owl:equivalentClass :Item .
+
+
+###  http://www.semanticweb.org/igonto/information#Data_Dictionary
+:Data_Dictionary rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Document
+:Document rdf:type owl:Class ;
+          rdfs:subClassOf :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Edition
+:Edition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#File
+:File rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Folder
+:Folder rdf:type owl:Class ;
+        rdfs:subClassOf :Container .
+
+
+###  http://www.semanticweb.org/igonto/information#Goal
+:Goal rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Hold
+:Hold rdf:type owl:Class ;
+      rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Information
+:Information rdf:type owl:Class ;
+             rdfs:subClassOf :Metadata .
+
+
+###  http://www.semanticweb.org/igonto/information#Item
+:Item rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Metadata
+:Metadata rdf:type owl:Class ;
+          rdfs:subClassOf :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Metric
+:Metric rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#PII_Data
+:PII_Data rdf:type owl:Class ;
+          rdfs:subClassOf :Sensitive_Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Permission
+:Permission rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Personnel_Files
+:Personnel_Files rdf:type owl:Class ;
+                 rdfs:subClassOf :Sensitive_Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Policy
+:Policy rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Privilige
+:Privilige rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Record
+:Record rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Record_Control_Structure
+:Record_Control_Structure rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Rendition
+:Rendition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Report
+:Report rdf:type owl:Class ;
+        rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Retention
+:Retention rdf:type owl:Class ;
+           rdfs:subClassOf :Record_Control_Structure .
+
+
+###  http://www.semanticweb.org/igonto/information#Risk
+:Risk rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Role
+:Role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Rule
+:Rule rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Schedule
+:Schedule rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Sensitive_Data
+:Sensitive_Data rdf:type owl:Class ;
+                rdfs:subClassOf :Control_Data .
+
+
+###  http://www.semanticweb.org/igonto/information#Value
+:Value rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/information#Version
+:Version rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/igonto/information#Archival_Information
+:Archival_Information rdf:type owl:NamedIndividual ,
+                               :Information .
+
+
+###  http://www.semanticweb.org/igonto/information#Content_Information
+:Content_Information rdf:type owl:NamedIndividual ,
+                              :Information .
+
+
+###  http://www.semanticweb.org/igonto/information#Description
+:Description rdf:type owl:NamedIndividual ,
+                      :Information .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
