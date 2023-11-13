@@ -1,32 +1,55 @@
 IGS - Domain Concepts/Classes
 	Role:
-		Individuals: CEO, 
-	
-	Agent
-	Board
-		Shareholders: disclose, monitors,
-		Senior Executive Team: develops_straegy, defines_desirable_behavior
+		Individuals: CEO,CFO,CISO,CCO,CPO (Chief Compliance/Privacy officer) 
+	Agent: Organization,Person,LegalEntity,SoftwareComponent, Process,  
+	Shareholders: 
+	Stragegy: specifies Goals, specifies Objectives   
+	DesirableBehavior
+	Board: 
+			disclose Goals 
+			specifies Objectives 
+			monitors Progress
+			monitors Maturity Level 
+		Senior Executive Team: 
+			develops max 1  Strategy  
+			defines_desirable some Behavior
 	Organization
-		Enterprise
-		Corporation
+		Enterprise: has_member BusinessUnit   
+			a Corporation: has Business, 
+			a Company: has_matury_level Domain: MaturityLevel{Micro,Small,Medium,Large }
 			Department
 				Management
-				Legal
-				RecordsManagement
-				PrivacyAndCompliance
-				Architecture
-				Development
-				IT
-					BusinessSupportServices
-					OperationsSupportServices	
-			BusinessUnit
-				InformationManagement
-				EnterpriseContentManagement
-				InformationGovernanceServices
-					RecordsManagementServices
-					eDiscoveryServices
-	Stragegy 
-	DesirableBehavior
+				Legal: handles Cases, mandates Hold, submitts DataRequest
+				RecordsManagement: defines Classification, defines Schedules
+				Privacy:  defines Policy: consists_of Rules, mandates StorageLocation, 
+					      depends_on Regulation 
+				Security: defines SecurityAttribute, defines AccessControl 
+				Compliance: defines 
+				Architecture: 
+					designs Solution: 
+						IGSSolution is_composed_of IGSComponent 
+						ECMSolution is_composed_of ECMComponent  
+						IMSSolution is_composed of IMSComponent
+						provides IGSService
+					designs Component: 
+					IGSComponent is_composed_of {RecordsManagement,eDiscovery,Classification}
+					ECMComponent is_composed_of {Respository,Catalog,ObjectStore}
+					IMSComponent is_composed_of {RelationalSchema,FulltextDocumentModel} 
+				    designs Service:   IGSService					
+				Development:
+					develops Solution:  IGSSolution
+					develops Component: IGSComponent					
+					develops Service:   IGSService
+				IT: provides Service 
+					BusinessSupportService: a  Service
+					OperationsSupportService: a  Service
+					PlatformService: a  Service					
+				BusinessUnit
+				InformationManagement: 		 	implements InformationManagementService 
+				EnterpriseContentManagement: 	implements EnterpriseContentManagementService
+				InformationGovernanceServices: 	implements InformationGovernanceService
+					RecordsManagementServices: 	implements RecordsManagementService
+					eDiscoveryServices:			implements eDiscoveryService
 	Data
 		Metadata: Index: RelationalIndex, FullTextIndex   
 		Records: Classification,   
@@ -35,22 +58,26 @@ IGS - Domain Concepts/Classes
 		Asset: 
 			Information Assets: 
 			has Individuals:{Human, Financial, Physical, Intellect, Relation, IT}
-			requires governance mechanism 
+			requires GovernanceMechanism 
 				has Individuals:{planning, policies, program, budgets, measure,..]	
 	Information Governance Process Maturity Model
-		Data has_value, _cost, _risk; 
+		Data has_value, has_cost, has_risk;  
 			Individulas: OfficeDocs, ProductResearch, Sales/Customer, HR, Financials, Messaging(eMails, Socials,), ITCosts, Risk
-	Cost_To_Value_Gap: 
-	Risk_To_Value_Gap: 
 	TimePeriod: {Month, Year,Decade, Century}
 	Analytics_Inflection_Point: Realize/Determine Value as Content erodes, 
-	Archiving & Tiering inflection point: Align Cost as Value declines, 
-	Disposal inflection point: eliminate Cost when no Value
-	Data Collection
-	Data Quality
-	Data Access
-	Data Lifecycle: {Classification, Retention, Disposition, Hold, Transfer} 
-		Process: {Classify, Retain, Dispose, Hold, Transfer}
+		minimize Cost_To_Value_Gap:  
+		minimize Risk_To_Value_Gap: 
+	Archiving & Tiering inflection point: 
+		Align Cost as Value declines 
+	Disposal inflection point: 
+		eliminate Cost when no Value
+	DataCollection
+	DataQuality
+	DataAccess
+	DataLifecycle: {Collection, Classification, Store, Archive, Retention, Disposition, Hold, Transfer} 
+	Process: {Collect, Classify, Retain, Store, Archive, Dispose, Hold, Transfer}
+	Service: {Collection, Classification, Store, Search, Archive, Retention, Disposition, Hold, Transfer}	
+
 	Principles Principles
 		Accountability
 		Transparency
@@ -62,8 +89,8 @@ IGS - Domain Concepts/Classes
 			Individuals{ISO19600 - Compliance management systems } 
 		Availability: Access, Query,  Search, Store, Acrhive, Transfer
 		Retention : Policy, Rule, Schedule
-		Disposition: Policy, Rule, Schedule, Hold
-		
+		Disposition: Policy, Rule, Schedule, Hold		
+
 ################################################################################ 
  ## Object properties (relations)
  has_value, has_cost, has_risk, is governed by an IGProgram, is metadata of, is tagging of -> data 
