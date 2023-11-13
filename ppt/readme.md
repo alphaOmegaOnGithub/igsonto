@@ -1,7 +1,7 @@
 * [Governance Semantic Model](ppt/IGSO-Frameworksv0.9/Folie1.JPG) 
 * [Organization Semantic Model (ORG)](ppt/IGSO-Frameworksv0.9/Folie2.JPG) 
 * [Information Semantic Model (INF)](ppt/IGSO-Frameworksv0.9/Folie3.JPG) 
-* [System Semantic Model](ppt/IGSO-Frameworksv0.9/Folie4JPG) 
+* [System Semantic Model](ppt/IGSO-Frameworksv0.9/Folie4.JPG) 
 * [Data & Policy Semantic Model (ORG)](ppt/IGSO-Frameworksv0.9/Folie5.JPG) 
 * [Organization Model (DPM)](ppt/IGSO-Frameworksv0.9/Folie6.JPG) 
 * [Information Governance Model](ppt/IGSO-Frameworksv0.9/Folie7.JPG) 
