@@ -1,0 +1,1473 @@
+@prefix : <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/igonto/jurisdiction#> .
+
+<http://www.semanticweb.org/igonto/jurisdiction> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction
+:belongsToJurisdiction rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Country ;
+                       rdfs:range :Jurisdiction .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#hasArticles
+:hasArticles rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#hasRegulation
+:hasRegulation rdf:type owl:ObjectProperty ;
+               rdfs:domain :Jurisdiction ;
+               rdfs:range :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#includesKeyword
+:includesKeyword rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesArticle
+:involvesArticle rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Capability ;
+                 rdfs:range :GDPR_Articles .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy
+:isRegulatedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Country ;
+               rdfs:range :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#operatesIn
+:operatesIn rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Enterprise ;
+            rdfs:range :Country .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Country
+:Country rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Regulation
+:Regulation rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryCapital
+:countryCapital rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryCurrency
+:countryCurrency rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryISOCode
+:countryISOCode rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryLanguage
+:countryLanguage rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#countryTimezone
+:countryTimezone rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#provenance
+:provenance rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationAuthority
+:regulationAuthority rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationDescription
+:regulationDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationEffectiveDate
+:regulationEffectiveDate rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationExpirationDate
+:regulationExpirationDate rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationLastUpdate
+:regulationLastUpdate rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#regulationName
+:regulationName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf :Regulation .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Capability
+:Capability rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Country
+:Country rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#EU
+:EU rdf:type owl:Class ;
+    rdfs:subClassOf :Country .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Enterprise
+:Enterprise rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR
+:GDPR rdf:type owl:Class ;
+      rdfs:subClassOf :Regulation .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles
+:GDPR_Articles rdf:type owl:Class ;
+               rdfs:subClassOf :GDPR .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters
+:GDPR_Chapters rdf:type owl:Class ;
+               rdfs:subClassOf :GDPR .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords
+:GDPR_Keywords rdf:type owl:Class ;
+               rdfs:subClassOf :GDPR .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#IG_Capability
+:IG_Capability rdf:type owl:Class ;
+               rdfs:subClassOf :Capability .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction
+:Jurisdiction rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Regulation
+:Regulation rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Access
+:Access rdf:type owl:NamedIndividual ,
+                 :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Archieving
+:Archieving rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_1
+:Article_1 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :provenance "https://gdpr-info.eu/art-1-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_10
+:Article_10 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Processing ;
+            :provenance "https://gdpr-info.eu/art-10-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_11
+:Article_11 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Processing ;
+            :provenance "https://gdpr-info.eu/art-11-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_12
+:Article_12 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Information ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-12-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_13
+:Article_13 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Information ;
+            :provenance "https://gdpr-info.eu/art-13-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_14
+:Article_14 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Information ;
+            :provenance "https://gdpr-info.eu/art-14-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_15
+:Article_15 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Access ,
+                             :Data ,
+                             :Data_Subject ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-15-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_16
+:Article_16 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-16-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_17
+:Article_17 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Erasure ,
+                             :Rectification ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-17-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_18
+:Article_18 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Processing ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-18-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_19
+:Article_19 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Erasure ,
+                             :Information ,
+                             :Rectification ;
+            :provenance "https://gdpr-info.eu/art-19-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_2
+:Article_2 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :provenance "https://gdpr-info.eu/art-2-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_20
+:Article_20 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Portability ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-20-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_21
+:Article_21 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Subject ,
+                             :Processing ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-21-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_22
+:Article_22 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Profiling ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-22-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_23
+:Article_23 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Restrictions ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-23-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_24
+:Article_24 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-24-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_25
+:Article_25 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Processing ;
+            :provenance "https://gdpr-info.eu/art-25-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_26
+:Article_26 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-26-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_27
+:Article_27 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :European_Union ,
+                             :Processor ;
+            :provenance "https://gdpr-info.eu/art-27-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_28
+:Article_28 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :European_Union ,
+                             :Processing ,
+                             :Processor ;
+            :provenance "https://gdpr-info.eu/art-28-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_29
+:Article_29 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :European_Union ,
+                             :Processing ,
+                             :Processor ;
+            :provenance "https://gdpr-info.eu/art-29-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_3
+:Article_3 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :provenance "https://gdpr-info.eu/art-3-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_30
+:Article_30 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Processing ,
+                             :Processor ,
+                             :Record ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-30-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_31
+:Article_31 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Processor ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-31-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_32
+:Article_32 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data ,
+                             :Data_Protection ,
+                             :Processing ,
+                             :Processor ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-32-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_33
+:Article_33 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data ,
+                             :Data_Breach ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-33-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_34
+:Article_34 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data ,
+                             :Data_Breach ,
+                             :Data_Subject ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-34-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_35
+:Article_35 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Data_Protection_Officer ,
+                             :Impact_Assessment ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-35-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_36
+:Article_36 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Processing ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-36-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_37
+:Article_37 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data_Protection_Officer ,
+                             :Processor ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-37-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_38
+:Article_38 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data_Protection_Officer ,
+                             :Data_Subject ,
+                             :Processor ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-38-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_39
+:Article_39 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection_Officer ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-39-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_4
+:Article_4 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :provenance "https://gdpr-info.eu/art-4-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_40
+:Article_40 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Code_Of_Conduct ,
+                             :Controller ,
+                             :Principles ,
+                             :Processor ;
+            :provenance "https://gdpr-info.eu/art-40-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_41
+:Article_41 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Code_Of_Conduct ,
+                             :Monitoring ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-41-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_42
+:Article_42 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Certification ,
+                             :Controller ,
+                             :European_Union ,
+                             :Processor ;
+            :provenance "https://gdpr-info.eu/art-42-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_43
+:Article_43 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Certification ,
+                             :European_Union ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-43-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_44
+:Article_44 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Principles ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-44-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_45
+:Article_45 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Data_Protection ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-45-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_46
+:Article_46 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data_Protection ,
+                             :Processor ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-46-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_47
+:Article_47 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Supervisor ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-47-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_48
+:Article_48 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Union ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-48-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_49
+:Article_49 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Data_Subject ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-49-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_5
+:Article_5 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :includesKeyword :Data ,
+                            :Principles ,
+                            :Processing ;
+           :provenance "https://gdpr-info.eu/art-5-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_50
+:Article_50 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Supervisor ,
+                             :Transfer ;
+            :provenance "https://gdpr-info.eu/art-50-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_51
+:Article_51 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Union ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-51-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_52
+:Article_52 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Competence ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-52-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_53
+:Article_53 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Union ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-53-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_54
+:Article_54 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Union ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-54-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_55
+:Article_55 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Competence ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-55-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_56
+:Article_56 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Competence ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-56-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_57
+:Article_57 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Monitoring ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-57-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_58
+:Article_58 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Powers ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-58-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_59
+:Article_59 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Reports ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-59-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_6
+:Article_6 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :includesKeyword :European_Union ,
+                            :Processing ;
+           :provenance "https://gdpr-info.eu/art-6-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_60
+:Article_60 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Cooperation ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-60-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_61
+:Article_61 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-61-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_62
+:Article_62 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Joint_Operations ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-62-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_63
+:Article_63 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Consistency ;
+            :provenance "https://gdpr-info.eu/art-63-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_64
+:Article_64 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-64-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_65
+:Article_65 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Responsibility ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-65-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_66
+:Article_66 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Right ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-66-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_67
+:Article_67 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Information ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-67-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_68
+:Article_68 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ;
+            :provenance "https://gdpr-info.eu/art-68-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_69
+:Article_69 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Independence ;
+            :provenance "https://gdpr-info.eu/art-69-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_7
+:Article_7 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :includesKeyword :Data_Subject ,
+                            :Right ;
+           :provenance "https://gdpr-info.eu/art-7-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_70
+:Article_70 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-70-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_71
+:Article_71 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Reports ;
+            :provenance "https://gdpr-info.eu/art-71-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_72
+:Article_72 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-72-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_73
+:Article_73 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Chair ,
+                             :European_Data_Protection_Board ;
+            :provenance "https://gdpr-info.eu/art-73-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_74
+:Article_74 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Chair ,
+                             :Responsibility ;
+            :provenance "https://gdpr-info.eu/art-74-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_75
+:Article_75 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Data_Protection_Board ,
+                             :Responsibility ,
+                             :Secretariat ;
+            :provenance "https://gdpr-info.eu/art-75-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_76
+:Article_76 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Confidentiality ,
+                             :European_Data_Protection_Board ;
+            :provenance "https://gdpr-info.eu/art-76-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_77
+:Article_77 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Right ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-77-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_78
+:Article_78 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Right ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-78-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_79
+:Article_79 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Controller ,
+                             :Data_Subject ,
+                             :Processor ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-79-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_8
+:Article_8 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :includesKeyword :Data_Subject ,
+                            :Right ;
+           :provenance "https://gdpr-info.eu/art-8-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_80
+:Article_80 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Subject ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-80-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_81
+:Article_81 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Proceedings ,
+                             :Suspension ;
+            :provenance "https://gdpr-info.eu/art-81-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_82
+:Article_82 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Compensation ,
+                             :Data_Subject ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-82-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_83
+:Article_83 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Fines ,
+                             :Principles ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-83-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_84
+:Article_84 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Penalties ;
+            :provenance "https://gdpr-info.eu/art-84-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_85
+:Article_85 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ,
+                             :Processing ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-85-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_86
+:Article_86 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data ,
+                             :Documents ,
+                             :Processing ;
+            :provenance "https://gdpr-info.eu/art-86-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_87
+:Article_87 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :National_ID_Number ,
+                             :Processing ;
+            :provenance "https://gdpr-info.eu/art-87-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_88
+:Article_88 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Employee ,
+                             :Processing ,
+                             :Right ;
+            :provenance "https://gdpr-info.eu/art-88-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_89
+:Article_89 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Archieving ,
+                             :Data ,
+                             :Principles ,
+                             :Processing ;
+            :provenance "https://gdpr-info.eu/art-89-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_9
+:Article_9 rdf:type owl:NamedIndividual ,
+                    :GDPR_Articles ;
+           :includesKeyword :Data ,
+                            :Processing ;
+           :provenance "https://gdpr-info.eu/art-9-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_90
+:Article_90 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :European_Union ,
+                             :Supervisor ;
+            :provenance "https://gdpr-info.eu/art-90-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_91
+:Article_91 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Data_Protection ;
+            :provenance "https://gdpr-info.eu/art-91-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_92
+:Article_92 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Commission ,
+                             :Delegation ;
+            :provenance "https://gdpr-info.eu/art-92-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_93
+:Article_93 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :includesKeyword :Commission ,
+                             :Committee ;
+            :provenance "https://gdpr-info.eu/art-93-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_94
+:Article_94 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-94-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_95
+:Article_95 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-95-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_96
+:Article_96 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-96-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_97
+:Article_97 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-97-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_98
+:Article_98 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-98-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Article_99
+:Article_99 rdf:type owl:NamedIndividual ,
+                     :GDPR_Articles ;
+            :provenance "https://gdpr-info.eu/art-99-gdpr/" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Certification
+:Certification rdf:type owl:NamedIndividual ,
+                        :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Chair
+:Chair rdf:type owl:NamedIndividual ,
+                :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Code_Of_Conduct
+:Code_Of_Conduct rdf:type owl:NamedIndividual ,
+                          :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Commission
+:Commission rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Committee
+:Committee rdf:type owl:NamedIndividual ,
+                    :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Compensation
+:Compensation rdf:type owl:NamedIndividual ,
+                       :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Competence
+:Competence rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Confidentiality
+:Confidentiality rdf:type owl:NamedIndividual ,
+                          :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Consistency
+:Consistency rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Controller
+:Controller rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Cooperation
+:Cooperation rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data
+:Data rdf:type owl:NamedIndividual ,
+               :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Breach
+:Data_Breach rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Protection
+:Data_Protection rdf:type owl:NamedIndividual ,
+                          :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer
+:Data_Protection_Officer rdf:type owl:NamedIndividual ,
+                                  :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Subject
+:Data_Subject rdf:type owl:NamedIndividual ,
+                       :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Delegation
+:Delegation rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Documents
+:Documents rdf:type owl:NamedIndividual ,
+                    :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#EU
+:EU rdf:type owl:NamedIndividual ,
+             :Jurisdiction ;
+    :hasRegulation :GDPR .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Employee
+:Employee rdf:type owl:NamedIndividual ,
+                   :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Erasure
+:Erasure rdf:type owl:NamedIndividual ,
+                  :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board
+:European_Data_Protection_Board rdf:type owl:NamedIndividual ,
+                                         :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#European_Union
+:European_Union rdf:type owl:NamedIndividual ,
+                         :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Fines
+:Fines rdf:type owl:NamedIndividual ,
+                :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR
+:GDPR rdf:type owl:NamedIndividual ,
+               :GDPR ;
+      :hasArticles :Article_1 ,
+                   :Article_10 ,
+                   :Article_11 ,
+                   :Article_12 ,
+                   :Article_13 ,
+                   :Article_14 ,
+                   :Article_15 ,
+                   :Article_16 ,
+                   :Article_17 ,
+                   :Article_18 ,
+                   :Article_19 ,
+                   :Article_2 ,
+                   :Article_20 ,
+                   :Article_21 ,
+                   :Article_22 ,
+                   :Article_23 ,
+                   :Article_24 ,
+                   :Article_25 ,
+                   :Article_26 ,
+                   :Article_27 ,
+                   :Article_28 ,
+                   :Article_29 ,
+                   :Article_3 ,
+                   :Article_30 ,
+                   :Article_31 ,
+                   :Article_32 ,
+                   :Article_33 ,
+                   :Article_34 ,
+                   :Article_35 ,
+                   :Article_36 ,
+                   :Article_37 ,
+                   :Article_38 ,
+                   :Article_39 ,
+                   :Article_4 ,
+                   :Article_40 ,
+                   :Article_41 ,
+                   :Article_42 ,
+                   :Article_43 ,
+                   :Article_44 ,
+                   :Article_45 ,
+                   :Article_46 ,
+                   :Article_47 ,
+                   :Article_48 ,
+                   :Article_49 ,
+                   :Article_5 ,
+                   :Article_50 ,
+                   :Article_51 ,
+                   :Article_52 ,
+                   :Article_53 ,
+                   :Article_54 ,
+                   :Article_55 ,
+                   :Article_56 ,
+                   :Article_57 ,
+                   :Article_58 ,
+                   :Article_59 ,
+                   :Article_6 ,
+                   :Article_60 ,
+                   :Article_61 ,
+                   :Article_62 ,
+                   :Article_63 ,
+                   :Article_64 ,
+                   :Article_65 ,
+                   :Article_66 ,
+                   :Article_67 ,
+                   :Article_68 ,
+                   :Article_69 ,
+                   :Article_7 ,
+                   :Article_70 ,
+                   :Article_71 ,
+                   :Article_72 ,
+                   :Article_73 ,
+                   :Article_74 ,
+                   :Article_75 ,
+                   :Article_76 ,
+                   :Article_77 ,
+                   :Article_78 ,
+                   :Article_79 ,
+                   :Article_8 ,
+                   :Article_80 ,
+                   :Article_81 ,
+                   :Article_82 ,
+                   :Article_83 ,
+                   :Article_84 ,
+                   :Article_85 ,
+                   :Article_86 ,
+                   :Article_87 ,
+                   :Article_88 ,
+                   :Article_89 ,
+                   :Article_9 ,
+                   :Article_90 ,
+                   :Article_91 ,
+                   :Article_92 ,
+                   :Article_93 ,
+                   :Article_94 ,
+                   :Article_95 ,
+                   :Article_96 ,
+                   :Article_97 ,
+                   :Article_98 ,
+                   :Article_99 .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_1
+:GDPR_Chapter_1 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_10
+:GDPR_Chapter_10 rdf:type owl:NamedIndividual ,
+                          :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_11
+:GDPR_Chapter_11 rdf:type owl:NamedIndividual ,
+                          :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_2
+:GDPR_Chapter_2 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_3
+:GDPR_Chapter_3 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_4
+:GDPR_Chapter_4 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_5
+:GDPR_Chapter_5 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_6
+:GDPR_Chapter_6 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_7
+:GDPR_Chapter_7 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_8
+:GDPR_Chapter_8 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_9
+:GDPR_Chapter_9 rdf:type owl:NamedIndividual ,
+                         :GDPR_Chapters .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Germany
+:Germany rdf:type owl:NamedIndividual ,
+                  :EU ;
+         :belongsToJurisdiction :EU ;
+         :isRegulatedBy :GDPR .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment
+:Impact_Assessment rdf:type owl:NamedIndividual ,
+                            :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Independence
+:Independence rdf:type owl:NamedIndividual ,
+                       :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Information
+:Information rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Joint_Operations
+:Joint_Operations rdf:type owl:NamedIndividual ,
+                           :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Lawfulness
+:Lawfulness rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Monitoring
+:Monitoring rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number
+:National_ID_Number rdf:type owl:NamedIndividual ,
+                             :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Penalties
+:Penalties rdf:type owl:NamedIndividual ,
+                    :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Portability
+:Portability rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Powers
+:Powers rdf:type owl:NamedIndividual ,
+                 :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Principles
+:Principles rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Proceedings
+:Proceedings rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Processing
+:Processing rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Processor
+:Processor rdf:type owl:NamedIndividual ,
+                    :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Profiling
+:Profiling rdf:type owl:NamedIndividual ,
+                    :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Record
+:Record rdf:type owl:NamedIndividual ,
+                 :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Rectification
+:Rectification rdf:type owl:NamedIndividual ,
+                        :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Reports
+:Reports rdf:type owl:NamedIndividual ,
+                  :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Responsibility
+:Responsibility rdf:type owl:NamedIndividual ,
+                         :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Restrictions
+:Restrictions rdf:type owl:NamedIndividual ,
+                       :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Right
+:Right rdf:type owl:NamedIndividual ,
+                :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Secretariat
+:Secretariat rdf:type owl:NamedIndividual ,
+                      :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Supervisor
+:Supervisor rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Supervisor_Authority_1
+:Supervisor_Authority_1 rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Suspension
+:Suspension rdf:type owl:NamedIndividual ,
+                     :GDPR_Keywords .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Transfer
+:Transfer rdf:type owl:NamedIndividual ,
+                   :GDPR_Keywords .
+
+
+[ rdfs:comment ""
+] .
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
