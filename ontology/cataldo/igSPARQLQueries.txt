@@ -1,0 +1,34 @@
+
+
+
+# Returns every capability, their requirements and what ISOs and GDPR articles are involved.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX igonto: <http://www.semanticweb.org/IG/Governance#>
+
+SELECT ?maturityLevel ?capability ?description 
+       (GROUP_CONCAT(DISTINCT REPLACE(STR(?objectType), "http://www.semanticweb.org/IG/Governance#", "") ; SEPARATOR=", ") AS ?technicalRequirement)
+       (GROUP_CONCAT(DISTINCT REPLACE(STR(?ISO), "http://www.semanticweb.org/IG/Governance#", "") ; SEPARATOR=", ") AS ?ISOs)
+       (GROUP_CONCAT(DISTINCT REPLACE(STR(?articles), "http://www.semanticweb.org/IG/Governance#", "") ; SEPARATOR=", ") AS ?GDPR_Articles)
+       ?framework ?process 
+       ?comment
+WHERE {
+  ?annotation rdf:type owl:Axiom;
+              owl:annotatedSource ?capability;
+              owl:annotatedProperty igonto:needsTechnicalRequirement ;
+              owl:annotatedTarget ?object;
+              rdfs:comment ?comment.
+  OPTIONAL { ?capability igonto:hasGoal ?goal }.
+  ?capability igonto:linkedToFramework ?framework.
+  OPTIONAL { ?capability igonto:linkedToProcess ?process }.
+  ?capability igonto:capabilityDescription ?description.
+  ?capability igonto:inMaturityLevel ?maturityLevel.
+  OPTIONAL { ?object a ?objectType }.
+  OPTIONAL { ?object igonto:involvesArticle ?articles }.
+  OPTIONAL { ?object igonto:practicesDefinedInIso ?ISO }.
+  FILTER (?objectType != owl:NamedIndividual)
+}
+GROUP BY ?maturityLevel ?capability ?framework ?process ?description ?comment
