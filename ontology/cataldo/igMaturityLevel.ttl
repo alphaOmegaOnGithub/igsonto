@@ -1,0 +1,804 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-ml#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix igso-ml: <http://www.example.org/cm/igso/2023/igso-ml#> .
+@prefix igso-cpt: <http://www.example.org/cm/igso/2023/igso-cpt#> .
+@prefix igso-inf: <http://www.example.org/cm/igso/2023/igso-inf#> .
+@prefix igso-lcs: <http://www.example.org/cm/igso/2023/igso-lcs#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@base <http://www.example.org/cm/igso/2023/igso-ml#> .
+
+<http://www.example.org/cm/igso/2023/igso-ml> rdf:type owl:Ontology ;
+                                               rdfs:comment "An ontology on information governance maturity level"@en ,
+                                                            "Developed by Cataldo Mega. Please direct all comments and questions. cataldo.mega@ipvs.uni-stuttgart.de"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ml#align
+igso-ml:align rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:label "align"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#analyze
+igso-ml:analyze rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:label "analyze"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#appoint
+igso-ml:appoint rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:label "appoint"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#approve
+igso-ml:approve rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:label "approve"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#aquire
+igso-ml:aquire rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:label "aquire"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#archive
+igso-ml:archive rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:label "archive"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#assess
+igso-ml:assess rdf:type owl:ObjectProperty ;
+               rdfs:label "assess"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#audit
+igso-ml:audit rdf:type owl:ObjectProperty ;
+              rdfs:label "audit"@en ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#backup
+igso-ml:backup rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#build
+igso-ml:build rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#classify
+igso-ml:classify rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#communicate
+igso-ml:communicate rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#conduct_inventory
+igso-ml:conduct_inventory rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#control
+igso-ml:control rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#convert
+igso-ml:convert rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#coordinate
+igso-ml:coordinate rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#correct
+igso-ml:correct rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#create
+igso-ml:create rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#defines
+igso-ml:defines rdf:type owl:ObjectProperty ;
+                         rdfs:label "defines"@en ;
+						 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#defines_maturity
+igso-ml:defines_maturity rdf:type owl:ObjectProperty ;
+                         rdfs:label "defines_maturity"@en ;
+                         rdfs:subPropertyOf igso-ml:defines ;
+                         rdfs:domain igso-ml:MaturityIndex ;
+                         rdfs:range [ rdf:type owl:Restriction ;
+                                      owl:onProperty igso-ml:defines_maturity ;
+                                      owl:someValuesFrom [ rdf:type owl:Class ;
+                                                           owl:oneOf ( igso-ml:MaturityLevel-1
+                                                                       igso-ml:MaturityLevel-2
+                                                                       igso-ml:MaturityLevel-3
+                                                                       igso-ml:MaturityLevel-4
+                                                                       igso-ml:MaturityLevel-5
+                                                                     )
+                                                         ]
+                                    ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#design
+igso-ml:design rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#develop
+igso-ml:develop rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#distribute
+igso-ml:distribute rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ensure
+igso-ml:ensure rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#establish
+igso-ml:establish rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#estimate
+igso-ml:estimate rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#evaluate
+igso-ml:evaluate rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#has_maturity
+igso-ml:has_maturity rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#manage
+igso-ml:manage rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#measure
+igso-ml:measure rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#monitor
+igso-ml:monitor rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#profile
+igso-ml:profile rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#promote
+igso-ml:promote rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#test
+igso-ml:test rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#validate
+igso-ml:validate rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles
+igso-ml:ARMA_Principles rdf:type owl:Class ;
+                        rdfs:subClassOf igso-ml:PractitionerDomain ;
+                        rdfs:label "ARMA_Principles"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Accountability_prncpls
+igso-ml:Accountability_prncpls rdf:type owl:Class ;
+                               rdfs:subClassOf igso-ml:ARMA_Principles ;
+                               rdfs:label "Accountability"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Availability_prncpls
+igso-ml:Availability_prncpls rdf:type owl:Class ;
+                             rdfs:subClassOf igso-ml:ARMA_Principles ;
+                             rdfs:label "Availability"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#BusinessIntelligenceManagementManagement
+igso-ml:BusinessIntelligenceManagementManagement rdf:type owl:Class ;
+                                                 rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#CGOC
+igso-ml:CGOC rdf:type owl:Class ;
+             rdfs:subClassOf igso-ml:PractitionerDomain ;
+             rdfs:label "CGOC"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Compliance_prncpls
+igso-ml:Compliance_prncpls rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:ARMA_Principles ;
+                           rdfs:label "Compliance"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ContentManagement
+igso-ml:ContentManagement rdf:type owl:Class ;
+                          rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DAM
+igso-ml:DAM rdf:type owl:Class ;
+            rdfs:subClassOf igso-ml:PractitionerDomain ;
+            rdfs:label "DAM"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DAMA
+igso-ml:DAMA rdf:type owl:Class ;
+             rdfs:subClassOf igso-ml:PractitionerDomain ;
+             rdfs:comment "Digital Asset Management (DAM) refres to managing information, systems and processes that enable the management of assets from ideation to creation, curation, analysis and archiving. Has 4 Main categories and 15 Dimensions 56 Criteria"@en ;
+             rdfs:label "DAMA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement
+igso-ml:DataArchitectureManagement rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataDevelopment
+igso-ml:DataDevelopment rdf:type owl:Class ;
+                        rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataImplementation
+igso-ml:DataImplementation rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:DataDevelopment .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataManagementPlanning
+igso-ml:DataManagementPlanning rdf:type owl:Class ;
+                               rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataManagementSupervision
+igso-ml:DataManagementSupervision rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignManagement
+igso-ml:DataModelDesignManagement rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-ml:DataArchitectureManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignQuality
+igso-ml:DataModelDesignQuality rdf:type owl:Class ;
+                               rdfs:subClassOf igso-ml:DataArchitectureManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQuality
+igso-ml:DataQuality rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:audit ;
+                                          owl:someValuesFrom igso-ml:DataQuality
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:correct ;
+                                          owl:someValuesFrom igso-ml:DataQualityDefects
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:defines ;
+                                          owl:someValuesFrom igso-ml:DataQualityMetrics
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:defines ;
+                                          owl:someValuesFrom igso-ml:DataQualityServiceLevel
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:design ;
+                                          owl:someValuesFrom igso-ml:OperationalDataQualityProcedures
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:manage ;
+                                          owl:someValuesFrom igso-ml:DataQualityIssues
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:measure ;
+                                          owl:someValuesFrom igso-ml:DataQuality
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:monitor ;
+                                          owl:someValuesFrom igso-ml:DataQuality
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:monitor ;
+                                          owl:someValuesFrom igso-ml:DataQualityPerformance
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:validate ;
+                                          owl:someValuesFrom igso-ml:DataQualityRequirements
+                                        ] ;
+                    rdfs:subClassOf igso-ml:DataQualityManagement ;
+                    rdfs:label "DataQuality"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityAwereness
+igso-ml:DataQualityAwereness rdf:type owl:Class ;
+                             rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityBusinessRules
+igso-ml:DataQualityBusinessRules rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityDefects
+igso-ml:DataQualityDefects rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityIssues
+igso-ml:DataQualityIssues rdf:type owl:Class ;
+                          rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityManagement
+igso-ml:DataQualityManagement rdf:type owl:Class ;
+                              rdfs:subClassOf igso-ml:InformationManagement ,
+                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:analyze ;
+                                                                       owl:someValuesFrom igso-ml:DataQuality
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:assess ;
+                                                                       owl:someValuesFrom igso-ml:DataQuality
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:profile ;
+                                                                       owl:someValuesFrom igso-ml:DataQuality
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ,
+                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:defines ;
+                                                                       owl:someValuesFrom igso-ml:DataQualityBusinessRules
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:defines ;
+                                                                       owl:someValuesFrom igso-ml:DataQualityRequirements
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ,
+                                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:develop ;
+                                                                       owl:someValuesFrom igso-ml:DataQualityAwereness
+                                                                     ]
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty igso-ml:promote ;
+                                                                       owl:someValuesFrom igso-ml:DataQualityAwereness
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty igso-ml:audit ;
+                                                owl:someValuesFrom igso-ml:DataQuality
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty igso-ml:test ;
+                                                owl:someValuesFrom igso-ml:DataQualityRequirements
+                                              ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityMetrics
+igso-ml:DataQualityMetrics rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityPerformance
+igso-ml:DataQualityPerformance rdf:type owl:Class ;
+                               rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements
+igso-ml:DataQualityRequirements rdf:type owl:Class ;
+                                rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataQualityServiceLevel
+igso-ml:DataQualityServiceLevel rdf:type owl:Class ;
+                                rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DataWarehousingManagement
+igso-ml:DataWarehousingManagement rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Data_ManagementControl
+igso-ml:Data_ManagementControl rdf:type owl:Class ;
+                               rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Data_Security_Management
+igso-ml:Data_Security_Management rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Data_Technology_Management
+igso-ml:Data_Technology_Management rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations
+igso-ml:DatabaseOperations rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:InformationManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperationsManagement
+igso-ml:DatabaseOperationsManagement rdf:type owl:Class ;
+                                     rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DatabaseSupport
+igso-ml:DatabaseSupport rdf:type owl:Class ;
+                        rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DetailedDataDesign
+igso-ml:DetailedDataDesign rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:DataArchitectureManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Disposition_prncpls
+igso-ml:Disposition_prncpls rdf:type owl:Class ;
+                            rdfs:subClassOf igso-ml:ARMA_Principles ;
+                            rdfs:label "Disposition"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#DocumentManagement
+igso-ml:DocumentManagement rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:ContentManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#EDRM
+igso-ml:EDRM rdf:type owl:Class ;
+             rdfs:subClassOf igso-ml:PractitionerDomain ;
+             rdfs:label "EDRM"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#InformationGovernanceDomain
+igso-ml:InformationGovernanceDomain rdf:type owl:Class ;
+                                    rdfs:label "InformationGovernanceDomain"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#InformationManagement
+igso-ml:InformationManagement rdf:type owl:Class ;
+                              rdfs:subClassOf igso-ml:InformationGovernanceDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Integrity_prncpls
+igso-ml:Integrity_prncpls rdf:type owl:Class ;
+                          rdfs:subClassOf igso-ml:ARMA_Principles ;
+                          rdfs:label "Integrity"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1
+igso-ml:MI_Level_1 rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:oneOf ( igso-ml:Ad-Hoc
+                                                     igso-ml:Immaturity
+                                                     igso-ml:Non-Existent
+                                                     igso-ml:Sub-Standard
+                                                   )
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:defines ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass [ rdf:type owl:Class ;
+                                                       owl:oneOf ( igso-ml:MaturityLevel-1
+                                                                 )
+                                                     ]
+                                       ] ;
+                   rdfs:subClassOf igso-ml:MaturityIndex ;
+                   rdfs:label "MI-Level_1"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2
+igso-ml:MI_Level_2 rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:defines ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass [ rdf:type owl:Class ;
+                                                       owl:oneOf ( igso-ml:MaturityLevel-2
+                                                                 )
+                                                     ]
+                                       ] ;
+                   rdfs:subClassOf igso-ml:MaturityIndex ;
+                   rdfs:label "MI_Level_2"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3
+igso-ml:MI_Level_3 rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:defines ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass [ rdf:type owl:Class ;
+                                                       owl:oneOf ( igso-ml:MaturityLevel-3
+                                                                 )
+                                                     ]
+                                       ] ;
+                   rdfs:subClassOf igso-ml:MaturityIndex ;
+                   rdfs:label "MI_Level_3"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4
+igso-ml:MI_Level_4 rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:defines ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass [ rdf:type owl:Class ;
+                                                       owl:oneOf ( igso-ml:MaturityLevel-4
+                                                                 )
+                                                     ]
+                                       ] ;
+                   rdfs:subClassOf igso-ml:MaturityIndex ;
+                   rdfs:label "MI_Level_4"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MI_Level_5
+igso-ml:MI_Level_5 rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:defines ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass [ rdf:type owl:Class ;
+                                                       owl:oneOf ( igso-ml:MaturityLevel-5
+                                                                 )
+                                                     ]
+                                       ] ;
+                   rdfs:subClassOf igso-ml:MaturityIndex ;
+                   rdfs:label "MI_Level_5"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MasterDataManagement
+igso-ml:MasterDataManagement rdf:type owl:Class ;
+                             rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex
+igso-ml:MaturityIndex rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:oneOf ( igso-ml:Ad-Hoc
+                                                        igso-ml:Consequences
+                                                        igso-ml:Defined
+                                                        igso-ml:Essential
+                                                        igso-ml:FullyAutomatedLocal
+                                                        igso-ml:Immaturity
+                                                        igso-ml:In-Development
+                                                        igso-ml:Initial
+                                                        igso-ml:ManualStructured
+                                                        igso-ml:ManualUnstructured
+                                                        igso-ml:Non-Existent
+                                                        igso-ml:Optimized
+                                                        igso-ml:ProcessRisk
+                                                        igso-ml:Repeatable
+                                                        igso-ml:SemiAutomatedLocal
+                                                      )
+                                          ] ;
+                      rdfs:subClassOf igso-ml:PractitionerDomain ;
+                      rdfs:label "MaturityIndex"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MetaDataManagement
+igso-ml:MetaDataManagement rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:ContentManagement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OperationalDataQualityProcedures
+igso-ml:OperationalDataQualityProcedures rdf:type owl:Class ;
+                                         rdfs:subClassOf igso-ml:DataQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain
+igso-ml:PractitionerDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Protection_prncpls
+igso-ml:Protection_prncpls rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ml:ARMA_Principles ;
+                           rdfs:label "Protection"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ReferenceDataManagement
+igso-ml:ReferenceDataManagement rdf:type owl:Class ;
+                                rdfs:subClassOf igso-ml:DatabaseOperations .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Retention_prncpls
+igso-ml:Retention_prncpls rdf:type owl:Class ;
+                          rdfs:subClassOf igso-ml:ARMA_Principles ;
+                          rdfs:label "Retention"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Transparency_prncpls
+igso-ml:Transparency_prncpls rdf:type owl:Class ;
+                             rdfs:subClassOf igso-ml:ARMA_Principles ;
+                             rdfs:label "Transparency"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Ad-Hoc
+igso-ml:Ad-Hoc rdf:type owl:NamedIndividual ,
+                        igso-ml:MI_Level_1 ;
+               rdfs:label "Ad-Hoc"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#AutomatedOrganizationWide
+igso-ml:AutomatedOrganizationWide rdf:type owl:NamedIndividual ,
+                                           igso-ml:MI_Level_4 ;
+                                  rdfs:label "AutomatedOrganizationWide"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Consequences
+igso-ml:Consequences rdf:type owl:NamedIndividual ;
+                     rdfs:label "Consequences"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Defined
+igso-ml:Defined rdf:type owl:NamedIndividual ,
+                         igso-ml:MI_Level_4 ;
+                rdfs:label "Defined"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Essential
+igso-ml:Essential rdf:type owl:NamedIndividual ,
+                           igso-ml:MI_Level_3 ;
+                  rdfs:label "Essential"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#FullyAutomatedLocal
+igso-ml:FullyAutomatedLocal rdf:type owl:NamedIndividual ;
+                            rdfs:label "FullyAutomatedLocal"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Immaturity
+igso-ml:Immaturity rdf:type owl:NamedIndividual ,
+                            igso-ml:MI_Level_1 ;
+                   rdfs:label "Immaturity"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#In-Development
+igso-ml:In-Development rdf:type owl:NamedIndividual ,
+                                igso-ml:MI_Level_2 ;
+                       rdfs:label "In-Development"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Initial
+igso-ml:Initial rdf:type owl:NamedIndividual ,
+                         igso-ml:MI_Level_2 ;
+                rdfs:label "Initial"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ManualStructured
+igso-ml:ManualStructured rdf:type owl:NamedIndividual ,
+                                  igso-ml:MI_Level_2 ;
+                         rdfs:label "ManualStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ManualUnstructured
+igso-ml:ManualUnstructured rdf:type owl:NamedIndividual ;
+                           rdfs:label "ManualUnStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel
+igso-ml:MaturityLevel rdf:type owl:NamedIndividual ,
+                               igso-ml:MaturityIndex ;
+                      rdfs:label "MaturityLevel"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-1
+igso-ml:MaturityLevel-1 rdf:type owl:NamedIndividual ;
+                        rdfs:label "MaturityLevel-1"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-2
+igso-ml:MaturityLevel-2 rdf:type owl:NamedIndividual ;
+                        rdfs:label "MaturityLevel-2"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-3
+igso-ml:MaturityLevel-3 rdf:type owl:NamedIndividual ;
+                        rdfs:label "MaturityLevel-3"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-4
+igso-ml:MaturityLevel-4 rdf:type owl:NamedIndividual ;
+                        rdfs:label "MaturityLevel-4"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-5
+igso-ml:MaturityLevel-5 rdf:type owl:NamedIndividual ;
+                        rdfs:label "MaturityLevel-5"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Non-Existent
+igso-ml:Non-Existent rdf:type owl:NamedIndividual ,
+                              igso-ml:MI_Level_1 ;
+                     rdfs:label "Non-Existent"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Optimized
+igso-ml:Optimized rdf:type owl:NamedIndividual ,
+                           igso-ml:MI_Level_5 ;
+                  rdfs:label "Optimized"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Proactive
+igso-ml:Proactive rdf:type owl:NamedIndividual ,
+                           igso-ml:MI_Level_4 ;
+                  rdfs:label "Proactive"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ProcessRisk
+igso-ml:ProcessRisk rdf:type owl:NamedIndividual ;
+                    rdfs:label "ProcessRisk"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Repeatable
+igso-ml:Repeatable rdf:type owl:NamedIndividual ,
+                            igso-ml:MI_Level_3 ;
+                   rdfs:label "Repeatable"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#SemiAutomatedLocal
+igso-ml:SemiAutomatedLocal rdf:type owl:NamedIndividual ,
+                                    igso-ml:MI_Level_3 ;
+                           rdfs:label "SemiAutomatedLocal"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Sub-Standard
+igso-ml:Sub-Standard rdf:type owl:NamedIndividual ,
+                              igso-ml:MI_Level_1 ;
+                     rdfs:label "Sub-Standard"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Transformational
+igso-ml:Transformational rdf:type owl:NamedIndividual ,
+                                  igso-ml:MI_Level_5 ;
+                         rdfs:label "Transformational"@en .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
