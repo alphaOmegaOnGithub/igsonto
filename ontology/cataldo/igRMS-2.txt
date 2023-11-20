@@ -23,6 +23,7 @@
 			Dispositions
 			ManagedRecord
 			RmsRecord
+
 1.1.6.	RmsServices
 		.1	RmsSolution
 		.2	RmsProcessServices
@@ -35,6 +36,7 @@
 			.6	ManagedRecordService
 			.7	QueryService
 			.8	RecordAuthenticationsService
+
 1.1.6.4	Rms UtilityServices 	
 			.1 AttributeProfiles Service
 			.2 PartiesService
@@ -51,7 +53,7 @@ B.1 Scenarios (functions that a RMS component must support )
 	07 	Change Record Keeper
 	08 	Change Modifiable Attribute
 	09 	Change Authority Attribute
-	10	Validate Record Authenticity
+#	10	Validate Record Authenticity
 	11 	Suspend Dispositions
 	12	Re-Instate Dispositions
 	13	Disassociate Linked Records
@@ -60,7 +62,6 @@ B.1 Scenarios (functions that a RMS component must support )
 	16	Transfer Records
 	17	Accession to NARA
 	18	Destroy Records
-	19	
    	   
 ###
 
