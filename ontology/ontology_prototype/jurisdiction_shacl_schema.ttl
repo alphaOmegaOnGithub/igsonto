@@ -10,30 +10,24 @@ jurisdiction:CountryShape
     a sh:NodeShape ;
     	sh:targetClass jurisdiction:Country ; 
     	sh:property jurisdiction:isRegulatedByShape ;
-	sh:property jurisdiction:belongsToJurisdictionShape
+		sh:property jurisdiction:belongsToJurisdictionShape
     .
 
 jurisdiction:JurisdictionShape
 	a sh:NodeShape ;
     	sh:targetClass jurisdiction:Jurisdiction ; 
-    	sh:property jurisdiction:hasRegulationShape
+    	sh:property jurisdiction:hasRegulationShape;
+		sh:property [
+			sh:path rdfs:label;
+			sh:datatype xsd:string;
+			sh:minCount 1 ;
+		]
     	.
-
-jurisdiction:EnterpriseShape
-	a sh:NodeShape ;
-    	sh:targetClass jurisdiction:Enterprise ; 
-    	sh:property jurisdiction:operatesInShape
-    	.
-
-jurisdiction:operatesInShape
-	a sh:PropertyShape ;
-		sh:path jurisdiction:operatesIn ;       
-		sh:maxCount 1 ;
-		sh:minCount 1 ;
 
 jurisdiction:hasRegulationShape
 	a sh:PropertyShape ;
-		sh:path jurisdiction:hasRegulation ;       
+		sh:path jurisdiction:hasRegulation ;
+		sh:class jurisdiction:Regulation;
 		sh:maxCount 1 ;
 		sh:minCount 1 ;
 	.

@@ -25,6 +25,12 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/igonto/information#appliesRule
+information:appliesRule rdf:type owl:ObjectProperty ;
+                        rdfs:domain information:Policy ;
+                        rdfs:range information:Rule .
+
+
 ###  http://www.semanticweb.org/igonto/information#classifiesData
 information:classifiesData rdf:type owl:ObjectProperty ;
                            rdfs:domain information:Record ;
@@ -68,16 +74,40 @@ information:employsRule rdf:type owl:ObjectProperty ;
                         rdfs:range information:Rule .
 
 
+###  http://www.semanticweb.org/igonto/information#exposesRisk
+information:exposesRisk rdf:type owl:ObjectProperty ;
+                        rdfs:domain information:Data ;
+                        rdfs:range information:Risk .
+
+
 ###  http://www.semanticweb.org/igonto/information#grantsPriviligeToRole
 information:grantsPriviligeToRole rdf:type owl:ObjectProperty ;
                                   rdfs:domain information:Policy ;
                                   rdfs:range information:Role .
 
 
+###  http://www.semanticweb.org/igonto/information#hasComponent
+information:hasComponent rdf:type owl:ObjectProperty ;
+                         rdfs:domain information:Data ,
+                                     information:Policy ;
+                         rdfs:range information:Cost ,
+                                    information:Goal ,
+                                    information:Metric ,
+                                    information:Risk ,
+                                    information:Rule ,
+                                    information:Value .
+
+
 ###  http://www.semanticweb.org/igonto/information#hasEdition
 information:hasEdition rdf:type owl:ObjectProperty ;
                        rdfs:domain information:Document ;
                        rdfs:range information:Edition .
+
+
+###  http://www.semanticweb.org/igonto/information#hasGoal
+information:hasGoal rdf:type owl:ObjectProperty ;
+                    rdfs:domain information:Policy ;
+                    rdfs:range information:Goal .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasPrivilige
@@ -104,10 +134,22 @@ information:hasVersion rdf:type owl:ObjectProperty ;
                        rdfs:range information:Version .
 
 
+###  http://www.semanticweb.org/igonto/information#monitorsMetric
+information:monitorsMetric rdf:type owl:ObjectProperty ;
+                           rdfs:domain information:Policy ;
+                           rdfs:range information:Metric .
+
+
 ###  http://www.semanticweb.org/igonto/information#needsPermission
 information:needsPermission rdf:type owl:ObjectProperty ;
                             rdfs:domain information:Data ;
                             rdfs:range information:Permission .
+
+
+###  http://www.semanticweb.org/igonto/information#producesCost
+information:producesCost rdf:type owl:ObjectProperty ;
+                         rdfs:domain information:Data ;
+                         rdfs:range information:Cost .
 
 
 ###  http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure
@@ -120,6 +162,12 @@ information:usedOnRecordControlStructure rdf:type owl:ObjectProperty ;
 information:usesDataDictionary rdf:type owl:ObjectProperty ;
                                rdfs:domain information:Record ;
                                rdfs:range information:Data_Dictionary .
+
+
+###  http://www.semanticweb.org/igonto/information#vocabularyFor
+information:vocabularyFor rdf:type owl:ObjectProperty ;
+                          rdfs:domain information:Data_Dictionary ;
+                          rdfs:range information:Taxonomy .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction
@@ -142,7 +190,9 @@ jurisdiction:hasRegulation rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#includesKeyword
 jurisdiction:includesKeyword rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty .
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain jurisdiction:GDPR_Articles ;
+                             rdfs:range jurisdiction:GDPR_Keywords .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#involvesArticle
@@ -189,22 +239,41 @@ organization:createsRecord rdf:type owl:ObjectProperty ;
                            rdfs:range organization:Record .
 
 
+###  http://www.semanticweb.org/igonto/organization#definesGoal
+organization:definesGoal rdf:type owl:ObjectProperty ;
+                         rdfs:domain organization:Governance_Strategy ;
+                         rdfs:range organization:Goal .
+
+
+###  http://www.semanticweb.org/igonto/organization#definesGovernanceStrategy
+organization:definesGovernanceStrategy rdf:type owl:ObjectProperty ;
+                                       rdfs:domain organization:Governance_Body ;
+                                       rdfs:range organization:Governance_Strategy .
+
+
+###  http://www.semanticweb.org/igonto/organization#definesObjective
+organization:definesObjective rdf:type owl:ObjectProperty ;
+                              rdfs:domain organization:Governance_Strategy ;
+                              rdfs:range organization:Objective .
+
+
 ###  http://www.semanticweb.org/igonto/organization#definesPolicy
 organization:definesPolicy rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
-                           rdfs:domain organization:Records_Management_Practice ;
+                           rdfs:domain organization:Strategy ;
                            rdfs:range organization:IG_Policy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#definesProgram
 organization:definesProgram rdf:type owl:ObjectProperty ;
-                            rdfs:domain organization:Steering_Commitee ;
+                            rdfs:domain organization:Steering_Commitee ,
+                                        organization:Steering_Committee ;
                             rdfs:range organization:IG_Programm .
 
 
 ###  http://www.semanticweb.org/igonto/organization#definesRecordLifecycle
 organization:definesRecordLifecycle rdf:type owl:ObjectProperty ;
-                                    rdfs:domain organization:Records_Management_Practice ;
+                                    rdfs:domain organization:Record_Control_Structure ;
                                     rdfs:range organization:Record_Lifecycle .
 
 
@@ -216,14 +285,32 @@ organization:definesRule rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/igonto/organization#definesStrategy
 organization:definesStrategy rdf:type owl:ObjectProperty ;
-                             rdfs:domain organization:Steering_Commitee ;
-                             rdfs:range organization:IG_Strategic_Plan .
+                             rdfs:domain organization:Steering_Commitee ,
+                                         organization:Steering_Committee ;
+                             rdfs:range organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#describesRecordsManagementPractice
 organization:describesRecordsManagementPractice rdf:type owl:ObjectProperty ;
-                                                rdfs:domain organization:Capability ;
-                                                rdfs:range organization:Records_Management_Practice .
+                                                rdfs:domain organization:Capability .
+
+
+###  http://www.semanticweb.org/igonto/organization#ensureCompliance
+organization:ensureCompliance rdf:type owl:ObjectProperty ;
+                              rdfs:domain organization:Objective ;
+                              rdfs:range organization:Compliance .
+
+
+###  http://www.semanticweb.org/igonto/organization#ensureQuality
+organization:ensureQuality rdf:type owl:ObjectProperty ;
+                           rdfs:domain organization:Objective ;
+                           rdfs:range organization:Quality .
+
+
+###  http://www.semanticweb.org/igonto/organization#ensureTransparency
+organization:ensureTransparency rdf:type owl:ObjectProperty ;
+                                rdfs:domain organization:Objective ;
+                                rdfs:range organization:Transparency .
 
 
 ###  http://www.semanticweb.org/igonto/organization#executesRecord
@@ -257,8 +344,16 @@ organization:inMaturityLevel rdf:type owl:ObjectProperty ;
                              rdfs:range organization:Maturity .
 
 
+###  http://www.semanticweb.org/igonto/organization#isRealizedByStrategy
+organization:isRealizedByStrategy rdf:type owl:ObjectProperty ;
+                                  rdfs:domain organization:Objective ;
+                                  rdfs:range organization:Strategy .
+
+
 ###  http://www.semanticweb.org/igonto/organization#linkedToFramework
-organization:linkedToFramework rdf:type owl:ObjectProperty .
+organization:linkedToFramework rdf:type owl:ObjectProperty ;
+                               rdfs:domain organization:Capability ;
+                               rdfs:range organization:Framework .
 
 
 ###  http://www.semanticweb.org/igonto/organization#linkedToOrganizationUnit
@@ -287,6 +382,12 @@ organization:maturityLevelDefinedFor rdf:type owl:ObjectProperty ;
                                      rdfs:range organization:Capability .
 
 
+###  http://www.semanticweb.org/igonto/organization#memberOfDepartment
+organization:memberOfDepartment rdf:type owl:ObjectProperty ;
+                                rdfs:domain organization:Employee ;
+                                rdfs:range organization:Departement .
+
+
 ###  http://www.semanticweb.org/igonto/organization#memberOfOrganization
 organization:memberOfOrganization rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf owl:topObjectProperty ;
@@ -294,16 +395,24 @@ organization:memberOfOrganization rdf:type owl:ObjectProperty ;
                                   rdfs:range organization:Organization_Unit .
 
 
+###  http://www.semanticweb.org/igonto/organization#needsGovernanceStrategy
+organization:needsGovernanceStrategy rdf:type owl:ObjectProperty ;
+                                     rdfs:domain organization:Enterprise ;
+                                     rdfs:range organization:Governance_Strategy .
+
+
 ###  http://www.semanticweb.org/igonto/organization#needsSteeringCommittee
 organization:needsSteeringCommittee rdf:type owl:ObjectProperty ;
                                     rdfs:domain organization:Enterprise ;
-                                    rdfs:range organization:Steering_Commitee .
+                                    rdfs:range organization:Steering_Commitee ,
+                                               organization:Steering_Committee .
 
 
 ###  http://www.semanticweb.org/igonto/organization#needsTechnicalRequirement
 organization:needsTechnicalRequirement rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
                                        owl:inverseOf organization:technicalRequirementFor ;
+                                       rdfs:domain organization:Capability ;
                                        rdfs:range owl:Thing .
 
 
@@ -337,7 +446,9 @@ organization:specifiesPrinciples rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/igonto/organization#technicalRequirementFor
 organization:technicalRequirementFor rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf owl:topObjectProperty .
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain owl:Thing ;
+                                     rdfs:range organization:Capability .
 
 
 ###  http://www.semanticweb.org/igonto/organization#theoreticallyLinkedTo
@@ -433,6 +544,10 @@ jurisdiction:regulationName rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf jurisdiction:Regulation .
 
 
+###  http://www.semanticweb.org/igonto/organization#Board
+organization:Board rdf:type owl:DatatypeProperty .
+
+
 ###  http://www.semanticweb.org/igonto/organization#Data
 organization:Data rdf:type owl:DatatypeProperty ;
                   rdfs:domain organization:Data .
@@ -454,13 +569,11 @@ organization:IG_Program_Datatype rdf:type owl:DatatypeProperty ;
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Strategic_Plan
-organization:IG_Strategic_Plan rdf:type owl:DatatypeProperty ;
-                               rdfs:domain organization:IG_Strategic_Plan .
+organization:IG_Strategic_Plan rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Team
-organization:IG_Team rdf:type owl:DatatypeProperty ;
-                     rdfs:domain organization:IG_Team .
+organization:IG_Team rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Process
@@ -471,6 +584,11 @@ organization:Process rdf:type owl:DatatypeProperty ;
 ###  http://www.semanticweb.org/igonto/organization#Role
 organization:Role rdf:type owl:DatatypeProperty ;
                   rdfs:domain organization:Role .
+
+
+###  http://www.semanticweb.org/igonto/organization#Strategy
+organization:Strategy rdf:type owl:DatatypeProperty ;
+                      rdfs:domain organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#capabilityDescription
@@ -571,47 +689,56 @@ organization:dataType rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/igonto/organization#planApprovalDate
 organization:planApprovalDate rdf:type owl:DatatypeProperty ;
-                              rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                              rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                                 organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planAuthor
 organization:planAuthor rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                        rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                           organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planBudget
 organization:planBudget rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                        rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                           organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planDescription
 organization:planDescription rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                             rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                                organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planName
 organization:planName rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                      rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                         organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planOwner
 organization:planOwner rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                       rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                          organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planScope
 organization:planScope rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                       rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                          organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planStatus
 organization:planStatus rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                        rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                           organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#planVersion
 organization:planVersion rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf organization:IG_Strategic_Plan .
+                         rdfs:subPropertyOf organization:IG_Strategic_Plan ,
+                                            organization:Strategy .
 
 
 ###  http://www.semanticweb.org/igonto/organization#policyAuthor
@@ -735,37 +862,44 @@ organization:roleType rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/igonto/organization#teamBudget
 organization:teamBudget rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf organization:IG_Team .
+                        rdfs:subPropertyOf organization:Board ,
+                                           organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamContact
 organization:teamContact rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf organization:IG_Team .
+                         rdfs:subPropertyOf organization:Board ,
+                                            organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamDescription
 organization:teamDescription rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf organization:IG_Team .
+                             rdfs:subPropertyOf organization:Board ,
+                                                organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamLeader
 organization:teamLeader rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf organization:IG_Team .
+                        rdfs:subPropertyOf organization:Board ,
+                                           organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamName
 organization:teamName rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf organization:IG_Team .
+                      rdfs:subPropertyOf organization:Board ,
+                                         organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamResponsibilities
 organization:teamResponsibilities rdf:type owl:DatatypeProperty ;
-                                  rdfs:subPropertyOf organization:IG_Team .
+                                  rdfs:subPropertyOf organization:Board ,
+                                                     organization:IG_Team .
 
 
 ###  http://www.semanticweb.org/igonto/organization#teamScope
 organization:teamScope rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf organization:IG_Team .
+                       rdfs:subPropertyOf organization:Board ,
+                                          organization:IG_Team .
 
 
 #################################################################
@@ -779,22 +913,31 @@ information:Asset rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/information#Audit_Data
 information:Audit_Data rdf:type owl:Class ;
-                       rdfs:subClassOf information:Sensitive_Data .
+                       rdfs:subClassOf information:Sensitive_Data ;
+                       rdfs:label "Audit Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Audit_Trail
 information:Audit_Trail rdf:type owl:Class ;
-                        rdfs:subClassOf information:Record_Control_Structure .
+                        rdfs:subClassOf information:Record_Control_Structure ;
+                        rdfs:label "Audit Trail" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Category
 information:Category rdf:type owl:Class ;
-                     rdfs:subClassOf information:Record_Control_Structure .
+                     rdfs:subClassOf information:Record_Control_Structure ;
+                     rdfs:label "Category" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Container
 information:Container rdf:type owl:Class ;
-                      rdfs:subClassOf information:Record .
+                      rdfs:subClassOf information:Record ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty information:containsFile ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass information:File
+                                      ] ;
+                      rdfs:label "Container" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Content
@@ -804,49 +947,107 @@ information:Content rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/information#Control_Data
 information:Control_Data rdf:type owl:Class ;
-                         rdfs:subClassOf information:Record_Control_Structure .
+                         rdfs:subClassOf information:Record_Control_Structure ;
+                         rdfs:label "Control Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Cost
-information:Cost rdf:type owl:Class .
+information:Cost rdf:type owl:Class ;
+                 rdfs:label "Cost" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Data
 information:Data rdf:type owl:Class ;
                  owl:equivalentClass information:Item ,
                                      lifecycle:Data ,
-                                     organization:Data .
+                                     organization:Data ,
+                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                              owl:onProperty information:hasComponent ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass information:Cost
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty information:hasComponent ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass information:Risk
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty information:hasComponent ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass information:Value
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:containsValue ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Value
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:exposesRisk ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Risk
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:producesCost ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Cost
+                                 ] ;
+                 rdfs:label "Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Data_Dictionary
-information:Data_Dictionary rdf:type owl:Class .
+information:Data_Dictionary rdf:type owl:Class ;
+                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty information:vocabularyFor ;
+                                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                              owl:onClass information:Taxonomy
+                                            ] ;
+                            rdfs:label "Data Dictionary" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Document
 information:Document rdf:type owl:Class ;
-                     rdfs:subClassOf information:Data .
+                     rdfs:subClassOf information:Data ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty information:hasEdition ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass information:Edition
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty information:hasRendition ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass information:Rendition
+                                     ] .
 
 
 ###  http://www.semanticweb.org/igonto/information#Edition
-information:Edition rdf:type owl:Class .
+information:Edition rdf:type owl:Class ;
+                    rdfs:label "Edition" .
 
 
 ###  http://www.semanticweb.org/igonto/information#File
-information:File rdf:type owl:Class .
+information:File rdf:type owl:Class ;
+                 rdfs:label "File" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Folder
 information:Folder rdf:type owl:Class ;
-                   rdfs:subClassOf information:Container .
+                   rdfs:subClassOf information:Container ;
+                   rdfs:label "Folder" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Goal
-information:Goal rdf:type owl:Class .
+information:Goal rdf:type owl:Class ;
+                 owl:equivalentClass organization:Goal ;
+                 rdfs:label "Goal" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Hold
 information:Hold rdf:type owl:Class ;
-                 rdfs:subClassOf information:Record_Control_Structure .
+                 rdfs:subClassOf information:Record_Control_Structure ;
+                 rdfs:label "Hold" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Information
@@ -855,7 +1056,12 @@ information:Information rdf:type owl:Class ;
 
 
 ###  http://www.semanticweb.org/igonto/information#Item
-information:Item rdf:type owl:Class .
+information:Item rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:hasVersion ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Version
+                                 ] .
 
 
 ###  http://www.semanticweb.org/igonto/information#Metadata
@@ -864,12 +1070,14 @@ information:Metadata rdf:type owl:Class ;
 
 
 ###  http://www.semanticweb.org/igonto/information#Metric
-information:Metric rdf:type owl:Class .
+information:Metric rdf:type owl:Class ;
+                   rdfs:label "Metric" .
 
 
 ###  http://www.semanticweb.org/igonto/information#PII_Data
 information:PII_Data rdf:type owl:Class ;
-                     rdfs:subClassOf information:Sensitive_Data .
+                     rdfs:subClassOf information:Sensitive_Data ;
+                     rdfs:label "PII Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Permission
@@ -878,79 +1086,171 @@ information:Permission rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/igonto/information#Personnel_Files
 information:Personnel_Files rdf:type owl:Class ;
-                            rdfs:subClassOf information:Sensitive_Data .
+                            rdfs:subClassOf information:Sensitive_Data ;
+                            rdfs:label "Personnel Files" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Policy
 information:Policy rdf:type owl:Class ;
-                   owl:equivalentClass organization:IG_Policy .
+                   owl:equivalentClass organization:IG_Policy ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:appliesRule ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Rule
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:employsRule ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Rule
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:grantsPriviligeToRole ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Role
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:hasGoal ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Goal
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:monitorsMetric ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Metric
+                                   ] ;
+                   rdfs:label "Policy" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Privilige
-information:Privilige rdf:type owl:Class .
+information:Privilige rdf:type owl:Class ;
+                      rdfs:label "Privilige" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Record
 information:Record rdf:type owl:Class ;
-                   owl:equivalentClass organization:Record .
+                   owl:equivalentClass organization:Record ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:classifiesData ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Data
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:hasRecordControlStructure ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Record_Control_Structure
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty information:usesDataDictionary ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass information:Data_Dictionary
+                                   ] ;
+                   rdfs:label "Record" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Record_Control_Structure
-information:Record_Control_Structure rdf:type owl:Class .
+information:Record_Control_Structure rdf:type owl:Class ;
+                                     owl:equivalentClass organization:Record_Control_Structure ;
+                                     rdfs:label "Record Control Structure" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Rendition
-information:Rendition rdf:type owl:Class .
+information:Rendition rdf:type owl:Class ;
+                      rdfs:label "Rendition" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Report
 information:Report rdf:type owl:Class ;
-                   rdfs:subClassOf information:Record_Control_Structure .
+                   rdfs:subClassOf information:Record_Control_Structure ;
+                   rdfs:label "Report" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Retention
 information:Retention rdf:type owl:Class ;
-                      rdfs:subClassOf information:Record_Control_Structure .
+                      rdfs:subClassOf information:Record_Control_Structure ;
+                      rdfs:label "Retention" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Risk
-information:Risk rdf:type owl:Class .
+information:Risk rdf:type owl:Class ;
+                 rdfs:label "Risk" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Role
 information:Role rdf:type owl:Class ;
-                 owl:equivalentClass organization:Role .
+                 owl:equivalentClass organization:Role ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:hasPrivilige ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Privilige
+                                 ] ;
+                 rdfs:label "Role" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Rule
 information:Rule rdf:type owl:Class ;
-                 owl:equivalentClass organization:Rule .
+                 owl:equivalentClass organization:Rule ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty information:definesSchedule ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass information:Schedule
+                                 ] ;
+                 rdfs:label "Rule" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Schedule
-information:Schedule rdf:type owl:Class .
+information:Schedule rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty information:usedOnRecordControlStructure ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass information:Record_Control_Structure
+                                     ] ;
+                     rdfs:label "Schedule" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Sensitive_Data
 information:Sensitive_Data rdf:type owl:Class ;
-                           rdfs:subClassOf information:Control_Data .
+                           rdfs:subClassOf information:Control_Data ;
+                           rdfs:label "Sensitive Data" .
+
+
+###  http://www.semanticweb.org/igonto/information#Taxonomy
+information:Taxonomy rdf:type owl:Class ;
+                     rdfs:label "Taxonomy" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Value
-information:Value rdf:type owl:Class .
+information:Value rdf:type owl:Class ;
+                  rdfs:label "Value" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Version
-information:Version rdf:type owl:Class .
+information:Version rdf:type owl:Class ;
+                    rdfs:label "Version" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Capability
 jurisdiction:Capability rdf:type owl:Class ;
-                        owl:equivalentClass organization:Capability .
+                        owl:equivalentClass organization:Capability ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty jurisdiction:involvesArticle ;
+                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass jurisdiction:GDPR_Articles
+                                        ] ;
+                        rdfs:label "Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Country
-jurisdiction:Country rdf:type owl:Class .
+jurisdiction:Country rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty jurisdiction:belongsToJurisdiction ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass jurisdiction:Jurisdiction
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty jurisdiction:isRegulatedBy ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass jurisdiction:Regulation
+                                     ] .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#EU
@@ -960,36 +1260,62 @@ jurisdiction:EU rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Enterprise
 jurisdiction:Enterprise rdf:type owl:Class ;
-                        owl:equivalentClass organization:Enterprise .
+                        owl:equivalentClass organization:Enterprise ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty jurisdiction:operatesIn ;
+                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass jurisdiction:Country
+                                        ] ;
+                        rdfs:label "Enterprise" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR
 jurisdiction:GDPR rdf:type owl:Class ;
-                  rdfs:subClassOf jurisdiction:Regulation .
+                  rdfs:subClassOf jurisdiction:Regulation ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty jurisdiction:hasArticles ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass jurisdiction:GDPR_Articles
+                                  ] .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles
 jurisdiction:GDPR_Articles rdf:type owl:Class ;
-                           rdfs:subClassOf jurisdiction:GDPR .
+                           rdfs:subClassOf jurisdiction:GDPR ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty jurisdiction:includesKeyword ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass jurisdiction:GDPR_Keywords
+                                           ] ;
+                           rdfs:label "GDPR Articles" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters
 jurisdiction:GDPR_Chapters rdf:type owl:Class ;
-                           rdfs:subClassOf jurisdiction:GDPR .
+                           rdfs:subClassOf jurisdiction:GDPR ;
+                           rdfs:label "GDPR Chapters" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords
 jurisdiction:GDPR_Keywords rdf:type owl:Class ;
-                           rdfs:subClassOf jurisdiction:GDPR .
+                           rdfs:subClassOf jurisdiction:GDPR ;
+                           rdfs:label "GDPR Keywords" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#IG_Capability
 jurisdiction:IG_Capability rdf:type owl:Class ;
-                           rdfs:subClassOf jurisdiction:Capability .
+                           rdfs:subClassOf jurisdiction:Capability ;
+                           rdfs:label "Information Governance Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction
-jurisdiction:Jurisdiction rdf:type owl:Class .
+jurisdiction:Jurisdiction rdf:type owl:Class ;
+                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                            owl:onProperty jurisdiction:hasRegulation ;
+                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                            owl:onClass jurisdiction:Regulation
+                                          ] ;
+                          rdfs:label "Jurisdiction" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Regulation
@@ -998,144 +1324,188 @@ jurisdiction:Regulation rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Access
 lifecycle:Access rdf:type owl:Class ;
-                 rdfs:subClassOf lifecycle:Service .
+                 rdfs:subClassOf lifecycle:Service ;
+                 rdfs:label "Access" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Archive
 lifecycle:Archive rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Process .
+                  rdfs:subClassOf lifecycle:Process ;
+                  rdfs:label "Archive" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Classify
 lifecycle:Classify rdf:type owl:Class ;
-                   rdfs:subClassOf lifecycle:Process .
+                   rdfs:subClassOf lifecycle:Process ;
+                   rdfs:label "Classify" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Data
-lifecycle:Data rdf:type owl:Class .
+lifecycle:Data rdf:type owl:Class ;
+               rdfs:label "Data" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Find
 lifecycle:Find rdf:type owl:Class ;
-               rdfs:subClassOf lifecycle:Service .
+               rdfs:subClassOf lifecycle:Service ;
+               rdfs:label "Find" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Index
 lifecycle:Index rdf:type owl:Class ;
-                rdfs:subClassOf lifecycle:Process .
+                rdfs:subClassOf lifecycle:Process ;
+                rdfs:label "Index" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Measure
 lifecycle:Measure rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Process .
+                  rdfs:subClassOf lifecycle:Process ;
+                  rdfs:label "Measure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Metric
 lifecycle:Metric rdf:type owl:Class ;
-                 rdfs:subClassOf lifecycle:Process .
+                 rdfs:subClassOf lifecycle:Process ;
+                 rdfs:label "Metric" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Monitor
 lifecycle:Monitor rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Process .
+                  rdfs:subClassOf lifecycle:Process ;
+                  rdfs:label "Monitor" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Process
 lifecycle:Process rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Record_Lifecycle .
+                  rdfs:subClassOf lifecycle:Record_Lifecycle ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty lifecycle:createsStatistics ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass lifecycle:Statistics
+                                  ] ;
+                  rdfs:label "Process" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle
 lifecycle:Record_Lifecycle rdf:type owl:Class ;
-                           owl:equivalentClass organization:Record_Lifecycle .
+                           owl:equivalentClass organization:Record_Lifecycle ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty lifecycle:isDrivenBy ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass lifecycle:Data
+                                           ] ;
+                           rdfs:label "Record Lifecycle" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Rendering
 lifecycle:Rendering rdf:type owl:Class ;
-                    rdfs:subClassOf lifecycle:Service .
+                    rdfs:subClassOf lifecycle:Service ;
+                    rdfs:label "Rendering" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Reporting
-lifecycle:Reporting rdf:type owl:Class .
+lifecycle:Reporting rdf:type owl:Class ;
+                    rdfs:label "Reporting" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retain
 lifecycle:Retain rdf:type owl:Class ;
-                 rdfs:subClassOf lifecycle:Process .
+                 rdfs:subClassOf lifecycle:Process ;
+                 rdfs:label "Retain" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retrieve
 lifecycle:Retrieve rdf:type owl:Class ;
-                   rdfs:subClassOf lifecycle:Service .
+                   rdfs:subClassOf lifecycle:Service ;
+                   rdfs:label "Retrieve" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Search
 lifecycle:Search rdf:type owl:Class ;
-                 rdfs:subClassOf lifecycle:Process .
+                 rdfs:subClassOf lifecycle:Process ;
+                 rdfs:label "Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Secure
 lifecycle:Secure rdf:type owl:Class ;
-                 rdfs:subClassOf lifecycle:Process .
+                 rdfs:subClassOf lifecycle:Process ;
+                 rdfs:label "Secure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service
 lifecycle:Service rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Record_Lifecycle .
+                  rdfs:subClassOf lifecycle:Record_Lifecycle ;
+                  rdfs:label "Service" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service_Search
 lifecycle:Service_Search rdf:type owl:Class ;
-                         rdfs:subClassOf lifecycle:Service .
+                         rdfs:subClassOf lifecycle:Service ;
+                         rdfs:label "Service Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Session
 lifecycle:Session rdf:type owl:Class ;
-                  rdfs:subClassOf lifecycle:Service .
+                  rdfs:subClassOf lifecycle:Service ;
+                  rdfs:label "Session" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Statistics
-lifecycle:Statistics rdf:type owl:Class .
+lifecycle:Statistics rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty lifecycle:producesReporting ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass lifecycle:Reporting
+                                     ] ;
+                     rdfs:label "Statistics" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Submission
 lifecycle:Submission rdf:type owl:Class ;
-                     rdfs:subClassOf lifecycle:Service .
+                     rdfs:subClassOf lifecycle:Service ;
+                     rdfs:label "Submission" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#AccessControl
 organization:AccessControl rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Privacy_And_Security .
+                           rdfs:subClassOf organization:Privacy_And_Security ;
+                           rdfs:label "Access Control" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Analytics
 organization:Analytics rdf:type owl:Class ;
-                       rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                       rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                       rdfs:label "Analytics" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Archieving
 organization:Archieving rdf:type owl:Class ;
-                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                        rdfs:label "Archieving" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Asset_Database
 organization:Asset_Database rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                            rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                            rdfs:label "Asset Database" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Audit
 organization:Audit rdf:type owl:Class ;
-                   rdfs:subClassOf organization:Privacy_And_Security .
+                   rdfs:subClassOf organization:Privacy_And_Security ;
+                   rdfs:label "Audit" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Authentication
 organization:Authentication rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Security_Tools .
+                            rdfs:subClassOf organization:Security_Tools ;
+                            rdfs:label "Authentication" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Chain_Of_Custody_Logging
 organization:Automated_Chain_Of_Custody_Logging rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools .
+                                                rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools ;
+                                                rdfs:label "Automated Chain Of Custody Logging" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Data_Collection
@@ -1145,166 +1515,218 @@ organization:Automated_Data_Collection rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Data_Culling_And_Scoping
 organization:Automated_Data_Culling_And_Scoping rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                                rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                                rdfs:label "Automated Data Culling And Scoping" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Data_Retention_And_Disposal
 organization:Automated_Data_Retention_And_Disposal rdf:type owl:Class ;
-                                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                                   rdfs:label "Automated Data Retention And Disposal" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Notification_System
 organization:Automated_Notification_System rdf:type owl:Class ;
-                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                           rdfs:label "Automated Notification System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Record_Flagging_System
 organization:Automated_Record_Flagging_System rdf:type owl:Class ;
-                                              rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools .
+                                              rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools ;
+                                              rdfs:label "Automated Record Flagging System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Retention_Execution
 organization:Automated_Retention_Execution rdf:type owl:Class ;
-                                           rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                           rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                           rdfs:label "Automated Retention Execution" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Risk_Assessment_System
 organization:Automated_Risk_Assessment_System rdf:type owl:Class ;
-                                              rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                              rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                              rdfs:label "Automated Risk Assessment System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automated_Storage_Utilization_Reporting
 organization:Automated_Storage_Utilization_Reporting rdf:type owl:Class ;
-                                                     rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                                                     rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                                                     rdfs:label "Automated Storage Utilization Reporting" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Automted_Integration
 organization:Automted_Integration rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                  rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                  rdfs:label "Automted Integration" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Backup
 organization:Backup rdf:type owl:Class ;
-                    rdfs:subClassOf organization:Backup_And_Recovery_Tools .
+                    rdfs:subClassOf organization:Backup_And_Recovery_Tools ;
+                    rdfs:label "Backup" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Backup_And_Recovery_Tools
 organization:Backup_And_Recovery_Tools rdf:type owl:Class ;
-                                       rdfs:subClassOf organization:Tools .
+                                       rdfs:subClassOf organization:Tools ;
+                                       rdfs:label "Backup And Recovery Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Business_Unit
 organization:Business_Unit rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Organization_Unit .
+                           rdfs:subClassOf organization:Organization_Unit ;
+                           rdfs:label "Business Unit" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#CCO
 organization:CCO rdf:type owl:Class ;
-                 rdfs:subClassOf organization:Role .
+                 rdfs:subClassOf organization:Role ;
+                 rdfs:label "CCO (Chief Customer Officer)" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#CIGO
 organization:CIGO rdf:type owl:Class ;
-                  rdfs:subClassOf organization:Role .
+                  rdfs:subClassOf organization:Role ;
+                  rdfs:label "CIGO (Chief Information Governance Officer)" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#CSO
 organization:CSO rdf:type owl:Class ;
-                 rdfs:subClassOf organization:Role .
+                 rdfs:subClassOf organization:Role ;
+                 rdfs:label "CSO (Chief Security Officer)" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Capability
-organization:Capability rdf:type owl:Class .
+organization:Capability rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:technicalRequirementFor ;
+                                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:inMaturityLevel ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass organization:Maturity
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:linkedToFramework ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass organization:Framework
+                                        ] ;
+                        rdfs:label "Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Centralized_Data_Repository
 organization:Centralized_Data_Repository rdf:type owl:Class ;
-                                         rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                         rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                         rdfs:label "Centralized Data Repository" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Centralized_Data_Source_Catalog
 organization:Centralized_Data_Source_Catalog rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                             rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                             rdfs:label "Centralized Data Source Catalog" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Centralized_Instructions_Repository
 organization:Centralized_Instructions_Repository rdf:type owl:Class ;
-                                                 rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                                                 rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                                                 rdfs:label "Centralized Instructions Repository" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Chain_Of_Custody_Documentation
 organization:Chain_Of_Custody_Documentation rdf:type owl:Class ;
-                                            rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                                            rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                                            rdfs:label "Chain Of Custody Documentation" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Chain_Of_Custody_Tracking
 organization:Chain_Of_Custody_Tracking rdf:type owl:Class ;
-                                       rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                                       rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                                       rdfs:label "Chain Of Custody Tracking" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Change_Management
 organization:Change_Management rdf:type owl:Class ;
-                               rdfs:subClassOf organization:Departement .
+                               rdfs:subClassOf organization:Departement ;
+                               rdfs:label "Change Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Collaboration_Tools
 organization:Collaboration_Tools rdf:type owl:Class ;
-                                 rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                 rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                 rdfs:label "Collaboration Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Communication_And_Collaboration_Tools
 organization:Communication_And_Collaboration_Tools rdf:type owl:Class ;
-                                                   rdfs:subClassOf organization:Tools .
+                                                   rdfs:subClassOf organization:Tools ;
+                                                   rdfs:label "Communication And Collaboration Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Communication_Platforms
 organization:Communication_Platforms rdf:type owl:Class ;
-                                     rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                     rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                     rdfs:label "Communication Platforms" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Compliance
+organization:Compliance rdf:type owl:Class ;
+                        rdfs:subClassOf organization:Governance_Criterion .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Compliance_Management_System
 organization:Compliance_Management_System rdf:type owl:Class ;
-                                          rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                          rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                          rdfs:label "Compliance Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Compliance_Reporting
 organization:Compliance_Reporting rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                  rdfs:label "Compliance Reporting" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Compliance_Tagging_And_Classification
 organization:Compliance_Tagging_And_Classification rdf:type owl:Class ;
-                                                   rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                                   rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                                   rdfs:label "Compliance Tagging And Classification" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Confirmation_Tracking_Mechanism
 organization:Confirmation_Tracking_Mechanism rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                             rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                             rdfs:label "Confirmation Tracking Mechanism" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Content_Authoring_Tools
 organization:Content_Authoring_Tools rdf:type owl:Class ;
-                                     rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                                     rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                                     rdfs:label "Content Authoring Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Continous_Visibility_And_Monitoring_System
 organization:Continous_Visibility_And_Monitoring_System rdf:type owl:Class ;
-                                                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                                                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                                                        rdfs:label "Continous Visibility And Monitoring System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Corrective_Action_Management_System
 organization:Corrective_Action_Management_System rdf:type owl:Class ;
-                                                 rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                                 rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                                 rdfs:label "Corrective Action Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Cost_Calculations
 organization:Cost_Calculations rdf:type owl:Class ;
-                               rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                               rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                               rdfs:label "Cost Calculations" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#DPO
 organization:DPO rdf:type owl:Class ;
-                 rdfs:subClassOf organization:Role .
+                 rdfs:subClassOf organization:Role ;
+                 rdfs:label "DPO (Data Protection Officer)" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data
@@ -1313,267 +1735,383 @@ organization:Data rdf:type owl:Class .
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Classification_And_Tagging
 organization:Data_Classification_And_Tagging rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                             rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                             rdfs:label "Data Classification And Tagging" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Controller
 organization:Data_Controller rdf:type owl:Class ;
-                             rdfs:subClassOf organization:Role .
+                             rdfs:subClassOf organization:Role ;
+                             rdfs:label "Data Controller" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Discovery_And_Scanninig_Tools
 organization:Data_Discovery_And_Scanninig_Tools rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                                rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                                rdfs:label "Data Discovery And Scanninig Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Erasure
 organization:Data_Erasure rdf:type owl:Class ;
-                          rdfs:subClassOf organization:Security_Tools .
+                          rdfs:subClassOf organization:Security_Tools ;
+                          rdfs:label "Data Erasure" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Inventory_System
 organization:Data_Inventory_System rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                   rdfs:label "Data Inventory System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Loss_Prevention
 organization:Data_Loss_Prevention rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Security_Tools .
+                                  rdfs:subClassOf organization:Security_Tools ;
+                                  rdfs:label "Data Loss Prevention" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Management_And_Governance_Tools
 organization:Data_Management_And_Governance_Tools rdf:type owl:Class ;
-                                                  rdfs:subClassOf organization:Tools .
+                                                  rdfs:subClassOf organization:Tools ;
+                                                  rdfs:label "Data Management And Governance Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Mapping_And_Classification_System
 organization:Data_Mapping_And_Classification_System rdf:type owl:Class ;
-                                                    rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                                    rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                                    rdfs:label "Data Mapping And Classification System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Privacy_Masking
 organization:Data_Privacy_Masking rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                  rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                  rdfs:label "Data Privacy Masking" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Processing_Register
 organization:Data_Processing_Register rdf:type owl:Class ;
-                                      rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                      rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                      rdfs:label "Data Processing Register" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Processor
 organization:Data_Processor rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Role .
+                            rdfs:subClassOf organization:Role ;
+                            rdfs:label "Data Processor" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Quality_Assurance_Framework
 organization:Data_Quality_Assurance_Framework rdf:type owl:Class ;
-                                              rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                              rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                              rdfs:label "Data Quality Assurance Framework" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Quality_Management
 organization:Data_Quality_Management rdf:type owl:Class ;
-                                     rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                     rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                     rdfs:label "Data Quality Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Retention_Policy
 organization:Data_Retention_Policy rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                   rdfs:label "Data Retention Policy" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Sharing_Protocols
 organization:Data_Sharing_Protocols rdf:type owl:Class ;
-                                    rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                    rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                    rdfs:label "Data Sharing Protocols" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Storage
 organization:Data_Storage rdf:type owl:Class ;
-                          rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                          rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                          rdfs:label "Data Storage" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Subject
 organization:Data_Subject rdf:type owl:Class ;
-                          rdfs:subClassOf organization:Role .
+                          rdfs:subClassOf organization:Role ;
+                          rdfs:label "Data Subject" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Data_Testing_And_Validation_Tools
 organization:Data_Testing_And_Validation_Tools rdf:type owl:Class ;
-                                               rdfs:subClassOf organization:Tools .
+                                               rdfs:subClassOf organization:Tools ;
+                                               rdfs:label "Data Testing And Validation Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Database_Management_System
 organization:Database_Management_System rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                        rdfs:label "Database Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Deadline_Tracking
 organization:Deadline_Tracking rdf:type owl:Class ;
-                               rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                               rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                               rdfs:label "Deadline Tracking" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Departement
 organization:Departement rdf:type owl:Class ;
-                         rdfs:subClassOf organization:Organization_Unit .
+                         rdfs:subClassOf organization:Organization_Unit ;
+                         rdfs:label "Departement" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Designation_Interface
 organization:Designation_Interface rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                   rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                   rdfs:label "Designation Interface" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Digital_Signatures_And_Timestamps
 organization:Digital_Signatures_And_Timestamps rdf:type owl:Class ;
-                                               rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                               rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                               rdfs:label "Digital Signatures And Timestamps" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Disaster_Recovery_Plan
 organization:Disaster_Recovery_Plan rdf:type owl:Class ;
-                                    rdfs:subClassOf organization:Backup_And_Recovery_Tools .
+                                    rdfs:subClassOf organization:Backup_And_Recovery_Tools ;
+                                    rdfs:label "Disaster Recovery Plan" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Disposition_Policies_And_Procedures
 organization:Disposition_Policies_And_Procedures rdf:type owl:Class ;
-                                                 rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                                 rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                                 rdfs:label "Disposition Policies And Procedures" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Document_And_Records_Management_Tools
 organization:Document_And_Records_Management_Tools rdf:type owl:Class ;
-                                                   rdfs:subClassOf organization:Tools .
+                                                   rdfs:subClassOf organization:Tools ;
+                                                   rdfs:label "Document And Records Management Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Document_Management_System
 organization:Document_Management_System rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                                        rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                                        rdfs:label "Document Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Early_Case_Assessment
 organization:Early_Case_Assessment rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                                   rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                                   rdfs:label "Early Case Assessment" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Electronic_Records_Management
 organization:Electronic_Records_Management rdf:type owl:Class ;
                                            rdfs:subClassOf organization:Records_Management ;
-                                           owl:disjointWith organization:Records_And_Information_Management .
+                                           owl:disjointWith organization:Records_And_Information_Management ;
+                                           rdfs:label "Electronic Records Management" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Employee
+organization:Employee rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty organization:memberOfDepartment ;
+                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass organization:Departement
+                                      ] ;
+                      rdfs:label "Employee" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Employee_Engagement_Platforms
 organization:Employee_Engagement_Platforms rdf:type owl:Class ;
-                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                           rdfs:label "Employee Engagement Platforms" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Employee_Interviews
 organization:Employee_Interviews rdf:type owl:Class ;
-                                 rdfs:subClassOf organization:Knowledge_And_resource_Repository_Tools .
+                                 rdfs:subClassOf organization:Knowledge_And_Resource_Repository_Tools ,
+                                                 organization:Knowledge_And_resource_Repository_Tools ;
+                                 rdfs:label "Employee Interviews" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Employee_Self_Service_Portal
 organization:Employee_Self_Service_Portal rdf:type owl:Class ;
-                                          rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                          rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                          rdfs:label "Employee Self Service Portal" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Encryption
 organization:Encryption rdf:type owl:Class ;
-                        rdfs:subClassOf organization:Security_Tools .
+                        rdfs:subClassOf organization:Security_Tools ;
+                        rdfs:label "Encryption" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Enterprise
-organization:Enterprise rdf:type owl:Class .
+organization:Enterprise rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:hasOrganizationUnit ;
+                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass organization:Organization_Unit
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:needsGovernanceStrategy ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass organization:Governance_Strategy
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty organization:needsSteeringCommittee ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass organization:Steering_Committee
+                                        ] .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Enterprise_Content_Management_System
 organization:Enterprise_Content_Management_System rdf:type owl:Class ;
-                                                  rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                                                  rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                                                  rdfs:label "Enterprise Content Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Enterprise_Risk_Management
 organization:Enterprise_Risk_Management rdf:type owl:Class ;
                                         rdfs:subClassOf organization:Risk_And_Compliance ;
-                                        owl:disjointWith organization:Information_Risk_Management .
+                                        owl:disjointWith organization:Information_Risk_Management ;
+                                        rdfs:label "Enterprise Risk Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Evidence_And_Data_Logging_Tools
 organization:Evidence_And_Data_Logging_Tools rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Tools .
+                                             rdfs:subClassOf organization:Tools ;
+                                             rdfs:label "Evidence And Data Logging Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Exception_Handling_System
 organization:Exception_Handling_System rdf:type owl:Class ;
-                                       rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                       rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                       rdfs:label "Exception Handling System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Executive_Sponsor
 organization:Executive_Sponsor rdf:type owl:Class ;
-                               rdfs:subClassOf organization:Role .
+                               rdfs:subClassOf organization:Role ;
+                               rdfs:label "Executive Sponsor" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Framework
-organization:Framework rdf:type owl:Class .
+organization:Framework rdf:type owl:Class ;
+                       rdfs:label "Framework" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Goal
+organization:Goal rdf:type owl:Class ;
+                  rdfs:label "Goal" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Governance
+organization:Governance rdf:type owl:Class ;
+                        rdfs:label "Governance" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Governance_Body
+organization:Governance_Body rdf:type owl:Class ;
+                             rdfs:subClassOf organization:Governance ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty organization:definesGovernanceStrategy ;
+                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onClass organization:Governance_Strategy
+                                             ] ;
+                             rdfs:label "Governance Body" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Governance_Criterion
+organization:Governance_Criterion rdf:type owl:Class ;
+                                  rdfs:subClassOf organization:Governance ;
+                                  rdfs:label "Governance Criterion" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Governance_Strategy
+organization:Governance_Strategy rdf:type owl:Class ;
+                                 rdfs:subClassOf organization:Governance ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty organization:definesGoal ;
+                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass organization:Goal
+                                                 ] ;
+                                 rdfs:label "Governance Strategy" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Hold_Enforcement_Automation_System
 organization:Hold_Enforcement_Automation_System rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                                                rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                                                rdfs:label "Hold Enforcement Automation System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Capability
 organization:IG_Capability rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Capability .
+                           rdfs:subClassOf organization:Capability ;
+                           rdfs:label "Information Governance Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Chief_Officer
 organization:IG_Chief_Officer rdf:type owl:Class ;
-                              rdfs:subClassOf organization:Role .
+                              rdfs:subClassOf organization:Role ;
+                              rdfs:label "IG Chief Officer" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Leadership
 organization:IG_Leadership rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Role .
+                           rdfs:subClassOf organization:Role ;
+                           rdfs:label "IG Leadership" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Policy
-organization:IG_Policy rdf:type owl:Class .
+organization:IG_Policy rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty organization:definesRule ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass organization:Rule
+                                       ] .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Programm
-organization:IG_Programm rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/igonto/organization#IG_Strategic_Plan
-organization:IG_Strategic_Plan rdf:type owl:Class .
-
-
-###  http://www.semanticweb.org/igonto/organization#IG_Team
-organization:IG_Team rdf:type owl:Class .
+organization:IG_Programm rdf:type owl:Class ;
+                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                           owl:onProperty organization:specifiesPrinciples ;
+                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                           owl:onClass organization:Principle
+                                         ] ;
+                         rdfs:label "Programm" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#ISO
-organization:ISO rdf:type owl:Class .
+organization:ISO rdf:type owl:Class ;
+                 rdfs:label "ISO" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IT
 organization:IT rdf:type owl:Class ;
-                rdfs:subClassOf organization:Departement .
+                rdfs:subClassOf organization:Departement ;
+                rdfs:label "IT" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#IT_Planning_And_Strategy_Framework
 organization:IT_Planning_And_Strategy_Framework rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                                                rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                                                rdfs:label "IT Planning And Strategy Framework" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Incident_Response_And_Remediation_Protocol
 organization:Incident_Response_And_Remediation_Protocol rdf:type owl:Class ;
-                                                        rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                                        rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                                        rdfs:label "Incident Response And Remediation Protocol" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Incident_Response_Plan
 organization:Incident_Response_Plan rdf:type owl:Class ;
-                                    rdfs:subClassOf organization:Backup_And_Recovery_Tools .
+                                    rdfs:subClassOf organization:Backup_And_Recovery_Tools ;
+                                    rdfs:label "Incident Response Plan" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Information_Risk_Management
 organization:Information_Risk_Management rdf:type owl:Class ;
-                                         rdfs:subClassOf organization:Risk_And_Compliance .
+                                         rdfs:subClassOf organization:Risk_And_Compliance ;
+                                         rdfs:label "Information Risk Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Inventory_Of_Evidence
@@ -1583,7 +2121,14 @@ organization:Inventory_Of_Evidence rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Key_Performance_Indicators
 organization:Key_Performance_Indicators rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                                        rdfs:label "Key Performance Indicators" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Knowledge_And_Resource_Repository_Tools
+organization:Knowledge_And_Resource_Repository_Tools rdf:type owl:Class ;
+                                                     rdfs:subClassOf organization:Tools ;
+                                                     rdfs:label "Knowledge And Resource Repository Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Knowledge_And_resource_Repository_Tools
@@ -1593,234 +2138,336 @@ organization:Knowledge_And_resource_Repository_Tools rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Large_Enterprise
 organization:Large_Enterprise rdf:type owl:Class ;
-                              rdfs:subClassOf organization:Enterprise .
+                              rdfs:subClassOf organization:Enterprise ;
+                              rdfs:label "Large Enterprise" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Laws_Mapping_And_Compliance_Tracking
 organization:Laws_Mapping_And_Compliance_Tracking rdf:type owl:Class ;
-                                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                                  rdfs:label "Laws Mapping And Compliance Tracking" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Learning_Management_System
 organization:Learning_Management_System rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                        rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                        rdfs:label "Learning Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal
 organization:Legal rdf:type owl:Class ;
-                   rdfs:subClassOf organization:Departement .
+                   rdfs:subClassOf organization:Departement ;
+                   rdfs:label "Legal" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal_And_Compliance_Tools
 organization:Legal_And_Compliance_Tools rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Tools .
+                                        rdfs:subClassOf organization:Tools ;
+                                        rdfs:label "Legal And Compliance Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal_Hold_Inventory
 organization:Legal_Hold_Inventory rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                  rdfs:label "Legal Hold Inventory" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal_Hold_Management
 organization:Legal_Hold_Management rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                   rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                   rdfs:label "Legal Hold Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal_Matters_Testing
 organization:Legal_Matters_Testing rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Data_Testing_And_Validation_Tools .
+                                   rdfs:subClassOf organization:Data_Testing_And_Validation_Tools ;
+                                   rdfs:label "Legal Matters Testing" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Legal_Registry
 organization:Legal_Registry rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                            rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                            rdfs:label "Legal Registry" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Maturity
-organization:Maturity rdf:type owl:Class .
+organization:Maturity rdf:type owl:Class ;
+                      rdfs:label "Maturity" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Medium_Enterprise
 organization:Medium_Enterprise rdf:type owl:Class ;
-                               rdfs:subClassOf organization:Enterprise .
+                               rdfs:subClassOf organization:Enterprise ;
+                               rdfs:label "Medium Enterprise" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Metadata_Framework
 organization:Metadata_Framework rdf:type owl:Class ;
-                                rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                                rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                                rdfs:label "Metadata Framework" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Monitoring
 organization:Monitoring rdf:type owl:Class ;
-                        rdfs:subClassOf organization:Privacy_And_Security .
+                        rdfs:subClassOf organization:Privacy_And_Security ;
+                        rdfs:label "Monitoring" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Monitoring_And_Visibility_Tools
 organization:Monitoring_And_Visibility_Tools rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Tools .
+                                             rdfs:subClassOf organization:Tools ;
+                                             rdfs:label "Monitoring And Visibility Tools" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Objective
+organization:Objective rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty organization:ensureCompliance ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass organization:Compliance
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty organization:ensureQuality ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass organization:Quality
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty organization:ensureTransparency ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass organization:Transparency
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty organization:isRealizedByStrategy ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass organization:Strategy
+                                       ] ;
+                       rdfs:label "Objective" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Organization_Unit
-organization:Organization_Unit rdf:type owl:Class .
+organization:Organization_Unit rdf:type owl:Class ;
+                               rdfs:label "Organization Unit" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Penetration_Testing
 organization:Penetration_Testing rdf:type owl:Class ;
-                                 rdfs:subClassOf organization:Security_Tools .
+                                 rdfs:subClassOf organization:Security_Tools ;
+                                 rdfs:label "Penetration Testing" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Principle
-organization:Principle rdf:type owl:Class .
+organization:Principle rdf:type owl:Class ;
+                       rdfs:label "Principle" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Privacy_And_Security
 organization:Privacy_And_Security rdf:type owl:Class ;
-                                  rdfs:subClassOf organization:Departement .
+                                  rdfs:subClassOf organization:Departement ;
+                                  rdfs:label "Privacy And Security" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Privacy_Impact_Assessment_Tools
 organization:Privacy_Impact_Assessment_Tools rdf:type owl:Class ;
-                                             rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                             rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                             rdfs:label "Privacy Impact Assessment Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Privacy_Laws_And_Policies_Repository
 organization:Privacy_Laws_And_Policies_Repository rdf:type owl:Class ;
-                                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                                  rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                                  rdfs:label "Privacy Laws And Policies Repository" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Process
 organization:Process rdf:type owl:Class ;
-                     rdfs:subClassOf organization:Record_Lifecycle .
+                     rdfs:subClassOf organization:Record_Lifecycle ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty organization:createsRecord ;
+                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass organization:Record
+                                     ] .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Project_Manager
 organization:Project_Manager rdf:type owl:Class ;
-                             rdfs:subClassOf organization:Role .
+                             rdfs:subClassOf organization:Role ;
+                             rdfs:label "Project Manager" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Quality
+organization:Quality rdf:type owl:Class ;
+                     rdfs:subClassOf organization:Governance_Criterion .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Record
-organization:Record rdf:type owl:Class .
+organization:Record rdf:type owl:Class ;
+                    rdfs:label "Record" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Record_Control_Structure
+organization:Record_Control_Structure rdf:type owl:Class ;
+                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                        owl:onProperty organization:definesRecordLifecycle ;
+                                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass organization:Record_Lifecycle
+                                                      ] ;
+                                      rdfs:label "Record Control Structure" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Record_Lifecycle
-organization:Record_Lifecycle rdf:type owl:Class .
+organization:Record_Lifecycle rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty organization:usedOnRecord ;
+                                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass organization:Record
+                                              ] ;
+                              rdfs:label "Record Lifecycle" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Records_And_Information_Management
 organization:Records_And_Information_Management rdf:type owl:Class ;
-                                                rdfs:subClassOf organization:Records_Management .
+                                                rdfs:subClassOf organization:Records_Management ;
+                                                rdfs:label "Records And Information Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Records_Lifeycle_Management
 organization:Records_Lifeycle_Management rdf:type owl:Class ;
-                                         rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                         rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                         rdfs:label "Records Lifeycle Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Records_Management
 organization:Records_Management rdf:type owl:Class ;
-                                rdfs:subClassOf organization:Departement .
-
-
-###  http://www.semanticweb.org/igonto/organization#Records_Management_Practice
-organization:Records_Management_Practice rdf:type owl:Class .
+                                rdfs:subClassOf organization:Departement ;
+                                rdfs:label "Records Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Records_Retention_Schedule
 organization:Records_Retention_Schedule rdf:type owl:Class ;
-                                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                        rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                        rdfs:label "Records Retention Schedule" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Remote_Wiping
 organization:Remote_Wiping rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Backup_And_Recovery_Tools .
+                           rdfs:subClassOf organization:Backup_And_Recovery_Tools ;
+                           rdfs:label "Remote Wiping" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Reporting_And_Analysis_System
 organization:Reporting_And_Analysis_System rdf:type owl:Class ;
-                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                                           rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                                           rdfs:label "Reporting And Analysis System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Request_Management_System
 organization:Request_Management_System rdf:type owl:Class ;
-                                       rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                       rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                       rdfs:label "Request Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Retention_Rule_Management_System
 organization:Retention_Rule_Management_System rdf:type owl:Class ;
-                                              rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                                              rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                                              rdfs:label "Retention Rule Management System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Review_Cycles
 organization:Review_Cycles rdf:type owl:Class ;
-                           rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                           rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                           rdfs:label "Review Cycles" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Revisitation_And_Refinement
 organization:Revisitation_And_Refinement rdf:type owl:Class ;
-                                         rdfs:subClassOf organization:Workflow_And_Process_Management_Tools .
+                                         rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
+                                         rdfs:label "Revisitation And Refinement" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Risk_And_Compliance
 organization:Risk_And_Compliance rdf:type owl:Class ;
-                                 rdfs:subClassOf organization:Departement .
+                                 rdfs:subClassOf organization:Departement ;
+                                 rdfs:label "Risk And Compliance" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Risk_Assessment_And_Compliance_Tools
 organization:Risk_Assessment_And_Compliance_Tools rdf:type owl:Class ;
-                                                  rdfs:subClassOf organization:Tools .
+                                                  rdfs:subClassOf organization:Tools ;
+                                                  rdfs:label "Risk Assessment And Compliance Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Role
-organization:Role rdf:type owl:Class .
+organization:Role rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty organization:memberOfOrganization ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass organization:Organization_Unit
+                                  ] .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Rule
-organization:Rule rdf:type owl:Class .
+organization:Rule rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty organization:executesRecord ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass organization:Record
+                                  ] ;
+                  rdfs:label "Rule" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#SLA
 organization:SLA rdf:type owl:Class ;
-                 rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                 rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                 rdfs:label "SLA (Service Level Agreement)" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Search_And_Retrieval_System
 organization:Search_And_Retrieval_System rdf:type owl:Class ;
-                                         rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools .
+                                         rdfs:subClassOf organization:Evidence_And_Data_Logging_Tools ;
+                                         rdfs:label "Search And Retrieval System" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Security_Assessment_Framework
 organization:Security_Assessment_Framework rdf:type owl:Class ;
-                                           rdfs:subClassOf organization:Security_Tools .
+                                           rdfs:subClassOf organization:Security_Tools ;
+                                           rdfs:label "Security Assessment Framework" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Security_Information_And_Event_Management
 organization:Security_Information_And_Event_Management rdf:type owl:Class ;
-                                                       rdfs:subClassOf organization:Security_Tools .
+                                                       rdfs:subClassOf organization:Security_Tools ;
+                                                       rdfs:label "Security Information And Event Management" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Security_Tools
 organization:Security_Tools rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Tools .
+                            rdfs:subClassOf organization:Tools ;
+                            rdfs:label "Security Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Senior_Records_Officer
 organization:Senior_Records_Officer rdf:type owl:Class ;
-                                    rdfs:subClassOf organization:Role .
+                                    rdfs:subClassOf organization:Role ;
+                                    rdfs:label "Senior Records Officer" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Shared_Library_Of_Country_Protocols
 organization:Shared_Library_Of_Country_Protocols rdf:type owl:Class ;
-                                                 rdfs:subClassOf organization:Knowledge_And_resource_Repository_Tools .
+                                                 rdfs:subClassOf organization:Knowledge_And_Resource_Repository_Tools ,
+                                                                 organization:Knowledge_And_resource_Repository_Tools ;
+                                                 rdfs:label "Shared Library Of Country Protocols" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Small_Enterprise
 organization:Small_Enterprise rdf:type owl:Class ;
-                              rdfs:subClassOf organization:Enterprise .
+                              rdfs:subClassOf organization:Enterprise ;
+                              rdfs:label "Small Enterprise" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Stakeholder
 organization:Stakeholder rdf:type owl:Class ;
-                         rdfs:subClassOf organization:Role .
+                         rdfs:subClassOf organization:Role ;
+                         rdfs:label "Stakeholder" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Steering_Commitee
@@ -1828,58 +2475,103 @@ organization:Steering_Commitee rdf:type owl:Class ;
                                rdfs:subClassOf organization:Role .
 
 
+###  http://www.semanticweb.org/igonto/organization#Steering_Committee
+organization:Steering_Committee rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty organization:definesProgram ;
+                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass organization:IG_Programm
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty organization:definesStrategy ;
+                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onClass organization:Strategy
+                                                ] ;
+                                rdfs:label "Steering Committee" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Strategy
+organization:Strategy rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty organization:definesPolicy ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass organization:IG_Policy
+                                      ] .
+
+
 ###  http://www.semanticweb.org/igonto/organization#Suspension_Procedures
 organization:Suspension_Procedures rdf:type owl:Class ;
-                                   rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools .
+                                   rdfs:subClassOf organization:Risk_Assessment_And_Compliance_Tools ;
+                                   rdfs:label "Suspension Procedures" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Syndication_System_For_Hold_Release
 organization:Syndication_System_For_Hold_Release rdf:type owl:Class ;
-                                                 rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                                 rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                                 rdfs:label "Syndication System For Hold Release" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#System_Log
 organization:System_Log rdf:type owl:Class ;
-                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools .
+                        rdfs:subClassOf organization:Monitoring_And_Visibility_Tools ;
+                        rdfs:label "System Log" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#TOSCA_Capability
 organization:TOSCA_Capability rdf:type owl:Class ;
-                              rdfs:subClassOf organization:Capability .
+                              rdfs:subClassOf organization:Capability ;
+                              rdfs:label "TOSCA Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Testing
 organization:Testing rdf:type owl:Class ;
-                     rdfs:subClassOf organization:Data_Testing_And_Validation_Tools .
+                     rdfs:subClassOf organization:Data_Testing_And_Validation_Tools ;
+                     rdfs:label "Testing" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Tools
-organization:Tools rdf:type owl:Class .
+organization:Tools rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty organization:practicesDefinedInIso ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass organization:ISO
+                                   ] ;
+                   rdfs:label "Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Training
 organization:Training rdf:type owl:Class ;
-                      rdfs:subClassOf organization:Communication_And_Collaboration_Tools .
+                      rdfs:subClassOf organization:Communication_And_Collaboration_Tools ;
+                      rdfs:label "Training" .
+
+
+###  http://www.semanticweb.org/igonto/organization#Transparency
+organization:Transparency rdf:type owl:Class ;
+                          rdfs:subClassOf organization:Governance_Criterion .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Version_Control
 organization:Version_Control rdf:type owl:Class ;
-                             rdfs:subClassOf organization:Document_And_Records_Management_Tools .
+                             rdfs:subClassOf organization:Document_And_Records_Management_Tools ;
+                             rdfs:label "Version Control" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Workflow_And_Process_Management_Tools
 organization:Workflow_And_Process_Management_Tools rdf:type owl:Class ;
-                                                   rdfs:subClassOf organization:Tools .
+                                                   rdfs:subClassOf organization:Tools ;
+                                                   rdfs:label "Workflow And Process Management Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Workflow_Tools
 organization:Workflow_Tools rdf:type owl:Class ;
-                            rdfs:subClassOf organization:Data_Management_And_Governance_Tools .
+                            rdfs:subClassOf organization:Data_Management_And_Governance_Tools ;
+                            rdfs:label "Workflow Tools" .
 
 
 ###  http://www.semanticweb.org/igonto/organization#eDiscovery_Integration
 organization:eDiscovery_Integration rdf:type owl:Class ;
-                                    rdfs:subClassOf organization:Legal_And_Compliance_Tools .
+                                    rdfs:subClassOf organization:Legal_And_Compliance_Tools ;
+                                    rdfs:label "eDiscovery Integration" .
 
 
 #################################################################
@@ -2845,7 +3537,8 @@ jurisdiction:Documents rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#EU
 jurisdiction:EU rdf:type owl:NamedIndividual ,
-                         jurisdiction:Jurisdiction .
+                         jurisdiction:Jurisdiction ;
+                jurisdiction:hasRegulation jurisdiction:GDPR .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Employee
@@ -3274,13 +3967,6 @@ organization:AC_1_1_5 rdf:type owl:NamedIndividual ,
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:AC_1_1_5 ;
    owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Steering_Commitee_1 ;
-   rdfs:comment "An IG Steering Committee, composed of representatives from different departments, ensures cross-functional collaboration and coordination in IG efforts. It provides oversight, direction, and decision-making for IG initiatives."
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:AC_1_1_5 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:IG_Leadership_1 ;
    rdfs:comment "Active involvement and support from senior management and the Governing Board demonstrate the organization's commitment to IG. Their engagement helps allocate resources, make strategic decisions, and prioritize IG initiatives."
  ] .
@@ -3290,6 +3976,13 @@ organization:AC_1_1_5 rdf:type owl:NamedIndividual ,
    owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:IG_Strategic_Plan_1 ;
    rdfs:comment " A well-defined and comprehensive Information Governance (IG) strategic plan and policy framework outlines the principles, objectives, and guidelines for IG initiatives within the organization. It ensures a structured approach to IG implementation and decision-making."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource organization:AC_1_1_5 ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
+   owl:annotatedTarget organization:Steering_Commitee_1 ;
+   rdfs:comment "An IG Steering Committee, composed of representatives from different departments, ensures cross-functional collaboration and coordination in IG efforts. It provides oversight, direction, and decision-making for IG initiatives."
  ] .
 
 
@@ -3651,6 +4344,13 @@ organization:AC_1_5_3 rdf:type owl:NamedIndividual ,
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:AC_1_5_3 ;
    owl:annotatedProperty organization:needsTechnicalRequirement ;
+   owl:annotatedTarget organization:Workflow_Tools_1 ;
+   rdfs:comment "Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource organization:AC_1_5_3 ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Database_Management_System_1 ;
    rdfs:comment "A DMS enables efficient management, storage, retrieval, and sharing of documents and data, which is essential for information-driven processes."
  ] .
@@ -3667,13 +4367,6 @@ organization:AC_1_5_3 rdf:type owl:NamedIndividual ,
    owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Reporting_And_Analysis_System_1 ;
    rdfs:comment "An integrated reporting and analytics system enables monitoring and assessment of information-driven processes for continuous improvement."
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:AC_1_5_3 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Workflow_Tools_1 ;
-   rdfs:comment "Workflow tools enable the automation and control of information-driven processes, enhancing efficiency and consistency."
  ] .
 
 
@@ -4604,6 +5297,13 @@ organization:COMP_1_2_3 rdf:type owl:NamedIndividual ,
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:COMP_1_2_3 ;
    owl:annotatedProperty organization:needsTechnicalRequirement ;
+   owl:annotatedTarget organization:Automated_Integration ;
+   rdfs:comment "Integration with business processes ensures that record creation and capture are seamlessly embedded into daily operations, reducing the risk of records being overlooked."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource organization:COMP_1_2_3 ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Encryption_1 ;
    rdfs:comment " Encryption and data protection measures should be applied to captured records to safeguard sensitive information and ensure compliance with GDPR security requirements."
  ] .
@@ -4620,13 +5320,6 @@ organization:COMP_1_2_3 rdf:type owl:NamedIndividual ,
    owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Records_Information_Management_1 ;
    rdfs:comment "A Records Management System is essential for systematic record creation, capture, and management. Automation of record creation and capture reduces manual errors and ensures that records are consistently captured as part of business processes. It provides a structured framework for handling records throughout their lifecycle, ensuring their authenticity and integrity."
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:COMP_1_2_3 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Automated_Integration ;
-   rdfs:comment "Integration with business processes ensures that record creation and capture are seamlessly embedded into daily operations, reducing the risk of records being overlooked."
  ] .
 
 
@@ -6346,7 +7039,7 @@ organization:IG_Programm_1 rdf:type owl:NamedIndividual ,
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Strategic_Plan_1
 organization:IG_Strategic_Plan_1 rdf:type owl:NamedIndividual ,
-                                          organization:IG_Strategic_Plan ;
+                                          organization:Strategy ;
                                  organization:practicesDefinedInIso organization:ISO_15000 ,
                                                                     organization:ISO_15489 ,
                                                                     organization:ISO_15939 .
@@ -7033,11 +7726,27 @@ organization:IT_P4_3 rdf:type owl:NamedIndividual ,
                      organization:inMaturityLevel <http://www.semanticweb.org/igonto/organization#3_Essential> ;
                      organization:linkedToFramework organization:CGOC_02 ;
                      organization:linkedToProcess organization:Process_Active_Data_Management_1 ;
+                     organization:needsTechnicalRequirement organization:Archieving_1 ,
+                                                            organization:IG_Policy_1 ;
                      organization:practicesDefinedInIso organization:Archieving_1 ,
                                                         organization:IG_Policy_1 ,
                                                         organization:ISO_15489 ,
                                                         organization:ISO_27001 ;
                      organization:capabilityDescription "Some archiving is performed to batch off aging data and provide business users with faster access to more frequently used data. Archive approach varies by data source and business unit. Policies for retention, privacy and security are manually applied, if at all." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource organization:IT_P4_3 ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
+   owl:annotatedTarget organization:Archieving_1 ;
+   rdfs:comment " Develop and implement a comprehensive data archiving strategy to address aging data and improve data accessibility."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource organization:IT_P4_3 ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
+   owl:annotatedTarget organization:IG_Policy_1 ;
+   rdfs:comment " Establish clear policies for data retention, privacy, and security to govern the management of archived data."
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:IT_P4_3 ;
@@ -8157,49 +8866,49 @@ organization:PO_1_4 rdf:type owl:NamedIndividual ,
                     organization:inMaturityLevel <http://www.semanticweb.org/igonto/organization#4_Proactive> ;
                     organization:linkedToFramework organization:ISACA_COBIT ;
                     organization:linkedToProcess organization:Process_Plan_And_Organize_Foundational ;
+                    organization:needsTechnicalRequirement organization:Collaboration_Tools_1 ,
+                                                           organization:Data_Mapping_And_Classification_System_1 ,
+                                                           organization:Document_Management_System_1 ,
+                                                           organization:IT_Planning_And_Strategy_Framework_1 ,
+                                                           organization:Privacy_Impact_Assessment_Tools_1 ;
                     organization:practicesDefinedInIso organization:ISO_15489 ,
                                                        organization:ISO_15939 ,
                                                        organization:ISO_17000 ,
                                                        organization:ISO_23081 ,
                                                        organization:ISO_27001 ;
-                    organization:technicalRequirementFor organization:Collaboration_Tools_1 ,
-                                                         organization:Data_Mapping_And_Classification_System_1 ,
-                                                         organization:Document_Management_System_1 ,
-                                                         organization:IT_Planning_And_Strategy_Framework_1 ,
-                                                         organization:Privacy_Impact_Assessment_Tools_1 ;
                     organization:capabilityDescription "The organization establishes a formalized process for developing and maintaining strategic IT plans. These plans are documented, shared, and aligned with overall business strategies." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:PO_1_4 ;
-   owl:annotatedProperty organization:technicalRequirementFor ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Collaboration_Tools_1 ;
    rdfs:comment " Collaboration tools facilitate cross-functional team involvement in developing and sharing IT plans, ensuring alignment and stakeholder engagement."
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:PO_1_4 ;
-   owl:annotatedProperty organization:technicalRequirementFor ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Data_Mapping_And_Classification_System_1 ;
    rdfs:comment "Data mapping and classification tools assist in identifying personal data within IT plans, ensuring compliance with GDPR principles."
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:PO_1_4 ;
-   owl:annotatedProperty organization:technicalRequirementFor ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Document_Management_System_1 ;
    rdfs:comment " A robust DMS helps organize, store, and share IT plans while ensuring version control and accessibility."
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:PO_1_4 ;
-   owl:annotatedProperty organization:technicalRequirementFor ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:IT_Planning_And_Strategy_Framework_1 ;
    rdfs:comment "Specialized IT Planning and Strategy software assists in creating, documenting, and visualizing strategic IT plans, enhancing collaboration and alignment with business goals."
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource organization:PO_1_4 ;
-   owl:annotatedProperty organization:technicalRequirementFor ;
+   owl:annotatedProperty organization:needsTechnicalRequirement ;
    owl:annotatedTarget organization:Privacy_Impact_Assessment_Tools_1 ;
    rdfs:comment "PIA tools help assess the impact of IT plans on data protection and privacy."
  ] .
@@ -10551,74 +11260,7 @@ organization:Review_Cyles_1 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/igonto/organization#Revisitation_And_Refinement_1
 organization:Revisitation_And_Refinement_1 rdf:type owl:NamedIndividual ,
                                                     organization:Revisitation_And_Refinement ;
-                                           organization:needsTechnicalRequirement organization:Collaboration_Tools_1 ,
-                                                                                  organization:Data_Storage_1 ,
-                                                                                  organization:Database_Management_System_1 ,
-                                                                                  organization:Digital_Signatures_And_Timestamps_1 ,
-                                                                                  organization:Incident_Response_And_Remediation_Protocol_1 ,
-                                                                                  organization:Revisitation_And_Refinement_1 ,
-                                                                                  organization:Workflow_Tools_1 .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Collaboration_Tools_1 ;
-   rdfs:comment """Sharing interview results ensures that all parties are informed, supporting effective collaboration and informed decision-making.
-
-This aligns with \"Collaboration Tools\" and \"Document Management System.\" Sharing interview results requires effective collaboration tools and proper document management."""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Data_Storage_1 ;
-   rdfs:comment """Timely updates enable accurate identification of custodians, crucial for effective data management and legal holds.
-
-This aligns with \"Data Storage\" and \"Data Signatures and Timestamps.\" Real-time updates involve storing data and adding timestamps for accurate tracking."""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Database_Management_System_1 ;
-   rdfs:comment """Sharing interview results ensures that all parties are informed, supporting effective collaboration and informed decision-making.
-
-This aligns with \"Collaboration Tools\" and \"Document Management System.\" Sharing interview results requires effective collaboration tools and proper document management."""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Digital_Signatures_And_Timestamps_1 ;
-   rdfs:comment """Timely updates enable accurate identification of custodians, crucial for effective data management and legal holds.
-
-This aligns with \"Data Storage\" and \"Data Signatures and Timestamps.\" Real-time updates involve storing data and adding timestamps for accurate tracking."""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Incident_Response_And_Remediation_Protocol_1 ;
-   rdfs:comment """Automated alerts during employee transitions ensure that relevant personnel are aware of changes, facilitating data management and legal compliance.
-
-This aligns with \"Incident Response and Remediation Protocol\" and \"Workflow Tools.\" Automation facilitates timely alerts and responses to employee transitions, resembling incident response mechanisms and workflow tools."""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Revisitation_And_Refinement_1 ;
-   rdfs:comment "Regularly revisiting and refining the scope ensures that only relevant custodians are included, minimizing data overreach and enhancing efficiency."
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource organization:Revisitation_And_Refinement_1 ;
-   owl:annotatedProperty organization:needsTechnicalRequirement ;
-   owl:annotatedTarget organization:Workflow_Tools_1 ;
-   rdfs:comment """Automated alerts during employee transitions ensure that relevant personnel are aware of changes, facilitating data management and legal compliance.
-
-This aligns with \"Incident Response and Remediation Protocol\" and \"Workflow Tools.\" Automation facilitates timely alerts and responses to employee transitions, resembling incident response mechanisms and workflow tools."""
- ] .
+                                           organization:practicesDefinedInIso organization:ISO_15489 .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Risk_And_Compliance_1
@@ -11198,24 +11840,70 @@ organization:eDiscovery_Integration_1 rdf:type owl:NamedIndividual ,
 [ rdfs:comment ""
  ] .
 
+[ rdfs:comment ""
+ ] .
+
+[ rdfs:comment ""
+ ] .
+
+[ rdfs:comment ""
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+jurisdiction:Country rdfs:label "Country" .
+
+
+jurisdiction:GDPR rdfs:label "GDPR (General Data Protection Regulation)" .
+
+
+jurisdiction:Regulation rdfs:label "Regulation" .
+
+
+organization:Automated_Data_Collection rdfs:label "Automated Data Collection" .
+
+
+organization:Data rdfs:label "Data" .
+
+
+organization:Enterprise rdfs:label "Enterprise" .
+
+
+organization:IG_Policy rdfs:label "Policy" .
+
+
+organization:Inventory_Of_Evidence rdfs:label "Inventory Of Evidence" .
+
+
+organization:Process rdfs:label "Process" .
+
+
+organization:Role rdfs:label "Role" .
+
+
+organization:Strategy rdfs:label "Strategy" .
+
+
 #################################################################
 #    General axioms
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-   owl:members ( organization:CCO
-                 organization:CSO
-                 organization:DPO
-                 organization:Data_Controller
-                 organization:Data_Processor
-                 organization:Data_Subject
-                 organization:Executive_Sponsor
-                 organization:IG_Leadership
-                 organization:Project_Manager
-                 organization:Stakeholder
-                 organization:Steering_Commitee
-               )
- ] .
+  owl:members ( organization:CCO
+                organization:CSO
+                organization:DPO
+                organization:Data_Controller
+                organization:Data_Processor
+                organization:Data_Subject
+                organization:Executive_Sponsor
+                organization:IG_Leadership
+                organization:Project_Manager
+                organization:Stakeholder
+                organization:Steering_Commitee
+              )
+] .
 
 
 [ rdf:type owl:AllDisjointClasses ;

@@ -37,108 +37,145 @@
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Access
 :Access rdf:type owl:Class ;
-        rdfs:subClassOf :Service .
+        rdfs:subClassOf :Service ;
+        rdfs:label "Access" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Archive
 :Archive rdf:type owl:Class ;
-         rdfs:subClassOf :Process .
+         rdfs:subClassOf :Process ;
+         rdfs:label "Archive" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Classify
 :Classify rdf:type owl:Class ;
-          rdfs:subClassOf :Process .
+          rdfs:subClassOf :Process ;
+          rdfs:label "Classify" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Data
-:Data rdf:type owl:Class .
+:Data rdf:type owl:Class ;
+      rdfs:label "Data" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Find
 :Find rdf:type owl:Class ;
-      rdfs:subClassOf :Service .
+      rdfs:subClassOf :Service ;
+      rdfs:label "Find" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Index
 :Index rdf:type owl:Class ;
-       rdfs:subClassOf :Process .
+       rdfs:subClassOf :Process ;
+       rdfs:label "Index" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Measure
 :Measure rdf:type owl:Class ;
-         rdfs:subClassOf :Process .
+         rdfs:subClassOf :Process ;
+         rdfs:label "Measure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Metric
 :Metric rdf:type owl:Class ;
-        rdfs:subClassOf :Process .
+        rdfs:subClassOf :Process ;
+        rdfs:label "Metric" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Monitor
 :Monitor rdf:type owl:Class ;
-         rdfs:subClassOf :Process .
+         rdfs:subClassOf :Process ;
+         rdfs:label "Monitor" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Process
 :Process rdf:type owl:Class ;
-         rdfs:subClassOf :Record_Lifecycle .
+         rdfs:subClassOf :Record_Lifecycle ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :createsStatistics ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Statistics
+                         ] ;
+         rdfs:label "Process" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle
-:Record_Lifecycle rdf:type owl:Class .
+:Record_Lifecycle rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :isDrivenBy ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :Data
+                                  ] ;
+                  rdfs:label "Record Lifecycle" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Rendering
 :Rendering rdf:type owl:Class ;
-           rdfs:subClassOf :Service .
+           rdfs:subClassOf :Service ;
+           rdfs:label "Rendering" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Reporting
-:Reporting rdf:type owl:Class .
+:Reporting rdf:type owl:Class ;
+           rdfs:label "Reporting" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retain
 :Retain rdf:type owl:Class ;
-        rdfs:subClassOf :Process .
+        rdfs:subClassOf :Process ;
+        rdfs:label "Retain" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retrieve
 :Retrieve rdf:type owl:Class ;
-          rdfs:subClassOf :Service .
+          rdfs:subClassOf :Service ;
+          rdfs:label "Retrieve" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Search
 :Search rdf:type owl:Class ;
-        rdfs:subClassOf :Process .
+        rdfs:subClassOf :Process ;
+        rdfs:label "Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Secure
 :Secure rdf:type owl:Class ;
-        rdfs:subClassOf :Process .
+        rdfs:subClassOf :Process ;
+        rdfs:label "Secure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service
 :Service rdf:type owl:Class ;
-         rdfs:subClassOf :Record_Lifecycle .
+         rdfs:subClassOf :Record_Lifecycle ;
+         rdfs:label "Service" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service_Search
 :Service_Search rdf:type owl:Class ;
-                rdfs:subClassOf :Service .
+                rdfs:subClassOf :Service ;
+                rdfs:label "Service Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Session
 :Session rdf:type owl:Class ;
-         rdfs:subClassOf :Service .
+         rdfs:subClassOf :Service ;
+         rdfs:label "Session" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Statistics
-:Statistics rdf:type owl:Class .
+:Statistics rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :producesReporting ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Reporting
+                            ] ;
+            rdfs:label "Statistics" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Submission
 :Submission rdf:type owl:Class ;
-            rdfs:subClassOf :Service .
+            rdfs:subClassOf :Service ;
+            rdfs:label "Submission" .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -13,16 +13,16 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/igonto/information#appliesRule
+:appliesRule rdf:type owl:ObjectProperty ;
+             rdfs:domain :Policy ;
+             rdfs:range :Rule .
+
+
 ###  http://www.semanticweb.org/igonto/information#classifiesData
 :classifiesData rdf:type owl:ObjectProperty ;
                 rdfs:domain :Record ;
                 rdfs:range :Data .
-
-
-###  http://www.semanticweb.org/igonto/information#containsCost
-:containsCost rdf:type owl:ObjectProperty ;
-              rdfs:domain :Data ;
-              rdfs:range :Cost .
 
 
 ###  http://www.semanticweb.org/igonto/information#containsFile
@@ -30,12 +30,6 @@
               rdfs:domain :Container ,
                           :Folder ;
               rdfs:range :File .
-
-
-###  http://www.semanticweb.org/igonto/information#containsRisk
-:containsRisk rdf:type owl:ObjectProperty ;
-              rdfs:domain :Data ;
-              rdfs:range :Risk .
 
 
 ###  http://www.semanticweb.org/igonto/information#containsValue
@@ -56,16 +50,40 @@
              rdfs:range :Rule .
 
 
+###  http://www.semanticweb.org/igonto/information#exposesRisk
+:exposesRisk rdf:type owl:ObjectProperty ;
+             rdfs:domain :Data ;
+             rdfs:range :Risk .
+
+
 ###  http://www.semanticweb.org/igonto/information#grantsPriviligeToRole
 :grantsPriviligeToRole rdf:type owl:ObjectProperty ;
                        rdfs:domain :Policy ;
                        rdfs:range :Role .
 
 
+###  http://www.semanticweb.org/igonto/information#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :Data ,
+                          :Policy ;
+              rdfs:range :Cost ,
+                         :Goal ,
+                         :Metric ,
+                         :Risk ,
+                         :Rule ,
+                         :Value .
+
+
 ###  http://www.semanticweb.org/igonto/information#hasEdition
 :hasEdition rdf:type owl:ObjectProperty ;
             rdfs:domain :Document ;
             rdfs:range :Edition .
+
+
+###  http://www.semanticweb.org/igonto/information#hasGoal
+:hasGoal rdf:type owl:ObjectProperty ;
+         rdfs:domain :Policy ;
+         rdfs:range :Goal .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasPrivilige
@@ -92,10 +110,16 @@
             rdfs:range :Version .
 
 
-###  http://www.semanticweb.org/igonto/information#needsPermission
-:needsPermission rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Data ;
-                 rdfs:range :Permission .
+###  http://www.semanticweb.org/igonto/information#monitorsMetric
+:monitorsMetric rdf:type owl:ObjectProperty ;
+                rdfs:domain :Policy ;
+                rdfs:range :Metric .
+
+
+###  http://www.semanticweb.org/igonto/information#producesCost
+:producesCost rdf:type owl:ObjectProperty ;
+              rdfs:domain :Data ;
+              rdfs:range :Cost .
 
 
 ###  http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure
@@ -110,6 +134,12 @@
                     rdfs:range :Data_Dictionary .
 
 
+###  http://www.semanticweb.org/igonto/information#vocabularyFor
+:vocabularyFor rdf:type owl:ObjectProperty ;
+               rdfs:domain :Data_Dictionary ;
+               rdfs:range :Taxonomy .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -121,22 +151,31 @@
 
 ###  http://www.semanticweb.org/igonto/information#Audit_Data
 :Audit_Data rdf:type owl:Class ;
-            rdfs:subClassOf :Sensitive_Data .
+            rdfs:subClassOf :Sensitive_Data ;
+            rdfs:label "Audit Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Audit_Trail
 :Audit_Trail rdf:type owl:Class ;
-             rdfs:subClassOf :Record_Control_Structure .
+             rdfs:subClassOf :Record_Control_Structure ;
+             rdfs:label "Audit Trail" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Category
 :Category rdf:type owl:Class ;
-          rdfs:subClassOf :Record_Control_Structure .
+          rdfs:subClassOf :Record_Control_Structure ;
+          rdfs:label "Category" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Container
 :Container rdf:type owl:Class ;
-           rdfs:subClassOf :Record .
+           rdfs:subClassOf :Record ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :containsFile ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :File
+                           ] ;
+           rdfs:label "Container" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Content
@@ -146,47 +185,104 @@
 
 ###  http://www.semanticweb.org/igonto/information#Control_Data
 :Control_Data rdf:type owl:Class ;
-              rdfs:subClassOf :Record_Control_Structure .
+              rdfs:subClassOf :Record_Control_Structure ;
+              rdfs:label "Control Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Cost
-:Cost rdf:type owl:Class .
+:Cost rdf:type owl:Class ;
+      rdfs:label "Cost" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Data
 :Data rdf:type owl:Class ;
-      owl:equivalentClass :Item .
+      owl:equivalentClass :Item ,
+                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasComponent ;
+                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass :Cost
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasComponent ;
+                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass :Risk
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasComponent ;
+                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass :Value
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :containsValue ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Value
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :exposesRisk ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Risk
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :producesCost ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Cost
+                      ] ;
+      rdfs:label "Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Data_Dictionary
-:Data_Dictionary rdf:type owl:Class .
+:Data_Dictionary rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :vocabularyFor ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Taxonomy
+                                 ] ;
+                 rdfs:label "Data Dictionary" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Document
 :Document rdf:type owl:Class ;
-          rdfs:subClassOf :Data .
+          rdfs:subClassOf :Data ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasEdition ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Edition
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasRendition ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Rendition
+                          ] .
 
 
 ###  http://www.semanticweb.org/igonto/information#Edition
-:Edition rdf:type owl:Class .
+:Edition rdf:type owl:Class ;
+         rdfs:label "Edition" .
 
 
 ###  http://www.semanticweb.org/igonto/information#File
-:File rdf:type owl:Class .
+:File rdf:type owl:Class ;
+      rdfs:label "File" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Folder
 :Folder rdf:type owl:Class ;
-        rdfs:subClassOf :Container .
+        rdfs:subClassOf :Container ;
+        rdfs:label "Folder" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Goal
-:Goal rdf:type owl:Class .
+:Goal rdf:type owl:Class ;
+      rdfs:label "Goal" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Hold
 :Hold rdf:type owl:Class ;
-      rdfs:subClassOf :Record_Control_Structure .
+      rdfs:subClassOf :Record_Control_Structure ;
+      rdfs:label "Hold" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Information
@@ -195,7 +291,12 @@
 
 
 ###  http://www.semanticweb.org/igonto/information#Item
-:Item rdf:type owl:Class .
+:Item rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasVersion ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Version
+                      ] .
 
 
 ###  http://www.semanticweb.org/igonto/information#Metadata
@@ -204,80 +305,171 @@
 
 
 ###  http://www.semanticweb.org/igonto/information#Metric
-:Metric rdf:type owl:Class .
+:Metric rdf:type owl:Class ;
+        rdfs:label "Metric" .
 
 
 ###  http://www.semanticweb.org/igonto/information#PII_Data
 :PII_Data rdf:type owl:Class ;
-          rdfs:subClassOf :Sensitive_Data .
-
-
-###  http://www.semanticweb.org/igonto/information#Permission
-:Permission rdf:type owl:Class .
+          rdfs:subClassOf :Sensitive_Data ;
+          rdfs:label "PII Data" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Personnel_Files
 :Personnel_Files rdf:type owl:Class ;
-                 rdfs:subClassOf :Sensitive_Data .
+                 rdfs:subClassOf :Sensitive_Data ;
+                 rdfs:label "Personnel Files" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Policy
-:Policy rdf:type owl:Class .
+:Policy rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasComponent ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass :Goal
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasComponent ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass :Metric
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :hasComponent ;
+                                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                     owl:onClass :Rule
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :appliesRule ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Rule
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :employsRule ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Rule
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :grantsPriviligeToRole ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Role
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGoal ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Goal
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :monitorsMetric ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Metric
+                        ] ;
+        rdfs:label "Policy" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Privilige
-:Privilige rdf:type owl:Class .
+:Privilige rdf:type owl:Class ;
+           rdfs:label "Privilige" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Record
-:Record rdf:type owl:Class .
+:Record rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :classifiesData ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Data
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRecordControlStructure ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Record_Control_Structure
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :usesDataDictionary ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Data_Dictionary
+                        ] ;
+        rdfs:label "Record" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Record_Control_Structure
-:Record_Control_Structure rdf:type owl:Class .
+:Record_Control_Structure rdf:type owl:Class ;
+                          rdfs:label "Record Control Structure" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Rendition
-:Rendition rdf:type owl:Class .
+:Rendition rdf:type owl:Class ;
+           rdfs:label "Rendition" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Report
 :Report rdf:type owl:Class ;
-        rdfs:subClassOf :Record_Control_Structure .
+        rdfs:subClassOf :Record_Control_Structure ;
+        rdfs:label "Report" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Retention
 :Retention rdf:type owl:Class ;
-           rdfs:subClassOf :Record_Control_Structure .
+           rdfs:subClassOf :Record_Control_Structure ;
+           rdfs:label "Retention" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Risk
-:Risk rdf:type owl:Class .
+:Risk rdf:type owl:Class ;
+      rdfs:label "Risk" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Role
-:Role rdf:type owl:Class .
+:Role rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasPrivilige ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Privilige
+                      ] ;
+      rdfs:label "Role" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Rule
-:Rule rdf:type owl:Class .
+:Rule rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :definesSchedule ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Schedule
+                      ] ;
+      rdfs:label "Rule" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Schedule
-:Schedule rdf:type owl:Class .
+:Schedule rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :usedOnRecordControlStructure ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Record_Control_Structure
+                          ] ;
+          rdfs:label "Schedule" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Sensitive_Data
 :Sensitive_Data rdf:type owl:Class ;
-                rdfs:subClassOf :Control_Data .
+                rdfs:subClassOf :Control_Data ;
+                rdfs:label "Sensitive Data" .
+
+
+###  http://www.semanticweb.org/igonto/information#Taxonomy
+:Taxonomy rdf:type owl:Class ;
+          rdfs:label "Taxonomy" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Value
-:Value rdf:type owl:Class .
+:Value rdf:type owl:Class ;
+       rdfs:label "Value" .
 
 
 ###  http://www.semanticweb.org/igonto/information#Version
-:Version rdf:type owl:Class .
+:Version rdf:type owl:Class ;
+         rdfs:label "Version" .
 
 
 #################################################################
