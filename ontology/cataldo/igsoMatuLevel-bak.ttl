@@ -1347,6 +1347,12 @@ igso-ml:OWLClass_405904c5_ab37_439d_9d63_ca320a41420e rdf:type owl:Class ;
                                                       rdfs:label "Right_to_restrict_processing"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_46e4747c_332e_42fc_8ef5_c2223740cfbd
+igso-ml:OWLClass_46e4747c_332e_42fc_8ef5_c2223740cfbd rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d ;
+                                                      rdfs:label "Regulation"@en .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34
 igso-ml:OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49 ;
@@ -1427,7 +1433,7 @@ igso-ml:OWLClass_9d692a63_bdc6_417c_b1cd_c16ebd141973 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b
 igso-ml:OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_46e4747c_332e_42fc_8ef5_c2223740cfbd ;
                                                       rdfs:label "GDPR"@en .
 
 
@@ -2167,6 +2173,20 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
                 igso-ml:OWLClass_b90250ad_ef93_459e_8e20_21bb34f17d0d
                 igso-ml:OWLClass_bee31417_cc41_4d63_ba18_d2279600a6d9
                 igso-ml:OWLClass_fb52f008_e687_4fc8_b0fd_aee95920c889
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60
+                igso-ml:OWLClass_2d5f2e8f_b636_450c_ab4a_d06b39274566
+                igso-ml:OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49
+                igso-ml:OWLClass_46e4747c_332e_42fc_8ef5_c2223740cfbd
+                igso-ml:OWLClass_51323007_08a5_4e16_b186_b8d250f7002b
+                igso-ml:OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b
+                igso-ml:OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b
+                igso-ml:OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7
+                igso-ml:OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f
               )
 ] .
 
