@@ -31,7 +31,7 @@ IGS - Domain Concepts/Classes
 						ECMSolution is_composed_of ECMComponent  
 						IMSSolution is_composed of IMSComponent
 						provides IGSService
-					designs Component: 
+					designs Component: (@cm)
 					IGSComponent is_composed_of {RecordsManagement,eDiscovery,Classification}
 					ECMComponent is_composed_of {Respository,Catalog,ObjectStore}
 					IMSComponent is_composed_of {RelationalSchema,FulltextDocumentModel} 

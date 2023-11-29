@@ -14,7 +14,7 @@
 @prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
 @prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
 @prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
-@base <http://www.example.org/cm/igso/2023/igso-ml#> .
+@base <http://www.example.org/cm/igso/2023/igso-ml> .
 
 <http://www.example.org/cm/igso/2023/igso-ml> rdf:type owl:Ontology ;
                                                rdfs:comment "An ontology on information governance maturity level"@en ,
@@ -362,6 +362,41 @@ igso-ml:OWLAnnotationProperty_36e75999_759e_421d_bc86_0b91900c009f rdf:type owl:
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_2b6a8219_a469_4cbd_8cef_3502a087648a
+igso-ml:OWLDatatype_2b6a8219_a469_4cbd_8cef_3502a087648a rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel3"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_83140c17_7918_4fdc_8810_e91a7b790196
+igso-ml:OWLDatatype_83140c17_7918_4fdc_8810_e91a7b790196 rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel"@de ;
+                                                         owl:equivalentClass xsd:nonPositiveInteger .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_bf2a3d80_3334_4d9b_8df6_8c21a42a5b45
+igso-ml:OWLDatatype_bf2a3d80_3334_4d9b_8df6_8c21a42a5b45 rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel5"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_c0a25723_36fc_4ad6_a2ea_e78458d18ecd
+igso-ml:OWLDatatype_c0a25723_36fc_4ad6_a2ea_e78458d18ecd rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel4"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_daac6fe6_420e_42d8_ad66_8945fffac4ea
+igso-ml:OWLDatatype_daac6fe6_420e_42d8_ad66_8945fffac4ea rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel1"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDatatype_ea6341ed_3ac8_4749_8f5d_2f0a5475a344
+igso-ml:OWLDatatype_ea6341ed_3ac8_4749_8f5d_2f0a5475a344 rdf:type rdfs:Datatype ;
+                                                         rdfs:label "MaturityLevel2"@de .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -617,6 +652,16 @@ igso-ml:OWLObjectProperty_577c40b9_ca8e_4851_b60d_6c3f187f8cd1 rdf:type owl:Obje
                                                                rdfs:label "is_composed_of"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_590c1f07_7d53_457b_b9d4_0ca56cb43bfc
+igso-ml:OWLObjectProperty_590c1f07_7d53_457b_b9d4_0ca56cb43bfc rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf igso-ml:defines ;
+                                                               rdfs:domain igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c ;
+                                                               rdfs:range igso-ml:OWLClass_9919a05b_81d4_4244_a889_b72cd2a1570b ,
+                                                                          igso-ml:OWLClass_9e9cfdf2_5397_489a_aa61_d8e1df077bb4 ,
+                                                                          igso-ml:OWLClass_d1228de3_f68d_49ed_a236_ccc4c5a9f3cc ;
+                                                               rdfs:label "defines_access_control"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_5a7fbefb_0079_4db1_9359_d8ac213a5630
 igso-ml:OWLObjectProperty_5a7fbefb_0079_4db1_9359_d8ac213a5630 rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf igso-ml:OWLObjectProperty_99a8d331_3384_49ce_80de_ba05b7c3bd3a ;
@@ -756,6 +801,18 @@ igso-ml:OWLObjectProperty_99a8d331_3384_49ce_80de_ba05b7c3bd3a rdf:type owl:Obje
                                                                rdfs:label "is"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_99d4403a_9d83_4756_9dc7_b9285bd920ec
+igso-ml:OWLObjectProperty_99d4403a_9d83_4756_9dc7_b9285bd920ec rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf igso-ml:OWLObjectProperty_99a8d331_3384_49ce_80de_ba05b7c3bd3a ;
+                                                               rdfs:label "is_designed_by"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_9a64dd13_94ff_410d_bfff_ec39e5a34569
+igso-ml:OWLObjectProperty_9a64dd13_94ff_410d_bfff_ec39e5a34569 rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf igso-ml:OWLObjectProperty_99a8d331_3384_49ce_80de_ba05b7c3bd3a ;
+                                                               rdfs:label "is_responsible_for_design_of"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_9b84c813_c6ab_4cb7_8122_c85b1cb6e896
 igso-ml:OWLObjectProperty_9b84c813_c6ab_4cb7_8122_c85b1cb6e896 rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -833,6 +890,11 @@ igso-ml:OWLObjectProperty_c0e17d75_bfc8_43b3_85ea_bc90af02e525 rdf:type owl:Obje
                                                                rdfs:subPropertyOf igso-ml:OWLObjectProperty_2b1a8f6c_203a_4cf0_991d_7472e5ae7de0 ,
                                                                                   igso-ml:OWLObjectProperty_3628bb8e_3113_42ed_8123_09ad49be48dd ;
                                                                rdfs:label "requires_referential_integrity"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_c1255de3_eba1_4bdb_a3a4_b6e156f23e83
+igso-ml:OWLObjectProperty_c1255de3_eba1_4bdb_a3a4_b6e156f23e83 rdf:type owl:ObjectProperty ;
+                                                               rdfs:label "enforces"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_c1895063_b7db_465c_96f9_65b0e67004e1
@@ -1137,11 +1199,6 @@ igso-ml:defines_maturity rdf:type owl:ObjectProperty ;
                          rdfs:label "defines_maturity"@en .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ml#design
-igso-ml:design rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ml#develop
 igso-ml:develop rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty .
@@ -1215,6 +1272,28 @@ igso-ml:validate rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_3deadc48_0132_4d4e_87f0_bba7e1656f89
+igso-ml:OWLDataProperty_3deadc48_0132_4d4e_87f0_bba7e1656f89 rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf igso-ml:OWLDataProperty_c5ed261c_a0c2_4101_9534_ede5dc9121f8 ;
+                                                             rdfs:domain [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty igso-ml:OWLDataProperty_3deadc48_0132_4d4e_87f0_bba7e1656f89 ;
+                                                                           owl:someValuesFrom xsd:nonNegativeInteger
+                                                                         ] ;
+                                                             rdfs:label "size"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_9d2f67e2_b848_4969_9975_619222131fb0
+igso-ml:OWLDataProperty_9d2f67e2_b848_4969_9975_619222131fb0 rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf igso-ml:OWLDataProperty_c5ed261c_a0c2_4101_9534_ede5dc9121f8 ;
+                                                             rdfs:label "type"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_c5ed261c_a0c2_4101_9534_ede5dc9121f8
+igso-ml:OWLDataProperty_c5ed261c_a0c2_4101_9534_ede5dc9121f8 rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:label "company"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_c9685230_e325_4ca0_9e75_029d8033f4c3
 igso-ml:OWLDataProperty_c9685230_e325_4ca0_9e75_029d8033f4c3 rdf:type owl:DatatypeProperty ;
                                                              rdfs:subPropertyOf owl:topDataProperty ;
@@ -1230,7 +1309,22 @@ igso-ml:OWLDataProperty_ca98d0b7_44da_49e1_9361_d7233709fea6 rdf:type owl:Dataty
 igso-ml:OWLDataProperty_e67c2ab2_c1b5_4d0f_be17_91707f173157 rdf:type owl:DatatypeProperty ;
                                                              rdfs:subPropertyOf owl:topDataProperty ;
                                                              rdfs:domain igso-ml:MaturityIndex ;
+                                                             rdfs:range igso-ml:OWLDatatype_2b6a8219_a469_4cbd_8cef_3502a087648a ,
+                                                                        igso-ml:OWLDatatype_bf2a3d80_3334_4d9b_8df6_8c21a42a5b45 ,
+                                                                        igso-ml:OWLDatatype_c0a25723_36fc_4ad6_a2ea_e78458d18ecd ,
+                                                                        igso-ml:OWLDatatype_daac6fe6_420e_42d8_ad66_8945fffac4ea ,
+                                                                        igso-ml:OWLDatatype_ea6341ed_3ac8_4749_8f5d_2f0a5475a344 ;
                                                              rdfs:label "maturitylevel"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_eec11d83_6642_4ded_a4bf_70dda6866a1c
+igso-ml:OWLDataProperty_eec11d83_6642_4ded_a4bf_70dda6866a1c rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf igso-ml:OWLDataProperty_c5ed261c_a0c2_4101_9534_ede5dc9121f8 ;
+                                                             rdfs:domain [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty igso-ml:OWLDataProperty_3deadc48_0132_4d4e_87f0_bba7e1656f89 ;
+                                                                           owl:someValuesFrom xsd:string
+                                                                         ] ;
+                                                             rdfs:label "category"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_f66ad5a9_1507_4247_8563_307c926593fa
@@ -1425,6 +1519,30 @@ igso-ml:AmazonCloudPlatform rdf:type owl:Class ;
                             rdfs:label "AmazonCloudSystem"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#AnalyticsOU
+igso-ml:AnalyticsOU rdf:type owl:Class ;
+                    rdfs:subClassOf igso-ml:OrganizationalUnit ;
+                    rdfs:label "AnalyticsOU"^^xsd:string .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#ArchitectureOU
+igso-ml:ArchitectureOU rdf:type owl:Class ;
+                       rdfs:subClassOf igso-ml:OrganizationalUnit ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:OWLObjectProperty_3dc06526_47c9_458b_bbb5_47910ec651b7 ;
+                                         owl:someValuesFrom igso-ml:OWLClass_359dbe5e_fbab_4ea1_a3ae_59e1e0347a9e
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:OWLObjectProperty_9a64dd13_94ff_410d_bfff_ec39e5a34569 ;
+                                         owl:someValuesFrom igso-ml:GovernanceComponent
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ml:OWLObjectProperty_9a64dd13_94ff_410d_bfff_ec39e5a34569 ;
+                                         owl:someValuesFrom igso-ml:eDiscoverySolution
+                                       ] ;
+                       rdfs:label "ArchitectureOU" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#ArchiveSolution
 igso-ml:ArchiveSolution rdf:type owl:Class ;
                         rdfs:subClassOf igso-ml:Solution ;
@@ -1571,8 +1689,8 @@ igso-ml:CatalogCMP rdf:type owl:Class ;
                                                      igso-ml:OWLNamedIndividual_f748c15a_4ff1_472d_8a55_f8500d9ac7fd
                                                    )
                                        ] ;
-                   rdfs:subClassOf igso-ml:Component ,
-                                   igso-ml:DataSetType ,
+                   rdfs:subClassOf igso-ml:DataSetType ,
+                                   igso-ml:ECMComponent ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty igso-ml:OWLObjectProperty_eb5447c3_0c56_4bc7_a22f_5c07c7e0fec6 ;
                                      owl:someValuesFrom igso-ml:ContentCatalogCMP
@@ -1611,7 +1729,7 @@ igso-ml:ChiefInformationSecurityOfficer rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ClassificationCMP
 igso-ml:ClassificationCMP rdf:type owl:Class ;
-                          rdfs:subClassOf igso-ml:Component ;
+                          rdfs:subClassOf igso-ml:OWLClass_d9165657_fde2_4327_8cee_97dd2004c845 ;
                           rdfs:label "ClassificationCMP" .
 
 
@@ -1632,7 +1750,7 @@ igso-ml:CloudPlatformService rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#CollectionCMP
 igso-ml:CollectionCMP rdf:type owl:Class ;
-                      rdfs:subClassOf igso-ml:Component ;
+                      rdfs:subClassOf igso-ml:ECMComponent ;
                       rdfs:label "CollectionCMP" .
 
 
@@ -1645,8 +1763,20 @@ igso-ml:CommunicationSystem rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-ml#Company
 igso-ml:Company rdf:type owl:Class ;
                 owl:equivalentClass igso-ml:Enterprise ,
-                                    igso-ml:Firm ;
-                rdfs:subClassOf igso-ml:Organization ;
+                                    igso-ml:Firm ,
+                                    [ rdf:type owl:Class ;
+                                      owl:oneOf ( igso-ml:OWLNamedIndividual_35522373_cfa3_42a7_9e42_ac35c1d0ccd0
+                                                  igso-ml:OWLNamedIndividual_3f7c469c_a0a3_4788_8e85_98468ae2d4ab
+                                                  igso-ml:OWLNamedIndividual_53ffaa5b_fc9e_4cb8_8680_4f770e837570
+                                                  igso-ml:OWLNamedIndividual_dec505fa_8c21_48ea_a86a_1489e2fdc5b4
+                                                )
+                                    ] ;
+                rdfs:subClassOf igso-ml:Organization ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty igso-ml:OWLObjectProperty_a6b5e7cb_4fdd_477c_8d40_6afc1c86aacf ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass igso-ml:OWLClass_4d82c167_39a4_4cd9_9897_6eda568b19c8
+                                ] ;
                 rdfs:label "Company" .
 
 
@@ -1659,13 +1789,6 @@ igso-ml:Compliance_prncpls rdf:type owl:Class ;
 						 The organization has implemented systems to capture and protect records. Records are linked with the metadata used to demonstrate and measure compliance. Employees are trained appropriately and audits are conducted regularly. Records of the audits and training are available for review. Lack of compliance is remedied through implementation of defined corrective actions. The hold process is well-managed with defined roles and a repeatable process that is integrated into the organization’s information management and discovery processes. 
 						 L5 - Transformational: The importance of compliance and the role of records and information in it are clearly recognized at the senior management and board levels. Auditing and continuous improvement processes are well-established and monitored by senior management. The roles and processes for information management and discovery are integrated. The organization’s stated goals related to compliance have been met.The organization suffers few or no adverse consequences based on information governance and compliance failures."""@en ;
                            rdfs:label "Compliance"@en .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#Component
-igso-ml:Component rdf:type owl:Class ;
-                  rdfs:subClassOf igso-ml:IGSDesignDomain ;
-                  rdfs:comment "A list of solution components required to build Information Management Systems (IMS), Enterprise Content Management systems (ECM) and Records Management Systems for being able to build custiome Information Governance solutions suitable for different types of companies." ;
-                  rdfs:label "Component"@en .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ContentCatalogCMP
@@ -1689,19 +1812,19 @@ igso-ml:ContentManagement rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ContentShareCMP
 igso-ml:ContentShareCMP rdf:type owl:Class ;
-                        rdfs:subClassOf igso-ml:Component ;
+                        rdfs:subClassOf igso-ml:ECMComponent ;
                         rdfs:label "ContentShareCMP" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ContentTransferCMP
 igso-ml:ContentTransferCMP rdf:type owl:Class ;
-                           rdfs:subClassOf igso-ml:Component ;
+                           rdfs:subClassOf igso-ml:ECMComponent ;
                            rdfs:label "ContentTransferCMP" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ContentTransformationCMP
 igso-ml:ContentTransformationCMP rdf:type owl:Class ;
-                                 rdfs:subClassOf igso-ml:Component ;
+                                 rdfs:subClassOf igso-ml:ECMComponent ;
                                  rdfs:label "ContentTransformationCMP" .
 
 
@@ -1753,7 +1876,7 @@ igso-ml:DataManagementControl rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#DataManagementPlanning
 igso-ml:DataManagementPlanning rdf:type owl:Class ;
-                               rdfs:subClassOf igso-ml:Component ;
+                               rdfs:subClassOf igso-ml:RenditionCMP ;
                                rdfs:label "DataManagementPlanning" .
 
 
@@ -1789,10 +1912,6 @@ igso-ml:DataQuality rdf:type owl:Class ;
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty igso-ml:defines ;
                                           owl:someValuesFrom igso-ml:DataQualityServiceLevel
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty igso-ml:design ;
-                                          owl:someValuesFrom igso-ml:OperationalDataQualityProcedures
                                         ] ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty igso-ml:measure ;
@@ -1952,6 +2071,12 @@ igso-ml:DetailedDataDesign rdf:type owl:Class ;
                            rdfs:subClassOf igso-ml:DataArchitectureManagement .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#DevelopmentOU
+igso-ml:DevelopmentOU rdf:type owl:Class ;
+                      rdfs:subClassOf igso-ml:OrganizationalUnit ;
+                      rdfs:label "DevelopmentOU" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#DisasterRecovery
 igso-ml:DisasterRecovery rdf:type owl:Class ;
                          rdfs:subClassOf igso-ml:Non-FunctionalRequirement ;
@@ -1975,9 +2100,15 @@ igso-ml:DocumentManagement rdf:type owl:Class ;
                            rdfs:label "DocumentManagement" .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#ECMComponent
+igso-ml:ECMComponent rdf:type owl:Class ;
+                     rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                     rdfs:label "ECMComponent"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#ECMServicesLayerCMP
 igso-ml:ECMServicesLayerCMP rdf:type owl:Class ;
-                            rdfs:subClassOf igso-ml:Component ;
+                            rdfs:subClassOf igso-ml:ECMComponent ;
                             rdfs:label "ECMServicesLayerCMP" .
 
 
@@ -2009,7 +2140,15 @@ igso-ml:Elasticity rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-ml#Enterprise
 igso-ml:Enterprise rdf:type owl:Class ;
                    owl:equivalentClass igso-ml:Firm ;
-                   rdfs:subClassOf igso-ml:Organization ;
+                   rdfs:subClassOf igso-ml:Organization ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty igso-ml:OWLObjectProperty_a6b5e7cb_4fdd_477c_8d40_6afc1c86aacf ;
+                                     owl:someValuesFrom igso-ml:OWLClass_21bb072e_454b_4c7b_89fc_342638024b59
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty igso-ml:OWLObjectProperty_a6b5e7cb_4fdd_477c_8d40_6afc1c86aacf ;
+                                     owl:someValuesFrom igso-ml:OrganizationalUnit
+                                   ] ;
                    rdfs:label "Enterprise" .
 
 
@@ -2095,7 +2234,7 @@ igso-ml:FullTextServerCMP rdf:type owl:Class ;
                                                             igso-ml:OWLNamedIndividual_b8f8fb85_8dc6_4395_94bb_bc9951576858
                                                           )
                                               ] ;
-                          rdfs:subClassOf igso-ml:Component ;
+                          rdfs:subClassOf igso-ml:IGSDesignDomain ;
                           rdfs:label "FullTextServerCMP" .
 
 
@@ -2135,7 +2274,29 @@ igso-ml:GoogleCloudSystem rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#GovernanceBoard
 igso-ml:GovernanceBoard rdf:type owl:Class ;
-                        rdfs:subClassOf igso-ml:Board .
+                        rdfs:subClassOf igso-ml:Board ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:OWLObjectProperty_824b0440_2c38_414b_9dcb_9daa02a169ae ;
+                                          owl:someValuesFrom igso-ml:OWLClass_05680688_27c2_44cf_afa2_28406ad240ad
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty igso-ml:OWLObjectProperty_824b0440_2c38_414b_9dcb_9daa02a169ae ;
+                                          owl:someValuesFrom igso-ml:OWLClass_4d82c167_39a4_4cd9_9897_6eda568b19c8
+                                        ] ;
+                        rdfs:label "GovernanceBoard"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#GovernanceComponent
+igso-ml:GovernanceComponent rdf:type owl:Class ;
+                            rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                            rdfs:comment "A list of solution components required to build Information Management Systems (IMS), Enterprise Content Management systems (ECM) and Records Management Systems for being able to build custiome Information Governance solutions suitable for different types of companies." ;
+                            rdfs:label "GovernanceComponent"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#HROU
+igso-ml:HROU rdf:type owl:Class ;
+             rdfs:subClassOf igso-ml:OrganizationalUnit ;
+             rdfs:label "HROU" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#HighAvailability
@@ -2224,6 +2385,27 @@ igso-ml:IRS rdf:type owl:Class ;
             rdfs:label "IRS"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#ITOU
+igso-ml:ITOU rdf:type owl:Class ;
+             rdfs:subClassOf igso-ml:OrganizationalUnit ,
+                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                      owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
+                                                      owl:someValuesFrom igso-ml:EnterpriseContentService
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
+                                                      owl:someValuesFrom igso-ml:OWLClass_8b5ddb5c_da22_47f3_ab4f_ff3a1746c1bb
+                                                    ]
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
+                                                      owl:someValuesFrom igso-ml:OWLClass_c4acbfd7_cb6f_433f_83b6_9837a1cfac3f
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             rdfs:label "ITOU" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#Information
 igso-ml:Information rdf:type owl:Class ;
                     rdfs:subClassOf igso-ml:Data .
@@ -2246,6 +2428,11 @@ igso-ml:InformationGovernanceSolution rdf:type owl:Class ;
                                                                              ]
                                                                            ) ;
                                                         rdf:type owl:Class
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty igso-ml:OWLObjectProperty_99d4403a_9d83_4756_9dc7_b9285bd920ec ;
+                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass igso-ml:ArchitectureOU
                                                       ] ;
                                       rdfs:label "InformationGovernanceSolution" .
 
@@ -2260,6 +2447,13 @@ igso-ml:InformationManagementDomain rdf:type owl:Class ;
                                     rdfs:label "InformationManagementDomain"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#InformationManagementOU
+igso-ml:InformationManagementOU rdf:type owl:Class ;
+                                rdfs:subClassOf igso-ml:OrganizationalUnit ;
+                                rdfs:label "InformationManagementOU" ;
+                                rdfs:seeAlso <https://www.arma.org/page/information_management> .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#Integrity_prncpls
 igso-ml:Integrity_prncpls rdf:type owl:Class ;
                           rdfs:subClassOf igso-ml:ARMA_Principles ;
@@ -2270,9 +2464,28 @@ igso-ml:Integrity_prncpls rdf:type owl:Class ;
                           rdfs:label "Integrity"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#LegalOU
+igso-ml:LegalOU rdf:type owl:Class ;
+                rdfs:subClassOf igso-ml:OrganizationalUnit ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty igso-ml:OWLObjectProperty_0c8da6a6_0074_4db3_ac98_4f37cd243a9b ;
+                                  owl:someValuesFrom igso-ml:OWLClass_5cedafbc_5426_4b1e_b93d_57f5fb4be205
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty igso-ml:OWLObjectProperty_c1255de3_eba1_4bdb_a3a4_b6e156f23e83 ;
+                                  owl:someValuesFrom igso-ml:OWLClass_0e137f36_7e93_4a4f_833c_a5c9b5d804fa
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty igso-ml:OWLObjectProperty_ccb1fb1f_b6e6_45a5_b029_54a4df10fdd6 ;
+                                  owl:someValuesFrom igso-ml:OWLClass_a521b99c_69af_4cda_bd80_bf03348d0559
+                                ] ;
+                rdfs:comment "Legal: handles Cases, mandates Hold, submitts DataRequest"@en ;
+                rdfs:label "LegalOU" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#LoadCMP
 igso-ml:LoadCMP rdf:type owl:Class ;
-                rdfs:subClassOf igso-ml:Component ;
+                rdfs:subClassOf igso-ml:ECMComponent ;
                 rdfs:label "LoadCMP" .
 
 
@@ -2366,7 +2579,7 @@ igso-ml:MI_Level_5 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#Management
 igso-ml:Management rdf:type owl:Class ;
-                   rdfs:subClassOf igso-ml:OrganizationDomain ;
+                   rdfs:subClassOf igso-ml:Agent ;
                    rdfs:label "Management" .
 
 
@@ -2465,71 +2678,9 @@ igso-ml:OPenSource rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-ml#OU
 igso-ml:OU rdf:type owl:Class ;
            owl:equivalentClass igso-ml:OrganizationalUnit ;
-           rdfs:subClassOf igso-ml:Organization ;
-           rdfs:label "OU" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.Analytics
-igso-ml:OU.Analytics rdf:type owl:Class ;
-                     rdfs:subClassOf igso-ml:OrganizationalUnit ;
-                     rdfs:label "OU.Analytics" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.Architecture
-igso-ml:OU.Architecture rdf:type owl:Class ;
-                        rdfs:subClassOf igso-ml:OrganizationalUnit ;
-                        rdfs:label "OU.Architecture" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.Development
-igso-ml:OU.Development rdf:type owl:Class ;
-                       rdfs:subClassOf igso-ml:OrganizationalUnit ;
-                       rdfs:label "OU.Development" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.HR
-igso-ml:OU.HR rdf:type owl:Class ;
-              rdfs:subClassOf igso-ml:OrganizationalUnit ;
-              rdfs:label "OU.HR" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.IT
-igso-ml:OU.IT rdf:type owl:Class ;
-              rdfs:subClassOf igso-ml:OrganizationalUnit ,
-                              [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                       owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
-                                                       owl:someValuesFrom igso-ml:EnterpriseContentService
-                                                     ]
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
-                                                       owl:someValuesFrom igso-ml:OWLClass_8b5ddb5c_da22_47f3_ab4f_ff3a1746c1bb
-                                                     ]
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty igso-ml:OWLObjectProperty_d1e93241_6aa8_48f2_8abc_219b9d896cc4 ;
-                                                       owl:someValuesFrom igso-ml:OWLClass_c4acbfd7_cb6f_433f_83b6_9837a1cfac3f
-                                                     ]
-                                                   ) ;
-                                rdf:type owl:Class
-                              ] ;
-              rdfs:label "OU.IT" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.InformationManagement
-igso-ml:OU.InformationManagement rdf:type owl:Class ;
-                                 rdfs:subClassOf igso-ml:OrganizationalUnit ;
-                                 rdfs:label "OU.InformationManagement" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.Legal
-igso-ml:OU.Legal rdf:type owl:Class ;
-                 rdfs:subClassOf igso-ml:OrganizationalUnit ;
-                 rdfs:label "OU.Legal" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ml#OU.RIM
-igso-ml:OU.RIM rdf:type owl:Class ;
-               rdfs:subClassOf igso-ml:OrganizationalUnit ;
-               rdfs:label "OU.RIM" .
+           rdfs:subClassOf igso-ml:Acronym ;
+           rdfs:label "OU" ;
+           <https://www.omg.org/spec/Commons/AnnotationVocabulary/acronym> "OU"@en .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_007e342f_0ad5_42d2_abdc_5a8ed99442ce
@@ -2602,6 +2753,12 @@ igso-ml:OWLClass_0556cc79_daa2_4706_b34a_3df7465af270 rdf:type owl:Class ;
                                                       rdfs:label "SearchMethod"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_05680688_27c2_44cf_afa2_28406ad240ad
+igso-ml:OWLClass_05680688_27c2_44cf_afa2_28406ad240ad rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ;
+                                                      rdfs:label "Progress"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_095a4d2c_9deb_4b7b_8b3e_6900798402db
 igso-ml:OWLClass_095a4d2c_9deb_4b7b_8b3e_6900798402db rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_cfab6901_9bd7_4d8f_8722_162763abdf9e ;
@@ -2632,6 +2789,17 @@ igso-ml:OWLClass_0b187357_c053_469e_9a0b_48491ae19d02 rdf:type owl:Class ;
                                                       rdfs:label "CloudApplicationComponent"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0b370c7c_2f71_478b_9207_d8dcaca101a9
+igso-ml:OWLClass_0b370c7c_2f71_478b_9207_d8dcaca101a9 rdf:type owl:Class ;
+                                                      rdfs:label "IMSComponent"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0c1efb91_3f66_406a_84d2_2ebc5aee5631
+igso-ml:OWLClass_0c1efb91_3f66_406a_84d2_2ebc5aee5631 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_b38780bc_e711_444d_9f88_158d417156a1 ;
+                                                      rdfs:label "PrivacyRule"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0ce7cc0d_1420_42ab_bfe8_6d3bf7eaec93
 igso-ml:OWLClass_0ce7cc0d_1420_42ab_bfe8_6d3bf7eaec93 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_6102389f_890c_4ebe_9dd1_131473897022 ;
@@ -2642,6 +2810,12 @@ igso-ml:OWLClass_0ce7cc0d_1420_42ab_bfe8_6d3bf7eaec93 rdf:type owl:Class ;
 igso-ml:OWLClass_0dff03c4_42ec_4f34_9833_dc605fec1d78 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_1119b29f_3a1b_4471_a276_5e4fd26ed518 ;
                                                       rdfs:label "MessageMover"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0e137f36_7e93_4a4f_833c_a5c9b5d804fa
+igso-ml:OWLClass_0e137f36_7e93_4a4f_833c_a5c9b5d804fa rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_7758aca2_4d77_4a49_9185_1245608c6b29 ;
+                                                      rdfs:label "LegalHold"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0eeeac0e_eca9_4f6e_b40a_7371e095fdca
@@ -2755,6 +2929,12 @@ igso-ml:OWLClass_19f18430_6d4a_49c7_be32_6204f320fb5f rdf:type owl:Class ;
                                                       rdfs:label "DispositionsService"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_1a93f6d2_732b_42df_80e1_b9d3861eefcb
+igso-ml:OWLClass_1a93f6d2_732b_42df_80e1_b9d3861eefcb rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:ECMComponent ;
+                                                      rdfs:label "ECMAPICMP"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8
 igso-ml:OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:Agent ;
@@ -2795,6 +2975,13 @@ igso-ml:OWLClass_211f7ec2_4d8f_4430_8c7e_156bcd91f5d9 rdf:type owl:Class ;
 igso-ml:OWLClass_21321573_a218_4b9f_b7af_d50cd39a9ac5 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60 ;
                                                       rdfs:label "Right_to_data_portability"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_21bb072e_454b_4c7b_89fc_342638024b59
+igso-ml:OWLClass_21bb072e_454b_4c7b_89fc_342638024b59 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Organization ;
+                                                      owl:disjointWith igso-ml:OWLClass_3cb00792_4979_4d5c_ace9_cc722a4a6fe0 ;
+                                                      rdfs:label "Department"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_229adb10_3f01_40af_b10b_74330cebc7be
@@ -2840,7 +3027,7 @@ enables Enterprise Collaborations""" ;
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2667605d_a866_497a_bd36_220fc40d7604
 igso-ml:OWLClass_2667605d_a866_497a_bd36_220fc40d7604 rdf:type owl:Class ;
                                                       owl:equivalentClass igso-ml:OWLClass_3078da40_3be5_4ef5_866b_61ed144342d4 ;
-                                                      rdfs:subClassOf igso-ml:Component ;
+                                                      rdfs:subClassOf igso-ml:ECMComponent ;
                                                       rdfs:label "ResourceManagerCMP"@en .
 
 
@@ -2889,7 +3076,7 @@ igso-ml:OWLClass_2db78e40_34b9_44c7_9506_79d77300e410 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3078da40_3be5_4ef5_866b_61ed144342d4
 igso-ml:OWLClass_3078da40_3be5_4ef5_866b_61ed144342d4 rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Component ;
+                                                      rdfs:subClassOf igso-ml:ECMComponent ;
                                                       rdfs:label "ObjectServerCMP"@en .
 
 
@@ -2897,6 +3084,12 @@ igso-ml:OWLClass_3078da40_3be5_4ef5_866b_61ed144342d4 rdf:type owl:Class ;
 igso-ml:OWLClass_30aeaf0f_06fd_416c_9f7e_1f21a6bc74df rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_9eafe378_04a0_4d57_8b80_f34be47df6d3 ;
                                                       rdfs:label "UnpredictableWorkload"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_322c4e1f_867b_4169_91ec_f6f7c43a1d33
+igso-ml:OWLClass_322c4e1f_867b_4169_91ec_f6f7c43a1d33 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Agent ;
+                                                      rdfs:label "LegalEntity"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3348df75_01f2_4da4_8a06_67ecbcd322e9
@@ -2907,8 +3100,22 @@ igso-ml:OWLClass_3348df75_01f2_4da4_8a06_67ecbcd322e9 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_359dbe5e_fbab_4ea1_a3ae_59e1e0347a9e
 igso-ml:OWLClass_359dbe5e_fbab_4ea1_a3ae_59e1e0347a9e rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_2462dcc1_6991_490c_ae58_08170f521024 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_65ed2d02_4d51_403b_8f9f_fcf86f1a38d0
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_3dc06526_47c9_458b_bbb5_47910ec651b7 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_65ed2d02_4d51_403b_8f9f_fcf86f1a38d0
+                                                                      ] ;
                                                       rdfs:label "IGSDesignPattern"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_35e2c4e3_d828_4c05_87b4_f0c6137b2f7d
+igso-ml:OWLClass_35e2c4e3_d828_4c05_87b4_f0c6137b2f7d rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "PolicyType"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3619968d_8376_40b8_8b1a_b7be127b7364
@@ -2948,6 +3155,12 @@ igso-ml:OWLClass_39499fe2_7476_46e4_b1bc_f88d7c3b6cb4 rdf:type owl:Class ;
                                                       rdfs:label "FundamentalCloudArchitecture"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_39c2c983_8783_4352_8d88_d250b49eff5c
+igso-ml:OWLClass_39c2c983_8783_4352_8d88_d250b49eff5c rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:IGSCloudPatterns ;
+                                                      rdfs:label "KubernetsPattern"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_39c3d796_c074_4afa_be5e_0f14135155e7
 igso-ml:OWLClass_39c3d796_c074_4afa_be5e_0f14135155e7 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_1fe707c5_c81f_4461_9700_c43f891ef1cd ;
@@ -2972,6 +3185,20 @@ igso-ml:OWLClass_3cad8f2d_aa25_46fa_985d_c27701d98e75 rdf:type owl:Class ;
                                                       rdfs:label "Timeout-BasedMessageProcessor"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3cb00792_4979_4d5c_ace9_cc722a4a6fe0
+igso-ml:OWLClass_3cb00792_4979_4d5c_ace9_cc722a4a6fe0 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_a3ab8e7c_e0bc_491d_bdb6_00751cde9dd4 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_a3ab8e7c_e0bc_491d_bdb6_00751cde9dd4 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e
+                                                                      ] ;
+                                                      rdfs:label "Strategy"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3cc48962_69ef_42e2_9dea_8e35e465a24c
 igso-ml:OWLClass_3cc48962_69ef_42e2_9dea_8e35e465a24c rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:Method ;
@@ -2982,6 +3209,20 @@ igso-ml:OWLClass_3cc48962_69ef_42e2_9dea_8e35e465a24c rdf:type owl:Class ;
 igso-ml:OWLClass_3d984a39_6046_4bb3_861d_08e06519fad4 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:FunctionalRequirement ;
                                                       rdfs:label "Transfer.REQ"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3dfd814a_e350_4ff0_948f_218c4dd26a83
+igso-ml:OWLClass_3dfd814a_e350_4ff0_948f_218c4dd26a83 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Organization ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_a6b5e7cb_4fdd_477c_8d40_6afc1c86aacf ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_3dfd814a_e350_4ff0_948f_218c4dd26a83
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:produces ;
+                                                                        owl:someValuesFrom igso-ml:Data
+                                                                      ] ;
+                                                      rdfs:label "BusinessUnit"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_3e3a12e0_6e4f_4abd_9f60_9c332b822ecf
@@ -3010,6 +3251,12 @@ igso-ml:OWLClass_3ea877f1_f9fc_4cf3_ac3f_cac3927ac715 rdf:type owl:Class ;
 		audit relevant information, record category, retention schedule, record folder, permissions. 
 		Create a file plan, use a taxonomy,create record types, create record metadata, edit create record metadata, process a record.""" ;
                                                       rdfs:label "InformationGovernanceService"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_401a71e4_3176_486b_ae64_2b1a175bfecf
+igso-ml:OWLClass_401a71e4_3176_486b_ae64_2b1a175bfecf rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7 ;
+                                                      rdfs:label "BackupLocation"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_405904c5_ab37_439d_9d63_ca320a41420e
@@ -3083,16 +3330,35 @@ igso-ml:OWLClass_48cd35cb_bef7_4329_9cc4_d5b3fa5b1531 rdf:type owl:Class ;
                                                       rdfs:label "Search.REQ"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_495f7687_2f53_40d8_baa8_6f9a6f7cf3d1
+igso-ml:OWLClass_495f7687_2f53_40d8_baa8_6f9a6f7cf3d1 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                                                      rdfs:comment "Information Management (IM) component"@en ;
+                                                      rdfs:label "IMCMP"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4a5bfbda_0f94_4f1e_a9f4_7b9734e4852c
 igso-ml:OWLClass_4a5bfbda_0f94_4f1e_a9f4_7b9734e4852c rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Component ;
+                                                      rdfs:subClassOf igso-ml:ECMComponent ;
                                                       rdfs:label "RepositoryAPICMP"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c2b949b_90cf_40ea_8f22_54fcb6c82949
+igso-ml:OWLClass_4c2b949b_90cf_40ea_8f22_54fcb6c82949 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Agent ;
+                                                      rdfs:label "SoftwareComponent"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34
 igso-ml:OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:Obligation ;
                                                       rdfs:label "Obligation_comply_with_ConsentRequirements"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4d82c167_39a4_4cd9_9897_6eda568b19c8
+igso-ml:OWLClass_4d82c167_39a4_4cd9_9897_6eda568b19c8 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ;
+                                                      rdfs:label "MaturityLevel"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_511ed161_2615_4588_b65f_9925254519f2
@@ -3137,6 +3403,13 @@ igso-ml:OWLClass_55f0c4df_28df_41c9_954a_5a9914ee7454 rdf:type owl:Class ;
                                                       rdfs:label "IGSDataType"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_56d5d635_4245_489d_abf0_0a82a4bf3bc9
+igso-ml:OWLClass_56d5d635_4245_489d_abf0_0a82a4bf3bc9 rdf:type owl:Class ;
+                                                      owl:equivalentClass igso-ml:OWLClass_d1228de3_f68d_49ed_a236_ccc4c5a9f3cc ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c ;
+                                                      rdfs:label "AccessControlList"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5b0e34b3_0c10_499b_95f1_0ef5eb9ea02e
 igso-ml:OWLClass_5b0e34b3_0c10_499b_95f1_0ef5eb9ea02e rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_1f46af60_06c0_4b4a_8a97_d3cd2cd39079 ;
@@ -3149,6 +3422,18 @@ igso-ml:OWLClass_5b0e34b3_0c10_499b_95f1_0ef5eb9ea02e rdf:type owl:Class ;
 igso-ml:OWLClass_5cd8606d_cda0_42ce_ae50_40744b6c5dff rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60 ;
                                                       rdfs:label "Right_to_be_informed"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5cedafbc_5426_4b1e_b93d_57f5fb4be205
+igso-ml:OWLClass_5cedafbc_5426_4b1e_b93d_57f5fb4be205 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_9fb06b17_582d_4c29_8ca8_415048ca4f2b ;
+                                                      rdfs:label "LecalCaseRelevaltDataRequest"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5e439e23_becc_4e9c_ac6b_c2a2917af456
+igso-ml:OWLClass_5e439e23_becc_4e9c_ac6b_c2a2917af456 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7 ;
+                                                      rdfs:label "StorageLocation"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5efd4b02_fc4a_451b_9b93_ee21ad592939
@@ -3181,10 +3466,44 @@ igso-ml:OWLClass_61304622_c850_42f0_9058_35fd437729cd rdf:type owl:Class ;
                                                       rdfs:label "CloudDeploymentModel"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_61e5f612_254c_40d7_a632_7ac5aed87636
+igso-ml:OWLClass_61e5f612_254c_40d7_a632_7ac5aed87636 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OrganizationalUnit ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_4bdc7175_1425_49c2_b70a_393d45246fcd ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_5e439e23_becc_4e9c_ac6b_c2a2917af456
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_590c1f07_7d53_457b_b9d4_0ca56cb43bfc ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_a3ab8e7c_e0bc_491d_bdb6_00751cde9dd4 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_5e439e23_becc_4e9c_ac6b_c2a2917af456
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:defines ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_0c1efb91_3f66_406a_84d2_2ebc5aee5631
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:defines ;
+                                                                        owl:someValuesFrom igso-ml:PrivacyPolicy
+                                                                      ] ;
+                                                      rdfs:comment "Privacy & Security department"@en ;
+                                                      rdfs:label "PrivacySecurityOU"@de ;
+                                                      <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "Adapted from ..."@en .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_62068503_c31a_4202_877d_d1e8b3798b22
 igso-ml:OWLClass_62068503_c31a_4202_877d_d1e8b3798b22 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:FunctionalRequirement ;
                                                       rdfs:label "Hold.REQ"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c
+igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_cfab6901_9bd7_4d8f_8722_162763abdf9e ;
+                                                      rdfs:label "GovernanceCharacteristic"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_64953796_bf17_48dd_b7aa_d465c3c46dd8
@@ -3215,6 +3534,12 @@ igso-ml:OWLClass_675196d7_608a_4828_b58f_f923a34ffa10 rdf:type owl:Class ;
 igso-ml:OWLClass_69b1a8d6_348e_41bf_a88e_484912804c68 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
                                                       rdfs:label "DatasourceType"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940
+igso-ml:OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ;
+                                                      rdfs:label "Goals"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6c336268_a8fa_4151_8490_441022d2e43e
@@ -3289,6 +3614,12 @@ igso-ml:OWLClass_76cba0ff_ec79_4cf9_8f0b_9dbbea7ae80f rdf:type owl:Class ;
                                                       rdfs:label "HybridUserInterface"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_7758aca2_4d77_4a49_9185_1245608c6b29
+igso-ml:OWLClass_7758aca2_4d77_4a49_9185_1245608c6b29 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "HoldType"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_7880d1ce_b31d_4e21_b358_5fff9e6bfa7d
 igso-ml:OWLClass_7880d1ce_b31d_4e21_b358_5fff9e6bfa7d rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_6102389f_890c_4ebe_9dd1_131473897022 ;
@@ -3319,6 +3650,12 @@ igso-ml:OWLClass_7b996dbf_cd19_4b79_9d2d_cfc153754731 rdf:type owl:Class ;
                                                       rdfs:label "HybridApplicationFunction"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c
+igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "AccessControlType"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_7dfc0720_8e8f_41a6_89e3_fbc19b5b80ea
 igso-ml:OWLClass_7dfc0720_8e8f_41a6_89e3_fbc19b5b80ea rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
@@ -3333,7 +3670,31 @@ igso-ml:OWLClass_7e3367ea_b6df_46c7_b4fc_035a76466699 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_7edeee5c_bbe0_4a86_b415_1cd239746ce4
 igso-ml:OWLClass_7edeee5c_bbe0_4a86_b415_1cd239746ce4 rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Board ;
+                                                      rdfs:subClassOf igso-ml:Board ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_4380905d_fbb5_4cfc_bac0_da2125e5fdc1 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_4380905d_fbb5_4cfc_bac0_da2125e5fdc1 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:OWLObjectProperty_f14d6838_7cc4_4de1_9a7e_811013a2b8e0 ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_3cb00792_4979_4d5c_ace9_cc722a4a6fe0
+                                                                      ] ,
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty igso-ml:defines ;
+                                                                        owl:someValuesFrom igso-ml:OWLClass_e40976a8_4eab_4b5e_bc0a_66cfedd41db3
+                                                                      ] ;
+                                                      rdfs:comment """Board: 
+disclose Goals 
+specifies Objectives 
+monitors Progress
+monitors Maturity Level
+Senior Executive Team: 
+develops max 1  Strategy 
+defines some  DesirableBehavior"""@en ;
                                                       rdfs:label "BoadOfDirectors"@en .
 
 
@@ -3363,6 +3724,12 @@ igso-ml:OWLClass_84236263_ab68_4a0a_9b0a_82ab3221d8be rdf:type owl:Class ;
 igso-ml:OWLClass_846fc159_bb9e_4b7f_82a3_6e7d7a4d5496 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_f0670462_0a4e_4e02_b0eb_b12c62b09e90 ;
                                                       rdfs:label "ElasticityManager"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e
+igso-ml:OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ;
+                                                      rdfs:label "Objectives"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8668152f_a647_4fa6_9adf_c65c87f03168
@@ -3403,7 +3770,7 @@ igso-ml:OWLClass_8b5ddb5c_da22_47f3_ab4f_ff3a1746c1bb rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8b9758b6_1e38_4cfe_b146_3caf1dd7c90e
 igso-ml:OWLClass_8b9758b6_1e38_4cfe_b146_3caf1dd7c90e rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Component ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_d9165657_fde2_4327_8cee_97dd2004c845 ;
                                                       rdfs:label "RecordsManagerCMP"@en .
 
 
@@ -3486,9 +3853,15 @@ igso-ml:OWLClass_98ea202a_6517_4dd9_bc75_bb5ccc0fc941 rdf:type owl:Class ;
                                                       rdfs:label "US.Jdctn"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9919a05b_81d4_4244_a889_b72cd2a1570b
+igso-ml:OWLClass_9919a05b_81d4_4244_a889_b72cd2a1570b rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c ;
+                                                      rdfs:label "Privilege"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9a9da014_dffe_4192_a72a_0c48287bfcea
 igso-ml:OWLClass_9a9da014_dffe_4192_a72a_0c48287bfcea rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Component ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_d9165657_fde2_4327_8cee_97dd2004c845 ;
                                                       rdfs:label "RecordsManagerAPICMP"@en .
 
 
@@ -3522,10 +3895,22 @@ igso-ml:OWLClass_9e745f55_fa60_4a51_b9c6_6e0f01470ede rdf:type owl:Class ;
                                                       rdfs:label "Two-TierCloudApplication"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9e9cfdf2_5397_489a_aa61_d8e1df077bb4
+igso-ml:OWLClass_9e9cfdf2_5397_489a_aa61_d8e1df077bb4 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c ;
+                                                      rdfs:label "Permission"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9eafe378_04a0_4d57_8b80_f34be47df6d3
 igso-ml:OWLClass_9eafe378_04a0_4d57_8b80_f34be47df6d3 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_3935ea8e_d5d9_4499_a8db_e8e47028e2d7 ;
                                                       rdfs:label "ApplicationWorkload"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9fb06b17_582d_4c29_8ca8_415048ca4f2b
+igso-ml:OWLClass_9fb06b17_582d_4c29_8ca8_415048ca4f2b rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "DataRequestType"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a03a90df_bdf1_46b5_9e17_3d08d47c5056
@@ -3536,7 +3921,7 @@ igso-ml:OWLClass_a03a90df_bdf1_46b5_9e17_3d08d47c5056 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a0fcf7f5_701d_4d8f_b387_886197d6c721
 igso-ml:OWLClass_a0fcf7f5_701d_4d8f_b387_886197d6c721 rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:Component ,
+                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty igso-ml:OWLObjectProperty_257a4fb3_81b1_4a9a_8cd4_c543f7ad086b ;
                                                                         owl:someValuesFrom igso-ml:RDBMSystem
@@ -3594,8 +3979,14 @@ igso-ml:OWLClass_a45f25ef_bf73_4477_8731_7e1ed3f637b5 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a4992b7f_52c6_4849_a76f_cb5a757fb2f0
 igso-ml:OWLClass_a4992b7f_52c6_4849_a76f_cb5a757fb2f0 rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:OrganizationDomain ;
+                                                      rdfs:subClassOf igso-ml:RegulationDomain ;
                                                       rdfs:label "Responsibility"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a521b99c_69af_4cda_bd80_bf03348d0559
+igso-ml:OWLClass_a521b99c_69af_4cda_bd80_bf03348d0559 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_e2416715_abde_4aff_8bb4_11821289ff3d ;
+                                                      rdfs:label "LegalCase"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a66fe1fc_6e25_4baa_8857_8417ff791c16
@@ -3667,6 +4058,18 @@ igso-ml:OWLClass_ace4a02c_b000_4fa4_abab_3166a87b87e0 rdf:type owl:Class ;
                                                       rdfs:label "Obligation_of_fairness_Data_processing"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ad70cd11_464a_4cb3_aae1_f8d43626763c
+igso-ml:OWLClass_ad70cd11_464a_4cb3_aae1_f8d43626763c rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "MaturityLevelType"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_af7dd6ee_e0fe_4052_be7c_7f3d7b939c26
+igso-ml:OWLClass_af7dd6ee_e0fe_4052_be7c_7f3d7b939c26 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "RuleType"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7
 igso-ml:OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:RegulationDomain ;
@@ -3683,6 +4086,12 @@ igso-ml:OWLClass_b1a56aac_3525_4bbf_ac0f_38fe69784d18 rdf:type owl:Class ;
 igso-ml:OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:RegulationDomain ;
                                                       rdfs:label "Country"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b38780bc_e711_444d_9f88_158d417156a1
+igso-ml:OWLClass_b38780bc_e711_444d_9f88_158d417156a1 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "RuleType"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b3b7b381_20b0_4595_b2a2_bf92f25ab609
@@ -3739,6 +4148,12 @@ igso-ml:OWLClass_bee31417_cc41_4d63_ba18_d2279600a6d9 rdf:type owl:Class ;
                                                       rdfs:label "Rights_related_to_automated_decision-making_and_profiling"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_c2ae5d4d_14db_49f8_a0dc_b7bb02a5742e
+igso-ml:OWLClass_c2ae5d4d_14db_49f8_a0dc_b7bb02a5742e rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Agent ;
+                                                      rdfs:label "Workflow"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_c34705f2_2c3f_4638_9f27_cfab2c518f75
 igso-ml:OWLClass_c34705f2_2c3f_4638_9f27_cfab2c518f75 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_901efbcb_7f4d_4476_b482_7be84fe5ec03 ;
@@ -3761,6 +4176,12 @@ igso-ml:OWLClass_c4acbfd7_cb6f_433f_83b6_9837a1cfac3f rdf:type owl:Class ;
 igso-ml:OWLClass_c6762682_f28f_4822_bfca_e27ab7b30f3d rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_1119b29f_3a1b_4471_a276_5e4fd26ed518 ;
                                                       rdfs:label "ApplicationComponentProxy"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_c7d50015_b9a1_41b5_91e7_9abc44f5a0d0
+igso-ml:OWLClass_c7d50015_b9a1_41b5_91e7_9abc44f5a0d0 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Agent ;
+                                                      rdfs:label "Process"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_c89224d8_9e01_4841_8a79_0c91f1e2b7e0
@@ -3810,6 +4231,18 @@ A Supervisory Authority is also referred to as a Data Protection Authority by so
                                                       rdfs:label "SupervisoryAuthority"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d1228de3_f68d_49ed_a236_ccc4c5a9f3cc
+igso-ml:OWLClass_d1228de3_f68d_49ed_a236_ccc4c5a9f3cc rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:Acronym ;
+                                                      rdfs:label "ACL"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d220d8d5_5057_494a_bc17_e8e46be6cbe0
+igso-ml:OWLClass_d220d8d5_5057_494a_bc17_e8e46be6cbe0 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7 ;
+                                                      rdfs:label "RemoteLocation"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83
 igso-ml:OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f ;
@@ -3841,6 +4274,18 @@ Integration: File Synchronize, Desktop Sync, Desktop, Repository:
 igso-ml:OWLClass_d8fad034_ec54_4db6_ab84_8ea8d1db7105 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_0b187357_c053_469e_9a0b_48491ae19d02 ;
                                                       rdfs:label "BatchProcessingComponent"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d9165657_fde2_4327_8cee_97dd2004c845
+igso-ml:OWLClass_d9165657_fde2_4327_8cee_97dd2004c845 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                                                      rdfs:label "RIMComponent"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_db52f87e_372f_4365_94f3_ac0642821d70
+igso-ml:OWLClass_db52f87e_372f_4365_94f3_ac0642821d70 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_d9165657_fde2_4327_8cee_97dd2004c845 ;
+                                                      rdfs:label "eDiscoveryComponent"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_dc670b43_c4ac_4a45_ad47_f2ce3970b9aa
@@ -3910,6 +4355,18 @@ igso-ml:OWLClass_e0c9a03b_13ff_4819_ac21_5ccd26718f87 rdf:type owl:Class ;
                                                       rdfs:label "CloudOfferingPattern"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e2416715_abde_4aff_8bb4_11821289ff3d
+igso-ml:OWLClass_e2416715_abde_4aff_8bb4_11821289ff3d rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_6598ad3b_bd2f_4731_a032_9ef9acf3f456 ;
+                                                      rdfs:label "CaseType"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e40976a8_4eab_4b5e_bc0a_66cfedd41db3
+igso-ml:OWLClass_e40976a8_4eab_4b5e_bc0a_66cfedd41db3 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:OWLClass_624d73b4_435b_4b0c_9242_4ed6215c8d5c ;
+                                                      rdfs:label "DesirableBehavior"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e5fcbee9_0ad3_4a53_b557_284c17b3ae61
 igso-ml:OWLClass_e5fcbee9_0ad3_4a53_b557_284c17b3ae61 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:OWLClass_65ed2d02_4d51_403b_8f9f_fcf86f1a38d0 ;
@@ -3920,6 +4377,12 @@ igso-ml:OWLClass_e5fcbee9_0ad3_4a53_b557_284c17b3ae61 rdf:type owl:Class ;
 igso-ml:OWLClass_e7dce79a_3706_4d1a_9b63_610ac0706b21 rdf:type owl:Class ;
                                                       rdfs:subClassOf igso-ml:Obligation ;
                                                       rdfs:label "Obligation_of_Accountability_of_DataControllers"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7
+igso-ml:OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7 rdf:type owl:Class ;
+                                                      rdfs:subClassOf igso-ml:RegulationDomain ;
+                                                      rdfs:label "Location"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ebfc039c_568d_4788_90d1_b68a2dec2e82
@@ -4091,12 +4554,12 @@ igso-ml:OperationalDataQualityProcedures rdf:type owl:Class ;
 igso-ml:Organization rdf:type owl:Class ;
                      rdfs:subClassOf igso-ml:OrganizationDomain ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty igso-ml:governs ;
-                                       owl:someValuesFrom igso-ml:Data
+                                       owl:onProperty igso-ml:OWLObjectProperty_2462dcc1_6991_490c_ae58_08170f521024 ;
+                                       owl:someValuesFrom igso-ml:OWLClass_3ea877f1_f9fc_4cf3_ac3f_cac3927ac715
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty igso-ml:produces ;
-                                       owl:someValuesFrom igso-ml:Data
+                                       owl:someValuesFrom igso-ml:Information
                                      ] ;
                      rdfs:label "Organization" .
 
@@ -4108,7 +4571,7 @@ igso-ml:OrganizationDomain rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit
 igso-ml:OrganizationalUnit rdf:type owl:Class ;
-                           rdfs:subClassOf igso-ml:Organization ;
+                           rdfs:subClassOf igso-ml:OrganizationDomain ;
                            rdfs:label "OrganizationalUnit" .
 
 
@@ -4122,14 +4585,9 @@ igso-ml:Platinum rdf:type owl:Class ;
                  rdfs:subClassOf igso-ml:ServiceLevelAgreement .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ml#Policy
-igso-ml:Policy rdf:type owl:Class ;
-               rdfs:subClassOf igso-ml:OrganizationDomain .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ml#PortalCMP
 igso-ml:PortalCMP rdf:type owl:Class ;
-                  rdfs:subClassOf igso-ml:Component ;
+                  rdfs:subClassOf igso-ml:IGSDesignDomain ;
                   rdfs:label "PortalCMP" .
 
 
@@ -4145,6 +4603,16 @@ igso-ml:PractitionerDomain rdf:type owl:Class ;
                                                ] ;
                            rdfs:comment "The summary of a survey conducted to collect, synthesize, and compare the specific approach and proposed strategy for implementing information governance to achieve compliance with corporate information policy and regulations." ;
                            rdfs:label "PractitionerDomain" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#PrivacyPolicy
+igso-ml:PrivacyPolicy rdf:type owl:Class ;
+                      rdfs:subClassOf igso-ml:OWLClass_35e2c4e3_d828_4c05_87b4_f0c6137b2f7d ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty igso-ml:OWLObjectProperty_84656ed0_71dc_41f1_9566_b053cf262527 ;
+                                        owl:someValuesFrom igso-ml:OWLClass_0c1efb91_3f66_406a_84d2_2ebc5aee5631
+                                      ] ;
+                      rdfs:label "PrivacyPolicy"@en .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#Protection_prncpls
@@ -4163,9 +4631,30 @@ igso-ml:RDBMSystem rdf:type owl:Class ;
                    rdfs:label "RDBMSystem" .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#RIMOU
+igso-ml:RIMOU rdf:type owl:Class ;
+              rdfs:subClassOf igso-ml:OrganizationalUnit ;
+              rdfs:comment "Records Information Management  department"@en ;
+              rdfs:label "RIMOU" ;
+              rdfs:seeAlso <https://www.archives.gov/files/records-mgmt/publications/records-and-information-management-self-evaluation-guide.pdf> ,
+                           <https://www.arma.org/page/Records_And_Information_Management> .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#RIMSolution
 igso-ml:RIMSolution rdf:type owl:Class ;
-                    rdfs:subClassOf igso-ml:Solution ;
+                    rdfs:subClassOf igso-ml:Solution ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty igso-ml:OWLObjectProperty_84656ed0_71dc_41f1_9566_b053cf262527 ;
+                                      owl:someValuesFrom igso-ml:OWLClass_8b9758b6_1e38_4cfe_b146_3caf1dd7c90e
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty igso-ml:OWLObjectProperty_84656ed0_71dc_41f1_9566_b053cf262527 ;
+                                      owl:someValuesFrom igso-ml:OWLClass_9a9da014_dffe_4192_a72a_0c48287bfcea
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty igso-ml:OWLObjectProperty_84656ed0_71dc_41f1_9566_b053cf262527 ;
+                                      owl:someValuesFrom igso-ml:RecordsManagementService
+                                    ] ;
                     rdfs:label "RIMSolution"@en .
 
 
@@ -4213,7 +4702,7 @@ igso-ml:RegulationDomain rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#RelationalDatabaseCMP
 igso-ml:RelationalDatabaseCMP rdf:type owl:Class ;
-                              rdfs:subClassOf igso-ml:Component ;
+                              rdfs:subClassOf igso-ml:IGSDesignDomain ;
                               rdfs:label "RelationalDatabaseCMP" .
 
 
@@ -4225,13 +4714,13 @@ igso-ml:RenderingSystem rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#RenditionCMP
 igso-ml:RenditionCMP rdf:type owl:Class ;
-                     rdfs:subClassOf igso-ml:Component ;
+                     rdfs:subClassOf igso-ml:ECMComponent ;
                      rdfs:label "RenditionCMP" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#RepositoryCMP
 igso-ml:RepositoryCMP rdf:type owl:Class ;
-                      rdfs:subClassOf igso-ml:Component ,
+                      rdfs:subClassOf igso-ml:ECMComponent ,
                                       igso-ml:OWLClass_ec39ae0b_76f4_4130_bc70_75de84f8244b ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty igso-ml:OWLObjectProperty_2462dcc1_6991_490c_ae58_08170f521024 ;
@@ -4561,6 +5050,12 @@ igso-ml:OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc rdf:type owl:Nam
                                                                 rdfs:label "IntellectualAssets"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_35522373_cfa3_42a7_9e42_ac35c1d0ccd0
+igso-ml:OWLNamedIndividual_35522373_cfa3_42a7_9e42_ac35c1d0ccd0 rdf:type owl:NamedIndividual ,
+                                                                         igso-ml:Company ;
+                                                                rdfs:label "Medium"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8
 igso-ml:OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8 rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "ISACA"@en .
@@ -4572,6 +5067,12 @@ igso-ml:OWLNamedIndividual_3c919934_d782_4471_8beb_e3a43bd584c4 rdf:type owl:Nam
                                                                 rdfs:label "FulltextIndex"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_3f7c469c_a0a3_4788_8e85_98468ae2d4ab
+igso-ml:OWLNamedIndividual_3f7c469c_a0a3_4788_8e85_98468ae2d4ab rdf:type owl:NamedIndividual ,
+                                                                         igso-ml:Company ;
+                                                                rdfs:label "Small"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_509d6f7d_a05e_4350_aa67_22bd39258d26
 igso-ml:OWLNamedIndividual_509d6f7d_a05e_4350_aa67_22bd39258d26 rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "CGOC"@en .
@@ -4580,6 +5081,12 @@ igso-ml:OWLNamedIndividual_509d6f7d_a05e_4350_aa67_22bd39258d26 rdf:type owl:Nam
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_50a19820_28a5_4f6d_bbc9_a99ee2ba5aa7
 igso-ml:OWLNamedIndividual_50a19820_28a5_4f6d_bbc9_a99ee2ba5aa7 rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "Relational_Index_Service"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_53ffaa5b_fc9e_4cb8_8680_4f770e837570
+igso-ml:OWLNamedIndividual_53ffaa5b_fc9e_4cb8_8680_4f770e837570 rdf:type owl:NamedIndividual ,
+                                                                         igso-ml:Company ;
+                                                                rdfs:label "Micro"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_585c2a68_f541_4d4e_80cd_7e19c4802c1b
@@ -4634,6 +5141,11 @@ igso-ml:OWLNamedIndividual_6683677b_bbe1_453a_a58f_448a51ff6c03 rdf:type owl:Nam
                                                                 rdfs:label "RedHatCloud"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_71473663_406f_46af_ae82_3c06f18d89bf
+igso-ml:OWLNamedIndividual_71473663_406f_46af_ae82_3c06f18d89bf rdf:type owl:NamedIndividual ;
+                                                                rdfs:label "Permission"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_714b257a_d83e_4a7b_a09a_c9e3606bdb58
 igso-ml:OWLNamedIndividual_714b257a_d83e_4a7b_a09a_c9e3606bdb58 rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "CloudEnvironment"@en .
@@ -4642,6 +5154,16 @@ igso-ml:OWLNamedIndividual_714b257a_d83e_4a7b_a09a_c9e3606bdb58 rdf:type owl:Nam
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_7ec2a8fe_71eb_4ee9_9b50_612fe0f70cf1
 igso-ml:OWLNamedIndividual_7ec2a8fe_71eb_4ee9_9b50_612fe0f70cf1 rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "StorageOffering"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_84c897dc_33cc_4001_ae76_e76f3a55cd04
+igso-ml:OWLNamedIndividual_84c897dc_33cc_4001_ae76_e76f3a55cd04 rdf:type owl:NamedIndividual ;
+                                                                rdfs:label "AccessControlList"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_893a69d4_532a_41c7_965e_3f0ab304f763
+igso-ml:OWLNamedIndividual_893a69d4_532a_41c7_965e_3f0ab304f763 rdf:type owl:NamedIndividual ;
+                                                                rdfs:label "ACL"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_8d40509d_6fc0_44fe_9362_0daf7f23c0d2
@@ -4709,6 +5231,12 @@ igso-ml:OWLNamedIndividual_cf1f7723_ad86_4aa9_86ba_5d231e28474f rdf:type owl:Nam
                                                                 rdfs:label "PostgreSQL"@en .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_dec505fa_8c21_48ea_a86a_1489e2fdc5b4
+igso-ml:OWLNamedIndividual_dec505fa_8c21_48ea_a86a_1489e2fdc5b4 rdf:type owl:NamedIndividual ,
+                                                                         igso-ml:Company ;
+                                                                rdfs:label "Large"@de .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_e58a29af_70f7_48f5_a6d4_0091f7f8a31e
 igso-ml:OWLNamedIndividual_e58a29af_70f7_48f5_a6d4_0091f7f8a31e rdf:type owl:NamedIndividual ;
                                                                 rdfs:label "Lucene"@en .
@@ -4739,6 +5267,11 @@ igso-ml:OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a rdf:type owl:Nam
 igso-ml:OWLNamedIndividual_f748c15a_4ff1_472d_8a55_f8500d9ac7fd rdf:type owl:NamedIndividual ,
                                                                          igso-ml:CatalogCMP ;
                                                                 rdfs:label "RecordsCatalog"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_f88da086_cf7b_46c0_9efb_f9387cf52341
+igso-ml:OWLNamedIndividual_f88da086_cf7b_46c0_9efb_f9387cf52341 rdf:type owl:NamedIndividual ;
+                                                                rdfs:label "Privilege"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLNamedIndividual_f89b0f04_639b_43f5_88d3_4f1ea0dab1a0
@@ -4908,6 +5441,19 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:AnalyticsOU
+                igso-ml:ArchitectureOU
+                igso-ml:DevelopmentOU
+                igso-ml:HROU
+                igso-ml:ITOU
+                igso-ml:InformationManagementOU
+                igso-ml:LegalOU
+                igso-ml:RIMOU
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:ArchiveSolution
                 igso-ml:ECMSolution
                 igso-ml:RIMSolution
@@ -4919,7 +5465,7 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:Asset
                 igso-ml:Information
-                igso-ml:Policy
+                igso-ml:PrivacyPolicy
                 igso-ml:Record
               )
 ] .
@@ -4941,6 +5487,21 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
                 igso-ml:Loadbalancing
                 igso-ml:Scale
                 igso-ml:ServiceLevelAgreement
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:Board
+                igso-ml:OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8
+                igso-ml:OWLClass_322c4e1f_867b_4169_91ec_f6f7c43a1d33
+                igso-ml:OWLClass_4c2b949b_90cf_40ea_8f22_54fcb6c82949
+                igso-ml:OWLClass_9d692a63_bdc6_417c_b1cd_c16ebd141973
+                igso-ml:OWLClass_b68a1b15_240e_471b_9a6b_f23460675540
+                igso-ml:OWLClass_c2ae5d4d_14db_49f8_a0dc_b7bb02a5742e
+                igso-ml:OWLClass_c7d50015_b9a1_41b5_91e7_9abc44f5a0d0
+                igso-ml:Person
+                igso-ml:Subject
               )
 ] .
 
@@ -4985,6 +5546,47 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
   owl:members ( igso-ml:CCS
                 igso-ml:ECS
                 igso-ml:IRS
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:CatalogRecordType
+                igso-ml:DataSetType
+                igso-ml:OWLClass_040ebb2c_4901_4b22_b0dd_271c86b430a7
+                igso-ml:OWLClass_35e2c4e3_d828_4c05_87b4_f0c6137b2f7d
+                igso-ml:OWLClass_428975b4_c7f1_4e3c_8c91_7c44ac648853
+                igso-ml:OWLClass_55f0c4df_28df_41c9_954a_5a9914ee7454
+                igso-ml:OWLClass_69b1a8d6_348e_41bf_a88e_484912804c68
+                igso-ml:OWLClass_7758aca2_4d77_4a49_9185_1245608c6b29
+                igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c
+                igso-ml:OWLClass_7dfc0720_8e8f_41a6_89e3_fbc19b5b80ea
+                igso-ml:OWLClass_824e64ab_1c55_4a57_a5b3_cbb8090d1313
+                igso-ml:OWLClass_9fb06b17_582d_4c29_8ca8_415048ca4f2b
+                igso-ml:OWLClass_ad70cd11_464a_4cb3_aae1_f8d43626763c
+                igso-ml:OWLClass_b38780bc_e711_444d_9f88_158d417156a1
+                igso-ml:OWLClass_e2416715_abde_4aff_8bb4_11821289ff3d
+                igso-ml:OWLClass_f10a1409_c3f6_42e8_bff5_5d4e0dabd459
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:CatalogRecordType
+                igso-ml:DataSetType
+                igso-ml:OWLClass_040ebb2c_4901_4b22_b0dd_271c86b430a7
+                igso-ml:OWLClass_35e2c4e3_d828_4c05_87b4_f0c6137b2f7d
+                igso-ml:OWLClass_428975b4_c7f1_4e3c_8c91_7c44ac648853
+                igso-ml:OWLClass_55f0c4df_28df_41c9_954a_5a9914ee7454
+                igso-ml:OWLClass_69b1a8d6_348e_41bf_a88e_484912804c68
+                igso-ml:OWLClass_7758aca2_4d77_4a49_9185_1245608c6b29
+                igso-ml:OWLClass_7d95efc4_8c3b_4078_9242_30877d91221c
+                igso-ml:OWLClass_7dfc0720_8e8f_41a6_89e3_fbc19b5b80ea
+                igso-ml:OWLClass_824e64ab_1c55_4a57_a5b3_cbb8090d1313
+                igso-ml:OWLClass_9fb06b17_582d_4c29_8ca8_415048ca4f2b
+                igso-ml:OWLClass_b38780bc_e711_444d_9f88_158d417156a1
+                igso-ml:OWLClass_e2416715_abde_4aff_8bb4_11821289ff3d
+                igso-ml:OWLClass_f10a1409_c3f6_42e8_bff5_5d4e0dabd459
               )
 ] .
 
@@ -5115,19 +5717,6 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( igso-ml:OU.Analytics
-                igso-ml:OU.Architecture
-                igso-ml:OU.Development
-                igso-ml:OU.HR
-                igso-ml:OU.IT
-                igso-ml:OU.InformationManagement
-                igso-ml:OU.Legal
-                igso-ml:OU.RIM
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:OWLClass_007e342f_0ad5_42d2_abdc_5a8ed99442ce
                 igso-ml:OWLClass_3e8a39d5_6e13_4613_8361_b00ed6dd8107
                 igso-ml:OWLClass_9ac79e11_f20b_4007_91f7_7cc2aab55fe6
@@ -5219,6 +5808,15 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_05680688_27c2_44cf_afa2_28406ad240ad
+                igso-ml:OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940
+                igso-ml:OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e
+                igso-ml:OWLClass_e40976a8_4eab_4b5e_bc0a_66cfedd41db3
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:OWLClass_0b187357_c053_469e_9a0b_48491ae19d02
                 igso-ml:OWLClass_1119b29f_3a1b_4471_a276_5e4fd26ed518
                 igso-ml:OWLClass_39499fe2_7476_46e4_b1bc_f88d7c3b6cb4
@@ -5304,6 +5902,20 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
                 igso-ml:OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b
                 igso-ml:OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7
                 igso-ml:OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f
+                igso-ml:Obligation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60
+                igso-ml:OWLClass_2d5f2e8f_b636_450c_ab4a_d06b39274566
+                igso-ml:OWLClass_46e4747c_332e_42fc_8ef5_c2223740cfbd
+                igso-ml:OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b
+                igso-ml:OWLClass_a4992b7f_52c6_4849_a76f_cb5a757fb2f0
+                igso-ml:OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7
+                igso-ml:OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f
+                igso-ml:OWLClass_eb295d74_2762_4b44_89dc_31cad61ee9e7
                 igso-ml:Obligation
               )
 ] .
@@ -5404,6 +6016,14 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_401a71e4_3176_486b_ae64_2b1a175bfecf
+                igso-ml:OWLClass_5e439e23_becc_4e9c_ac6b_c2a2917af456
+                igso-ml:OWLClass_d220d8d5_5057_494a_bc17_e8e46be6cbe0
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:OWLClass_4594dcc3_5c92_4722_9224_69612f801eca
                 igso-ml:OWLClass_8f7d6c11_6d1d_42ae_aa68_d1db21754412
                 igso-ml:OWLClass_b49f0be3_6b2a_41dd_ad89_f9125b67aaeb
@@ -5420,10 +6040,27 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_56d5d635_4245_489d_abf0_0a82a4bf3bc9
+                igso-ml:OWLClass_9919a05b_81d4_4244_a889_b72cd2a1570b
+                igso-ml:OWLClass_9e9cfdf2_5397_489a_aa61_d8e1df077bb4
+                igso-ml:OWLClass_d1228de3_f68d_49ed_a236_ccc4c5a9f3cc
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-ml:OWLClass_675196d7_608a_4828_b58f_f923a34ffa10
                 igso-ml:OWLClass_73be9b8d_9e7b_4b16_a5f3_035db79c6d70
                 igso-ml:OWLClass_bb2ffc56_882d_4594_8031_0ae60499475b
                 igso-ml:OWLClass_df5f479f_912e_4584_878c_079f048feb1e
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:OWLClass_6c25789c_d4c6_4fee_a9df_ccaa1b591940
+                igso-ml:OWLClass_8626acc1_799b_4b40_9ab6_c8b2bf5e294e
+                igso-ml:OWLClass_e40976a8_4eab_4b5e_bc0a_66cfedd41db3
               )
 ] .
 
@@ -5447,4 +6084,4 @@ igso-ml:Transformational rdf:type owl:NamedIndividual ,
 ] .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
