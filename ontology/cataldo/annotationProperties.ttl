@@ -1,0 +1,347 @@
+@prefix : <http://www.example.org/cm/igso/2023/untitled-ontology-56/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.org/cm/igso/2023/untitled-ontology-56/> .
+
+<http://www.example.org/cm/igso/2023/untitled-ontology-56> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "abstract" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "summary of the resource" ;
+                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "contributor" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "party that has made contributions to the resource" .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "creator" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "party that originated the resource" ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "description" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "account of the resource" ;
+                                       rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "issued" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "date of formal issuance of the resource" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "license" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "legal document giving official permission to do something with the resource" ;
+                                   <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "modified" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "date on which the resource was most recently revised" .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty ;
+                                     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                     rdfs:label "publisher" ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "primary party responsible for making the resource available" ;
+                                     <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "references" ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource" .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "rights" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "provides nformation about rights held in and over the resource" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "source" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "related resource from which the described resource is derived" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "title" ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)" ;
+                                 <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource." .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/contentLanguage> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbbreviation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/fileAbstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/filename
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/filename> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.omg.org/techprocess/ab/SpecificationMetadata/relatedSpecification
+<http://www.omg.org/techprocess/ab/SpecificationMetadata/relatedSpecification> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "alternative label" ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "alternative lexical tag for a resource" ;
+                                               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "change note" ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "note describing a modification to a resource" ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                 rdfs:label "definition" ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "formal statement of the meaning of a resource" ;
+                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "editorial note" ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "note for an editor, translator, or maintainer of the controlled vocabulary or ontology" ;
+                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "example" ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "illustration of the use of some resource" ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty ;
+                                           rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                           rdfs:label "note" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "general remark, for any purpose" .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "preferred label" ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "preferred lexical label for a resource, in a given language" ;
+                                                rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
+                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                rdfs:label "scope note" ;
+                                                <http://www.w3.org/2004/02/skos/core#definition> "note that helps to clarify the meaning of something within the context of the intended use of the resource" ;
+                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/constructRegex
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/constructRegex> rdf:type owl:AnnotationProperty ;
+                                                                                                  rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+                                                                                                  rdfs:label "construct regex" ;
+                                                                                                  <http://www.w3.org/2004/02/skos/core#definition> "indicates how to compose the supplied character string from its components" ;
+                                                                                                  rdfs:range xsd:string .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/parseRegex
+<https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/parseRegex> rdf:type owl:AnnotationProperty ;
+                                                                                              rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/> ;
+                                                                                              rdfs:label "parse regex" ;
+                                                                                              <http://www.w3.org/2004/02/skos/core#definition> "indicates how to deconstruct the supplied character string into its components" ;
+                                                                                              rdfs:range xsd:string .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/actualExpression> rdf:type owl:AnnotationProperty ;
+                                                                                     rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/> ;
+                                                                                     rdfs:label "actual expression" ;
+                                                                                     <http://www.w3.org/2004/02/skos/core#definition> "specifies the calculation or expression used to determine the value of something" ;
+                                                                                     <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "In cases where some expression can only be calculated in SPARQL or via rules, this property is useful for stating what that calculation should be using the input arguments to the expression." ;
+                                                                                     rdfs:range xsd:string .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/commonDesignation
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/commonDesignation> rdf:type owl:AnnotationProperty ;
+                                                                                                 rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+                                                                                                 rdfs:label "common designation" ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#definition> "frequently used designation for an entity" ;
+                                                                                                 <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf"^^xsd:anyURI ;
+                                                                                                 rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/definitionOrigin> rdf:type owl:AnnotationProperty ;
+                                                                                                rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+                                                                                                rdfs:label "definition origin" ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#definition> "document or other source from which a given definition was taken directly; the range for this annotation can be a string, URI, or BibliographicCitation" ;
+                                                                                                rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel> rdf:type owl:AnnotationProperty ;
+                                                                                                rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+                                                                                                rdfs:label "has maturity level" ;
+                                                                                                <http://www.w3.org/2004/02/skos/core#definition> "links something to its state with respect to a development lifecycle" .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/preferredDesignation
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/preferredDesignation> rdf:type owl:AnnotationProperty ;
+                                                                                                    rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+                                                                                                    rdfs:label "preferred designation" ;
+                                                                                                    <http://www.w3.org/2004/02/skos/core#definition> "recommended designation for an entity in some context" ;
+                                                                                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "https://pe.usps.com/cpim/ftp/pubs/Pub28/pub28.pdf"^^xsd:anyURI ;
+                                                                                                    rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> .
+
+
+###  https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/termOrigin
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/termOrigin> rdf:type owl:AnnotationProperty ;
+                                                                                          rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+                                                                                          rdfs:label "term origin" ;
+                                                                                          <http://www.w3.org/2004/02/skos/core#definition> "document or other source from which a given term was taken directly; the range for this annotation can be a string, URI, or BibliographicCitation" ;
+                                                                                          rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation> rdf:type owl:AnnotationProperty ;
+                                                                     rdfs:label "abbreviation" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "designation formed by omitting parts from the full form of a term that denotes the same concept" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#example> "Chemical Symbols: H, O, Mg; Units of Measure: Km, Kg, G" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#note> "Abbreviations can be created by removing individual words, or can be acronyms, initialisms, or clipped terms." ;
+                                                                     <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09" ,
+                                                                                                                                         "ISO 31-0 Quantities and units - General principles" ;
+                                                                     <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "The symbols for quantities are generally single letters of the Latin or Greek alphabet, sometimes with subscripts or other modifying signs. These letters, including those that are members of the Greek alphabet are not symbols for the purposes of this ontology, however, they are abbreviations. Expressions of chemical formulae may, however, include a combination of abbreviations and symbols, as needed to define a given quantity." ;
+                                                                     rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/acronym
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/acronym> rdf:type owl:AnnotationProperty ;
+                                                                rdfs:label "acronym" ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "abbreviation that is made up of the initial letters of the components of the full form of a term or proper name or from syllables of the full form" ;
+                                                                <http://www.w3.org/2004/02/skos/core#example> "Examples of acronyms are: laser, ISO, GATT, UNESCO, UNICEF" ;
+                                                                <http://www.w3.org/2004/02/skos/core#note> "Acronyms are frequently pronounced syllabically. It may be useful to use this property for generation of acronym lists." ;
+                                                                <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09" ;
+                                                                rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/abbreviation> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> rdf:type owl:AnnotationProperty ;
+                                                                    rdfs:label "adapted from" ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "document or other source from which a given term (or its definition) was adapted (i.e., is compatible with but not quoted); the range for this annotation can be a string, URI, or citation" ;
+                                                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation should be used to indicate that a reference was used, for example, as input to the development of a definition or term but would not be considered infringing on a copyright." ;
+                                                                    rdfs:subPropertyOf <http://purl.org/dc/terms/source> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> rdf:type owl:AnnotationProperty ;
+                                                                  rdfs:label "copyright" ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same" ;
+                                                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+                                                                  rdfs:subPropertyOf <http://purl.org/dc/terms/rights> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource> rdf:type owl:AnnotationProperty ;
+                                                                     rdfs:label "direct source" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "quoted reference for the subject resource; the range for this annotation can be a string, URI, or bibliographic citation" ;
+                                                                     rdfs:subPropertyOf <http://purl.org/dc/terms/source> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> rdf:type owl:AnnotationProperty ;
+                                                                        rdfs:label "explanatory note" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "note that provides additional explanatory material for a resource" ;
+                                                                        rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/logicalDefinition
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/logicalDefinition> rdf:type owl:AnnotationProperty ;
+                                                                          rdfs:label "logical definition" ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> "definition in the form of a formal expression, such as the mathematical or logic representation, for the resource" ;
+                                                                          rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#definition> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/symbol
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/symbol> rdf:type owl:AnnotationProperty ;
+                                                               rdfs:label "symbol" ;
+                                                               <http://www.w3.org/2004/02/skos/core#definition> "abbreviation that is a design or mark, or other non-alpha-numeric character(s) conventionally used to represent something, such as a currency or mathematical sign or operator" ;
+                                                               rdfs:subPropertyOf <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> rdf:type owl:AnnotationProperty ;
+                                                                rdfs:label "synonym" ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "designation that can be substituted for the primary representation of something" ;
+                                                                <https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom> "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09" ;
+                                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#altLabel> .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote
+<https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> rdf:type owl:AnnotationProperty ;
+                                                                  rdfs:label "usage note" ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "note that provides information about how a given resource is used or may be extended" ;
+                                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,3141 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.example.org/cm/igso/2023/igso-ml#"
+     xml:base="http://www.example.org/cm/igso/2023/igso-ml"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:igso-ml="http://www.example.org/cm/igso/2023/igso-ml#"
+     xmlns:igso-cpt="http://www.example.org/cm/igso/2023/igso-cpt#"
+     xmlns:igso-inf="http://www.example.org/cm/igso/2023/igso-inf#"
+     xmlns:igso-lcs="http://www.example.org/cm/igso/2023/igso-lcs#"
+     xmlns:igso-org="http://www.example.org/cm/igso/2023/igso-org#"
+     xmlns:igso-plt="http://www.example.org/cm/igso/2023/igso-plt#"
+     xmlns:igso-sys="http://www.example.org/cm/igso/2023/igso-sys#">
+    <owl:Ontology rdf:about="http://www.example.org/cm/igso/2023/igso-ml">
+        <rdfs:comment xml:lang="en">An ontology on information governance maturity level</rdfs:comment>
+        <rdfs:comment xml:lang="en">Developed by Cataldo Mega. Please direct all comments and questions. cataldo.mega@ipvs.uni-stuttgart.de</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_01d1601a_089b_40ec_a5b8_e863a02d2d92 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_01d1601a_089b_40ec_a5b8_e863a02d2d92">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_fair_processing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_19e0a149_e830_422d_ad00_407e7d103b93 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_19e0a149_e830_422d_ad00_407e7d103b93">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">impact_assessments</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_1d79d986_36cb_4a11_8231_adc6dc4385c5 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_1d79d986_36cb_4a11_8231_adc6dc4385c5">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_accountability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_2d1524cd_e46a_4c15_b099_7bcd287daf94 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_2d1524cd_e46a_4c15_b099_7bcd287daf94">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">minize_amount</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_2e3c5ced_ea72_4282_a4cf_a1a1600c71c9 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_2e3c5ced_ea72_4282_a4cf_a1a1600c71c9">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">capture_records_of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_3c740614_da90_4aa3_96d6_e9cc3af406c6 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_3c740614_da90_4aa3_96d6_e9cc3af406c6">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">to_notify</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_3f5184cf_5557_4dc2_9586_f366d29863a1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_3f5184cf_5557_4dc2_9586_f366d29863a1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_accuracy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_676f5c5c_00d9_449e_ac4d_ea884e39712f -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_676f5c5c_00d9_449e_ac4d_ea884e39712f">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">data_transfer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_6df61c5b_fa5b_46f4_8988_f9abc93d4ffd -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_6df61c5b_fa5b_46f4_8988_f9abc93d4ffd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_transparancy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_7006fde7_3b24_4dd2_9b6c_183114b08e28 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_7006fde7_3b24_4dd2_9b6c_183114b08e28">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">being_notified</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_7bd7668c_b8e7_4af6_8f30_5fccd99b1f30 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_7bd7668c_b8e7_4af6_8f30_5fccd99b1f30">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_integrity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_8a6a17aa_101e_484f_a05c_4202d67595c7 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_8a6a17aa_101e_484f_a05c_4202d67595c7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">ensure_lawfulness_processing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_99903f1b_187b_49ee_b9e9_1c66930e44c7 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_99903f1b_187b_49ee_b9e9_1c66930e44c7">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">limit_storage_period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_b668c572_b9eb_436b_b9ac_77f12f56d8c3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_b668c572_b9eb_436b_b9ac_77f12f56d8c3">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">cooperation_with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_bc568d61_6d57_4595_9b00_7fc663e48a59 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_bc568d61_6d57_4595_9b00_7fc663e48a59">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">be_appointed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_c1895063_b7db_465c_96f9_65b0e67004e1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_c1895063_b7db_465c_96f9_65b0e67004e1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">comply_with_</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_dfcea990_e0bb_4861_b2a0_88dc0c51f961 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_dfcea990_e0bb_4861_b2a0_88dc0c51f961">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">obligated_to_ensure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_eba9379f_f0d9_4272_9f6b_b8a65a433e64 -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_eba9379f_f0d9_4272_9f6b_b8a65a433e64">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">limit_purpose</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#align -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#align">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">align</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#analyze -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#analyze">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">analyze</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#appoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#appoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">appoint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#approve -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#approve">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">approve</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#aquire -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#aquire">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">aquire</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#archive -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#archive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">archive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#assess -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#assess">
+        <rdfs:label xml:lang="en">assess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#audit -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#audit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">audit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#backup -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#backup">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#build -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#build">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#classify -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#classify">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#communicate -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#communicate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#conduct_inventory -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#conduct_inventory">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#control -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#control">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#convert -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#convert">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#coordinate -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#coordinate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#correct -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#correct">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#create -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#create">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#defines -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#defines">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="en">defines</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#defines_maturity -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#defines_maturity">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+        <rdfs:domain rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines_maturity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-1"/>
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-2"/>
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-3"/>
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-4"/>
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-5"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:label xml:lang="en">defines_maturity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#design -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#design">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#develop -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#develop">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#distribute -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#distribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ensure -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ensure">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#establish -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#establish">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#estimate -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#estimate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#evaluate -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#evaluate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#governs -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#governs"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#has_maturity -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#has_maturity"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#manage -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#manage"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#measure -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#measure"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#monitor -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#monitor"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#produces"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#profile -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#profile"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#promote -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#promote"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#test -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#test"/>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#validate -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#validate"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_c9685230_e325_4ca0_9e75_029d8033f4c3 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_c9685230_e325_4ca0_9e75_029d8033f4c3">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_ca98d0b7_44da_49e1_9361_d7233709fea6 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_ca98d0b7_44da_49e1_9361_d7233709fea6">
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_f66ad5a9_1507_4247_8563_307c926593fa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLDataProperty_f66ad5a9_1507_4247_8563_307c926593fa">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="en">cost</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:comment xml:lang="en">ARMA / IGMM	 - ARMA International is the community of records and  information management and governance professionals. RIM is the combination Records and Information Management. Records management provides a holistic approach to management and disposition of records and information. Information Management provides management based on business value to an organization’s constituents and clients. RIM focus is to link records with business outcomes and processes. IGIM is the Information Governance Implementation Model published and promoted by ARMA:  ARMA / IGMI	IGMI.
+						Information Governance Maturity Model (IGMM) are defined in the Glossary of  Records and Information Management Terms,3rd Edition (ARMA International, 2007). Data Governance is a subset of IT governance that focuses on establishing processes  and policies around managing data as a corporate asset. More ovber data governance refers to the overall management of the availability, usability, integrity and security of the data employed in an enterprise. And data governance provides the infrastructure,  resources and processes necessary to manage data with the big picture in mind. 
+						Regulatory compliance - Sarbanes-Oxley, etc.: Where management has outsourced…functions to third party service provider(s), management maintains a responsibility to assess the controls over the outsourced operations.
+						
+						The business drivers for managing data as a corporate asset are:
+						- Competitiveness
+						- Regulatory compliance
+						- Realizing the benefit of investments in BI and other Information-based initiativesEstablishment of a modeling strategy						
+						Other practitioner associations are:
+						CGOC - IGRM	CGOC (Compliance, Governance and Oversight Council) is a forum of over 3,800 legal, IT, privacy, security, records and information management professionals. Author of - IGRM Information Governance Refence Model. 
+						
+						EDRM - EDRM - EDRM electronic Discovery Refence Model
+						
+						ISACA-COBIT	
+						
+						DAM	- Data Asset Management
+						
+						DAMA - The Data Management Association </rdfs:comment>
+        <rdfs:label xml:lang="en">ARMA_Principles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#AccessMethod -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#AccessMethod">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+        <rdfs:label>AccessMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Accountability_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Accountability_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+							   L3 - Essential means: 
+							   A records management program (RMP) is established. The RIM role is assigned. Electronic records are part of the RMP. RIM is engaged with other officers. IG drives information-driven processes. Accountabiliy goals are defined. 
+							   L4 - Proactive  
+							   IG professional supervises IG program. A senior officer is appommnted RM and responsible for the RMP. RMP is an element of the IGP. Disposition policies and RM-related issues are revied periodically.  
+							   L5 - Transformational 
+							   Senior Mgmnt and Governing Board place great emphasis on IG.  There is a Chief Information Governanace Officer (CIGO) appointed. CIGO and RM are member of the governing body. The accountability goals are met. 
+							   The accountability goals are periodically reviewed and revised.</rdfs:comment>
+        <rdfs:label xml:lang="en">Accountability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Agent -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Alfresco -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Alfresco">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Amazon -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Amazon">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ArchiveSolution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ArchiveSolution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+        <rdfs:label xml:lang="en">ArchiveSolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Asset -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Availability_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Availability_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+							 L3 - Essential: 
+							 There is a standard for where and how official records and information are stored, protected, and made available. Record retrieval mechanisms are consistent and contribute to timely records retrieval.Most of the time, it is easy to determine where to find the authentic and final version of any record. Legal discovery is a well defined and systematic business process. The organization has defined specific goals related to availability. 							
+							 L4 - Proactive: 
+							 There are clearly defined policies regarding storage of records and information. There are clear guidelines and an inventory that identifies and defines the systems and their information assets. Records and information are consistently and readily available when needed. 
+							 Appropriate systems and controls are in place for legal discovery. Automation is adopted to facilitate the implementation of the hold process. 
+							 L5 - Transformational: 
+							 The senior management and board levels provide support to continually upgrade the processes that affect record availability. There is an organized training and continuous improvement program. The organization’s stated goals related to availability have been met. 
+							 There is a measurable ROI to the business as a result of records availability</rdfs:comment>
+        <rdfs:label xml:lang="en">Availability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Backup-Restore -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Backup-Restore">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+        <rdfs:label xml:lang="en">Backup-Restore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Board -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Board">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Bronze -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Bronze">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#BusinessIntelligence -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#BusinessIntelligence">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#BusinessIntelligenceManagementManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#BusinessIntelligenceManagementManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CCO -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CCO">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefComplianceOfficer"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        <rdfs:comment>A chief compliance officer (CCO) is responsible for developing and implementing a company’s compliance program and meeting regulatory requirements.
+
+Has 4 Responsibilities 
+
+1. Establishing and communicating plans: Is responsible for defining compliance standards for the company. Revise an existing program, reviewing new information from regulatory bodies to keep the plan up to date.
+    2. Managing compliance policies and training: Providing compliance training to all departments. Work with compliance professionals, human resources, and the legal department to implement trainings and ensure completion.
+    3. Reporting on potential conflicts of interest and compliance updates: Reporting compliance issues . Report any potential conflicts of interest or negative business results that arise from a new or revised compliance plan. 
+Explains how that detrimental change to the corporate governance ultimately helps avoid noncompliance.
+    4. Reviewing compliance issues: Risk management is a key compliance function. Reviews reports and internal audits to assess whether company policies meet or fall outside regulatory compliance requirements. Work closely with the top risk manager and their risk management team to evaluate any problems and develop solutions.</rdfs:comment>
+        <rdfs:label>CCO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CEO -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CEO">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefExecutiveOfficer"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        <rdfs:label>CEO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CGOC -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CGOC">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:comment xml:lang="en">CGOC - Information Governance Refence Model (includes EDRM electronic Discovery Refence Model) 
+			 Levels 
+				L1 Ad Hoc, Manual Unstructured	
+				L2 Manual, Structured 
+				L3 &quot;Semi-Automated Within Silo&quot;	
+				L4 &quot;Automated and Fully Integrated Across Functions&quot;	
+				L5 Process Risk or Immaturity or Consequences
+			 Main Categories
+			  Legal
+				Employees on Hold
+				Data on Hold
+				Hold Publication
+				Evidence Collection
+				Evidence Analysis &amp; Cost Controls
+			 Legal Records
+				RIM &quot;Information Retention and Disposal Obligation&quot;
+				Departmental Information Practice
+				Realize Information Value
+				Data Quality &amp; Data Lineage
+			 Security &amp; Privacy
+				Privacy and Data Protection Obligation
+				External Intrusion
+				Accidental Data Leakage
+				Insider Theft of Data
+			 IT
+				Data Source Catalog &amp; Stewardship
+				System Provisioning
+				Cloud Computing
+				Active Data Management
+				Disposal &amp; Decommissioning
+				Legacy Data Management
+				Storage Alignment
+				Audit</rdfs:comment>
+        <rdfs:label xml:lang="en">CGOC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CISO -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CISO">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefInformationSecurityOfficer"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        <rdfs:label>CISO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CMCatalog.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMCatalog.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CMP.Collection -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.Collection">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Collection.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CMP.Database -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.Database">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Database.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMRepository -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMRepository">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>ECMRepository.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMServicesLayer -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMServicesLayer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Catalog.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ChiefComplianceOfficer -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ChiefComplianceOfficer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ChiefExecutiveOfficer -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ChiefExecutiveOfficer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ChiefInformationSecurityOfficer -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ChiefInformationSecurityOfficer">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Classification.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Classification.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Classification.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#CloudDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain">
+        <rdfs:label xml:lang="en">CloudDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Company -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Company">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Enterprise"/>
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+        <rdfs:label>Company</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Compliance_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Compliance_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+						 L3 - Essential: The organization has identified all relevant compliance laws and regulations.Record creation and capture are systematically carried out in accordance with records management principles.The organization has a strong code of business conduct which is integrated into its overall information governance structure and recordkeeping policies.Compliance and the records that demonstrate it are highly valued and measurable.The hold process is integrated into the organization’s information management and discovery processes for the “most critical” systems.The organization has defined specific goals related to compliance
+						 L4 - Proactive:
+						 The organization has implemented systems to capture and protect records. Records are linked with the metadata used to demonstrate and measure compliance. Employees are trained appropriately and audits are conducted regularly. Records of the audits and training are available for review. Lack of compliance is remedied through implementation of defined corrective actions. The hold process is well-managed with defined roles and a repeatable process that is integrated into the organization’s information management and discovery processes. 
+						 L5 - Transformational: The importance of compliance and the role of records and information in it are clearly recognized at the senior management and board levels. Auditing and continuous improvement processes are well-established and monitored by senior management. The roles and processes for information management and discovery are integrated. The organization’s stated goals related to compliance have been met.The organization suffers few or no adverse consequences based on information governance and compliance failures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Compliance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Component -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Component">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ContentManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DAM -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DAM">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:label xml:lang="en">DAM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DAMA -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DAMA">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:comment xml:lang="en">Digital Asset Management (DAM) refers to managing information, systems and processes that enable the management of assets from ideation to creation, curation, analysis and archiving. Has 4 Main categories and 15 Dimensions 56 Criteria</rdfs:comment>
+        <rdfs:label xml:lang="en">DAMA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Data -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Data">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+        <rdfs:comment>Data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataBase -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataBase">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement"/>
+        <rdfs:label xml:lang="en">DataBase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataDevelopment -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataDevelopment">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataImplementation -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataImplementation">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataDevelopment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataManagementControl -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataManagementControl">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement"/>
+        <rdfs:label xml:lang="en">DataManagementControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataManagementPlanning -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataManagementPlanning">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>DataManagementPlanning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataManagementSupervision -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataManagementSupervision">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignQuality -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataModelDesignQuality">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQuality -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQuality">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#audit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#correct"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityDefects"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityMetrics"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityServiceLevel"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#design"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OperationalDataQualityProcedures"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#manage"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityIssues"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#measure"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#monitor"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#monitor"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityPerformance"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#validate"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:label xml:lang="en">DataQuality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityAwereness -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityAwereness">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label xml:lang="en">DataQualityAwereness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityBusinessRules -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityBusinessRules">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label xml:lang="en">DataQualityBusinessRules</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityDefects -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityDefects">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label xml:lang="en">DataQualityDefects</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityIssues -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityIssues">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label xml:lang="en">DataQualityIssues</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#analyze"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#assess"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#profile"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityBusinessRules"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#develop"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityAwereness"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#promote"/>
+                        <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityAwereness"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#audit"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#test"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">DataQualityManagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityMetrics -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityMetrics">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label xml:lang="en">DataQualityMetrics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityPerformance -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityPerformance">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label>DataQualityPerformance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityRequirements">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label>DataQualityRequirements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataQualityServiceLevel -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataQualityServiceLevel">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label>DataQualityServiceLevel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataSecurityManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataSecurityManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DataTechnologyManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DataTechnologyManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperationsManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperationsManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DatabaseSupport -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DatabaseSupport">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DetailedDataDesign -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DetailedDataDesign">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataArchitectureManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DisasterRecovery -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DisasterRecovery">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+        <rdfs:label xml:lang="en">DisasterRecovery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Disposition_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Disposition_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+							L3 - Essential:
+							Official procedures for records disposition and transfer are developed. Official policy and procedures for suspending disposition have been developed. Although policies and procedures exist, they are not standardized across the organization. Individual departments have devised alternative procedures to suit their particular business needs. The organization has defined specific goals related to disposition
+							L4 - Proactive: Disposition procedures are understood by all and are consistently applied across the enterprise.The process for suspending disposition due to legal holds is defined, understood, and used consistently across the organization. Electronic information is expunged, not just deleted, in accordance with retention policies.
+							L5 - Transformational: The disposition process covers all records and information in all media.Disposition is assisted by technology and is integrated into all applications, data warehouses, and repositories. Disposition processes are consistently applied and effective.Processes for disposition are regularly evaluated and improved. The organization’s stated goals related to disposition have been met.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disposition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#DocumentManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DocumentManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ECMSolution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ECMSolution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+        <rdfs:label xml:lang="en">ECMSolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#EDRM -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#EDRM">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:label xml:lang="en">EDRM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Elasticity -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Elasticity">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+        <rdfs:label xml:lang="en">Elasticity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Enterprise -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Enterprise">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+        <rdfs:label>Enterprise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Executives -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Executives">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Management"/>
+        <rdfs:label xml:lang="en">Executives</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Firm -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Firm">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+        <rdfs:label>Firm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#FullTextIndexer.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextIndexer.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#FullTextServer.CMP"/>
+        <rdfs:label>FullTextIndexer.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#FullTextSearch.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextSearch.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#FullTextServer.CMP"/>
+        <rdfs:label>FullTextSearch.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#FullTextServer.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextServer.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>FullTextServer.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#FunctionalRequirement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FunctionalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Requirements"/>
+        <rdfs:label>FunctionalRequirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Gold -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Gold">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Google -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Google">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#GovernanceBoard -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#GovernanceBoard">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Board"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#HighAvailability -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#HighAvailability">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+        <rdfs:label xml:lang="en">HighAvailability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IBM -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IBM">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGSCloudPatterns -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSCloudPatterns">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain"/>
+        <rdfs:label xml:lang="en">IGSCloudPatterns</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain">
+        <rdfs:label xml:lang="en">DesignDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGSDesignPatterns -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignPatterns">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+        <rdfs:label xml:lang="en">IGSDesignPatterns</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+        <rdfs:label xml:lang="en">IGSImplementation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+        <rdfs:label xml:lang="en">IGSVendor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain">
+        <rdfs:label xml:lang="en">IGServicesDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#IGServisePatterns -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServisePatterns">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Information -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Information">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#InformationGovernanceSolution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationGovernanceSolution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#InformationManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain">
+        <rdfs:label xml:lang="en">InformationManagementDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Integrity_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Integrity_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+						  L3 - Essential: The organization has a formal process to ensure that the required level of authenticity and chain of custody can be applied to its systems and processes.Appropriate data elements to demonstrate compliance with the policy are captured. The organization has defined specific goals related to integrity
+						  L4 - Proactive: There is a clear definition of metadata requirements for all systems, business applications, and paper records that are needed to ensure the authenticity of records.Metadata requirements include security and signature requirements and chain of custody as needed to demonstrate authenticity.The metadata definition process is an integral part of the records management practice in the organization. 
+						  L5 - Transformational:There is a formal, defined process for introducing new record-generating systems and the capture of their metadata and other authenticity requirements, including chain of custody.This level is easily and regularly audited. The organization’s stated goals related to integrity have been met. The organization can consistently and confidently demonstrate the accuracy and authenticity of its records.</rdfs:comment>
+        <rdfs:label xml:lang="en">Integrity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Load.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Load.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Load.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Loadbalancing -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Loadbalancing">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+        <rdfs:label xml:lang="en">Loadbalancing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Ad-Hoc"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Immaturity"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Non-Existent"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Sub-Standard"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-1"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MI-Level_1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-2"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MI_Level_2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-3"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MI_Level_3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-4"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MI_Level_4</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MI_Level_5 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_5">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#defines"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-5"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MI_Level_5</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Management -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Management">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+        <rdfs:label>Management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MasterDataManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MasterDataManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Ad-Hoc"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Consequences"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Defined"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Essential"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullyAutomatedLocal"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Immaturity"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#In-Development"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Initial"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ManualStructured"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ManualUnstructured"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Non-Existent"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Optimized"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ProcessRisk"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Repeatable"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#SemiAutomatedLocal"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        <rdfs:label xml:lang="en">MaturityIndex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MetaDataManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MetaDataManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ContentManagement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Method -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Method">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:label>Method</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Microsoft -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Microsoft">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Requirements"/>
+        <rdfs:label xml:lang="en">Non-FunctionalRequirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OPenSource -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OPenSource">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU">
+        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+        <rdfs:label>OU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.Analytics -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Analytics">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.Analytics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.Architecture -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Architecture">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.Development -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Development">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.Development</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.HR -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.HR">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.HR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.IT -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.IT">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.IT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.InformationManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.InformationManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.InformationManagement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.Legal -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Legal">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.Legal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OU.RIM -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.RIM">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit"/>
+        <rdfs:label>OU.RIM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0219e02f_c69c_4726_a272_5ab7dce6206f -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0219e02f_c69c_4726_a272_5ab7dce6206f">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_Purpose_limitation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0d7f54f1_8d5e_4b54_b4e3_2e6cf5ca01ed -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0d7f54f1_8d5e_4b54_b4e3_2e6cf5ca01ed">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_appoint_DataProtectionOfficer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_174097e6_2e40_4e70_bf5f_7099a03f6ad7 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_174097e6_2e40_4e70_bf5f_7099a03f6ad7">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_Integrity_of_Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_19751135_b3fb_477b_8c27_434755d8faa8 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_19751135_b3fb_477b_8c27_434755d8faa8">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b"/>
+        <rdfs:label xml:lang="en">Articles.GDPR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+        <rdfs:label xml:lang="en">DataSubject</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2009b08e_0b49_4a1e_a55b_4cb5873bb42c -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2009b08e_0b49_4a1e_a55b_4cb5873bb42c">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_Data_minimization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_21321573_a218_4b9f_b7af_d50cd39a9ac5 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_21321573_a218_4b9f_b7af_d50cd39a9ac5">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_data_portability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_229adb10_3f01_40af_b10b_74330cebc7be -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_229adb10_3f01_40af_b10b_74330cebc7be">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_of_access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_233da438_1b2b_4eb5_bcef_b697ce8b065a -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_233da438_1b2b_4eb5_bcef_b697ce8b065a">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_rectification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_23e3704f_5979_4a26_9a76_e176af8c3f18 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_23e3704f_5979_4a26_9a76_e176af8c3f18">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_cooperation_with_SupervisoryAuthorities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Right</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2a1c8a8d_dd5e_4f42_b489_b7c1cf7c5300 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2a1c8a8d_dd5e_4f42_b489_b7c1cf7c5300">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_Accuracy_of_Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2d5f2e8f_b636_450c_ab4a_d06b39274566 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2d5f2e8f_b636_450c_ab4a_d06b39274566">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Restriction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Obligation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_368a4545_51dd_4f1f_8989_95155250a3c0 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_368a4545_51dd_4f1f_8989_95155250a3c0">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_cross-border_DataTransfers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_405904c5_ab37_439d_9d63_ca320a41420e -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_405904c5_ab37_439d_9d63_ca320a41420e">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_restrict_processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_comply_with_ConsentRequirements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_51323007_08a5_4e16_b186_b8d250f7002b -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_51323007_08a5_4e16_b186_b8d250f7002b">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">USPrivacyAct</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Jurisdiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5cd8606d_cda0_42ce_ae50_40744b6c5dff -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5cd8606d_cda0_42ce_ae50_40744b6c5dff">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_be_informed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_600fad92_4ce3_4d5e_bdbf_9d70e533c765 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_600fad92_4ce3_4d5e_bdbf_9d70e533c765">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_Storage_limitation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6c336268_a8fa_4151_8490_441022d2e43e -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6c336268_a8fa_4151_8490_441022d2e43e">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_Confidentiality_of_Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6ed6a240_071f_4557_8804_e231ce25a25b -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6ed6a240_071f_4557_8804_e231ce25a25b">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_be_forgotten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d">
+        <rdfs:label xml:lang="en">RegulationDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8668152f_a647_4fa6_9adf_c65c87f03168 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8668152f_a647_4fa6_9adf_c65c87f03168">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_capture_Records_of_DataProcessingActivities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8c22be0f_38e0_41d4_b6f2_9d9c4a542584 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8c22be0f_38e0_41d4_b6f2_9d9c4a542584">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_transparency_data_processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_98c92f8a_4374_438c_84c8_636996cbba79 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_98c92f8a_4374_438c_84c8_636996cbba79">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_notification_of_personal_DataBreaches</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_98ea202a_6517_4dd9_bc75_bb5ccc0fc941 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_98ea202a_6517_4dd9_bc75_bb5ccc0fc941">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b"/>
+        <owl:disjointWith rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_cc066c66_8dd6_4a15_9f65_0ded00a220da"/>
+        <rdfs:label xml:lang="en">US.Jdctn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9d692a63_bdc6_417c_b1cd_c16ebd141973 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9d692a63_bdc6_417c_b1cd_c16ebd141973">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+        <rdfs:label xml:lang="en">DataProcessor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">GDPR</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a7b67ff4_26d2_48b1_b4d0_2c5d44f4e234 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a7b67ff4_26d2_48b1_b4d0_2c5d44f4e234">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_lawfulness_data_processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_aa9a0548_88a8_412e_82f0_631c9709ab82 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_aa9a0548_88a8_412e_82f0_631c9709ab82">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3"/>
+        <rdfs:label xml:lang="en">Italy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ace4a02c_b000_4fa4_abab_3166a87b87e0 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ace4a02c_b000_4fa4_abab_3166a87b87e0">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_fairness_Data_processing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b0fe27fd_0d6e_44e8_82a9_38b254120dc7">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Penalty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_71a62a43_2dd3_4aff_9f40_1d3ae96aef6d"/>
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b68a1b15_240e_471b_9a6b_f23460675540 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b68a1b15_240e_471b_9a6b_f23460675540">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+        <rdfs:label xml:lang="en">DataController</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b72ced2b_bbc1_4776_968f_ed3a8291713e -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b72ced2b_bbc1_4776_968f_ed3a8291713e">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_to_Data_protection_impact_assessments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b90250ad_ef93_459e_8e20_21bb34f17d0d -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b90250ad_ef93_459e_8e20_21bb34f17d0d">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_erasure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_be45220f_968d_4325_84af_80cadf48175e -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_be45220f_968d_4325_84af_80cadf48175e">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#System"/>
+        <rdfs:label xml:lang="en">Rendering.SYS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_bee31417_cc41_4d63_ba18_d2279600a6d9 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_bee31417_cc41_4d63_ba18_d2279600a6d9">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Rights_related_to_automated_decision-making_and_profiling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ca2d2d98_a6b6_441f_853c_cbdd6a6e4076 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ca2d2d98_a6b6_441f_853c_cbdd6a6e4076">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3"/>
+        <rdfs:label xml:lang="en">Germany</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_cc066c66_8dd6_4a15_9f65_0ded00a220da -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_cc066c66_8dd6_4a15_9f65_0ded00a220da">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b"/>
+        <rdfs:label xml:lang="en">EU.Jdctn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f"/>
+        <rdfs:label xml:lang="en">USA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d6da0ce9_035d_47ef_ab86_559a2643bb50 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d6da0ce9_035d_47ef_ab86_559a2643bb50">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#System"/>
+        <rdfs:label xml:lang="en">Storage.SYS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e7dce79a_3706_4d1a_9b63_610ac0706b21 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e7dce79a_3706_4d1a_9b63_610ac0706b21">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_Accountability_of_DataControllers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fb52f008_e687_4fc8_b0fd_aee95920c889 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fb52f008_e687_4fc8_b0fd_aee95920c889">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+        <rdfs:label xml:lang="en">Right_to_object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fbd51e5c_dd7b_49c4_925e_a4136ae58a9a -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fbd51e5c_dd7b_49c4_925e_a4136ae58a9a">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+        <rdfs:label xml:lang="en">Obligation_of_Accountability_of_DataProcessors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3 -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b1e6707f_1031_4bb8_bf33_68fbdce7135f"/>
+        <rdfs:label xml:lang="en">EU</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ObjectCatalog.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ObjectCatalog.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP"/>
+        <rdfs:label>ObjectCatalog.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Opentext -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Opentext">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OperationalDataQualityProcedures -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OperationalDataQualityProcedures">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DataQuality"/>
+        <rdfs:label>OperationalDataQualityProcedures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Organization -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#governs"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#produces"/>
+                <owl:someValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain">
+        <rdfs:label xml:lang="en">Organizationdomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OrganizationalUnit">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+        <rdfs:label>OrganizationalUnit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Person -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Person">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Platinum -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Platinum">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Policy -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Policy">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Portal.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Portal.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Portal.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain">
+        <rdfs:comment>The summary of a survey conducted to collect, synthesize, and compare the specific approach and proposed strategy for implementing information governance to achieve compliance with corporate information policy and regulations.</rdfs:comment>
+        <rdfs:label>PractitionerDomain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Protection_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Protection_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+						   L3 - Essential: The organization has a formal written policy for protecting records and centralized access controls. Confidentiality and privacy are well defined. The importance of chain of custody is defined, when appropriate. Training for employees is available. Records and information audits are only conducted in regulated areas of the business. Audits in other areas may be conducted, but are left to the discretion of each function area The organization has defined specific goals related to record protection. 
+						   L4 - Proactive The organization has implemented systems that provide for the protection of the information. Employee training is formalized and well documented. Auditing of compliance and protection is conducted on   regular basis. 
+						   L5 - Transformational Executives and/or senior management and the board place great value in the protection of information.&quot; Audit information is regularly examined and continuous improvement is undertaken. The organization’s stated goals related to record protection have been met. Inappropriate or inadvertent information disclosure or loss incidents are rare.</rdfs:comment>
+        <rdfs:label xml:lang="en">Protection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#RDBM.SYS -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#RDBM.SYS">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#System"/>
+        <rdfs:label>RDBM.SYS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#RIMSolution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#RIMSolution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+        <rdfs:label xml:lang="en">RIMSolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Record -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Record">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#RecordsCatalog.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#RecordsCatalog.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ReferenceDataManagement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ReferenceDataManagement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#DatabaseOperations"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Rendition.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Rendition.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Rendition.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Requirements -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Requirements">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Resiliency -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Resiliency">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ResponseTime -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ResponseTime">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Retention_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Retention_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+						  L3 - Essential: A formal retention schedule that is tied to rules and regulations is consistently applied throughout the organization. The organization’s employees are knowledgeable about the retention schedule and they understand their personal responsibilities for records retention. The organization has defined specific goals related to retention. 
+						  L4 - Proactive: Employees understand how to classify records appropriately. Employees understand how to classify records appropriately. Retention schedules are reviewed on a regular basis, and there is a process to adjust retention schedules as needed. Records retention is a major corporate concern. 
+						  L5 - Transformational: Retention is an important item at the senior management and board levels. Retention is looked at holistically and is applied to all Information in an organization, not just to official records. The organization’s stated goals related to retention have been met. The organization’s stated goals related to retention have been met.</rdfs:comment>
+        <rdfs:label xml:lang="en">Retention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Role -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Role">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Scale -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Scale">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Share.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Share.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Share.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Silver -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Silver">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Solution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Solution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:label xml:lang="en">Solution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#StoreMethod -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#StoreMethod">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+        <rdfs:label>StoreMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Subject -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Subject">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#System -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#System">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+        <rdfs:label xml:lang="en">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Transfer.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transfer.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Transfer.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#TransferMethod -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#TransferMethod">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+        <rdfs:label>TransferMethod</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Transformation.CMP -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transformation.CMP">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+        <rdfs:label>Transformation.CMP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Transparency_prncpls -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transparency_prncpls">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ARMA_Principles"/>
+        <rdfs:comment xml:lang="en">
+							 L3 - Essential: Transparency in recordkeeping is taken seriously and information is readily and systematically available when needed. There is a written policy regarding transparency. Employees are educated on the importance of Transparency and the specifics of the organization’s commitment to transparency. The organization has defined specific goals related to Transparency 
+							 L4 - Proactive: Transparency is an essential part of the corporate culture and is emphasized in training. The organization monitors compliance on a regular basis. 
+							 L5 - Transformational: The organization’s senior management considers transparency as a key component of information governance. The organization’s stated goals related to transparency have been met. The organization # has implemented a continuous improvement process to ensure transparency is maintained over time. Software tools that are in place assist in transparency. Requestors, courts, and other legitimately interested parties are consistently satisfied with the transparency of the processes and the response</rdfs:comment>
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#eDiscoverySolution -->
+
+    <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#eDiscoverySolution">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+        <rdfs:label xml:lang="en">eDiscoverySolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Ad-Hoc -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Ad-Hoc">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1"/>
+        <rdfs:label xml:lang="en">Ad-Hoc</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#AutomatedOrganizationWide -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#AutomatedOrganizationWide">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4"/>
+        <rdfs:label xml:lang="en">AutomatedOrganizationWide</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Consequences -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Consequences">
+        <rdfs:label xml:lang="en">Consequences</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Defined -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Defined">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4"/>
+        <rdfs:label xml:lang="en">Defined</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Essential -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Essential">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3"/>
+        <rdfs:label xml:lang="en">Essential</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#FullyAutomatedLocal -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullyAutomatedLocal">
+        <rdfs:label xml:lang="en">FullyAutomatedLocal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Immaturity -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Immaturity">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1"/>
+        <rdfs:label xml:lang="en">Immaturity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#In-Development -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#In-Development">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2"/>
+        <rdfs:label xml:lang="en">In-Development</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Initial -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Initial">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2"/>
+        <rdfs:label xml:lang="en">Initial</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ManualStructured -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ManualStructured">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_2"/>
+        <rdfs:label xml:lang="en">ManualStructured</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ManualUnstructured -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ManualUnstructured">
+        <rdfs:label xml:lang="en">ManualUnStructured</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MaturityIndex"/>
+        <rdfs:label xml:lang="en">MaturityLevel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-1">
+        <rdfs:label xml:lang="en">MaturityLevel-1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-2">
+        <rdfs:label xml:lang="en">MaturityLevel-2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-3">
+        <rdfs:label xml:lang="en">MaturityLevel-3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-4">
+        <rdfs:label xml:lang="en">MaturityLevel-4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#MaturityLevel-5">
+        <rdfs:label xml:lang="en">MaturityLevel-5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Non-Existent -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Non-Existent">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1"/>
+        <rdfs:label xml:lang="en">Non-Existent</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Optimized -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Optimized">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_5"/>
+        <rdfs:label xml:lang="en">Optimized</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Proactive -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Proactive">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_4"/>
+        <rdfs:label xml:lang="en">Proactive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#ProcessRisk -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ProcessRisk">
+        <rdfs:label xml:lang="en">ProcessRisk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Repeatable -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Repeatable">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3"/>
+        <rdfs:label xml:lang="en">Repeatable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#SemiAutomatedLocal -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#SemiAutomatedLocal">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_3"/>
+        <rdfs:label xml:lang="en">SemiAutomatedLocal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Sub-Standard -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Sub-Standard">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_1"/>
+        <rdfs:label xml:lang="en">Sub-Standard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#Transformational -->
+
+    <owl:NamedIndividual rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transformational">
+        <rdf:type rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#MI_Level_5"/>
+        <rdfs:label xml:lang="en">Transformational</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#AccessMethod"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#StoreMethod"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#TransferMethod"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Company"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Enterprise"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Executives"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Management"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Executives"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Management"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Agent"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Data"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Executives"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Management"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Method"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Alfresco"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Amazon"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Google"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IBM"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignPatterns"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Microsoft"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OPenSource"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Opentext"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ArchiveSolution"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ECMSolution"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#RIMSolution"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#eDiscoverySolution"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Asset"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Information"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Policy"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Record"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Availability_prncpls"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Elasticity"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Resiliency"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ResponseTime"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Backup-Restore"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#DisasterRecovery"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#HighAvailability"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Loadbalancing"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Scale"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Board"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_1e6e7247_b456_479c_a789_a19ea8cfe1b8"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_9d692a63_bdc6_417c_b1cd_c16ebd141973"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b68a1b15_240e_471b_9a6b_f23460675540"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Person"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Subject"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Board"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Person"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Subject"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Bronze"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Gold"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Platinum"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Silver"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CCO"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CEO"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CISO"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMCatalog.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.Collection"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.Database"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMRepository"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CMP.ECMServicesLayer"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Catalog.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Classification.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextIndexer.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextSearch.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FullTextServer.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Load.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#ObjectCatalog.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Portal.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#RecordsCatalog.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Rendition.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Share.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transfer.CMP"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Transformation.CMP"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CloudDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSImplementationDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSVendorDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGServiceTemplateDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#InformationManagementDomain"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#PractitionerDomain"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Component"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#FunctionalRequirement"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#IGSDesignPatterns"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Non-FunctionalRequirement"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Requirements"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#System"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Analytics"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Architecture"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Development"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.HR"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.IT"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.InformationManagement"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.Legal"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OU.RIM"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0219e02f_c69c_4726_a272_5ab7dce6206f"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_0d7f54f1_8d5e_4b54_b4e3_2e6cf5ca01ed"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_174097e6_2e40_4e70_bf5f_7099a03f6ad7"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2009b08e_0b49_4a1e_a55b_4cb5873bb42c"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_23e3704f_5979_4a26_9a76_e176af8c3f18"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2a1c8a8d_dd5e_4f42_b489_b7c1cf7c5300"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_368a4545_51dd_4f1f_8989_95155250a3c0"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_4c672e0f_41bc_44a1_9636_dad27eca6b34"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_600fad92_4ce3_4d5e_bdbf_9d70e533c765"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6c336268_a8fa_4151_8490_441022d2e43e"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8668152f_a647_4fa6_9adf_c65c87f03168"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_8c22be0f_38e0_41d4_b6f2_9d9c4a542584"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_98c92f8a_4374_438c_84c8_636996cbba79"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a7b67ff4_26d2_48b1_b4d0_2c5d44f4e234"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ace4a02c_b000_4fa4_abab_3166a87b87e0"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b72ced2b_bbc1_4776_968f_ed3a8291713e"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_e7dce79a_3706_4d1a_9b63_610ac0706b21"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fbd51e5c_dd7b_49c4_925e_a4136ae58a9a"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_19751135_b3fb_477b_8c27_434755d8faa8"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_51323007_08a5_4e16_b186_b8d250f7002b"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_557d70fc_1067_4d4e_a077_3c12d56df38b"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a35a363d_b029_4db3_a941_6988a5ae5d2b"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_21321573_a218_4b9f_b7af_d50cd39a9ac5"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_229adb10_3f01_40af_b10b_74330cebc7be"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_233da438_1b2b_4eb5_bcef_b697ce8b065a"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_405904c5_ab37_439d_9d63_ca320a41420e"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_5cd8606d_cda0_42ce_ae50_40744b6c5dff"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_6ed6a240_071f_4557_8804_e231ce25a25b"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_b90250ad_ef93_459e_8e20_21bb34f17d0d"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_bee31417_cc41_4d63_ba18_d2279600a6d9"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fb52f008_e687_4fc8_b0fd_aee95920c889"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_252ca35e_2dea_40f5_bd2b_e99050de1e60"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_2ed0ab84_353f_4e6e_b7da_73e3bab5ce49"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_aa9a0548_88a8_412e_82f0_631c9709ab82"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_ca2d2d98_a6b6_441f_853c_cbdd6a6e4076"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_d2a192c0_d641_4c73_9bcd_182bfb996a83"/>
+            <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#OWLClass_fd145831_7376_4f7a_8a35_c403fe0637d3"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

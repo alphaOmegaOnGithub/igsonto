@@ -92,7 +92,7 @@ IGS - Domain Concepts/Classes
 		Disposition: Policy, Rule, Schedule, Hold		
 
 ################################################################################ 
- ## Object properties (relations)
+## Object properties (relations)
  has_value, has_cost, has_risk, is governed by an IGProgram, is metadata of, is tagging of -> data 
  is classified by, is taxonomy of, ML, AI
  is collected, stored, searched, retrieved, disposed, archived
@@ -100,3 +100,66 @@ IGS - Domain Concepts/Classes
  has_value, has price, has half-life, has_importance, has risk, 
  has cost, is secured by, is_hard_to, is managed by, 
  is administered by, is_an_expense, is_easy_to_collect, is_easy_to_digitize  
+
+################################################################################
+ Information Governance Services - Ontology
+################################################################################ 
+================================================================================
+IG Services Solution
+	consists of InformationGovernanceServices 
+	consists of InformationGovernanceManagementServices
+    consists of IGS-Portal 
+	provides Collection, Classification, Load, Store, Search, eDiscovery, Archive, Retention, Hold, Disposition, Transfer ... -Services  
+    consists of IGS Function and IGS API 
+	InformationGovernanceServices: 
+		consists of DataCollectionComponent: 
+		collects DataObject from known DataSources based on CollectionPolicy
+		DataSource are members of a DataSourceCatalog
+	Data Assessment Component: 
+		ensures Provenance and Quality and Integrity of Data
+	Data Classification Component:
+		uses classigication_methods to classify Data into records Category
+		defines IG-Lifecycle Workflows:
+		consists of IG-Process 
+	EnterprisContentManagementComponent:
+      has a ContentManagementRepository is a Repository
+     ContentManagementRepository:
+		has a ContentArchive: 
+		has one or more Catalog:
+		has TextSearchServer: FT-IndexServer, FT-SearchServer, FT-Storgae
+		has one or more StorageServer: ScaleoutStorage, Block- ObjectStore
+    EnterpriseRecordsComponent:
+	CaseManagementComponent:	
+    ContentAnalyticsComponent:
+		uses a DataLake: uses StorageServer
+	requires CloudPlatFormServices	
+ 
+================================================================================
+ECM System consists of: 
+================================================================================ 	   
+	Repository: 
+		consists of at one or more Catalog {Domain: Catalog Range: LibraryCatalog, ObjectCatalog, RecordsCatalog, 	DataSourcecatalog} 
+			Catalog is a DataSet organized in a RelationalSchema 
+			RelationalSchema defined in a Database, requires a Database 
+			Database is hosted on a RDBMS {PostgreSQL,DB2,Oracle,SQLServer,CockroachDB}
+		consists at least of one or more ObjectServer
+		ObjectServer are equivalent to ResourceManager
+			consists of exact one ObjectCatalog and one or more StorageServer	
+		StorageServer consists of one or more StorageSystems {BlockStorage, ObjectStore, HierarchicalStore}	
+		implements and enforces ReferentialqIntegrity
+		ReferentialqIntegrity prevents DanglingPointers and OrphanObjects
+		ReferentialqIntegrity is implemented using TwoPhaseCommitProtocol
+		TwoPhaseCommitProtocol is a Service provided by a TransactionManager {Transaction Coordinator, Resource Manager}
+	Functional Requirement {Collect, Load, Store, Categorize, Search, Archive, Hold, Displose, transfer}
+		collect, load, store, query, categorize, archive, hold, displose, transfer
+	Non-Functional Requirement {Backup,Restore, HighAvailability,DisasterRecovery,Performance,Scalability}
+	CentralRepository: consits of a Cluster: is local Repository:	 
+	Repository: is located in Location:
+	Cluster: is set of CloudResources: {PysicalMachine,VM,Node,Container,POD, StorageSystem,Disk}
+	Share 
+    Transform
+    activemq 
+    Content App
+    Control Center
+    proxy
+ 

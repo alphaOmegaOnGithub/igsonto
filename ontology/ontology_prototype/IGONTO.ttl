@@ -9,7 +9,7 @@
 @prefix information: <http://www.semanticweb.org/igonto/information#> .
 @prefix jurisdiction: <http://www.semanticweb.org/igonto/jurisdiction#> .
 @prefix organization: <http://www.semanticweb.org/igonto/organization#> .
-@base <http://www.semanticweb.org/igonto/IGONTO#> .
+@base <http://www.semanticweb.org/igonto/IGONTO> .
 
 <http://www.semanticweb.org/igonto/IGONTO> rdf:type owl:Ontology .
 
@@ -24,6 +24,52 @@
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.semanticweb.org/igonto/IGONTO#definesArchitecture
+igonto:definesArchitecture rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#definesBlueprint
+igonto:definesBlueprint rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#definesDesign
+igonto:definesDesign rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseDoesNOTNeedToFullfillCapability
+igonto:enterpriseDoesNOTNeedToFullfillCapability rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseDoesNotNeed
+igonto:enterpriseDoesNotNeed rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseNeedsArchitecture
+igonto:enterpriseNeedsArchitecture rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseNeedsBlueprint
+igonto:enterpriseNeedsBlueprint rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseNeedsDesign
+igonto:enterpriseNeedsDesign rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#enterpriseNeedsToFullfillCapability
+igonto:enterpriseNeedsToFullfillCapability rdf:type owl:ObjectProperty ;
+                                           rdfs:domain organization:Enterprise ;
+                                           rdfs:range organization:Capability .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#justifiedByArticle
+igonto:justifiedByArticle rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#notLinkedToOrganizationUnit
+igonto:notLinkedToOrganizationUnit rdf:type owl:ObjectProperty .
+
 
 ###  http://www.semanticweb.org/igonto/information#appliesRule
 information:appliesRule rdf:type owl:ObjectProperty ;
@@ -197,7 +243,7 @@ jurisdiction:includesKeyword rdf:type owl:ObjectProperty ;
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#involvesArticle
 jurisdiction:involvesArticle rdf:type owl:ObjectProperty ;
-                             rdfs:domain jurisdiction:Capability ;
+                             rdfs:domain jurisdiction:Capability_Abstract ;
                              rdfs:range jurisdiction:GDPR_Articles .
 
 
@@ -211,7 +257,7 @@ jurisdiction:isRegulatedBy rdf:type owl:ObjectProperty ;
 ###  http://www.semanticweb.org/igonto/jurisdiction#operatesIn
 jurisdiction:operatesIn rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf owl:topObjectProperty ;
-                        rdfs:domain jurisdiction:Enterprise ;
+                        rdfs:domain jurisdiction:Enterprise_Abstract ;
                         rdfs:range jurisdiction:Country .
 
 
@@ -906,6 +952,32 @@ organization:teamScope rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://www.semanticweb.org/igonto/IGONTO#Architecture
+igonto:Architecture rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Blueprint
+igonto:Blueprint rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Design
+igonto:Design rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Large_Enterprise_Query
+igonto:Large_Enterprise_Query rdf:type owl:Class ;
+                              rdfs:subClassOf igonto:Query .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Query
+igonto:Query rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Small_Enterprise_Query
+igonto:Small_Enterprise_Query rdf:type owl:Class ;
+                              rdfs:subClassOf igonto:Query .
+
+
 ###  http://www.semanticweb.org/igonto/information#Asset
 information:Asset rdf:type owl:Class ;
                   rdfs:subClassOf information:Data .
@@ -1228,15 +1300,15 @@ information:Version rdf:type owl:Class ;
                     rdfs:label "Version" .
 
 
-###  http://www.semanticweb.org/igonto/jurisdiction#Capability
-jurisdiction:Capability rdf:type owl:Class ;
-                        owl:equivalentClass organization:Capability ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                          owl:onProperty jurisdiction:involvesArticle ;
-                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass jurisdiction:GDPR_Articles
-                                        ] ;
-                        rdfs:label "Capability" .
+###  http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract
+jurisdiction:Capability_Abstract rdf:type owl:Class ;
+                                 owl:equivalentClass organization:Capability ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty jurisdiction:involvesArticle ;
+                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass jurisdiction:GDPR_Articles
+                                                 ] ;
+                                 rdfs:label "Capability" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Country
@@ -1258,15 +1330,15 @@ jurisdiction:EU rdf:type owl:Class ;
                 rdfs:subClassOf jurisdiction:Country .
 
 
-###  http://www.semanticweb.org/igonto/jurisdiction#Enterprise
-jurisdiction:Enterprise rdf:type owl:Class ;
-                        owl:equivalentClass organization:Enterprise ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                          owl:onProperty jurisdiction:operatesIn ;
-                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass jurisdiction:Country
-                                        ] ;
-                        rdfs:label "Enterprise" .
+###  http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract
+jurisdiction:Enterprise_Abstract rdf:type owl:Class ;
+                                 owl:equivalentClass organization:Enterprise ;
+                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                   owl:onProperty jurisdiction:operatesIn ;
+                                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass jurisdiction:Country
+                                                 ] ;
+                                 rdfs:label "Enterprise" .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR
@@ -1304,7 +1376,7 @@ jurisdiction:GDPR_Keywords rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#IG_Capability
 jurisdiction:IG_Capability rdf:type owl:Class ;
-                           rdfs:subClassOf jurisdiction:Capability ;
+                           rdfs:subClassOf jurisdiction:Capability_Abstract ;
                            rdfs:label "Information Governance Capability" .
 
 
@@ -2577,6 +2649,338 @@ organization:eDiscovery_Integration rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/igonto/IGONTO#Architecture_WITH_Rim
+igonto:Architecture_WITH_Rim rdf:type owl:NamedIndividual ,
+                                      igonto:Architecture ;
+                             organization:linkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Architecutre_WITHOUT_Rim
+igonto:Architecutre_WITHOUT_Rim rdf:type owl:NamedIndividual ,
+                                         igonto:Architecture ;
+                                igonto:notLinkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Blueprint_WITHOUT_Rim
+igonto:Blueprint_WITHOUT_Rim rdf:type owl:NamedIndividual ,
+                                      igonto:Blueprint ;
+                             igonto:notLinkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Blueprint_WITH_Rim
+igonto:Blueprint_WITH_Rim rdf:type owl:NamedIndividual ,
+                                   igonto:Blueprint ;
+                          organization:linkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Design_WITHOUT_Rim
+igonto:Design_WITHOUT_Rim rdf:type owl:NamedIndividual ,
+                                   igonto:Design ;
+                          igonto:notLinkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Design_WITH_Rim
+igonto:Design_WITH_Rim rdf:type owl:NamedIndividual ,
+                                igonto:Design ;
+                       organization:linkedToOrganizationUnit organization:Records_Information_Management_1 .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q1
+igonto:Q1 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+
+SELECT * WHERE{
+  ?small_enterprise jurisdiction:operatesIn ?country.
+  ?country jurisdiction:isRegulatedBy ?regulation.
+  ?country jurisdiction:belongsToJurisdiction ?jurisdiction.
+  VALUES ?small_enterprise {organization:Small_Enterprise_Instance}
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q1_Large
+igonto:Q1_Large rdf:type owl:NamedIndividual ,
+                         igonto:Large_Enterprise_Query ;
+                rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+SELECT * WHERE{
+  ?large_enterprise jurisdiction:operatesIn ?country.
+  ?country jurisdiction:isRegulatedBy ?regulation.
+  ?country jurisdiction:belongsToJurisdiction ?jurisdiction.
+  VALUES ?large_enterprise {organization:Large_Enterprise_Instance}
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q2
+igonto:Q2 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+
+SELECT * WHERE{
+  ?small_enterprise igonto:enterpriseNeedsDesign ?design.
+  ?small_enterprise igonto:enterpriseNeedsArchitecture ?architecture.
+  ?small_enterprise igonto:enterpriseNeedsBlueprint ?blueprint.
+  ?capability organization:inMaturityLevel ?maturity.
+  ?capability organization:linkedToProcess ?process.
+  ?process organization:linkedToOrganizationUnit ?organizationUnit. 
+  ?process organization:riskDescription ?risk.
+  VALUES ?small_enterprise {organization:Small_Enterprise_Instance}
+  VALUES ?maturity {organization:3_Essential}
+}ORDER BY ?capability ?maturity ?process ?organizationUnit ?risk ?design ?architecture ?blueprint ?small_enterprise""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q2_Large
+igonto:Q2_Large rdf:type owl:NamedIndividual ,
+                         igonto:Large_Enterprise_Query ;
+                rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+SELECT * WHERE{
+  ?large_enterprise igonto:enterpriseNeedsDesign ?design.
+  ?large_enterprise igonto:enterpriseNeedsArchitecture ?architecture.
+  ?large_enterprise igonto:enterpriseNeedsBlueprint ?blueprint.
+  ?capability organization:inMaturityLevel ?maturity.
+  ?capability organization:linkedToProcess ?process.
+  ?process organization:linkedToOrganizationUnit ?organizationUnit. 
+  ?process organization:riskDescription ?risk.
+  VALUES ?large_enterprise {organization:Large_Enterprise_Instance}
+  VALUES ?maturity {organization:3_Essential}
+}ORDER BY ?capability ?maturity ?process ?organizationUnit ?risk ?design ?architecture ?blueprint ?large_enterprise""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q3
+igonto:Q3 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOES THE SMALL ENTERPRISE NEED TO DO?
+SELECT * WHERE {
+  ?shape sh:group ?group;
+         sh:group ?anotherGroup.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?group { igonto:PositiveObjectPropertyGroup }.
+  VALUES ?anotherGroup { igonto:InferenceObjectPropertyGroup }.
+  VALUES ?enterprise { organization:Small_Enterprise_Instance }.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q3_Large
+igonto:Q3_Large rdf:type owl:NamedIndividual ,
+                         igonto:Large_Enterprise_Query ;
+                rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOES THE Large ENTERPRISE NEED TO DO?
+SELECT * WHERE {
+  ?shape sh:group ?group;
+         sh:group ?anotherGroup.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?group { igonto:PositiveObjectPropertyGroup }.
+  VALUES ?anotherGroup { igonto:InferenceObjectPropertyGroup }.
+  VALUES ?enterprise { organization:Large_Enterprise_Instance }.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q4
+igonto:Q4 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOES THE SMALL ENTERPRISE NOT NEED TO DO?
+SELECT * WHERE {
+  ?shape sh:group ?group;
+         sh:group ?anotherGroup.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?group { igonto:NegativeObjectPropertyGroup }.
+  VALUES ?anotherGroup { igonto:InferenceObjectPropertyGroup }.
+  VALUES ?enterprise { organization:Small_Enterprise_Instance }.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q4_Large
+igonto:Q4_Large rdf:type owl:NamedIndividual ,
+                         igonto:Large_Enterprise_Query ;
+                rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOES THE SMALL ENTERPRISE NOT NEED TO DO?
+SELECT * WHERE {
+  ?shape sh:group ?group;
+         sh:group ?anotherGroup.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?group { igonto:NegativeObjectPropertyGroup }.
+  VALUES ?anotherGroup { igonto:InferenceObjectPropertyGroup }.
+  VALUES ?enterprise { organization:Large_Enterprise_Instance }.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q5
+igonto:Q5 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOS THE SMALL ENTERPRISE NEED TO DO AND WHAT NOT?
+SELECT * WHERE{
+  ?shape sh:group ?group. 
+  VALUES ?group {igonto:InferenceObjectPropertyGroup}.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?enterprise {organization:Small_Enterprise_Instance}.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q5_Large
+igonto:Q5_Large rdf:type owl:NamedIndividual ,
+                         igonto:Large_Enterprise_Query ;
+                rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+#WHAT DOS THE SMALL ENTERPRISE NEED TO DO AND WHAT NOT?
+SELECT * WHERE{
+  ?shape sh:group ?group. 
+  VALUES ?group {igonto:InferenceObjectPropertyGroup}.
+  ?shape sh:path ?objectProperty.
+  ?enterprise ?objectProperty ?object.
+  VALUES ?enterprise {organization:Large_Enterprise_Instance}.
+}""" .
+
+
+###  http://www.semanticweb.org/igonto/IGONTO#Q6
+igonto:Q6 rdf:type owl:NamedIndividual ,
+                   igonto:Small_Enterprise_Query ;
+          rdfs:comment """@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix igonto:   <http://www.semanticweb.org/igonto/IGONTO#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+@prefix enterprise:   <http://www.semanticweb.org/igonto/enterprise#> .
+
+# WHAT DOES SMALL ENTERPRISE NOT NEED TO DO THAT LARGE ENTERPRISE NEEDS TO DO?
+SELECT * WHERE {
+  ?shape sh:group ?small_group;
+         sh:group ?small_anotherGroup.
+  ?shape sh:path ?objectProperty.
+  ?small_enterprise ?objectProperty ?object.
+  ?large_shape sh:group ?large_group;
+         sh:group ?large_anotherGroup.
+  ?large_shape sh:path ?large_objectProperty.
+  ?large_enterprise ?large_objectProperty ?object.
+  VALUES ?small_group { igonto:NegativeObjectPropertyGroup }.
+  VALUES ?small_anotherGroup { igonto:InferenceObjectPropertyGroup }.
+  VALUES ?small_enterprise { organization:Small_Enterprise_Instance }.
+  VALUES ?large_enterprise { organization:Large_Enterprise_Instance }.
+  VALUES ?large_group { igonto:PositiveObjectPropertyGroup }.
+  VALUES ?large_anotherGroup { igonto:InferenceObjectPropertyGroup }.
+}""" .
+
 
 ###  http://www.semanticweb.org/igonto/information#Archival_Information
 information:Archival_Information rdf:type owl:NamedIndividual ,
@@ -11914,4 +12318,505 @@ organization:Strategy rdfs:label "Strategy" .
 ] .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+#################################################################
+#    Rules
+#################################################################
+
+igonto:rim rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:architecture rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:allCapabilities rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:large rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:blueprint rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:capability rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:process rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:design rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:enterprise rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:it rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:legal rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igonto:pas rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S2"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:Records_And_Information_Management ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:rim
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:architecture ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> organization:IG_Capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:allCapabilities
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> organization:Large_Enterprise ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:large
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Architecture ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> igonto:architecture
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Blueprint ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> igonto:blueprint
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> igonto:large ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> igonto:process ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> igonto:design ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument1> igonto:blueprint ;
+                                                                                                                                                                     <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                                                   ] ;
+                                                                                                                                                         rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                                                    rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Design ;
+                                                                                                                                                                                <http://www.w3.org/2003/11/swrl#argument1> igonto:design
+                                                                                                                                                                              ] ;
+                                                                                                                                                                    rdf:rest rdf:nil
+                                                                                                                                                                  ]
+                                                                                                                                                       ]
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsArchitecture ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:large ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:architecture
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsDesign ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:large ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igonto:design
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsBlueprint ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:large ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> igonto:blueprint
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesDesign ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:allCapabilities ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:design
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesArchitecture ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> igonto:allCapabilities ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> igonto:architecture
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesBlueprint ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> igonto:allCapabilities ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> igonto:blueprint
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S6"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:Small_Enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> organization:Records_And_Information_Management ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:rim
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Design ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:design
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> organization:IG_Capability ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:capability
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Architecture ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> igonto:architecture
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> igonto:Blueprint ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> igonto:blueprint
+                                                                                                                       ] ;
+                                                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:notLinkedToOrganizationUnit ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> igonto:architecture ;
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                  ] ;
+                                                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:notLinkedToOrganizationUnit ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument1> igonto:design ;
+                                                                                                                                               <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                             ] ;
+                                                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:notLinkedToOrganizationUnit ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument1> igonto:blueprint ;
+                                                                                                                                                          <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                                                                        ] ;
+                                                                                                                                              rdf:rest rdf:nil
+                                                                                                                                            ]
+                                                                                                                                 ]
+                                                                                                                      ]
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseDoesNotNeed ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsDesign ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igonto:design
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsArchitecture ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> igonto:architecture
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsBlueprint ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:blueprint
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesBlueprint ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> igonto:blueprint
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesArchitecture ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> igonto:architecture
+                                                                                                            ] ;
+                                                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:definesDesign ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument2> igonto:design
+                                                                                                                       ] ;
+                                                                                                             rdf:rest rdf:nil
+                                                                                                           ]
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S1"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:IG_Capability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:capability
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> organization:Large_Enterprise ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:large
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:large ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S7"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:Small_Enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> organization:Records_And_Information_Management ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:rim
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> organization:Process ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:process
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> organization:IG_Capability ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:capability
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> igonto:process ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> igonto:rim
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseDoesNOTNeedToFullfillCapability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:justifiedByArticle ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:rim ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> jurisdiction:Article_30
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:justifiedByArticle ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> jurisdiction:Article_30
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S4"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:IT ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:it
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:process ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igonto:it
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> organization:Small_Enterprise ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S3"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:Small_Enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> organization:Legal ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:legal
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:process ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> igonto:legal
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "S5"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> organization:Privacy_And_Security ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:pas
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> organization:Small_Enterprise ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToOrganizationUnit ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:process ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> igonto:pas
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> organization:linkedToProcess ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:process
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:enterpriseNeedsToFullfillCapability ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
