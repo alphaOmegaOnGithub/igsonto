@@ -63,6 +63,10 @@ igonto:enterpriseNeedsToFullfillCapability rdf:type owl:ObjectProperty ;
                                            rdfs:range organization:Capability .
 
 
+###  http://www.semanticweb.org/igonto/IGONTO#justifiedByArticle
+igonto:justifiedByArticle rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/IGONTO#notLinkedToOrganizationUnit
 igonto:notLinkedToOrganizationUnit rdf:type owl:ObjectProperty .
 
@@ -12674,7 +12678,21 @@ igonto:pas rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
                                                        <http://www.w3.org/2003/11/swrl#argument1> igonto:enterprise ;
                                                        <http://www.w3.org/2003/11/swrl#argument2> igonto:capability
                                                      ] ;
-                                           rdf:rest rdf:nil
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:justifiedByArticle ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igonto:rim ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> jurisdiction:Article_30
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igonto:justifiedByArticle ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> igonto:capability ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> jurisdiction:Article_30
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
                                          ]
  ] .
 
