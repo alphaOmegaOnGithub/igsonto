@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix lifecycle: <http://www.semanticweb.org/igonto/lifecycle> .
-@base <http://www.semanticweb.org/igonto/lifecycle#> .
+@base <http://www.semanticweb.org/igonto/lifecycle> .
 
 <http://www.semanticweb.org/igonto/lifecycle> rdf:type owl:Ontology .
 
@@ -13,21 +13,72 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/igonto/lifecycle#createsStatistics
-:createsStatistics rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Process ;
-                   rdfs:range :Statistics .
+###  http://www.semanticweb.org/igonto/lifecycle#createdBy
+:createdBy rdf:type owl:ObjectProperty .
 
 
-###  http://www.semanticweb.org/igonto/lifecycle#isDrivenBy
-:isDrivenBy rdf:type owl:ObjectProperty ;
-            rdfs:domain :Record_Lifecycle ;
-            rdfs:range :Data .
+###  http://www.semanticweb.org/igonto/lifecycle#createdByProcess
+:createdByProcess rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :createdBy ;
+                  owl:inverseOf :createsStatistic ;
+                  rdfs:domain :Statistic ;
+                  rdfs:range :Process .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#creates
+:creates rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#createsStatistic
+:createsStatistic rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :creates ;
+                  rdfs:domain :Process ;
+                  rdfs:range :Statistic .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#drivenBy
+:drivenBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#drivenByData
+:drivenByData rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :drivenBy ;
+              owl:inverseOf :drivesRecordLifecycle ;
+              rdfs:domain :Record_Lifecycle ;
+              rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#drives
+:drives rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#drivesRecordLifecycle
+:drivesRecordLifecycle rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :drives ;
+                       rdfs:domain :Data ;
+                       rdfs:range :Record_Lifecycle .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#producedBy
+:producedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#producedByStatistic
+:producedByStatistic rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :producedBy ;
+                     owl:inverseOf :producesReporting ;
+                     rdfs:domain :Reporting ;
+                     rdfs:range :Statistic .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#produces
+:produces rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#producesReporting
 :producesReporting rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Statistics ;
+                   rdfs:subPropertyOf :produces ;
+                   rdfs:domain :Statistic ;
                    rdfs:range :Reporting .
 
 
@@ -92,9 +143,9 @@
 :Process rdf:type owl:Class ;
          rdfs:subClassOf :Record_Lifecycle ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :createsStatistics ;
+                           owl:onProperty :createsStatistic ;
                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                           owl:onClass :Statistics
+                           owl:onClass :Statistic
                          ] ;
          rdfs:label "Process" .
 
@@ -102,7 +153,7 @@
 ###  http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle
 :Record_Lifecycle rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isDrivenBy ;
+                                    owl:onProperty :drivenByData ;
                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass :Data
                                   ] ;
@@ -162,14 +213,14 @@
          rdfs:label "Session" .
 
 
-###  http://www.semanticweb.org/igonto/lifecycle#Statistics
-:Statistics rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :producesReporting ;
-                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onClass :Reporting
-                            ] ;
-            rdfs:label "Statistics" .
+###  http://www.semanticweb.org/igonto/lifecycle#Statistic
+:Statistic rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :producesReporting ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Reporting
+                           ] ;
+           rdfs:label "Statistics" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Submission
@@ -178,4 +229,4 @@
             rdfs:label "Submission" .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
