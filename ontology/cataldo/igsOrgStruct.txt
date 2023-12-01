@@ -1,55 +1,30 @@
 IGS - Domain Concepts/Classes
-	Role:
-		Individuals: CEO,CFO,CISO,CCO,CPO (Chief Compliance/Privacy officer) 
-	Agent: Organization,Person,LegalEntity,SoftwareComponent, Process,  
-	Shareholders: 
-	Stragegy: specifies Goals, specifies Objectives   
-	DesirableBehavior
-	Board: 
-			disclose Goals 
-			specifies Objectives 
-			monitors Progress
-			monitors Maturity Level 
-		Senior Executive Team: 
-			develops max 1  Strategy  
-			defines_desirable some Behavior
+	Role
+	Agent
+	Board
+		Shareholders: diclose, monitors,
+		Senior Executive Team: develops_straegy, defines_desirable_behavior
 	Organization
-		Enterprise: has_member BusinessUnit   
-			a Corporation: has Business, 
-			a Company: has_matury_level Domain: MaturityLevel{Micro,Small,Medium,Large }
+		Enterprise
+		Corporation
 			Department
 				Management
-				Legal: handles Cases, mandates Hold, submitts DataRequest
-				RecordsManagement: defines Classification, defines Schedules
-				Privacy:  defines Policy: consists_of Rules, mandates StorageLocation, 
-					      depends_on Regulation 
-				Security: defines SecurityAttribute, defines AccessControl 
-				Compliance: defines 
-				Architecture: 
-					designs Solution: 
-						IGSSolution is_composed_of IGSComponent 
-						ECMSolution is_composed_of ECMComponent  
-						IMSSolution is_composed of IMSComponent
-						provides IGSService
-					designs Component: (@cm)
-					IGSComponent is_composed_of {RecordsManagement,eDiscovery,Classification}
-					ECMComponent is_composed_of {Respository,Catalog,ObjectStore}
-					IMSComponent is_composed_of {RelationalSchema,FulltextDocumentModel} 
-				    designs Service:   IGSService					
-				Development:
-					develops Solution:  IGSSolution
-					develops Component: IGSComponent					
-					develops Service:   IGSService
-				IT: provides Service 
-					BusinessSupportService: a  Service
-					OperationsSupportService: a  Service
-					PlatformService: a  Service					
-				BusinessUnit
-				InformationManagement: 		 	implements InformationManagementService 
-				EnterpriseContentManagement: 	implements EnterpriseContentManagementService
-				InformationGovernanceServices: 	implements InformationGovernanceService
-					RecordsManagementServices: 	implements RecordsManagementService
-					eDiscoveryServices:			implements eDiscoveryService
+				Legal
+				RecordsManagement
+				PrivacyAndCompliance
+				Architecture
+				Development
+				IT
+					BusinessSupportServices
+					OperationsSupportServices	
+			BusinessUnit
+				InformationManagement
+				EnterpriseContentManagement
+				InformationGovernanceServices
+					RecordsManagementServices
+					eDiscoveryServices
+	Stragegy 
+	DesirableBehavior
 	Data
 		Metadata: Index: RelationalIndex, FullTextIndex   
 		Records: Classification,   
@@ -58,26 +33,22 @@ IGS - Domain Concepts/Classes
 		Asset: 
 			Information Assets: 
 			has Individuals:{Human, Financial, Physical, Intellect, Relation, IT}
-			requires GovernanceMechanism 
+			requires governance mechanism 
 				has Individuals:{planning, policies, program, budgets, measure,..]	
 	Information Governance Process Maturity Model
-		Data has_value, has_cost, has_risk;  
+		Data has_value, _cost, _risk; 
 			Individulas: OfficeDocs, ProductResearch, Sales/Customer, HR, Financials, Messaging(eMails, Socials,), ITCosts, Risk
+	Cost_To_Value_Gap: 
+	Risk_To_Value_Gap: 
 	TimePeriod: {Month, Year,Decade, Century}
 	Analytics_Inflection_Point: Realize/Determine Value as Content erodes, 
-		minimize Cost_To_Value_Gap:  
-		minimize Risk_To_Value_Gap: 
-	Archiving & Tiering inflection point: 
-		Align Cost as Value declines 
-	Disposal inflection point: 
-		eliminate Cost when no Value
-	DataCollection
-	DataQuality
-	DataAccess
-	DataLifecycle: {Collection, Classification, Store, Archive, Retention, Disposition, Hold, Transfer} 
-	Process: {Collect, Classify, Retain, Store, Archive, Dispose, Hold, Transfer}
-	Service: {Collection, Classification, Store, Search, Archive, Retention, Disposition, Hold, Transfer}	
-
+	Archiving & Tiering inflection point: Align Cost as Value declines, 
+	Disposal inflection point: eliminate Cost when no Value
+	Data Collection
+	Data Quality
+	Data Access
+	Data Lifecycle: {Classification, Retention, Disposition, Hold, Transfer} 
+		Process: {Classify, Retain, Dispose, Hold, Transfer}
 	Principles Principles
 		Accountability
 		Transparency
@@ -89,10 +60,10 @@ IGS - Domain Concepts/Classes
 			Individuals{ISO19600 - Compliance management systems } 
 		Availability: Access, Query,  Search, Store, Acrhive, Transfer
 		Retention : Policy, Rule, Schedule
-		Disposition: Policy, Rule, Schedule, Hold		
-
+		Disposition: Policy, Rule, Schedule, Hold
+		
 ################################################################################ 
-## Object properties (relations)
+ ## Object properties (relations)
  has_value, has_cost, has_risk, is governed by an IGProgram, is metadata of, is tagging of -> data 
  is classified by, is taxonomy of, ML, AI
  is collected, stored, searched, retrieved, disposed, archived
@@ -100,66 +71,3 @@ IGS - Domain Concepts/Classes
  has_value, has price, has half-life, has_importance, has risk, 
  has cost, is secured by, is_hard_to, is managed by, 
  is administered by, is_an_expense, is_easy_to_collect, is_easy_to_digitize  
-
-################################################################################
- Information Governance Services - Ontology
-################################################################################ 
-================================================================================
-IG Services Solution
-	consists of InformationGovernanceServices 
-	consists of InformationGovernanceManagementServices
-    consists of IGS-Portal 
-	provides Collection, Classification, Load, Store, Search, eDiscovery, Archive, Retention, Hold, Disposition, Transfer ... -Services  
-    consists of IGS Function and IGS API 
-	InformationGovernanceServices: 
-		consists of DataCollectionComponent: 
-		collects DataObject from known DataSources based on CollectionPolicy
-		DataSource are members of a DataSourceCatalog
-	Data Assessment Component: 
-		ensures Provenance and Quality and Integrity of Data
-	Data Classification Component:
-		uses classigication_methods to classify Data into records Category
-		defines IG-Lifecycle Workflows:
-		consists of IG-Process 
-	EnterprisContentManagementComponent:
-      has a ContentManagementRepository is a Repository
-     ContentManagementRepository:
-		has a ContentArchive: 
-		has one or more Catalog:
-		has TextSearchServer: FT-IndexServer, FT-SearchServer, FT-Storgae
-		has one or more StorageServer: ScaleoutStorage, Block- ObjectStore
-    EnterpriseRecordsComponent:
-	CaseManagementComponent:	
-    ContentAnalyticsComponent:
-		uses a DataLake: uses StorageServer
-	requires CloudPlatFormServices	
- 
-================================================================================
-ECM System consists of: 
-================================================================================ 	   
-	Repository: 
-		consists of at one or more Catalog {Domain: Catalog Range: LibraryCatalog, ObjectCatalog, RecordsCatalog, 	DataSourcecatalog} 
-			Catalog is a DataSet organized in a RelationalSchema 
-			RelationalSchema defined in a Database, requires a Database 
-			Database is hosted on a RDBMS {PostgreSQL,DB2,Oracle,SQLServer,CockroachDB}
-		consists at least of one or more ObjectServer
-		ObjectServer are equivalent to ResourceManager
-			consists of exact one ObjectCatalog and one or more StorageServer	
-		StorageServer consists of one or more StorageSystems {BlockStorage, ObjectStore, HierarchicalStore}	
-		implements and enforces ReferentialqIntegrity
-		ReferentialqIntegrity prevents DanglingPointers and OrphanObjects
-		ReferentialqIntegrity is implemented using TwoPhaseCommitProtocol
-		TwoPhaseCommitProtocol is a Service provided by a TransactionManager {Transaction Coordinator, Resource Manager}
-	Functional Requirement {Collect, Load, Store, Categorize, Search, Archive, Hold, Displose, transfer}
-		collect, load, store, query, categorize, archive, hold, displose, transfer
-	Non-Functional Requirement {Backup,Restore, HighAvailability,DisasterRecovery,Performance,Scalability}
-	CentralRepository: consits of a Cluster: is local Repository:	 
-	Repository: is located in Location:
-	Cluster: is set of CloudResources: {PysicalMachine,VM,Node,Container,POD, StorageSystem,Disk}
-	Share 
-    Transform
-    activemq 
-    Content App
-    Control Center
-    proxy
- 

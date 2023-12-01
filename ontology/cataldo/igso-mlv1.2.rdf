@@ -1756,6 +1756,14 @@
     
 
 
+    <!-- http://www.example.org/cm/igso/2023/igso-ml#is_a -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#is_a">
+        <rdfs:subPropertyOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_99a8d331_3384_49ce_80de_ba05b7c3bd3a"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.example.org/cm/igso/2023/igso-ml#measure -->
 
     <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#measure"/>
@@ -1796,6 +1804,14 @@
 
     <owl:ObjectProperty rdf:about="http://www.example.org/cm/igso/2023/igso-ml#validate">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
+        <rdfs:comment>This axiom needed so that Protege loads DCAT2 without errors.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -2166,7 +2182,17 @@ Cyber Security: Leakage &amp; Breach Prevention Plan/Measure,
     <!-- http://www.example.org/cm/igso/2023/igso-ml#CCO -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CCO">
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefComplianceOfficer"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CCO"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#is_a"/>
+                        <owl:allValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefComplianceOfficer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
         <rdfs:comment>A chief compliance officer (CCO) is responsible for developing and implementing a company’s compliance program and meeting regulatory requirements.
 
@@ -2195,7 +2221,17 @@ Explains how that detrimental change to the corporate governance ultimately help
     <!-- http://www.example.org/cm/igso/2023/igso-ml#CEO -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CEO">
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefExecutiveOfficer"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CEO"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#is_a"/>
+                        <owl:allValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefExecutiveOfficer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
         <rdfs:label>CEO</rdfs:label>
     </owl:Class>
@@ -2247,7 +2283,17 @@ Explains how that detrimental change to the corporate governance ultimately help
     <!-- http://www.example.org/cm/igso/2023/igso-ml#CISO -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CISO">
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefInformationSecurityOfficer"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#CISO"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#is_a"/>
+                        <owl:allValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#ChiefInformationSecurityOfficer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Role"/>
         <rdfs:label>CISO</rdfs:label>
     </owl:Class>
@@ -2378,8 +2424,14 @@ Explains how that detrimental change to the corporate governance ultimately help
     <!-- http://www.example.org/cm/igso/2023/igso-ml#Company -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Company">
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Enterprise"/>
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Enterprise"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
         <rdfs:label>Company</rdfs:label>
     </owl:Class>
@@ -2911,7 +2963,14 @@ Explains how that detrimental change to the corporate governance ultimately help
     <!-- http://www.example.org/cm/igso/2023/igso-ml#Enterprise -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Enterprise">
-        <owl:equivalentClass rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Company"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Firm"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
         <rdfs:label>Enterprise</rdfs:label>
     </owl:Class>
@@ -2986,6 +3045,14 @@ Explains how that detrimental change to the corporate governance ultimately help
     <!-- http://www.example.org/cm/igso/2023/igso-ml#Firm -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Firm">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Company"/>
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Enterprise"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
         <rdfs:label>Firm</rdfs:label>
     </owl:Class>
@@ -5939,6 +6006,17 @@ Logical implication between inclusion dependencies can be axiomatized by inferen
     <!-- http://www.example.org/cm/igso/2023/igso-ml#Organization -->
 
     <owl:Class rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Organization">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OWLObjectProperty_b83d7c6e_16fb_4983_ae25_cc8502e4147d"/>
+                        <owl:allValuesFrom rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Organization"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#OrganizationDomain"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6401,6 +6479,37 @@ Logical implication between inclusion dependencies can be axiomatized by inferen
         <rdfs:subClassOf rdf:resource="http://www.example.org/cm/igso/2023/igso-ml#Solution"/>
         <rdfs:label xml:lang="en">eDiscoverySolution</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#CatalogRecord -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/dcat#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A record in a data catalog, describing the registration of a single dataset or data service.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/"/>
+        <rdfs:label xml:lang="en">Catalog Record</rdfs:label>
+        <skos:definition xml:lang="en">A record in a data catalog, describing the registration of a single dataset or data service.</skos:definition>
+        <skos:editorialNote xml:lang="en">English definition updated in this revision. Multilingual text not yet updated except the Spanish one and the Czech one and Italian one.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This class is optional and not all catalogs will use it. It exists for catalogs where a distinction is made between metadata about a dataset or data service and metadata about the entry for the dataset or data service in the catalog. For example, the publication date property of the dataset reflects the date when the information was originally made available by the publishing agency, while the publication date of the catalog record is the date when the dataset was added to the catalog. In cases where both dates differ, or where only the latter is known, the publication date should only be specified for the catalog record. Notice that the W3C PROV Ontology allows describing further provenance information such as the details of the process and the agent involved in a particular change to a dataset.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Resource"/>
     
 
 
