@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix information: <http://www.semanticweb.org/igonto/information> .
-@base <http://www.semanticweb.org/igonto/information#> .
+@base <http://www.semanticweb.org/igonto/information> .
 
 <http://www.semanticweb.org/igonto/information> rdf:type owl:Ontology .
 
@@ -13,20 +13,94 @@
 #    Object Properties
 #################################################################
 
+###  http://www.semanticweb.org/igonto/information#appliedBy
+:appliedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#appliedByPolicy
+:appliedByPolicy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :appliedBy ;
+                 owl:inverseOf :appliesRule ;
+                 rdfs:domain :Rule ;
+                 rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#applies
+:applies rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#appliesRule
 :appliesRule rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :applies ;
              rdfs:domain :Policy ;
              rdfs:range :Rule .
 
 
+###  http://www.semanticweb.org/igonto/information#classifiedBy
+:classifiedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#classifiedByRecord
+:classifiedByRecord rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :classifiedBy ;
+                    owl:inverseOf :classifiesData ;
+                    rdfs:domain :Data ;
+                    rdfs:range :Record .
+
+
+###  http://www.semanticweb.org/igonto/information#classifies
+:classifies rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#classifiesData
 :classifiesData rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :classifies ;
                 rdfs:domain :Record ;
                 rdfs:range :Data .
 
 
+###  http://www.semanticweb.org/igonto/information#containedIn
+:containedIn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#containedInContainer
+:containedInContainer rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :containedIn ;
+                      owl:inverseOf :containerContainsFile ;
+                      rdfs:domain :File ;
+                      rdfs:range :Container .
+
+
+###  http://www.semanticweb.org/igonto/information#containedInData
+:containedInData rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :containedIn ;
+                 owl:inverseOf :containsValue ;
+                 rdfs:domain :Value ;
+                 rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#containedInFolder
+:containedInFolder rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :containedIn ;
+                   owl:inverseOf :folderContainsFile ;
+                   rdfs:domain :File ;
+                   rdfs:range :Folder .
+
+
+###  http://www.semanticweb.org/igonto/information#containerContainsFile
+:containerContainsFile rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :containsFile ;
+                       rdfs:domain :Container ;
+                       rdfs:range :File .
+
+
+###  http://www.semanticweb.org/igonto/information#contains
+:contains rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#containsFile
 :containsFile rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
               rdfs:domain :Container ,
                           :Folder ;
               rdfs:range :File .
@@ -34,104 +108,399 @@
 
 ###  http://www.semanticweb.org/igonto/information#containsValue
 :containsValue rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :contains ;
                rdfs:domain :Data ;
                rdfs:range :Value .
 
 
+###  http://www.semanticweb.org/igonto/information#costIsPartOfData
+:costIsPartOfData rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :partOfData ;
+                  owl:inverseOf :hasCostComponent ;
+                  rdfs:domain :Cost ;
+                  rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#definedBy
+:definedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#definedByRule
+:definedByRule rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :definedBy ;
+               owl:inverseOf :definesSchedule ;
+               rdfs:domain :Schedule ;
+               rdfs:range :Rule .
+
+
+###  http://www.semanticweb.org/igonto/information#defines
+:defines rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#definesSchedule
 :definesSchedule rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :defines ;
                  rdfs:domain :Rule ;
                  rdfs:range :Schedule .
 
 
+###  http://www.semanticweb.org/igonto/information#editionIsPartOfDocument
+:editionIsPartOfDocument rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :partOfDocument ;
+                         owl:inverseOf :hasEdition ;
+                         rdfs:domain :Edition ;
+                         rdfs:range :Document .
+
+
+###  http://www.semanticweb.org/igonto/information#employedBy
+:employedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#employedByPolicy
+:employedByPolicy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :employedBy ;
+                  owl:inverseOf :employsRule ;
+                  rdfs:domain :Rule ;
+                  rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#employs
+:employs rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#employsRule
 :employsRule rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :employs ;
              rdfs:domain :Policy ;
              rdfs:range :Rule .
 
 
+###  http://www.semanticweb.org/igonto/information#exposedBy
+:exposedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#exposedByData
+:exposedByData rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :exposedBy ;
+               owl:inverseOf :exposesRisk ;
+               rdfs:domain :Risk ;
+               rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#exposes
+:exposes rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#exposesRisk
 :exposesRisk rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :exposes ;
              rdfs:domain :Data ;
              rdfs:range :Risk .
 
 
+###  http://www.semanticweb.org/igonto/information#folderContainsFile
+:folderContainsFile rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :containsFile ;
+                    rdfs:domain :Folder ;
+                    rdfs:range :File .
+
+
+###  http://www.semanticweb.org/igonto/information#goalIsPartOfPolicy
+:goalIsPartOfPolicy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :partofPolicy ;
+                    owl:inverseOf :hasGoalComponent ;
+                    rdfs:domain :Goal ;
+                    rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#grantedBy
+:grantedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#grants
+:grants rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#grantsPriviligeToRole
 :grantsPriviligeToRole rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :grants ;
                        rdfs:domain :Policy ;
                        rdfs:range :Role .
 
 
+###  http://www.semanticweb.org/igonto/information#has
+:has rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
-              rdfs:domain :Data ,
-                          :Policy ;
-              rdfs:range :Cost ,
-                         :Goal ,
-                         :Metric ,
-                         :Risk ,
-                         :Rule ,
-                         :Value .
+              rdfs:subPropertyOf :has .
+
+
+###  http://www.semanticweb.org/igonto/information#hasCostComponent
+:hasCostComponent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasComponent ;
+                  rdfs:domain :Data ;
+                  rdfs:range :Cost .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasEdition
 :hasEdition rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :has ;
             rdfs:domain :Document ;
             rdfs:range :Edition .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasGoal
 :hasGoal rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :has ;
+         owl:inverseOf :partOfPolicy ;
          rdfs:domain :Policy ;
          rdfs:range :Goal .
 
 
+###  http://www.semanticweb.org/igonto/information#hasGoalComponent
+:hasGoalComponent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasComponent ;
+                  rdfs:domain :Policy ;
+                  rdfs:range :Goal .
+
+
+###  http://www.semanticweb.org/igonto/information#hasMetricComponent
+:hasMetricComponent rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasComponent ;
+                    owl:inverseOf :metricIsPartOfPolicy ;
+                    rdfs:domain :Policy ;
+                    rdfs:range :Metric .
+
+
 ###  http://www.semanticweb.org/igonto/information#hasPrivilige
 :hasPrivilige rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :has ;
+              owl:inverseOf :partOfRole ;
               rdfs:domain :Role ;
               rdfs:range :Privilige .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasRecordControlStructure
 :hasRecordControlStructure rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :has ;
+                           owl:inverseOf :partOfRecord ;
                            rdfs:domain :Record ;
                            rdfs:range :Record_Control_Structure .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasRendition
 :hasRendition rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :has ;
+              owl:inverseOf :renditionIsPartOfDocument ;
               rdfs:domain :Document ;
               rdfs:range :Rendition .
 
 
+###  http://www.semanticweb.org/igonto/information#hasRiskComponent
+:hasRiskComponent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasComponent ;
+                  owl:inverseOf :riskIsPartOfData ;
+                  rdfs:domain :Data ;
+                  rdfs:range :Risk .
+
+
+###  http://www.semanticweb.org/igonto/information#hasRuleComponent
+:hasRuleComponent rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :hasComponent ;
+                  owl:inverseOf :ruleIsPartOfPolicy ;
+                  rdfs:domain :Policy ;
+                  rdfs:range :Rule .
+
+
+###  http://www.semanticweb.org/igonto/information#hasValueComponent
+:hasValueComponent rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :hasComponent ;
+                   owl:inverseOf :valueIsPartOfData ;
+                   rdfs:domain :Data ;
+                   rdfs:range :Value .
+
+
 ###  http://www.semanticweb.org/igonto/information#hasVersion
 :hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :has ;
+            owl:inverseOf :partOfItem ;
             rdfs:domain :Item ;
             rdfs:range :Version .
 
 
+###  http://www.semanticweb.org/igonto/information#metricIsPartOfPolicy
+:metricIsPartOfPolicy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :partofPolicy ;
+                      rdfs:domain :Metric ;
+                      rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#monitoredBy
+:monitoredBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#monitoredByPolicy
+:monitoredByPolicy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :monitoredBy ;
+                   owl:inverseOf :monitorsMetric ;
+                   rdfs:domain :Metric ;
+                   rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#monitors
+:monitors rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#monitorsMetric
 :monitorsMetric rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :monitors ;
                 rdfs:domain :Policy ;
                 rdfs:range :Metric .
 
 
+###  http://www.semanticweb.org/igonto/information#partOf
+:partOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfData
+:partOfData rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :partOf .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfDocument
+:partOfDocument rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :partOf .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfItem
+:partOfItem rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :partOf ;
+            rdfs:domain :Version ;
+            rdfs:range :Item .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfPolicy
+:partOfPolicy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :partOf ;
+              rdfs:domain :Goal ;
+              rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfRecord
+:partOfRecord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :partOf ;
+              rdfs:domain :Record_Control_Structure ;
+              rdfs:range :Record .
+
+
+###  http://www.semanticweb.org/igonto/information#partOfRole
+:partOfRole rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :partOf ;
+            rdfs:domain :Privilige ;
+            rdfs:range :Role .
+
+
+###  http://www.semanticweb.org/igonto/information#partofPolicy
+:partofPolicy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :partOf .
+
+
+###  http://www.semanticweb.org/igonto/information#priviligeGrantedByPolicy
+:priviligeGrantedByPolicy rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :grantedBy ;
+                          rdfs:domain :Role ;
+                          rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#producedBy
+:producedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#producedByData
+:producedByData rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :producedBy ;
+                owl:inverseOf :producesCost ;
+                rdfs:domain :Cost ;
+                rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#produces
+:produces rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#producesCost
 :producesCost rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :produces ;
               rdfs:domain :Data ;
               rdfs:range :Cost .
 
 
+###  http://www.semanticweb.org/igonto/information#renditionIsPartOfDocument
+:renditionIsPartOfDocument rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :partOfDocument ;
+                           rdfs:domain :Rendition ;
+                           rdfs:range :Document .
+
+
+###  http://www.semanticweb.org/igonto/information#riskIsPartOfData
+:riskIsPartOfData rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :partOfData ;
+                  rdfs:domain :Risk ;
+                  rdfs:range :Data .
+
+
+###  http://www.semanticweb.org/igonto/information#ruleIsPartOfPolicy
+:ruleIsPartOfPolicy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :partofPolicy ;
+                    rdfs:domain :Rule ;
+                    rdfs:range :Policy .
+
+
+###  http://www.semanticweb.org/igonto/information#usedOn
+:usedOn rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/information#usedOnRecord
+:usedOnRecord rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :usedOn ;
+              owl:inverseOf :usesDataDictionary ;
+              rdfs:domain :Data ;
+              rdfs:range :Record .
+
+
 ###  http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure
 :usedOnRecordControlStructure rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :usedOn ;
+                              owl:inverseOf :usesSchedule ;
                               rdfs:domain :Schedule ;
                               rdfs:range :Record_Control_Structure .
 
 
+###  http://www.semanticweb.org/igonto/information#uses
+:uses rdf:type owl:ObjectProperty .
+
+
 ###  http://www.semanticweb.org/igonto/information#usesDataDictionary
 :usesDataDictionary rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :uses ;
                     rdfs:domain :Record ;
                     rdfs:range :Data_Dictionary .
+
+
+###  http://www.semanticweb.org/igonto/information#usesSchedule
+:usesSchedule rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :uses ;
+              rdfs:domain :Record_Control_Structure ;
+              rdfs:range :Schedule .
+
+
+###  http://www.semanticweb.org/igonto/information#valueIsPartOfData
+:valueIsPartOfData rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :partOfData ;
+                   rdfs:domain :Value ;
+                   rdfs:range :Data .
 
 
 ###  http://www.semanticweb.org/igonto/information#vocabularyFor
@@ -491,4 +860,4 @@
                       :Information .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
