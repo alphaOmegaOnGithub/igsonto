@@ -5,13 +5,17 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix igonto: <http://www.semanticweb.org/igonto/igonto#> .
 @prefix lifecycle: <http://www.semanticweb.org/igonto/lifecycle#> .
 @prefix enterprise: <http://www.semanticweb.org/igonto/enterprise#> .
 @prefix information: <http://www.semanticweb.org/igonto/information#> .
 @prefix jurisdiction: <http://www.semanticweb.org/igonto/jurisdiction#> .
 @prefix organization: <http://www.semanticweb.org/igonto/organization#> .
-@base <http://www.semanticweb.org/igonto/igonto> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix igonto: <http://www.semanticweb.org/igonto/igonto#> .
+@base <http://www.semanticweb.org/igonto/igonto#> .
 
 <http://www.semanticweb.org/igonto/igonto> rdf:type owl:Ontology .
 
@@ -22,10 +26,139 @@
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
 
-
 ###  http://www.semanticweb.org/igonto/jurisdiction#description
 jurisdiction:description rdf:type owl:AnnotationProperty ;
                          rdfs:subPropertyOf <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> .
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "abstract" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "summary of the resource" ;
+                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "contributor" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "party that has made contributions to the resource" .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "creator" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "party that originated the resource" ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/terms/contributor> .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "description" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "account of the resource" ;
+                                       rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "issued" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "date of formal issuance of the resource" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "license" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "legal document giving official permission to do something with the resource" ;
+                                   <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "modified" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "date on which the resource was most recently revised" .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty ;
+                                     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                     rdfs:label "publisher" ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "primary party responsible for making the resource available" ;
+                                     <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "references" ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource" .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "rights" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "provides nformation about rights held in and over the resource" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "source" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "related resource from which the described resource is derived" ;
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote> "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." .
+
+### (@cm)
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "title" ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)" ;
+                                 <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource." .
+
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "title" ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)" ;
+                                 <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource." .
+
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#Publisher
+igso-ml:Publisher rdf:type owl:AnnotationProperty ;
+                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/publisher> .
+
+###  http://www.example.org/cm/igso/2023/igso-ml#isReferencedBy
+igso-ml:isReferencedBy			rdf:type owl:AnnotationProperty ;
+                                rdfs:label "igso:isReferencedBy"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#usage_scenario
+igso-ml:usage_scenario rdf:type owl:AnnotationProperty ;
+                       rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ml#use_case
+igso-ml:use_case rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+
 
 
 #################################################################
@@ -1571,7 +1704,8 @@ jurisdiction:countryLanguage rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#countryName
 jurisdiction:countryName rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf jurisdiction:Country .
+                         rdfs:subPropertyOf jurisdiction:Country ;
+                         rdfs:domain jurisdiction:Country .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#countryTimezone
@@ -13450,8 +13584,8 @@ organization:Strategy rdfs:label "Strategy" .
 <http://www.semanticweb.org/igonto/pas> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S2"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -13578,8 +13712,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S6"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S6" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -13699,8 +13833,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S1"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -13733,8 +13867,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S7"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S7" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -13800,8 +13934,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S4"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -13841,8 +13975,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S3"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -13882,8 +14016,8 @@ organization:Strategy rdfs:label "Strategy" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S5"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S5" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -13922,4 +14056,4 @@ organization:Strategy rdfs:label "Strategy" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

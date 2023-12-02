@@ -1,0 +1,2894 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix igso-ml: <http://www.example.org/cm/igso/2023/igso-ml#> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+###  igso starts here 
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-tmpl: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+@base <http://www.example.org/cm/igso/2023/igso-sys#> .
+
+<http://www.example.org/cm/igso/2023/igso-sys#> rdf:type owl:Ontology ;
+                                                 dct:created "2010-05-28"^^xsd:date ;
+                                                 dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+                                                               foaf:name "Cataldo Mega"
+                                                             ] ;
+                                                 dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+                                                 dct:modified "2014-04-12"^^xsd:date ;
+                                                 dct:title "Core organization ontology"@en ;
+                                                 rdfs:comment "Vocabulary for describing information governance services types ."@en ;
+                                                 rdfs:label "Core igso organization ontology"@en ;
+                                                 rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+                                                 owl:versionInfo "0.8" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:AnnotationProperty ;
+             rdfs:isDefinedBy dct: ;
+             rdfs:label "abstract" ;
+             skos:definition "summary of the resource" ;
+             cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+             rdfs:subPropertyOf dct:description .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy dct: ;
+                rdfs:label "contributor" ;
+                skos:definition "party that has made contributions to the resource" .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty ;
+            rdfs:isDefinedBy dct: ;
+            rdfs:label "creator" ;
+            skos:definition "party that originated the resource" ;
+            rdfs:subPropertyOf dct:contributor .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy dct: ;
+                rdfs:label "description" ;
+                skos:definition "account of the resource" ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty ;
+           rdfs:isDefinedBy dct: ;
+           rdfs:label "issued" ;
+           skos:definition "date of formal issuance of the resource" ;
+           cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty ;
+            rdfs:isDefinedBy dct: ;
+            rdfs:label "license" ;
+            skos:definition "legal document giving official permission to do something with the resource" ;
+            cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty ;
+             rdfs:isDefinedBy dct: ;
+             rdfs:label "modified" ;
+             skos:definition "date on which the resource was most recently revised" .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy dct: ;
+              rdfs:label "publisher" ;
+              skos:definition "primary party responsible for making the resource available" ;
+              cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/references
+dct:references rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy dct: ;
+               rdfs:label "references" ;
+               skos:definition "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource" .
+
+
+###  http://purl.org/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty ;
+           rdfs:isDefinedBy dct: ;
+           rdfs:label "rights" ;
+           skos:definition "provides nformation about rights held in and over the resource" ;
+           cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty ;
+           rdfs:isDefinedBy dct: ;
+           rdfs:label "source" ;
+           skos:definition "related resource from which the described resource is derived" ;
+           cmns-av:explanatoryNote "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty ;
+          rdfs:isDefinedBy dct: ;
+          rdfs:label "title" ;
+          skos:definition "formal name given to the resource (artifact, such as a controlled vocabulary or ontology)" ;
+          cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, document, ontology, or other similar resource." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#abstract
+igso-tmpl:abstract rdf:type owl:AnnotationProperty ;
+                   rdfs:subPropertyOf igso-tmpl:description .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#change_note
+igso-tmpl:change_note rdf:type owl:AnnotationProperty ;
+                      rdfs:subPropertyOf igso-tmpl:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#definition
+igso-tmpl:definition rdf:type owl:AnnotationProperty ;
+                     rdfs:subPropertyOf igso-tmpl:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#description
+igso-tmpl:description rdf:type owl:AnnotationProperty ;
+                      rdfs:subPropertyOf igso-tmpl:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#logical_definition
+igso-tmpl:logical_definition rdf:type owl:AnnotationProperty ;
+                             rdfs:subPropertyOf igso-tmpl:definition .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#note
+igso-tmpl:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Publisher
+igso-org:Publisher rdf:type owl:AnnotationProperty ;
+                   rdfs:isDefinedBy dct: ;
+                   rdfs:subPropertyOf dc:publisher .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#isReferencedBy
+igso-org:isReferencedBy rdf:type owl:AnnotationProperty ;
+                        rdfs:label "igso:isReferencedBy"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#purpose
+igso-org:purpose rdf:type owl:AnnotationProperty ;
+                 rdfs:comment "Indicates the purpose of this Organization. There can be many purposes at different levels of abstraction but the nature of an organization is to have a reason for existence and this property is a means to document that reason. An Organization may have multiple purposes. It is recommended that the purpose be denoted by a controlled term or code list, ideally a `skos:Concept`. However, the range is left open to allow for other types of descriptive schemes. It is expected that specializations or application profiles of this vocabulary will constrain the range of the purpose. Alternative names: _remit_ _responsibility_ (esp. if applied to OrganizationalUnits such as Government Departments)."@en ;
+                 rdfs:label "purpose"@en ;
+                 rdfs:domain igso-org:Organization .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#roleProperty
+igso-org:roleProperty rdf:type owl:AnnotationProperty ;
+                      rdfs:comment "This is a metalevel property which is used to annotate an `igso-org:Role` instance with a sub-property of `igso-org:memberOf` that can be used to directly indicate the role for easy of query. The intended semantics is a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form:  `{ [] igso-org:member ?p; igso-org:organization ?o; igso-org:role [igso-org:roleProperty ?r] } -> {?p ?r ?o}`."@en ;
+                      rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+                      rdfs:label "role (property)"@en ;
+                      rdfs:range rdf:Property ;
+                      rdfs:domain igso-org:Role .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#usage_scenario
+igso-org:usage_scenario rdf:type owl:AnnotationProperty ;
+                        rdfs:subPropertyOf skos:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#use_case
+igso-org:use_case rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty ;
+              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+              rdfs:label "alternative label" ;
+              skos:definition "alternative lexical tag for a resource" ;
+              rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#changeNote
+skos:changeNote rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "change note" ;
+                skos:definition "note describing a modification to a resource" ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                rdfs:label "definition" ;
+                skos:definition "formal statement of the meaning of a resource" ;
+                rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty ;
+                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                   rdfs:label "editorial note" ;
+                   skos:definition "note for an editor, translator, or maintainer of the controlled vocabulary or ontology" ;
+                   rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty ;
+             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+             rdfs:label "example" ;
+             skos:definition "illustration of the use of some resource" ;
+             rdfs:subPropertyOf skos:note .
+
+
+###  http://www.w3.org/2004/02/skos/core#historyNote
+skos:historyNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#note
+skos:note rdf:type owl:AnnotationProperty ;
+          rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+          rdfs:label "note" ;
+          skos:definition "general remark, for any purpose" .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "preferred label" ;
+               skos:definition "preferred lexical label for a resource, in a given language" ;
+               rdfs:subPropertyOf rdfs:label .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty ;
+               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+               rdfs:label "scope note" ;
+               skos:definition "note that helps to clarify the meaning of something within the context of the intended use of the resource" ;
+               rdfs:subPropertyOf skos:note .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom
+cmns-av:adaptedFrom rdf:type owl:AnnotationProperty ;
+                    rdfs:label "adapted from" ;
+                    skos:definition "document or other source from which a given term (or its definition) was adapted (i.e., is compatible with but not quoted); the range for this annotation can be a string, URI, or citation" ;
+                    cmns-av:usageNote "This annotation should be used to indicate that a reference was used, for example, as input to the development of a definition or term but would not be considered infringing on a copyright." ;
+                    rdfs:subPropertyOf dct:source .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright
+cmns-av:copyright rdf:type owl:AnnotationProperty ;
+                  rdfs:label "copyright" ;
+                  skos:definition "exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same" ;
+                  cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+                  rdfs:subPropertyOf dct:rights .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource
+cmns-av:directSource rdf:type owl:AnnotationProperty ;
+                     rdfs:label "direct source" ;
+                     skos:definition "quoted reference for the subject resource; the range for this annotation can be a string, URI, or bibliographic citation" ;
+                     rdfs:subPropertyOf dct:source .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+cmns-av:explanatoryNote rdf:type owl:AnnotationProperty ;
+                        rdfs:label "explanatory note" ;
+                        skos:definition "note that provides additional explanatory material for a resource" ;
+                        rdfs:subPropertyOf skos:note .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/logicalDefinition
+cmns-av:logicalDefinition rdf:type owl:AnnotationProperty ;
+                          rdfs:label "logical definition" ;
+                          skos:definition "definition in the form of a formal expression, such as the mathematical or logic representation, for the resource" ;
+                          rdfs:subPropertyOf skos:definition .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym
+cmns-av:synonym rdf:type owl:AnnotationProperty ;
+                rdfs:label "synonym" ;
+                skos:definition "designation that can be substituted for the primary representation of something" ;
+                cmns-av:adaptedFrom "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09" ;
+                rdfs:subPropertyOf skos:altLabel .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote
+cmns-av:usageNote rdf:type owl:AnnotationProperty ;
+                  rdfs:label "usage note" ;
+                  skos:definition "note that provides information about how a given resource is used or may be extended" ;
+                  rdfs:subPropertyOf skos:note .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#A
+igso-tmpl:A rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ACL
+igso-tmpl:ACL rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#AWS
+igso-tmpl:AWS rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Acronym
+igso-tmpl:Acronym rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Azure
+igso-tmpl:Azure rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#B
+igso-tmpl:B rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#C
+igso-tmpl:C rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CCS
+igso-tmpl:CCS rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Consistency
+igso-tmpl:Consistency rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ContractualRelationship
+igso-tmpl:ContractualRelationship rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Cooperation
+igso-tmpl:Cooperation rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporateRule
+igso-tmpl:CorporateRule rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#D
+igso-tmpl:D rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DPO
+igso-tmpl:DPO rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
+igso-tmpl:DataErasure rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataRetentionDuration
+igso-tmpl:DataRetentionDuration rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectConsent
+igso-tmpl:DataSubjectConsent rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectRight
+igso-tmpl:DataSubjectRight rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DesirableBevavior
+igso-tmpl:DesirableBevavior rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#E
+igso-tmpl:E rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ECS
+igso-tmpl:ECS rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#EnhancedProtection
+igso-tmpl:EnhancedProtection rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#F
+igso-tmpl:F rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#G
+igso-tmpl:G rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#GCP
+igso-tmpl:GCP rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#GDPRViolation
+igso-tmpl:GDPRViolation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:Violation .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Goals
+igso-tmpl:Goals rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:G .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#H
+igso-tmpl:H rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#I
+igso-tmpl:I rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#IAS
+igso-tmpl:IAS rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#IRS
+igso-tmpl:IRS rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrieval
+igso-tmpl:InformationRetrieval rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
+igso-tmpl:InformationRetrievalSystem rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#J
+igso-tmpl:J rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#K
+igso-tmpl:K rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#L
+igso-tmpl:L rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LawfulBasis
+igso-tmpl:LawfulBasis rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegalInterest
+igso-tmpl:LegalInterest rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegalObligation
+igso-tmpl:LegalObligation rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegalRecourse
+igso-tmpl:LegalRecourse rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Liability
+igso-tmpl:Liability rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#M
+igso-tmpl:M rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
+igso-tmpl:MaturityLevel rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Measure
+igso-tmpl:Measure rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasurePrivacy
+igso-tmpl:MeasurePrivacy rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnical
+igso-tmpl:MeasureTechnical rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnicalOrganizational
+igso-tmpl:MeasureTechnicalOrganizational rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MesureSecurity
+igso-tmpl:MesureSecurity rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#O
+igso-tmpl:O rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#OU
+igso-tmpl:OU rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Objectives
+igso-tmpl:Objectives rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:O .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#P
+igso-tmpl:P rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PersonalDataTransfer
+igso-tmpl:PersonalDataTransfer rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Privacy-friendlySettings
+igso-tmpl:Privacy-friendlySettings rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PrivacyBreaches
+igso-tmpl:PrivacyBreaches rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Procedure
+igso-tmpl:Procedure rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProcesseingPurpose
+igso-tmpl:ProcesseingPurpose rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Progress
+igso-tmpl:Progress rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PublicTask
+igso-tmpl:PublicTask rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PurposeOfProcessing
+igso-tmpl:PurposeOfProcessing rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Q
+igso-tmpl:Q rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#R
+igso-tmpl:R rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RecordsCategory
+igso-tmpl:RecordsCategory rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RedHat
+igso-tmpl:RedHat rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Remedy
+igso-tmpl:Remedy rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RetentionPeriod
+igso-tmpl:RetentionPeriod rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightRegardingAutomatedProfiling
+igso-tmpl:RightRegardingAutomatedProfiling rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToAccess
+igso-tmpl:RightToAccess rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToDataPortability
+igso-tmpl:RightToDataPortability rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToErasure
+igso-tmpl:RightToErasure rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToObject
+igso-tmpl:RightToObject rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRectification
+igso-tmpl:RightToRectification rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Rights
+igso-tmpl:Rights rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedDecision
+igso-tmpl:RightsRegardingAutomatedDecision rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf igso-tmpl:Rights .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#S
+igso-tmpl:S rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Security
+igso-tmpl:Security rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
+igso-tmpl:SecurityMeasure rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:Security .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
+igso-tmpl:SensitiveData rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
+igso-tmpl:SpecialCategory rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Strategy
+igso-tmpl:Strategy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
+igso-tmpl:SubProcessor rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#T
+igso-tmpl:T rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
+igso-tmpl:Taxonomy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:T .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#U
+igso-tmpl:U rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#V
+igso-tmpl:V rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
+igso-tmpl:Violation rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
+igso-tmpl:VitalInterest rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#W
+igso-tmpl:W rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#X
+igso-tmpl:X rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Y
+igso-tmpl:Y rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Z
+igso-tmpl:Z rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#align
+igso-tmpl:align rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#aligns
+igso-tmpl:aligns rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#analyze
+igso-tmpl:analyze rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#analyzes
+igso-tmpl:analyzes rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#applientTo
+igso-tmpl:applientTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#applies
+igso-tmpl:applies rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#appliesTo
+igso-tmpl:appliesTo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:applies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#applyCorporateRule
+igso-tmpl:applyCorporateRule rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#appoint
+igso-tmpl:appoint rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#appointa
+igso-tmpl:appointa rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#approve
+igso-tmpl:approve rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#approves
+igso-tmpl:approves rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#aquires
+igso-tmpl:aquires rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#archives
+igso-tmpl:archives rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#assess
+igso-tmpl:assess rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#assignTo
+igso-tmpl:assignTo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#assignedTo
+igso-tmpl:assignedTo rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#audit
+igso-tmpl:audit rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#avoidsDanglingPointers
+igso-tmpl:avoidsDanglingPointers rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#avoidsOrphanObjects
+igso-tmpl:avoidsOrphanObjects rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#backups
+igso-tmpl:backups rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:B .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#basedOn
+igso-tmpl:basedOn rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:B .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#be_appointed
+igso-tmpl:be_appointed rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:B .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#being_notified
+igso-tmpl:being_notified rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:B .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#build
+igso-tmpl:build rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:B .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#captureRecordsOf
+igso-tmpl:captureRecordsOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#clasifies
+igso-tmpl:clasifies rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#classifiedAs
+igso-tmpl:classifiedAs rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:clasifies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#communicates
+igso-tmpl:communicates rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#complies
+igso-tmpl:complies rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#compliesWith
+igso-tmpl:compliesWith rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:complies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#conductInventory
+igso-tmpl:conductInventory rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#consistsOf
+igso-tmpl:consistsOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#controls
+igso-tmpl:controls rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#converts
+igso-tmpl:converts rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#cooperationWith
+igso-tmpl:cooperationWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#coordinate
+igso-tmpl:coordinate rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#correct
+igso-tmpl:correct rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#create
+igso-tmpl:create rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataTransfer
+igso-tmpl:dataTransfer rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#defines
+igso-tmpl:defines rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#definesAccessControl
+igso-tmpl:definesAccessControl rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:defines .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#definesDesignOf
+igso-tmpl:definesDesignOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:defines .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#definesDesirable
+igso-tmpl:definesDesirable rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:defines .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#definesMaturity
+igso-tmpl:definesMaturity rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:defines .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dependsOn
+igso-tmpl:dependsOn rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#develops
+igso-tmpl:develops rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#discloses
+igso-tmpl:discloses rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#distributes
+igso-tmpl:distributes rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#enforces
+igso-tmpl:enforces rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#engages
+igso-tmpl:engages rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensure
+igso-tmpl:ensure rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureAccountability
+igso-tmpl:ensureAccountability rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureAccuracy
+igso-tmpl:ensureAccuracy rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureAppropriate
+igso-tmpl:ensureAppropriate rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureApprovedCertification
+igso-tmpl:ensureApprovedCertification rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureComplianceWith
+igso-tmpl:ensureComplianceWith rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureFairProcessing
+igso-tmpl:ensureFairProcessing rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureIntegrity
+igso-tmpl:ensureIntegrity rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensureLawfulnessProcessing
+igso-tmpl:ensureLawfulnessProcessing rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensures
+igso-tmpl:ensures rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ensuresReferentialIntegrity
+igso-tmpl:ensuresReferentialIntegrity rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf igso-tmpl:ensure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#establish
+igso-tmpl:establish rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#estimate
+igso-tmpl:estimate rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#evaluate
+igso-tmpl:evaluate rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#exercises
+igso-tmpl:exercises rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#followsInstructionOf
+igso-tmpl:followsInstructionOf rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:F .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#fullfills
+igso-tmpl:fullfills rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:F .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#handles
+igso-tmpl:handles rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:H .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#has
+igso-tmpl:has rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf igso-tmpl:H .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasCapability
+igso-tmpl:hasCapability rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasCost
+igso-tmpl:hasCost rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasHalfTime
+igso-tmpl:hasHalfTime rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasImportance
+igso-tmpl:hasImportance rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasMaturity
+igso-tmpl:hasMaturity rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasMember
+igso-tmpl:hasMember rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasObligations
+igso-tmpl:hasObligations rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasPrice
+igso-tmpl:hasPrice rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasRegulatoryRequirements
+igso-tmpl:hasRegulatoryRequirements rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasRisk
+igso-tmpl:hasRisk rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasValue
+igso-tmpl:hasValue rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasmaturityLevel
+igso-tmpl:hasmaturityLevel rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#implementsAppropriate
+igso-tmpl:implementsAppropriate rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#implies
+igso-tmpl:implies rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#impliesImplementationOf
+igso-tmpl:impliesImplementationOf rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf igso-tmpl:implies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#impliesRequirements
+igso-tmpl:impliesRequirements rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:implies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#includes
+igso-tmpl:includes rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#is
+igso-tmpl:is rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isAdministeredBy
+igso-tmpl:isAdministeredBy rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isAnExpense
+igso-tmpl:isAnExpense rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isCategorizedBy
+igso-tmpl:isCategorizedBy rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isClassifiedAs
+igso-tmpl:isClassifiedAs rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:clasifies ,
+                                            igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isClassifiedBy
+igso-tmpl:isClassifiedBy rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:clasifies ,
+                                            igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isCompliantWith
+igso-tmpl:isCompliantWith rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:complies .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isComposedOf
+igso-tmpl:isComposedOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isDefinedBy
+igso-tmpl:isDefinedBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isDesignedBy
+igso-tmpl:isDesignedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isDisposedBy
+igso-tmpl:isDisposedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isEasyToCollect
+igso-tmpl:isEasyToCollect rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isEasyToDigitize
+igso-tmpl:isEasyToDigitize rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isGovernedBy
+igso-tmpl:isGovernedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isHardTo
+igso-tmpl:isHardTo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isHostedOn
+igso-tmpl:isHostedOn rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isImplementedBy
+igso-tmpl:isImplementedBy rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isManagedBy
+igso-tmpl:isManagedBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isMemberOf
+igso-tmpl:isMemberOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isMetadataOf
+igso-tmpl:isMetadataOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isObligatedTo
+igso-tmpl:isObligatedTo rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isObligatedToEnsure
+igso-tmpl:isObligatedToEnsure rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:isObligatedTo .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isOwnedBy
+igso-tmpl:isOwnedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isRequiredBy
+igso-tmpl:isRequiredBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isResponsibleFor
+igso-tmpl:isResponsibleFor rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isResponsibleForDesignOf
+igso-tmpl:isResponsibleForDesignOf rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf igso-tmpl:isResponsibleFor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isRetrievable
+igso-tmpl:isRetrievable rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isRetrievedBy
+igso-tmpl:isRetrievedBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:isRetrievable .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isSearchable
+igso-tmpl:isSearchable rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isSearchableBy
+igso-tmpl:isSearchableBy rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:isSearchable .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isSecured
+igso-tmpl:isSecured rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isSecuredBy
+igso-tmpl:isSecuredBy rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:isSecured .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isStored
+igso-tmpl:isStored rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isStoredBy
+igso-tmpl:isStoredBy rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:isStored .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isTaggingOf
+igso-tmpl:isTaggingOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isTaxonomyOf
+igso-tmpl:isTaxonomyOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isUsedBy
+igso-tmpl:isUsedBy rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#limits
+igso-tmpl:limits rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#limitsArchivePeriod
+igso-tmpl:limitsArchivePeriod rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:limits .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#limitsPurpose
+igso-tmpl:limitsPurpose rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf igso-tmpl:limits .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#limitsStoragePeriod
+igso-tmpl:limitsStoragePeriod rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:limits .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#maintains
+igso-tmpl:maintains rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#manages
+igso-tmpl:manages rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#mandates
+igso-tmpl:mandates rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#mayInvolve
+igso-tmpl:mayInvolve rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#measures
+igso-tmpl:measures rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#minizeAmountOf
+igso-tmpl:minizeAmountOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#monitors
+igso-tmpl:monitors rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#perform
+igso-tmpl:perform rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#performIimpactAssessment
+igso-tmpl:performIimpactAssessment rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf igso-tmpl:perform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#performs
+igso-tmpl:performs rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:perform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#persues
+igso-tmpl:persues rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#plans
+igso-tmpl:plans rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#processes
+igso-tmpl:processes rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#produces
+igso-tmpl:produces rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#profile
+igso-tmpl:profile rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#promotes
+igso-tmpl:promotes rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#protects
+igso-tmpl:protects rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#provides
+igso-tmpl:provides rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesCatalogService
+igso-tmpl:providesCatalogService rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf igso-tmpl:provides .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesDatabaseService
+igso-tmpl:providesDatabaseService rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf igso-tmpl:provides .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesFulltextIndexService
+igso-tmpl:providesFulltextIndexService rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf igso-tmpl:providesIndexService .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesFulltextSearchService
+igso-tmpl:providesFulltextSearchService rdf:type owl:ObjectProperty ;
+                                        rdfs:subPropertyOf igso-tmpl:providesSearchService .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesIndexService
+igso-tmpl:providesIndexService rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:provides .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesReferentialIntegrity
+igso-tmpl:providesReferentialIntegrity rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf igso-tmpl:referentialIntegrity .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesRelationalIndexService
+igso-tmpl:providesRelationalIndexService rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf igso-tmpl:providesIndexService .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesRelationalSearchService
+igso-tmpl:providesRelationalSearchService rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf igso-tmpl:providesSearchService .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#providesSearchService
+igso-tmpl:providesSearchService rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf igso-tmpl:provides .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#referentialIntegrity
+igso-tmpl:referentialIntegrity rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
+igso-tmpl:requiresCompliaenceWith rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
+igso-tmpl:requiresReferentialIntegrity rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf igso-tmpl:referentialIntegrity .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#satisfies
+igso-tmpl:satisfies rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#serves
+igso-tmpl:serves rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#specifies
+igso-tmpl:specifies rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#subjectTo
+igso-tmpl:subjectTo rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#submitts
+igso-tmpl:submitts rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#supports
+igso-tmpl:supports rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#tests
+igso-tmpl:tests rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf igso-tmpl:T .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
+igso-tmpl:validateAuthenticity rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompleteness
+igso-tmpl:validateCompleteness rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompliance
+igso-tmpl:validateCompliance rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateComplianceLevel
+igso-tmpl:validateComplianceLevel rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf igso-tmpl:validateCompliance .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateConsistency
+igso-tmpl:validateConsistency rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#validateProvenance
+igso-tmpl:validateProvenance rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf igso-tmpl:V .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#age
+igso-tmpl:age rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf igso-tmpl:metrics .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#category
+igso-tmpl:category rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#classification
+igso-tmpl:classification rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#companyType
+igso-tmpl:companyType rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#cost
+igso-tmpl:cost rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf igso-tmpl:metrics .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataController
+igso-tmpl:dataController rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataOwner
+igso-tmpl:dataOwner rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataOwnerRights
+igso-tmpl:dataOwnerRights rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataProcesssor
+igso-tmpl:dataProcesssor rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataSubject
+igso-tmpl:dataSubject rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dataSubjectRights
+igso-tmpl:dataSubjectRights rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#identifier
+igso-tmpl:identifier rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf skos:notation ;
+                     rdfs:domain igso-tmpl:Organization ;
+                     rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isAsset
+igso-tmpl:isAsset rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isOnHold
+igso-tmpl:isOnHold rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isclassified
+igso-tmpl:isclassified rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isexpired
+igso-tmpl:isexpired rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf igso-tmpl:retentionPeriod .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#lawfulBasis
+igso-tmpl:lawfulBasis rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#maturityLevel
+igso-tmpl:maturityLevel rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#metrics
+igso-tmpl:metrics rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#processingPurpose
+igso-tmpl:processingPurpose rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#retentionPeriod
+igso-tmpl:retentionPeriod rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#risk
+igso-tmpl:risk rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf igso-tmpl:metrics .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#specialcategory
+igso-tmpl:specialcategory rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#type
+igso-tmpl:type rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#value
+igso-tmpl:value rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf igso-tmpl:metrics .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-data#Record
+igso-data:Record rdf:type owl:Class ;
+                 rdfs:subClassOf igso-tmpl:R ;
+                 owl:disjointWith igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ACL
+igso-tmpl:ACL rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#AWS
+igso-tmpl:AWS rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Acronym
+igso-tmpl:Acronym rdf:type owl:Class ;
+                  rdfs:subClassOf igso-tmpl:DataDictionary ;
+                  owl:disjointWith igso-tmpl:Compensation .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Azure
+igso-tmpl:Azure rdf:type owl:Class ;
+                rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#C
+igso-tmpl:C rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CCS
+igso-tmpl:CCS rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Company
+igso-tmpl:Company rdf:type owl:Class ;
+                  rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Compensation
+igso-tmpl:Compensation rdf:type owl:Class ;
+                       rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Consistency
+igso-tmpl:Consistency rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ContractualRelationship
+igso-tmpl:ContractualRelationship rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Cooperation
+igso-tmpl:Cooperation rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporatePolicy
+igso-tmpl:CorporatePolicy rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporateRule
+igso-tmpl:CorporateRule rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:C .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#D
+igso-tmpl:D rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DPO
+igso-tmpl:DPO rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataDictionary
+igso-tmpl:DataDictionary rdf:type owl:Class ;
+                         igso-tmpl:definition """A data dictionary1 is a collection of descriptions of data objects or terms, definitions, and properties in a data asset. Data dictionaries provide information about the data.
+Data dictionaries are an essential communications tool for data modeling, curation, governance, and analytics, especially when dealing with datasets that have been collected, compiled, categorized, used, and reused by different internal and external data Consumers across the organization.
+A data dictionary consists of several data components, which contains multiple levels: data asset, entity, attribute, and value domain. Each level includes different components, but each component should be defined with the following properties:
+Data Component Name:   Data Component Name that represents a class of real-world entities or characteristics of those entities 
+
+Description:  A short description for the data component name
+
+Type:  Logical or physical data component
+Required: Required or optional data component
+Sample: A sample of the data component
+
+Note: The data asset level is composed of one line that contains a data asset profile, which includes the data asset name, description, type, version, and create and last update date.
+see also: https://www.cms.gov/research-statistics-data-systems/DataArchitectureEngineering/DataDescriptionGuidelines""" ;
+                         rdfs:comment "A data dictionary1 is a collection of descriptions of data objects or terms, definitions, and properties in a data asset. Data dictionaries provide information about the data" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
+igso-tmpl:DataErasure rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataRetentionDuration
+igso-tmpl:DataRetentionDuration rdf:type owl:Class ;
+                                rdfs:subClassOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectConsent
+igso-tmpl:DataSubjectConsent rdf:type owl:Class ;
+                             rdfs:subClassOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectRight
+igso-tmpl:DataSubjectRight rdf:type owl:Class ;
+                           rdfs:subClassOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DesirableBehavior
+igso-tmpl:DesirableBehavior rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:D .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#E
+igso-tmpl:E rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ECS
+igso-tmpl:ECS rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#EnhancedProtection
+igso-tmpl:EnhancedProtection rdf:type owl:Class ;
+                             rdfs:subClassOf igso-tmpl:E .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#G
+igso-tmpl:G rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#GCP
+igso-tmpl:GCP rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Goals
+igso-tmpl:Goals rdf:type owl:Class ;
+                rdfs:subClassOf igso-tmpl:G .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#I
+igso-tmpl:I rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#IAS
+igso-tmpl:IAS rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#IRS
+igso-tmpl:IRS rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
+igso-tmpl:InformationRetrievalSystem rdf:type owl:Class ;
+                                     rdfs:subClassOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#L
+igso-tmpl:L rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LawfulBasis
+igso-tmpl:LawfulBasis rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegalObligation
+igso-tmpl:LegalObligation rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegalRecourse
+igso-tmpl:LegalRecourse rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LegitimateInterest
+igso-tmpl:LegitimateInterest rdf:type owl:Class ;
+                             rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Liability
+igso-tmpl:Liability rdf:type owl:Class ;
+                    rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#M
+igso-tmpl:M rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
+igso-tmpl:MaturityLevel rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:M ;
+                        owl:disjointWith igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel1
+igso-tmpl:MaturityLevel1 rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:MaturityLevel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel2
+igso-tmpl:MaturityLevel2 rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:MaturityLevel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel3
+igso-tmpl:MaturityLevel3 rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:MaturityLevel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel4
+igso-tmpl:MaturityLevel4 rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:MaturityLevel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel5
+igso-tmpl:MaturityLevel5 rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:MaturityLevel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Measure
+igso-tmpl:Measure rdf:type owl:Class ;
+                  rdfs:subClassOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureFunctional
+igso-tmpl:MeasureFunctional rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureLegal
+igso-tmpl:MeasureLegal rdf:type owl:Class ;
+                       rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureOrganizational
+igso-tmpl:MeasureOrganizational rdf:type owl:Class ;
+                                rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasurePrivacy
+igso-tmpl:MeasurePrivacy rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureSecurity
+igso-tmpl:MeasureSecurity rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnical
+igso-tmpl:MeasureTechnical rdf:type owl:Class ;
+                           rdfs:subClassOf igso-tmpl:Measure .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#O
+igso-tmpl:O rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#OU
+igso-tmpl:OU rdf:type owl:Class ;
+             rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Objectives
+igso-tmpl:Objectives rdf:type owl:Class ;
+                     rdfs:subClassOf igso-tmpl:O .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Organization
+igso-tmpl:Organization rdf:type owl:Class ;
+                       rdfs:subClassOf igso-tmpl:O .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#P
+igso-tmpl:P rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PersonalDataTransfer
+igso-tmpl:PersonalDataTransfer rdf:type owl:Class ;
+                               rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Privacy-friendlySetting
+igso-tmpl:Privacy-friendlySetting rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PrivacyBreaches
+igso-tmpl:PrivacyBreaches rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Procedure
+igso-tmpl:Procedure rdf:type owl:Class ;
+                    rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProcessingPurpose
+igso-tmpl:ProcessingPurpose rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Progress
+igso-tmpl:Progress rdf:type owl:Class ;
+                   rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#PurposeOfProcessing
+igso-tmpl:PurposeOfProcessing rdf:type owl:Class ;
+                              rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#R
+igso-tmpl:R rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RecordsCategory
+igso-tmpl:RecordsCategory rdf:type owl:Class ;
+                          rdfs:subClassOf igso-data:Record .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RecordsTaxonomy
+igso-tmpl:RecordsTaxonomy rdf:type owl:Class ;
+                          rdfs:subClassOf igso-data:Record .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RedHatCloud
+igso-tmpl:RedHatCloud rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Remedy
+igso-tmpl:Remedy rdf:type owl:Class ;
+                 rdfs:subClassOf igso-data:Record .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Right
+igso-tmpl:Right rdf:type owl:Class ;
+                rdfs:subClassOf igso-tmpl:R .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightObject
+igso-tmpl:RightObject rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToAccess
+igso-tmpl:RightToAccess rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToDataPortability
+igso-tmpl:RightToDataPortability rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToErasure
+igso-tmpl:RightToErasure rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRectification
+igso-tmpl:RightToRectification rdf:type owl:Class ;
+                               rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRestrictprocessing
+igso-tmpl:RightToRestrictprocessing rdf:type owl:Class ;
+                                    rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedDecisions
+igso-tmpl:RightsRegardingAutomatedDecisions rdf:type owl:Class ;
+                                            rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedProfiling
+igso-tmpl:RightsRegardingAutomatedProfiling rdf:type owl:Class ;
+                                            rdfs:subClassOf igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#S
+igso-tmpl:S rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
+igso-tmpl:SecurityMeasure rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
+igso-tmpl:SensitiveData rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
+igso-tmpl:SpecialCategory rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Strategy
+igso-tmpl:Strategy rdf:type owl:Class ;
+                   rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
+igso-tmpl:SubProcessor rdf:type owl:Class ;
+                       rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#T
+igso-tmpl:T rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
+igso-tmpl:Taxonomy rdf:type owl:Class ;
+                   rdfs:subClassOf igso-tmpl:T .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#V
+igso-tmpl:V rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
+igso-tmpl:Violation rdf:type owl:Class ;
+                    rdfs:subClassOf igso-tmpl:V ;
+                    owl:disjointWith igso-tmpl:VitalInterest .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
+igso-tmpl:VitalInterest rdf:type owl:Class ;
+                        rdfs:subClassOf igso-tmpl:V .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Company
+igso-org:Company rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityIndex
+igso-org:MaturityIndex rdf:type owl:Class ;
+                       rdfs:subClassOf igso-tmpl:M .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Role
+igso-org:Role rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:R .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:P .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/dc/terms/
+dct: rdf:type owl:NamedIndividual ;
+     rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ACL
+igso-org:ACL rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ARMA
+igso-org:ARMA rdf:type owl:NamedIndividual ;
+              rdfs:comment "ARMA International is the community of records and  information management and governance professionals. RIM is the combination Records and Information Management. ARMA International Information Governance Maturity Model©ARMA International, 2013 Note: Records management terms used in the Generally Accepted Recordkeeping Principles® Information Governance Maturity Model (IGMM) are defined in the Glossary of  Records and Information Management Terms,3rd Edition (ARMA International, 2007). Data Governance is a subset of IT governance that focuses on establishing processes  and policies around managing data as a corporate asset. More ovber data governance refers to the overall management of the availability, usability, integrity and security of the data employed in an enterprise. And data governance provides the infrastructure,  resources and processes necessary to manage data with the big picture in mind. Regulatory compliance - Sarbanes-Oxley, etc.: \"Where management has outsourced…functions to third party service provider(s), management maintains a responsibility to assess the controls over the outsourced operations.” The business drivers for managing data as a corporate asset are:- Competitiveness- Regulatory compliance- Realizing the benefit of investments in BI and other Information-based initiatives Establishment of a modeling strategy which includes:" ;
+              rdfs:label "ARMA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AWS
+igso-org:AWS rdf:type owl:NamedIndividual ;
+             rdfs:label "AWS"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AccessControlList
+igso-org:AccessControlList rdf:type owl:NamedIndividual ;
+                           rdfs:label "AccessControlList"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
+igso-org:Ad-Hoc rdf:type owl:NamedIndividual ;
+                rdfs:label "Ad-Hoc"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
+igso-org:AlfrescoContentManagement rdf:type owl:NamedIndividual ;
+                                   rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" ;
+                                   rdfs:label "Alfresco Content Management"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
+igso-org:AlfrescoGovernanceServices rdf:type owl:NamedIndividual ;
+                                    rdfs:comment """1. Data Classification and Management: Alfresco enables organizations to classify and organize their data through metadata management, tagging, and categorization. This helps in identifying and managing personal data and sensitive information according to GDPR requirements.
+
+2. Access Control and Permissions: Alfresco offers robust access control mechanisms, allowing organizations to define and enforce granular permissions for data access. This helps ensure that personal data is accessed only by authorized individuals or roles.
+
+3. Document and Records Management: Alfresco provides features for document and records management, enabling organizations to maintain a central repository for storing and managing data. This helps ensure proper data governance, retention, and disposal in accordance with GDPR guidelines.
+
+4. Workflow and Process Automation: Alfresco's BPM capabilities allow organizations to design and automate workflows, ensuring that data processing activities are executed in a structured and compliant manner. This can include workflows for data subject requests, consent management, and data breach notifications.
+
+5. Security and Auditing: Alfresco offers security features such as encryption, secure file transfer, and activity logging. These help protect personal data and enable organizations to track and audit data access and modifications for compliance purposes.
+
+While Alfresco provides a solid foundation for managing data and supporting GDPR compliance, it's important to note that achieving full compliance requires a holistic approach that encompasses people, processes, and technology. Organizations should assess their specific GDPR requirements, align Alfresco's capabilities with those requirements, and potentially complement the solution with additional tools or practices as needed.""" ;
+                                    rdfs:label "AlfrescoGovernanceServices"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
+igso-org:AmazonCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "Amazon Cloud (AWS)"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AutomatedOrganizationWide
+igso-org:AutomatedOrganizationWide rdf:type owl:NamedIndividual ;
+                                   rdfs:label "AutomatedOrganizationWide"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Azure
+igso-org:Azure rdf:type owl:NamedIndividual ;
+               rdfs:label "Azure"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#CGOC
+igso-org:CGOC rdf:type owl:NamedIndividual ;
+              rdfs:label "CGOC"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#CloudEnvironment
+igso-org:CloudEnvironment rdf:type owl:NamedIndividual ;
+                          rdfs:label "CloudEnvironment"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#CommunicationOffering
+igso-org:CommunicationOffering rdf:type owl:NamedIndividual ;
+                               rdfs:label "CommunicationOffering"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Consequences
+igso-org:Consequences rdf:type owl:NamedIndividual ;
+                      rdfs:label "Consequences"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ContentCatalog
+igso-org:ContentCatalog rdf:type owl:NamedIndividual ;
+                        rdfs:label "ContentCatalog"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#DAM
+igso-org:DAM rdf:type owl:NamedIndividual ;
+             rdfs:label "DAM"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#DAMA
+igso-org:DAMA rdf:type owl:NamedIndividual ;
+              rdfs:label "DAMA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#DB2
+igso-org:DB2 rdf:type owl:NamedIndividual ;
+             rdfs:label "DB2"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Defined
+igso-org:Defined rdf:type owl:NamedIndividual ;
+                 rdfs:label "Defined"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Essential
+igso-org:Essential rdf:type owl:NamedIndividual ;
+                   rdfs:label "Essential"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
+igso-org:FinancialAssets rdf:type owl:NamedIndividual ;
+                         rdfs:label "FinancialAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#FulltextIndex
+igso-org:FulltextIndex rdf:type owl:NamedIndividual ;
+                       rdfs:label "FulltextIndex"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Fulltext_Index_Service
+igso-org:Fulltext_Index_Service rdf:type owl:NamedIndividual ;
+                                rdfs:label "Fulltext_Index_Service"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Fulltext_Search_Service
+igso-org:Fulltext_Search_Service rdf:type owl:NamedIndividual ;
+                                 rdfs:label "Fulltext_Search_Service"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#FullyAutomatedLocal
+igso-org:FullyAutomatedLocal rdf:type owl:NamedIndividual ;
+                             rdfs:label "FullyAutomatedLocal"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#GoogleCloud
+igso-org:GoogleCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "GoogleCloud"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#HRAssets
+igso-org:HRAssets rdf:type owl:NamedIndividual ;
+                  rdfs:label "HRAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Head
+igso-org:Head rdf:type owl:NamedIndividual ,
+                       igso-org:Role ;
+              igso-org:roleProperty igso-org:headOf ;
+              rdfs:comment "A role corresponding to the `igso-org:headOf` property"@en ,
+                           "Actividad correspondiente a la propiedad `igso-org:headOf`."@es ,
+                           "Un ruolo corrispondente alla proprietà `igso-org:headOf`."@it ,
+                           "Un rôle correspondant à la propriété `igso-org:headOf`"@fr ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+              rdfs:label "director ejecutivo"@es ,
+                         "directora ejecutiva"@es ,
+                         "head"@en ,
+                         "responsabile"@it ,
+                         "responsable"@fr ;
+              skos:prefLabel "head"@en ,
+                             "responsabile"@it ,
+                             "responsable"@fr .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#IBMCloud
+igso-org:IBMCloud rdf:type owl:NamedIndividual ;
+                  rdfs:label "IBMCloud"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
+igso-org:IBMContentServices rdf:type owl:NamedIndividual ;
+                            rdfs:label "IBMContentServices"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
+igso-org:IBMEnterpriseContentManagement rdf:type owl:NamedIndividual ;
+                                        rdfs:label "IBM Enterprise Content Management"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
+igso-org:IBMInfoSphereInformationGovernanceCatalog rdf:type owl:NamedIndividual ;
+                                                   dct:title "IBM InfoSphere Information Governance Catalog" ;
+                                                   rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ITAssets
+igso-org:ITAssets rdf:type owl:NamedIndividual ;
+                  rdfs:label "ITAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Immaturity
+igso-org:Immaturity rdf:type owl:NamedIndividual ;
+                    rdfs:label "Immaturity"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#In-Development
+igso-org:In-Development rdf:type owl:NamedIndividual ;
+                        rdfs:label "In-Development"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Initial
+igso-org:Initial rdf:type owl:NamedIndividual ;
+                 rdfs:label "Initial"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Large
+igso-org:Large rdf:type owl:NamedIndividual ,
+                        igso-org:Company ;
+               rdfs:label "Large"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Lucene
+igso-org:Lucene rdf:type owl:NamedIndividual ;
+                rdfs:label "Lucene"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ManualStructured
+igso-org:ManualStructured rdf:type owl:NamedIndividual ;
+                          rdfs:label "ManualStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ManualUnstructured
+igso-org:ManualUnstructured rdf:type owl:NamedIndividual ;
+                            rdfs:label "ManualUnStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
+igso-org:MaturityLevel rdf:type owl:NamedIndividual ,
+                                igso-org:MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
+igso-org:MaturityLevel-1 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-1"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-2
+igso-org:MaturityLevel-2 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-2"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-3
+igso-org:MaturityLevel-3 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-3"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-4
+igso-org:MaturityLevel-4 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-4"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-5
+igso-org:MaturityLevel-5 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-5"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Medium
+igso-org:Medium rdf:type owl:NamedIndividual ,
+                         igso-org:Company ;
+                rdfs:label "Medium"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Micro
+igso-org:Micro rdf:type owl:NamedIndividual ,
+                        igso-org:Company ;
+               rdfs:label "Micro"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
+igso-org:MicrosoftCloud rdf:type owl:NamedIndividual ;
+                        rdfs:label "GCP"@en ,
+                                   "MicrosoftCloud"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#NextCloud
+igso-org:NextCloud rdf:type owl:NamedIndividual ;
+                   rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements." ;
+                   rdfs:label "Nextcloud" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Non-Existent
+igso-org:Non-Existent rdf:type owl:NamedIndividual ;
+                      rdfs:label "Non-Existent"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc
+igso-org:OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc rdf:type owl:NamedIndividual ;
+                                                                 rdfs:label "Relational_Search_Service"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d
+igso-org:OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d rdf:type owl:NamedIndividual ;
+                                                                 rdfs:label "EDRM"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc
+igso-org:OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc rdf:type owl:NamedIndividual ;
+                                                                 rdfs:label "IntellectualAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8
+igso-org:OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8 rdf:type owl:NamedIndividual ;
+                                                                 rdfs:label "ISACA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a
+igso-org:OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a rdf:type owl:NamedIndividual ;
+                                                                 rdfs:label "ObjectServer"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
+igso-org:ObjectCatalog rdf:type owl:NamedIndividual ;
+                       rdfs:label "ObjectCatalog"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OpenKM
+igso-org:OpenKM rdf:type owl:NamedIndividual ;
+                rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails." ;
+                rdfs:label "OpenKM" ;
+                cmns-av:directSource <https://www.openkm.com/> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
+igso-org:OpenSourceDokumentManagementSystems rdf:type owl:NamedIndividual ;
+                                             rdfs:label """OpenSourceDokumentManagementSystems
+Open-source cloud-native solutions can serve as viable alternatives to proprietary systems, offering similar functionalities and capabilities for data management and collaboration. They provide the advantage of being customizable, extensible, and cost-effective. However, it's important to assess each solution based on your specific requirements, technical expertise, and support options before making a decision. Additionally, consider factors like community support, documentation, and compatibility with your existing IT infrastructure when evaluating open-source alternatives.""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Optimized
+igso-org:Optimized rdf:type owl:NamedIndividual ;
+                   rdfs:label "Optimized"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OwnCloud
+igso-org:OwnCloud rdf:type owl:NamedIndividual ;
+                  rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
+                  rdfs:label "OwnCloud" ;
+                  cmns-av:directSource <https://nextcloud.com/> ,
+                                       <https://owncloud.com/> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Permission
+igso-org:Permission rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
+igso-org:PhysicalAssets rdf:type owl:NamedIndividual ;
+                        rdfs:label "PhysicalAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#PostgreSQL
+igso-org:PostgreSQL rdf:type owl:NamedIndividual ;
+                    rdfs:label "PostgreSQL"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Privilege
+igso-org:Privilege rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Proactive
+igso-org:Proactive rdf:type owl:NamedIndividual ;
+                   rdfs:label "Proactive"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ProcessOffering
+igso-org:ProcessOffering rdf:type owl:NamedIndividual ;
+                         rdfs:label "ProcessOffering"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ProcessRisk
+igso-org:ProcessRisk rdf:type owl:NamedIndividual ;
+                     rdfs:label "ProcessRisk"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#RecordsCatalog
+igso-org:RecordsCatalog rdf:type owl:NamedIndividual ;
+                        rdfs:label "RecordsCatalog"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
+igso-org:RedHatCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "RedHatCloud"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
+igso-org:Relational_Index_Service rdf:type owl:NamedIndividual ;
+                                  rdfs:label "Relational_Index_Service"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
+igso-org:RelationsAssets rdf:type owl:NamedIndividual ;
+                         rdfs:label "RelationsAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Repeatable
+igso-org:Repeatable rdf:type owl:NamedIndividual ;
+                    rdfs:label "Repeatable"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ResourceManager
+igso-org:ResourceManager rdf:type owl:NamedIndividual ;
+                         rdfs:label "ResourceManager"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
+igso-org:SAPInformationSteward rdf:type owl:NamedIndividual ;
+                               dct:title "SAP Information Steward:" ;
+                               rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
+igso-org:SemiAutomatedLocal rdf:type owl:NamedIndividual ;
+                            rdfs:label "SemiAutomatedLocal"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Small
+igso-org:Small rdf:type owl:NamedIndividual ,
+                        igso-org:Company ;
+               rdfs:label "Small"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Solr
+igso-org:Solr rdf:type owl:NamedIndividual ;
+              rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/" ;
+              rdfs:isDefinedBy <https://solr.apache.org/features.html> ;
+              rdfs:label "Solr"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#StorageOffering
+igso-org:StorageOffering rdf:type owl:NamedIndividual ;
+                         rdfs:label "Storage Offering"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Sub-Standard
+igso-org:Sub-Standard rdf:type owl:NamedIndividual ;
+                      rdfs:label "Sub-Standard"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Transformational
+igso-org:Transformational rdf:type owl:NamedIndividual ;
+                          rdfs:label "Transformational"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:ACL
+                igso-tmpl:AWS
+                igso-tmpl:Azure
+                igso-tmpl:CCS
+                igso-tmpl:DPO
+                igso-tmpl:ECS
+                igso-tmpl:GCP
+                igso-tmpl:IAS
+                igso-tmpl:IRS
+                igso-tmpl:OU
+                igso-tmpl:RedHatCloud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:Acronym
+                igso-tmpl:C
+                igso-tmpl:Company
+                igso-tmpl:Compensation
+                igso-tmpl:Organization
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:Acronym
+                igso-tmpl:C
+                igso-tmpl:D
+                igso-tmpl:E
+                igso-tmpl:G
+                igso-tmpl:I
+                igso-tmpl:L
+                igso-tmpl:M
+                igso-tmpl:O
+                igso-tmpl:Organization
+                igso-tmpl:P
+                igso-tmpl:R
+                igso-tmpl:S
+                igso-tmpl:T
+                igso-tmpl:V
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:Compensation
+                igso-tmpl:Consistency
+                igso-tmpl:ContractualRelationship
+                igso-tmpl:Cooperation
+                igso-tmpl:CorporatePolicy
+                igso-tmpl:CorporateRule
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:DataErasure
+                igso-tmpl:DataRetentionDuration
+                igso-tmpl:DataSubjectConsent
+                igso-tmpl:DataSubjectRight
+                igso-tmpl:DesirableBehavior
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:LawfulBasis
+                igso-tmpl:LegalObligation
+                igso-tmpl:LegalRecourse
+                igso-tmpl:LegitimateInterest
+                igso-tmpl:Liability
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:MaturityLevel1
+                igso-tmpl:MaturityLevel2
+                igso-tmpl:MaturityLevel3
+                igso-tmpl:MaturityLevel4
+                igso-tmpl:MaturityLevel5
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:MeasureFunctional
+                igso-tmpl:MeasureLegal
+                igso-tmpl:MeasureOrganizational
+                igso-tmpl:MeasurePrivacy
+                igso-tmpl:MeasureSecurity
+                igso-tmpl:MeasureTechnical
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:PersonalDataTransfer
+                igso-tmpl:Privacy-friendlySetting
+                igso-tmpl:PrivacyBreaches
+                igso-tmpl:Procedure
+                igso-tmpl:ProcessingPurpose
+                igso-tmpl:Progress
+                igso-tmpl:PurposeOfProcessing
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:RecordsCategory
+                igso-tmpl:RecordsTaxonomy
+                igso-tmpl:Remedy
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:RightObject
+                igso-tmpl:RightToAccess
+                igso-tmpl:RightToDataPortability
+                igso-tmpl:RightToErasure
+                igso-tmpl:RightToRectification
+                igso-tmpl:RightToRestrictprocessing
+                igso-tmpl:RightsRegardingAutomatedDecisions
+                igso-tmpl:RightsRegardingAutomatedProfiling
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:SecurityMeasure
+                igso-tmpl:SensitiveData
+                igso-tmpl:SpecialCategory
+                igso-tmpl:Strategy
+                igso-tmpl:SubProcessor
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
