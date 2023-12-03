@@ -1,0 +1,310 @@
+### Classes
+A
+	Acronym
+		ACL
+		AWS
+		Azure
+		CCS
+		DPO
+		ECS
+		GCP
+		IRS
+		OU
+		RedHat
+C
+	Company
+	Compensation
+	Consistency
+	ContractualRelationship
+	Cooperation
+	CorporateRule
+	CorporatePolicy
+D
+	DataErasure
+	DataRetentionDuration
+	DataSubjectConsent
+	DataSubjectRight
+	DesirableBehavior
+E
+	EnhancedProtection
+G
+	Goals
+I
+	InformationRetrievalSystem
+L
+	LawfulBasis
+	LegalObligation
+	LegalRecourse
+	LegitimateInterest	
+	Liability
+M
+	MaturityLevel
+		MaturityLevel1
+		MaturityLevel2
+		MaturityLevel3
+		MaturityLevel4
+		MaturityLevel5
+	Measure
+		MeasureOrganizational
+		MeasureTechnical
+		MeasureLegal
+		MeasureFunctional
+		MeasureSecurity
+		MeasurePrivacy
+O
+	Objectives
+P
+	PersonalDataTransfer
+	Privacy-friendlySetting
+	PrivacyBreaches
+	Procedure
+	ProcessingPurpose
+	Progress
+	PurposeOfProcessing
+R
+	Record
+		RecordsCategory
+		RecordsTaxonomy
+		Remedy
+	Right
+		RightsRegardingAutomatedDecisions
+		RightsRegardingAutomatedProfiling
+		RightToAccess
+		RightToDataPortability
+		RightToErasure
+		RightObject
+		RightToRectification
+		RightToRestrictprocessing
+S
+	SecurityMeasure
+	SensitiveData
+	SpecialCategory
+	Strategy
+	SubProcessor
+T
+	Taxonomy
+V
+	Violation
+	VitalInterest
+
+###################################################	
+### Object Properties
+###################################################
+
+A
+	aligns
+	analyzes
+	applies
+	applientTo
+	appoints
+	approves
+	aquires
+	archives
+	assess
+	assignedTo
+	audit
+	avoidsDanglingPointers
+	avoidsOrphanObjects
+	applyCorporateRule
+B
+	backups
+	basedOn
+	be_appointed
+	being_notified
+	build
+C
+	captureRecordsOf
+	clasifies
+		classifiedAs
+		isClassifiedBy
+		isClassifiedAs
+	communicates
+	complies
+		compliesWith
+		isCompliantWith
+	conductInventory
+	consistsOf
+	controls
+	converts
+	cooperationWith
+	coordinate
+	correct
+	create
+D
+	dataTransfer
+	defines
+		definesAccessControl
+		definesDesignOf
+		definesDesirable
+		definesMaturity
+	dependsOn
+	develops
+	discloses
+	distributes
+E
+	enforces
+	engages
+	ensure
+		ensureAccountability
+		ensureAccuracy
+		ensureAppropriate
+		ensureApprovedCertification
+		ensureComplianceWith
+		ensureFairProcessing
+		ensureIntegrity
+		ensureLawfulnessProcessing
+		ensuresReferentialIntegrity
+		ensures
+	establish
+	estimate
+	evaluate
+	exercises
+F
+	followsInstructionOf
+	fullfills
+H
+	handles
+	has
+		hasCapability
+		hasCost
+		hasHalfTime
+		hasImportance
+		hasMaturity
+		hasmaturityLevel
+		hasMember
+		hasObligations
+		hasPrice
+		hasRegulatoryRequirements
+		hasRisk
+		hasValue
+I
+	InformationRetrievalSystem
+	implementsAppropriate
+	implies
+		impliesImplementationOf
+		impliesRequirements
+	includes
+	is
+		isClassifiedAs	
+		isAdministeredBy
+		isAnExpense
+		isCategorizedBy
+		isClassifiedBy
+		isComposedOf
+		isDefinedBy
+		isDesignedBy
+		isDisposedBy
+		isEasyToCollect
+		isEasyToDigitize
+		isGovernedBy
+		isHardTo
+		isHostedOn
+		isImplementedBy
+		isManagedBy
+		isMemberOf
+		isMetadataOf
+		isObligatedTo
+			isObligatedToEnsure
+		isOwnedBy
+		isRequiredBy
+		isResponsibleFor
+			isResponsibleForDesignOf
+		isRetrievable
+			isRetrievedBy
+		isSearchable
+			isSearchableBy
+		isSecured
+			isSecuredBy
+		isStored
+			isStoredBy
+		isTaggingOf
+		isTaxonomyOf
+		isUsedBy
+L
+	limits
+		limitsPurpose
+		limitsStoragePeriod
+		limitsArchivePeriod
+M	
+	maintains
+	manages
+	mandates
+	measures
+	mandates
+	mayInvolve
+	minizeAmountOf
+	monitors	
+P		
+	perform
+		performs
+		performIimpactAssessment
+	persues
+	plans
+	processes
+	produces
+	profile
+	promotes
+	protects
+	provides
+		providesCatalogService
+		providesDatabaseService
+		providesSearchService
+			providesFulltextSearchService
+			providesRelationalSearchService
+		providesIndexService
+			providesRelationalIndexService
+			providesFulltextIndexService	
+R
+	referentialIntegrity
+		providesReferentialIntegrity
+		requiresReferentialIntegrity
+	requiresCompliaenceWith	
+S
+	satisfies
+	serves
+	specifies
+	subjectTo
+	submitts
+	supports
+T	
+	tests
+V
+	validateAuthenticity
+	validateConsistency
+	validateProvenance
+	validateCompleteness
+	validateCompliance
+		validateComplianceLevel
+
+###################################################	
+### Data Properties
+###################################################
+category
+classification
+companyType
+dataController
+dataProcesssor
+dataSubject
+dataOwner
+dataSubjectRights
+dataOwnerRights
+lawfulBasis
+isAsset
+isclassified
+isOnHold
+maturityLevel
+metrics
+	cost
+	risk
+	value
+	age
+processingPurpose
+retentionPeriod
+	isexpired
+specialcategory
+type
+###################################################	
+### Annotation Properties
+###################################################
+dc:creator
+
