@@ -1,0 +1,11 @@
+Organizationdomain
+	dcterm:Agent
+	org:Membership
+	org:Organization
+		org:OrganizationalUnit
+		org:FormalOrganization
+			gr:BusinessUnit
+			gr:BusinessEntity
+org:Site
+skos:Concept
+	org:Role
