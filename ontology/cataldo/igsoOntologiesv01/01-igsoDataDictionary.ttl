@@ -1321,6 +1321,12 @@ igso-tmpl:isGovernedBy rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf igso-tmpl:is .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#isGroupOf
+igso-tmpl:isGroupOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf igso-tmpl:is ;
+                    rdfs:domain igso-tmpl:dctype:Collection .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#isHardTo
 igso-tmpl:isHardTo rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf igso-tmpl:is .
@@ -1733,7 +1739,7 @@ igso-tmpl:dataSubjectRights rdf:type owl:DatatypeProperty ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#identifier
 igso-tmpl:identifier rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf skos:notation ;
-                     rdfs:domain igso-tmpl:Organization ;
+                     rdfs:domain igso-tmpl:org:Organization ;
                      rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization." .
 
 
@@ -1810,10 +1816,71 @@ skos:notation rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/dcmitype/dctype:Dataset
+dctype:dctype:Dataset rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:D ;
+                      rdfs:isDefinedBy dctype:Dataset .
+
+
+###  http://purl.org/dc/elements/1.1/Subject
+dc:Subject rdf:type owl:Class ;
+           rdfs:subClassOf igso-tmpl:S ;
+           rdfs:isDefinedBy dc:subject .
+
+
+###  http://purl.org/dc/terms/Location
+dct:Location rdf:type owl:Class ;
+             rdfs:subClassOf dct:LocationPeriodOrJurisdiction ,
+                             igso-tmpl:L .
+
+
+###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
+dct:LocationPeriodOrJurisdiction rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-tmpl:L .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdf:type owl:Class ;
+              rdfs:subClassOf igso-tmpl:M .
+
+
+###  http://purl.org/dc/terms/Period
+dct:Period rdf:type owl:Class ;
+           rdfs:subClassOf dct:LocationPeriodOrJurisdiction ,
+                           igso-tmpl:P .
+
+
+###  http://purl.org/dc/terms/Policy
+dct:Policy rdf:type owl:Class ;
+           rdfs:subClassOf igso-tmpl:P .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:Class ;
+             rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://purl.org/goodrelations/v1#BusinesssFunction
+gr:BusinesssFunction rdf:type owl:Class ;
+                     rdfs:subClassOf igso-tmpl:B ;
+                     rdfs:isDefinedBy gr:BusinessFunction .
+
+
+###  http://purl.org/goodrelations/v1#Offering
+gr:Offering rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:O ;
+            rdfs:isDefinedBy gr:Offering .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#Record
 igso-data:Record rdf:type owl:Class ;
                  rdfs:subClassOf igso-tmpl:R ;
                  owl:disjointWith igso-tmpl:Right .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#A
+igso-tmpl:A rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#ACL
@@ -1828,13 +1895,18 @@ igso-tmpl:AWS rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Acronym
 igso-tmpl:Acronym rdf:type owl:Class ;
-                  rdfs:subClassOf igso-tmpl:DataDictionary ;
+                  rdfs:subClassOf igso-tmpl:A ;
                   owl:disjointWith igso-tmpl:Compensation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Azure
 igso-tmpl:Azure rdf:type owl:Class ;
                 rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#B
+igso-tmpl:B rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#C
@@ -1845,6 +1917,16 @@ igso-tmpl:C rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#CCS
 igso-tmpl:CCS rdf:type owl:Class ;
               rdfs:subClassOf igso-tmpl:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Catalog
+igso-tmpl:Catalog rdf:type owl:Class ;
+                  rdfs:subClassOf igso-tmpl:C ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty igso-tmpl:isGroupOf ;
+                                    owl:someValuesFrom dctype:dctype:Dataset
+                                  ] ;
+                  rdfs:label "Catalog" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Company
@@ -1950,6 +2032,11 @@ igso-tmpl:EnhancedProtection rdf:type owl:Class ;
                              rdfs:subClassOf igso-tmpl:E .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#F
+igso-tmpl:F rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#G
 igso-tmpl:G rdf:type owl:Class ;
             rdfs:subClassOf igso-tmpl:DataDictionary .
@@ -1983,6 +2070,17 @@ igso-tmpl:IRS rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
 igso-tmpl:InformationRetrievalSystem rdf:type owl:Class ;
                                      rdfs:subClassOf igso-tmpl:I .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InteractiveResource
+igso-tmpl:InteractiveResource rdf:type owl:Class ;
+                              rdfs:subClassOf igso-tmpl:I ;
+                              rdfs:isDefinedBy dctype:InteractiveResource .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#J
+igso-tmpl:J rdf:type owl:Class ;
+            rdfs:subClassOf igso-tmpl:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#L
@@ -2101,11 +2199,6 @@ igso-tmpl:Objectives rdf:type owl:Class ;
                      rdfs:subClassOf igso-tmpl:O .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#Organization
-igso-tmpl:Organization rdf:type owl:Class ;
-                       rdfs:subClassOf igso-tmpl:O .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#P
 igso-tmpl:P rdf:type owl:Class ;
             rdfs:subClassOf igso-tmpl:DataDictionary .
@@ -2176,46 +2269,6 @@ igso-tmpl:Right rdf:type owl:Class ;
                 rdfs:subClassOf igso-tmpl:R .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightObject
-igso-tmpl:RightObject rdf:type owl:Class ;
-                      rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToAccess
-igso-tmpl:RightToAccess rdf:type owl:Class ;
-                        rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToDataPortability
-igso-tmpl:RightToDataPortability rdf:type owl:Class ;
-                                 rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToErasure
-igso-tmpl:RightToErasure rdf:type owl:Class ;
-                         rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRectification
-igso-tmpl:RightToRectification rdf:type owl:Class ;
-                               rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRestrictprocessing
-igso-tmpl:RightToRestrictprocessing rdf:type owl:Class ;
-                                    rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedDecisions
-igso-tmpl:RightsRegardingAutomatedDecisions rdf:type owl:Class ;
-                                            rdfs:subClassOf igso-tmpl:Right .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedProfiling
-igso-tmpl:RightsRegardingAutomatedProfiling rdf:type owl:Class ;
-                                            rdfs:subClassOf igso-tmpl:Right .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#S
 igso-tmpl:S rdf:type owl:Class ;
             rdfs:subClassOf igso-tmpl:DataDictionary .
@@ -2272,6 +2325,87 @@ igso-tmpl:VitalInterest rdf:type owl:Class ;
                         rdfs:subClassOf igso-tmpl:V .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Agent
+igso-tmpl:dct:Agent rdf:type owl:Class ;
+                    rdfs:subClassOf igso-tmpl:A .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dct:AgentClass
+igso-tmpl:dct:AgentClass rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:dct:Agent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Jurisdiction
+igso-tmpl:dct:Jurisdiction rdf:type owl:Class ;
+                           rdfs:subClassOf dct:LocationPeriodOrJurisdiction ,
+                                           igso-tmpl:J .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Collection
+igso-tmpl:dctype:Collection rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:C ;
+                            rdfs:isDefinedBy dctype:Collection .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Service
+igso-tmpl:dctype:Service rdf:type owl:Class ;
+                         rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Software
+igso-tmpl:dctype:Software rdf:type owl:Class ;
+                          rdfs:subClassOf igso-tmpl:S .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Text
+igso-tmpl:dctype:Text rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:T .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessEntity
+igso-tmpl:gr:BusinessEntity rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:B ;
+                            rdfs:isDefinedBy gr:BusinessEntity .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:DeliveryMethod
+igso-tmpl:gr:DeliveryMethod rdf:type owl:Class ;
+                            rdfs:subClassOf igso-tmpl:D ;
+                            rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#DeliveryMethod> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
+igso-tmpl:gr:Location rdf:type owl:Class ;
+                      rdfs:subClassOf igso-tmpl:L ;
+                      rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Location> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrService
+igso-tmpl:gr:ProductOrService rdf:type owl:Class ;
+                              rdfs:subClassOf dct:Period ;
+                              rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrService> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrServiceModel
+igso-tmpl:gr:ProductOrServiceModel rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-tmpl:P ;
+                                   rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel> ;
+                                   rdfs:seeAlso """GoodRelations ontology for E-Commenrce UML Class Diagram
+https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#org:FormalOrganization
+igso-tmpl:org:FormalOrganization rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-tmpl:F ;
+                                 rdfs:isDefinedBy org:FormalOrganization .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#org:Organization
+igso-tmpl:org:Organization rdf:type owl:Class ;
+                           rdfs:subClassOf igso-tmpl:O ;
+                           rdfs:isDefinedBy org:Organization .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-org#Company
 igso-org:Company rdf:type owl:Class .
 
@@ -2298,6 +2432,23 @@ foaf:Person rdf:type owl:Class ;
 ###  http://purl.org/dc/terms/
 dct: rdf:type owl:NamedIndividual ;
      rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
+
+
+###  http://purl.org/goodrelations/v1#Business
+gr:Business rdf:type owl:NamedIndividual ;
+            rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Business> .
+
+
+###  http://purl.org/goodrelations/v1#Dispose
+gr:Dispose rdf:type owl:NamedIndividual ,
+                    gr:BusinesssFunction ;
+           rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Dispose> .
+
+
+###  http://purl.org/goodrelations/v1#ProvideService
+gr:ProvideService rdf:type owl:NamedIndividual ,
+                           gr:BusinesssFunction ;
+                  rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProvideService> .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#ACL
@@ -2745,9 +2896,91 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                           rdfs:label "Transformational"@en .
 
 
+###  https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser
+<https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> rdf:type owl:NamedIndividual ;
+                                                                   rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> .
+
+
 #################################################################
 #    General axioms
 #################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dct:Standard
+                igso-tmpl:SecurityMeasure
+                igso-tmpl:SensitiveData
+                igso-tmpl:SpecialCategory
+                igso-tmpl:Strategy
+                igso-tmpl:SubProcessor
+                igso-tmpl:dctype:Service
+                igso-tmpl:dctype:Software
+                igso-tmpl:dctype:Text
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:A
+                igso-tmpl:B
+                igso-tmpl:C
+                igso-tmpl:D
+                igso-tmpl:E
+                igso-tmpl:F
+                igso-tmpl:G
+                igso-tmpl:I
+                igso-tmpl:J
+                igso-tmpl:L
+                igso-tmpl:M
+                igso-tmpl:O
+                igso-tmpl:P
+                igso-tmpl:R
+                igso-tmpl:S
+                igso-tmpl:T
+                igso-tmpl:V
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:A
+                igso-tmpl:C
+                igso-tmpl:D
+                igso-tmpl:E
+                igso-tmpl:F
+                igso-tmpl:G
+                igso-tmpl:I
+                igso-tmpl:J
+                igso-tmpl:L
+                igso-tmpl:M
+                igso-tmpl:O
+                igso-tmpl:P
+                igso-tmpl:R
+                igso-tmpl:S
+                igso-tmpl:T
+                igso-tmpl:V
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:A
+                igso-tmpl:C
+                igso-tmpl:D
+                igso-tmpl:E
+                igso-tmpl:G
+                igso-tmpl:I
+                igso-tmpl:J
+                igso-tmpl:L
+                igso-tmpl:M
+                igso-tmpl:O
+                igso-tmpl:P
+                igso-tmpl:R
+                igso-tmpl:S
+                igso-tmpl:T
+                igso-tmpl:V
+              )
+] .
+
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-tmpl:ACL
@@ -2770,7 +3003,7 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                 igso-tmpl:C
                 igso-tmpl:Company
                 igso-tmpl:Compensation
-                igso-tmpl:Organization
+                igso-tmpl:org:Organization
               )
 ] .
 
@@ -2785,12 +3018,25 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                 igso-tmpl:L
                 igso-tmpl:M
                 igso-tmpl:O
-                igso-tmpl:Organization
                 igso-tmpl:P
                 igso-tmpl:R
                 igso-tmpl:S
                 igso-tmpl:T
                 igso-tmpl:V
+                igso-tmpl:org:Organization
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:Company
+                igso-tmpl:Compensation
+                igso-tmpl:Consistency
+                igso-tmpl:ContractualRelationship
+                igso-tmpl:Cooperation
+                igso-tmpl:CorporatePolicy
+                igso-tmpl:CorporateRule
+                igso-tmpl:dctype:Collection
               )
 ] .
 
@@ -2802,6 +3048,17 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                 igso-tmpl:Cooperation
                 igso-tmpl:CorporatePolicy
                 igso-tmpl:CorporateRule
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-tmpl:DataDictionary
+                igso-tmpl:gr:DeliveryMethod
+                igso-tmpl:gr:Location
+                igso-tmpl:gr:ProductOrService
+                igso-tmpl:gr:ProductOrServiceModel
+                igso-org:Company
               )
 ] .
 
@@ -2863,19 +3120,6 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
   owl:members ( igso-tmpl:RecordsCategory
                 igso-tmpl:RecordsTaxonomy
                 igso-tmpl:Remedy
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( igso-tmpl:RightObject
-                igso-tmpl:RightToAccess
-                igso-tmpl:RightToDataPortability
-                igso-tmpl:RightToErasure
-                igso-tmpl:RightToRectification
-                igso-tmpl:RightToRestrictprocessing
-                igso-tmpl:RightsRegardingAutomatedDecisions
-                igso-tmpl:RightsRegardingAutomatedProfiling
               )
 ] .
 
