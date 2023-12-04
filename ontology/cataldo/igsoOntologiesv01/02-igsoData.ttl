@@ -62,6 +62,21 @@ igso-data:Asset rdf:type owl:Class ;
                 rdfs:subClassOf igso-data:Data .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessAsset
+igso-data:BusinessAsset rdf:type owl:Class ;
+                        rdfs:subClassOf igso-data:Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessData
+igso-data:BusinessData rdf:type owl:Class ;
+                       rdfs:subClassOf igso-data:Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessPartnerData
+igso-data:BusinessPartnerData rdf:type owl:Class ;
+                              rdfs:subClassOf igso-data:Data .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentAsset
 igso-data:ContentAsset rdf:type owl:Class ;
                        rdfs:subClassOf igso-data:Asset ;
@@ -71,6 +86,16 @@ igso-data:ContentAsset rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentObject
 igso-data:ContentObject rdf:type owl:Class ;
                         rdfs:subClassOf igso-data:DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ContractorData
+igso-data:ContractorData rdf:type owl:Class ;
+                         rdfs:subClassOf igso-data:Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#CustomerData
+igso-data:CustomerData rdf:type owl:Class ;
+                       rdfs:subClassOf igso-data:Data .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Data
@@ -85,6 +110,16 @@ igso-data:DataAsset rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DataDomain
 igso-data:DataDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DesignAsset
+igso-data:DesignAsset rdf:type owl:Class ;
+                      rdfs:subClassOf igso-data:Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DisposionRecord
+igso-data:DisposionRecord rdf:type owl:Class ;
+                          rdfs:subClassOf igso-data:Disposition .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Disposition
@@ -115,6 +150,26 @@ igso-data:DispositionTrigger rdf:type owl:Class ;
                              rdfs:subClassOf igso-data:Disposition .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#HRAsset
+igso-data:HRAsset rdf:type owl:Class ;
+                  rdfs:subClassOf igso-data:Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#HRData
+igso-data:HRData rdf:type owl:Class ;
+                 rdfs:subClassOf igso-data:Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#IPAsset
+igso-data:IPAsset rdf:type owl:Class ;
+                  rdfs:subClassOf igso-data:Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ITAsset
+igso-data:ITAsset rdf:type owl:Class ;
+                  rdfs:subClassOf igso-data:Asset .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#Information
 igso-data:Information rdf:type owl:Class ;
                       rdfs:subClassOf igso-data:Data .
@@ -135,15 +190,20 @@ igso-data:Record rdf:type owl:Class ;
                  rdfs:subClassOf igso-data:Data .
 
 
-###  http://www.example.org/cm/igso/2023/igso-data#RecordCategory
-igso-data:RecordCategory rdf:type owl:Class ;
-                         rdfs:subClassOf igso-data:Record ;
-                         owl:disjointWith igso-data:Recordtaxonomy .
+###  http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
+igso-data:RecordsCatalog rdf:type owl:Class ;
+                         rdfs:subClassOf igso-data:Record .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Recordtaxonomy
 igso-data:Recordtaxonomy rdf:type owl:Class ;
-                         rdfs:subClassOf igso-data:Record .
+                         rdfs:subClassOf igso-data:Record ;
+                         owl:disjointWith igso-data:RetensionRecord .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
+igso-data:RetensionRecord rdf:type owl:Class ;
+                          rdfs:subClassOf igso-data:Retention .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Retention
@@ -177,9 +237,49 @@ igso-data:Rule rdf:type owl:Class ;
                rdfs:subClassOf igso-data:Data .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#Storage
+igso-data:Storage rdf:type owl:Class ;
+                  rdfs:subClassOf igso-data:Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageInformation
+igso-data:StorageInformation rdf:type owl:Class ;
+                             rdfs:subClassOf igso-data:Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageLocation
+igso-data:StorageLocation rdf:type owl:Class ;
+                          rdfs:subClassOf igso-data:Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StoragePolicy
+igso-data:StoragePolicy rdf:type owl:Class ;
+                        rdfs:subClassOf igso-data:Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageRule
+igso-data:StorageRule rdf:type owl:Class ;
+                      rdfs:subClassOf igso-data:Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TranferRecord
+igso-data:TranferRecord rdf:type owl:Class ;
+                        rdfs:subClassOf igso-data:Transfer .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#Transfer
 igso-data:Transfer rdf:type owl:Class ;
                    rdfs:subClassOf igso-data:DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransferPolicy
+igso-data:TransferPolicy rdf:type owl:Class ;
+                         rdfs:subClassOf igso-data:Transfer .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransferRule
+igso-data:TransferRule rdf:type owl:Class ;
+                       rdfs:subClassOf igso-data:Transfer .
 
 
 #################################################################
@@ -637,6 +737,11 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-data:AccessControlList
                 igso-data:Asset
+                igso-data:BusinessData
+                igso-data:BusinessPartnerData
+                igso-data:ContractorData
+                igso-data:CustomerData
+                igso-data:HRData
                 igso-data:Information
                 igso-data:Metadata
                 igso-data:Policy
@@ -647,11 +752,81 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:AccessControlList
+                igso-data:Asset
+                igso-data:BusinessData
+                igso-data:BusinessPartnerData
+                igso-data:ContractorData
+                igso-data:CustomerData
+                igso-data:HRData
+                igso-data:Information
+                igso-data:Metadata
+                igso-data:Policy
+                igso-data:Record
+                igso-data:Rule
+                igso-data:Storage
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:AccessControlList
+                igso-data:Asset
+                igso-data:Information
+                igso-data:Metadata
+                igso-data:Policy
+                igso-data:Record
+                igso-data:Rule
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:BusinessAsset
+                igso-data:ContentAsset
+                igso-data:DataAsset
+                igso-data:DesignAsset
+                igso-data:HRAsset
+                igso-data:IPAsset
+                igso-data:ITAsset
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-data:ContentObject
                 igso-data:Data
                 igso-data:Disposition
                 igso-data:Retention
                 igso-data:Transfer
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:RecordsCatalog
+                igso-data:Recordtaxonomy
+                igso-data:RetensionRecord
+                igso-ddy:RecordsCategory
+                igso-ddy:RecordsTaxonomy
+                igso-ddy:Remedy
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:StorageInformation
+                igso-data:StorageLocation
+                igso-data:StoragePolicy
+                igso-data:StorageRule
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-data:TranferRecord
+                igso-data:TransferPolicy
+                igso-data:TransferRule
               )
 ] .
 

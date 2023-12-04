@@ -2819,6 +2819,11 @@ igso-ml:Department rdf:type owl:Class ;
                    rdfs:label "Department"@de .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ml#DesignComponent
+igso-ml:DesignComponent rdf:type owl:Class ;
+                        rdfs:subClassOf igso-ml:IGSDesignDomain .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ml#DesirableBehavior
 igso-ml:DesirableBehavior rdf:type owl:Class ;
                           rdfs:subClassOf igso-ml:DataDictionary ;
@@ -2898,7 +2903,7 @@ igso-ml:DynamicScale rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ECMComponent
 igso-ml:ECMComponent rdf:type owl:Class ;
-                     rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                     rdfs:subClassOf igso-ml:DesignComponent ;
                      rdfs:label "ECMComponent"@de .
 
 
@@ -3045,7 +3050,7 @@ igso-ml:FullTextServerCMP rdf:type owl:Class ;
                                                             igso-ml:OWLNamedIndividual_b8f8fb85_8dc6_4395_94bb_bc9951576858
                                                           )
                                               ] ;
-                          rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                          rdfs:subClassOf igso-ml:DesignComponent ;
                           rdfs:label "FullTextServerCMP" .
 
 
@@ -3252,12 +3257,13 @@ igso-ml:IGServiceTemplateDomain rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#IMSComponent
 igso-ml:IMSComponent rdf:type owl:Class ;
+                     rdfs:subClassOf igso-ml:DesignComponent ;
                      rdfs:label "IMSComponent"@de .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#IM_CMP
 igso-ml:IM_CMP rdf:type owl:Class ;
-               rdfs:subClassOf igso-ml:IGSDesignDomain ;
+               rdfs:subClassOf igso-ml:DesignComponent ;
                rdfs:comment "Information Management (IM) component"@en ;
                rdfs:label "IMCMP"@de .
 
@@ -4712,7 +4718,7 @@ igso-ml:OWLClass_a03a90df_bdf1_46b5_9e17_3d08d47c5056 rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#OWLClass_a0fcf7f5_701d_4d8f_b387_886197d6c721
 igso-ml:OWLClass_a0fcf7f5_701d_4d8f_b387_886197d6c721 rdf:type owl:Class ;
-                                                      rdfs:subClassOf igso-ml:IGSDesignDomain ,
+                                                      rdfs:subClassOf igso-ml:DesignComponent ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty igso-ml:OWLObjectProperty_257a4fb3_81b1_4a9a_8cd4_c543f7ad086b ;
                                                                         owl:someValuesFrom igso-ml:RDBMSystem
@@ -5355,7 +5361,7 @@ igso-ml:PolicyType rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#PortalCMP
 igso-ml:PortalCMP rdf:type owl:Class ;
-                  rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                  rdfs:subClassOf igso-ml:DesignComponent ;
                   rdfs:label "PortalCMP" .
 
 
@@ -5501,7 +5507,7 @@ igso-ml:RIMSolution rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#RIM_CMP
 igso-ml:RIM_CMP rdf:type owl:Class ;
-                rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                rdfs:subClassOf igso-ml:DesignComponent ;
                 rdfs:label "RIMComponent"@de .
 
 
@@ -5585,7 +5591,7 @@ igso-ml:RegulatoryRequirement rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#RelationalDatabaseCMP
 igso-ml:RelationalDatabaseCMP rdf:type owl:Class ;
-                              rdfs:subClassOf igso-ml:IGSDesignDomain ;
+                              rdfs:subClassOf igso-ml:DesignComponent ;
                               rdfs:label "RelationalDatabaseCMP" .
 
 
@@ -5838,7 +5844,7 @@ igso-ml:SensitiveData rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#ServiceLevelAgreement
 igso-ml:ServiceLevelAgreement rdf:type owl:Class ;
-                              rdfs:subClassOf igso-ml:IGSDesignDomain .
+                              rdfs:subClassOf igso-ml:IGServiceTemplateDomain .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ml#Silver
@@ -7093,6 +7099,25 @@ igso-ml:Privilege rdfs:label "Privilege"@de .
                 igso-ml:OWLClass_c4acbfd7_cb6f_433f_83b6_9837a1cfac3f
                 igso-ml:OWLClass_d5994a51_7e34_49a6_9a59_7f853839b521
                 igso-ml:OWLClass_d6880a2d_3b6f_4fe4_930a_d1d0404bd1f1
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ml:DataArchitectureManagement
+                igso-ml:DesignComponent
+                igso-ml:ECMComponent
+                igso-ml:GovernanceComponent
+                igso-ml:IM_CMP
+                igso-ml:OWLClass_359dbe5e_fbab_4ea1_a3ae_59e1e0347a9e
+                igso-ml:OWLClass_a0fcf7f5_701d_4d8f_b387_886197d6c721
+                igso-ml:PortalCMP
+                igso-ml:RIM_CMP
+                igso-ml:RelationalDatabaseCMP
+                igso-ml:Requirement
+                igso-ml:ServiceLevelAgreement
+                igso-ml:Solution
+                igso-ml:System
               )
 ] .
 

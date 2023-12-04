@@ -48,4 +48,681 @@
                                                  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
                                                  owl:versionInfo "0.8" .
 
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-plt#AmazonCloud
+igso-plt:AmazonCloud rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:CloudPlattform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ApplicationComponentProxy
+igso-plt:ApplicationComponentProxy rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-plt:CloudIntegration .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ApplicationWorkload
+igso-plt:ApplicationWorkload rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudComputingFundametal .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#BatchProcessingComponent
+igso-plt:BatchProcessingComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#BlobStorage
+igso-plt:BlobStorage rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#BlockStorage
+igso-plt:BlockStorage rdf:type owl:Class ;
+                      rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudApplicationArchitecturePattern
+igso-plt:CloudApplicationArchitecturePattern rdf:type owl:Class ;
+                                             rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudApplicationComponent
+igso-plt:CloudApplicationComponent rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-plt:CloudApplicationArchitecturePattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudApplicationManagementPattern
+igso-plt:CloudApplicationManagementPattern rdf:type owl:Class ;
+                                           rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudComputingFundametal
+igso-plt:CloudComputingFundametal rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudComputingPattern
+igso-plt:CloudComputingPattern rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:PlatformDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudDeploymentModel
+igso-plt:CloudDeploymentModel rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:CloudComputingFundametal .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudEnvironment
+igso-plt:CloudEnvironment rdf:type owl:Class ;
+                          rdfs:subClassOf igso-plt:CloudOfferingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudIntegration
+igso-plt:CloudIntegration rdf:type owl:Class ;
+                          rdfs:subClassOf igso-plt:CloudApplicationArchitecturePattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudOfferingPattern
+igso-plt:CloudOfferingPattern rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudPlatformService
+igso-plt:CloudPlatformService rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:CloudOfferingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudPlattform
+igso-plt:CloudPlattform rdf:type owl:Class ;
+                        rdfs:subClassOf igso-plt:PlatformDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CloudServiceModel
+igso-plt:CloudServiceModel rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:CloudComputingFundametal .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CommuicationOffering
+igso-plt:CommuicationOffering rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:CloudOfferingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CommunityCloud
+igso-plt:CommunityCloud rdf:type owl:Class ;
+                        rdfs:subClassOf igso-plt:CloudDeploymentModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CompliantDataReplication
+igso-plt:CompliantDataReplication rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-plt:CloudIntegration .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#CompositeCloudApplicationPattern
+igso-plt:CompositeCloudApplicationPattern rdf:type owl:Class ;
+                                          rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ContentDistributionNetwork
+igso-plt:ContentDistributionNetwork rdf:type owl:Class ;
+                                    rdfs:subClassOf igso-plt:NativeCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ContinuouslyChangingWorkload
+igso-plt:ContinuouslyChangingWorkload rdf:type owl:Class ;
+                                      rdfs:subClassOf igso-plt:ApplicationWorkload .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#DataAbstractor
+igso-plt:DataAbstractor rdf:type owl:Class ;
+                        rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#DataAccessComponent
+igso-plt:DataAccessComponent rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#DistributedApplication
+igso-plt:DistributedApplication rdf:type owl:Class ;
+                                rdfs:subClassOf igso-plt:FundamentalCloudArchitecture ;
+                                owl:disjointWith igso-plt:LooseCoupling .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticInfrastructure
+igso-plt:ElasticInfrastructure rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:CloudEnvironment .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticLoadBalancer
+igso-plt:ElasticLoadBalancer rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticPlatform
+igso-plt:ElasticPlatform rdf:type owl:Class ;
+                         rdfs:subClassOf igso-plt:CloudEnvironment .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticQueue
+igso-plt:ElasticQueue rdf:type owl:Class ;
+                      rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticityManagementProcess
+igso-plt:ElasticityManagementProcess rdf:type owl:Class ;
+                                     rdfs:subClassOf igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ElasticityManager
+igso-plt:ElasticityManager rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#EnvironmentBasedAvailability
+igso-plt:EnvironmentBasedAvailability rdf:type owl:Class ;
+                                      rdfs:subClassOf igso-plt:CloudEnvironment .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#EventualConsistency
+igso-plt:EventualConsistency rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ExecutionEnvironment
+igso-plt:ExecutionEnvironment rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:ProcessingOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#FeatureFlagManagementProcess
+igso-plt:FeatureFlagManagementProcess rdf:type owl:Class ;
+                                      rdfs:subClassOf igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#FundamentalCloudArchitecture
+igso-plt:FundamentalCloudArchitecture rdf:type owl:Class ;
+                                      rdfs:subClassOf igso-plt:CloudApplicationArchitecturePattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#GoogleCloud
+igso-plt:GoogleCloud rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:CloudPlattform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridApplicationFunction
+igso-plt:HybridApplicationFunction rdf:type owl:Class ;
+                                   rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridBackend
+igso-plt:HybridBackend rdf:type owl:Class ;
+                       rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridBackup
+igso-plt:HybridBackup rdf:type owl:Class ;
+                      rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridCloud
+igso-plt:HybridCloud rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:CloudDeploymentModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridCloudApplication
+igso-plt:HybridCloudApplication rdf:type owl:Class ;
+                                rdfs:subClassOf igso-plt:CompositeCloudApplicationPattern ;
+                                owl:disjointWith igso-plt:NativeCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridData
+igso-plt:HybridData rdf:type owl:Class ;
+                    rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridProcessing
+igso-plt:HybridProcessing rdf:type owl:Class ;
+                          rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#HybridUserInterface
+igso-plt:HybridUserInterface rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:HybridCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Hypervisor
+igso-plt:Hypervisor rdf:type owl:Class ;
+                    rdfs:subClassOf igso-plt:ProcessingOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#IBMCloud
+igso-plt:IBMCloud rdf:type owl:Class ;
+                  rdfs:subClassOf igso-plt:CloudPlattform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#IdempotentProcessor
+igso-plt:IdempotentProcessor rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Infrastructure-as-a-Service
+igso-plt:Infrastructure-as-a-Service rdf:type owl:Class ;
+                                     rdfs:subClassOf igso-plt:CloudServiceModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Integrationprovider
+igso-plt:Integrationprovider rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudIntegration .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#KeyValueStore
+igso-plt:KeyValueStore rdf:type owl:Class ;
+                       rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#KubernetesPattern
+igso-plt:KubernetesPattern rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:CloudComputingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#LooseCoupling
+igso-plt:LooseCoupling rdf:type owl:Class ;
+                       rdfs:subClassOf igso-plt:FundamentalCloudArchitecture ,
+                                       igso-plt:Multi-Tenancy .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ManagedConfiguration
+igso-plt:ManagedConfiguration rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ManagementComponent
+igso-plt:ManagementComponent rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudApplicationManagementPattern ;
+                             owl:disjointWith igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ManagementProcess
+igso-plt:ManagementProcess rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:CloudApplicationManagementPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#MapReduce
+igso-plt:MapReduce rdf:type owl:Class ;
+                   rdfs:subClassOf igso-plt:ProcessingOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#MessageMover
+igso-plt:MessageMover rdf:type owl:Class ;
+                      rdfs:subClassOf igso-plt:CloudIntegration .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#MicrosoftCloud
+igso-plt:MicrosoftCloud rdf:type owl:Class ;
+                        rdfs:subClassOf igso-plt:CloudPlattform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Multi-ComponentImage
+igso-plt:Multi-ComponentImage rdf:type owl:Class ;
+                              rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Multi-Tenancy
+igso-plt:Multi-Tenancy rdf:type owl:Class ;
+                       rdfs:subClassOf igso-plt:CloudApplicationArchitecturePattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#NativeCloudApplication
+igso-plt:NativeCloudApplication rdf:type owl:Class ;
+                                rdfs:subClassOf igso-plt:CompositeCloudApplicationPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Node-Based-Availability
+igso-plt:Node-Based-Availability rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-plt:CloudEnvironment .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Once-in-a-LifetimeWorkload
+igso-plt:Once-in-a-LifetimeWorkload rdf:type owl:Class ;
+                                    rdfs:subClassOf igso-plt:ApplicationWorkload .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#PeriodicWorkload
+igso-plt:PeriodicWorkload rdf:type owl:Class ;
+                          rdfs:subClassOf igso-plt:ApplicationWorkload .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Platform-as-a-Service
+igso-plt:Platform-as-a-Service rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:CloudServiceModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#PlatformDomain
+igso-plt:PlatformDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#PrivateCloud
+igso-plt:PrivateCloud rdf:type owl:Class ;
+                      rdfs:subClassOf igso-plt:CloudDeploymentModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ProcessingComponent
+igso-plt:ProcessingComponent rdf:type owl:Class ;
+                             rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ProcessingOffering
+igso-plt:ProcessingOffering rdf:type owl:Class ;
+                            rdfs:subClassOf igso-plt:CloudOfferingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ProviderAdapter
+igso-plt:ProviderAdapter rdf:type owl:Class ;
+                         rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#PublicCloud
+igso-plt:PublicCloud rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:CloudDeploymentModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#RadhatCloud
+igso-plt:RadhatCloud rdf:type owl:Class ;
+                     rdfs:subClassOf igso-plt:CloudPlattform .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#RelationalDataBase
+igso-plt:RelationalDataBase rdf:type owl:Class ;
+                            rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#ResiliencyManagementProcess
+igso-plt:ResiliencyManagementProcess rdf:type owl:Class ;
+                                     rdfs:subClassOf igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#RestrictedDataAccessComponent
+igso-plt:RestrictedDataAccessComponent rdf:type owl:Class ;
+                                       rdfs:subClassOf igso-plt:CloudIntegration .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#SharedComponent
+igso-plt:SharedComponent rdf:type owl:Class ;
+                         rdfs:subClassOf igso-plt:Multi-Tenancy .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Software-as-a-Service
+igso-plt:Software-as-a-Service rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:CloudServiceModel .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StandbyPoolingProcess
+igso-plt:StandbyPoolingProcess rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StatefulComponent
+igso-plt:StatefulComponent rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StaticWorkload
+igso-plt:StaticWorkload rdf:type owl:Class ;
+                        rdfs:subClassOf igso-plt:ApplicationWorkload .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StorageOffering
+igso-plt:StorageOffering rdf:type owl:Class ;
+                         rdfs:subClassOf igso-plt:CloudOfferingPattern .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StorageSystem
+igso-plt:StorageSystem rdf:type owl:Class ;
+                       rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#StrinctConsistency
+igso-plt:StrinctConsistency rdf:type owl:Class ;
+                            rdfs:subClassOf igso-plt:StorageOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Tenant-IsolatedComponent
+igso-plt:Tenant-IsolatedComponent rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-plt:Multi-Tenancy .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Three-TierCloudApplication
+igso-plt:Three-TierCloudApplication rdf:type owl:Class ;
+                                    rdfs:subClassOf igso-plt:NativeCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Timeout-BasedMessageProcessor
+igso-plt:Timeout-BasedMessageProcessor rdf:type owl:Class ;
+                                       rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Transaction-BasedProcessor
+igso-plt:Transaction-BasedProcessor rdf:type owl:Class ;
+                                    rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Two-TierCloudApplication
+igso-plt:Two-TierCloudApplication rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-plt:NativeCloudApplication .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#UnpredictableWorkload
+igso-plt:UnpredictableWorkload rdf:type owl:Class ;
+                               rdfs:subClassOf igso-plt:ApplicationWorkload .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#UpdateTransitionProcess
+igso-plt:UpdateTransitionProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-plt:ManagementProcess .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#UserInterfaceComponent
+igso-plt:UserInterfaceComponent rdf:type owl:Class ;
+                                rdfs:subClassOf igso-plt:CloudApplicationComponent .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#VirtualNetworking
+igso-plt:VirtualNetworking rdf:type owl:Class ;
+                           rdfs:subClassOf igso-plt:CommuicationOffering .
+
+
+###  http://www.example.org/cm/igso/2023/igso-plt#Watchdog
+igso-plt:Watchdog rdf:type owl:Class ;
+                  rdfs:subClassOf igso-plt:ManagementComponent .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-ddy:DataDictionary
+                igso-org:Company
+                igso-plt:PlatformDomain
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:AmazonCloud
+                igso-plt:CloudComputingPattern
+                igso-plt:GoogleCloud
+                igso-plt:IBMCloud
+                igso-plt:MicrosoftCloud
+                igso-plt:RadhatCloud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ApplicationComponentProxy
+                igso-plt:CompliantDataReplication
+                igso-plt:Integrationprovider
+                igso-plt:MessageMover
+                igso-plt:RestrictedDataAccessComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ApplicationWorkload
+                igso-plt:CloudDeploymentModel
+                igso-plt:CloudServiceModel
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:BatchProcessingComponent
+                igso-plt:DataAbstractor
+                igso-plt:DataAccessComponent
+                igso-plt:IdempotentProcessor
+                igso-plt:Multi-ComponentImage
+                igso-plt:ProcessingComponent
+                igso-plt:StatefulComponent
+                igso-plt:Timeout-BasedMessageProcessor
+                igso-plt:Transaction-BasedProcessor
+                igso-plt:UserInterfaceComponent
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:BlobStorage
+                igso-plt:BlockStorage
+                igso-plt:EventualConsistency
+                igso-plt:KeyValueStore
+                igso-plt:RelationalDataBase
+                igso-plt:StorageSystem
+                igso-plt:StrinctConsistency
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:CloudApplicationArchitecturePattern
+                igso-plt:CloudApplicationManagementPattern
+                igso-plt:CloudComputingFundametal
+                igso-plt:CloudOfferingPattern
+                igso-plt:CompositeCloudApplicationPattern
+                igso-plt:KubernetesPattern
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:CloudApplicationComponent
+                igso-plt:CloudIntegration
+                igso-plt:FundamentalCloudArchitecture
+                igso-plt:Multi-Tenancy
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:CloudEnvironment
+                igso-plt:CloudPlatformService
+                igso-plt:CommuicationOffering
+                igso-plt:ProcessingOffering
+                igso-plt:StorageOffering
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:CommunityCloud
+                igso-plt:HybridCloud
+                igso-plt:PrivateCloud
+                igso-plt:PublicCloud
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ContentDistributionNetwork
+                igso-plt:Three-TierCloudApplication
+                igso-plt:Two-TierCloudApplication
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ContinuouslyChangingWorkload
+                igso-plt:Once-in-a-LifetimeWorkload
+                igso-plt:PeriodicWorkload
+                igso-plt:StaticWorkload
+                igso-plt:UnpredictableWorkload
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ElasticInfrastructure
+                igso-plt:ElasticPlatform
+                igso-plt:EnvironmentBasedAvailability
+                igso-plt:Node-Based-Availability
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ElasticLoadBalancer
+                igso-plt:ElasticQueue
+                igso-plt:ElasticityManager
+                igso-plt:ManagedConfiguration
+                igso-plt:ProviderAdapter
+                igso-plt:Watchdog
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ElasticityManagementProcess
+                igso-plt:FeatureFlagManagementProcess
+                igso-plt:ResiliencyManagementProcess
+                igso-plt:StandbyPoolingProcess
+                igso-plt:UpdateTransitionProcess
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:ExecutionEnvironment
+                igso-plt:Hypervisor
+                igso-plt:MapReduce
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:HybridApplicationFunction
+                igso-plt:HybridBackend
+                igso-plt:HybridBackup
+                igso-plt:HybridData
+                igso-plt:HybridProcessing
+                igso-plt:HybridUserInterface
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:Infrastructure-as-a-Service
+                igso-plt:Platform-as-a-Service
+                igso-plt:Software-as-a-Service
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-plt:LooseCoupling
+                igso-plt:SharedComponent
+                igso-plt:Tenant-IsolatedComponent
+              )
+] .
+
+
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
