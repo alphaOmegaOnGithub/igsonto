@@ -1672,6 +1672,16 @@ igso-ddy:validateProvenance rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf igso-ddy:V .
 
 
+###  http://www.example.org/cm/igso/2023/igso-jur#isRegulatedBy
+igso-jur:isRegulatedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf igso-ddy:is .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#regulates
+igso-jur:regulates rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf igso-ddy:R .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -1810,9 +1820,222 @@ skos:notation rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
+igso-ddy:gr:Location owl:equivalentClass igso-jur:Location .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article05GDPR
+igso-jur:Article05GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter02 ;
+                       rdfs:comment """Article 5 - Principles relating to processing of personal data:
+- Lawfulness, fairness, and transparency
+- Purpose limitation
+- Data minimization
+- Accuracy
+- Storage limitation
+- Integrity and confidentiality""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article06GDPR
+igso-jur:Article06GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter02 ;
+                       rdfs:comment """Article 6 - Lawfulness of processing:
+- Lawful basis for processing personal data 
+requires a consent
+requires a contract, 
+fullfilment if legal obligation 
+relate to vital interests
+requiedy by  public task
+justified by legitimate interests""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article08GDPR
+igso-jur:Article08GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter02 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article09GDPR
+igso-jur:Article09GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter02 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article10GDPR
+igso-jur:Article10GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article11GDPR
+igso-jur:Article11GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article12GDPR
+igso-jur:Article12GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 ;
+                       rdfs:comment """Article 12 - Transparent information, communication, and modalities for the exercise of rights of the data subject:
+- Right to be informed about the processing of personal data
+- Right to access personal data
+- Right to rectification of inaccurate data
+- Right to erasure (right to be forgotten)
+- Right to restrict processing
+- Right to data portability
+- Right to object to processing
+- Rights related to automated decision-making and profiling""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article13GDPR
+igso-jur:Article13GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article14GDPR
+igso-jur:Article14GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article15GDPR
+igso-jur:Article15GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty igso-ddy:specifies ;
+                                         owl:someValuesFrom igso-jur:RightToAccess
+                                       ] ;
+                       dct:source "CT 28-23" ;
+                       rdfs:comment """Das Recht auf Auskunft nach Artikel 15 der Datenschutz-Grundverordnung (DSGVO).
+nur wer weiß, welche personenbezogenen Daten über ihn gespeichert sind, kann weitere Ansprüche erheben, beispielsweise die Löschung dieserDaten. 
+Die DSGVO definiert keinerlei besondere Voraussetzungen für den Anspruch: Auch aus datenschutzfremden Motiven oder reiner Neugier heraus gestellte Anfragen müssen Datenverarbeiter, also die nach DSGVO „Verantwortlichen“, beantworten.
+Art. 15 DSGVO gewährt das Recht auf vollständige Information über alle personenbezogenen Daten, die der Verantwortliche über die anfragende Person bei sich vorhält. Gerade bei langjährigen Kundenbeziehungen oder Arbeitsverhältnissen kann da einiges zusammenkommen, und zwar auch in abgelegenen Ecken der IT-Landschaft. Unternehmen tun also gut daran, diese Daten so zu strukturieren, dass sie sie später ohne allzu großen Aufwand zusammentragen können.
+Inhaltlich handelt es sich bei Art. 15 DSGVO um eine recht komplexe Vorschrift, die nicht nur das „Was“ einer  uskunftserteilung, sondern auch das „Ob“ und das „Wie“ regelt. In den letzten Jahren haben sich viele Gerichte in den EU-Mitgliedsstaaten mit deren Ausleung beschäftigt. 2023 musste auch der Europäische Gerichtshof (EuGH) als höchste Instanz mehrfach Fragen von nationalen Gerichten zu Art. 15 beantworten. Kostenfreie Auskunft In der jüngsten Entscheidung des Gerichts vom 26. Oktober (Az. C-307/22) ging es um die Frage, ob ein Patient einen Anspruch darauf hat, von seiner Zahnärztin kostenlos eine Kopie seiner Patientenakte zu erhalten. Die hatte er angefordert, um anschließend Haftungsansprüche wegen Behandlungsfehlern geltend zu machen. Die Ärztin hatte eine Gratisauskunft verweigert und Geld für die Kopie der Akte verlangt. In seiner Entscheidung stellte der EuGH fest, dass die DSGVO dem Patienten das Recht einräumt, eine Erstkopie seiner Patientenakte zu erhalten – und zwar grundsätzlich kostenlos. Er müsse seinen Antrag nicht begründen. Auch zum Umfang des Auskunftsrechts äußerte sich der EuGH: Der Patient habe das Recht, eine vollständige Kopie aller in seiner Patientenakte enthaltenen Dokumente zu erhalten. Dazu gehörten im konkreten Fall Informationen wie Diagnosen, Untersuchungsergebnisse, Befunde der behandelnden Ärzte und Angaben  zu Behandlungen oder Eingriffen. Einen ähnlichen Sachverhalt hatte der EuGH im Juni 2023 entschieden (Az.C-579/21). Dem Urteil zufolge umfasst das Auskunftsrecht auch Informationen darüber, wann und aus welchen Gründen auf die personenbezogenen Daten des Betroffenen zugegriffen wurde. 
+Es ging um einen Fall aus Finnland. Ein ehemaliger Bankangestellter hatte erfahren, dass mehrere Mitarbeiter der Bank auf seine Daten zugegriffen hatten. Da er bezweifelte, dass diese Abfragen rechtmäßig waren, verlangte er Auskunft dazu. Der EuGH stellte in seinem Urteil fest, dass das Auskunftsrecht Zeitpunkt und Zweck der Abfragen umfasst, jedoch die Identität von Abfragenden nicht offengelegt werden muss""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article16GDPR
+igso-jur:Article16GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter03 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article24GDPR
+igso-jur:Article24GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article28GDPR
+igso-jur:Article28GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article30GDPR
+igso-jur:Article30GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article32GDPR
+igso-jur:Article32GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article33GDPR
+igso-jur:Article33GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article35GDPR
+igso-jur:Article35GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Article37GDPR
+igso-jur:Article37GDPR rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:Chapter05 .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Artikel15
+igso-jur:Artikel15 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:DSGVO ;
+                   rdfs:comment """Das Recht auf Auskunft nach Artikel 15 der Datenschutz-Grundverordnung
+(DSGVO) ist elementarer Teil des Gesetzes."""@de ;
+                   rdfs:label "Artikel 15"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#BackupLocation
+igso-jur:BackupLocation rdf:type owl:Class ;
+                        rdfs:subClassOf igso-jur:Location .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter01
+igso-jur:Chapter01 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter02
+igso-jur:Chapter02 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter03
+igso-jur:Chapter03 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter04
+igso-jur:Chapter04 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter05
+igso-jur:Chapter05 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter06
+igso-jur:Chapter06 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter07
+igso-jur:Chapter07 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter08
+igso-jur:Chapter08 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter09
+igso-jur:Chapter09 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Chapter10
+igso-jur:Chapter10 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:GDPRChapter .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-jur#Country
 igso-jur:Country rdf:type owl:Class ;
-                 rdfs:subClassOf igso-jur:RegulatoryDomain .
+                 rdfs:subClassOf igso-jur:Location ,
+                                 igso-jur:RegulatoryDomain ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty igso-jur:isRegulatedBy ;
+                                   owl:someValuesFrom igso-jur:Regulation
+                                 ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#DSGVO
+igso-jur:DSGVO rdf:type owl:Class ;
+               rdfs:subClassOf igso-jur:Regulation ;
+               rdfs:label "Datenschutz-Grundverordnung (DSGVO)"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#DataControllerObligation
+igso-jur:DataControllerObligation rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-jur:Obligation .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#DataProcessorObligation
+igso-jur:DataProcessorObligation rdf:type owl:Class ;
+                                 rdfs:subClassOf igso-jur:Obligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#DataSubjectRight
@@ -1823,19 +2046,56 @@ igso-jur:DataSubjectRight rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-jur#EU
 igso-jur:EU rdf:type owl:Class ;
             rdfs:subClassOf igso-jur:Country ,
-                            igso-jur:Jurisdiction ;
+                            igso-jur:Jurisdiction ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty igso-jur:isRegulatedBy ;
+                              owl:allValuesFrom igso-jur:GDPR
+                            ] ;
             owl:disjointWith igso-jur:USA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#FinalProvisions
+igso-jur:FinalProvisions rdf:type owl:Class ;
+                         rdfs:subClassOf igso-jur:GDPRChapter .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#GDPR
 igso-jur:GDPR rdf:type owl:Class ;
-              rdfs:subClassOf igso-jur:Regulation ;
-              owl:disjointWith igso-jur:USPrivacyAct .
+              rdfs:subClassOf igso-jur:Regulation ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty igso-jur:regulates ;
+                                owl:allValuesFrom igso-jur:EU
+                              ] ;
+              owl:disjointWith igso-jur:USPrivacyAct ;
+              rdfs:comment """Chapter 1  – 1  2  3  4
+Chapter 2  – 5  6  7  8  9  10  11
+Chapter 3  – 12  13  14  15  16  17  18  19  20  21  22  23
+Chapter 4  – 24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
+Chapter 5  – 44  45  46  47  48  49  50
+Chapter 6  – 51  52  53  54  55  56  57  58  59
+Chapter 7  – 60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76
+Chapter 8  – 77  78  79  80  81  82  83  84
+Chapter 9  – 85  86  87  88  89  90  91
+Chapter 10 – 92  93
+Chapter 11 – 94  95  96  97  98  99""" ;
+              rdfs:isDefinedBy <https://gdpr-info.eu/> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#GDPRChapter
+igso-jur:GDPRChapter rdf:type owl:Class ;
+                     rdfs:subClassOf igso-jur:GDPR ;
+                     rdfs:comment """Recitals
+https://gdpr-info.eu/recitals/""" ;
+                     rdfs:isDefinedBy <https://gdpr-info.eu/> .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#Germany
 igso-jur:Germany rdf:type owl:Class ;
-                 rdfs:subClassOf igso-jur:EU ;
+                 rdfs:subClassOf igso-jur:EU ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty igso-ddy:isMemberOf ;
+                                   owl:allValuesFrom igso-ddy:E
+                                 ] ;
                  owl:disjointWith igso-jur:Italy .
 
 
@@ -1849,6 +2109,11 @@ igso-jur:Jurisdiction rdf:type owl:Class ;
                       rdfs:subClassOf igso-jur:RegulatoryDomain .
 
 
+###  http://www.example.org/cm/igso/2023/igso-jur#Location
+igso-jur:Location rdf:type owl:Class ;
+                  rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-jur#Obligation
 igso-jur:Obligation rdf:type owl:Class ;
                     rdfs:subClassOf igso-jur:RegulatoryDomain .
@@ -1856,7 +2121,7 @@ igso-jur:Obligation rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationOfCross-borderDataTransfer
 igso-jur:ObligationOfCross-borderDataTransfer rdf:type owl:Class ;
-                                              rdfs:subClassOf igso-jur:Obligation .
+                                              rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToAppointDataProtectionOfficer
@@ -1866,67 +2131,67 @@ igso-jur:ObligationToAppointDataProtectionOfficer rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToCaptureRecordsOfDataProcessingActivity
 igso-jur:ObligationToCaptureRecordsOfDataProcessingActivity rdf:type owl:Class ;
-                                                            rdfs:subClassOf igso-jur:Obligation .
+                                                            rdfs:subClassOf igso-jur:DataProcessorObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToCooperateWithSupervisoryAuthority
 igso-jur:ObligationToCooperateWithSupervisoryAuthority rdf:type owl:Class ;
-                                                       rdfs:subClassOf igso-jur:Obligation .
+                                                       rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToEnsureAccountabilityOfDataController
 igso-jur:ObligationToEnsureAccountabilityOfDataController rdf:type owl:Class ;
-                                                          rdfs:subClassOf igso-jur:Obligation .
+                                                          rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToEnsureAccountabilityOfProcessor
 igso-jur:ObligationToEnsureAccountabilityOfProcessor rdf:type owl:Class ;
-                                                     rdfs:subClassOf igso-jur:Obligation .
+                                                     rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToEnsureAccuracyOfData
 igso-jur:ObligationToEnsureAccuracyOfData rdf:type owl:Class ;
-                                          rdfs:subClassOf igso-jur:Obligation .
+                                          rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToEnsureConfidentialityOfData
 igso-jur:ObligationToEnsureConfidentialityOfData rdf:type owl:Class ;
-                                                 rdfs:subClassOf igso-jur:Obligation .
+                                                 rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToEnsureIntegrityOfData
 igso-jur:ObligationToEnsureIntegrityOfData rdf:type owl:Class ;
-                                           rdfs:subClassOf igso-jur:Obligation .
+                                           rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToFairnessDataProcessing
 igso-jur:ObligationToFairnessDataProcessing rdf:type owl:Class ;
-                                            rdfs:subClassOf igso-jur:Obligation .
+                                            rdfs:subClassOf igso-jur:DataProcessorObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToFulfillConsentRequirement
 igso-jur:ObligationToFulfillConsentRequirement rdf:type owl:Class ;
-                                               rdfs:subClassOf igso-jur:Obligation .
+                                               rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToLawfulnessDataProcessing
 igso-jur:ObligationToLawfulnessDataProcessing rdf:type owl:Class ;
-                                              rdfs:subClassOf igso-jur:Obligation .
+                                              rdfs:subClassOf igso-jur:DataProcessorObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToLimitPurposeDataProcessing
 igso-jur:ObligationToLimitPurposeDataProcessing rdf:type owl:Class ;
-                                                rdfs:subClassOf igso-jur:Obligation .
+                                                rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToLimitStoragePeriod
 igso-jur:ObligationToLimitStoragePeriod rdf:type owl:Class ;
-                                        rdfs:subClassOf igso-jur:Obligation .
+                                        rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToMinimizeData
 igso-jur:ObligationToMinimizeData rdf:type owl:Class ;
-                                  rdfs:subClassOf igso-jur:Obligation .
+                                  rdfs:subClassOf igso-jur:DataControllerObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToNotifyOfPersonalDataBreach
@@ -1939,14 +2204,9 @@ igso-jur:ObligationToPerformDataProtectionImpactAssessment rdf:type owl:Class ;
                                                            rdfs:subClassOf igso-jur:Obligation .
 
 
-###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToRecordProcessingActivity
-igso-jur:ObligationToRecordProcessingActivity rdf:type owl:Class ;
-                                              rdfs:subClassOf igso-jur:Obligation .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-jur#ObligationToTransparencyOfDataProcessing
 igso-jur:ObligationToTransparencyOfDataProcessing rdf:type owl:Class ;
-                                                  rdfs:subClassOf igso-jur:Obligation .
+                                                  rdfs:subClassOf igso-jur:DataProcessorObligation .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#Penalty
@@ -1956,11 +2216,25 @@ igso-jur:Penalty rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#Regulation
 igso-jur:Regulation rdf:type owl:Class ;
-                    rdfs:subClassOf igso-jur:RegulatoryDomain .
+                    rdfs:subClassOf igso-jur:RegulatoryDomain ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty igso-ddy:appliesTo ;
+                                      owl:someValuesFrom igso-jur:Country
+                                    ] .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#RegulatoryDomain
 igso-jur:RegulatoryDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#RemoteLocation
+igso-jur:RemoteLocation rdf:type owl:Class ;
+                        rdfs:subClassOf igso-jur:Location .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Responsibility
+igso-jur:Responsibility rdf:type owl:Class ;
+                        rdfs:subClassOf igso-jur:RegulatoryDomain .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#Restriction
@@ -1973,11 +2247,6 @@ igso-jur:Right rdf:type owl:Class ;
                rdfs:subClassOf igso-jur:RegulatoryDomain .
 
 
-###  http://www.example.org/cm/igso/2023/igso-jur#RightOfAccess
-igso-jur:RightOfAccess rdf:type owl:Class ;
-                       rdfs:subClassOf igso-jur:DataSubjectRight .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-jur#RightRelatedToAutomatedDecision-making
 igso-jur:RightRelatedToAutomatedDecision-making rdf:type owl:Class ;
                                                 rdfs:subClassOf igso-jur:DataSubjectRight .
@@ -1986,6 +2255,11 @@ igso-jur:RightRelatedToAutomatedDecision-making rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-jur#RightRelatedToAutomatedProfiling
 igso-jur:RightRelatedToAutomatedProfiling rdf:type owl:Class ;
                                           rdfs:subClassOf igso-jur:DataSubjectRight .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#RightToAccess
+igso-jur:RightToAccess rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:DataSubjectRight .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#RightToBeForgotten
@@ -2021,6 +2295,11 @@ igso-jur:RightToRectification rdf:type owl:Class ;
 ###  http://www.example.org/cm/igso/2023/igso-jur#RightToRestrictProcessing
 igso-jur:RightToRestrictProcessing rdf:type owl:Class ;
                                    rdfs:subClassOf igso-jur:DataSubjectRight .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#StorageLocation
+igso-jur:StorageLocation rdf:type owl:Class ;
+                         rdfs:subClassOf igso-jur:Location .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#USA
@@ -2492,6 +2771,88 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:Article05GDPR
+                igso-jur:Article06GDPR
+                igso-jur:Article08GDPR
+                igso-jur:Article09GDPR
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:Article10GDPR
+                igso-jur:Article11GDPR
+                igso-jur:Article12GDPR
+                igso-jur:Article13GDPR
+                igso-jur:Article14GDPR
+                igso-jur:Article15GDPR
+                igso-jur:Article16GDPR
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:Article24GDPR
+                igso-jur:Article28GDPR
+                igso-jur:Article30GDPR
+                igso-jur:Article32GDPR
+                igso-jur:Article33GDPR
+                igso-jur:Article35GDPR
+                igso-jur:Article37GDPR
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:BackupLocation
+                igso-jur:RemoteLocation
+                igso-jur:StorageLocation
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:Chapter01
+                igso-jur:Chapter02
+                igso-jur:Chapter03
+                igso-jur:Chapter04
+                igso-jur:Chapter05
+                igso-jur:Chapter06
+                igso-jur:Chapter07
+                igso-jur:Chapter08
+                igso-jur:Chapter09
+                igso-jur:Chapter10
+                igso-jur:FinalProvisions
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-jur:DataControllerObligation
+                igso-jur:DataProcessorObligation
+                igso-jur:ObligationOfCross-borderDataTransfer
+                igso-jur:ObligationToAppointDataProtectionOfficer
+                igso-jur:ObligationToCaptureRecordsOfDataProcessingActivity
+                igso-jur:ObligationToCooperateWithSupervisoryAuthority
+                igso-jur:ObligationToEnsureAccountabilityOfDataController
+                igso-jur:ObligationToEnsureAccountabilityOfProcessor
+                igso-jur:ObligationToEnsureAccuracyOfData
+                igso-jur:ObligationToEnsureConfidentialityOfData
+                igso-jur:ObligationToEnsureIntegrityOfData
+                igso-jur:ObligationToFairnessDataProcessing
+                igso-jur:ObligationToFulfillConsentRequirement
+                igso-jur:ObligationToLawfulnessDataProcessing
+                igso-jur:ObligationToLimitPurposeDataProcessing
+                igso-jur:ObligationToLimitStoragePeriod
+                igso-jur:ObligationToMinimizeData
+                igso-jur:ObligationToNotifyOfPersonalDataBreach
+                igso-jur:ObligationToPerformDataProtectionImpactAssessment
+                igso-jur:ObligationToTransparencyOfDataProcessing
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( igso-jur:ObligationOfCross-borderDataTransfer
                 igso-jur:ObligationToAppointDataProtectionOfficer
                 igso-jur:ObligationToCaptureRecordsOfDataProcessingActivity
@@ -2509,16 +2870,15 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                 igso-jur:ObligationToMinimizeData
                 igso-jur:ObligationToNotifyOfPersonalDataBreach
                 igso-jur:ObligationToPerformDataProtectionImpactAssessment
-                igso-jur:ObligationToRecordProcessingActivity
                 igso-jur:ObligationToTransparencyOfDataProcessing
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( igso-jur:RightOfAccess
-                igso-jur:RightRelatedToAutomatedDecision-making
+  owl:members ( igso-jur:RightRelatedToAutomatedDecision-making
                 igso-jur:RightRelatedToAutomatedProfiling
+                igso-jur:RightToAccess
                 igso-jur:RightToBeForgotten
                 igso-jur:RightToBeInformed
                 igso-jur:RightToDataPortability

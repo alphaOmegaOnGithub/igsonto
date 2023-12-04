@@ -47,4 +47,131 @@
                                                   rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
                                                   owl:versionInfo "0.8" .
 
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO14000
+igso-stds:ISO14000 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO14271
+igso-stds:ISO14271 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISO14000 ;
+                   rdfs:comment "OAIS - Open Archive Information System" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO15000
+igso-stds:ISO15000 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards ;
+                   rdfs:comment "Records Management and related standards" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO15489
+igso-stds:ISO15489 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISO15000 ;
+                   rdfs:comment """Records management — Part 1: Concepts and principles
+Policies, Procedures, and Practices for Records Management""" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO15939
+igso-stds:ISO15939 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISO15000 ;
+                   rdfs:comment "Measurement Process in Information Management Systems" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO17000
+igso-stds:ISO17000 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards ;
+                   rdfs:comment "Data security in Information Management Systems" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO20000
+igso-stds:ISO20000 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards ;
+                   rdfs:comment """ISO/IEC 20000-1:2018 Information technology
+Service management - Part 1: Service management system requirements""" ;
+                   rdfs:isDefinedBy <https://www.iso.org/standard/70636.html> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO23081
+igso-stds:ISO23081 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards ;
+                   rdfs:comment "Recordkeeping Metadata" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO27000
+igso-stds:ISO27000 rdf:type owl:Class ;
+                   rdfs:subClassOf igso-stds:ISOStandards ;
+                   rdfs:comment "ISMS - Information Security Management Systems" ,
+                                """ISO/IEC 27000:2018 - Information technology  Security techniques
+Information security management systems""" ;
+                   rdfs:isDefinedBy <https://www.iso.org/standard/73906.html> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISOStandards
+igso-stds:ISOStandards rdf:type owl:Class ;
+                       rdfs:subClassOf dct:Standard ,
+                                       igso-stds:StandardsDomain ;
+                       rdfs:isDefinedBy <https://www.iso.org/standards.html> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#StandardsDomain
+igso-stds:StandardsDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO27001:2019
+<http://www.example.org/cm/igso/2023/igso-stds#ISO27001:2019> rdf:type owl:Class ;
+                                                              rdfs:subClassOf igso-stds:ISO27000 ;
+                                                              rdfs:comment "ISO/IEC 27701:2019  Security techniques — Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy information management — Requirements and guidelines" ;
+                                                              rdfs:isDefinedBy <https://www.iso.org/standard/71670.html> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO27013:2021
+<http://www.example.org/cm/igso/2023/igso-stds#ISO27013:2021> rdf:type owl:Class ;
+                                                              rdfs:subClassOf igso-stds:ISO27000 ;
+                                                              rdfs:comment """ISO/IEC 27013:2021 Information security, cybersecurity and privacy protection
+Guidance on the integrated implementation of ISO/IEC 27001 and ISO/IEC 20000-1""" ;
+                                                              rdfs:isDefinedBy <https://www.iso.org/standard/78752.html> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-stds#ISO27701:2022
+<http://www.example.org/cm/igso/2023/igso-stds#ISO27701:2022> rdf:type owl:Class ;
+                                                              rdfs:subClassOf igso-stds:ISO27000 ;
+                                                              rdfs:comment """ISO/IEC 27001:2022 - Information security, cybersecurity and privacy protection
+Information security management systems - Requirements""" ;
+                                                              rdfs:isDefinedBy <https://www.iso.org/standard/27001> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-stds:ISO14000
+                igso-stds:ISO15000
+                igso-stds:ISO17000
+                igso-stds:ISO20000
+                igso-stds:ISO27000
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( igso-stds:ISO15489
+                igso-stds:ISO15939
+                igso-stds:ISO23081
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.example.org/cm/igso/2023/igso-stds#ISO27001:2019>
+                <http://www.example.org/cm/igso/2023/igso-stds#ISO27013:2021>
+                <http://www.example.org/cm/igso/2023/igso-stds#ISO27701:2022>
+              )
+] .
+
+
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi

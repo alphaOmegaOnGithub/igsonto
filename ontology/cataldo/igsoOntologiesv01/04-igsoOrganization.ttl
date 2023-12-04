@@ -31,7 +31,6 @@
 @prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
 @prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
-@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
 @base <http://www.example.org/cm/igso/2023/igso-org#> .
 
@@ -48,19 +47,6 @@
                                                  rdfs:label "IGS Organization ontology"@en ;
                                                  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
                                                  owl:versionInfo "0.8" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-#################################################################
-#    Datatypes
-#################################################################
-
-#################################################################
-#    Object Properties
-#################################################################
-
 
 #################################################################
 #    Classes
@@ -89,7 +75,7 @@ igso-ddy:dctype:Software rdfs:subClassOf igso-org:OrganizationDomain .
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessEntity
 igso-ddy:gr:BusinessEntity rdfs:subClassOf igso-org:Formalorganization ;
-                            owl:disjointWith igso-org:gr:BusinessUnit .
+                           owl:disjointWith igso-org:gr:BusinessUnit .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#org:FormalOrganization
@@ -102,17 +88,17 @@ igso-ddy:org:Organization owl:equivalentClass igso-org:Organization .
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Analytics
 igso-org:Analytics rdf:type owl:Class ;
-                   rdfs:subClassOf igso-org:OrganizationalUnit .
+                   rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Architecture
 igso-org:Architecture rdf:type owl:Class ;
-                      rdfs:subClassOf igso-org:OrganizationalUnit .
+                      rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Board
 igso-org:Board rdf:type owl:Class ;
-               rdfs:subClassOf igso-org:OrganizationDomain .
+               rdfs:subClassOf igso-ddy:dct:Agent .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#BoardOfDirectors
@@ -193,12 +179,12 @@ igso-org:DataProtectionOficer rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Department
 igso-org:Department rdf:type owl:Class ;
-                    rdfs:subClassOf igso-ddy:gr:BusinessEntity .
+                    rdfs:subClassOf igso-org:OrganizationalUnit .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Development
 igso-org:Development rdf:type owl:Class ;
-                     rdfs:subClassOf igso-org:OrganizationalUnit .
+                     rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Enterprise
@@ -229,28 +215,28 @@ igso-org:HR rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-org#HumanResorces
 igso-org:HumanResorces rdf:type owl:Class ;
-                       rdfs:subClassOf igso-org:OrganizationalUnit .
+                       rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#IT
 igso-org:IT rdf:type owl:Class ;
             rdfs:subClassOf igso-ddy:Acronym ,
-                            igso-org:OrganizationalUnit .
+                            igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#InformationManagement
 igso-org:InformationManagement rdf:type owl:Class ;
-                               rdfs:subClassOf igso-org:OrganizationalUnit .
+                               rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Legal
 igso-org:Legal rdf:type owl:Class ;
-               rdfs:subClassOf igso-org:OrganizationalUnit .
+               rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#LegalPerson
 igso-org:LegalPerson rdf:type owl:Class ;
-                     rdfs:subClassOf igso-org:OrganizationDomain .
+                     rdfs:subClassOf igso-org:Person .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Management
@@ -279,7 +265,7 @@ igso-org:Person rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-org#PrivacyAndSecurity
 igso-org:PrivacyAndSecurity rdf:type owl:Class ;
-                            rdfs:subClassOf igso-org:OrganizationalUnit .
+                            rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Process
@@ -294,7 +280,7 @@ igso-org:RIM rdf:type owl:Class ;
 
 ###  http://www.example.org/cm/igso/2023/igso-org#RecordsAndInformationManagement
 igso-org:RecordsAndInformationManagement rdf:type owl:Class ;
-                                         rdfs:subClassOf igso-org:OrganizationalUnit .
+                                         rdfs:subClassOf igso-org:Department .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#SoftwareComponent
