@@ -108,10 +108,7 @@
 
 ###  http://www.semanticweb.org/igonto/information#containsFile
 :containsFile rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :contains ;
-              rdfs:domain :Container ,
-                          :Folder ;
-              rdfs:range :File .
+              rdfs:subPropertyOf :contains .
 
 
 ###  http://www.semanticweb.org/igonto/information#containsValue
@@ -215,7 +212,7 @@
 
 ###  http://www.semanticweb.org/igonto/information#goalIsPartOfPolicy
 :goalIsPartOfPolicy rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :partofPolicy ;
+                    rdfs:subPropertyOf :partOfPolicy ;
                     owl:inverseOf :hasGoalComponent ;
                     rdfs:domain :Goal ;
                     rdfs:range :Policy .
@@ -257,14 +254,6 @@
             rdfs:subPropertyOf :has ;
             rdfs:domain :Document ;
             rdfs:range :Edition .
-
-
-###  http://www.semanticweb.org/igonto/information#hasGoal
-:hasGoal rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :has ;
-         owl:inverseOf :partOfPolicy ;
-         rdfs:domain :Policy ;
-         rdfs:range :Goal .
 
 
 ###  http://www.semanticweb.org/igonto/information#hasGoalComponent
@@ -340,7 +329,7 @@
 
 ###  http://www.semanticweb.org/igonto/information#metricIsPartOfPolicy
 :metricIsPartOfPolicy rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :partofPolicy ;
+                      rdfs:subPropertyOf :partOfPolicy ;
                       rdfs:domain :Metric ;
                       rdfs:range :Policy .
 
@@ -391,9 +380,7 @@
 
 ###  http://www.semanticweb.org/igonto/information#partOfPolicy
 :partOfPolicy rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :partOf ;
-              rdfs:domain :Goal ;
-              rdfs:range :Policy .
+              rdfs:subPropertyOf :partOf .
 
 
 ###  http://www.semanticweb.org/igonto/information#partOfRecord
@@ -408,11 +395,6 @@
             rdfs:subPropertyOf :partOf ;
             rdfs:domain :Privilige ;
             rdfs:range :Role .
-
-
-###  http://www.semanticweb.org/igonto/information#partofPolicy
-:partofPolicy rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :partOf .
 
 
 ###  http://www.semanticweb.org/igonto/information#priviligeGrantedByPolicy
@@ -461,7 +443,7 @@
 
 ###  http://www.semanticweb.org/igonto/information#ruleIsPartOfPolicy
 :ruleIsPartOfPolicy rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :partofPolicy ;
+                    rdfs:subPropertyOf :partOfPolicy ;
                     rdfs:domain :Rule ;
                     rdfs:range :Policy .
 
@@ -591,11 +573,6 @@
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :containerContainsFile ;
                              owl:someValuesFrom :File
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :containsFile ;
-                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :File
                            ] ;
            :classDescription "Represents a logical or physical entity to organize and store Data." ;
            rdfs:label "Container" .
@@ -857,11 +834,6 @@
                           owl:onClass :Role
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasGoal ;
-                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                          owl:onClass :Goal
-                        ] ,
-                        [ rdf:type owl:Restriction ;
                           owl:onProperty :monitorsMetric ;
                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onClass :Metric
@@ -983,17 +955,20 @@
 ###  http://www.semanticweb.org/igonto/information#Rule
 :Rule rdf:type owl:Class ;
       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :appliedByPolicy ;
+                        owl:someValuesFrom :Policy
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :definesSchedule ;
+                        owl:someValuesFrom :Schedule
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :employedByPolicy ;
                         owl:someValuesFrom :Policy
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :ruleIsPartOfPolicy ;
                         owl:someValuesFrom :Policy
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :definesSchedule ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass :Schedule
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :scope ;

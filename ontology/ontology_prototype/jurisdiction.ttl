@@ -58,7 +58,7 @@
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle
 :capabilityInvolvesArticle rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf :capabilityInvolvesArticle ;
+                           rdfs:subPropertyOf :involvesArticle ;
                            owl:inverseOf :involvedInCapabilities ;
                            rdfs:domain :Capability_Abstract ;
                            rdfs:range :GDPR_Articles .
@@ -153,12 +153,25 @@
                 rdfs:range :Tools .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#involves
+:involves rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesArticle
+:involvesArticle rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :involves .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy
-:isRegulatedBy rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
-               owl:inverseOf :regulatesCountry ;
-               rdfs:domain :Country ;
-               rdfs:range :Regulation .
+:isRegulatedBy rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#isRegulatedByRegulation
+:isRegulatedByRegulation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :isRegulatedBy ;
+                         owl:inverseOf :regulatesCountry ;
+                         rdfs:domain :Country ;
+                         rdfs:range :Regulation .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#operatesIn
@@ -235,7 +248,7 @@
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle
 :toolInvolvesArticle rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :capabilityInvolvesArticle ;
+                     rdfs:subPropertyOf :involvesArticle ;
                      rdfs:domain :Tools ;
                      rdfs:range :GDPR_Articles .
 
@@ -281,7 +294,7 @@
                            owl:onClass :Jurisdiction
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :isRegulatedBy ;
+                           owl:onProperty :isRegulatedByRegulation ;
                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onClass :Regulation
                          ] ;
@@ -432,23 +445,6 @@
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Regulation
 :Regulation rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty :regulatesCountry ;
-                              owl:someValuesFrom :Country
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :requiresProgram ;
-                              owl:someValuesFrom :Program_Abstract
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :requiresStrategy ;
-                              owl:someValuesFrom :Strategy_Abstract
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty :regulatesJurisdiction ;
-                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                              owl:onClass :Jurisdiction
-                            ] ;
             :classDescription "Superclass representing regulations in the EU and US." ;
             rdfs:label "Regulation" .
 
@@ -1527,7 +1523,7 @@ owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
 :Germany rdf:type owl:NamedIndividual ,
                   :EU ;
          :belongsToJurisdiction :EU ;
-         :isRegulatedBy :GDPR .
+         :isRegulatedByRegulation :GDPR .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment

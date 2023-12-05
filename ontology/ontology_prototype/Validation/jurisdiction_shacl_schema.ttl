@@ -1,0 +1,261 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix jurisdiction:   <http://www.semanticweb.org/igonto/jurisdiction#> .
+
+
+
+
+############################################
+############### Class Shapes ###############
+############################################
+
+jurisdiction:ThingShape
+    a sh:NodeShape ;
+		sh:property jurisdiction:nameShape ;
+		sh:property jurisdiction:descriptionShape ;
+	.
+
+
+jurisdiction:EUShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:EU ;
+		rdfs:subClassOf jurisdiction:CountryShape ;
+	.
+
+
+jurisdiction:EuropeanUnionShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:European_Union ;
+		rdfs:subClassOf jurisdiction:RegulationShape ;
+	.
+
+
+jurisdiction:GDPRShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:GDPR ;
+		sh:property jurisdiction:GDPRincludesArticlesShape ;
+		sh:property jurisdiction:regulatesCountryShape ;
+		sh:property jurisdiction:regulatesJurisdictionShape ;
+		rdfs:subClassOf jurisdiction:EuropeanUnionShape ;
+	.
+
+
+jurisdiction:GDPRArticlesShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:GDPR_Articles ;
+		sh:property jurisdiction:includedInChapterShape ;
+		sh:property jurisdiction:includedInGDPRShape ;
+		sh:property jurisdiction:includesKeywordShape ;
+		rdfs:subClassOf jurisdiction:EuropeanUnionShape ;
+	.
+
+
+jurisdiction:GDPRChaptersShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:GDPR_Chapters ;
+		sh:property jurisdiction:chapterIncludesArticlesShape ;
+		rdfs:subClassOf jurisdiction:EuropeanUnionShape ;
+	.
+
+
+jurisdiction:GDPRKeywordsShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:GDPR_Keywords ;
+		sh:property jurisdiction:includedInArticleShape ;
+		rdfs:subClassOf jurisdiction:EuropeanUnionShape ;
+	.
+
+
+jurisdiction:RegulationShape
+    a sh:NodeShape ;
+		sh:targetClass jurisdiction:Regulation ;
+		rdfs:subClassOf jurisdiction:ThingShape ;
+	.
+
+
+jurisdiction:CountryShape
+    a sh:NodeShape ;
+    	sh:targetClass jurisdiction:Country ; 
+    	sh:property jurisdiction:isRegulatedByRegulationShape ;
+		sh:property jurisdiction:belongsToJurisdictionShape ;
+		rdfs:subClassOf jurisdiction:ThingShape ;
+    .
+
+jurisdiction:JurisdictionShape
+	a sh:NodeShape ;
+    	sh:targetClass jurisdiction:Jurisdiction ; 
+		rdfs:subClassOf jurisdiction:ThingShape ;
+    	sh:property jurisdiction:hasRegulationShape ;
+		sh:property jurisdiction:belongsToCountryShape ;
+    .
+
+
+
+############################################
+######### Object Property Shapes ###########
+############################################
+
+jurisdiction:GDPRincludesArticlesShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:GDPRincludesArtcles ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includesArticleShape ;
+	.
+
+jurisdiction:belongsToShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:belongsTo ;
+	.
+
+jurisdiction:belongsToCountryShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:belongsToCountry ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:belongsToShape ;
+	.
+
+jurisdiction:belongsToJurisdictionShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:belongsToJurisdiction ;       
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:belongsToShape ;
+	.
+
+jurisdiction:chapterIncludesArticlesShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:chapterIncludesArticles ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includesArticleShape ;
+	.
+
+jurisdiction:hasShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:has ;
+	.
+
+jurisdiction:hasRegulationShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:hasRegulation ;
+		sh:class jurisdiction:Regulation;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:hasShape ;
+	.
+
+
+jurisdiction:includedInShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includedIn ;
+	.
+
+jurisdiction:includedInArticleShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includedInArticle ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includedInShape ;
+	.
+
+jurisdiction:includedInChapterShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includedInChapter ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includedInShape ;
+	.
+
+jurisdiction:includedInGDPRShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includedInGDPR ; 
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includedInShape ;
+	.
+
+jurisdiction:includesShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includes ; 
+	.
+
+jurisdiction:includesArticleShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includesArticle ;
+		rdfs:subClassOf jurisdiction:includesShape ;
+	.
+
+jurisdiction:includesKeywordShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:includesKeyword ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:includesShape ;
+	.
+
+
+jurisdiction:isRegulatedByShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:isRegulatedBy ;       
+	.
+
+jurisdiction:isRegulatedByRegulationShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:isRegulatedBy ;       
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:isRegulatedByShape ;
+	.
+
+
+jurisdiction:operatesInShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:operatesIn ;
+	.
+
+
+jurisdiction:regulatesShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:regulates ;
+	.
+
+jurisdiction:regulatesCountryShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:regulatesCountry ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:regulatesShape ;
+	.
+
+jurisdiction:regulatesJurisdictionShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:regulatesJurisdiction ;
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		rdfs:subClassOf jurisdiction:regulatesShape ;
+	.
+
+
+
+
+############################################
+######## Datatype Property Shapes ##########
+############################################
+
+jurisdiction:descriptionShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:description ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+jurisdiction:nameShape
+	a sh:PropertyShape ;
+		sh:path jurisdiction:name ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+
+
+ ###### add SHACL vocabulary ###### 
