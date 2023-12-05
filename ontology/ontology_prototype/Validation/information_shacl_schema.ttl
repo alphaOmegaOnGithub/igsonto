@@ -1,0 +1,860 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix information:   <http://www.semanticweb.org/igonto/information#> .
+
+
+
+
+############################################
+############### Class Shapes ###############
+############################################
+
+information:ThingShape
+    a sh:NodeShape ;
+		sh:property information:nameShape ;
+		sh:property information:descriptionShape ;
+	.
+
+
+information:CostShape
+    a sh:NodeShape ;
+		sh:targetClass information:Cost ;
+		rdfs:subClassOf information: ;
+        sh:property information:costIsPartOfDataShape ;
+        sh:property information:producedByDataShape ;
+        sh:property information:valueShape ;
+	.
+
+information:DataShape
+    a sh:NodeShape ;
+		sh:targetClass information:Data ;
+        sh:property information:classifiedByRecordShape ;
+        sh:property information:containsValueShape ;
+        sh:property information:exposesRiskShape ;
+        sh:property information:producesCostShape ;
+        sh:property information:usedOnRecordShape ;
+	.
+
+information:AssetShape
+    a sh:NodeShape ;
+		sh:targetClass information:Asset ;
+		rdfs:subClassOf information:DataShape ;
+	.
+
+information:ContentShape
+    a sh:NodeShape ;
+		sh:targetClass information:Content ;
+		rdfs:subClassOf information:DataShape ;
+	.
+
+information:DocumentShape
+    a sh:NodeShape ;
+		sh:targetClass information:Document ;
+		rdfs:subClassOf information:DataShape ;
+        sh:property information:hasEditionShape ;
+        sh:property information:hasRenditionShape ;
+	.
+
+information:MetadataShape
+    a sh:NodeShape ;
+		sh:targetClass information:Metadata ;
+		rdfs:subClassOf information:DataShape ;
+	.
+
+information:InformationShape
+    a sh:NodeShape ;
+		sh:targetClass information:Information ;
+		rdfs:subClassOf information:MetadataShape ;
+	.
+
+information:DataDictionaryShape
+    a sh:NodeShape ;
+		sh:targetClass information:Data_Dictionary ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:vocabularyForShape ;
+	.
+
+information:EditionShape
+    a sh:NodeShape ;
+		sh:targetClass information:Edition ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:editionIsPartOfDocumentShape ;
+	.
+
+information:FileShape
+    a sh:NodeShape ;
+		sh:targetClass information:File ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:containedInContainerShape ;
+        sh:property information:containedInFolderShape ;
+	.
+
+information:GoalShape
+    a sh:NodeShape ;
+		sh:targetClass information:Goal ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:goalIsPartOfPolicyShape ;
+        sh:property information:scopeShape ;
+	.
+
+information:ItemShape
+    a sh:NodeShape ;
+		sh:targetClass information:Item ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:hasVersionShape ;
+	.
+
+information:MetricShape
+    a sh:NodeShape ;
+		sh:targetClass information:Metric ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:metricIsPartOfPolicyShape ;
+        sh:property information:monitoredByPolicyShape ;
+        sh:property information:metricUnitShape ;
+        sh:property information:valueShape ;
+	.
+
+information:PolicyShape
+    a sh:NodeShape ;
+		sh:targetClass information:Policy ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:appliesRuleShape ;
+        sh:property information:employsRuleShape ;
+        sh:property information:grantsPriviligeToRoleShape ;
+        sh:property information:monitorsMetricShape ;
+        sh:property information:scopeShape ;
+	.
+
+information:PriviligeShape
+    a sh:NodeShape ;
+		sh:targetClass information:Privilige ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:partOfRoleShape ;
+	.
+
+
+information:RecordShape
+    a sh:NodeShape ;
+		sh:targetClass information:Record ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:classifiesDataShape ;
+        sh:property information:hasRecordControlStructureShape ;
+        sh:property information:usesDataDictionartyShape ;
+	.
+
+information:ContainerShape
+    a sh:NodeShape ;
+		sh:targetClass information:Container ;
+		rdfs:subClassOf information:RecordShape ;
+        sh:property information:containerContainsFileShape ;
+
+	.
+
+information:FolderShape
+    a sh:NodeShape ;
+		sh:targetClass information:Folder ;
+		rdfs:subClassOf information:FolderShape ;
+        sh:property information:folderContainsFileShape ;
+	.
+
+information:RecordControlStructureShape
+    a sh:NodeShape ;
+		sh:targetClass information:Record_Control_Structure ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:usesScheduleShape ;
+        sh:property information:startDateShape ;
+        sh:property information:endDateShape ;
+	.
+
+information:AuditTrailShape
+    a sh:NodeShape ;
+		sh:targetClass information:Audit_Trail ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:CategoryShape
+    a sh:NodeShape ;
+		sh:targetClass information:Category ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:ControlDataShape
+    a sh:NodeShape ;
+		sh:targetClass information:Control_Data ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:SensitiveDataShape
+    a sh:NodeShape ;
+		sh:targetClass information:Sensitive_Data ;
+		rdfs:subClassOf information:ControlDataShape ;
+	.
+
+information:AuditDataShape
+    a sh:NodeShape ;
+		sh:targetClass information:Audit_Data ;
+		rdfs:subClassOf information:SensitiveDataShape ;
+	.
+
+information:PersonnelFilesShape
+    a sh:NodeShape ;
+		sh:targetClass information:Personnel_Files ;
+		rdfs:subClassOf information:SensitiveDataShape ;
+	.
+
+information:PIIDataShape
+    a sh:NodeShape ;
+		sh:targetClass information:PII_Data ;
+		rdfs:subClassOf information:SensitiveDataShape ;
+	.
+
+information:HoldShape
+    a sh:NodeShape ;
+		sh:targetClass information:Hold ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:ReportShape
+    a sh:NodeShape ;
+		sh:targetClass information:Report ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:RetentionShape
+    a sh:NodeShape ;
+		sh:targetClass information:Retention ;
+		rdfs:subClassOf information:RecordControlStructureShape ;
+	.
+
+information:RenditionShape
+    a sh:NodeShape ;
+		sh:targetClass information:Rendition ;
+		rdfs:subClassOf information:ThingShape  ;
+        sh:property information:renditionIsPartOfDocumentShape ;
+	.
+
+information:RiskShape
+    a sh:NodeShape ;
+		sh:targetClass information:Risk ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:exposedByDataShape ;
+        sh:property information:riskIsPartOfDataShape ;
+	.
+
+information:RoleShape
+    a sh:NodeShape ;
+		sh:targetClass information:Role ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:hasPriviligeShape ;
+        sh:property information:priviligeGrantedByPolicyShape ;
+	.
+
+information:RuleShape
+    a sh:NodeShape ;
+		sh:targetClass information:Rule ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:appliedByPolicyShape ;
+        sh:property information:definesScheduleShape ;
+        sh:property information:employedByPolicyShape ;
+        sh:property information:ruleIsPartOfPolicyShape ;
+        sh:property information:scopeShape ;
+	.
+
+information:ScheduleShape
+    a sh:NodeShape ;
+		sh:targetClass information:Schedule ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:definedByRuleShape ;
+        sh:property information:usedOnRecordControlStructureShape ;
+        sh:property information:startDateShape ;
+        sh:property information:endDateShape ;
+	.
+
+information:TaxonomyShape
+    a sh:NodeShape ;
+		sh:targetClass information:Taxonomy ;
+		rdfs:subClassOf information:ThingShape ;
+	.
+
+    
+information:ValueShape
+    a sh:NodeShape ;
+		sh:targetClass information:Value ;
+		rdfs:subClassOf information:ThingShape ;
+        sh:property information:containedInDataShape ;
+        sh:property information:valueIsPartOfDataShape ;
+        sh:property information:valueShape ;
+	.
+
+
+information:VersionShape
+    a sh:NodeShape ;
+		sh:targetClass information:Version ;
+		rdfs:subClassOf information:ThingShape ;
+	.
+
+
+
+
+############################################
+######### Object Property Shapes ###########
+############################################
+
+information:appliesShape
+	a sh:PropertyShape ;
+		sh:path information:applies ;
+	.
+
+information:appliesRuleShape
+	a sh:PropertyShape ;
+		sh:path information:appliesRule ;
+        rdfs:subClassOf information:appliesShape ;
+        sh:minCount 1 ;
+	.
+
+information:appliedByShape
+	a sh:PropertyShape ;
+		sh:path information:appliedBy ;
+	.
+
+information:appliedByPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:appliedByPolicy ;
+        rdfs:subClassOf information:appliedByShape ;
+        sh:minCount 1 ;
+	.
+
+
+information:classifiedByShape
+	a sh:PropertyShape ;
+		sh:path information:classifiedBy ;
+	.
+
+information:classifiedByRecordShape
+	a sh:PropertyShape ;
+		sh:path information:classifiedByRecord ;
+	.
+
+
+information:classifiesShape
+	a sh:PropertyShape ;
+		sh:path information:classifies ;
+	.
+
+
+information:classifiesDataShape
+	a sh:PropertyShape ;
+		sh:path information:classifiesData ;
+        rdfs:subClassOf information:classifiesShape;
+        sh:minCount 1 ;
+	.
+
+information:containedInShape
+	a sh:PropertyShape ;
+		sh:path information:containedIn ;
+	.
+
+information:containedInContainerShape
+	a sh:PropertyShape ;
+		sh:path information:containedInContainer ;
+        rdfs:subClassOf information:containedInShape ; 
+        sh:minCount 1 ;
+	.
+
+information:containedInDataShape
+	a sh:PropertyShape ;
+		sh:path information:containedInData ;
+        rdfs:subClassOf information:containedInShape ;
+        sh:minCount 1 ;
+	.
+
+information:containedInFolderShape
+	a sh:PropertyShape ;
+		sh:path information:containedInFolder ;
+        rdfs:subClassOf information:containedInShape ;
+        sh:minCount 1 ;
+	.
+
+information:containsShape
+	a sh:PropertyShape ;
+		sh:path information:contains ;
+	.
+
+information:containsFileShape
+	a sh:PropertyShape ;
+		sh:path information:containesFile ;
+        rdfs:subClassOf information:containsShape ;
+        sh:minCount 1 ;
+	.
+
+information:containerContainsFileShape
+	a sh:PropertyShape ;
+		sh:path information:containerContainsFIle ;
+        rdfs:subClassOf information:containsFileShape;
+        sh:minCount 1 ;
+	.
+
+information:folderContainsFileShape
+	a sh:PropertyShape ;
+		sh:path information:folderContainsFile ;
+        rdfs:subClassOf information:containsFileShape;
+        sh:minCount 1 ;
+	.
+
+information:containsValueShape
+	a sh:PropertyShape ;
+		sh:path information:containsValue ;
+        rdfs:subClassOf information:containsShape;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+information:definedByShape
+	a sh:PropertyShape ;
+		sh:path information:definedBy ;
+	.
+
+information:definedByRuleShape
+	a sh:PropertyShape ;
+		sh:path information:definedByRule ;
+        rdfs:subClassOf information:definedByShape ;
+        sh:minCount 1 ;
+	.
+
+information:definesShape
+	a sh:PropertyShape ;
+		sh:path information:defines ;
+	.
+
+information:definesScheduleShape
+	a sh:PropertyShape ;
+		sh:path information:definesSchedule ;
+        rdfs:subClassOf information:definesShape ; 
+        sh:minCount 1 ;
+	.
+
+information:employedByShape
+	a sh:PropertyShape ;
+		sh:path information:employedBy ;
+	.
+
+information:employedByPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:employedByPolicy ;
+        rdfs:subClassOf information:employedByShape ;
+        sh:minCount 1 ;
+	.
+
+information:employsShape
+	a sh:PropertyShape ;
+		sh:path information:employs ;
+	.
+
+information:employsRuleShape
+	a sh:PropertyShape ;
+		sh:path information:employsRule ;
+        rdfs:subClassOf information:employsShape ;
+        sh:minCount 1 ;
+	.
+
+information:exposedByShape
+	a sh:PropertyShape ;
+		sh:path information:exposedBy ;
+	.
+
+information:exposedByDataShape
+	a sh:PropertyShape ;
+		sh:path information:exposedByData ;
+        rdfs:subClassOf information:exposedByShape ;
+        sh:minCount 1 ;
+	.
+
+information:exposesShape
+	a sh:PropertyShape ;
+		sh:path information:exposes ;
+	.
+
+information:exposesRiskShape
+	a sh:PropertyShape ;
+		sh:path information:exposesRisk ;
+        rdfs:subClassOf information:exposesShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+information:grantedByShape
+	a sh:PropertyShape ;
+		sh:path information:grantedBy ;
+	.
+
+information:priviligeGrantedByPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:priviligeGrantedByPolicy ;
+        rdfs:subClassOf information:grantedByShape ;
+        sh:minCount 1 ;
+	.
+
+information:grantsShape
+	a sh:PropertyShape ;
+		sh:path information:grants ;
+	.
+
+information:grantsPriviligeToRoleShape
+	a sh:PropertyShape ;
+		sh:path information:grantsPriviligeToRole ;
+        rdfs:subClassOf information:grantsShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasShape
+	a sh:PropertyShape ;
+		sh:path information:has ;
+	.
+
+information:hasComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasComponent ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasCostComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasCostComponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasGoalComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasGoalComponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasMetricComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasMetricComponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasRiskComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasRiskCOmponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasRuleComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasRuleCOmponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasRoleComponentShape
+	a sh:PropertyShape ;
+		sh:path information:hasRoleComponent ;
+        rdfs:subClassOf information:hasComponentShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasEditionShape
+	a sh:PropertyShape ;
+		sh:path information:hasEdition ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+
+information:hasPriviligeShape
+	a sh:PropertyShape ;
+		sh:path information:hasPrivilige ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasRecordControlStructureShape
+	a sh:PropertyShape ;
+		sh:path information:hasRecordControlStructure ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+	.
+
+information:hasRenditionShape
+	a sh:PropertyShape ;
+		sh:path information:hasRendition ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+information:hasVersionShape
+	a sh:PropertyShape ;
+		sh:path information:hasVersion ;
+        rdfs:subClassOf information:hasShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+information:monitoredByShape
+	a sh:PropertyShape ;
+		sh:path information:monitoredBy ;
+	.
+
+information:monitoredByPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:monitoredByPolicy ;
+        rdfs:subClassOf information:monitoredByShape ;
+        sh:minCount 1 ;
+	.
+
+information:monitorsShape
+	a sh:PropertyShape ;
+		sh:path information:monitors ;
+	.
+
+information:monitorsMetricShape
+	a sh:PropertyShape ;
+		sh:path information:monitorsMetric ;
+        rdfs:subClassOf information:monitorsShape ;
+        sh:minCount 1 ;
+	.
+
+information:partOfShape
+	a sh:PropertyShape ;
+		sh:path information:partOf;
+	.
+
+information:partOfDataShape
+	a sh:PropertyShape ;
+		sh:path information:partOfData ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:costIsPartOfDataShape
+	a sh:PropertyShape ;
+		sh:path information:costIsPartOf ;
+        rdfs:subClassOf information:partOfDataShape ;
+        sh:minCount 1 ;
+	.
+
+information:valueIsPartOfDataShape
+	a sh:PropertyShape ;
+		sh:path information:valueIsPartOfData ;
+        rdfs:subClassOf information:partOfDataShape ;
+        sh:minCount 1 ;
+	.
+
+information:riskIsPartOfDataShape
+	a sh:PropertyShape ;
+		sh:path information:riskIsPartOfData ;
+        rdfs:subClassOf information:partOfDataShape ;
+        sh:minCount 1 ;
+	.
+
+information:partOfDocumentShape
+	a sh:PropertyShape ;
+		sh:path information:partOfDocument ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:editionIsPartOfDocumentShape
+	a sh:PropertyShape ;
+		sh:path information:editionIsPartOfDocument ;
+        rdfs:subClassOf information:partOfDocumentShape ;
+        sh:minCount 1 ;
+	.
+
+information:renditionIsPartOfDocumentShape
+	a sh:PropertyShape ;
+		sh:path information:renditionIsPArtOfDocument ;
+        rdfs:subClassOf information:partOfDocumentShape ;
+        sh:minCount 1 ;
+	.
+
+
+information:partOfItemShape
+	a sh:PropertyShape ;
+		sh:path information:partOfItem ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:partOfPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:partOfPolicy ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:goalIsPartOfPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:goalIsPartOfPolicy ;
+        rdfs:subClassOf information:partOfPolicyShape ;
+        sh:minCount 1 ;
+	.
+
+information:metricIsPartOfPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:metricIsPartOfPolicy ;
+        rdfs:subClassOf information:partOfPolicyShape ;
+        sh:minCount 1 ;
+	.
+
+information:ruleIsPartOfPolicyShape
+	a sh:PropertyShape ;
+		sh:path information:ruleIsPartOfPolicy ;
+        rdfs:subClassOf information:partOfPolicyShape ;
+        sh:minCount 1 ;
+	.
+
+information:partOfRecordShape
+	a sh:PropertyShape ;
+		sh:path information:partOfRecord ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:partOfRoleShape
+	a sh:PropertyShape ;
+		sh:path information:partOfRole ;
+        rdfs:subClassOf information:partOfShape ;
+        sh:minCount 1 ;
+	.
+
+information:producedByShape
+	a sh:PropertyShape ;
+		sh:path information:producedBy ;
+	.
+
+information:producedByDataShape
+	a sh:PropertyShape ;
+		sh:path information:producedByData ;
+        rdfs:subClassOf information:producedByShape ;
+        sh:minCount 1 ;
+	.
+
+information:producesShape
+	a sh:PropertyShape ;
+		sh:path information:produces ;
+	.
+
+information:producesCostShape
+	a sh:PropertyShape ;
+		sh:path information:producesCost ;
+        rdfs:subClassOf information:producesShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+	.
+
+information:usedOnShape
+	a sh:PropertyShape ;
+		sh:path information:usedOn ;
+	.
+
+information:usedOnRecordShape
+	a sh:PropertyShape ;
+		sh:path information:usedOnRecord ;
+        rdfs:subClassOf information:usedOnShape ;
+        sh:minCount 1 ;
+	.
+
+information:usedOnRecordControlStructureShape
+	a sh:PropertyShape ;
+		sh:path information:usedOnRecordControlStructure ;
+        rdfs:subClassOf information:usedOnShape ;
+        sh:minCount 1 ;
+	.
+
+information:usesShape
+	a sh:PropertyShape ;
+		sh:path information:uses ;
+	.
+
+information:usesDataDictionartyShape
+	a sh:PropertyShape ;
+		sh:path information:usesDataDictionary ;
+        rdfs:subClassOf information:usesShape ;
+        sh:minCount 1 ;
+	.
+
+information:usesScheduleShape
+	a sh:PropertyShape ;
+		sh:path information:usesSchedule ;
+        rdfs:subClassOf information:usesShape ;
+        sh:minCount 1 ;
+	.
+
+information:vocabularyForShape
+	a sh:PropertyShape ;
+		sh:path information:vocabularyFor ;
+	.
+
+
+
+############################################
+######## Datatype Property Shapes ##########
+############################################
+information:descriptionShape
+	a sh:PropertyShape ;
+		sh:path information:description ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:nameShape
+	a sh:PropertyShape ;
+		sh:path information:name ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:metricUnitShape
+	a sh:PropertyShape ;
+		sh:path information:metricUnit ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:scopeShape
+	a sh:PropertyShape ;
+		sh:path information:metricUnit ;
+   		sh:minCount 1 ;
+	.
+
+information:startDateShape
+	a sh:PropertyShape ;
+		sh:path information:startDate ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:endDateShape
+	a sh:PropertyShape ;
+		sh:path information:endDate ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:valueShape
+	a sh:PropertyShape ;
+		sh:path information:value;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
+
+information:versionNumberShape
+	a sh:PropertyShape ;
+		sh:path information:versionNumber ;
+		sh:maxCount 1 ;
+   		sh:minCount 1 ;
+	.
