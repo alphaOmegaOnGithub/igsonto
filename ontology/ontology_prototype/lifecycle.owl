@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/igonto/lifecycle#"
+     xml:base="http://www.semanticweb.org/igonto/lifecycle"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:lifecycle="http://www.semanticweb.org/igonto/lifecycle">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/igonto/lifecycle"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#createdBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#createdBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#createdByProcess -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#createdByProcess">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#createdBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#createsStatistic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Statistic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#creates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#creates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#createsStatistic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#createsStatistic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#creates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Statistic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#drivenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#drivenBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#drivenByData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#drivenByData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#drivenBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#drivesRecordLifecycle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#drives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#drives"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#drivesRecordLifecycle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#drivesRecordLifecycle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#drives"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#producedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#producedByStatistic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#producedByStatistic">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#producedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#producesReporting"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Reporting"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Statistic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#produces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#producesReporting -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/lifecycle#producesReporting">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#produces"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Statistic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Reporting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Access -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Access">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Access</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Archive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Archive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Archive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Classify -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Classify">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Classify</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Data">
+        <rdfs:label>Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Find -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Find">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Find</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Index -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Index">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Metric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Metric">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Monitor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Monitor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Monitor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Process">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/lifecycle#createsStatistic"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Statistic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/lifecycle#drivenByData"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Record Lifecycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Rendering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Rendering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Rendering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Reporting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Reporting">
+        <rdfs:label>Reporting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Retain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Retain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Retain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Retrieve -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Retrieve">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Retrieve</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Search -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Search">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Search</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Secure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Secure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Process"/>
+        <rdfs:label>Secure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle"/>
+        <rdfs:label>Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Service_Search -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Service_Search">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Service Search</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Session -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Session">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Session</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Statistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Statistic">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/lifecycle#producesReporting"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Reporting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/lifecycle#Submission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/lifecycle#Submission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/lifecycle#Service"/>
+        <rdfs:label>Submission</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

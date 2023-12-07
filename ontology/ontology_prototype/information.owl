@@ -1,0 +1,1264 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/igonto/information#"
+     xml:base="http://www.semanticweb.org/igonto/information"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:information="http://www.semanticweb.org/igonto/information">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/igonto/information"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#appliedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#appliedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#appliedByPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#appliedByPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#appliedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#appliesRule"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#applies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#applies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#appliesRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#appliesRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#applies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#classifiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#classifiedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#classifiedByRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#classifiedByRecord">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#classifiedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#classifiesData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#classifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#classifies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#classifiesData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#classifiesData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#classifies"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containedInContainer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containedInContainer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#containedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#containerContainsFile"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Container"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containedInData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containedInData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#containedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#containsValue"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containedInFolder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containedInFolder">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#containedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#folderContainsFile"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Folder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containerContainsFile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containerContainsFile">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#containsFile"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Container"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#contains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#contains"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containsFile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containsFile">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Container"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Folder"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#containsValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#containsValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#costIsPartOfData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#costIsPartOfData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfData"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#hasCostComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#definedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#definedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#definedByRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#definedByRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#definedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#definesSchedule"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Schedule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#defines -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#defines"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#definesSchedule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#definesSchedule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#defines"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Schedule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#editionIsPartOfDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#editionIsPartOfDocument">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfDocument"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#hasEdition"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Edition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#employedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#employedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#employedByPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#employedByPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#employedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#employsRule"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#employs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#employs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#employsRule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#employsRule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#employs"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#exposedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#exposedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#exposedByData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#exposedByData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#exposedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#exposesRisk"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#exposes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#exposes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#exposesRisk -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#exposesRisk">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#exposes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#folderContainsFile -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#folderContainsFile">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#containsFile"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Folder"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#goalIsPartOfPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#goalIsPartOfPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partofPolicy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#hasGoalComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#grantedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#grantedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#grants -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#grants"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#grantsPriviligeToRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#grantsPriviligeToRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#grants"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#has"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasCostComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasCostComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasEdition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasEdition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Edition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasGoal">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasGoalComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasGoalComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasMetricComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasMetricComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#metricIsPartOfPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasPrivilige -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasPrivilige">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfRole"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Privilige"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasRecordControlStructure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasRecordControlStructure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfRecord"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasRendition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasRendition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#renditionIsPartOfDocument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Document"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Rendition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasRiskComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasRiskComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#riskIsPartOfData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasRuleComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasRuleComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#ruleIsPartOfPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasValueComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasValueComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#valueIsPartOfData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfItem"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Item"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Version"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#metricIsPartOfPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#metricIsPartOfPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partofPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#monitoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#monitoredBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#monitoredByPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#monitoredByPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#monitoredBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#monitorsMetric"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#monitors -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#monitors"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#monitorsMetric -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#monitorsMetric">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#monitors"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfDocument">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Version"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfRecord">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partOfRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partOfRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Privilige"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#partofPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#partofPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#priviligeGrantedByPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#priviligeGrantedByPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#grantedBy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Role"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#producedBy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#producedByData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#producedByData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#producedBy"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#producesCost"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#produces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#producesCost -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#producesCost">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#produces"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#renditionIsPartOfDocument -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#renditionIsPartOfDocument">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfDocument"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Rendition"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#riskIsPartOfData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#riskIsPartOfData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#ruleIsPartOfPolicy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#ruleIsPartOfPolicy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partofPolicy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#usedOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#usedOn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#usedOnRecord -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#usedOnRecord">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#usedOn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#usesDataDictionary"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#usedOn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/information#usesSchedule"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Schedule"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#uses"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#usesDataDictionary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#usesDataDictionary">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#uses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data_Dictionary"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#usesSchedule -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#usesSchedule">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#uses"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Schedule"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#valueIsPartOfData -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#valueIsPartOfData">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/information#partOfData"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#vocabularyFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/information#vocabularyFor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/information#Data_Dictionary"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/information#Taxonomy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Audit_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Audit_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Sensitive_Data"/>
+        <rdfs:label>Audit Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Audit_Trail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Audit_Trail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Audit Trail</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Category">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Container -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Container">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#containsFile"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#File"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Container</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Content -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Content">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Control_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Control_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Control Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Cost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Cost">
+        <rdfs:label>Cost</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Data">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/igonto/information#Item"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#containsValue"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#exposesRisk"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#producesCost"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Cost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Data_Dictionary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Data_Dictionary">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#vocabularyFor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Taxonomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Data Dictionary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Document">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasEdition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasRendition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Rendition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Edition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Edition">
+        <rdfs:label>Edition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#File -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#File">
+        <rdfs:label>File</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Folder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Folder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Container"/>
+        <rdfs:label>Folder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Goal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Goal">
+        <rdfs:label>Goal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Hold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Hold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Hold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Information -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Information">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Metadata"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Item -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Item">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasVersion"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Version"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Metadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Metadata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Metric -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Metric">
+        <rdfs:label>Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#PII_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#PII_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Sensitive_Data"/>
+        <rdfs:label>PII Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Personnel_Files -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Personnel_Files">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Sensitive_Data"/>
+        <rdfs:label>Personnel Files</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Policy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Policy">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasComponent"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#appliesRule"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#employsRule"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Rule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#grantsPriviligeToRole"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasGoal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Goal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#monitorsMetric"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Metric"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Policy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Privilige -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Privilige">
+        <rdfs:label>Privilige</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Record -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Record">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#classifiesData"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasRecordControlStructure"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#usesDataDictionary"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Data_Dictionary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Record</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Record_Control_Structure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Record_Control_Structure">
+        <rdfs:label>Record Control Structure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Rendition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Rendition">
+        <rdfs:label>Rendition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Report -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Report">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Retention -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Retention">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+        <rdfs:label>Retention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Risk">
+        <rdfs:label>Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Role">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#hasPrivilige"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Privilige"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Rule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Rule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#definesSchedule"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Schedule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Rule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Schedule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Schedule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/information#usedOnRecordControlStructure"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/information#Record_Control_Structure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Schedule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Sensitive_Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Sensitive_Data">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/information#Control_Data"/>
+        <rdfs:label>Sensitive Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Taxonomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Taxonomy">
+        <rdfs:label>Taxonomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Value">
+        <rdfs:label>Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Version -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/information#Version">
+        <rdfs:label>Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Archival_Information -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/information#Archival_Information">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/information#Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Content_Information -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/information#Content_Information">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/information#Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/information#Description -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/information#Description">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/information#Information"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
