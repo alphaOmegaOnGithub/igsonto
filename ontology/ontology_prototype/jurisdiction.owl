@@ -1,0 +1,2625 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/igonto/jurisdiction#"
+     xml:base="http://www.semanticweb.org/igonto/jurisdiction"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/igonto/jurisdiction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#description">
+        <rdfs:subPropertyOf rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPRincludesArticles -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPRincludesArticles">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includesArticle"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedInGDPR"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#belongsTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#belongsToCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#belongsToCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#belongsTo"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#belongsTo"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#involvedInCapabilities"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#chapterIncludesArticles -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#chapterIncludesArticles">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includesArticle"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedInChapter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#has"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#hasEnterprise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#hasEnterprise">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#operatesInCountry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#hasRegulation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#hasRegulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#has"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulatesJurisdiction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includedInArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includedInArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includesKeyword"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includedInChapter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includedInChapter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includedInGDPR -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includedInGDPR">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includesArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includesArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#includesKeyword -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#includesKeyword">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includes"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#involvedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#involvedIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#involvedInCapabilities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#involvedInCapabilities">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#involvedIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#involvedInTool -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#involvedInTool">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#involvedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Tools"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#operatesIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#operatesIn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#operatesInCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#operatesInCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#operatesIn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#programRequiredForRegulation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#programRequiredForRegulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiredForRegulation"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiresProgram"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulatesJurisdiction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulatesJurisdiction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulates"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#requiredFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#requiredFor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#requiredForRegulation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#requiredForRegulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiredFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#requires"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#requiresProgram -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#requiresProgram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#requiresStrategy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#requiresStrategy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requires"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiredForRegulation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Tools"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Country">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Regulation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Regulation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryCapital -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryCapital">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryCurrency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryCurrency">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryISOCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryISOCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#countryTimezone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#countryTimezone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#provenance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#provenance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulationAuthority -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulationAuthority">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulationEffectiveDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulationEffectiveDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulationLastUpdate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulationLastUpdate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#regulationName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/igonto/jurisdiction#regulationName">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Capability (Abstract)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Country">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#hasEnterprise"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryCapital"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryCurrency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryISOCode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryLanguage"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#countryTimezone"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#EU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#EU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Enterprise_Abstract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#operatesInCountry"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Enterprise (Abstract)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#European_Union -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#European_Union">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPRincludesArticles"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiresProgram"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#requiresStrategy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulatesJurisdiction"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulationAuthority"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulationEffectiveDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulationLastUpdate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#regulationName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includesKeyword"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#involvedInCapabilities"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#involvedInTool"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Tools"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedInChapter"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedInGDPR"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#provenance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GDPR Articles</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#chapterIncludesArticles"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GDPR Chapters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#includedInArticle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>GDPR Keywords</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#IG_Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#IG_Capability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract"/>
+        <rdfs:label>Information Governance Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#belongsToCountry"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#hasRegulation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Jurisdiction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#programRequiredForRegulation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Program (Abstract)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Regulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Regulation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Strategy (Abstract)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Tools -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Tools">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Tools</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Access -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Access">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Archieving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Archieving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-1-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-10-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-11-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Information"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-12-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Information"/>
+        <provenance>https://gdpr-info.eu/art-13-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Information"/>
+        <provenance>https://gdpr-info.eu/art-14-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Access"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-15-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-16-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Erasure"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Rectification"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-17-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-18-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Erasure"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Information"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Rectification"/>
+        <provenance>https://gdpr-info.eu/art-19-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-2-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Portability"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-20-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-21-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Profiling"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-22-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Restrictions"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-23-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-24-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-25-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-26-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <provenance>https://gdpr-info.eu/art-27-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <provenance>https://gdpr-info.eu/art-28-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <provenance>https://gdpr-info.eu/art-29-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-3-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Record"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-30-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-31-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-32-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Breach"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-33-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Breach"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-34-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-35-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-36-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-37-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-38-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-39-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-4-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Code_Of_Conduct"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Principles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <provenance>https://gdpr-info.eu/art-40-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Code_Of_Conduct"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Monitoring"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-41-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Certification"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <provenance>https://gdpr-info.eu/art-42-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Certification"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-43-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Principles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-44-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-45-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-46-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-47-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-48-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-49-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Principles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-5-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Transfer"/>
+        <provenance>https://gdpr-info.eu/art-50-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-51-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Competence"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-52-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-53-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-54-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Competence"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-55-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Competence"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-56-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_57">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Monitoring"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-57-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_58">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Powers"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-58-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_59 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_59">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Reports"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-59-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-6-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Cooperation"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-60-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-61-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_62 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_62">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Joint_Operations"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-62-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Consistency"/>
+        <provenance>https://gdpr-info.eu/art-63-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-64-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-65-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-66-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_67">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Information"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-67-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_68 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_68">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <provenance>https://gdpr-info.eu/art-68-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_69 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_69">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Independence"/>
+        <provenance>https://gdpr-info.eu/art-69-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-7-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-70-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Reports"/>
+        <provenance>https://gdpr-info.eu/art-71-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-72-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_73 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_73">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Chair"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <provenance>https://gdpr-info.eu/art-73-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Chair"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <provenance>https://gdpr-info.eu/art-74-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Responsibility"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Secretariat"/>
+        <provenance>https://gdpr-info.eu/art-75-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_76 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_76">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Confidentiality"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board"/>
+        <provenance>https://gdpr-info.eu/art-76-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_77 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_77">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-77-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_78 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_78">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-78-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_79 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_79">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Controller"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processor"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-79-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-8-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-80-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Proceedings"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Suspension"/>
+        <provenance>https://gdpr-info.eu/art-81-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Compensation"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-82-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_83">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Fines"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Principles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-83-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Penalties"/>
+        <provenance>https://gdpr-info.eu/art-84-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-85-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Documents"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-86-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_87 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_87">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-87-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_88 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_88">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Employee"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Right"/>
+        <provenance>https://gdpr-info.eu/art-88-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_89 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_89">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Archieving"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Principles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-89-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Processing"/>
+        <provenance>https://gdpr-info.eu/art-9-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#European_Union"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Supervisor"/>
+        <provenance>https://gdpr-info.eu/art-90-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_91 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_91">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection"/>
+        <provenance>https://gdpr-info.eu/art-91-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_92 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_92">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Commission"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Delegation"/>
+        <provenance>https://gdpr-info.eu/art-92-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Commission"/>
+        <includesKeyword rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Committee"/>
+        <provenance>https://gdpr-info.eu/art-93-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-94-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-95-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_96 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_96">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-96-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_97 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_97">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-97-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-98-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Article_99 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Article_99">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles"/>
+        <provenance>https://gdpr-info.eu/art-99-gdpr/</provenance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Certification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Certification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Chair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Chair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Code_Of_Conduct -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Code_Of_Conduct">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Commission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Commission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Committee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Committee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Compensation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Compensation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Competence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Competence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Confidentiality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Confidentiality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Consistency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Consistency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Controller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Controller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Cooperation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Cooperation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Data_Breach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Data_Breach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Data_Protection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Data_Protection_Officer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Data_Subject -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Data_Subject">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Delegation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Delegation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Documents -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Documents">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#EU -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#EU">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction"/>
+        <hasRegulation rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Employee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Employee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Erasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Erasure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#European_Data_Protection_Board">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#European_Union -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#European_Union">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Fines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Fines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_1"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_10"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_11"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_12"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_13"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_14"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_15"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_16"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_17"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_18"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_19"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_2"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_20"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_21"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_22"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_23"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_24"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_25"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_26"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_27"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_28"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_29"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_3"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_30"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_31"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_32"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_33"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_34"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_35"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_36"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_37"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_38"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_39"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_4"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_40"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_41"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_42"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_43"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_44"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_45"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_46"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_47"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_48"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_49"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_5"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_50"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_51"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_52"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_53"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_54"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_55"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_56"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_57"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_58"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_59"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_6"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_60"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_61"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_62"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_63"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_64"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_65"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_66"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_67"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_68"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_69"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_7"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_70"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_71"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_72"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_73"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_74"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_75"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_76"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_77"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_78"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_79"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_8"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_80"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_81"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_82"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_83"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_84"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_85"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_86"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_87"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_88"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_89"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_9"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_90"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_91"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_92"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_93"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_94"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_95"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_96"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_97"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_98"/>
+        <GDPRincludesArticles rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#Article_99"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapter_9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Chapters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#EU"/>
+        <belongsToJurisdiction rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#EU"/>
+        <isRegulatedBy rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Independence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Independence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Information -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Information">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Joint_Operations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Joint_Operations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Lawfulness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Lawfulness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Monitoring -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Monitoring">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Penalties -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Penalties">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Portability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Portability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Powers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Powers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Principles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Principles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Proceedings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Proceedings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Processor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Processor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Profiling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Profiling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Record -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Record">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Rectification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Rectification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Reports -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Reports">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Responsibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Responsibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Restrictions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Restrictions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Right -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Right">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Secretariat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Secretariat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Supervisor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Supervisor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Supervisor_Authority_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Supervisor_Authority_1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Suspension -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Suspension">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/igonto/jurisdiction#Transfer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Transfer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdfs:comment></rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Country">
+        <rdfs:label>Country</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/igonto/jurisdiction#European_Union">
+        <rdfs:label>European Union</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/igonto/jurisdiction#GDPR">
+        <rdfs:label>GDPR (General Data Protection Regulation)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/igonto/jurisdiction#Regulation">
+        <rdfs:label>Regulation</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
