@@ -221,6 +221,8 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Defined
 # 
+# http://www.example.org/cm/igso/2023/igso-org#EDRM
+# 
 # http://www.example.org/cm/igso/2023/igso-org#Essential
 # 
 # http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
@@ -247,6 +249,8 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
 # 
+# http://www.example.org/cm/igso/2023/igso-org#ISACA
+# 
 # http://www.example.org/cm/igso/2023/igso-org#ITAssets
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Immaturity
@@ -254,6 +258,8 @@
 # http://www.example.org/cm/igso/2023/igso-org#In-Development
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Initial
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Large
 # 
@@ -285,17 +291,9 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Non-Existent
 # 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a
-# 
 # http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ObjectServer
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OpenKM
 # 
@@ -324,6 +322,8 @@
 # http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
 # 
@@ -646,6 +646,9 @@ igso-org:DB2 a owl:NamedIndividual;
 igso-org:Defined a owl:NamedIndividual;
   rdfs:label "Defined"@en .
 
+igso-org:EDRM a owl:NamedIndividual;
+  rdfs:label "EDRM"@en .
+
 igso-org:Essential a owl:NamedIndividual;
   rdfs:label "Essential"@en .
 
@@ -691,6 +694,9 @@ igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual;
 igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual;
   rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
 
+igso-org:ISACA a owl:NamedIndividual;
+  rdfs:label "ISACA"@en .
+
 igso-org:ITAssets a owl:NamedIndividual;
   rdfs:label "ITAssets"@en .
 
@@ -703,8 +709,10 @@ igso-org:In-Development a owl:NamedIndividual;
 igso-org:Initial a owl:NamedIndividual;
   rdfs:label "Initial"@en .
 
-igso-org:Large a owl:NamedIndividual;
-  rdfs:label "Large"@de .
+igso-org:IntellectualAssets a owl:NamedIndividual;
+  rdfs:label "IntellectualAssets"@en .
+
+igso-org:Large a owl:NamedIndividual .
 
 igso-org:Lucene a owl:NamedIndividual;
   rdfs:label "Lucene"@en .
@@ -732,11 +740,9 @@ igso-org:MaturityLevel-4 a owl:NamedIndividual;
 igso-org:MaturityLevel-5 a owl:NamedIndividual;
   rdfs:label "MaturityLevel-5"@en .
 
-igso-org:Medium a owl:NamedIndividual;
-  rdfs:label "Medium"@de .
+igso-org:Medium a owl:NamedIndividual .
 
-igso-org:Micro a owl:NamedIndividual;
-  rdfs:label "Micro"@de .
+igso-org:Micro a owl:NamedIndividual .
 
 igso-org:MicrosoftCloud a owl:NamedIndividual;
   rdfs:label "GCP"@en, "MicrosoftCloud"@en .
@@ -748,23 +754,11 @@ igso-org:NextCloud a owl:NamedIndividual;
 igso-org:Non-Existent a owl:NamedIndividual;
   rdfs:label "Non-Existent"@en .
 
-igso-org:OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc a owl:NamedIndividual;
-  rdfs:label "Relational_Search_Service"@en .
-
-igso-org:OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d a owl:NamedIndividual;
-  rdfs:label "EDRM"@en .
-
-igso-org:OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc a owl:NamedIndividual;
-  rdfs:label "IntellectualAssets"@en .
-
-igso-org:OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8 a owl:NamedIndividual;
-  rdfs:label "ISACA"@en .
-
-igso-org:OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a a owl:NamedIndividual;
-  rdfs:label "ObjectServer"@en .
-
 igso-org:ObjectCatalog a owl:NamedIndividual;
   rdfs:label "ObjectCatalog"@en .
+
+igso-org:ObjectServer a owl:NamedIndividual;
+  rdfs:label "ObjectServer"@en .
 
 igso-org:OpenKM a owl:NamedIndividual;
   rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails.";
@@ -811,6 +805,9 @@ igso-org:RedHatCloud a owl:NamedIndividual;
 igso-org:Relational_Index_Service a owl:NamedIndividual;
   rdfs:label "Relational_Index_Service"@en .
 
+igso-org:Relational_Search_Service a owl:NamedIndividual;
+  rdfs:label "Relational_Search_Service"@en .
+
 igso-org:RelationsAssets a owl:NamedIndividual;
   rdfs:label "RelationsAssets"@en .
 
@@ -826,8 +823,7 @@ igso-org:SAPInformationSteward a owl:NamedIndividual;
 igso-org:SemiAutomatedLocal a owl:NamedIndividual;
   rdfs:label "SemiAutomatedLocal"@en .
 
-igso-org:Small a owl:NamedIndividual;
-  rdfs:label "Small"@de .
+igso-org:Small a owl:NamedIndividual .
 
 igso-org:Solr a owl:NamedIndividual;
   rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/";
