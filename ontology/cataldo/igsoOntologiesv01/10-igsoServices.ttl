@@ -55,8 +55,6 @@
 # #################################################################
 # 
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#DataDictionary
-# 
 # http://www.example.org/cm/igso/2023/igso-svc#AccessService
 # 
 # http://www.example.org/cm/igso/2023/igso-svc#AdministerService
@@ -228,8 +226,6 @@ _:genid1 foaf:name "Cataldo Mega";
 
 :provisions a owl:ObjectProperty;
   rdfs:subPropertyOf igso-ddy:P .
-
-igso-ddy:DataDictionary rdfs:subClassOf :IGServicesDomain .
 
 :AccessService a owl:Class;
   rdfs:subClassOf :ContentManagementService .

@@ -249,6 +249,8 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Defined
 # 
+# http://www.example.org/cm/igso/2023/igso-org#EDRM
+# 
 # http://www.example.org/cm/igso/2023/igso-org#Essential
 # 
 # http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
@@ -275,6 +277,8 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
 # 
+# http://www.example.org/cm/igso/2023/igso-org#ISACA
+# 
 # http://www.example.org/cm/igso/2023/igso-org#ITAssets
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Immaturity
@@ -282,6 +286,8 @@
 # http://www.example.org/cm/igso/2023/igso-org#In-Development
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Initial
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Large
 # 
@@ -313,17 +319,9 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Non-Existent
 # 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a
-# 
 # http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ObjectServer
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OpenKM
 # 
@@ -352,6 +350,8 @@
 # http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
 # 
@@ -763,6 +763,8 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :Defined a owl:NamedIndividual;
   rdfs:label "Defined"@en .
 
+:EDRM a owl:NamedIndividual .
+
 :Essential a owl:NamedIndividual;
   rdfs:label "Essential"@en .
 
@@ -808,6 +810,8 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual;
   rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
 
+:ISACA a owl:NamedIndividual .
+
 :ITAssets a owl:NamedIndividual;
   rdfs:label "ITAssets"@en .
 
@@ -820,8 +824,9 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :Initial a owl:NamedIndividual;
   rdfs:label "Initial"@en .
 
-:Large a owl:NamedIndividual;
-  rdfs:label "Large"@de .
+:IntellectualAssets a owl:NamedIndividual .
+
+:Large a owl:NamedIndividual .
 
 :Lucene a owl:NamedIndividual;
   rdfs:label "Lucene"@en .
@@ -840,8 +845,7 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :MaturityLevel-2 a owl:NamedIndividual;
   rdfs:label "MaturityLevel-2"@en .
 
-:MaturityLevel-3 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-3"@en .
+:MaturityLevel-3 a owl:NamedIndividual .
 
 :MaturityLevel-4 a owl:NamedIndividual;
   rdfs:label "MaturityLevel-4"@en .
@@ -849,11 +853,9 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :MaturityLevel-5 a owl:NamedIndividual;
   rdfs:label "MaturityLevel-5"@en .
 
-:Medium a owl:NamedIndividual;
-  rdfs:label "Medium"@de .
+:Medium a owl:NamedIndividual .
 
-:Micro a owl:NamedIndividual;
-  rdfs:label "Micro"@de .
+:Micro a owl:NamedIndividual .
 
 :MicrosoftCloud a owl:NamedIndividual;
   rdfs:label "GCP"@en, "MicrosoftCloud"@en .
@@ -865,23 +867,10 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 :Non-Existent a owl:NamedIndividual;
   rdfs:label "Non-Existent"@en .
 
-:OWLNamedIndividual_1fb68daa_d374_4bf0_a275_1cdd87073abc a owl:NamedIndividual;
-  rdfs:label "Relational_Search_Service"@en .
-
-:OWLNamedIndividual_31041464_f70b_4613_a0c6_87e7c1b12b4d a owl:NamedIndividual;
-  rdfs:label "EDRM"@en .
-
-:OWLNamedIndividual_32d77b25_17b2_47fa_8b2f_3e49b1be0dcc a owl:NamedIndividual;
-  rdfs:label "IntellectualAssets"@en .
-
-:OWLNamedIndividual_3613a9b5_12a6_4e8c_b857_2532d151bcc8 a owl:NamedIndividual;
-  rdfs:label "ISACA"@en .
-
-:OWLNamedIndividual_f27cc2b6_70c9_43e3_823a_ab716ab6183a a owl:NamedIndividual;
-  rdfs:label "ObjectServer"@en .
-
 :ObjectCatalog a owl:NamedIndividual;
   rdfs:label "ObjectCatalog"@en .
+
+:ObjectServer a owl:NamedIndividual .
 
 :OpenKM a owl:NamedIndividual;
   rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails.";
@@ -928,6 +917,9 @@ Open-source cloud-native solutions can serve as viable alternatives to proprieta
 :Relational_Index_Service a owl:NamedIndividual;
   rdfs:label "Relational_Index_Service"@en .
 
+:Relational_Search_Service a owl:NamedIndividual;
+  rdfs:label "Relational_Search_Service"@en .
+
 :RelationsAssets a owl:NamedIndividual;
   rdfs:label "RelationsAssets"@en .
 
@@ -943,8 +935,7 @@ Open-source cloud-native solutions can serve as viable alternatives to proprieta
 :SemiAutomatedLocal a owl:NamedIndividual;
   rdfs:label "SemiAutomatedLocal"@en .
 
-:Small a owl:NamedIndividual;
-  rdfs:label "Small"@de .
+:Small a owl:NamedIndividual .
 
 :Solr a owl:NamedIndividual;
   rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/";
