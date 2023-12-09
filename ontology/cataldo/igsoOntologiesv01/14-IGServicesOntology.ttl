@@ -153,7 +153,7 @@ igso-jur:isRegulatedBy rdfs:domain igso-jur:Regulation ;
 :hasNumberOfEmployees rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdf:type owl:FunctionalProperty ;
-                      rdfs:domain igso-ddy:Company ;
+                      rdfs:domain igso-org:Company ;
                       rdfs:range xsd:integer .
 
 
@@ -195,13 +195,195 @@ foaf:name rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/dcmitype/dctype:Dataset
+dctype:dctype:Dataset rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/elements/1.1/Subject
+dc:Subject rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
+dct:LocationPeriodOrJurisdiction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/Policy
+dct:Policy rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/goodrelations/v1#BusinesssFunction
+gr:BusinesssFunction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/goodrelations/v1#Offering
+gr:Offering rdfs:subClassOf igso-ddy:DataDictionary .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-arc#ContentCatalog
 igso-arc:ContentCatalog dct:title "A dataset structured to index content objects using a relational schema for managing unstructured data in the context of a content management system." ;
                         rdfs:label "ContentCatalog" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#Company
-igso-ddy:Company rdfs:subClassOf igso-org:Formalorganization ,
+###  http://www.example.org/cm/igso/2023/igso-ddy#Acronym
+igso-ddy:Acronym rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Capability
+igso-ddy:Capability rdfs:subClassOf igso-svc:IGServicesDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Compensation
+igso-ddy:Compensation rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Cooperation
+igso-ddy:Cooperation rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporatePolicy
+igso-ddy:CorporatePolicy rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporateRule
+igso-ddy:CorporateRule rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
+igso-ddy:DataErasure rdfs:subClassOf igso-data:Disposition .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataRetentionDuration
+igso-ddy:DataRetentionDuration rdfs:subClassOf igso-data:Retention .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Goal
+igso-ddy:Goal rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InteractiveResource
+igso-ddy:InteractiveResource rdfs:subClassOf igso-impl:ImplementationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
+igso-ddy:MaturityLevel rdfs:subClassOf igso-ass:PractitionerDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Measure
+igso-ddy:Measure rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Objective
+igso-ddy:Objective rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Procedure
+igso-ddy:Procedure rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Progress
+igso-ddy:Progress rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
+igso-ddy:SecurityMeasure rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
+igso-ddy:SensitiveData rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
+igso-ddy:SpecialCategory rdfs:subClassOf igso-data:DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Strategy
+igso-ddy:Strategy rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
+igso-ddy:SubProcessor rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
+igso-ddy:Taxonomy rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
+igso-ddy:Violation rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
+igso-ddy:VitalInterest rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Jurisdiction
+igso-ddy:dct:Jurisdiction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Collection
+igso-ddy:dctype:Collection rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Service
+igso-ddy:dctype:Service rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Software
+igso-ddy:dctype:Software rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Text
+igso-ddy:dctype:Text rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:DeliveryMethod
+igso-ddy:gr:DeliveryMethod rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
+igso-ddy:gr:Location rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrServiceModel
+igso-ddy:gr:ProductOrServiceModel rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#org:Organization
+igso-ddy:org:Organization rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Liability
+igso-jur:Liability rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Penalty
+igso-jur:Penalty rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Privacy-friendlySetting
+igso-jur:Privacy-friendlySetting rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Regulation
+igso-jur:Regulation rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#ddy:EU
+igso-jur:ddy:EU rdf:type owl:Class ;
+                rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Company
+igso-org:Company rdf:type owl:Class ;
+                 rdfs:subClassOf igso-org:FormalOrganization ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty igso-jur:isRegulatedBy ;
                                    owl:someValuesFrom igso-jur:Regulation
@@ -215,6 +397,73 @@ igso-ddy:Company rdfs:subClassOf igso-org:Formalorganization ,
                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:boolean
                                  ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#LargeCompany
+igso-org:LargeCompany rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasNumberOfEmployees ;
+                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                        owl:onDatatype xsd:integer ;
+                                                                                        owl:withRestrictions ( [ xsd:minInclusive 250
+                                                                                                               ]
+                                                                                                             )
+                                                                                      ]
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MediumCompany
+igso-org:MediumCompany rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty :hasNumberOfEmployees ;
+                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                         owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                                owl:onDatatype xsd:integer ;
+                                                                                                                owl:withRestrictions ( [ xsd:minExclusive 5
+                                                                                                                                       ]
+                                                                                                                                     )
+                                                                                                              ]
+                                                                                                              [ rdf:type rdfs:Datatype ;
+                                                                                                                owl:onDatatype xsd:integer ;
+                                                                                                                owl:withRestrictions ( [ xsd:maxInclusive 250
+                                                                                                                                       ]
+                                                                                                                                     )
+                                                                                                              ]
+                                                                                                            )
+                                                                                       ]
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MicroCompany
+igso-org:MicroCompany rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasNumberOfEmployees ;
+                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                        owl:onDatatype xsd:integer ;
+                                                                                        owl:withRestrictions ( [ xsd:maxInclusive 5
+                                                                                                               ]
+                                                                                                             )
+                                                                                      ]
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Occurrence
+igso-org:Occurrence rdfs:subClassOf igso-org:OrganizationDomain .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Organization
@@ -257,101 +506,51 @@ igso-org:Person owl:equivalentClass [ owl:intersectionOf ( igso-org:Person
                                 ] .
 
 
-###  http://www.example.org/cm/igso/2023/igsonto#LargeCompany
-:LargeCompany rdf:type owl:Class ;
-              owl:equivalentClass :org:CompanyType ,
-                                  [ owl:intersectionOf ( :org:CompanyType
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hasNumberOfEmployees ;
-                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                owl:onDatatype xsd:integer ;
-                                                                                owl:withRestrictions ( [ xsd:minInclusive 250
-                                                                                                       ]
-                                                                                                     )
-                                                                              ]
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] .
+###  http://www.example.org/cm/igso/2023/igso-org#Program
+igso-org:Program rdfs:subClassOf igso-org:OrganizationDomain .
 
 
-###  http://www.example.org/cm/igso/2023/igsonto#MediumCompany
-:MediumCompany rdf:type owl:Class ;
-               owl:equivalentClass :org:CompanyType ,
-                                   [ owl:intersectionOf ( :org:CompanyType
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :hasNumberOfEmployees ;
-                                                            owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                 owl:onDatatype xsd:integer ;
-                                                                                 owl:withRestrictions ( [ xsd:maxInclusive 250
-                                                                                                        ]
-                                                                                                      )
-                                                                               ]
-                                                          ]
-                                                        ) ;
-                                     rdf:type owl:Class
-                                   ] .
+###  http://www.example.org/cm/igso/2023/igso-org#SmallCompany
+igso-org:SmallCompany rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasNumberOfEmployees ;
+                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                        owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
+                                                                                                               owl:onDatatype xsd:integer ;
+                                                                                                               owl:withRestrictions ( [ xsd:minExclusive 5
+                                                                                                                                      ]
+                                                                                                                                    )
+                                                                                                             ]
+                                                                                                             [ rdf:type rdfs:Datatype ;
+                                                                                                               owl:onDatatype xsd:integer ;
+                                                                                                               owl:withRestrictions ( [ xsd:maxInclusive 100
+                                                                                                                                      ]
+                                                                                                                                    )
+                                                                                                             ]
+                                                                                                           )
+                                                                                      ]
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf igso-org:Company .
 
 
-###  http://www.example.org/cm/igso/2023/igsonto#MicroCompany
-:MicroCompany rdf:type owl:Class ;
-              owl:equivalentClass :org:CompanyType ,
-                                  [ owl:intersectionOf ( :org:CompanyType
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hasNumberOfEmployees ;
-                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                owl:onDatatype xsd:integer ;
-                                                                                owl:withRestrictions ( [ xsd:maxInclusive 5
-                                                                                                       ]
-                                                                                                     )
-                                                                              ]
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] .
-
-
-###  http://www.example.org/cm/igso/2023/igsonto#SmallCompany
-:SmallCompany rdf:type owl:Class ;
-              owl:equivalentClass :org:CompanyType ,
-                                  [ owl:intersectionOf ( :org:CompanyType
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :hasNumberOfEmployees ;
-                                                           owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                owl:unionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                owl:onDatatype xsd:integer ;
-                                                                                                owl:withRestrictions ( [ xsd:minInclusive 5
-                                                                                                                       ]
-                                                                                                                     )
-                                                                                              ]
-                                                                                              [ rdf:type rdfs:Datatype ;
-                                                                                                owl:onDatatype xsd:integer ;
-                                                                                                owl:withRestrictions ( [ xsd:maxInclusive 50
-                                                                                                                       ]
-                                                                                                                     )
-                                                                                              ]
-                                                                                            )
-                                                                              ]
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
-                                  ] .
+###  http://www.example.org/cm/igso/2023/igso-org#prov:Role
+igso-org:prov:Role rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#org:CompanyType
 :org:CompanyType rdf:type owl:Class ;
                  owl:equivalentClass [ rdf:type owl:Class ;
-                                       owl:oneOf ( igso-org:Large
-                                                   igso-org:Medium
-                                                   igso-org:Micro
-                                                   igso-org:Small
-                                                   :LargeCompany
-                                                   :MediumCompany
-                                                   :MicroCompany
-                                                   :SmallCompany
+                                       owl:oneOf ( igso-org:LargeCompany
+                                                   igso-org:MediumCompany
+                                                   igso-org:MicroCompany
+                                                   igso-org:SmallCompany
                                                  )
                                      ] ;
-                 rdfs:subClassOf igso-org:Formalorganization .
+                 rdfs:subClassOf igso-org:FormalOrganization .
 
 
 ###  http://www.w3.org/ns/org#GeographicRegion
@@ -365,7 +564,8 @@ org:PersonName rdf:type owl:Class ;
 
 
 ###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdfs:subClassOf [ rdf:type owl:Restriction ;
+foaf:Person rdfs:subClassOf igso-ddy:DataDictionary ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :personLastName ;
                               owl:allValuesFrom xsd:string
                             ] .
@@ -376,19 +576,39 @@ foaf:Person rdfs:subClassOf [ rdf:type owl:Restriction ;
 #################################################################
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Large
-igso-org:Large rdf:type igso-ddy:Company .
+igso-org:Large rdf:type igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#LargeCompany
+igso-org:LargeCompany rdf:type owl:NamedIndividual ,
+                               igso-org:Company .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Medium
 igso-org:Medium rdf:type :org:CompanyType .
 
 
+###  http://www.example.org/cm/igso/2023/igso-org#MediumCompany
+igso-org:MediumCompany rdf:type owl:NamedIndividual ,
+                                :org:CompanyType .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-org#Micro
 igso-org:Micro rdf:type :org:CompanyType .
 
 
+###  http://www.example.org/cm/igso/2023/igso-org#MicroCompany
+igso-org:MicroCompany rdf:type owl:NamedIndividual ,
+                               :org:CompanyType .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-org#Small
 igso-org:Small rdf:type :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#SmallCompany
+igso-org:SmallCompany rdf:type owl:NamedIndividual ,
+                               :org:CompanyType .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#AlfrescoContentCatalog
@@ -404,11 +624,6 @@ igso-org:Small rdf:type :org:CompanyType .
         foaf:name "Europe" .
 
 
-###  http://www.example.org/cm/igso/2023/igsonto#GDPR
-:GDPR rdf:type owl:NamedIndividual ,
-               igso-jur:GDPR .
-
-
 ###  http://www.example.org/cm/igso/2023/igsonto#IBMECMLibraryServerCatalog
 :IBMECMLibraryServerCatalog rdf:type owl:NamedIndividual ,
                                      igso-arc:ContentCatalog .
@@ -419,114 +634,81 @@ igso-org:Small rdf:type :org:CompanyType .
                                    igso-arc:ContentCatalog .
 
 
-###  http://www.example.org/cm/igso/2023/igsonto#LargeCompany
-:LargeCompany rdf:type owl:NamedIndividual ,
-                       igso-ddy:Company .
-
-
 ###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm1
 :LargeFirm1 rdf:type owl:NamedIndividual ,
-                     :LargeCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:LargeCompany ;
             :hasNumberOfEmployees 251 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm2
 :LargeFirm2 rdf:type owl:NamedIndividual ,
-                     :LargeCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:LargeCompany ;
             :hasNumberOfEmployees 361 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm3
 :LargeFirm3 rdf:type owl:NamedIndividual ,
-                     :LargeCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:LargeCompany ;
             :hasNumberOfEmployees 5555 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MYTinyCompany
 :MYTinyCompany rdf:type owl:NamedIndividual ,
-                        :MicroCompany ;
-               igso-jur:isRegulatedBy :GDPR ;
+                        igso-org:MicroCompany ;
                :hasNumberOfEmployees 1 .
-
-
-###  http://www.example.org/cm/igso/2023/igsonto#MediumCompany
-:MediumCompany rdf:type owl:NamedIndividual ,
-                        :org:CompanyType .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm1
 :MediumFirm1 rdf:type owl:NamedIndividual ,
-                      :MediumCompany ;
-             igso-jur:isRegulatedBy :GDPR ;
+                      igso-org:MediumCompany ;
              :hasNumberOfEmployees 111 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm2
 :MediumFirm2 rdf:type owl:NamedIndividual ,
-                      :MediumCompany ;
-             igso-jur:isRegulatedBy :GDPR ;
+                      igso-org:MediumCompany ;
              :hasNumberOfEmployees 141 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm3
 :MediumFirm3 rdf:type owl:NamedIndividual ,
-                      :MediumCompany ;
-             igso-jur:isRegulatedBy :GDPR ;
+                      igso-org:MediumCompany ;
              :hasNumberOfEmployees 239 .
-
-
-###  http://www.example.org/cm/igso/2023/igsonto#MicroCompany
-:MicroCompany rdf:type owl:NamedIndividual ,
-                       :org:CompanyType .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm1
 :MicroFirm1 rdf:type owl:NamedIndividual ,
-                     :MicroCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:MicroCompany ;
             :hasNumberOfEmployees 3 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm2
 :MicroFirm2 rdf:type owl:NamedIndividual ,
-                     :MicroCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:MicroCompany ;
             :hasNumberOfEmployees 4 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm3
 :MicroFirm3 rdf:type owl:NamedIndividual ,
-                     :MicroCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:MicroCompany ;
             :hasNumberOfEmployees 5 .
-
-
-###  http://www.example.org/cm/igso/2023/igsonto#SmallCompany
-:SmallCompany rdf:type owl:NamedIndividual ,
-                       :org:CompanyType .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm1
 :SmallFirm1 rdf:type owl:NamedIndividual ,
-                     :SmallCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:SmallCompany ;
             :hasNumberOfEmployees 9 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm2
 :SmallFirm2 rdf:type owl:NamedIndividual ,
-                     :SmallCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:SmallCompany ;
             :hasNumberOfEmployees 13 .
 
 
 ###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm3
 :SmallFirm3 rdf:type owl:NamedIndividual ,
-                     :SmallCompany ;
-            igso-jur:isRegulatedBy :GDPR ;
+                     igso-org:SmallCompany ;
             :hasNumberOfEmployees 17 .
 
 
@@ -543,10 +725,10 @@ igso-jur:Jurisdiction rdfs:label "Jurisdiction" ;
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :LargeCompany
-                :MediumCompany
-                :MicroCompany
-                :SmallCompany
+  owl:members ( igso-org:LargeCompany
+                igso-org:MediumCompany
+                igso-org:MicroCompany
+                igso-org:SmallCompany
               )
 ] .
 

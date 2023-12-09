@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <VSNode splits="1.0">
+        <HSNode splits="0.7919921875">
+            <CNode>
+                <Component label="Snap SPARQL Query">
+                    <Property id="pluginId" value="snap-sparql-query-plugin.SnapSPARQLQuery"/>
+                </Component>
+                <Component label="SPARQL query">
+                    <Property id="pluginId" value="org.protege.editor.owl.rdf.SparqlQueryView"/>
+                </Component>
+            </CNode>
+        </HSNode>
+    </VSNode>
+</layout>
