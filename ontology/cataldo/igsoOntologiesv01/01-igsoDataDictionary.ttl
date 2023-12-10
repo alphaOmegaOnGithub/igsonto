@@ -348,16 +348,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.example.org/cm/igso/2023/igso-data#RecordsCategory
-igso-data:RecordsCategory rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :R .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#Remedy
-igso-data:Remedy rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :R .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
 :DataErasure rdf:type owl:ObjectProperty .
 
@@ -382,89 +372,20 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 :EnhancedProtection rdf:type owl:ObjectProperty .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#G
-:G rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#GDPRViolation
-:GDPRViolation rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :Violation .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#H
-:H rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#I
-:I rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrieval
-:InformationRetrieval rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :I .
+:InformationRetrieval rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
-:InformationRetrievalSystem rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf :I .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#J
-:J rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#K
-:K rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#L
-:L rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#LawfulBasis
-:LawfulBasis rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :L .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#LegalInterest
-:LegalInterest rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :L .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#LegalObligation
-:LegalObligation rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :L .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#LegalRecourse
-:LegalRecourse rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :L .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Liability
-:Liability rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :L .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#M
-:M rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
+:InformationRetrievalSystem rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
-:MaturityLevel rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :M .
+:MaturityLevel rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Measure
-:Measure rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :M .
+:Measure rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#MeasurePrivacy
@@ -487,119 +408,12 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :Measure .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#O
-:O rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#P
-:P rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#PersonalDataTransfer
-:PersonalDataTransfer rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Privacy-friendlySettings
-:Privacy-friendlySettings rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#PrivacyBreaches
-:PrivacyBreaches rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Procedure
-:Procedure rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#ProcesseingPurpose
-:ProcesseingPurpose rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :P .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Progress
-:Progress rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#PublicTask
-:PublicTask rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#PurposeOfProcessing
-:PurposeOfProcessing rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :P .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Q
-:Q rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#R
-:R rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RetentionPeriod
-:RetentionPeriod rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :R .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightRegardingAutomatedProfiling
-:RightRegardingAutomatedProfiling rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToAccess
-:RightToAccess rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToDataPortability
-:RightToDataPortability rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToErasure
-:RightToErasure rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToObject
-:RightToObject rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRectification
-:RightToRectification rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Rights
-:Rights rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :R .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedDecision
-:RightsRegardingAutomatedDecision rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf :Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#S
-:S rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
+:Progress rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Security
-:Security rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :S .
+:Security rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
@@ -608,68 +422,11 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
-:SensitiveData rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :S .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
-:SpecialCategory rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :S .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
-:SubProcessor rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :S .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#T
-:T rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
+:SensitiveData rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
-:Taxonomy rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :T .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#U
-:U rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#V
-:V rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
-:Violation rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :V .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
-:VitalInterest rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :V .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#W
-:W rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#X
-:X rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Y
-:Y rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Z
-:Z rdf:type owl:ObjectProperty ;
-   rdfs:subPropertyOf owl:topObjectProperty .
+:Taxonomy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#align
@@ -962,13 +719,11 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#handles
-:handles rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :H .
+:handles rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#has
-:has rdf:type owl:ObjectProperty ;
-     rdfs:subPropertyOf :H .
+:has rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#hasCapability
@@ -1032,13 +787,11 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#implementsAppropriate
-:implementsAppropriate rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf :I .
+:implementsAppropriate rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#implies
-:implies rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :I .
+:implies rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#impliesImplementationOf
@@ -1052,13 +805,11 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#includes
-:includes rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :I .
+:includes rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#is
-:is rdf:type owl:ObjectProperty ;
-    rdfs:subPropertyOf :I .
+:is rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#isAdministeredBy
@@ -1131,7 +882,7 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#isGroupOf
 :isGroupOf rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :is ;
-           rdfs:domain :dctype:Collection .
+           rdfs:domain dctype:Collection .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#isHardTo
@@ -1250,8 +1001,7 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#limits
-:limits rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :L .
+:limits rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#limitsArchivePeriod
@@ -1270,43 +1020,35 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#maintains
-:maintains rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :M .
+:maintains rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#manages
-:manages rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :M .
+:manages rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#mandates
-:mandates rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :M .
+:mandates rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#mayInvolve
-:mayInvolve rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :M .
+:mayInvolve rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#measures
-:measures rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :M .
+:measures rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#minizeAmountOf
-:minizeAmountOf rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :M .
+:minizeAmountOf rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#monitors
-:monitors rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :M .
+:monitors rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#perform
-:perform rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :P .
+:perform rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#performIimpactAssessment
@@ -1320,43 +1062,35 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#persues
-:persues rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :P .
+:persues rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#plans
-:plans rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf :P .
+:plans rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#processes
-:processes rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :P .
+:processes rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#produces
-:produces rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :P .
+:produces rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#profile
-:profile rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf :P .
+:profile rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#promotes
-:promotes rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :P .
+:promotes rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#protects
-:protects rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :P .
+:protects rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#provides
-:provides rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :P .
+:provides rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#providesCatalogService
@@ -1405,13 +1139,11 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#referentialIntegrity
-:referentialIntegrity rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :R .
+:referentialIntegrity rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
-:requiresCompliaenceWith rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf :R .
+:requiresCompliaenceWith rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
@@ -1420,53 +1152,43 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#satisfies
-:satisfies rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :S .
+:satisfies rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#serves
-:serves rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :S .
+:serves rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#specifies
-:specifies rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :S .
+:specifies rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#subjectTo
-:subjectTo rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf :S .
+:subjectTo rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#submitts
-:submitts rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :S .
+:submitts rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#supports
-:supports rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf :S .
+:supports rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#tests
-:tests rdf:type owl:ObjectProperty ;
-       rdfs:subPropertyOf :T .
+:tests rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
-:validateAuthenticity rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :V .
+:validateAuthenticity rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompleteness
-:validateCompleteness rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :V .
+:validateCompleteness rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompliance
-:validateCompliance rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :V .
+:validateCompliance rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateComplianceLevel
@@ -1475,44 +1197,41 @@ igso-data:Remedy rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateConsistency
-:validateConsistency rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :V .
+:validateConsistency rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateProvenance
-:validateProvenance rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :V .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ContractualRelationship
-:gr:ContractualRelationship rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#jur:Consistency
-:jur:Consistency rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#jur:Cooperation
-:jur:Cooperation rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#org:CorporateRule
-:org:CorporateRule rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#org:Objective
-:org:Objective rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :O .
+:validateProvenance rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Goal
-igso-org:Goal rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :G .
+igso-org:Goal rdf:type owl:ObjectProperty .
 
 
-###  http://www.example.org/cm/igso/2023/igso-org#Strategy
-igso-org:Strategy rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :S .
+###  http://www.w3.org/ns/org#CorporateRule
+org:CorporateRule rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/org#Objective
+org:Objective rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/org#hasSubOrganization
+org:hasSubOrganization rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       owl:inverseOf org:subOrganizationOf .
+
+
+###  http://www.w3.org/ns/org#hasUnit
+org:hasUnit rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf org:hasSubOrganization ;
+            rdfs:domain org:Organization ;
+            rdfs:range org:OrganizationalUnit .
+
+
+###  http://www.w3.org/ns/org#subOrganizationOf
+org:subOrganizationOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty .
 
 
 #################################################################
@@ -1577,7 +1296,6 @@ igso-org:Strategy rdf:type owl:ObjectProperty ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#identifier
 :identifier rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf skos:notation ;
-            rdfs:domain :org:Organization ;
             rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization." .
 
 
@@ -1650,30 +1368,108 @@ igso-org:Strategy rdf:type owl:ObjectProperty ;
 skos:notation rdf:type owl:DatatypeProperty .
 
 
+###  http://www.w3.org/ns/org#identifier
+org:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ,
+                                  skos:notation ;
+               rdfs:domain org:Organization ;
+               rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization."@en ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+               rdfs:label "identifier"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
 
-###  http://purl.org/dc/dcmitype/dctype:Dataset
-dctype:dctype:Dataset rdf:type owl:Class ;
-                      rdfs:subClassOf :DataDictionary ;
-                      rdfs:isDefinedBy dctype:Dataset .
+###  http://purl.org/dc/dcmitype/Collection
+dctype:Collection rdf:type owl:Class ;
+                  rdfs:subClassOf :DataDictionary ;
+                  :definition "An aggregation of resources." ;
+                  rdfs:comment "A collection is described as a group; its parts may also be separately described." ;
+                  rdfs:isDefinedBy dctype:Collection ;
+                  rdfs:label "Collection" .
+
+
+###  http://purl.org/dc/dcmitype/Dataset
+dctype:Dataset rdf:type owl:Class ;
+               rdfs:subClassOf :DataDictionary ;
+               :definition "Data encoded in a defined structure." ;
+               rdfs:comment """Examples include lists, tables, and databases. 
+A dataset may be useful for direct machine processing.""" ;
+               rdfs:isDefinedBy dctype:Dataset ;
+               rdfs:label "Dataset" .
+
+
+###  http://purl.org/dc/dcmitype/Service
+dctype:Service rdf:type owl:Class ;
+               rdfs:subClassOf :DataDictionary ;
+               :definition "A system that provides one or more functions." ;
+               rdfs:comment "Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server." ;
+               rdfs:isDefinedBy dctype:Service ;
+               rdfs:label "Service" .
+
+
+###  http://purl.org/dc/dcmitype/Software
+dctype:Software rdf:type owl:Class ;
+                rdfs:subClassOf :DataDictionary ;
+                :definition "A computer program in source or compiled form." ;
+                rdfs:comment "Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server." ;
+                rdfs:isDefinedBy dctype:Software ;
+                rdfs:label "Software" .
+
+
+###  http://purl.org/dc/dcmitype/Text
+dctype:Text rdf:type owl:Class ;
+            rdfs:subClassOf :DataDictionary ;
+            :definition "A resource consisting primarily of words for reading." ;
+            rdfs:comment "Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. Note that facsimiles or images of texts are still of the genre Text." ;
+            rdfs:isDefinedBy dctype:Text ;
+            rdfs:label "Text" .
 
 
 ###  http://purl.org/dc/elements/1.1/Subject
 dc:Subject rdf:type owl:Class ;
            rdfs:subClassOf :DataDictionary ;
-           rdfs:isDefinedBy dc:subject .
+           rdfs:isDefinedBy dc:subject ;
+           rdfs:label "Subject" .
+
+
+###  http://purl.org/dc/terms/Agent
+dct:Agent rdf:type owl:Class ;
+          rdfs:subClassOf :DataDictionary ;
+          :definition "A resource that acts or has the power to act." ;
+          rdfs:isDefinedBy dct:Agent ;
+          rdfs:label "Agent" .
+
+
+###  http://purl.org/dc/terms/AgentClass
+dct:AgentClass rdf:type owl:Class ;
+               rdfs:subClassOf dct:Agent ;
+               :definition "A group of agents." ;
+               rdfs:isDefinedBy dct:AgentClass ;
+               rdfs:label "AgentClass" .
+
+
+###  http://purl.org/dc/terms/Jurisdiction
+dct:Jurisdiction rdf:type owl:Class ;
+                 rdfs:subClassOf :DataDictionary .
 
 
 ###  http://purl.org/dc/terms/Location
 dct:Location rdf:type owl:Class ;
-             rdfs:subClassOf dct:LocationPeriodOrJurisdiction .
+             rdfs:subClassOf dct:LocationPeriodOrJurisdiction ;
+             :definition "A spatial region or named place." ;
+             rdfs:isDefinedBy dct:Location ;
+             rdfs:label "Location" .
 
 
 ###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
 dct:LocationPeriodOrJurisdiction rdf:type owl:Class ;
-                                 rdfs:subClassOf :DataDictionary .
+                                 rdfs:subClassOf :DataDictionary ;
+                                 :definition "A location, period of time, or jurisdiction." ;
+                                 rdfs:isDefinedBy dct:LocationPeriodOrJurisdiction ;
+                                 rdfs:label "Location, Period, or Jurisdiction" .
 
 
 ###  http://purl.org/dc/terms/MediaType
@@ -1683,29 +1479,105 @@ dct:MediaType rdf:type owl:Class ;
 
 ###  http://purl.org/dc/terms/Period
 dct:Period rdf:type owl:Class ;
-           rdfs:subClassOf dct:LocationPeriodOrJurisdiction .
+           rdfs:subClassOf dct:LocationPeriodOrJurisdiction ;
+           :definition "An interval of time that is named or defined by its start and end dates." ;
+           rdfs:isDefinedBy dct:PeriodOfTime ;
+           rdfs:label "Period" .
 
 
 ###  http://purl.org/dc/terms/Policy
 dct:Policy rdf:type owl:Class ;
-           rdfs:subClassOf :DataDictionary .
+           rdfs:subClassOf :DataDictionary ;
+           :definition "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters." ;
+           rdfs:isDefinedBy dct:Policy ;
+           rdfs:label "Policy" .
 
 
 ###  http://purl.org/dc/terms/Standard
 dct:Standard rdf:type owl:Class ;
-             rdfs:subClassOf :DataDictionary .
+             rdfs:subClassOf :DataDictionary ;
+             :definition "A reference point against which other things can be evaluated or compared." ;
+             rdfs:isDefinedBy dct:Standard ;
+             rdfs:label "Standard" .
+
+
+###  http://purl.org/goodrelations/v1#BusinessEntity
+gr:BusinessEntity rdf:type owl:Class ;
+                  rdfs:subClassOf :DataDictionary ;
+                  rdfs:comment "A location is a point or area of interest from which a particular product or service is available,  Typical address standards (vcard) and location data (geo, WGC84) should be attached to a gr:Location node." ;
+                  rdfs:isDefinedBy gr:BusinessEntity ;
+                  rdfs:label "BusinessEntity" .
+
+
+###  http://purl.org/goodrelations/v1#BusinessFunction
+gr:BusinessFunction rdf:type owl:Class ;
+                    rdfs:subClassOf :DataDictionary ;
+                    rdfs:comment "The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation." ;
+                    rdfs:isDefinedBy gr:BusinessFunction ;
+                    rdfs:label "BusinessFunction" .
+
+
+###  http://purl.org/goodrelations/v1#BusinessUnit
+gr:BusinessUnit rdf:type owl:Class ;
+                rdfs:subClassOf :DataDictionary ;
+                rdfs:label "BusinessUnit" .
 
 
 ###  http://purl.org/goodrelations/v1#BusinesssFunction
 gr:BusinesssFunction rdf:type owl:Class ;
-                     rdfs:subClassOf :gr:BusinessEntity ;
+                     rdfs:subClassOf :DataDictionary ;
                      rdfs:isDefinedBy gr:BusinessFunction .
+
+
+###  http://purl.org/goodrelations/v1#ContractualRelationship
+gr:ContractualRelationship rdf:type owl:Class ;
+                           rdfs:subClassOf :DataDictionary .
+
+
+###  http://purl.org/goodrelations/v1#DeliveryMethod
+gr:DeliveryMethod rdf:type owl:Class ;
+                  rdfs:subClassOf :DataDictionary ;
+                  rdfs:comment """A delivery method is a standardized procedure for transferring the product or service to the destination of fulfilment chosen by the customer. 
+
+see also
+https://www.heppnetz.de/ontologies/goodrelations/v1.html#DeliveryMethod""" ;
+                  rdfs:isDefinedBy gr:DeliveryMethod .
+
+
+###  http://purl.org/goodrelations/v1#Location
+gr:Location rdf:type owl:Class ;
+            rdfs:subClassOf :DataDictionary ;
+            rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Location> ;
+            rdfs:label "Location" .
 
 
 ###  http://purl.org/goodrelations/v1#Offering
 gr:Offering rdf:type owl:Class ;
             rdfs:subClassOf :DataDictionary ;
             rdfs:isDefinedBy gr:Offering .
+
+
+###  http://purl.org/goodrelations/v1#ProductOrService
+gr:ProductOrService rdf:type owl:Class ;
+                    rdfs:subClassOf :DataDictionary ;
+                    rdfs:comment """The superclass of all classes describing products or services types, either by nature or purpose.
+Compatibility with schema.org: This class is (approximately) equivalent to http://schema.org/Product .
+
+Note: Your first choice for specializations of gr:ProductOrService should be http://www.productontology.org.""" ;
+                    rdfs:isDefinedBy gr:ProductOrService ;
+                    rdfs:label "ProductOrService" .
+
+
+###  http://purl.org/goodrelations/v1#ProductOrServiceModel
+gr:ProductOrServiceModel rdf:type owl:Class ;
+                         rdfs:subClassOf gr:ProductOrService ;
+                         rdfs:comment """A product or service model is a intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype.
+
+Compatibility with schema.org: This class is (approximately) a subclass of http://schema.org/Product.""" ;
+                         rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel> ;
+                         rdfs:label "ProductOrServiceModel" ;
+                         rdfs:seeAlso """GoodRelations ontology for E-Commenrce UML Class Diagram
+https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#ACL
@@ -1786,113 +1658,59 @@ see also: https://www.cms.gov/research-statistics-data-systems/DataArchitectureE
              rdfs:subClassOf :Acronym .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Agent
-:dct:Agent rdf:type owl:Class ;
-           rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dct:AgentClass
-:dct:AgentClass rdf:type owl:Class ;
-                rdfs:subClassOf :dct:Agent .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Jurisdiction
-:dct:Jurisdiction rdf:type owl:Class ;
-                  rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Collection
-:dctype:Collection rdf:type owl:Class ;
-                   rdfs:subClassOf :DataDictionary ;
-                   rdfs:isDefinedBy dctype:Collection .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Service
-:dctype:Service rdf:type owl:Class ;
-                rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Software
-:dctype:Software rdf:type owl:Class ;
-                 rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Text
-:dctype:Text rdf:type owl:Class ;
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
              rdfs:subClassOf :DataDictionary .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessEntity
-:gr:BusinessEntity rdf:type owl:Class ;
-                   rdfs:subClassOf :DataDictionary ;
-                   rdfs:isDefinedBy gr:BusinessEntity .
+###  http://www.w3.org/ns/org#FormalOrganization
+org:FormalOrganization rdf:type owl:Class ;
+                       rdfs:subClassOf org:Organization ;
+                       rdfs:isDefinedBy org:FormalOrganization ;
+                       rdfs:label "FormalOrganization" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessFunction
-:gr:BusinessFunction rdf:type owl:Class ;
-                     rdfs:subClassOf :DataDictionary .
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf dct:Agent ,
+                                 :DataDictionary ;
+                 rdfs:comment """Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent.
+
+equivalentClass:  http://xmlns.com/foaf/0.1/Organization
+
+see also : http://www.w3.org/TR/vocab-org/ and""" ;
+                 rdfs:isDefinedBy org:Organization ;
+                 rdfs:label "Organization" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessUnit
-:gr:BusinessUnit rdf:type owl:Class ;
-                 rdfs:subClassOf :DataDictionary .
+###  http://www.w3.org/ns/org#OrganizationalUnit
+org:OrganizationalUnit rdf:type owl:Class ;
+                       rdfs:subClassOf org:Organization ;
+                       rdfs:comment """Units can be large and complex containing other Units. 
+Alternative names: Department""" ;
+                       rdfs:isDefinedBy org:OrganizationalUnit ;
+                       rdfs:label "OrganizationalUnit" ;
+                       skos:altLabel "Department" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ContractualRelationship
-:gr:ContractualRelationship rdf:type owl:Class ;
-                            rdfs:subClassOf :DataDictionary .
+###  http://www.w3.org/ns/org#Site
+org:Site rdf:type owl:Class ;
+         rdfs:subClassOf :DataDictionary ;
+         rdfs:comment "In most cases a Site will be a physical location with the possibility of non-physical sites such as a virtual office." ;
+         rdfs:isDefinedBy org:Site ;
+         rdfs:label "Site" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:DeliveryMethod
-:gr:DeliveryMethod rdf:type owl:Class ;
-                   rdfs:subClassOf :DataDictionary ;
-                   rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#DeliveryMethod> .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
-:gr:Location rdf:type owl:Class ;
-             rdfs:subClassOf :DataDictionary ;
-             rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Location> .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrService
-:gr:ProductOrService rdf:type owl:Class ;
-                     rdfs:subClassOf dct:Period ;
-                     rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrService> .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrServiceModel
-:gr:ProductOrServiceModel rdf:type owl:Class ;
-                          rdfs:subClassOf :DataDictionary ;
-                          rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel> ;
-                          rdfs:seeAlso """GoodRelations ontology for E-Commenrce UML Class Diagram
-https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#org:Organization
-:org:Organization rdf:type owl:Class ;
-                  rdfs:subClassOf :DataDictionary ;
-                  rdfs:isDefinedBy org:Organization .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#org:Site
-:org:Site rdf:type owl:Class ;
-          rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#skos:Concept
-:skos:Concept rdf:type owl:Class ;
-              rdfs:subClassOf :DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#prov:Role
-igso-org:prov:Role rdf:type owl:Class ;
-                   rdfs:subClassOf :skos:Concept .
+###  http://www.w3.org/ns/prov#Role
+prov:Role rdf:type owl:Class ;
+          rdfs:subClassOf skos:Concept ;
+          rdfs:label "Role" .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
-            rdfs:subClassOf :dct:Agent .
+            rdfs:subClassOf dct:Agent ;
+            rdfs:label "Person" .
 
 
 #################################################################
@@ -1917,8 +1735,7 @@ gr:Dispose rdf:type owl:NamedIndividual ,
 
 ###  http://purl.org/goodrelations/v1#ProvideService
 gr:ProvideService rdf:type owl:NamedIndividual ,
-                           gr:BusinesssFunction ;
-                  rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProvideService> .
+                           gr:BusinesssFunction .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#ACL
@@ -2070,25 +1887,6 @@ igso-org:GoogleCloud rdf:type owl:NamedIndividual ;
 ###  http://www.example.org/cm/igso/2023/igso-org#HRAssets
 igso-org:HRAssets rdf:type owl:NamedIndividual ;
                   rdfs:label "HRAssets"@en .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#Head
-igso-org:Head rdf:type owl:NamedIndividual ,
-                       igso-org:prov:Role ;
-              igso-org:roleProperty igso-org:headOf ;
-              rdfs:comment "A role corresponding to the `igso-org:headOf` property"@en ,
-                           "Actividad correspondiente a la propiedad `igso-org:headOf`."@es ,
-                           "Un ruolo corrispondente alla proprietà `igso-org:headOf`."@it ,
-                           "Un rôle correspondant à la propriété `igso-org:headOf`"@fr ;
-              rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-              rdfs:label "director ejecutivo"@es ,
-                         "directora ejecutiva"@es ,
-                         "head"@en ,
-                         "responsabile"@it ,
-                         "responsable"@fr ;
-              skos:prefLabel "head"@en ,
-                             "responsabile"@it ,
-                             "responsable"@fr .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#IBMCloud
@@ -2360,15 +2158,15 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( gr:Offering
-                :gr:BusinessEntity
-                :gr:BusinessFunction
-                :gr:BusinessUnit
-                :gr:DeliveryMethod
-                :gr:Location
-                :gr:ProductOrServiceModel
-                :org:Site
-                :skos:Concept
+  owl:members ( gr:BusinessEntity
+                gr:BusinessFunction
+                gr:BusinessUnit
+                gr:DeliveryMethod
+                gr:Location
+                gr:Offering
+                gr:ProductOrServiceModel
+                skos:Concept
+                org:Site
               )
 ] .
 

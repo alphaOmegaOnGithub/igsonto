@@ -1,4 +1,3 @@
-@base <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix : <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
@@ -32,546 +31,368 @@
 @prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
-# 
-# 
-# #################################################################
-# #
-# #    Annotation properties
-# #
-# #################################################################
-# 
-# 
-# http://www.example.org/cm/igso/2023/igso-data#example
-# 
-# http://www.example.org/cm/igso/2023/igso-data#explanatorynote
-# 
-# http://www.example.org/cm/igso/2023/igso-data#scopenote
-# 
-# http://www.example.org/cm/igso/2023/igso-data#usagenote
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Classes
-# #
-# #################################################################
-# 
-# 
-# http://www.example.org/cm/igso/2023/igso-data#AccessControlList
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Asset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#BusinessAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#BusinessData
-# 
-# http://www.example.org/cm/igso/2023/igso-data#BusinessPartnerData
-# 
-# http://www.example.org/cm/igso/2023/igso-data#ContentAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#ContentObject
-# 
-# http://www.example.org/cm/igso/2023/igso-data#ContractorData
-# 
-# http://www.example.org/cm/igso/2023/igso-data#CustomerData
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Data
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DataAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DataDomain
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DesignAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DisposionRecord
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Disposition
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DispositionPolicy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DispositionRule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DispositionSchedule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#DispositionTrigger
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Document
-# 
-# http://www.example.org/cm/igso/2023/igso-data#HRAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#HRData
-# 
-# http://www.example.org/cm/igso/2023/igso-data#IPAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#ITAsset
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Information
-# 
-# http://www.example.org/cm/igso/2023/igso-data#LegalDocument
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Metadata
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Notice
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Policy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Registry
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Remedy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Report
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Retention
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RetentionPeriod
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RetentionPolicy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RetentionRule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#RetentionSchedule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Rule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Schedule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#Storage
-# 
-# http://www.example.org/cm/igso/2023/igso-data#StorageInformation
-# 
-# http://www.example.org/cm/igso/2023/igso-data#StorageLocation
-# 
-# http://www.example.org/cm/igso/2023/igso-data#StoragePolicy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#StorageRule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#TranferRecord
-# 
-# http://www.example.org/cm/igso/2023/igso-data#TransactionRecord
-# 
-# http://www.example.org/cm/igso/2023/igso-data#TransferPolicy
-# 
-# http://www.example.org/cm/igso/2023/igso-data#TransferRule
-# 
-# http://www.example.org/cm/igso/2023/igso-data#data:SemiStructuredDataObject
-# 
-# http://www.example.org/cm/igso/2023/igso-data#data:StructuredDataObject
-# 
-# http://www.example.org/cm/igso/2023/igso-data#ddy:UnStructuredDataObject
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Individuals
-# #
-# #################################################################
-# 
-# 
-# http://purl.org/dc/terms/
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ACL
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ARMA
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AWS
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AccessControlList
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#AutomatedOrganizationWide
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Azure
-# 
-# http://www.example.org/cm/igso/2023/igso-org#CGOC
-# 
-# http://www.example.org/cm/igso/2023/igso-org#CloudEnvironment
-# 
-# http://www.example.org/cm/igso/2023/igso-org#CommunicationOffering
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Consequences
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ContentCatalog
-# 
-# http://www.example.org/cm/igso/2023/igso-org#DAM
-# 
-# http://www.example.org/cm/igso/2023/igso-org#DAMA
-# 
-# http://www.example.org/cm/igso/2023/igso-org#DB2
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Defined
-# 
-# http://www.example.org/cm/igso/2023/igso-org#EDRM
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Essential
-# 
-# http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#FulltextIndex
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Fulltext_Index_Service
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Fulltext_Search_Service
-# 
-# http://www.example.org/cm/igso/2023/igso-org#FullyAutomatedLocal
-# 
-# http://www.example.org/cm/igso/2023/igso-org#GoogleCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#HRAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Head
-# 
-# http://www.example.org/cm/igso/2023/igso-org#IBMCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
-# 
-# http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
-# 
-# http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ISACA
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ITAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Immaturity
-# 
-# http://www.example.org/cm/igso/2023/igso-org#In-Development
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Initial
-# 
-# http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Large
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Lucene
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ManualStructured
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ManualUnstructured
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-2
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-3
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-4
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-5
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Medium
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Micro
-# 
-# http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#NextCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Non-Existent
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ObjectServer
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OpenKM
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Optimized
-# 
-# http://www.example.org/cm/igso/2023/igso-org#OwnCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Permission
-# 
-# http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#PostgreSQL
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Privilege
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Proactive
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ProcessOffering
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ProcessRisk
-# 
-# http://www.example.org/cm/igso/2023/igso-org#RecordsCatalog
-# 
-# http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
-# 
-# http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Repeatable
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ResourceManager
-# 
-# http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
-# 
-# http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Small
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Solr
-# 
-# http://www.example.org/cm/igso/2023/igso-org#StorageOffering
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Sub-Standard
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Transformational
-# 
-# 
-# 
-# #################################################################
-# #
-# #    General axioms
-# #
-# #################################################################
-# 
-# 
-# 
-# 
-# 
-# 
-# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
-
-<#> a owl:Ontology;
-  owl:imports <igso-ddy#>;
-  dct:created "2010-05-28"^^xsd:date;
-  dct:creator _:genid1;
-  dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/>;
-  dct:modified "2014-04-12"^^xsd:date;
-  rdfs:comment "Vocabulary for describing information governance services types ."@en;
-  rdfs:label "Core igso organization ontology"@en;
-  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/>;
-  owl:versionInfo "0.8" .
-
-_:genid1 foaf:name "Cataldo Mega";
-  foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" .
-
-:example a owl:AnnotationProperty;
-  rdfs:subPropertyOf igso-ddy:note .
-
-:explanatorynote a owl:AnnotationProperty;
-  rdfs:subPropertyOf igso-ddy:note .
-
-:scopenote a owl:AnnotationProperty;
-  rdfs:subPropertyOf igso-ddy:note .
-
-:usagenote a owl:AnnotationProperty;
-  rdfs:subPropertyOf igso-ddy:note .
-
-:AccessControlList a owl:Class;
-  rdfs:subClassOf :Data .
-
-:Asset a owl:Class;
-  rdfs:subClassOf :Data .
-
-:BusinessAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:BusinessData a owl:Class;
-  rdfs:subClassOf :Data .
-
-:BusinessPartnerData a owl:Class;
-  rdfs:subClassOf :Data .
-
-:ContentAsset a owl:Class;
-  rdfs:subClassOf :Asset;
-  owl:disjointWith :DataAsset .
-
-:ContentObject a owl:Class;
-  rdfs:subClassOf :Data .
-
-:ContractorData a owl:Class;
-  rdfs:subClassOf :Data .
-
-:CustomerData a owl:Class;
-  rdfs:subClassOf :Data .
-
-:Data a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:DataAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:DataDomain a owl:Class .
-
-:DesignAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:DisposionRecord a owl:Class;
-  rdfs:subClassOf :Disposition .
-
-:Disposition a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:DispositionPolicy a owl:Class;
-  rdfs:subClassOf :Policy;
-  owl:disjointWith :RetentionPolicy .
-
-:DispositionRule a owl:Class;
-  rdfs:subClassOf :Rule;
-  owl:disjointWith :RetentionRule .
-
-:DispositionSchedule a owl:Class;
-  rdfs:subClassOf :Disposition;
-  owl:disjointWith :DispositionTrigger .
-
-:DispositionTrigger a owl:Class;
-  rdfs:subClassOf :Disposition .
-
-:Document a owl:Class;
-  rdfs:subClassOf :Data .
-
-:HRAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:HRData a owl:Class;
-  rdfs:subClassOf :Data .
-
-:IPAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:ITAsset a owl:Class;
-  rdfs:subClassOf :Asset .
-
-:Information a owl:Class;
-  rdfs:subClassOf :Data .
-
-:LegalDocument a owl:Class;
-  rdfs:subClassOf :Document .
-
-:Metadata a owl:Class;
-  rdfs:subClassOf :Data .
-
-:Notice a owl:Class;
-  rdfs:subClassOf :Document .
-
-:Policy a owl:Class;
-  rdfs:subClassOf :Data .
-
-:RecordsCatalog a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:RefenceDocument a owl:Class;
-  rdfs:subClassOf :Document .
-
-:Registry a owl:Class;
-  rdfs:subClassOf :Data;
-  :explanatorynote "Electronic registries typically contain a unique identifier for each entry, so that individual records can be referenced from other documents and registries.";
-  igso-ddy:definition "authoritative record or collection of records relating to something" .
-
-:Remedy a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:Report a owl:Class;
-  rdfs:subClassOf :Document .
-
-:RetensionRecord a owl:Class;
-  rdfs:subClassOf :Retention .
-
-:Retention a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:RetentionPeriod a owl:Class;
-  rdfs:subClassOf :Retention;
-  owl:disjointWith :RetentionSchedule .
-
-:RetentionPolicy a owl:Class;
-  rdfs:subClassOf :Policy .
-
-:RetentionRule a owl:Class;
-  rdfs:subClassOf :Rule .
-
-:RetentionSchedule a owl:Class;
-  rdfs:subClassOf :Retention .
-
-:Rule a owl:Class;
-  rdfs:subClassOf :Data .
-
-:Schedule a owl:Class;
-  rdfs:subClassOf :Data .
-
-:Storage a owl:Class;
-  rdfs:subClassOf :Data .
-
-:StorageInformation a owl:Class;
-  rdfs:subClassOf :Storage .
-
-:StorageLocation a owl:Class;
-  rdfs:subClassOf :Storage .
-
-:StoragePolicy a owl:Class;
-  rdfs:subClassOf :Storage .
-
-:StorageRule a owl:Class;
-  rdfs:subClassOf :Storage .
-
-:TranferRecord a owl:Class;
-  rdfs:subClassOf :Data .
-
-:TransactionRecord a owl:Class;
-  rdfs:subClassOf :Data .
-
-:TransferPolicy a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:TransferRule a owl:Class;
-  rdfs:subClassOf :DataDomain .
-
-:data:SemiStructuredDataObject a owl:Class;
-  rdfs:subClassOf :Data .
-
-:data:StructuredDataObject a owl:Class;
-  rdfs:subClassOf :Data .
-
-:ddy:UnStructuredDataObject a owl:Class;
-  rdfs:subClassOf :Data .
-
-<http://purl.org/dc/terms/> a owl:NamedIndividual;
-  rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
-
-igso-org:ACL a owl:NamedIndividual .
-
-igso-org:ARMA a owl:NamedIndividual;
-  rdfs:comment "ARMA International is the community of records and  information management and governance professionals. RIM is the combination Records and Information Management. ARMA International Information Governance Maturity Model©ARMA International, 2013 Note: Records management terms used in the Generally Accepted Recordkeeping Principles® Information Governance Maturity Model (IGMM) are defined in the Glossary of  Records and Information Management Terms,3rd Edition (ARMA International, 2007). Data Governance is a subset of IT governance that focuses on establishing processes  and policies around managing data as a corporate asset. More ovber data governance refers to the overall management of the availability, usability, integrity and security of the data employed in an enterprise. And data governance provides the infrastructure,  resources and processes necessary to manage data with the big picture in mind. Regulatory compliance - Sarbanes-Oxley, etc.: \"Where management has outsourced…functions to third party service provider(s), management maintains a responsibility to assess the controls over the outsourced operations.” The business drivers for managing data as a corporate asset are:- Competitiveness- Regulatory compliance- Realizing the benefit of investments in BI and other Information-based initiatives Establishment of a modeling strategy which includes:";
-  rdfs:label "ARMA"@en .
-
-igso-org:AWS a owl:NamedIndividual;
-  rdfs:label "AWS"@en .
-
-igso-org:AccessControlList a owl:NamedIndividual;
-  rdfs:label "AccessControlList"@de .
-
-igso-org:Ad-Hoc a owl:NamedIndividual;
-  rdfs:label "Ad-Hoc"@en .
-
-igso-org:AlfrescoContentManagement a owl:NamedIndividual;
-  rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:";
-  rdfs:label "Alfresco Content Management"@en .
-
-igso-org:AlfrescoGovernanceServices a owl:NamedIndividual;
-  rdfs:comment """1. Data Classification and Management: Alfresco enables organizations to classify and organize their data through metadata management, tagging, and categorization. This helps in identifying and managing personal data and sensitive information according to GDPR requirements.
+@base <http://www.example.org/cm/igso/2023/igso-data#> .
+
+<http://www.example.org/cm/igso/2023/igso-data#> rdf:type owl:Ontology ;
+                                                  owl:imports igso-ddy: ;
+                                                  dct:created "2010-05-28"^^xsd:date ;
+                                                  dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+                                                                foaf:name "Cataldo Mega"
+                                                              ] ;
+                                                  dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+                                                  dct:modified "2014-04-12"^^xsd:date ;
+                                                  rdfs:comment "Vocabulary for describing information governance services types ."@en ;
+                                                  rdfs:label "Core igso organization ontology"@en ;
+                                                  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+                                                  owl:versionInfo "0.8" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-data#example
+:example rdf:type owl:AnnotationProperty ;
+         rdfs:subPropertyOf igso-ddy:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#explanatorynote
+:explanatorynote rdf:type owl:AnnotationProperty ;
+                 rdfs:subPropertyOf igso-ddy:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#scopenote
+:scopenote rdf:type owl:AnnotationProperty ;
+           rdfs:subPropertyOf igso-ddy:note .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#usagenote
+:usagenote rdf:type owl:AnnotationProperty ;
+           rdfs:subPropertyOf igso-ddy:note .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-data#AccessControlList
+:AccessControlList rdf:type owl:Class ;
+                   rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Asset
+:Asset rdf:type owl:Class ;
+       rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessAsset
+:BusinessAsset rdf:type owl:Class ;
+               rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessData
+:BusinessData rdf:type owl:Class ;
+              rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BusinessPartnerData
+:BusinessPartnerData rdf:type owl:Class ;
+                     rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ContentAsset
+:ContentAsset rdf:type owl:Class ;
+              rdfs:subClassOf :Asset ;
+              owl:disjointWith :DataAsset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ContentObject
+:ContentObject rdf:type owl:Class ;
+               rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ContractorData
+:ContractorData rdf:type owl:Class ;
+                rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#CustomerData
+:CustomerData rdf:type owl:Class ;
+              rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Data
+:Data rdf:type owl:Class ;
+      rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DataAsset
+:DataAsset rdf:type owl:Class ;
+           rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DataDomain
+:DataDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DesignAsset
+:DesignAsset rdf:type owl:Class ;
+             rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DisposionRecord
+:DisposionRecord rdf:type owl:Class ;
+                 rdfs:subClassOf :Disposition .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Disposition
+:Disposition rdf:type owl:Class ;
+             rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DispositionPolicy
+:DispositionPolicy rdf:type owl:Class ;
+                   rdfs:subClassOf :Policy ;
+                   owl:disjointWith :RetentionPolicy .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DispositionRule
+:DispositionRule rdf:type owl:Class ;
+                 rdfs:subClassOf :Rule ;
+                 owl:disjointWith :RetentionRule .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DispositionSchedule
+:DispositionSchedule rdf:type owl:Class ;
+                     rdfs:subClassOf :Disposition ;
+                     owl:disjointWith :DispositionTrigger .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DispositionTrigger
+:DispositionTrigger rdf:type owl:Class ;
+                    rdfs:subClassOf :Disposition .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Document
+:Document rdf:type owl:Class ;
+          rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#HRAsset
+:HRAsset rdf:type owl:Class ;
+         rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#HRData
+:HRData rdf:type owl:Class ;
+        rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#IPAsset
+:IPAsset rdf:type owl:Class ;
+         rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ITAsset
+:ITAsset rdf:type owl:Class ;
+         rdfs:subClassOf :Asset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Information
+:Information rdf:type owl:Class ;
+             rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#LegalDocument
+:LegalDocument rdf:type owl:Class ;
+               rdfs:subClassOf :Document .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Metadata
+:Metadata rdf:type owl:Class ;
+          rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Notice
+:Notice rdf:type owl:Class ;
+        rdfs:subClassOf :Document .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Policy
+:Policy rdf:type owl:Class ;
+        rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
+:RecordsCatalog rdf:type owl:Class ;
+                rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
+:RefenceDocument rdf:type owl:Class ;
+                 rdfs:subClassOf :Document .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Registry
+:Registry rdf:type owl:Class ;
+          rdfs:subClassOf :Data ;
+          :explanatorynote "Electronic registries typically contain a unique identifier for each entry, so that individual records can be referenced from other documents and registries." ;
+          igso-ddy:definition "authoritative record or collection of records relating to something" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Remedy
+:Remedy rdf:type owl:Class ;
+        rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Report
+:Report rdf:type owl:Class ;
+        rdfs:subClassOf :Document .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
+:RetensionRecord rdf:type owl:Class ;
+                 rdfs:subClassOf :Retention .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Retention
+:Retention rdf:type owl:Class ;
+           rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionPeriod
+:RetentionPeriod rdf:type owl:Class ;
+                 rdfs:subClassOf :Retention ;
+                 owl:disjointWith :RetentionSchedule .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionPolicy
+:RetentionPolicy rdf:type owl:Class ;
+                 rdfs:subClassOf :Policy .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionRule
+:RetentionRule rdf:type owl:Class ;
+               rdfs:subClassOf :Rule .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionSchedule
+:RetentionSchedule rdf:type owl:Class ;
+                   rdfs:subClassOf :Retention .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Rule
+:Rule rdf:type owl:Class ;
+      rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Schedule
+:Schedule rdf:type owl:Class ;
+          rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#SemiStructuredDataObject
+:SemiStructuredDataObject rdf:type owl:Class ;
+                          rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageInformation
+:StorageInformation rdf:type owl:Class ;
+                    rdfs:subClassOf :Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageLocation
+:StorageLocation rdf:type owl:Class ;
+                 rdfs:subClassOf :Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StoragePolicy
+:StoragePolicy rdf:type owl:Class ;
+               rdfs:subClassOf :Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageRule
+:StorageRule rdf:type owl:Class ;
+             rdfs:subClassOf :Storage .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StructuredDataObject
+:StructuredDataObject rdf:type owl:Class ;
+                      rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TranferRecord
+:TranferRecord rdf:type owl:Class ;
+               rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransactionRecord
+:TransactionRecord rdf:type owl:Class ;
+                   rdfs:subClassOf :Data .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransferPolicy
+:TransferPolicy rdf:type owl:Class ;
+                rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransferRule
+:TransferRule rdf:type owl:Class ;
+              rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#UnStructuredDataObject
+:UnStructuredDataObject rdf:type owl:Class ;
+                        rdfs:subClassOf :Data .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/dc/terms/
+dct: rdf:type owl:NamedIndividual ;
+     rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ACL
+igso-org:ACL rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ARMA
+igso-org:ARMA rdf:type owl:NamedIndividual ;
+              rdfs:comment "ARMA International is the community of records and  information management and governance professionals. RIM is the combination Records and Information Management. ARMA International Information Governance Maturity Model©ARMA International, 2013 Note: Records management terms used in the Generally Accepted Recordkeeping Principles® Information Governance Maturity Model (IGMM) are defined in the Glossary of  Records and Information Management Terms,3rd Edition (ARMA International, 2007). Data Governance is a subset of IT governance that focuses on establishing processes  and policies around managing data as a corporate asset. More ovber data governance refers to the overall management of the availability, usability, integrity and security of the data employed in an enterprise. And data governance provides the infrastructure,  resources and processes necessary to manage data with the big picture in mind. Regulatory compliance - Sarbanes-Oxley, etc.: \"Where management has outsourced…functions to third party service provider(s), management maintains a responsibility to assess the controls over the outsourced operations.” The business drivers for managing data as a corporate asset are:- Competitiveness- Regulatory compliance- Realizing the benefit of investments in BI and other Information-based initiatives Establishment of a modeling strategy which includes:" ;
+              rdfs:label "ARMA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AWS
+igso-org:AWS rdf:type owl:NamedIndividual ;
+             rdfs:label "AWS"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AccessControlList
+igso-org:AccessControlList rdf:type owl:NamedIndividual ;
+                           rdfs:label "AccessControlList"@de .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
+igso-org:Ad-Hoc rdf:type owl:NamedIndividual ;
+                rdfs:label "Ad-Hoc"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
+igso-org:AlfrescoContentManagement rdf:type owl:NamedIndividual ;
+                                   rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" ;
+                                   rdfs:label "Alfresco Content Management"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
+igso-org:AlfrescoGovernanceServices rdf:type owl:NamedIndividual ;
+                                    rdfs:comment """1. Data Classification and Management: Alfresco enables organizations to classify and organize their data through metadata management, tagging, and categorization. This helps in identifying and managing personal data and sensitive information according to GDPR requirements.
 
 2. Access Control and Permissions: Alfresco offers robust access control mechanisms, allowing organizations to define and enforce granular permissions for data access. This helps ensure that personal data is accessed only by authorized individuals or roles.
 
@@ -581,318 +402,436 @@ igso-org:AlfrescoGovernanceServices a owl:NamedIndividual;
 
 5. Security and Auditing: Alfresco offers security features such as encryption, secure file transfer, and activity logging. These help protect personal data and enable organizations to track and audit data access and modifications for compliance purposes.
 
-While Alfresco provides a solid foundation for managing data and supporting GDPR compliance, it's important to note that achieving full compliance requires a holistic approach that encompasses people, processes, and technology. Organizations should assess their specific GDPR requirements, align Alfresco's capabilities with those requirements, and potentially complement the solution with additional tools or practices as needed.""";
-  rdfs:label "AlfrescoGovernanceServices"@en .
+While Alfresco provides a solid foundation for managing data and supporting GDPR compliance, it's important to note that achieving full compliance requires a holistic approach that encompasses people, processes, and technology. Organizations should assess their specific GDPR requirements, align Alfresco's capabilities with those requirements, and potentially complement the solution with additional tools or practices as needed.""" ;
+                                    rdfs:label "AlfrescoGovernanceServices"@en .
 
-igso-org:AmazonCloud a owl:NamedIndividual;
-  rdfs:label "Amazon Cloud (AWS)"@en .
 
-igso-org:AutomatedOrganizationWide a owl:NamedIndividual;
-  rdfs:label "AutomatedOrganizationWide"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
+igso-org:AmazonCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "Amazon Cloud (AWS)"@en .
 
-igso-org:Azure a owl:NamedIndividual;
-  rdfs:label "Azure"@en .
 
-igso-org:CGOC a owl:NamedIndividual;
-  rdfs:label "CGOC"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#AutomatedOrganizationWide
+igso-org:AutomatedOrganizationWide rdf:type owl:NamedIndividual ;
+                                   rdfs:label "AutomatedOrganizationWide"@en .
 
-igso-org:CloudEnvironment a owl:NamedIndividual;
-  rdfs:label "CloudEnvironment"@en .
 
-igso-org:CommunicationOffering a owl:NamedIndividual;
-  rdfs:label "CommunicationOffering"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Azure
+igso-org:Azure rdf:type owl:NamedIndividual ;
+               rdfs:label "Azure"@en .
 
-igso-org:Consequences a owl:NamedIndividual;
-  rdfs:label "Consequences"@en .
 
-igso-org:ContentCatalog a owl:NamedIndividual;
-  rdfs:label "ContentCatalog"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#CGOC
+igso-org:CGOC rdf:type owl:NamedIndividual ;
+              rdfs:label "CGOC"@en .
 
-igso-org:DAM a owl:NamedIndividual;
-  rdfs:label "DAM"@en .
 
-igso-org:DAMA a owl:NamedIndividual;
-  rdfs:label "DAMA"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#CloudEnvironment
+igso-org:CloudEnvironment rdf:type owl:NamedIndividual ;
+                          rdfs:label "CloudEnvironment"@en .
 
-igso-org:DB2 a owl:NamedIndividual;
-  rdfs:label "DB2"@en .
 
-igso-org:Defined a owl:NamedIndividual;
-  rdfs:label "Defined"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#CommunicationOffering
+igso-org:CommunicationOffering rdf:type owl:NamedIndividual ;
+                               rdfs:label "CommunicationOffering"@en .
 
-igso-org:EDRM a owl:NamedIndividual;
-  rdfs:label "EDRM"@en .
 
-igso-org:Essential a owl:NamedIndividual;
-  rdfs:label "Essential"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Consequences
+igso-org:Consequences rdf:type owl:NamedIndividual ;
+                      rdfs:label "Consequences"@en .
 
-igso-org:FinancialAssets a owl:NamedIndividual;
-  rdfs:label "FinancialAssets"@en .
 
-igso-org:FulltextIndex a owl:NamedIndividual;
-  rdfs:label "FulltextIndex"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#ContentCatalog
+igso-org:ContentCatalog rdf:type owl:NamedIndividual ;
+                        rdfs:label "ContentCatalog"@en .
 
-igso-org:Fulltext_Index_Service a owl:NamedIndividual;
-  rdfs:label "Fulltext_Index_Service"@en .
 
-igso-org:Fulltext_Search_Service a owl:NamedIndividual;
-  rdfs:label "Fulltext_Search_Service"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#DAM
+igso-org:DAM rdf:type owl:NamedIndividual ;
+             rdfs:label "DAM"@en .
 
-igso-org:FullyAutomatedLocal a owl:NamedIndividual;
-  rdfs:label "FullyAutomatedLocal"@en .
 
-igso-org:GoogleCloud a owl:NamedIndividual;
-  rdfs:label "GoogleCloud"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#DAMA
+igso-org:DAMA rdf:type owl:NamedIndividual ;
+              rdfs:label "DAMA"@en .
 
-igso-org:HRAssets a owl:NamedIndividual;
-  rdfs:label "HRAssets"@en .
 
-igso-org:Head a owl:NamedIndividual;
-  igso-org:roleProperty igso-org:headOf;
-  rdfs:comment "A role corresponding to the `igso-org:headOf` property"@en, "Actividad correspondiente a la propiedad `igso-org:headOf`."@es,
-    "Un ruolo corrispondente alla proprietà `igso-org:headOf`."@it, "Un rôle correspondant à la propriété `igso-org:headOf`"@fr;
-  rdfs:isDefinedBy <http://www.w3.org/ns/org>;
-  rdfs:label "director ejecutivo"@es, "directora ejecutiva"@es, "head"@en, "responsabile"@it,
-    "responsable"@fr;
-  skos:prefLabel "head"@en, "responsabile"@it, "responsable"@fr .
+###  http://www.example.org/cm/igso/2023/igso-org#DB2
+igso-org:DB2 rdf:type owl:NamedIndividual ;
+             rdfs:label "DB2"@en .
 
-igso-org:IBMCloud a owl:NamedIndividual;
-  rdfs:label "IBMCloud"@en .
 
-igso-org:IBMContentServices a owl:NamedIndividual;
-  rdfs:label "IBMContentServices"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Defined
+igso-org:Defined rdf:type owl:NamedIndividual ;
+                 rdfs:label "Defined"@en .
 
-igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual;
-  rdfs:label "IBM Enterprise Content Management"@en .
 
-igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual;
-  rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+###  http://www.example.org/cm/igso/2023/igso-org#EDRM
+igso-org:EDRM rdf:type owl:NamedIndividual ;
+              rdfs:label "EDRM"@en .
 
-igso-org:ISACA a owl:NamedIndividual;
-  rdfs:label "ISACA"@en .
 
-igso-org:ITAssets a owl:NamedIndividual;
-  rdfs:label "ITAssets"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Essential
+igso-org:Essential rdf:type owl:NamedIndividual ;
+                   rdfs:label "Essential"@en .
 
-igso-org:Immaturity a owl:NamedIndividual;
-  rdfs:label "Immaturity"@en .
 
-igso-org:In-Development a owl:NamedIndividual;
-  rdfs:label "In-Development"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
+igso-org:FinancialAssets rdf:type owl:NamedIndividual ;
+                         rdfs:label "FinancialAssets"@en .
 
-igso-org:Initial a owl:NamedIndividual;
-  rdfs:label "Initial"@en .
 
-igso-org:IntellectualAssets a owl:NamedIndividual;
-  rdfs:label "IntellectualAssets"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#FulltextIndex
+igso-org:FulltextIndex rdf:type owl:NamedIndividual ;
+                       rdfs:label "FulltextIndex"@en .
 
-igso-org:Large a owl:NamedIndividual .
 
-igso-org:Lucene a owl:NamedIndividual;
-  rdfs:label "Lucene"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Fulltext_Index_Service
+igso-org:Fulltext_Index_Service rdf:type owl:NamedIndividual ;
+                                rdfs:label "Fulltext_Index_Service"@en .
 
-igso-org:ManualStructured a owl:NamedIndividual;
-  rdfs:label "ManualStructured"@en .
 
-igso-org:ManualUnstructured a owl:NamedIndividual;
-  rdfs:label "ManualUnStructured"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Fulltext_Search_Service
+igso-org:Fulltext_Search_Service rdf:type owl:NamedIndividual ;
+                                 rdfs:label "Fulltext_Search_Service"@en .
 
-igso-org:MaturityLevel a owl:NamedIndividual .
 
-igso-org:MaturityLevel-1 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-1"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#FullyAutomatedLocal
+igso-org:FullyAutomatedLocal rdf:type owl:NamedIndividual ;
+                             rdfs:label "FullyAutomatedLocal"@en .
 
-igso-org:MaturityLevel-2 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-2"@en .
 
-igso-org:MaturityLevel-3 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-3"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#GoogleCloud
+igso-org:GoogleCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "GoogleCloud"@en .
 
-igso-org:MaturityLevel-4 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-4"@en .
 
-igso-org:MaturityLevel-5 a owl:NamedIndividual;
-  rdfs:label "MaturityLevel-5"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#HRAssets
+igso-org:HRAssets rdf:type owl:NamedIndividual ;
+                  rdfs:label "HRAssets"@en .
 
-igso-org:Medium a owl:NamedIndividual .
 
-igso-org:Micro a owl:NamedIndividual .
+###  http://www.example.org/cm/igso/2023/igso-org#Head
+igso-org:Head rdf:type owl:NamedIndividual ;
+              igso-org:roleProperty igso-org:headOf ;
+              rdfs:comment "A role corresponding to the `igso-org:headOf` property"@en ,
+                           "Actividad correspondiente a la propiedad `igso-org:headOf`."@es ,
+                           "Un ruolo corrispondente alla proprietà `igso-org:headOf`."@it ,
+                           "Un rôle correspondant à la propriété `igso-org:headOf`"@fr ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+              rdfs:label "director ejecutivo"@es ,
+                         "directora ejecutiva"@es ,
+                         "head"@en ,
+                         "responsabile"@it ,
+                         "responsable"@fr ;
+              skos:prefLabel "head"@en ,
+                             "responsabile"@it ,
+                             "responsable"@fr .
 
-igso-org:MicrosoftCloud a owl:NamedIndividual;
-  rdfs:label "GCP"@en, "MicrosoftCloud"@en .
 
-igso-org:NextCloud a owl:NamedIndividual;
-  rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements.";
-  rdfs:label "Nextcloud" .
+###  http://www.example.org/cm/igso/2023/igso-org#IBMCloud
+igso-org:IBMCloud rdf:type owl:NamedIndividual ;
+                  rdfs:label "IBMCloud"@en .
 
-igso-org:Non-Existent a owl:NamedIndividual;
-  rdfs:label "Non-Existent"@en .
 
-igso-org:ObjectCatalog a owl:NamedIndividual;
-  rdfs:label "ObjectCatalog"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
+igso-org:IBMContentServices rdf:type owl:NamedIndividual ;
+                            rdfs:label "IBMContentServices"@en .
 
-igso-org:ObjectServer a owl:NamedIndividual;
-  rdfs:label "ObjectServer"@en .
 
-igso-org:OpenKM a owl:NamedIndividual;
-  rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails.";
-  rdfs:label "OpenKM";
-  cmns-av:directSource <https://www.openkm.com/> .
+###  http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
+igso-org:IBMEnterpriseContentManagement rdf:type owl:NamedIndividual ;
+                                        rdfs:label "IBM Enterprise Content Management"@en .
 
-igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual;
-  rdfs:label """OpenSourceDokumentManagementSystems
+
+###  http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
+igso-org:IBMInfoSphereInformationGovernanceCatalog rdf:type owl:NamedIndividual ;
+                                                   rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ISACA
+igso-org:ISACA rdf:type owl:NamedIndividual ;
+               rdfs:label "ISACA"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ITAssets
+igso-org:ITAssets rdf:type owl:NamedIndividual ;
+                  rdfs:label "ITAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Immaturity
+igso-org:Immaturity rdf:type owl:NamedIndividual ;
+                    rdfs:label "Immaturity"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#In-Development
+igso-org:In-Development rdf:type owl:NamedIndividual ;
+                        rdfs:label "In-Development"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Initial
+igso-org:Initial rdf:type owl:NamedIndividual ;
+                 rdfs:label "Initial"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
+igso-org:IntellectualAssets rdf:type owl:NamedIndividual ;
+                            rdfs:label "IntellectualAssets"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Large
+igso-org:Large rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Lucene
+igso-org:Lucene rdf:type owl:NamedIndividual ;
+                rdfs:label "Lucene"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ManualStructured
+igso-org:ManualStructured rdf:type owl:NamedIndividual ;
+                          rdfs:label "ManualStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ManualUnstructured
+igso-org:ManualUnstructured rdf:type owl:NamedIndividual ;
+                            rdfs:label "ManualUnStructured"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
+igso-org:MaturityLevel rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
+igso-org:MaturityLevel-1 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-1"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-2
+igso-org:MaturityLevel-2 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-2"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-3
+igso-org:MaturityLevel-3 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-3"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-4
+igso-org:MaturityLevel-4 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-4"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-5
+igso-org:MaturityLevel-5 rdf:type owl:NamedIndividual ;
+                         rdfs:label "MaturityLevel-5"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Medium
+igso-org:Medium rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Micro
+igso-org:Micro rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
+igso-org:MicrosoftCloud rdf:type owl:NamedIndividual ;
+                        rdfs:label "GCP"@en ,
+                                   "MicrosoftCloud"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#NextCloud
+igso-org:NextCloud rdf:type owl:NamedIndividual ;
+                   rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements." ;
+                   rdfs:label "Nextcloud" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Non-Existent
+igso-org:Non-Existent rdf:type owl:NamedIndividual ;
+                      rdfs:label "Non-Existent"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
+igso-org:ObjectCatalog rdf:type owl:NamedIndividual ;
+                       rdfs:label "ObjectCatalog"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#ObjectServer
+igso-org:ObjectServer rdf:type owl:NamedIndividual ;
+                      rdfs:label "ObjectServer"@en .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OpenKM
+igso-org:OpenKM rdf:type owl:NamedIndividual ;
+                rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails." ;
+                rdfs:label "OpenKM" ;
+                cmns-av:directSource <https://www.openkm.com/> .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
+igso-org:OpenSourceDokumentManagementSystems rdf:type owl:NamedIndividual ;
+                                             rdfs:label """OpenSourceDokumentManagementSystems
 Open-source cloud-native solutions can serve as viable alternatives to proprietary systems, offering similar functionalities and capabilities for data management and collaboration. They provide the advantage of being customizable, extensible, and cost-effective. However, it's important to assess each solution based on your specific requirements, technical expertise, and support options before making a decision. Additionally, consider factors like community support, documentation, and compatibility with your existing IT infrastructure when evaluating open-source alternatives.""" .
 
-igso-org:Optimized a owl:NamedIndividual;
-  rdfs:label "Optimized"@en .
 
-igso-org:OwnCloud a owl:NamedIndividual;
-  rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance.";
-  rdfs:label "OwnCloud";
-  cmns-av:directSource <https://nextcloud.com/>, <https://owncloud.com/> .
+###  http://www.example.org/cm/igso/2023/igso-org#Optimized
+igso-org:Optimized rdf:type owl:NamedIndividual ;
+                   rdfs:label "Optimized"@en .
 
-igso-org:Permission a owl:NamedIndividual .
 
-igso-org:PhysicalAssets a owl:NamedIndividual;
-  rdfs:label "PhysicalAssets"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#OwnCloud
+igso-org:OwnCloud rdf:type owl:NamedIndividual ;
+                  rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
+                  rdfs:label "OwnCloud" ;
+                  cmns-av:directSource <https://nextcloud.com/> ,
+                                       <https://owncloud.com/> .
 
-igso-org:PostgreSQL a owl:NamedIndividual;
-  rdfs:label "PostgreSQL"@en .
 
-igso-org:Privilege a owl:NamedIndividual .
+###  http://www.example.org/cm/igso/2023/igso-org#Permission
+igso-org:Permission rdf:type owl:NamedIndividual .
 
-igso-org:Proactive a owl:NamedIndividual;
-  rdfs:label "Proactive"@en .
 
-igso-org:ProcessOffering a owl:NamedIndividual;
-  rdfs:label "ProcessOffering"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
+igso-org:PhysicalAssets rdf:type owl:NamedIndividual ;
+                        rdfs:label "PhysicalAssets"@en .
 
-igso-org:ProcessRisk a owl:NamedIndividual;
-  rdfs:label "ProcessRisk"@en .
 
-igso-org:RecordsCatalog a owl:NamedIndividual;
-  rdfs:label "RecordsCatalog"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#PostgreSQL
+igso-org:PostgreSQL rdf:type owl:NamedIndividual ;
+                    rdfs:label "PostgreSQL"@en .
 
-igso-org:RedHatCloud a owl:NamedIndividual;
-  rdfs:label "RedHatCloud"@en .
 
-igso-org:Relational_Index_Service a owl:NamedIndividual;
-  rdfs:label "Relational_Index_Service"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Privilege
+igso-org:Privilege rdf:type owl:NamedIndividual .
 
-igso-org:Relational_Search_Service a owl:NamedIndividual;
-  rdfs:label "Relational_Search_Service"@en .
 
-igso-org:RelationsAssets a owl:NamedIndividual;
-  rdfs:label "RelationsAssets"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#Proactive
+igso-org:Proactive rdf:type owl:NamedIndividual ;
+                   rdfs:label "Proactive"@en .
 
-igso-org:Repeatable a owl:NamedIndividual;
-  rdfs:label "Repeatable"@en .
 
-igso-org:ResourceManager a owl:NamedIndividual;
-  rdfs:label "ResourceManager"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#ProcessOffering
+igso-org:ProcessOffering rdf:type owl:NamedIndividual ;
+                         rdfs:label "ProcessOffering"@en .
 
-igso-org:SAPInformationSteward a owl:NamedIndividual;
-  rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
 
-igso-org:SemiAutomatedLocal a owl:NamedIndividual;
-  rdfs:label "SemiAutomatedLocal"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#ProcessRisk
+igso-org:ProcessRisk rdf:type owl:NamedIndividual ;
+                     rdfs:label "ProcessRisk"@en .
 
-igso-org:Small a owl:NamedIndividual .
 
-igso-org:Solr a owl:NamedIndividual;
-  rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/";
-  rdfs:isDefinedBy <https://solr.apache.org/features.html>;
-  rdfs:label "Solr"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#RecordsCatalog
+igso-org:RecordsCatalog rdf:type owl:NamedIndividual ;
+                        rdfs:label "RecordsCatalog"@en .
 
-igso-org:StorageOffering a owl:NamedIndividual;
-  rdfs:label "Storage Offering"@en .
 
-igso-org:Sub-Standard a owl:NamedIndividual;
-  rdfs:label "Sub-Standard"@en .
+###  http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
+igso-org:RedHatCloud rdf:type owl:NamedIndividual ;
+                     rdfs:label "RedHatCloud"@en .
 
-igso-org:Transformational a owl:NamedIndividual;
-  rdfs:label "Transformational"@en .
 
-_:genid2 a owl:AllDisjointClasses;
-  owl:members _:genid9 .
+###  http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
+igso-org:Relational_Index_Service rdf:type owl:NamedIndividual ;
+                                  rdfs:label "Relational_Index_Service"@en .
 
-_:genid9 a rdf:List;
-  rdf:first :BusinessAsset;
-  rdf:rest _:genid8 .
 
-_:genid8 a rdf:List;
-  rdf:first :ContentAsset;
-  rdf:rest _:genid7 .
+###  http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
+igso-org:Relational_Search_Service rdf:type owl:NamedIndividual ;
+                                   rdfs:label "Relational_Search_Service"@en .
 
-_:genid7 a rdf:List;
-  rdf:first :DataAsset;
-  rdf:rest _:genid6 .
 
-_:genid6 a rdf:List;
-  rdf:first :DesignAsset;
-  rdf:rest _:genid5 .
+###  http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
+igso-org:RelationsAssets rdf:type owl:NamedIndividual ;
+                         rdfs:label "RelationsAssets"@en .
 
-_:genid5 a rdf:List;
-  rdf:first :HRAsset;
-  rdf:rest _:genid4 .
 
-_:genid4 a rdf:List;
-  rdf:first :IPAsset;
-  rdf:rest _:genid3 .
+###  http://www.example.org/cm/igso/2023/igso-org#Repeatable
+igso-org:Repeatable rdf:type owl:NamedIndividual ;
+                    rdfs:label "Repeatable"@en .
 
-_:genid3 a rdf:List;
-  rdf:first :ITAsset;
-  rdf:rest rdf:nil .
 
-_:genid10 a owl:AllDisjointClasses;
-  owl:members _:genid14 .
+###  http://www.example.org/cm/igso/2023/igso-org#ResourceManager
+igso-org:ResourceManager rdf:type owl:NamedIndividual ;
+                         rdfs:label "ResourceManager"@en .
 
-_:genid14 a rdf:List;
-  rdf:first :LegalDocument;
-  rdf:rest _:genid13 .
 
-_:genid13 a rdf:List;
-  rdf:first :Notice;
-  rdf:rest _:genid12 .
+###  http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
+igso-org:SAPInformationSteward rdf:type owl:NamedIndividual ;
+                               rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
 
-_:genid12 a rdf:List;
-  rdf:first :RefenceDocument;
-  rdf:rest _:genid11 .
 
-_:genid11 a rdf:List;
-  rdf:first :Report;
-  rdf:rest rdf:nil .
+###  http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
+igso-org:SemiAutomatedLocal rdf:type owl:NamedIndividual ;
+                            rdfs:label "SemiAutomatedLocal"@en .
 
-_:genid15 a owl:AllDisjointClasses;
-  owl:members _:genid19 .
 
-_:genid19 a rdf:List;
-  rdf:first :StorageInformation;
-  rdf:rest _:genid18 .
+###  http://www.example.org/cm/igso/2023/igso-org#Small
+igso-org:Small rdf:type owl:NamedIndividual .
 
-_:genid18 a rdf:List;
-  rdf:first :StorageLocation;
-  rdf:rest _:genid17 .
 
-_:genid17 a rdf:List;
-  rdf:first :StoragePolicy;
-  rdf:rest _:genid16 .
+###  http://www.example.org/cm/igso/2023/igso-org#Solr
+igso-org:Solr rdf:type owl:NamedIndividual ;
+              rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/" ;
+              rdfs:isDefinedBy <https://solr.apache.org/features.html> ;
+              rdfs:label "Solr"@en .
 
-_:genid16 a rdf:List;
-  rdf:first :StorageRule;
-  rdf:rest rdf:nil .
 
-_:genid20 a owl:AllDisjointClasses;
-  owl:members _:genid23 .
+###  http://www.example.org/cm/igso/2023/igso-org#StorageOffering
+igso-org:StorageOffering rdf:type owl:NamedIndividual ;
+                         rdfs:label "Storage Offering"@en .
 
-_:genid23 a rdf:List;
-  rdf:first :TranferRecord;
-  rdf:rest _:genid22 .
 
-_:genid22 a rdf:List;
-  rdf:first :TransferPolicy;
-  rdf:rest _:genid21 .
+###  http://www.example.org/cm/igso/2023/igso-org#Sub-Standard
+igso-org:Sub-Standard rdf:type owl:NamedIndividual ;
+                      rdfs:label "Sub-Standard"@en .
 
-_:genid21 a rdf:List;
-  rdf:first :TransferRule;
-  rdf:rest rdf:nil .
+
+###  http://www.example.org/cm/igso/2023/igso-org#Transformational
+igso-org:Transformational rdf:type owl:NamedIndividual ;
+                          rdfs:label "Transformational"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BusinessAsset
+                :ContentAsset
+                :DataAsset
+                :DesignAsset
+                :HRAsset
+                :IPAsset
+                :ITAsset
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :LegalDocument
+                :Notice
+                :RefenceDocument
+                :Report
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :StorageInformation
+                :StorageLocation
+                :StoragePolicy
+                :StorageRule
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TranferRecord
+                :TransferPolicy
+                :TransferRule
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
