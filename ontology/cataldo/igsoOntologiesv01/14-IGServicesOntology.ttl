@@ -1,4 +1,5 @@
 @prefix : <http://www.example.org/cm/igso/2023/igsonto#> .
+#######################################################
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix dct: <http://purl.org/dc/terms/> .
@@ -19,6 +20,7 @@
 @prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
 @prefix owlTime: <http://www.w3.org/2006/time#> .
 @prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+####################################################################
 @prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
 @prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
 @prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
@@ -31,6 +33,7 @@
 @prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
 @prefix igso-stds: <http://www.example.org/cm/igso/2023/igso-stds#> .
+##########################################################################
 @base <http://www.example.org/cm/igso/2023/igsonto#> .
 
 <http://www.example.org/cm/igso/2023/igsonto#> rdf:type owl:Ontology ;

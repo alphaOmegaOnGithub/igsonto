@@ -50,6 +50,14 @@
 #    Object Properties
 #################################################################
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#G
+igso-ddy:G rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#I
+igso-ddy:I rdf:type owl:ObjectProperty .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-org#governs
 :governs rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf igso-ddy:G .
@@ -74,7 +82,8 @@
 #################################################################
 
 ###  http://purl.org/dc/dcmitype/dctype:Dataset
-dctype:dctype:Dataset rdfs:subClassOf igso-ddy:DataDictionary .
+dctype:dctype:Dataset rdf:type owl:Class ;
+                      rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://purl.org/dc/elements/1.1/Subject
@@ -120,44 +129,53 @@ igso-ddy:DPO rdfs:subClassOf igso-ddy:Acronym .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Agent
-igso-ddy:dct:Agent rdfs:subClassOf igso-ddy:DataDictionary .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#dct:AgentClass
-igso-ddy:dct:AgentClass owl:disjointWith :Person .
+igso-ddy:dct:Agent rdf:type owl:Class ;
+                   rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Jurisdiction
-igso-ddy:dct:Jurisdiction rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:dct:Jurisdiction rdf:type owl:Class ;
+                          rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Collection
-igso-ddy:dctype:Collection rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:dctype:Collection rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Service
-igso-ddy:dctype:Service rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:dctype:Service rdf:type owl:Class ;
+                        rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Software
-igso-ddy:dctype:Software rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:dctype:Software rdf:type owl:Class ;
+                         rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#gr:BusinessEntity
-igso-ddy:gr:BusinessEntity rdfs:subClassOf igso-ddy:DataDictionary ;
+igso-ddy:gr:BusinessEntity rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ddy:DataDictionary ;
                            owl:disjointWith :gr:BusinessUnit .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#gr:DeliveryMethod
-igso-ddy:gr:DeliveryMethod rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:gr:DeliveryMethod rdf:type owl:Class ;
+                           rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
-igso-ddy:gr:Location rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:gr:Location rdf:type owl:Class ;
+                     rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrServiceModel
-igso-ddy:gr:ProductOrServiceModel rdfs:subClassOf igso-ddy:DataDictionary .
+igso-ddy:gr:ProductOrServiceModel rdf:type owl:Class ;
+                                  rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#org:Organization
+igso-ddy:org:Organization rdf:type owl:Class .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Action

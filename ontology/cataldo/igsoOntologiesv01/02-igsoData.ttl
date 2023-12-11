@@ -74,79 +74,109 @@
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/terms/Policy
+dct:Policy owl:equivalentClass :Policy .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#AccessControlList
 :AccessControlList rdf:type owl:Class ;
-                   rdfs:subClassOf :Data .
+                   rdfs:subClassOf :DataType ;
+                   rdfs:label "AccessControlList" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-data#Asset
-:Asset rdf:type owl:Class ;
-       rdfs:subClassOf :Data .
+###  http://www.example.org/cm/igso/2023/igso-data#AssetType
+:AssetType rdf:type owl:Class ;
+           rdfs:subClassOf :DataType ;
+           rdfs:label "AssetType" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#BlockStorage
+:BlockStorage rdf:type owl:Class ;
+              rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#BusinessAsset
 :BusinessAsset rdf:type owl:Class ;
-               rdfs:subClassOf :Asset .
+               rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#BusinessData
 :BusinessData rdf:type owl:Class ;
-              rdfs:subClassOf :Data .
+              rdfs:subClassOf :BusinessAsset .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#BusinessPartnerData
 :BusinessPartnerData rdf:type owl:Class ;
-                     rdfs:subClassOf :Data .
+                     rdfs:subClassOf :BusinessAsset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Catalog
+:Catalog rdf:type owl:Class ;
+         rdfs:subClassOf :DataType ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty igso-ddy:isComposedOf ;
+                           owl:someValuesFrom dctype:Dataset
+                         ] ;
+         rdfs:label "Catalog" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentAsset
 :ContentAsset rdf:type owl:Class ;
-              rdfs:subClassOf :Asset ;
+              rdfs:subClassOf :AssetType ;
               owl:disjointWith :DataAsset .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentObject
 :ContentObject rdf:type owl:Class ;
-               rdfs:subClassOf :Data .
+               rdfs:subClassOf :ObjectType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContractorData
 :ContractorData rdf:type owl:Class ;
-                rdfs:subClassOf :Data .
+                rdfs:subClassOf :BusinessAsset .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#CustomerData
 :CustomerData rdf:type owl:Class ;
-              rdfs:subClassOf :Data .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#Data
-:Data rdf:type owl:Class ;
-      rdfs:subClassOf :DataDomain .
+              rdfs:subClassOf :BusinessAsset .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DataAsset
 :DataAsset rdf:type owl:Class ;
-           rdfs:subClassOf :Asset .
+           rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DataDomain
 :DataDomain rdf:type owl:Class .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#DataType
+:DataType rdf:type owl:Class ;
+          rdfs:subClassOf :DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Database
+:Database rdf:type owl:Class ;
+          rdfs:subClassOf :DataType ,
+                          [ owl:intersectionOf ( dctype:Collection
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty igso-ddy:isComposedOf ;
+                                                   owl:someValuesFrom dctype:Dataset
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+          rdfs:label "Database" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#DesignAsset
 :DesignAsset rdf:type owl:Class ;
-             rdfs:subClassOf :Asset .
+             rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DisposionRecord
 :DisposionRecord rdf:type owl:Class ;
-                 rdfs:subClassOf :Disposition .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#Disposition
-:Disposition rdf:type owl:Class ;
-             rdfs:subClassOf :DataDomain .
+                 rdfs:subClassOf :DispositionType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DispositionPolicy
@@ -163,43 +193,61 @@
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DispositionSchedule
 :DispositionSchedule rdf:type owl:Class ;
-                     rdfs:subClassOf :Disposition ;
+                     rdfs:subClassOf :DispositionType ;
                      owl:disjointWith :DispositionTrigger .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DispositionTrigger
 :DispositionTrigger rdf:type owl:Class ;
-                    rdfs:subClassOf :Disposition .
+                    rdfs:subClassOf :DispositionType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#DispositionType
+:DispositionType rdf:type owl:Class ;
+                 rdfs:subClassOf :DataType ;
+                 rdfs:label "DispositionType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Document
 :Document rdf:type owl:Class ;
-          rdfs:subClassOf :Data .
+          rdfs:subClassOf :DataType ;
+          rdfs:label "Document" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#HRAsset
 :HRAsset rdf:type owl:Class ;
-         rdfs:subClassOf :Asset .
+         rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#HRData
 :HRData rdf:type owl:Class ;
-        rdfs:subClassOf :Data .
+        rdfs:subClassOf :HRAsset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#HierarchcalStoreage
+:HierarchcalStoreage rdf:type owl:Class ;
+                     rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#IPAsset
 :IPAsset rdf:type owl:Class ;
-         rdfs:subClassOf :Asset .
+         rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ITAsset
 :ITAsset rdf:type owl:Class ;
-         rdfs:subClassOf :Asset .
+         rdfs:subClassOf :AssetType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Information
 :Information rdf:type owl:Class ;
-             rdfs:subClassOf :Data .
+             rdfs:subClassOf :DataType ;
+             rdfs:label "Information" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#KeyValueStorage
+:KeyValueStorage rdf:type owl:Class ;
+                 rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#LegalDocument
@@ -209,7 +257,23 @@
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Metadata
 :Metadata rdf:type owl:Class ;
-          rdfs:subClassOf :Data .
+          rdfs:subClassOf :DataType ;
+          rdfs:label "Metadata" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#MultimediaObject
+:MultimediaObject rdf:type owl:Class ;
+                  rdfs:subClassOf :ObjectType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#NewSQLDatabase
+:NewSQLDatabase rdf:type owl:Class ;
+                rdfs:subClassOf :Database .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#NoSQLDatabase
+:NoSQLDatabase rdf:type owl:Class ;
+               rdfs:subClassOf :Database .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Notice
@@ -217,14 +281,20 @@
         rdfs:subClassOf :Document .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#ObjectStore
+:ObjectStore rdf:type owl:Class ;
+             rdfs:subClassOf :StorageType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ObjectType
+:ObjectType rdf:type owl:Class ;
+            rdfs:subClassOf :DataType ;
+            rdfs:label "ObjectType" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#Policy
 :Policy rdf:type owl:Class ;
-        rdfs:subClassOf :Data .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
-:RecordsCatalog rdf:type owl:Class ;
-                rdfs:subClassOf :DataDomain .
+        rdfs:subClassOf :DataType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
@@ -234,14 +304,27 @@
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Registry
 :Registry rdf:type owl:Class ;
-          rdfs:subClassOf :Data ;
+          rdfs:subClassOf :DataType ;
           :explanatorynote "Electronic registries typically contain a unique identifier for each entry, so that individual records can be referenced from other documents and registries." ;
           igso-ddy:definition "authoritative record or collection of records relating to something" .
 
 
-###  http://www.example.org/cm/igso/2023/igso-data#Remedy
-:Remedy rdf:type owl:Class ;
-        rdfs:subClassOf :DataDomain .
+###  http://www.example.org/cm/igso/2023/igso-data#RelationalDatabase
+:RelationalDatabase rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Database
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty igso-ddy:isComposedOf ;
+                                                                 owl:someValuesFrom :RelationalSchema
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf :Database .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RelationalSchema
+:RelationalSchema rdf:type owl:Class ;
+                  rdfs:subClassOf :Database .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Report
@@ -251,17 +334,12 @@
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
 :RetensionRecord rdf:type owl:Class ;
-                 rdfs:subClassOf :Retention .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#Retention
-:Retention rdf:type owl:Class ;
-           rdfs:subClassOf :DataDomain .
+                 rdfs:subClassOf :RetentionType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionPeriod
 :RetentionPeriod rdf:type owl:Class ;
-                 rdfs:subClassOf :Retention ;
+                 rdfs:subClassOf :RetentionType ;
                  owl:disjointWith :RetentionSchedule .
 
 
@@ -277,77 +355,104 @@
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionSchedule
 :RetentionSchedule rdf:type owl:Class ;
-                   rdfs:subClassOf :Retention .
+                   rdfs:subClassOf :RetentionType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionType
+:RetentionType rdf:type owl:Class ;
+               rdfs:subClassOf :DataType ;
+               rdfs:label "RetentionType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Rule
 :Rule rdf:type owl:Class ;
-      rdfs:subClassOf :Data .
+      rdfs:subClassOf :DataType ;
+      rdfs:label "Rule" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#SQLDatabase
+:SQLDatabase rdf:type owl:Class ;
+             rdfs:subClassOf :Database .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Schedule
 :Schedule rdf:type owl:Class ;
-          rdfs:subClassOf :Data .
+          rdfs:subClassOf :DataType ;
+          rdfs:label "Schedule" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#SemiStructuredDataObject
 :SemiStructuredDataObject rdf:type owl:Class ;
-                          rdfs:subClassOf :Data .
-
-
-###  http://www.example.org/cm/igso/2023/igso-data#Storage
-:Storage rdf:type owl:Class ;
-         rdfs:subClassOf :Data .
+                          rdfs:subClassOf :ObjectType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StorageInformation
 :StorageInformation rdf:type owl:Class ;
-                    rdfs:subClassOf :Storage .
+                    rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StorageLocation
 :StorageLocation rdf:type owl:Class ;
-                 rdfs:subClassOf :Storage .
+                 rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StoragePolicy
 :StoragePolicy rdf:type owl:Class ;
-               rdfs:subClassOf :Storage .
+               rdfs:subClassOf :Policy .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StorageRule
 :StorageRule rdf:type owl:Class ;
-             rdfs:subClassOf :Storage .
+             rdfs:subClassOf :Rule .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageType
+:StorageType rdf:type owl:Class ;
+             rdfs:subClassOf :DataType ;
+             rdfs:label "StorageType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StructuredDataObject
 :StructuredDataObject rdf:type owl:Class ;
-                      rdfs:subClassOf :Data .
+                      rdfs:subClassOf :ObjectType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TieredStorage
+:TieredStorage rdf:type owl:Class ;
+               rdfs:subClassOf :StorageType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#TranferRecord
 :TranferRecord rdf:type owl:Class ;
-               rdfs:subClassOf :Data .
+               rdfs:subClassOf :TransferType ;
+               rdfs:label "TranferRecord" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#TransactionRecord
 :TransactionRecord rdf:type owl:Class ;
-                   rdfs:subClassOf :Data .
+                   rdfs:subClassOf :TransferType ;
+                   rdfs:label "TransactionRecord" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#TransferPolicy
 :TransferPolicy rdf:type owl:Class ;
-                rdfs:subClassOf :DataDomain .
+                rdfs:subClassOf :Policy .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#TransferRule
 :TransferRule rdf:type owl:Class ;
-              rdfs:subClassOf :DataDomain .
+              rdfs:subClassOf :Rule .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TransferType
+:TransferType rdf:type owl:Class ;
+              rdfs:subClassOf :DataType ;
+              rdfs:label "TransferType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#UnStructuredDataObject
 :UnStructuredDataObject rdf:type owl:Class ;
-                        rdfs:subClassOf :Data .
+                        rdfs:subClassOf :ObjectType .
 
 
 #################################################################
@@ -793,6 +898,13 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 
 
 #################################################################
+#    Annotations
+#################################################################
+
+igso-ddy:ACL cmns-av:synonym "Synonym of Access Control List" .
+
+
+#################################################################
 #    General axioms
 #################################################################
 
@@ -813,6 +925,15 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                 :Notice
                 :RefenceDocument
                 :Report
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :NewSQLDatabase
+                :NoSQLDatabase
+                :RelationalSchema
+                :SQLDatabase
               )
 ] .
 
