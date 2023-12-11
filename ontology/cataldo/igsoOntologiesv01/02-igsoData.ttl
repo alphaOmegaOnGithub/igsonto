@@ -40,7 +40,6 @@
                                                                 foaf:name "Cataldo Mega"
                                                               ] ;
                                                   dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-                                                  dct:modified "2014-04-12"^^xsd:date ;
                                                   rdfs:comment "Vocabulary for describing information governance services types ."@en ;
                                                   rdfs:label "Core igso organization ontology"@en ;
                                                   rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
@@ -126,6 +125,11 @@ dct:Policy owl:equivalentClass :Policy .
               owl:disjointWith :DataAsset .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#ContentLifecycle
+:ContentLifecycle rdf:type owl:Class ;
+                  rdfs:subClassOf :LifecycleType .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentObject
 :ContentObject rdf:type owl:Class ;
                rdfs:subClassOf :ObjectType .
@@ -150,9 +154,15 @@ dct:Policy owl:equivalentClass :Policy .
 :DataDomain rdf:type owl:Class .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#DataLifecycle
+:DataLifecycle rdf:type owl:Class ;
+               rdfs:subClassOf :LifecycleType .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#DataType
 :DataType rdf:type owl:Class ;
-          rdfs:subClassOf :DataDomain .
+          rdfs:subClassOf :DataDomain ;
+          rdfs:label "DataType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Database
@@ -199,7 +209,9 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DispositionTrigger
 :DispositionTrigger rdf:type owl:Class ;
-                    rdfs:subClassOf :DispositionType .
+                    rdfs:subClassOf :DispositionType ,
+                                    :TriggerType ;
+                    rdfs:label "DispositionTrigger" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#DispositionType
@@ -241,8 +253,14 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#Information
 :Information rdf:type owl:Class ;
-             rdfs:subClassOf :DataType ;
-             rdfs:label "Information" .
+             rdfs:subClassOf :MetadataType ;
+             rdfs:label "Information" ;
+             skos:definition "An context to some form of data we call Information" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#InformationLifecycle
+:InformationLifecycle rdf:type owl:Class ;
+                      rdfs:subClassOf :LifecycleType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#KeyValueStorage
@@ -255,10 +273,16 @@ dct:Policy owl:equivalentClass :Policy .
                rdfs:subClassOf :Document .
 
 
-###  http://www.example.org/cm/igso/2023/igso-data#Metadata
-:Metadata rdf:type owl:Class ;
-          rdfs:subClassOf :DataType ;
-          rdfs:label "Metadata" .
+###  http://www.example.org/cm/igso/2023/igso-data#LifecycleType
+:LifecycleType rdf:type owl:Class ;
+               rdfs:subClassOf :DataType ;
+               rdfs:label "LifecycleType" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#MetadataType
+:MetadataType rdf:type owl:Class ;
+              rdfs:subClassOf :DataType ;
+              rdfs:comment "MetadataType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#MultimediaObject
@@ -295,6 +319,13 @@ dct:Policy owl:equivalentClass :Policy .
 ###  http://www.example.org/cm/igso/2023/igso-data#Policy
 :Policy rdf:type owl:Class ;
         rdfs:subClassOf :DataType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Record
+:Record rdf:type owl:Class ;
+        rdfs:subClassOf :MetadataType ;
+        rdfs:label "Record" ;
+        skos:definition "A Record  represents an structured data entity that classifies dataobjects with respect to a records taxonomy and assigns them to specific category." .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
@@ -334,7 +365,11 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
 :RetensionRecord rdf:type owl:Class ;
-                 rdfs:subClassOf :RetentionType .
+                 rdfs:subClassOf :RetentionType ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty igso-ddy:consistsOf ;
+                                   owl:someValuesFrom :RetentionPolicy
+                                 ] .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionPeriod
@@ -345,7 +380,15 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionPolicy
 :RetentionPolicy rdf:type owl:Class ;
-                 rdfs:subClassOf :Policy .
+                 rdfs:subClassOf :Policy ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty igso-ddy:consistsOf ;
+                                   owl:someValuesFrom [ owl:intersectionOf ( :RetentionRule
+                                                                             :RetentionSchedule
+                                                                           ) ;
+                                                        rdf:type owl:Class
+                                                      ]
+                                 ] .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionRule
@@ -355,7 +398,21 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionSchedule
 :RetentionSchedule rdf:type owl:Class ;
-                   rdfs:subClassOf :RetentionType .
+                   rdfs:subClassOf :RetentionType ,
+                                   [ owl:intersectionOf ( :Schedule
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty igso-ddy:includes ;
+                                                            owl:someValuesFrom :RetentionPeriod
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RetentionTrigger
+:RetentionTrigger rdf:type owl:Class ;
+                  rdfs:subClassOf :TriggerType ;
+                  rdfs:label "RetentionTrigger" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RetentionType
@@ -391,9 +448,20 @@ dct:Policy owl:equivalentClass :Policy .
                     rdfs:subClassOf :StorageType .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#StorageLifecycle
+:StorageLifecycle rdf:type owl:Class ;
+                  rdfs:subClassOf :LifecycleType .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#StorageLocation
 :StorageLocation rdf:type owl:Class ;
                  rdfs:subClassOf :StorageType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#StorageMigrationTrigger
+:StorageMigrationTrigger rdf:type owl:Class ;
+                         rdfs:subClassOf :TriggerType ;
+                         rdfs:label "StorageMigrationTrigger" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#StoragePolicy
@@ -415,6 +483,11 @@ dct:Policy owl:equivalentClass :Policy .
 ###  http://www.example.org/cm/igso/2023/igso-data#StructuredDataObject
 :StructuredDataObject rdf:type owl:Class ;
                       rdfs:subClassOf :ObjectType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Taxonomy
+:Taxonomy rdf:type owl:Class ;
+          rdfs:subClassOf :DataType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#TieredStorage
@@ -444,10 +517,22 @@ dct:Policy owl:equivalentClass :Policy .
               rdfs:subClassOf :Rule .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#TransferTrigger
+:TransferTrigger rdf:type owl:Class ;
+                 rdfs:subClassOf :TriggerType ;
+                 rdfs:label "TransferTrigger" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#TransferType
 :TransferType rdf:type owl:Class ;
               rdfs:subClassOf :DataType ;
               rdfs:label "TransferType" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#TriggerType
+:TriggerType rdf:type owl:Class ;
+             rdfs:subClassOf :DataType ;
+             rdfs:label "TriggerType" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#UnStructuredDataObject
@@ -897,6 +982,10 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
                           rdfs:label "Transformational"@en .
 
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+  foaf:name "Cataldo Mega"
+] .
+
 #################################################################
 #    Annotations
 #################################################################
@@ -916,6 +1005,24 @@ igso-ddy:ACL cmns-av:synonym "Synonym of Access Control List" .
                 :HRAsset
                 :IPAsset
                 :ITAsset
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ContentLifecycle
+                :DataLifecycle
+                :InformationLifecycle
+                :StorageLifecycle
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :DispositionTrigger
+                :RetentionTrigger
+                :StorageMigrationTrigger
+                :TransferTrigger
               )
 ] .
 
@@ -955,4 +1062,4 @@ igso-ddy:ACL cmns-av:synonym "Synonym of Access Control List" .
 ] .
 
 
-###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
