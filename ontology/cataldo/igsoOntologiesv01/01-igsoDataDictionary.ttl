@@ -53,12 +53,7 @@ dc:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/abstract
-dct:abstract rdf:type owl:AnnotationProperty ;
-             rdfs:isDefinedBy dct: ;
-             rdfs:label "abstract" ;
-             skos:definition "summary of the resource" ;
-             cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
-             rdfs:subPropertyOf dct:description .
+dct:abstract rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/contributor
@@ -82,15 +77,12 @@ dct:creator rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:AnnotationProperty ;
-                rdfs:subPropertyOf skos:note .
+                rdfs:subPropertyOf skos:note ;
+                rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/issued
-dct:issued rdf:type owl:AnnotationProperty ;
-           rdfs:isDefinedBy dct: ;
-           rdfs:label "issued" ;
-           skos:definition "date of formal issuance of the resource" ;
-           cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+dct:issued rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -103,9 +95,7 @@ dct:license rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:AnnotationProperty ;
-             rdfs:isDefinedBy dct: ;
-             rdfs:label "modified" ;
-             skos:definition "date on which the resource was most recently revised" .
+             rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/dc/terms/publisher
@@ -140,7 +130,8 @@ dct:source rdf:type owl:AnnotationProperty ;
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:AnnotationProperty .
+dct:title rdf:type owl:AnnotationProperty ;
+          rdfs:range rdfs:Literal .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#abstract
@@ -1294,14 +1285,49 @@ org:subOrganizationOf rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf dct:description .
+
+
+###  http://purl.org/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:DatatypeProperty .
+
+
 ###  http://purl.org/dc/terms/description
-dct:description rdf:type owl:DatatypeProperty ;
-                rdfs:range rdfs:Literal .
+dct:description rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dct:identifier rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/relation
+dct:relation rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/subject
+dct:subject rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/title
-dct:title rdf:type owl:DatatypeProperty ;
-          rdfs:range rdfs:Literal .
+dct:title rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/type
+dct:type rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#age
@@ -1432,6 +1458,11 @@ igso-ddy:value rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2004/02/skos/core#notation
 skos:notation rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/ns/dcat#theme
+dcat:theme rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf dct:subject .
 
 
 ###  http://www.w3.org/ns/org#identifier
@@ -1565,10 +1596,7 @@ dct:Policy rdf:type owl:Class ;
 
 ###  http://purl.org/dc/terms/Standard
 dct:Standard rdf:type owl:Class ;
-             rdfs:subClassOf igso-ddy:DataDictionary ;
-             igso-ddy:definition "A reference point against which other things can be evaluated or compared." ;
-             rdfs:isDefinedBy dct:Standard ;
-             rdfs:label "Standard" .
+             rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://purl.org/goodrelations/v1#BusinessEntity
@@ -2284,13 +2312,39 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
    foaf:name "Cataldo Mega"
  ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
 
+dct:Standard rdfs:label "Standard" ;
+              rdfs:isDefinedBy dct:Standard ;
+              igso-ddy:definition "A reference point against which other things can be evaluated or compared." .
+
+
+dct:abstract cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+             skos:definition "summary of the resource" ;
+             rdfs:label "abstract" ;
+             rdfs:isDefinedBy dct: .
+
+
 dct:description rdfs:isDefinedBy dct: ;
-                 skos:definition "account of the resource" ;
-                 rdfs:label "description" .
+                skos:definition "account of the resource" ;
+                rdfs:label "description" .
+
+
+dct:issued cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+           skos:definition "date of formal issuance of the resource" ;
+           rdfs:isDefinedBy dct: ;
+           rdfs:label "issued" .
+
+
+dct:modified rdfs:isDefinedBy dct: ;
+             rdfs:label "modified" ;
+             skos:definition "date on which the resource was most recently revised" .
 
 
 igso-ddy:ACL rdfs:label "ACL" .
