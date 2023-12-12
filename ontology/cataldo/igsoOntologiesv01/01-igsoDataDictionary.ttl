@@ -82,9 +82,6 @@ dct:creator rdf:type owl:AnnotationProperty ;
 
 ###  http://purl.org/dc/terms/description
 dct:description rdf:type owl:AnnotationProperty ;
-                rdfs:isDefinedBy dct: ;
-                rdfs:label "description" ;
-                skos:definition "account of the resource" ;
                 rdfs:subPropertyOf skos:note .
 
 
@@ -140,6 +137,10 @@ dct:source rdf:type owl:AnnotationProperty ;
            rdfs:label "source" ;
            skos:definition "related resource from which the described resource is derived" ;
            cmns-av:explanatoryNote "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#abstract
@@ -1293,6 +1294,16 @@ org:subOrganizationOf rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:DatatypeProperty ;
+                rdfs:range rdfs:Literal .
+
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:range rdfs:Literal .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#age
 igso-ddy:age rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf igso-ddy:metrics .
@@ -1727,6 +1738,33 @@ rdf:Property rdf:type owl:Class ;
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
              rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf dcat:Dataset ;
+             rdfs:comment "A curated collection of metadata about resources." ;
+             rdfs:isDefinedBy dcat:Catalog ;
+             rdfs:label "dcat:Catalog" .
+
+
+###  http://www.w3.org/ns/dcat#CatalogRecord
+dcat:CatalogRecord rdf:type owl:Class ;
+                   rdfs:subClassOf igso-ddy:DataDictionary ;
+                   dct:title "title" ;
+                   rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource." ;
+                   rdfs:isDefinedBy dcat:CatalogRecord .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+dcat:Dataset rdf:type owl:Class ;
+             rdfs:subClassOf igso-ddy:DataDictionary ;
+             rdfs:isDefinedBy <https://w3c.github.io/dxwg/dcat/#Class:Dataset> .
+
+
+###  http://www.w3.org/ns/dcat#Resource
+dcat:Resource rdf:type owl:Class ;
+              rdfs:subClassOf igso-ddy:DataDictionary .
 
 
 ###  http://www.w3.org/ns/org#FormalOrganization
@@ -2242,9 +2280,18 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
   foaf:name "Cataldo Mega"
 ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
+
+dct:description rdfs:isDefinedBy dct: ;
+                 skos:definition "account of the resource" ;
+                 rdfs:label "description" .
+
 
 igso-ddy:ACL rdfs:label "ACL" .
 

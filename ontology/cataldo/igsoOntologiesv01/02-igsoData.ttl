@@ -34,13 +34,11 @@
 @base <http://www.example.org/cm/igso/2023/igso-data#> .
 
 <http://www.example.org/cm/igso/2023/igso-data#> rdf:type owl:Ontology ;
-                                                  owl:imports igso-ddy: ;
                                                   dct:created "2010-05-28"^^xsd:date ;
                                                   dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
                                                                 foaf:name "Cataldo Mega"
                                                               ] ;
                                                   dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-                                                  rdfs:comment "Vocabulary for describing information governance services types ."@en ;
                                                   rdfs:label "Core igso organization ontology"@en ;
                                                   rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
                                                   owl:versionInfo "0.8" .
@@ -48,6 +46,18 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
 
 ###  http://www.example.org/cm/igso/2023/igso-data#example
 :example rdf:type owl:AnnotationProperty ;
@@ -69,18 +79,95 @@
            rdfs:subPropertyOf igso-ddy:note .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#definition
+igso-ddy:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#note
+igso-ddy:note rdf:type owl:AnnotationProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#roleProperty
+igso-org:roleProperty rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+foaf:mbox rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource
+cmns-av:directSource rdf:type owl:AnnotationProperty .
+
+
+###  https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym
+cmns-av:synonym rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-data#uses
+:uses rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#consistsOf
+igso-ddy:consistsOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#includes
+igso-ddy:includes rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#isComposedOf
+igso-ddy:isComposedOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty ;
+             rdfs:domain dcat:Catalog ;
+             rdfs:range dcat:Catalog .
+
+
+###  http://www.w3.org/ns/dcat#record
+dcat:record rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Catalog .
+
+
 #################################################################
 #    Classes
 #################################################################
 
+###  http://purl.org/dc/dcmitype/Collection
+dctype:Collection rdf:type owl:Class .
+
+
+###  http://purl.org/dc/dcmitype/Dataset
+dctype:Dataset rdf:type owl:Class .
+
+
 ###  http://purl.org/dc/terms/Policy
-dct:Policy owl:equivalentClass :Policy .
+dct:Policy rdf:type owl:Class ;
+           owl:equivalentClass :Policy .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#AccessControlList
 :AccessControlList rdf:type owl:Class ;
-                   rdfs:subClassOf :DataType ;
-                   rdfs:label "AccessControlList" .
+                   rdfs:subClassOf :MetadataType ;
+                   rdfs:label "AccessControlList" ;
+                   cmns-av:synonym "ACL" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#AssetType
@@ -109,20 +196,15 @@ dct:Policy owl:equivalentClass :Policy .
                      rdfs:subClassOf :BusinessAsset .
 
 
-###  http://www.example.org/cm/igso/2023/igso-data#Catalog
-:Catalog rdf:type owl:Class ;
-         rdfs:subClassOf :DataType ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty igso-ddy:isComposedOf ;
-                           owl:someValuesFrom dctype:Dataset
-                         ] ;
-         rdfs:label "Catalog" .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentAsset
 :ContentAsset rdf:type owl:Class ;
               rdfs:subClassOf :AssetType ;
               owl:disjointWith :DataAsset .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ContentCatalog
+:ContentCatalog rdf:type owl:Class ;
+                rdfs:subClassOf :DataType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentLifecycle
@@ -132,7 +214,9 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContentObject
 :ContentObject rdf:type owl:Class ;
-               rdfs:subClassOf :ObjectType .
+               rdfs:subClassOf :ObjectType ;
+               rdfs:comment "A content object represents an electronic data object like office, PDF/A , images, audio and video files." ;
+               rdfs:label "ContentObject" .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ContractorData
@@ -226,6 +310,11 @@ dct:Policy owl:equivalentClass :Policy .
           rdfs:label "Document" .
 
 
+###  http://www.example.org/cm/igso/2023/igso-data#FulltextIndex
+:FulltextIndex rdf:type owl:Class ;
+               rdfs:subClassOf :Database .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-data#HRAsset
 :HRAsset rdf:type owl:Class ;
          rdfs:subClassOf :AssetType .
@@ -287,7 +376,7 @@ dct:Policy owl:equivalentClass :Policy .
 
 ###  http://www.example.org/cm/igso/2023/igso-data#MultimediaObject
 :MultimediaObject rdf:type owl:Class ;
-                  rdfs:subClassOf :ObjectType .
+                  rdfs:subClassOf :ContentObject .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#NewSQLDatabase
@@ -303,6 +392,11 @@ dct:Policy owl:equivalentClass :Policy .
 ###  http://www.example.org/cm/igso/2023/igso-data#Notice
 :Notice rdf:type owl:Class ;
         rdfs:subClassOf :Document .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#ObjectCatalog
+:ObjectCatalog rdf:type owl:Class ;
+               rdfs:subClassOf :DataType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#ObjectStore
@@ -326,6 +420,11 @@ dct:Policy owl:equivalentClass :Policy .
         rdfs:subClassOf :MetadataType ;
         rdfs:label "Record" ;
         skos:definition "A Record  represents an structured data entity that classifies dataobjects with respect to a records taxonomy and assigns them to specific category." .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
+:RecordsCatalog rdf:type owl:Class ;
+                rdfs:subClassOf :DataType .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
@@ -538,6 +637,15 @@ dct:Policy owl:equivalentClass :Policy .
 ###  http://www.example.org/cm/igso/2023/igso-data#UnStructuredDataObject
 :UnStructuredDataObject rdf:type owl:Class ;
                         rdfs:subClassOf :ObjectType .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+dcat:Catalog rdf:type owl:Class ;
+             rdfs:subClassOf :DataDomain ;
+             :scopenote "The scope of dcat:Catalog is collections of metadata about datasets, data services, or other resource types." ;
+             rdfs:comment "A catalog represents a dataset in which each individual item is a metadata record describing some resource;" ;
+             rdfs:isDefinedBy dcat:Catalog ;
+             rdfs:label "Catalog" .
 
 
 #################################################################
@@ -986,6 +1094,14 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
   foaf:name "Cataldo Mega"
 ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
@@ -1005,6 +1121,14 @@ igso-ddy:ACL cmns-av:synonym "Synonym of Access Control List" .
                 :HRAsset
                 :IPAsset
                 :ITAsset
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ContentCatalog
+                :ObjectCatalog
+                :RecordsCatalog
               )
 ] .
 
