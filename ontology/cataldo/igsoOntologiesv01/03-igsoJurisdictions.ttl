@@ -34,6 +34,7 @@
 @base <http://www.example.org/cm/igso/2023/igso-jur#> .
 
 <http://www.example.org/cm/igso/2023/igso-jur#> rdf:type owl:Ontology ;
+                                                 owl:imports igso-ddy: ;
                                                  dct:created "2010-05-28"^^xsd:date ;
                                                  dct:creator :Cataldo_Mega ,
                                                              [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
