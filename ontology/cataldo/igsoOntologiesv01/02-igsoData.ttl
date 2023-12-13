@@ -34,6 +34,7 @@
 @base <http://www.example.org/cm/igso/2023/igso-data#> .
 
 <http://www.example.org/cm/igso/2023/igso-data#> rdf:type owl:Ontology ;
+                                                  owl:imports <http://www.example.org/cm/igso/2023/igso-data#> ;
                                                   dct:created "2010-05-28"^^xsd:date ;
                                                   dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
                                                                 foaf:name "Cataldo Mega"
@@ -1093,6 +1094,10 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
 [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
   foaf:name "Cataldo Mega"
 ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
 
 [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
    foaf:name "Cataldo Mega"

@@ -1203,6 +1203,18 @@ igso-ddy:validateProvenance rdf:type owl:ObjectProperty .
 igso-org:Goal rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/ns/dcat#catalog
+dcat:catalog rdf:type owl:ObjectProperty ;
+             rdfs:domain dcat:Catalog ;
+             rdfs:range dcat:Catalog .
+
+
+###  http://www.w3.org/ns/dcat#record
+dcat:record rdf:type owl:ObjectProperty ;
+            rdfs:domain dcat:Catalog ;
+            rdfs:range dcat:CatalogRecord .
+
+
 ###  http://www.w3.org/ns/org#Objective
 org:Objective rdf:type owl:ObjectProperty .
 
@@ -1303,7 +1315,8 @@ dct:description rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/dc/terms/identifier
-dct:identifier rdf:type owl:DatatypeProperty .
+dct:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:domain dcat:Catalog .
 
 
 ###  http://purl.org/dc/terms/issued
@@ -1490,16 +1503,6 @@ dctype:Collection rdf:type owl:Class ;
                   rdfs:comment "A collection is described as a group; its parts may also be separately described." ;
                   rdfs:isDefinedBy dctype:Collection ;
                   rdfs:label "Collection" .
-
-
-###  http://purl.org/dc/dcmitype/Dataset
-dctype:Dataset rdf:type owl:Class ;
-               rdfs:subClassOf igso-ddy:DataDictionary ;
-               igso-ddy:definition "Data encoded in a defined structure." ;
-               rdfs:comment """Examples include lists, tables, and databases. 
-A dataset may be useful for direct machine processing.""" ;
-               rdfs:isDefinedBy dctype:Dataset ;
-               rdfs:label "Dataset" .
 
 
 ###  http://purl.org/dc/dcmitype/Service
@@ -1773,7 +1776,8 @@ dcat:Catalog rdf:type owl:Class ;
              rdfs:subClassOf dcat:Dataset ;
              rdfs:comment "A curated collection of metadata about resources." ;
              rdfs:isDefinedBy dcat:Catalog ;
-             rdfs:label "dcat:Catalog" .
+             rdfs:label "dcat:Catalog" ;
+             cmns-av:usageNote "Datasets and data services are examples of resources in the context of a data catalog." .
 
 
 ###  http://www.w3.org/ns/dcat#CatalogRecord
@@ -1784,15 +1788,27 @@ dcat:CatalogRecord rdf:type owl:Class ;
                    rdfs:isDefinedBy dcat:CatalogRecord .
 
 
+###  http://www.w3.org/ns/dcat#DataService
+dcat:DataService rdf:type owl:Class ;
+                 rdfs:subClassOf dctype:Service ,
+                                 dcat:Resource ;
+                 rdfs:label "dcat:DataService" ;
+                 cmns-av:usageNote "If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property." .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 dcat:Dataset rdf:type owl:Class ;
-             rdfs:subClassOf igso-ddy:DataDictionary ;
+             rdfs:subClassOf dcat:Resource ;
              rdfs:isDefinedBy <https://w3c.github.io/dxwg/dcat/#Class:Dataset> .
 
 
 ###  http://www.w3.org/ns/dcat#Resource
 dcat:Resource rdf:type owl:Class ;
-              rdfs:subClassOf igso-ddy:DataDictionary .
+              rdfs:subClassOf igso-ddy:DataDictionary ;
+              rdfs:isDefinedBy dcat:Resource ;
+              rdfs:label "Resource" ;
+              cmns-av:usageNote """The class of all cataloged resources, the super-class of dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog.
+This class carries properties common to all cataloged resources, including datasets and data services.""" .
 
 
 ###  http://www.w3.org/ns/org#FormalOrganization
@@ -2316,6 +2332,10 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
    foaf:name "Cataldo Mega"
  ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
@@ -2342,8 +2362,8 @@ dct:issued cmns-av:usageNote "This annotation is typically used to describe an a
            rdfs:label "issued" .
 
 
-dct:modified rdfs:isDefinedBy dct: ;
-             rdfs:label "modified" ;
+dct:modified rdfs:label "modified" ;
+             rdfs:isDefinedBy dct: ;
              skos:definition "date on which the resource was most recently revised" .
 
 
