@@ -1,4 +1,3 @@
-@base <http://www.example.org/cm/igso/2023/igso-sys#> .
 @prefix : <http://www.example.org/cm/igso/2023/igso-sys#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix gr: <http://purl.org/goodrelations/v1#> .
@@ -31,6 +30,32 @@
 @prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-sys#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-impl#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 .
+
+_:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+<http://www.example.org/cm/igso/2023/igso-sys#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:label "Core igso organization ontology"@en ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#requires
+
+:requires a owl:ObjectProperty .
+# 
 # 
 # 
 # #################################################################
@@ -41,36 +66,120 @@
 # 
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
+
+igso-ddy:InformationRetrievalSystem a owl:Class ;
+	rdfs:subClassOf :System ;
+	rdfs:label "InformationRetrievalSystem" .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#ArchiveSystem
+
+:ArchiveSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#CaseManagementSystem
+
+:CaseManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#CommunicationSystem
+
+:CommunicationSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#DocumentManagementSystem
+
+:DocumentManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#EnterpriseContentManagementSystem
+
+:EnterpriseContentManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#NetworkSystem
+
+:NetworkSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#RDBMSystem
+
+:RDBMSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#RecordsManagementSystem
+
+:RecordsManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#RenderingSystem
+
+:RenderingSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#StorageSystem
+
+:StorageSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#System
+
+:System a owl:Class ;
+	rdfs:subClassOf :SystemsDomain .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#SystemPattern
+
+:SystemPattern a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#SystemsDomain
+
+:SystemsDomain a owl:Class .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#TransferSystem
+
+:TransferSystem a owl:Class ;
+	rdfs:subClassOf :System .
 # 
 # http://www.example.org/cm/igso/2023/igso-sys#eDiscoveryManagementSystem
+
+:eDiscoveryManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid4 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+igso-arc:ArchiveSolution rdfs:label "ArchiveSolution" .
+# 
+
+igso-arc:ECMSolution rdfs:label "ECMSolution" .
+# 
+
+igso-arc:InformationGovernanceSolution rdfs:label "InformationGovernanceSolution" .
+# 
+
+igso-arc:RIMSolution rdfs:label "RIMSolution" .
+# 
+
+igso-arc:SolutionPattern rdfs:label "SolutionPattern" .
+# 
+
+igso-arc:eDiscoverySolution rdfs:label "eDiscoverySolution" .
 # 
 # 
 # 
@@ -81,125 +190,64 @@
 # #################################################################
 # 
 # 
+
+_:genid5 a owl:AllDisjointClasses ;
+	owl:members _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first igso-ddy:InformationRetrievalSystem ;
+	rdf:rest _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :ArchiveSystem ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :CaseManagementSystem ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :CommunicationSystem ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :DocumentManagementSystem ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :EnterpriseContentManagementSystem ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :NetworkSystem ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :RDBMSystem ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :RecordsManagementSystem ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :RenderingSystem ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :StorageSystem ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :SystemPattern ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :TransferSystem ;
+	rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :eDiscoveryManagementSystem ;
+	rdf:rest rdf:nil .
 # 
-# Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
-
-<#> a owl:Ontology;
-  owl:imports <igso-ddy#>;
-  dct:created "2010-05-28"^^xsd:date;
-  dct:creator _:genid1;
-  dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/>;
-  dct:modified "2014-04-12"^^xsd:date;
-  rdfs:comment "Vocabulary for describing information governance services types ."@en;
-  rdfs:label "Core igso organization ontology"@en;
-  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/>;
-  owl:versionInfo "0.8" .
-
-_:genid1 foaf:name "Cataldo Mega";
-  foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" .
-
-igso-ddy:InformationRetrievalSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:ArchiveSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:CaseManagementSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:CommunicationSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:DocumentManagementSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:EnterpriseContentManagementSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:NetworkSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:RDBMSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:RecordsManagementSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:RenderingSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:StorageSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:System a owl:Class;
-  rdfs:subClassOf :SystemsDomain .
-
-:SystemPattern a owl:Class;
-  rdfs:subClassOf :System .
-
-:SystemsDomain a owl:Class .
-
-:TransferSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-:eDiscoveryManagementSystem a owl:Class;
-  rdfs:subClassOf :System .
-
-_:genid2 a owl:AllDisjointClasses;
-  owl:members _:genid16 .
-
-_:genid16 a rdf:List;
-  rdf:first igso-ddy:InformationRetrievalSystem;
-  rdf:rest _:genid15 .
-
-_:genid15 a rdf:List;
-  rdf:first :ArchiveSystem;
-  rdf:rest _:genid14 .
-
-_:genid14 a rdf:List;
-  rdf:first :CaseManagementSystem;
-  rdf:rest _:genid13 .
-
-_:genid13 a rdf:List;
-  rdf:first :CommunicationSystem;
-  rdf:rest _:genid12 .
-
-_:genid12 a rdf:List;
-  rdf:first :DocumentManagementSystem;
-  rdf:rest _:genid11 .
-
-_:genid11 a rdf:List;
-  rdf:first :EnterpriseContentManagementSystem;
-  rdf:rest _:genid10 .
-
-_:genid10 a rdf:List;
-  rdf:first :NetworkSystem;
-  rdf:rest _:genid9 .
-
-_:genid9 a rdf:List;
-  rdf:first :RDBMSystem;
-  rdf:rest _:genid8 .
-
-_:genid8 a rdf:List;
-  rdf:first :RecordsManagementSystem;
-  rdf:rest _:genid7 .
-
-_:genid7 a rdf:List;
-  rdf:first :RenderingSystem;
-  rdf:rest _:genid6 .
-
-_:genid6 a rdf:List;
-  rdf:first :StorageSystem;
-  rdf:rest _:genid5 .
-
-_:genid5 a rdf:List;
-  rdf:first :SystemPattern;
-  rdf:rest _:genid4 .
-
-_:genid4 a rdf:List;
-  rdf:first :TransferSystem;
-  rdf:rest _:genid3 .
-
-_:genid3 a rdf:List;
-  rdf:first :eDiscoveryManagementSystem;
-  rdf:rest rdf:nil .
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

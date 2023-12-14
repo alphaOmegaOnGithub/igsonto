@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-stds#" uri="13-igsoStandards.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-vend#" uri="12-igsoVendors.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-plt#" uri="11-igsoPlatforms.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-svc#" uri="10-igsoServices.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-sys#" uri="09-igsoSystems.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-impl#" uri="08-igsoImplementations.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-arc#" uri="07-igsoArchitecture.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-req#" uri="05-igsoRequirements.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-jur#" uri="03-igsoJurisdictions.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-ddy#" uri="01-igsoDataDictionary.ttl"/>
     <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-data#" uri="02-igsoData.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-impl#" uri="08-igsoImplementations.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-stds#" uri="13-igsoStandards.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-sys#" uri="09-igsoSystems.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-svc#" uri="10-igsoServices.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-req#" uri="05-igsoRequirements.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-plt#" uri="11-igsoPlatforms.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-arc#" uri="07-igsoArchitecture.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-org#" uri="04-igsoOrganization.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-ass#" uri="06-igsoAssociations.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-jur#" uri="03-igsoJurisdictions.ttl"/>
-    <uri id="User Entered Import Resolution" name="http://www.example.org/cm/igso/2023/igso-data#" uri="02-igsoData.ttl"/>
-    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-ddy#" uri="01-igsoDataDictionary.ttl"/>
-    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-ddy#" uri="01-igsoDataDictionary.ttl"/>
-    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-ddy#" uri="01-igsoDataDictionary.ttl"/>
-    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-ddy#" uri="01-igsoDataDictionary.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-jur#" uri="03-igsoJurisdiction.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://www.example.org/cm/igso/2023/igso-org#" uri="04-igsoOrganization.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
 </catalog>
