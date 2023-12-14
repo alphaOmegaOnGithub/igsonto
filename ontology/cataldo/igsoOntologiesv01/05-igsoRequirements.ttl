@@ -31,130 +31,159 @@
 @prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
-@base <http://www.example.org/cm/igso/2023/igso-req#> .
 
-<http://www.example.org/cm/igso/2023/igso-req#> rdf:type owl:Ontology ;
-                                                 owl:imports igso-ddy: ,
-                                                             igso-org: ;
-                                                 dct:created "2010-05-28"^^xsd:date ;
-                                                 dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-                                                               foaf:name "Cataldo Mega"
-                                                             ] ;
-                                                 dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-                                                 rdfs:comment "Vocabulary for describing information governance services types ."@en ;
-                                                 rdfs:label "Core igso organization ontology"@en ;
-                                                 rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
-                                                 owl:versionInfo "0.8" .
+<http://www.example.org/cm/igso/2023/igso-req#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-ddy#> , <http://www.example.org/cm/igso/2023/igso-org#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Administration
 
-#################################################################
-#    Classes
-#################################################################
+:Administration a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#DataProcessing
 
-###  http://www.example.org/cm/igso/2023/igso-req#Administration
-:Administration rdf:type owl:Class ;
-                rdfs:subClassOf :FunctionalRequirement .
+:DataProcessing a owl:Class ;
+	rdfs:subClassOf :ReulatoryRequirement ;
+	owl:disjointWith :PersonalDataProcessing .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Disposision
 
+:Disposision a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#FunctionalRequirement
 
-###  http://www.example.org/cm/igso/2023/igso-req#DataProcessing
-:DataProcessing rdf:type owl:Class ;
-                rdfs:subClassOf :ReulatoryRequirement ;
-                owl:disjointWith :PersonalDataProcessing .
+:FunctionalRequirement a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#LoadBalancing
 
+:LoadBalancing a owl:Class ;
+	rdfs:subClassOf :Non-FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Management
 
-###  http://www.example.org/cm/igso/2023/igso-req#Disposision
-:Disposision rdf:type owl:Class ;
-             rdfs:subClassOf :FunctionalRequirement .
+:Management a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Non-FunctionalRequirement
 
+:Non-FunctionalRequirement a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#PersonalDataProcessing
 
-###  http://www.example.org/cm/igso/2023/igso-req#FunctionalRequirement
-:FunctionalRequirement rdf:type owl:Class ;
-                       rdfs:subClassOf :RequirementsOnology .
+:PersonalDataProcessing a owl:Class ;
+	rdfs:subClassOf :ReulatoryRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#RequirementsOnology
 
+:RequirementsOnology a owl:Class .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Retaintion
 
-###  http://www.example.org/cm/igso/2023/igso-req#LoadBalancing
-:LoadBalancing rdf:type owl:Class ;
-               rdfs:subClassOf :Non-FunctionalRequirement .
+:Retaintion a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#ReulatoryRequirement
 
+:ReulatoryRequirement a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Security
 
-###  http://www.example.org/cm/igso/2023/igso-req#Management
-:Management rdf:type owl:Class ;
-            rdfs:subClassOf :FunctionalRequirement .
+:Security a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#Transfer
 
+:Transfer a owl:Class ;
+	rdfs:subClassOf :FunctionalRequirement .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#UseCase
 
-###  http://www.example.org/cm/igso/2023/igso-req#Non-FunctionalRequirement
-:Non-FunctionalRequirement rdf:type owl:Class ;
-                           rdfs:subClassOf :RequirementsOnology .
+:UseCase a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#UsecaseScenario
 
+:UsecaseScenario a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
+# http://www.example.org/cm/igso/2023/igso-req#UserStory
 
-###  http://www.example.org/cm/igso/2023/igso-req#PersonalDataProcessing
-:PersonalDataProcessing rdf:type owl:Class ;
-                        rdfs:subClassOf :ReulatoryRequirement .
+:UserStory a owl:Class ;
+	rdfs:subClassOf :RequirementsOnology .
+# 
 
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
 
-###  http://www.example.org/cm/igso/2023/igso-req#RequirementsOnology
-:RequirementsOnology rdf:type owl:Class .
+_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
 
+_:genid4 a owl:AllDisjointClasses ;
+	owl:members _:genid7 .
 
-###  http://www.example.org/cm/igso/2023/igso-req#Retaintion
-:Retaintion rdf:type owl:Class ;
-            rdfs:subClassOf :FunctionalRequirement .
+_:genid7 a rdf:List ;
+	rdf:first :FunctionalRequirement ;
+	rdf:rest _:genid6 .
 
+_:genid6 a rdf:List ;
+	rdf:first :Non-FunctionalRequirement ;
+	rdf:rest _:genid5 .
 
-###  http://www.example.org/cm/igso/2023/igso-req#ReulatoryRequirement
-:ReulatoryRequirement rdf:type owl:Class ;
-                      rdfs:subClassOf :RequirementsOnology .
+_:genid5 a rdf:List ;
+	rdf:first :ReulatoryRequirement ;
+	rdf:rest rdf:nil .
+# 
 
+_:genid8 a owl:AllDisjointClasses ;
+	owl:members _:genid14 .
 
-###  http://www.example.org/cm/igso/2023/igso-req#Security
-:Security rdf:type owl:Class ;
-          rdfs:subClassOf :FunctionalRequirement .
+_:genid14 a rdf:List ;
+	rdf:first :FunctionalRequirement ;
+	rdf:rest _:genid13 .
 
+_:genid13 a rdf:List ;
+	rdf:first :Non-FunctionalRequirement ;
+	rdf:rest _:genid12 .
 
-###  http://www.example.org/cm/igso/2023/igso-req#Transfer
-:Transfer rdf:type owl:Class ;
-          rdfs:subClassOf :FunctionalRequirement .
+_:genid12 a rdf:List ;
+	rdf:first :ReulatoryRequirement ;
+	rdf:rest _:genid11 .
 
+_:genid11 a rdf:List ;
+	rdf:first :UseCase ;
+	rdf:rest _:genid10 .
 
-###  http://www.example.org/cm/igso/2023/igso-req#UseCase
-:UseCase rdf:type owl:Class ;
-         rdfs:subClassOf :RequirementsOnology .
+_:genid10 a rdf:List ;
+	rdf:first :UsecaseScenario ;
+	rdf:rest _:genid9 .
 
-
-###  http://www.example.org/cm/igso/2023/igso-req#UsecaseScenario
-:UsecaseScenario rdf:type owl:Class ;
-                 rdfs:subClassOf :RequirementsOnology .
-
-
-###  http://www.example.org/cm/igso/2023/igso-req#UserStory
-:UserStory rdf:type owl:Class ;
-           rdfs:subClassOf :RequirementsOnology .
-
-
-[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-  foaf:name "Cataldo Mega"
-] .
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-   owl:members ( :FunctionalRequirement
-                 :Non-FunctionalRequirement
-                 :ReulatoryRequirement
-               )
- ] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :FunctionalRequirement
-                :Non-FunctionalRequirement
-                :ReulatoryRequirement
-                :UseCase
-                :UsecaseScenario
-                :UserStory
-              )
-] .
-
-
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+_:genid9 a rdf:List ;
+	rdf:first :UserStory ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

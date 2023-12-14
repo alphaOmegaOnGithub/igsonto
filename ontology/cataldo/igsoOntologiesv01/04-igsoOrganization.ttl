@@ -35,12 +35,8 @@
 <http://www.example.org/cm/igso/2023/igso-org#> a owl:Ontology ;
 	owl:imports <http://www.example.org/cm/igso/2023/igso-jur#> ;
 	dct:created "2010-05-28"^^xsd:date ;
-	dct:creator _:genid1 .
-
-_:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-<http://www.example.org/cm/igso/2023/igso-org#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
 	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 # 
 # 
@@ -92,14 +88,6 @@ cmns-av:directSource a owl:AnnotationProperty .
 # #################################################################
 # 
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#G
-
-igso-ddy:G a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#I
-
-igso-ddy:I a owl:ObjectProperty .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#has
 
 igso-ddy:has a owl:ObjectProperty .
@@ -115,12 +103,28 @@ igso-ddy:has a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#implements
 
-:implements a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+:implements a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igsonto#hasGoal
 
 <http://www.example.org/cm/igso/2023/igsonto#hasGoal> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees
+
+<http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> a owl:DatatypeProperty .
+# 
+# http://www.example.org/cm/igso/2023/igsonto#isRegulated
+
+<http://www.example.org/cm/igso/2023/igsonto#isRegulated> a owl:DatatypeProperty .
 # 
 # 
 # 
@@ -285,12 +289,14 @@ igso-ddy:org:Organization a owl:Class ;
 # http://www.example.org/cm/igso/2023/igso-org#AnalyticsDept
 
 :AnalyticsDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "AnalyticsDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ArchitectureDept
 
 :ArchitectureDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "ArchitectureDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AssessmentEvent
 
@@ -354,6 +360,29 @@ defines some  DesirableBehavior""" .
 :ChiefInformationAndSecurityOfficer a owl:Class ;
 	rdfs:subClassOf :org:Role .
 # 
+# http://www.example.org/cm/igso/2023/igso-org#Company
+
+:Company a owl:Class ;
+	owl:equivalentClass :Firm ;
+	rdfs:subClassOf :FormalOrganization , _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty igso-jur:isRegulatedBy ;
+	owl:someValuesFrom igso-jur:Regulation .
+
+:Company rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> ;
+	owl:someValuesFrom xsd:integer .
+
+:Company rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#isRegulated> ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:boolean .
+# 
 # http://www.example.org/cm/igso/2023/igso-org#ComplianceObjective
 
 :ComplianceObjective a owl:Class ;
@@ -368,9 +397,9 @@ defines some  DesirableBehavior""" .
 # http://www.example.org/cm/igso/2023/igso-org#CorporatePolicy
 
 :CorporatePolicy a owl:Class ;
-	rdfs:subClassOf :OrganizationDomain , _:genid2 .
+	rdfs:subClassOf :OrganizationDomain , _:genid5 .
 
-_:genid2 a owl:Restriction ;
+_:genid5 a owl:Restriction ;
 	owl:onProperty :governs ;
 	owl:someValuesFrom :CorporatePolicy .
 # 
@@ -398,7 +427,8 @@ _:genid2 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-org#DevelopmentDept
 
 :DevelopmentDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "DevelopmentDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Enterprise
 
@@ -437,44 +467,99 @@ _:genid2 a owl:Restriction ;
 
 :HRDept a owl:Class ;
 	owl:equivalentClass :HumanResorces ;
-	rdfs:subClassOf igso-ddy:Acronym .
+	rdfs:subClassOf igso-ddy:Acronym ;
+	rdfs:label "HRDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#HumanResorces
 
 :HumanResorces a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "HumanResorces" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ITDept
 
 :ITDept a owl:Class ;
-	rdfs:subClassOf igso-ddy:Acronym , :Department .
+	rdfs:subClassOf igso-ddy:Acronym , :Department ;
+	rdfs:label "ITDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#InformationGovernanceProgram
 
 :InformationGovernanceProgram a owl:Class ;
-	rdfs:subClassOf :Program , _:genid3 .
+	rdfs:subClassOf :Program , _:genid6 .
 
-_:genid3 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty :hasObjective ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onClass :Objective .
 
-:InformationGovernanceProgram rdfs:subClassOf _:genid4 .
+:InformationGovernanceProgram rdfs:subClassOf _:genid7 .
 
-_:genid4 a owl:Restriction ;
+_:genid7 a owl:Restriction ;
 	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasGoal> ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onClass :Goal .
+
+:InformationGovernanceProgram rdfs:subClassOf _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty :implements ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass :InformationGovernanceStrategy .
+
+:InformationGovernanceProgram rdfs:label "InformationGovernanceProgram" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#InformationGovernanceStrategy
+
+:InformationGovernanceStrategy a owl:Class ;
+	rdfs:subClassOf :Strategy ;
+	rdfs:label "InformationGovernanceStrategy" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#InformationManagementDept
 
 :InformationManagementDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "InformationManagementDept" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#LargeCompany
+
+:LargeCompany a owl:Class ;
+	owl:equivalentClass _:genid9 .
+
+_:genid9 owl:intersectionOf _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :Company ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first _:genid11 .
+
+_:genid11 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> ;
+	owl:someValuesFrom _:genid12 .
+
+_:genid12 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
+
+_:genid14 xsd:minInclusive "250"^^xsd:integer .
+
+_:genid13 rdf:rest rdf:nil .
+
+_:genid10 rdf:rest rdf:nil .
+
+_:genid9 a owl:Class .
+
+:LargeCompany rdfs:subClassOf :Company .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#LegalDept
 
 :LegalDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "LegalDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#LegalPerson
 
@@ -490,6 +575,100 @@ _:genid4 a owl:Restriction ;
 
 :Management a owl:Class ;
 	rdfs:subClassOf :OrganizationDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MediumCompany
+
+:MediumCompany a owl:Class ;
+	owl:equivalentClass _:genid16 .
+
+_:genid16 owl:intersectionOf _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :Company ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first _:genid18 .
+
+_:genid18 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> ;
+	owl:someValuesFrom _:genid19 .
+
+_:genid19 a rdfs:Datatype ;
+	owl:intersectionOf _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first _:genid25 .
+
+_:genid25 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first _:genid27 .
+
+_:genid27 xsd:minExclusive "5"^^xsd:integer .
+
+_:genid26 rdf:rest rdf:nil .
+
+_:genid24 rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first _:genid21 .
+
+_:genid21 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first _:genid23 .
+
+_:genid23 xsd:maxInclusive "250"^^xsd:integer .
+
+_:genid22 rdf:rest rdf:nil .
+
+_:genid20 rdf:rest rdf:nil .
+
+_:genid17 rdf:rest rdf:nil .
+
+_:genid16 a owl:Class .
+
+:MediumCompany rdfs:subClassOf :Company .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MicroCompany
+
+:MicroCompany a owl:Class ;
+	owl:equivalentClass _:genid29 .
+
+_:genid29 owl:intersectionOf _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first :Company ;
+	rdf:rest _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> ;
+	owl:someValuesFrom _:genid32 .
+
+_:genid32 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first _:genid34 .
+
+_:genid34 xsd:maxInclusive "5"^^xsd:integer .
+
+_:genid33 rdf:rest rdf:nil .
+
+_:genid30 rdf:rest rdf:nil .
+
+_:genid29 a owl:Class .
+
+:MicroCompany rdfs:subClassOf :Company .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Objective
 
@@ -525,17 +704,20 @@ _:genid4 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-org#PrivacyAndSecurityDept
 
 :PrivacyAndSecurityDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "PrivacyAndSecurityDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Process
 
 :Process a owl:Class ;
-	rdfs:subClassOf :OrganizationDomain .
+	rdfs:subClassOf :OrganizationDomain ;
+	rdfs:label "Process" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Program
 
 :Program a owl:Class ;
-	rdfs:subClassOf :OrganizationDomain .
+	rdfs:subClassOf :OrganizationDomain ;
+	rdfs:label "Program" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RIM
 
@@ -545,7 +727,8 @@ _:genid4 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-org#RecordsAndInformationManagementDept
 
 :RecordsAndInformationManagementDept a owl:Class ;
-	rdfs:subClassOf :Department .
+	rdfs:subClassOf :Department ;
+	rdfs:label "RecordsAndInformationManagementDept" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RegulatoryAction
 
@@ -557,6 +740,65 @@ _:genid4 a owl:Restriction ;
 :Request a owl:Class ;
 	rdfs:subClassOf :Occurrence .
 # 
+# http://www.example.org/cm/igso/2023/igso-org#SmallCompany
+
+:SmallCompany a owl:Class ;
+	owl:equivalentClass _:genid36 .
+
+_:genid36 owl:intersectionOf _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first :Company ;
+	rdf:rest _:genid37 .
+
+_:genid37 a rdf:List ;
+	rdf:first _:genid38 .
+
+_:genid38 a owl:Restriction ;
+	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees> ;
+	owl:someValuesFrom _:genid39 .
+
+_:genid39 a rdfs:Datatype ;
+	owl:intersectionOf _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first _:genid45 .
+
+_:genid45 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first _:genid47 .
+
+_:genid47 xsd:minExclusive "5"^^xsd:integer .
+
+_:genid46 rdf:rest rdf:nil .
+
+_:genid44 rdf:rest _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first _:genid41 .
+
+_:genid41 a rdfs:Datatype ;
+	owl:onDatatype xsd:integer ;
+	owl:withRestrictions _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first _:genid43 .
+
+_:genid43 xsd:maxInclusive "100"^^xsd:integer .
+
+_:genid42 rdf:rest rdf:nil .
+
+_:genid40 rdf:rest rdf:nil .
+
+_:genid37 rdf:rest rdf:nil .
+
+_:genid36 a owl:Class .
+
+:SmallCompany rdfs:subClassOf :Company .
+# 
 # http://www.example.org/cm/igso/2023/igso-org#SoftwareComponent
 
 :SoftwareComponent a owl:Class ;
@@ -565,19 +807,21 @@ _:genid4 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-org#Strategy
 
 :Strategy a owl:Class ;
-	rdfs:subClassOf :OrganizationDomain , _:genid5 .
+	rdfs:subClassOf :OrganizationDomain , :org:Strategy , _:genid49 .
 
-_:genid5 a owl:Restriction ;
+_:genid49 a owl:Restriction ;
 	owl:onProperty :hasObjective ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onClass :Objective .
 
-:Strategy rdfs:subClassOf _:genid6 .
+:Strategy rdfs:subClassOf _:genid50 .
 
-_:genid6 a owl:Restriction ;
+_:genid50 a owl:Restriction ;
 	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasGoal> ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onClass :Goal .
+
+:Strategy rdfs:label "Strategy" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#SupervisoryAuthority
 
@@ -1067,16 +1311,19 @@ Open-source cloud-native solutions can serve as viable alternatives to proprieta
 	rdfs:label "Transformational"@en .
 # 
 
-_:genid7 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid51 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid8 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid52 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid9 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid53 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid10 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid54 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid55 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -1100,227 +1347,247 @@ dctype:Dataset rdfs:label "Dataset" .
 # 
 # 
 
-_:genid11 a owl:AllDisjointClasses ;
-	owl:members _:genid15 .
+_:genid56 a owl:AllDisjointClasses ;
+	owl:members _:genid60 .
 
-_:genid15 a rdf:List ;
+_:genid60 a rdf:List ;
 	rdf:first gr:Offering ;
-	rdf:rest _:genid14 .
+	rdf:rest _:genid59 .
 
-_:genid14 a rdf:List ;
+_:genid59 a rdf:List ;
 	rdf:first igso-ddy:org:Organization ;
-	rdf:rest _:genid13 .
+	rdf:rest _:genid58 .
 
-_:genid13 a rdf:List ;
+_:genid58 a rdf:List ;
 	rdf:first :Objective ;
-	rdf:rest _:genid12 .
+	rdf:rest _:genid57 .
 
-_:genid12 a rdf:List ;
+_:genid57 a rdf:List ;
 	rdf:first :Occurrence ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid16 a owl:AllDisjointClasses ;
-	owl:members _:genid33 .
+_:genid61 a owl:AllDisjointClasses ;
+	owl:members _:genid78 .
 
-_:genid33 a rdf:List ;
+_:genid78 a rdf:List ;
 	rdf:first igso-ddy:ACL ;
-	rdf:rest _:genid32 .
+	rdf:rest _:genid77 .
 
-_:genid32 a rdf:List ;
+_:genid77 a rdf:List ;
 	rdf:first igso-ddy:AWS ;
-	rdf:rest _:genid31 .
+	rdf:rest _:genid76 .
 
-_:genid31 a rdf:List ;
+_:genid76 a rdf:List ;
 	rdf:first igso-ddy:Azure ;
-	rdf:rest _:genid30 .
+	rdf:rest _:genid75 .
 
-_:genid30 a rdf:List ;
+_:genid75 a rdf:List ;
 	rdf:first igso-ddy:CCS ;
-	rdf:rest _:genid29 .
+	rdf:rest _:genid74 .
 
-_:genid29 a rdf:List ;
+_:genid74 a rdf:List ;
 	rdf:first igso-ddy:DPO ;
-	rdf:rest _:genid28 .
+	rdf:rest _:genid73 .
 
-_:genid28 a rdf:List ;
+_:genid73 a rdf:List ;
 	rdf:first igso-ddy:ECS ;
-	rdf:rest _:genid27 .
+	rdf:rest _:genid72 .
 
-_:genid27 a rdf:List ;
+_:genid72 a rdf:List ;
 	rdf:first igso-ddy:GCP ;
-	rdf:rest _:genid26 .
+	rdf:rest _:genid71 .
 
-_:genid26 a rdf:List ;
+_:genid71 a rdf:List ;
 	rdf:first igso-ddy:IAS ;
-	rdf:rest _:genid25 .
+	rdf:rest _:genid70 .
 
-_:genid25 a rdf:List ;
+_:genid70 a rdf:List ;
 	rdf:first igso-ddy:IRS ;
-	rdf:rest _:genid24 .
+	rdf:rest _:genid69 .
 
-_:genid24 a rdf:List ;
+_:genid69 a rdf:List ;
 	rdf:first igso-ddy:OU ;
-	rdf:rest _:genid23 .
+	rdf:rest _:genid68 .
 
-_:genid23 a rdf:List ;
+_:genid68 a rdf:List ;
 	rdf:first igso-ddy:RedHatCloud ;
-	rdf:rest _:genid22 .
+	rdf:rest _:genid67 .
 
-_:genid22 a rdf:List ;
+_:genid67 a rdf:List ;
 	rdf:first :CCO ;
-	rdf:rest _:genid21 .
+	rdf:rest _:genid66 .
 
-_:genid21 a rdf:List ;
+_:genid66 a rdf:List ;
 	rdf:first :CEO ;
-	rdf:rest _:genid20 .
+	rdf:rest _:genid65 .
 
-_:genid20 a rdf:List ;
+_:genid65 a rdf:List ;
 	rdf:first :CISO ;
-	rdf:rest _:genid19 .
+	rdf:rest _:genid64 .
 
-_:genid19 a rdf:List ;
+_:genid64 a rdf:List ;
 	rdf:first :HRDept ;
-	rdf:rest _:genid18 .
+	rdf:rest _:genid63 .
 
-_:genid18 a rdf:List ;
+_:genid63 a rdf:List ;
 	rdf:first :ITDept ;
-	rdf:rest _:genid17 .
+	rdf:rest _:genid62 .
 
-_:genid17 a rdf:List ;
+_:genid62 a rdf:List ;
 	rdf:first :RIM ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid34 a owl:AllDisjointClasses ;
-	owl:members _:genid48 .
+_:genid79 a owl:AllDisjointClasses ;
+	owl:members _:genid93 .
 
-_:genid48 a rdf:List ;
+_:genid93 a rdf:List ;
 	rdf:first igso-ddy:ACL ;
-	rdf:rest _:genid47 .
+	rdf:rest _:genid92 .
 
-_:genid47 a rdf:List ;
+_:genid92 a rdf:List ;
 	rdf:first igso-ddy:AWS ;
-	rdf:rest _:genid46 .
+	rdf:rest _:genid91 .
 
-_:genid46 a rdf:List ;
+_:genid91 a rdf:List ;
 	rdf:first igso-ddy:Azure ;
-	rdf:rest _:genid45 .
+	rdf:rest _:genid90 .
 
-_:genid45 a rdf:List ;
+_:genid90 a rdf:List ;
 	rdf:first igso-ddy:CCS ;
-	rdf:rest _:genid44 .
+	rdf:rest _:genid89 .
 
-_:genid44 a rdf:List ;
+_:genid89 a rdf:List ;
 	rdf:first igso-ddy:DPO ;
-	rdf:rest _:genid43 .
+	rdf:rest _:genid88 .
 
-_:genid43 a rdf:List ;
+_:genid88 a rdf:List ;
 	rdf:first igso-ddy:ECS ;
-	rdf:rest _:genid42 .
+	rdf:rest _:genid87 .
 
-_:genid42 a rdf:List ;
+_:genid87 a rdf:List ;
 	rdf:first igso-ddy:GCP ;
-	rdf:rest _:genid41 .
+	rdf:rest _:genid86 .
 
-_:genid41 a rdf:List ;
+_:genid86 a rdf:List ;
 	rdf:first igso-ddy:IAS ;
-	rdf:rest _:genid40 .
+	rdf:rest _:genid85 .
 
-_:genid40 a rdf:List ;
+_:genid85 a rdf:List ;
 	rdf:first igso-ddy:IRS ;
-	rdf:rest _:genid39 .
+	rdf:rest _:genid84 .
 
-_:genid39 a rdf:List ;
+_:genid84 a rdf:List ;
 	rdf:first igso-ddy:OU ;
-	rdf:rest _:genid38 .
+	rdf:rest _:genid83 .
 
-_:genid38 a rdf:List ;
+_:genid83 a rdf:List ;
 	rdf:first igso-ddy:RedHatCloud ;
-	rdf:rest _:genid37 .
+	rdf:rest _:genid82 .
 
-_:genid37 a rdf:List ;
+_:genid82 a rdf:List ;
 	rdf:first :HRDept ;
-	rdf:rest _:genid36 .
+	rdf:rest _:genid81 .
 
-_:genid36 a rdf:List ;
+_:genid81 a rdf:List ;
 	rdf:first :ITDept ;
-	rdf:rest _:genid35 .
+	rdf:rest _:genid80 .
 
-_:genid35 a rdf:List ;
+_:genid80 a rdf:List ;
 	rdf:first :RIM ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid49 a owl:AllDisjointClasses ;
-	owl:members _:genid54 .
+_:genid94 a owl:AllDisjointClasses ;
+	owl:members _:genid99 .
 
-_:genid54 a rdf:List ;
+_:genid99 a rdf:List ;
 	rdf:first :Action ;
-	rdf:rest _:genid53 .
+	rdf:rest _:genid98 .
 
-_:genid53 a rdf:List ;
+_:genid98 a rdf:List ;
 	rdf:first :AssessmentEvent ;
-	rdf:rest _:genid52 .
+	rdf:rest _:genid97 .
 
-_:genid52 a rdf:List ;
+_:genid97 a rdf:List ;
 	rdf:first :LifecycleOccurrence ;
-	rdf:rest _:genid51 .
+	rdf:rest _:genid96 .
 
-_:genid51 a rdf:List ;
+_:genid96 a rdf:List ;
 	rdf:first :Request ;
-	rdf:rest _:genid50 .
+	rdf:rest _:genid95 .
 
-_:genid50 a rdf:List ;
+_:genid95 a rdf:List ;
 	rdf:first :TriggeringEvent ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid55 a owl:AllDisjointClasses ;
-	owl:members _:genid58 .
+_:genid100 a owl:AllDisjointClasses ;
+	owl:members _:genid103 .
 
-_:genid58 a rdf:List ;
+_:genid103 a rdf:List ;
 	rdf:first :BusinessObjective ;
-	rdf:rest _:genid57 .
+	rdf:rest _:genid102 .
 
-_:genid57 a rdf:List ;
+_:genid102 a rdf:List ;
 	rdf:first :ComplianceObjective ;
-	rdf:rest _:genid56 .
+	rdf:rest _:genid101 .
 
-_:genid56 a rdf:List ;
+_:genid101 a rdf:List ;
 	rdf:first :GovernanceObjective ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid59 a owl:AllDisjointClasses ;
-	owl:members _:genid66 .
+_:genid104 a owl:AllDisjointClasses ;
+	owl:members _:genid111 .
 
-_:genid66 a rdf:List ;
+_:genid111 a rdf:List ;
 	rdf:first :ChiefComplianceOfficer ;
-	rdf:rest _:genid65 .
+	rdf:rest _:genid110 .
 
-_:genid65 a rdf:List ;
+_:genid110 a rdf:List ;
 	rdf:first :ChiefExecutiveOfficer ;
-	rdf:rest _:genid64 .
+	rdf:rest _:genid109 .
 
-_:genid64 a rdf:List ;
+_:genid109 a rdf:List ;
 	rdf:first :ChiefInformationAndSecurityOfficer ;
-	rdf:rest _:genid63 .
+	rdf:rest _:genid108 .
 
-_:genid63 a rdf:List ;
+_:genid108 a rdf:List ;
 	rdf:first :DataProcessor ;
-	rdf:rest _:genid62 .
+	rdf:rest _:genid107 .
 
-_:genid62 a rdf:List ;
+_:genid107 a rdf:List ;
 	rdf:first :DataProtectionAuthority ;
-	rdf:rest _:genid61 .
+	rdf:rest _:genid106 .
 
-_:genid61 a rdf:List ;
+_:genid106 a rdf:List ;
 	rdf:first :DataProtectionOficer ;
-	rdf:rest _:genid60 .
+	rdf:rest _:genid105 .
 
-_:genid60 a rdf:List ;
+_:genid105 a rdf:List ;
 	rdf:first :SupervisoryAuthority ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid112 a owl:AllDisjointClasses ;
+	owl:members _:genid116 .
+
+_:genid116 a rdf:List ;
+	rdf:first :LargeCompany ;
+	rdf:rest _:genid115 .
+
+_:genid115 a rdf:List ;
+	rdf:first :MediumCompany ;
+	rdf:rest _:genid114 .
+
+_:genid114 a rdf:List ;
+	rdf:first :MicroCompany ;
+	rdf:rest _:genid113 .
+
+_:genid113 a rdf:List ;
+	rdf:first :SmallCompany ;
 	rdf:rest rdf:nil .
 # 
 # Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

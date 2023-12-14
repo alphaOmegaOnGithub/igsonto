@@ -34,15 +34,45 @@
 <http://www.example.org/cm/igso/2023/igso-arc#> a owl:Ontology ;
 	owl:imports <http://www.example.org/cm/igso/2023/igso-req#> ;
 	dct:created "2010-05-28"^^xsd:date ;
-	dct:creator _:genid1 .
-
-_:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-<http://www.example.org/cm/igso/2023/igso-arc#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:label "Core igso organization ontology"@en ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
 	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
 	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681
+
+:OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681 a owl:ObjectProperty ;
+	rdfs:label "requires"@de .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#OWLObjectProperty_a26eb4f7_bb60_46a8_8c5e_d55b6f209d04
+
+:OWLObjectProperty_a26eb4f7_bb60_46a8_8c5e_d55b6f209d04 a owl:ObjectProperty ;
+	rdfs:label "referencesContentObject"@de .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#OWLObjectProperty_cf970533_ded1_4251_a1c8_ea1b0df69b6c
+
+:OWLObjectProperty_cf970533_ded1_4251_a1c8_ea1b0df69b6c a owl:ObjectProperty ;
+	rdfs:subPropertyOf :OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681 ;
+	rdfs:domain dcat:Dataset ;
+	rdfs:range igso-data:Database ;
+	rdfs:label "requiresDatabase"@de .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#provides
+
+igso-ddy:provides rdfs:subPropertyOf :OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681 .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
+
+igso-ddy:requiresCompliaenceWith rdfs:subPropertyOf :OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681 .
+# 
 # 
 # 
 # #################################################################
@@ -52,10 +82,16 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # #################################################################
 # 
 # 
-# http://www.example.org/cm/igso/2023/igso-Arc#Catalog
+# http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent
 
-<http://www.example.org/cm/igso/2023/igso-Arc#Catalog> a owl:Class ;
-	rdfs:subClassOf :DesignComponent .
+<http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> a owl:Class ;
+	rdfs:subClassOf :DesignComponent , dcat:Catalog , _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :OWLObjectProperty_1237cd5c_36b7_4d42_ad94_e9e5f4551681 ;
+	owl:someValuesFrom igso-data:Database .
+
+<http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> rdfs:label "CatalogComponent" .
 # 
 # http://www.example.org/cm/igso/2023/igso-arc#AccessMethod
 
@@ -87,6 +123,12 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 :AuditMethod a owl:Class ;
 	rdfs:subClassOf :Method .
 # 
+# http://www.example.org/cm/igso/2023/igso-arc#BusinessObject
+
+:BusinessObject a owl:Class ;
+	rdfs:subClassOf igso-data:ObjectType ;
+	rdfs:label "BusinessObject"@de .
+# 
 # http://www.example.org/cm/igso/2023/igso-arc#ClassificationComponent
 
 :ClassificationComponent a owl:Class ;
@@ -105,12 +147,33 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # http://www.example.org/cm/igso/2023/igso-arc#ContentCatalog
 
 :ContentCatalog a owl:Class ;
-	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#Catalog> .
-# 
-# http://www.example.org/cm/igso/2023/igso-arc#ContentManagement
+	owl:equivalentClass _:genid3 .
 
-:ContentManagement a owl:Class ;
-	rdfs:subClassOf :DesignComponent .
+_:genid3 owl:intersectionOf _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first _:genid5 .
+
+_:genid5 a owl:Restriction ;
+	owl:onProperty :OWLObjectProperty_cf970533_ded1_4251_a1c8_ea1b0df69b6c ;
+	owl:allValuesFrom :RelationalDatabase .
+
+_:genid4 rdf:rest rdf:nil .
+
+_:genid3 a owl:Class .
+
+:ContentCatalog rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "ContentCatalog" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentManagementComponent
+
+:ContentManagementComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent ;
+	rdfs:label "ContentManagementComponent" .
 # 
 # http://www.example.org/cm/igso/2023/igso-arc#ContentManagmentPortal
 
@@ -120,29 +183,30 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # http://www.example.org/cm/igso/2023/igso-arc#ContentObjectCatalog
 
 :ContentObjectCatalog a owl:Class ;
-	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#Catalog> .
+	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "ContentObjectCatalog" .
 # 
 # http://www.example.org/cm/igso/2023/igso-arc#ContentRepositorySolution
 
 :ContentRepositorySolution a owl:Class ;
-	owl:equivalentClass _:genid2 .
+	owl:equivalentClass _:genid7 .
 
-_:genid2 owl:intersectionOf _:genid5 .
+_:genid7 owl:intersectionOf _:genid10 .
 
-_:genid5 a rdf:List ;
+_:genid10 a rdf:List ;
 	rdf:first :ContentRepositorySolution ;
-	rdf:rest _:genid3 .
+	rdf:rest _:genid8 .
 
-_:genid3 a rdf:List ;
-	rdf:first _:genid4 .
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
 
-_:genid4 a owl:Restriction ;
+_:genid9 a owl:Restriction ;
 	owl:onProperty igso-ddy:includes ;
 	owl:someValuesFrom :ArchiveSolution .
 
-_:genid3 rdf:rest rdf:nil .
+_:genid8 rdf:rest rdf:nil .
 
-_:genid2 a owl:Class .
+_:genid7 a owl:Class .
 
 :ContentRepositorySolution rdfs:subClassOf :Solution ;
 	rdfs:label "ContentRepositorySolution" ;
@@ -218,24 +282,24 @@ _:genid2 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-arc#ECMSolution
 
 :ECMSolution a owl:Class ;
-	rdfs:subClassOf :Solution , _:genid6 .
+	rdfs:subClassOf :Solution , _:genid11 .
 
-_:genid6 owl:intersectionOf _:genid9 .
+_:genid11 owl:intersectionOf _:genid14 .
 
-_:genid9 a rdf:List ;
+_:genid14 a rdf:List ;
 	rdf:first :ECMSolution ;
-	rdf:rest _:genid7 .
+	rdf:rest _:genid12 .
 
-_:genid7 a rdf:List ;
-	rdf:first _:genid8 .
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
 
-_:genid8 a owl:Restriction ;
+_:genid13 a owl:Restriction ;
 	owl:onProperty igso-ddy:includes ;
 	owl:someValuesFrom :ContentRepositorySolution .
 
-_:genid7 rdf:rest rdf:nil .
+_:genid12 rdf:rest rdf:nil .
 
-_:genid6 a owl:Class .
+_:genid11 a owl:Class .
 
 :ECMSolution rdfs:label "ECMSolution" ;
 	skos:altLabel "Enterprise Content Management Solution (ECMS)" .
@@ -295,32 +359,32 @@ _:genid6 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution
 
 :InformationGovernanceSolution a owl:Class ;
-	rdfs:subClassOf :Solution , _:genid10 .
+	rdfs:subClassOf :Solution , _:genid15 .
 
-_:genid10 owl:intersectionOf _:genid15 .
+_:genid15 owl:intersectionOf _:genid20 .
 
-_:genid15 a rdf:List ;
+_:genid20 a rdf:List ;
 	rdf:first :InformationRetrievalSolution ;
-	rdf:rest _:genid14 .
+	rdf:rest _:genid19 .
 
-_:genid14 a rdf:List ;
+_:genid19 a rdf:List ;
 	rdf:first :RIMSolution ;
-	rdf:rest _:genid13 .
+	rdf:rest _:genid18 .
 
-_:genid13 a rdf:List ;
+_:genid18 a rdf:List ;
 	rdf:first :eDiscoverySolution ;
-	rdf:rest _:genid11 .
+	rdf:rest _:genid16 .
 
-_:genid11 a rdf:List ;
-	rdf:first _:genid12 .
+_:genid16 a rdf:List ;
+	rdf:first _:genid17 .
 
-_:genid12 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty igso-ddy:includes ;
 	owl:someValuesFrom :ContentRepositorySolution .
 
-_:genid11 rdf:rest rdf:nil .
+_:genid16 rdf:rest rdf:nil .
 
-_:genid10 a owl:Class .
+_:genid15 a owl:Class .
 
 :InformationGovernanceSolution rdfs:label "InformationGovernanceSolution" .
 # 
@@ -504,10 +568,14 @@ _:genid10 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
 
 igso-data:RecordsCatalog a owl:Class ;
-	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#Catalog> .
+	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "RecordsCatalog" .
 # 
 
-_:genid16 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid21 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid22 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -519,234 +587,234 @@ _:genid16 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # 
 # 
 
-_:genid17 a owl:AllDisjointClasses ;
-	owl:members _:genid39 .
+_:genid23 a owl:AllDisjointClasses ;
+	owl:members _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :AccessMethod ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :AdministerMethod ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first :ArchiveMethod ;
+	rdf:rest _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first :AuditMethod ;
+	rdf:rest _:genid41 .
+
+_:genid41 a rdf:List ;
+	rdf:first :ClassifyMethod ;
+	rdf:rest _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first :CollectMethod ;
+	rdf:rest _:genid39 .
 
 _:genid39 a rdf:List ;
-	rdf:first :AccessMethod ;
+	rdf:first :ControlMethod ;
 	rdf:rest _:genid38 .
 
 _:genid38 a rdf:List ;
-	rdf:first :AdministerMethod ;
+	rdf:first :DisposeMethod ;
 	rdf:rest _:genid37 .
 
 _:genid37 a rdf:List ;
-	rdf:first :ArchiveMethod ;
+	rdf:first :HoldMethod ;
 	rdf:rest _:genid36 .
 
 _:genid36 a rdf:List ;
-	rdf:first :AuditMethod ;
+	rdf:first :LoadMethod ;
 	rdf:rest _:genid35 .
 
 _:genid35 a rdf:List ;
-	rdf:first :ClassifyMethod ;
+	rdf:first :ManageMethod ;
 	rdf:rest _:genid34 .
 
 _:genid34 a rdf:List ;
-	rdf:first :CollectMethod ;
+	rdf:first :PrivacyMethod ;
 	rdf:rest _:genid33 .
 
 _:genid33 a rdf:List ;
-	rdf:first :ControlMethod ;
+	rdf:first :ProtectMethod ;
 	rdf:rest _:genid32 .
 
 _:genid32 a rdf:List ;
-	rdf:first :DisposeMethod ;
+	rdf:first :QueryMethod ;
 	rdf:rest _:genid31 .
 
 _:genid31 a rdf:List ;
-	rdf:first :HoldMethod ;
+	rdf:first :RecordMethod ;
 	rdf:rest _:genid30 .
 
 _:genid30 a rdf:List ;
-	rdf:first :LoadMethod ;
+	rdf:first :RetainMethod ;
 	rdf:rest _:genid29 .
 
 _:genid29 a rdf:List ;
-	rdf:first :ManageMethod ;
+	rdf:first :SearchMethod ;
 	rdf:rest _:genid28 .
 
 _:genid28 a rdf:List ;
-	rdf:first :PrivacyMethod ;
+	rdf:first :SecureMethod ;
 	rdf:rest _:genid27 .
 
 _:genid27 a rdf:List ;
-	rdf:first :ProtectMethod ;
+	rdf:first :StoreMethod ;
 	rdf:rest _:genid26 .
 
 _:genid26 a rdf:List ;
-	rdf:first :QueryMethod ;
+	rdf:first :TransferMethod ;
 	rdf:rest _:genid25 .
 
 _:genid25 a rdf:List ;
-	rdf:first :RecordMethod ;
+	rdf:first :TwoPhaseCommitFunctionMethod ;
 	rdf:rest _:genid24 .
 
 _:genid24 a rdf:List ;
-	rdf:first :RetainMethod ;
-	rdf:rest _:genid23 .
-
-_:genid23 a rdf:List ;
-	rdf:first :SearchMethod ;
-	rdf:rest _:genid22 .
-
-_:genid22 a rdf:List ;
-	rdf:first :SecureMethod ;
-	rdf:rest _:genid21 .
-
-_:genid21 a rdf:List ;
-	rdf:first :StoreMethod ;
-	rdf:rest _:genid20 .
-
-_:genid20 a rdf:List ;
-	rdf:first :TransferMethod ;
-	rdf:rest _:genid19 .
-
-_:genid19 a rdf:List ;
-	rdf:first :TwoPhaseCommitFunctionMethod ;
-	rdf:rest _:genid18 .
-
-_:genid18 a rdf:List ;
 	rdf:first :eDiscoverMethod ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid40 a owl:AllDisjointClasses ;
-	owl:members _:genid45 .
+_:genid46 a owl:AllDisjointClasses ;
+	owl:members _:genid51 .
 
-_:genid45 a rdf:List ;
+_:genid51 a rdf:List ;
 	rdf:first :ArchiveSolution ;
-	rdf:rest _:genid44 .
+	rdf:rest _:genid50 .
 
-_:genid44 a rdf:List ;
+_:genid50 a rdf:List ;
 	rdf:first :ECMSolution ;
-	rdf:rest _:genid43 .
+	rdf:rest _:genid49 .
 
-_:genid43 a rdf:List ;
+_:genid49 a rdf:List ;
 	rdf:first :InformationGovernanceSolution ;
-	rdf:rest _:genid42 .
+	rdf:rest _:genid48 .
 
-_:genid42 a rdf:List ;
+_:genid48 a rdf:List ;
 	rdf:first :RIMSolution ;
-	rdf:rest _:genid41 .
+	rdf:rest _:genid47 .
 
-_:genid41 a rdf:List ;
+_:genid47 a rdf:List ;
 	rdf:first :eDiscoverySolution ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid46 a owl:AllDisjointClasses ;
-	owl:members _:genid49 .
+_:genid52 a owl:AllDisjointClasses ;
+	owl:members _:genid55 .
 
-_:genid49 a rdf:List ;
+_:genid55 a rdf:List ;
 	rdf:first :ContentCatalog ;
-	rdf:rest _:genid48 .
+	rdf:rest _:genid54 .
 
-_:genid48 a rdf:List ;
+_:genid54 a rdf:List ;
 	rdf:first :ContentObjectCatalog ;
-	rdf:rest _:genid47 .
+	rdf:rest _:genid53 .
 
-_:genid47 a rdf:List ;
+_:genid53 a rdf:List ;
 	rdf:first igso-data:RecordsCatalog ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid50 a owl:AllDisjointClasses ;
-	owl:members _:genid58 .
+_:genid56 a owl:AllDisjointClasses ;
+	owl:members _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first :ContentManagementComponent ;
+	rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first :ContentManagmentPortal ;
+	rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :EndUserPortal ;
+	rdf:rest _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :FulltextServer ;
+	rdf:rest _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first :GovernancePortal ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :InformationManagement ;
+	rdf:rest _:genid58 .
 
 _:genid58 a rdf:List ;
-	rdf:first :ContentManagement ;
+	rdf:first :RIM ;
 	rdf:rest _:genid57 .
 
 _:genid57 a rdf:List ;
-	rdf:first :ContentManagmentPortal ;
-	rdf:rest _:genid56 .
-
-_:genid56 a rdf:List ;
-	rdf:first :EndUserPortal ;
-	rdf:rest _:genid55 .
-
-_:genid55 a rdf:List ;
-	rdf:first :FulltextServer ;
-	rdf:rest _:genid54 .
-
-_:genid54 a rdf:List ;
-	rdf:first :GovernancePortal ;
-	rdf:rest _:genid53 .
-
-_:genid53 a rdf:List ;
-	rdf:first :InformationManagement ;
-	rdf:rest _:genid52 .
-
-_:genid52 a rdf:List ;
-	rdf:first :RIM ;
-	rdf:rest _:genid51 .
-
-_:genid51 a rdf:List ;
 	rdf:first :RelationalDatabase ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid59 a owl:AllDisjointClasses ;
-	owl:members _:genid65 .
+_:genid65 a owl:AllDisjointClasses ;
+	owl:members _:genid71 .
 
-_:genid65 a rdf:List ;
+_:genid71 a rdf:List ;
 	rdf:first :DataArchitectureManagement ;
-	rdf:rest _:genid64 .
+	rdf:rest _:genid70 .
 
-_:genid64 a rdf:List ;
+_:genid70 a rdf:List ;
 	rdf:first :DataQuality ;
-	rdf:rest _:genid63 .
+	rdf:rest _:genid69 .
 
-_:genid63 a rdf:List ;
+_:genid69 a rdf:List ;
 	rdf:first :DesignComponent ;
-	rdf:rest _:genid62 .
+	rdf:rest _:genid68 .
 
-_:genid62 a rdf:List ;
+_:genid68 a rdf:List ;
 	rdf:first :Lifecycle ;
-	rdf:rest _:genid61 .
+	rdf:rest _:genid67 .
 
-_:genid61 a rdf:List ;
+_:genid67 a rdf:List ;
 	rdf:first :SoftwareDesignPattern ;
-	rdf:rest _:genid60 .
+	rdf:rest _:genid66 .
 
-_:genid60 a rdf:List ;
+_:genid66 a rdf:List ;
 	rdf:first :Solution ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid66 a owl:AllDisjointClasses ;
-	owl:members _:genid74 .
+_:genid72 a owl:AllDisjointClasses ;
+	owl:members _:genid80 .
+
+_:genid80 a rdf:List ;
+	rdf:first :DataQualityAwerness ;
+	rdf:rest _:genid79 .
+
+_:genid79 a rdf:List ;
+	rdf:first :DataQualityBusinessRule ;
+	rdf:rest _:genid78 .
+
+_:genid78 a rdf:List ;
+	rdf:first :DataQualityDefect ;
+	rdf:rest _:genid77 .
+
+_:genid77 a rdf:List ;
+	rdf:first :DataQualityManagement ;
+	rdf:rest _:genid76 .
+
+_:genid76 a rdf:List ;
+	rdf:first :DataQualityMetrc ;
+	rdf:rest _:genid75 .
+
+_:genid75 a rdf:List ;
+	rdf:first :DataQualityPerformance ;
+	rdf:rest _:genid74 .
 
 _:genid74 a rdf:List ;
-	rdf:first :DataQualityAwerness ;
+	rdf:first :DataQualityServiceLevel ;
 	rdf:rest _:genid73 .
 
 _:genid73 a rdf:List ;
-	rdf:first :DataQualityBusinessRule ;
-	rdf:rest _:genid72 .
-
-_:genid72 a rdf:List ;
-	rdf:first :DataQualityDefect ;
-	rdf:rest _:genid71 .
-
-_:genid71 a rdf:List ;
-	rdf:first :DataQualityManagement ;
-	rdf:rest _:genid70 .
-
-_:genid70 a rdf:List ;
-	rdf:first :DataQualityMetrc ;
-	rdf:rest _:genid69 .
-
-_:genid69 a rdf:List ;
-	rdf:first :DataQualityPerformance ;
-	rdf:rest _:genid68 .
-
-_:genid68 a rdf:List ;
-	rdf:first :DataQualityServiceLevel ;
-	rdf:rest _:genid67 .
-
-_:genid67 a rdf:List ;
 	rdf:first :OperationalDataQualityProcedure ;
 	rdf:rest rdf:nil .
 # 

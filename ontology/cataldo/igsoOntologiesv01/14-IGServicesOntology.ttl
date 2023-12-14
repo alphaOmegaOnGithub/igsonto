@@ -40,8 +40,7 @@
                                                               foaf:name "Cataldo Mega"
                                                             ] ;
                                                 dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-                                                rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
-                                                owl:versionInfo "0.8" .
+                                                rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 
 #################################################################
 #    Annotation properties
@@ -399,87 +398,6 @@ igso-jur:ddy:EU rdf:type owl:Class ;
                 rdfs:subClassOf igso-ddy:DataDictionary .
 
 
-###  http://www.example.org/cm/igso/2023/igso-org#Company
-igso-org:Company rdf:type owl:Class ;
-                 rdfs:subClassOf igso-org:FormalOrganization ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty igso-jur:isRegulatedBy ;
-                                   owl:someValuesFrom igso-jur:Regulation
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasNumberOfEmployees ;
-                                   owl:someValuesFrom xsd:integer
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :isRegulated ;
-                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                   owl:onDataRange xsd:boolean
-                                 ] .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#LargeCompany
-igso-org:LargeCompany rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasNumberOfEmployees ;
-                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                        owl:onDatatype xsd:integer ;
-                                                                                        owl:withRestrictions ( [ xsd:minInclusive 250
-                                                                                                               ]
-                                                                                                             )
-                                                                                      ]
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf igso-org:Company .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#MediumCompany
-igso-org:MediumCompany rdf:type owl:Class ;
-                       owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
-                                                                  [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty :hasNumberOfEmployees ;
-                                                                    owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                         owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                                owl:onDatatype xsd:integer ;
-                                                                                                                owl:withRestrictions ( [ xsd:minExclusive 5
-                                                                                                                                       ]
-                                                                                                                                     )
-                                                                                                              ]
-                                                                                                              [ rdf:type rdfs:Datatype ;
-                                                                                                                owl:onDatatype xsd:integer ;
-                                                                                                                owl:withRestrictions ( [ xsd:maxInclusive 250
-                                                                                                                                       ]
-                                                                                                                                     )
-                                                                                                              ]
-                                                                                                            )
-                                                                                       ]
-                                                                  ]
-                                                                ) ;
-                                             rdf:type owl:Class
-                                           ] ;
-                       rdfs:subClassOf igso-org:Company .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#MicroCompany
-igso-org:MicroCompany rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasNumberOfEmployees ;
-                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                        owl:onDatatype xsd:integer ;
-                                                                                        owl:withRestrictions ( [ xsd:maxInclusive 5
-                                                                                                               ]
-                                                                                                             )
-                                                                                      ]
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf igso-org:Company .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-org#Occurrence
 igso-org:Occurrence rdfs:subClassOf igso-org:OrganizationDomain .
 
@@ -526,33 +444,6 @@ igso-org:Person owl:equivalentClass [ owl:intersectionOf ( igso-org:Person
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Program
 igso-org:Program rdfs:subClassOf igso-org:OrganizationDomain .
-
-
-###  http://www.example.org/cm/igso/2023/igso-org#SmallCompany
-igso-org:SmallCompany rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( igso-org:Company
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasNumberOfEmployees ;
-                                                                   owl:someValuesFrom [ rdf:type rdfs:Datatype ;
-                                                                                        owl:intersectionOf ( [ rdf:type rdfs:Datatype ;
-                                                                                                               owl:onDatatype xsd:integer ;
-                                                                                                               owl:withRestrictions ( [ xsd:minExclusive 5
-                                                                                                                                      ]
-                                                                                                                                    )
-                                                                                                             ]
-                                                                                                             [ rdf:type rdfs:Datatype ;
-                                                                                                               owl:onDatatype xsd:integer ;
-                                                                                                               owl:withRestrictions ( [ xsd:maxInclusive 100
-                                                                                                                                      ]
-                                                                                                                                    )
-                                                                                                             ]
-                                                                                                           )
-                                                                                      ]
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf igso-org:Company .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#prov:Role
@@ -747,6 +638,10 @@ igso-org:SmallCompany rdf:type owl:NamedIndividual ,
    foaf:name "Cataldo Mega"
  ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
@@ -756,19 +651,6 @@ igso-arc:ECMSolution skos:altLabel "Enterprise Content Management Solution (ECM 
 
 igso-jur:Jurisdiction cmns-av:adaptedFrom <https://www.law.cornell.edu/wex/jurisdiction> ;
                       rdfs:label "Jurisdiction" .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( igso-org:LargeCompany
-                igso-org:MediumCompany
-                igso-org:MicroCompany
-                igso-org:SmallCompany
-              )
-] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
