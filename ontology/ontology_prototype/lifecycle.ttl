@@ -4,7 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix lifecycle: <http://www.semanticweb.org/igonto/lifecycle> .
+@prefix lifecycle: <http://www.semanticweb.org/igonto/lifecycle#> .
 @base <http://www.semanticweb.org/igonto/lifecycle> .
 
 <http://www.semanticweb.org/igonto/lifecycle> rdf:type owl:Ontology .
@@ -14,7 +14,7 @@
 #################################################################
 
 ###  http://www.semanticweb.org/igonto/lifecycle#classDescription
-:classDescription rdf:type owl:AnnotationProperty .
+lifecycle:classDescription rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -22,72 +22,72 @@
 #################################################################
 
 ###  http://www.semanticweb.org/igonto/lifecycle#createdBy
-:createdBy rdf:type owl:ObjectProperty .
+lifecycle:createdBy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#createdByProcess
-:createdByProcess rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :createdBy ;
-                  owl:inverseOf :createsStatistic ;
-                  rdfs:domain :Statistic ;
-                  rdfs:range :Process .
+lifecycle:createdByProcess rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf lifecycle:createdBy ;
+                           owl:inverseOf lifecycle:createsStatistic ;
+                           rdfs:domain lifecycle:Statistic ;
+                           rdfs:range lifecycle:Process .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#creates
-:creates rdf:type owl:ObjectProperty .
+lifecycle:creates rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#createsStatistic
-:createsStatistic rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :creates ;
-                  rdfs:domain :Process ;
-                  rdfs:range :Statistic .
+lifecycle:createsStatistic rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf lifecycle:creates ;
+                           rdfs:domain lifecycle:Process ;
+                           rdfs:range lifecycle:Statistic .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#drivenBy
-:drivenBy rdf:type owl:ObjectProperty .
+lifecycle:drivenBy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#drivenByData
-:drivenByData rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf :drivenBy ;
-              owl:inverseOf :drivesRecordLifecycle ;
-              rdfs:domain :Record_Lifecycle ;
-              rdfs:range :Data .
+lifecycle:drivenByData rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf lifecycle:drivenBy ;
+                       owl:inverseOf lifecycle:drivesRecordLifecycle ;
+                       rdfs:domain lifecycle:Record_Lifecycle ;
+                       rdfs:range lifecycle:Data .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#drives
-:drives rdf:type owl:ObjectProperty .
+lifecycle:drives rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#drivesRecordLifecycle
-:drivesRecordLifecycle rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf :drives ;
-                       rdfs:domain :Data ;
-                       rdfs:range :Record_Lifecycle .
+lifecycle:drivesRecordLifecycle rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf lifecycle:drives ;
+                                rdfs:domain lifecycle:Data ;
+                                rdfs:range lifecycle:Record_Lifecycle .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#producedBy
-:producedBy rdf:type owl:ObjectProperty .
+lifecycle:producedBy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#producedByStatistic
-:producedByStatistic rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :producedBy ;
-                     owl:inverseOf :producesReporting ;
-                     rdfs:domain :Reporting ;
-                     rdfs:range :Statistic .
+lifecycle:producedByStatistic rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf lifecycle:producedBy ;
+                              owl:inverseOf lifecycle:producesReporting ;
+                              rdfs:domain lifecycle:Reporting ;
+                              rdfs:range lifecycle:Statistic .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#produces
-:produces rdf:type owl:ObjectProperty .
+lifecycle:produces rdf:type owl:ObjectProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#producesReporting
-:producesReporting rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :produces ;
-                   rdfs:domain :Statistic ;
-                   rdfs:range :Reporting .
+lifecycle:producesReporting rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf lifecycle:produces ;
+                            rdfs:domain lifecycle:Statistic ;
+                            rdfs:range lifecycle:Reporting .
 
 
 #################################################################
@@ -95,23 +95,23 @@
 #################################################################
 
 ###  http://www.semanticweb.org/igonto/lifecycle#description
-:description rdf:type owl:DatatypeProperty .
+lifecycle:description rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#endDate
-:endDate rdf:type owl:DatatypeProperty .
+lifecycle:endDate rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#name
-:name rdf:type owl:DatatypeProperty .
+lifecycle:name rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#scope
-:scope rdf:type owl:DatatypeProperty .
+lifecycle:scope rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#startDate
-:startDate rdf:type owl:DatatypeProperty .
+lifecycle:startDate rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -119,197 +119,205 @@
 #################################################################
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Access
-:Access rdf:type owl:Class ;
-        rdfs:subClassOf :Service ;
-        :classDescription "Represents service offerings that enable controlled access to records during their lifecycle." ;
-        rdfs:label "Access" .
+lifecycle:Access rdf:type owl:Class ;
+                 rdfs:subClassOf lifecycle:Service ;
+                 lifecycle:classDescription "Represents service offerings that enable controlled access to records during their lifecycle." ;
+                 rdfs:label "Access" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Archive
-:Archive rdf:type owl:Class ;
-         rdfs:subClassOf :Process ;
-         :classDescription "Represents the systematic storage and preservation of records." ;
-         rdfs:label "Archive" .
+lifecycle:Archive rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Process ;
+                  lifecycle:classDescription "Represents the systematic storage and preservation of records." ;
+                  rdfs:label "Archive" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Classify
-:Classify rdf:type owl:Class ;
-          rdfs:subClassOf :Process ;
-          :classDescription "Represents the structured organization and classification of records withing their lifecycle." ;
-          rdfs:label "Classify" .
+lifecycle:Classify rdf:type owl:Class ;
+                   rdfs:subClassOf lifecycle:Process ;
+                   lifecycle:classDescription "Represents the structured organization and classification of records withing their lifecycle." ;
+                   rdfs:label "Classify" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Data
-:Data rdf:type owl:Class ;
-      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :drivesRecordLifecycle ;
-                        owl:someValuesFrom :Record_Lifecycle
-                      ] ;
-      :classDescription "Concept of Data serving as a foundational element for the Record Lifecycle." ;
-      rdfs:label "Data" .
+lifecycle:Data rdf:type owl:Class ;
+               rdfs:subClassOf lifecycle:IgontoTopLifecycleDomain ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty lifecycle:drivesRecordLifecycle ;
+                                 owl:someValuesFrom lifecycle:Record_Lifecycle
+                               ] ;
+               lifecycle:classDescription "Concept of Data serving as a foundational element for the Record Lifecycle." ;
+               rdfs:label "Data" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Find
-:Find rdf:type owl:Class ;
-      rdfs:subClassOf :Service ;
-      :classDescription "Represent service offering to find and search records during their lifecycle." ;
-      rdfs:label "Find" .
+lifecycle:Find rdf:type owl:Class ;
+               rdfs:subClassOf lifecycle:Service ;
+               lifecycle:classDescription "Represent service offering to find and search records during their lifecycle." ;
+               rdfs:label "Find" .
+
+
+###  http://www.semanticweb.org/igonto/lifecycle#IgontoTopLifecycleDomain
+lifecycle:IgontoTopLifecycleDomain rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Index
-:Index rdf:type owl:Class ;
-       rdfs:subClassOf :Process ;
-       :classDescription "Represents the creation of reference points to records with relevant attributes." ;
-       rdfs:label "Index" .
+lifecycle:Index rdf:type owl:Class ;
+                rdfs:subClassOf lifecycle:Process ;
+                lifecycle:classDescription "Represents the creation of reference points to records with relevant attributes." ;
+                rdfs:label "Index" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Measure
-:Measure rdf:type owl:Class ;
-         rdfs:subClassOf :Process ;
-         :classDescription "Represents the evaluation of process effectiveness, efficiency and compliance to provide possible insights of contionous improvements." ;
-         rdfs:label "Measure" .
+lifecycle:Measure rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Process ;
+                  lifecycle:classDescription "Represents the evaluation of process effectiveness, efficiency and compliance to provide possible insights of contionous improvements." ;
+                  rdfs:label "Measure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Metric
-:Metric rdf:type owl:Class ;
-        rdfs:subClassOf :Process ;
-        :classDescription "Represents metrics to be able to measure the effectiveness of processes." ;
-        rdfs:label "Metric" .
+lifecycle:Metric rdf:type owl:Class ;
+                 rdfs:subClassOf lifecycle:Process ;
+                 lifecycle:classDescription "Represents metrics to be able to measure the effectiveness of processes." ;
+                 rdfs:label "Metric" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Monitor
-:Monitor rdf:type owl:Class ;
-         rdfs:subClassOf :Process ;
-         :classDescription "Describs the systematic process of surveillance of record activites within their lifecycle." ;
-         rdfs:label "Monitor" .
+lifecycle:Monitor rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Process ;
+                  lifecycle:classDescription "Describs the systematic process of surveillance of record activites within their lifecycle." ;
+                  rdfs:label "Monitor" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Process
-:Process rdf:type owl:Class ;
-         rdfs:subClassOf :Record_Lifecycle ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :createsStatistic ;
-                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                           owl:onClass :Statistic
-                         ] ;
-         :classDescription "Represents different workflows and procedures to manage records thorughout their lifecycle." ;
-         rdfs:label "Process" .
+lifecycle:Process rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Record_Lifecycle ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty lifecycle:createsStatistic ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass lifecycle:Statistic
+                                  ] ;
+                  lifecycle:classDescription "Represents different workflows and procedures to manage records thorughout their lifecycle." ;
+                  rdfs:label "Process" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Record_Lifecycle
-:Record_Lifecycle rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :drivenByData ;
-                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass :Data
-                                  ] ;
-                  :classDescription "Signifies the different Processes and Services that are important for a record and its lifecycle." ;
-                  rdfs:label "Record Lifecycle" .
+lifecycle:Record_Lifecycle rdf:type owl:Class ;
+                           rdfs:subClassOf lifecycle:IgontoTopLifecycleDomain ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty lifecycle:drivenByData ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass lifecycle:Data
+                                           ] ;
+                           lifecycle:classDescription "Signifies the different Processes and Services that are important for a record and its lifecycle." ;
+                           rdfs:label "Record Lifecycle" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Rendering
-:Rendering rdf:type owl:Class ;
-           rdfs:subClassOf :Service ;
-           :classDescription "Represents service offerings for the suitable display of records in form of formatting, document rendering, etc.." ;
-           rdfs:label "Rendering" .
+lifecycle:Rendering rdf:type owl:Class ;
+                    rdfs:subClassOf lifecycle:Service ;
+                    lifecycle:classDescription "Represents service offerings for the suitable display of records in form of formatting, document rendering, etc.." ;
+                    rdfs:label "Rendering" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Reporting
-:Reporting rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :producesReporting ;
-                             owl:someValuesFrom :Reporting
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :scope ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
-           :classDescription "Information derived from Records for communication and decision-makng purposes." ;
-           rdfs:label "Reporting" .
+lifecycle:Reporting rdf:type owl:Class ;
+                    rdfs:subClassOf lifecycle:IgontoTopLifecycleDomain ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty lifecycle:producedByStatistic ;
+                                      owl:someValuesFrom lifecycle:Statistic
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty lifecycle:scope ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ;
+                    lifecycle:classDescription "Information derived from Records for communication and decision-makng purposes." ;
+                    rdfs:label "Reporting" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retain
-:Retain rdf:type owl:Class ;
-        rdfs:subClassOf :Process ;
-        :classDescription "Describes the systematic implemetation of retention policies, schedules and procedures." ;
-        rdfs:label "Retain" .
+lifecycle:Retain rdf:type owl:Class ;
+                 rdfs:subClassOf lifecycle:Process ;
+                 lifecycle:classDescription "Describes the systematic implemetation of retention policies, schedules and procedures." ;
+                 rdfs:label "Retain" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Retrieve
-:Retrieve rdf:type owl:Class ;
-          rdfs:subClassOf :Service ;
-          :classDescription "Represent service offerings for the systematic retrieval of records based on a user request." ;
-          rdfs:label "Retrieve" .
+lifecycle:Retrieve rdf:type owl:Class ;
+                   rdfs:subClassOf lifecycle:Service ;
+                   lifecycle:classDescription "Represent service offerings for the systematic retrieval of records based on a user request." ;
+                   rdfs:label "Retrieve" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Search
-:Search rdf:type owl:Class ;
-        rdfs:subClassOf :Process ;
-        :classDescription "Describes methods and processes to retrieve and locate records during their lifecycle." ;
-        rdfs:label "Search" .
+lifecycle:Search rdf:type owl:Class ;
+                 rdfs:subClassOf lifecycle:Process ;
+                 lifecycle:classDescription "Describes methods and processes to retrieve and locate records during their lifecycle." ;
+                 rdfs:label "Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Secure
-:Secure rdf:type owl:Class ;
-        rdfs:subClassOf :Process ;
-        :classDescription "Describes security measurements for records during their lifecycle." ;
-        rdfs:label "Secure" .
+lifecycle:Secure rdf:type owl:Class ;
+                 rdfs:subClassOf lifecycle:Process ;
+                 lifecycle:classDescription "Describes security measurements for records during their lifecycle." ;
+                 rdfs:label "Secure" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service
-:Service rdf:type owl:Class ;
-         rdfs:subClassOf :Record_Lifecycle ;
-         :classDescription "Represents offering and activities that contribute to different stages of a record lifeycle." ;
-         rdfs:label "Service" .
+lifecycle:Service rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Record_Lifecycle ;
+                  lifecycle:classDescription "Represents offering and activities that contribute to different stages of a record lifeycle." ;
+                  rdfs:label "Service" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Service_Search
-:Service_Search rdf:type owl:Class ;
-                rdfs:subClassOf :Service ;
-                :classDescription "Describe service offerings focused on advanced search capabilites for efficient records retrieval withing their lifecycle." ;
-                rdfs:label "Service Search" .
+lifecycle:Service_Search rdf:type owl:Class ;
+                         rdfs:subClassOf lifecycle:Service ;
+                         lifecycle:classDescription "Describe service offerings focused on advanced search capabilites for efficient records retrieval withing their lifecycle." ;
+                         rdfs:label "Service Search" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Session
-:Session rdf:type owl:Class ;
-         rdfs:subClassOf :Service ;
-         :classDescription "Describe service offerings focused on managing user interactions with records during their lifecycle." ;
-         rdfs:label "Session" .
+lifecycle:Session rdf:type owl:Class ;
+                  rdfs:subClassOf lifecycle:Service ;
+                  lifecycle:classDescription "Describe service offerings focused on managing user interactions with records during their lifecycle." ;
+                  rdfs:label "Session" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Statistic
-:Statistic rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :createdByProcess ;
-                             owl:someValuesFrom :Process
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :producesReporting ;
-                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                             owl:onClass :Reporting
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :scope ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
-           :classDescription "Quantitative analysis and representation of record, including their metrics, to provide insights into compliance and efficiency of the record lifecycle." ;
-           rdfs:label "Statistics" .
+lifecycle:Statistic rdf:type owl:Class ;
+                    rdfs:subClassOf lifecycle:IgontoTopLifecycleDomain ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty lifecycle:createdByProcess ;
+                                      owl:someValuesFrom lifecycle:Process
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty lifecycle:producesReporting ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass lifecycle:Reporting
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty lifecycle:scope ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ;
+                    lifecycle:classDescription "Quantitative analysis and representation of record, including their metrics, to provide insights into compliance and efficiency of the record lifecycle." ;
+                    rdfs:label "Statistics" .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Submission
-:Submission rdf:type owl:Class ;
-            rdfs:subClassOf :Service ;
-            :classDescription "Describe offerings focused on processing of user submissions related to records." ;
-            rdfs:label "Submission" .
+lifecycle:Submission rdf:type owl:Class ;
+                     rdfs:subClassOf lifecycle:Service ;
+                     lifecycle:classDescription "Describe offerings focused on processing of user submissions related to records." ;
+                     rdfs:label "Submission" .
 
 
 ###  http://www.w3.org/2002/07/owl#Thing
 owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :description ;
+                            owl:onProperty lifecycle:description ;
                             owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :name ;
+                            owl:onProperty lifecycle:name ;
                             owl:someValuesFrom xsd:string
                           ] .
 

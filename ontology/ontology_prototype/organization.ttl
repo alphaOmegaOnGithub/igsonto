@@ -812,7 +812,8 @@ organization:Archieving rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Architecture
 organization:Architecture rdf:type owl:Class ;
-                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                          [ rdf:type owl:Restriction ;
                                             owl:onProperty organization:architectureLinkedToOrganizationUnit ;
                                             owl:someValuesFrom organization:Organization_Unit
                                           ] ,
@@ -916,7 +917,8 @@ organization:Backup_And_Recovery_Tools rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Blueprint
 organization:Blueprint rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty organization:blueprintLinkedToOrganizationUnit ;
                                          owl:someValuesFrom organization:Organization_Unit
                                        ] ,
@@ -958,7 +960,8 @@ organization:CSO rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Capability
 organization:Capability rdf:type owl:Class ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty organization:capabilityLinkedToProcess ;
                                           owl:someValuesFrom organization:Process
                                         ] ,
@@ -1097,7 +1100,8 @@ organization:DPO rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Data
 organization:Data rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty organization:createdByDepartement ;
                                     owl:someValuesFrom organization:Departement
                                   ] ;
@@ -1245,7 +1249,8 @@ organization:Departement rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Design
 organization:Design rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty organization:designLinkedToOrganizationUnit ;
                                       owl:someValuesFrom organization:Organization_Unit
                                     ] ;
@@ -1305,7 +1310,8 @@ organization:Electronic_Records_Management rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Employee
 organization:Employee rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty organization:memberOfDepartment ;
                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                         owl:onClass organization:Departement
@@ -1340,7 +1346,8 @@ organization:Encryption rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Enterprise
 organization:Enterprise rdf:type owl:Class ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty organization:needsArchitecture ;
                                           owl:someValuesFrom organization:Architecture
                                         ] ,
@@ -1399,7 +1406,8 @@ organization:Exception_Handling_System rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Framework
 organization:Framework rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty organization:frameworkLinkedToCapability ;
                                          owl:someValuesFrom organization:Capability
                                        ] ;
@@ -1409,7 +1417,8 @@ organization:Framework rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Goal
 organization:Goal rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty organization:goalDefinedByGovernanceStrategy ;
                                     owl:someValuesFrom organization:Governance_Strategy
                                   ] ,
@@ -1423,6 +1432,7 @@ organization:Goal rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Governance
 organization:Governance rdf:type owl:Class ;
+                        rdfs:subClassOf organization:IgontoTopOrganizationDomain ;
                         organization:classDescription "Superclass for a governance overview on top level." ;
                         rdfs:label "Governance" .
 
@@ -1477,7 +1487,8 @@ organization:IG_Capability rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Policy
 organization:IG_Policy rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty organization:definedByStrategy ;
                                          owl:someValuesFrom organization:Strategy
                                        ] ,
@@ -1495,7 +1506,8 @@ organization:IG_Policy rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#IG_Program
 organization:IG_Program rdf:type owl:Class ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty organization:programmDefinedBySteeringCommittee ;
                                           owl:someValuesFrom organization:Steering_Committee
                                         ] ,
@@ -1522,7 +1534,8 @@ organization:IG_Program rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#ISO
 organization:ISO rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                 rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty organization:definesPractices ;
                                    owl:someValuesFrom organization:Capability
                                  ] ;
@@ -1541,6 +1554,10 @@ organization:IT rdf:type owl:Class ;
 organization:IT_Planning_And_Strategy_Framework rdf:type owl:Class ;
                                                 rdfs:subClassOf organization:Workflow_And_Process_Management_Tools ;
                                                 rdfs:label "IT Planning And Strategy Framework" .
+
+
+###  http://www.semanticweb.org/igonto/organization#IgontoTopOrganizationDomain
+organization:IgontoTopOrganizationDomain rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/igonto/organization#Incident_Response_And_Remediation_Protocol
@@ -1637,7 +1654,8 @@ organization:Legal_Registry rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Maturity
 organization:Maturity rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty organization:hasCapability ;
                                         owl:someValuesFrom organization:Capability
                                       ] ;
@@ -1672,7 +1690,8 @@ organization:Monitoring_And_Visibility_Tools rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Objective
 organization:Objective rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty organization:ensuresCompliance ;
                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                          owl:onClass organization:Compliance
@@ -1698,7 +1717,8 @@ organization:Objective rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Organization_Unit
 organization:Organization_Unit rdf:type owl:Class ;
-                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                               [ rdf:type owl:Restriction ;
                                                  owl:onProperty organization:hasRole ;
                                                  owl:someValuesFrom organization:Role
                                                ] ,
@@ -1726,7 +1746,8 @@ organization:Penetration_Testing rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Principle
 organization:Principle rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                       [ rdf:type owl:Restriction ;
                                          owl:onProperty organization:partOfCapability ;
                                          owl:someValuesFrom organization:Capability
                                        ] ,
@@ -1794,7 +1815,8 @@ organization:Quality rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Record
 organization:Record rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty organization:usesRecordLifecycle ;
                                       owl:someValuesFrom organization:Record_Lifecycle
                                     ] ;
@@ -1804,7 +1826,8 @@ organization:Record rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Record_Control_Structure
 organization:Record_Control_Structure rdf:type owl:Class ;
-                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                                      [ rdf:type owl:Restriction ;
                                                         owl:onProperty organization:definesRecordLifecycle ;
                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                         owl:onClass organization:Record_Lifecycle
@@ -1815,7 +1838,8 @@ organization:Record_Control_Structure rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Record_Lifecycle
 organization:Record_Lifecycle rdf:type owl:Class ;
-                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                              [ rdf:type owl:Restriction ;
                                                 owl:onProperty organization:definedByRecordControlStructure ;
                                                 owl:someValuesFrom organization:Record_Control_Structure
                                               ] ,
@@ -1905,7 +1929,8 @@ organization:Risk_Assessment_And_Compliance_Tools rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Role
 organization:Role rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty organization:memberOfOrganizationUnit ;
                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass organization:Organization_Unit
@@ -1916,7 +1941,8 @@ organization:Role rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Rule
 organization:Rule rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty organization:executesRecord ;
                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass organization:Record
@@ -1977,7 +2003,8 @@ organization:Stakeholder rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Steering_Committee
 organization:Steering_Committee rdf:type owl:Class ;
-                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                                [ rdf:type owl:Restriction ;
                                                   owl:onProperty organization:steeringCommitteeNeededByEnterprise ;
                                                   owl:someValuesFrom organization:Enterprise
                                                 ] ,
@@ -1997,7 +2024,8 @@ organization:Steering_Committee rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Strategy
 organization:Strategy rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty organization:realizesObjective ;
                                         owl:someValuesFrom organization:Objective
                                       ] ,
@@ -2064,7 +2092,8 @@ organization:Testing rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/igonto/organization#Tools
 organization:Tools rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf organization:IgontoTopOrganizationDomain ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty organization:toolResponsibilityLaysIn ;
                                      owl:someValuesFrom owl:Thing
                                    ] ,

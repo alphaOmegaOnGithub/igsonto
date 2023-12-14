@@ -1,0 +1,1808 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix organization:   <http://www.semanticweb.org/igonto/organization#> .
+
+
+
+
+############################################
+############### Class Shapes ###############
+############################################
+
+organization:ThingShape
+    a sh:NodeShape ;
+		sh:property organization:nameShape ;
+		sh:property organization:descriptionShape ;
+	.
+
+organization:CapabilityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Capability ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:capabilityLinkedToFrameworkShape ;
+        sh:property organization:capabilityLinkedToProcessShape ;
+        sh:property organization:partOfMaturityLevelShape ;
+	.
+
+organization:IG_CapabilityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:IG_Capability ;
+		rdfs:subClassOf organization:CapabilityShape ;
+	.
+
+organization:TOSCA_CapabilityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:TOSCA_Capability: ;
+		rdfs:subClassOf organization:CapabilityShape ;
+	.
+
+organization:DataShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data ;
+		rdfs:subClassOf organization:ThingShape ;
+         sh:property organization:createdByDepartementShape ;
+	.
+
+organization:DesignShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Design;
+		rdfs:subClassOf organization:ThingShape ;
+         sh:property organization:designLinkedToOrganizationUnitShape ;
+	.
+
+organization:EmployeeShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Employee;
+		rdfs:subClassOf organization:ThingShape ;
+         sh:property organization:memberOfDepartmentShape ;
+	.
+
+organization:EnterpriseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Enterprise ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:hasOrganizationUnitShape ;
+        sh:property organization:needsGovernanceStrategyShape ;
+        sh:property organization:needsSteeringCommitteeShape ;
+	.
+
+organization:Large_EnterpriseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Large_Enterprise ;
+		rdfs:subClassOf organization:EnterpriseShape ;
+	.
+
+organization:Medium_EnterpriseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Medium_Enterprise ;
+		rdfs:subClassOf organization:EnterpriseShape ;
+	.
+
+organization:Small_EnterpriseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Small_Enterprise ;
+		rdfs:subClassOf organization:EnterpriseShape ;
+	.
+
+organization:FrameworkShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Framework ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:frameworkLinkedToCapabilityShape ;
+	.
+
+organization:GoalShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Goal ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:goalDefinedByGovernanceStrategyShape ;
+        sh:property organization:scopeShape ;
+	.
+
+organization:GovernanceShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Governance ;
+		rdfs:subClassOf organization:ThingShape ;
+	.
+
+organization:Governance_BodyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Governance_Body ;
+		rdfs:subClassOf organization:GovernanceShape ;
+        sh:property organization:definesGovernanceStrategyShape ;
+	.
+
+organization:Governance_CriterionShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Governance_Criterion ;
+		rdfs:subClassOf organization:GovernanceShape ;
+	.
+
+organization:ComplianceShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Compliance ;
+		rdfs:subClassOf organization:Governance_CriterionShape ;
+        sh:property organization:complianceEnsuredByObjectiveShape ;
+	.
+
+organization:QualityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Quality ;
+		rdfs:subClassOf organization:Governance_CriterionShape ;
+        sh:property organization:qualityEnsuredByObjectiveShape ;
+	.
+
+organization:TransparencyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Transparency ;
+		rdfs:subClassOf organization:Governance_CriterionShape ;
+        sh:property organization:ensuredByObjectiveShape ;
+	.
+
+organization:Governance_StrategyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Governance_Strategy ;
+		rdfs:subClassOf organization:GovernanceShape ;
+        sh:property organization:definesGoalShape ;
+        sh:property organization:governancStrategyNeededByEnterpriseShape ;
+	.
+
+organization:IG_PolicyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:IG_Policy;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definedByStrategyShape ;
+        sh:property organization:definesRuleShape ;
+        sh:property organization:authorShape ;
+	.
+
+organization:IG_ProgramShape
+    a sh:NodeShape ;
+		sh:targetClass organization:IG_Program ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:programmDefinedBySteeringCommitteeShape ;
+        sh:property organization:specifiesPrinciplesShape ;
+        sh:property organization:startDateShape ;
+        sh:property organization:endDateShape ;
+        sh:property organization:scopeShape ;
+	.
+
+organization:ISOShape
+    a sh:NodeShape ;
+		sh:targetClass organization:ISO ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definesPracticesShape ;
+	.
+
+organization:MaturityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Maturity ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:hasCapabilityShape ;
+	.
+
+organization:ObjectiveShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Objective ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:ensuresComplianceShape ;
+        sh:property organization:ensuresQualityShape ;
+        sh:property organization:ensuresTransparencyShape ;
+        sh:property organization:realizedByStrategyShape ;
+	.
+
+organization:Organization_UnitShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Organization_Unit ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:hasRoleShape ;
+	.
+
+organization:Business_UnitShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Business_Unit ;
+		rdfs:subClassOf organization:Organization_UnitShape ;
+	.
+
+organization:DepartementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Departement ;
+		rdfs:subClassOf organization:Organization_UnitShape ;
+        sh:property organization:hasEmployeeShape ;
+        sh:property organization:createsDataShape ;
+	.
+
+organization:Change_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Change_Management ;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:ITShape
+    a sh:NodeShape ;
+		sh:targetClass organization:IT ;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:LegalShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal ;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:Privacy_And_SecurityShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Privacy_And_Security ;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:AccessControlShape
+    a sh:NodeShape ;
+		sh:targetClass organization:AccessControl ;
+		rdfs:subClassOf organization:Privacy_And_SecurityShape ;
+	.
+
+
+organization:AuditShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Audit ;
+		rdfs:subClassOf organization:Privacy_And_SecurityShape ;
+	.
+
+organization:MonitoringShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Monitoring ;
+		rdfs:subClassOf organization:Privacy_And_SecurityShape ;
+	.
+
+organization:Records_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Records_Management;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:Electronic_Records_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Electronic_Records_Management ;
+		rdfs:subClassOf organization:Records_ManagementShape ;
+	.
+
+organization:Records_And_Information_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Records_And_Information_Management ;
+		rdfs:subClassOf organization:Records_ManagementShape ;
+	.
+
+organization:Risk_And_ComplianceShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Risk_And_Compliance ;
+		rdfs:subClassOf organization:DepartementShape ;
+	.
+
+organization:Enterprise_Risk_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Enterprise_Risk_Management ;
+		rdfs:subClassOf organization:Risk_And_ComplianceShape ;
+	.
+
+organization:Information_Risk_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Information_Risk_Management ;
+		rdfs:subClassOf organization:Risk_And_ComplianceShape ;
+	.
+
+organization:PrincipleShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Principle ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:partOfCapabilityShape ;
+        sh:property organization:specifiedByProgrammShape ;
+	.
+
+organization:RecordShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Record ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:usesRecordLifecycleShape ;
+	.
+
+organization:Record_Control_StructureShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Record_Control_Structure ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definesRecordLifecycleShape ;
+	.
+
+organization:Record_LifecycleShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Record_Lifecycle ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definedByRecordControlStructureShape ;
+        sh:property organization:usedOnRecordShape ;
+	.
+
+organization:ProcessShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Process ;
+		rdfs:subClassOf organization:Record_LifecycleShape ;
+        sh:property organization:createsRecordShape ;
+        sh:property organization:processLinkedToCapabilityShape ;
+        sh:property organization:processLinkedToOrganizationUnitShape ;
+	.
+
+organization:RoleShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Role ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:memberOfOrganizationUnitShape ;
+	.
+
+organization:CCOShape
+    a sh:NodeShape ;
+		sh:targetClass organization:CCO ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:CIGOShape
+    a sh:NodeShape ;
+		sh:targetClass organization:CIGO ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:CSOShape
+    a sh:NodeShape ;
+		sh:targetClass organization:CSO ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:Data_ControllerShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Controller ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:Data_ProcessorShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Processor ;
+		rdfs:subClassOf organization:RoleShape;
+	.
+
+organization:Data_SubjectShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Subject ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:DPOShape
+    a sh:NodeShape ;
+		sh:targetClass organization:DPO ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:Project_ManagerShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Project_Manager ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:StakeholderShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Stakeholder ;
+		rdfs:subClassOf organization:RoleShape ;
+	.
+
+organization:RuleShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Rule ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:executesRecordShape ;
+	.
+
+organization:Steering_CommitteeShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Steering_Committee ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definesProgramShape ;
+        sh:property organization:definesStrategyShape ;
+        sh:property organization:steeringCommitteeNeededByEnterpriseShape ;
+
+	.
+
+organization:StrategyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Strategy ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definesPolicyShape ;
+        sh:property organization:realizesObjectiveShape ;
+        sh:property organization:strategyDefinedBySteeringCommitteeShape ;
+        sh:property organization:approvalDateShape ;
+        sh:property organization:creationDateShape;
+        sh:property organization:startDateShape ;
+        sh:property organization:endDateShape ;
+        sh:property organization:scopeShape ;
+	.
+
+organization:ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Tools ;
+		rdfs:subClassOf organization:ThingShape ;
+        sh:property organization:definedByIsoShape ;
+        sh:property organization:toolResponsibilityLaysInShape ;
+	.
+
+organization:Backup_And_Recovery_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Backup_And_Recovery_Tools;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:BackupShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Backup ;
+		rdfs:subClassOf organization:Backup_And_Recovery_ToolsShape ;
+	.
+
+organization:Disaster_Recovery_PlanShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Disaster_Recovery_Plan ;
+		rdfs:subClassOf organization:Backup_And_Recovery_ToolsShape ;
+	.
+
+organization:Incident_Response_PlanShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Incident_Response_Plan ;
+		rdfs:subClassOf organization:Backup_And_Recovery_ToolsShape ;
+	.
+
+organization:Remote_WipingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Remote_Wiping ;
+		rdfs:subClassOf organization:Backup_And_Recovery_ToolsShape ;
+	.
+
+organization:Communication_And_Collaboration_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Communication_And_Collaboration_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Automated_Notification_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Notification_System ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Collaboration_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Collaboration_Tools ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Communication_PlatformsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Communication_Platforms ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Employee_Engagement_PlatformsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Employee_Engagement_Platforms ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Employee_Self_Service_PortalShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Employee_Self_Service_Portal ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Learning_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Learning_Management_System ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Reporting_And_Analysis_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Reporting_And_Analysis_System ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Training
+    a sh:NodeShape ;
+		sh:targetClass organization:Training ;
+		rdfs:subClassOf organization:Communication_And_Collaboration_ToolsShape ;
+	.
+
+organization:Data_Management_And_Governance_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Management_And_Governance_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:ArchievingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Archieving ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Asset_DatabaseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Asset_Database;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Automated_Data_Culling_And_ScopingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Data_Culling_And_Scoping ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Automated_Data_Retention_And_DisposalShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Data_Retention_And_Disposal ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Automated_Retention_ExecutionShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Retention_Execution;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Automted_IntegrationShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automted_Integration ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Centralized_Data_RepositoryShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Centralized_Data_Repository ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Centralized_Data_Source_CatalogShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Centralized_Data_Source_Catalog ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Classification_And_TaggingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Classification_And_Tagging ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Discovery_And_Scanninig_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Discovery_And_Scanninig_Tools ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Inventory_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Inventory_System ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Mapping_And_Classification_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Mapping_And_Classification_System ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Privacy_MaskingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Privacy_Masking ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Processing_RegisterShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Processing_Register ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Quality_Assurance_FrameworkShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Quality_Assurance_Framework ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Quality_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Quality_Management ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Retention_PolicyShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Retention_Policy ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Sharing_ProtocolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Sharing_Protocols ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_StorageShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Storage ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Database_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Database_Management_System ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Designation_InterfaceShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Designation_Interface ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Digital_Signatures_And_TimestampsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Digital_Signatures_And_Timestamps ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Disposition_Policies_And_ProceduresShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Disposition_Policies_And_Procedures ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Records_Lifeycle_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Records_Lifeycle_Management ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Records_Retention_ScheduleShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Records_Retention_Schedule ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Retention_Rule_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Retention_Rule_Management_System ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Workflow_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Workflow_Tools ;
+		rdfs:subClassOf organization:Data_Management_And_Governance_ToolsShape ;
+	.
+
+organization:Data_Testing_And_Validation_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Testing_And_Validation_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Legal_Matters_TestingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal_Matters_Testing ;
+		rdfs:subClassOf organization:Data_Testing_And_Validation_ToolsShape ;
+	.
+
+organization:TestingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Testing ;
+		rdfs:subClassOf organization:Data_Testing_And_Validation_ToolsShape ;
+	.
+
+organization:Document_And_Records_Management_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Document_And_Records_Management_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Centralized_Instructions_RepositoryShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Centralized_Instructions_Repository ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Content_Authoring_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Content_Authoring_Tools ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Document_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Document_Management_System ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Enterprise_Content_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Enterprise_Content_Management_System ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Metadata_FrameworkShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Metadata_Framework ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Version_ControlShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Version_Control ;
+		rdfs:subClassOf organization:Document_And_Records_Management_ToolsShape ;
+	.
+
+organization:Evidence_And_Data_Logging_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Evidence_And_Data_Logging_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Automated_Chain_Of_Custody_LoggingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Chain_Of_Custody_Logging ;
+		rdfs:subClassOf organization:Evidence_And_Data_Logging_ToolsShape ;
+	.
+
+organization:Automated_Data_CollectionShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Data_Collection ;
+		rdfs:subClassOf organization:Evidence_And_Data_Logging_ToolsShape ;
+	.
+
+organization:Automated_Record_Flagging_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Record_Flagging_System ;
+		rdfs:subClassOf organization:Evidence_And_Data_Logging_ToolsShape ;
+	.
+
+organization:Search_And_Retrieval_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Search_And_Retrieval_System ;
+		rdfs:subClassOf organization:Evidence_And_Data_Logging_ToolsShape ;
+	.
+
+organization:Knowledge_And_Resource_Repository_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Knowledge_And_Resource_Repository_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Employee_InterviewsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Employee_Interviews ;
+		rdfs:subClassOf organization:Knowledge_And_Resource_Repository_ToolsShape ;
+	.
+
+organization:Shared_Library_Of_Country_ProtocolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Shared_Library_Of_Country_Protocols ;
+		rdfs:subClassOf organization:Knowledge_And_Resource_Repository_ToolsShape ;
+	.
+
+organization:Legal_And_Compliance_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal_And_Compliance_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Compliance_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Compliance_Management_System ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Compliance_ReportingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Compliance_Reporting ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Compliance_Tagging_And_ClassificationShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Compliance_Tagging_And_Classification ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:eDiscovery_IntegrationShape
+    a sh:NodeShape ;
+		sh:targetClass organization:eDiscovery_Integration ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Laws_Mapping_And_Compliance_TrackingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Laws_Mapping_And_Compliance_Tracking ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Legal_Hold_InventoryShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal_Hold_Inventory ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Legal_Hold_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal_Hold_Management ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Legal_RegistryShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Legal_Registry ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Privacy_Laws_And_Policies_RepositoryShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Privacy_Laws_And_Policies_Repository ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Request_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Request_Management_System ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Syndication_System_For_Hold_ReleaseShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Syndication_System_For_Hold_Release ;
+		rdfs:subClassOf organization:Legal_And_Compliance_ToolsShape ;
+	.
+
+organization:Monitoring_And_Visibility_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Monitoring_And_Visibility_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Automated_Storage_Utilization_ReportingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Storage_Utilization_Reporting ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Chain_Of_Custody_DocumentationShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Chain_Of_Custody_Documentation ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Chain_Of_Custody_TrackingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Chain_Of_Custody_Tracking ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Continous_Visibility_And_Monitoring_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Continous_Visibility_And_Monitoring_System ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Inventory_Of_EvidenceShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Inventory_Of_Evidence ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Key_Performance_IndicatorsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Key_Performance_Indicators ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:SLAShape
+    a sh:NodeShape ;
+		sh:targetClass organization:SLA ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:System_LogShape
+    a sh:NodeShape ;
+		sh:targetClass organization:System_Log ;
+		rdfs:subClassOf organization:Monitoring_And_Visibility_ToolsShape ;
+	.
+
+organization:Risk_Assessment_And_Compliance_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Risk_Assessment_And_Compliance_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:AnalyticsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Analytics ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Automated_Risk_Assessment_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Automated_Risk_Assessment_System ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Confirmation_Tracking_MechanismShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Confirmation_Tracking_Mechanism ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Corrective_Action_Management_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Corrective_Action_Management_System ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Exception_Handling_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Exception_Handling_System ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Incident_Response_And_Remediation_ProtocolShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Incident_Response_And_Remediation_Protocol ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Privacy_Impact_Assessment_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Privacy_Impact_Assessment_Tools ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Suspension_ProceduresShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Suspension_Procedures ;
+		rdfs:subClassOf organization:Risk_Assessment_And_Compliance_ToolsShape ;
+	.
+
+organization:Security_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Security_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:AuthenticationShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Authentication ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Data_ErasureShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Erasure ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Data_Loss_PreventionShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Data_Loss_Prevention ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:EncryptionShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Encryption ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Penetration_TestingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Penetration_Testing ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Security_Assessment_FrameworkShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Security_Assessment_Framework ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Security_Information_And_Event_ManagementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Security_Information_And_Event_Management ;
+		rdfs:subClassOf organization:Security_ToolsShape ;
+	.
+
+organization:Workflow_And_Process_Management_ToolsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Workflow_And_Process_Management_Tools ;
+		rdfs:subClassOf organization:ToolsShape ;
+	.
+
+organization:Cost_CalculationsShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Cost_Calculations ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:Deadline_TrackingShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Deadline_Tracking ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:Early_Case_AssessmentShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Early_Case_Assessment ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:Hold_Enforcement_Automation_SystemShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Hold_Enforcement_Automation_System ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:IT_Planning_And_Strategy_FrameworkShape
+    a sh:NodeShape ;
+		sh:targetClass organization:IT_Planning_And_Strategy_Framework ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:Review_CyclesShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Review_Cycles ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+organization:Revisitation_And_RefinementShape
+    a sh:NodeShape ;
+		sh:targetClass organization:Revisitation_And_Refinement ;
+		rdfs:subClassOf organization:Workflow_And_Process_Management_ToolsShape ;
+	.
+
+
+############################################
+######### Object Property Shapes ###########
+############################################
+
+organization:createdByShape
+	a sh:PropertyShape ;
+		sh:path organization:createdBy ;
+        sh:minCount 1 ;
+	.
+
+organization:createdByDepartementShape
+	a sh:PropertyShape ;
+		sh:path organization:createdByDepartement ;
+        rdfs:subClassOf organization:createdByShape ;
+	.
+
+organization:createdByProcessShape
+	a sh:PropertyShape ;
+		sh:path organization:createdByProcess ;
+        rdfs:subClassOf organization:createdByShape ;
+	.
+
+organization:createsShape
+	a sh:PropertyShape ;
+		sh:path organization:creates ;
+        sh:minCount 1 ;
+	.
+
+organization:createsDataShape
+	a sh:PropertyShape ;
+		sh:path organization:createsData ;
+        rdfs:subClassOf organization:createsShape ;
+	.
+
+organization:createsRecordShape
+	a sh:PropertyShape ;
+		sh:path organization:createsRecord ;
+        rdfs:subClassOf organization:createsShape ;
+	.
+
+organization:definedByShape
+	a sh:PropertyShape ;
+		sh:path organization:definedBy ;
+        sh:minCount 1 ;
+	.
+
+organization:definedByGovernanceBodyShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByGovernanceBody ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:definedByGovernanceStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByGovernanceStrategy ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:goalDefinedByGovernanceStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:goalDefinedByGovernanceStrategy
+        rdfs:subClassOf organization:definedByGovernanceStrategyShape ; ;
+	.
+
+organization:objectiveDefinedByGovernanceStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:objectiveDefinedByGovernanceStrategy ;
+        rdfs:subClassOf organization:definedByGovernanceStrategyShape ;
+	.
+
+organization:definedByIsoShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByIso ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:definedByPolicyShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByPolicy ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:definedByRecordControlStructureShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByRecordControlStructure ;
+	.
+
+organization:definedBySteeringCommitteeShape
+	a sh:PropertyShape ;
+		sh:path organization:definedBySteeringCommittee ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:programmDefinedBySteeringCommitteeShape
+	a sh:PropertyShape ;
+		sh:path organization:programmDefinedBySteeringCommittee ;
+        rdfs:subClassOf organization:definedBySteeringCommitteeShape ;
+	.
+
+organization:strategyDefinedBySteeringCommitteeShape
+	a sh:PropertyShape ;
+		sh:path organization:strategyDefinedBySteeringCommittee ;
+        rdfs:subClassOf organization:definedBySteeringCommitteeShape ;
+	.
+
+organization:definedByStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:definedByStrategy ;
+        rdfs:subClassOf organization:definedByShape ;
+	.
+
+organization:definesShape
+	a sh:PropertyShape ;
+		sh:path organization:defines ;
+        sh:minCount 1 ;
+	.
+
+organization:definesArchitectureShape
+	a sh:PropertyShape ;
+		sh:path organization:definesArchitecture ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesBlueprintShape
+	a sh:PropertyShape ;
+		sh:path organization:definesBlueprint ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesDesignShape
+	a sh:PropertyShape ;
+		sh:path organization:definesDesign ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesGoalShape
+	a sh:PropertyShape ;
+		sh:path organization:definesGoal ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesGovernanceStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:definesGovernanceStrategy ;
+        rdfs:subClassOf organization:definesShape ;
+        sh:maxCount 1 ;
+	.
+
+organization:definesObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:definesObjective ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesPolicyShape
+	a sh:PropertyShape ;
+		sh:path organization:definesPolicy ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesPracticesShape
+	a sh:PropertyShape ;
+		sh:path organization:definesPractices ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesProgramShape
+	a sh:PropertyShape ;
+		sh:path organization:definesProgram ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesRecordLifecycleShape
+	a sh:PropertyShape ;
+		sh:path organization:definesRecordLifecycle ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesRuleShape
+	a sh:PropertyShape ;
+		sh:path organization:definesRule ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:definesStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:definesStrategy ;
+        rdfs:subClassOf organization:definesShape ;
+	.
+
+organization:ensuredByShape
+	a sh:PropertyShape ;
+		sh:path organization:ensuredBy ;
+        sh:minCount 1 ;
+	.
+
+organization:ensuredByObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:ensuredByObjective ;
+        rdfs:subClassOf organization:ensuredByShape ;
+	.
+
+organization:complianceEnsuredByObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:complianceEnsuredByObjective ;
+        rdfs:subClassOf organization:ensuredByObjectiveShape ;
+	.
+
+organization:qualityEnsuredByObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:qualityEnsuredByObjective ;
+        rdfs:subClassOf organization:ensuredByObjectiveShape ;
+	.
+
+organization:transparencyEnsuredByObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:transparencyEnsuredByObjective ;
+        rdfs:subClassOf organization:ensuredByObjectiveShape ;
+	.
+
+organization:ensuresShape
+	a sh:PropertyShape ;
+		sh:path organization:ensures ;
+        sh:minCount 1 ;
+	.
+
+organization:ensuresComplianceShape
+	a sh:PropertyShape ;
+		sh:path organization:ensuresCompliance ;
+        rdfs:subClassOf organization:ensuresShape ;
+	.
+
+organization:ensuresQualityShape
+	a sh:PropertyShape ;
+		sh:path organization:ensuresQuality ;
+        rdfs:subClassOf organization:ensuresShape ;
+	.
+
+organization:ensuresTransparencyShape
+	a sh:PropertyShape ;
+		sh:path organization:ensuresTransparency ;
+        rdfs:subClassOf organization:ensuresShape ;
+	.
+
+organization:executedByShape
+	a sh:PropertyShape ;
+		sh:path organization:executedBy ;
+        sh:minCount 1 ;
+	.
+
+organization:executedByRuleShape
+	a sh:PropertyShape ;
+		sh:path organization:executedByRule ;
+        rdfs:subClassOf organization:executedByShape ;
+	.
+
+organization:executesShape
+	a sh:PropertyShape ;
+		sh:path organization:executes ;
+        sh:minCount 1 ;
+	.
+
+organization:executesRecordShape
+	a sh:PropertyShape ;
+		sh:path organization:executesRecord ;
+        rdfs:subClassOf organization:executesShape ;
+	.
+
+organization:hasShape
+	a sh:PropertyShape ;
+		sh:path organization:has ;
+        sh:minCount 1 ;
+	.
+
+organization:hasCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:hasCapability ;
+        rdfs:subClassOf organization:hasShape ;
+	.
+
+organization:hasEmployeeShape
+	a sh:PropertyShape ;
+		sh:path organization:hasEmployee ;
+        rdfs:subClassOf organization:hasShape ;
+	.
+
+organization:hasOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:hasOrganizationUnit ;
+        rdfs:subClassOf organization:hasShape ;
+	.
+
+organization:hasPrincipleShape
+	a sh:PropertyShape ;
+		sh:path organization:hasPrinciple ;
+        rdfs:subClassOf organization:hasShape ;
+	.
+
+organization:hasRoleShape
+	a sh:PropertyShape ;
+		sh:path organization:hasRole ;
+        rdfs:subClassOf organization:hasShape ;
+	.
+
+organization:linkedToShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedTo ;
+        sh:minCount 1 ;
+	.
+
+organization:capabilityLinkedToFrameworkShape
+	a sh:PropertyShape ;
+		sh:path organization:capabilityLinkedToFramework ;
+        rdfs:subClassOf organization:linkedToShape ;
+        sh:maxCount 1 ;
+	.
+
+organization:linkedToArchitectureShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToArchitecture ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:linkedToBlueprintShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToBlueprint ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:linkedToCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToCapability ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:frameworkLinkedToCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:frameworkLinkedToCapability ;
+        rdfs:subClassOf organization:linkedToCapabilityShape ;
+	.
+
+organization:processLinkedToCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:processLinkedToCapability ;
+        rdfs:subClassOf organization:linkedToCapabilityShape ;
+	.
+
+organization:linkedToDesignShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToDesign ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:linkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToOrganizationUnit ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:architectureLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:architectureLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:linkedToOrganizationUnitShape ;
+	.
+
+organization:blueprintLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:blueprintLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:linkedToOrganizationUnitShape ;
+	.
+
+organization:designLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:designLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:linkedToOrganizationUnitShape ;
+	.
+
+organization:processLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:processLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:linkedToOrganizationUnitShape ;
+	.
+
+organization:linkedToProcessShape
+	a sh:PropertyShape ;
+		sh:path organization:linkedToProcess ;
+        rdfs:subClassOf organization:linkedToShape ;
+	.
+
+organization:capabilityLinkedToProcessShape
+	a sh:PropertyShape ;
+		sh:path organization:capabilityLinkedToProcess ;
+        rdfs:subClassOf organization:linkedToProcessShape ;
+	.
+
+organization:organizationUnitLinkedToProcessShape
+	a sh:PropertyShape ;
+		sh:path organization:organizationUnitLinkedToProcess ;
+        rdfs:subClassOf organization:linkedToProcessShape ;
+	.
+
+organization:memberOfShape
+	a sh:PropertyShape ;
+		sh:path organization:memberOf ;
+        sh:minCount 1 ;
+	.
+
+organization:memberOfDepartmentShape
+	a sh:PropertyShape ;
+		sh:path organization:memberOfDepartment ;
+        rdfs:subClassOf organization:memberOfShape ;
+        sh:maxCount 1 ;
+	.
+
+organization:memberOfOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:memberOfOrganizationUnit ;
+        rdfs:subClassOf organization:memberOfShape ;
+	.
+
+organization:neededByShape
+	a sh:PropertyShape ;
+		sh:path organization:neededBy ;
+        sh:minCount 1 ;
+	.
+
+organization:neededByCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:neededByCapability ;
+        rdfs:subClassOf organization:neededByShape ;
+	.
+
+organization:neededByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:neededByEnterprise ;
+        rdfs:subClassOf organization:neededByShape ;
+	.
+
+organization:architectureNeedesByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:architectureNeedesByEnterprise ;
+        rdfs:subClassOf organization:neededByEnterpriseShape ;
+	.
+
+organization:blueprintNeededByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:blueprintNeededByEnterprise ;
+        rdfs:subClassOf organization:neededByEnterpriseShape ;
+	.
+
+organization:designNeededByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:designNeededByEnterprise ;
+        rdfs:subClassOf organization:neededByEnterpriseShape ;
+	.
+
+organization:governancStrategyNeededByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:governancStrategyNeededByEnterprise ;
+        rdfs:subClassOf organization:neededByEnterpriseShape ;
+	.
+
+organization:steeringCommitteeNeededByEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:steeringCommitteeNeededByEnterprise ;
+        rdfs:subClassOf organization:neededByEnterpriseShape ;
+	.
+
+organization:needsShape
+	a sh:PropertyShape ;
+		sh:path organization:needs ;
+        sh:minCount 1 ;
+	.
+
+organization:needsArchitectureShape
+	a sh:PropertyShape ;
+		sh:path organization:needsArchitecture ;
+        rdfs:subClassOf organization:needsShape ;
+	.
+
+organization:needsBlueprintShape
+	a sh:PropertyShape ;
+		sh:path organization:needsBlueprint ;
+        rdfs:subClassOf organization:needsShape ;
+	.
+
+organization:needsDesignShape
+	a sh:PropertyShape ;
+		sh:path organization:needsDesign ;
+        rdfs:subClassOf organization:needsShape ;
+	.
+
+organization:needsGovernanceStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:needsGovernanceStrategy ;
+        rdfs:subClassOf organization:needsShape ;
+        sh:maxCount 1 ;
+	.
+
+organization:needsSteeringCommitteeShape
+	a sh:PropertyShape ;
+		sh:path organization:needsSteeringCommittee ;
+        rdfs:subClassOf organization:needsShape ;
+        sh:maxCount 1 ;
+	.
+
+organization:needsTechnicalRequirementShape
+	a sh:PropertyShape ;
+		sh:path organization:needsTechnicalRequirement ;
+        rdfs:subClassOf organization:needsShape ;
+	.
+
+organization:notLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:notLinkedToOrganizationUnit ;
+        sh:minCount 1 ;
+	.
+
+organization:architectureNotLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:architectureNotLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:notLinkedToOrganizationUnitShape ;
+	.
+
+organization:blueprintNotLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:blueprintNotLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:notLinkedToOrganizationUnitShape ;
+	.
+
+organization:designNotLinkedToOrganizationUnitShape
+	a sh:PropertyShape ;
+		sh:path organization:designNotLinkedToOrganizationUnit ;
+        rdfs:subClassOf organization:notLinkedToOrganizationUnitShape ;
+	.
+
+organization:partOfShape
+	a sh:PropertyShape ;
+		sh:path organization:partOf ;
+        sh:minCount 1 ;
+	.
+
+organization:partOfCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:partOfCapability ;
+        rdfs:subClassOf organization:partOfShape ;
+	.
+
+organization:partOfEnterpriseShape
+	a sh:PropertyShape ;
+		sh:path organization:partOfEnterprise ;
+        rdfs:subClassOf organization:partOfShape;
+	.
+
+organization:partOfMaturityLevelShape
+	a sh:PropertyShape ;
+		sh:path organization:partOfMaturityLevel ;
+        rdfs:subClassOf organization:partOfShape ;
+	.
+
+organization:realizedByShape
+	a sh:PropertyShape ;
+		sh:path organization:realizedBy ;
+        sh:minCount 1 ;
+	.
+
+organization:realizedByStrategyShape
+	a sh:PropertyShape ;
+		sh:path organization:realizedByStrategy ;
+        rdfs:subClassOf organization:realizedByShape ;
+	.
+
+organization:realizesShape
+	a sh:PropertyShape ;
+		sh:path organization:realizes ;
+        sh:minCount 1 ;
+	.
+
+organization:realizesObjectiveShape
+	a sh:PropertyShape ;
+		sh:path organization:realizesObjective ;
+        rdfs:subClassOf organization:realizesShape ;
+	.
+
+organization:responsibilityLaysInShape
+	a sh:PropertyShape ;
+		sh:path organization:responsibilityLaysIn ;
+        sh:minCount 1 ;
+	.
+
+organization:capabilityResponsibilityLaysInShape
+	a sh:PropertyShape ;
+		sh:path organization:capabilityResponsibilityLaysIn ;
+        rdfs:subClassOf organization:responsibilityLaysInShape ;
+	.
+
+organization:toolResponsibilityLaysInShape
+	a sh:PropertyShape ;
+		sh:path organization:toolResponsibilityLaysIn ;
+        rdfs:subClassOf organization:responsibilityLaysInShape ;
+	.
+
+organization:responsibleForShape
+	a sh:PropertyShape ;
+		sh:path organization:responsibleFor ;
+        sh:minCount 1 ;
+	.
+
+organization:responsibleForCapabilityShape
+	a sh:PropertyShape ;
+		sh:path organization:responsibleForCapability ;
+        rdfs:subClassOf organization:responsibleForShape ;
+	.
+
+organization:responsibleForToolShape
+	a sh:PropertyShape ;
+		sh:path organization:responsibleForTool ;
+        rdfs:subClassOf organization:responsibleForShape ;
+	.
+
+organization:specifiedByShape
+	a sh:PropertyShape ;
+		sh:path organization:specifiedBy ;
+        sh:minCount 1 ;
+	.
+
+organization:specifiedByProgrammShape
+	a sh:PropertyShape ;
+		sh:path organization:specifiedByProgramm ;
+        rdfs:subClassOf organization:specifiedByShape ;
+	.
+
+organization:specifiesShape
+	a sh:PropertyShape ;
+		sh:path organization:specifies ;
+        sh:minCount 1 ;
+	.
+
+organization:specifiesPrinciplesShape
+	a sh:PropertyShape ;
+		sh:path organization:specifiesPrinciples ;
+        rdfs:subClassOf organization:specifiesShape ;
+	.
+
+organization:usedOnShape
+	a sh:PropertyShape ;
+		sh:path organization:usedOn ;
+        sh:minCount 1 ;
+	.
+
+organization:usedOnRecordShape
+	a sh:PropertyShape ;
+		sh:path organization:usedOnRecord ;
+        rdfs:subClassOf organization:usedOnShape ;
+	.
+
+organization:usesShape
+	a sh:PropertyShape ;
+		sh:path organization:uses ;
+        sh:minCount 1 ;
+	.
+
+organization:usesRecordLifecycleShape
+	a sh:PropertyShape ;
+		sh:path organization:usesRecordLifecycle ;
+        rdfs:subClassOf organization:usesShape;
+	.
+
+
+############################################
+######## Datatype Property Shapes ##########
+############################################
+
+organization:descriptionShape
+	a sh:PropertyShape ;
+		sh:path organization:description ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:nameShape
+	a sh:PropertyShape ;
+		sh:path organization:name ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:approvalDateShape
+	a sh:PropertyShape ;
+		sh:path organization:approvalDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:authorShape
+	a sh:PropertyShape ;
+		sh:path organization:author ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:creationDateShape
+	a sh:PropertyShape ;
+		sh:path organization:creationDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:endDateShape
+	a sh:PropertyShape ;
+		sh:path organization:endDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:riskShape
+	a sh:PropertyShape ;
+		sh:path organization:risk ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:scopeShape
+	a sh:PropertyShape ;
+		sh:path organization:scope ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+organization:startDateShape
+	a sh:PropertyShape ;
+		sh:path organization:startDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
