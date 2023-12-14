@@ -1,0 +1,272 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix lifecycle:   <http://www.semanticweb.org/igonto/lifecycle#> .
+
+############################################
+############### Class Shapes ###############
+############################################
+
+lifecycle:ThingShape
+    a sh:NodeShape ;
+		sh:property lifecycle:nameShape ;
+		sh:property lifecycle:descriptionShape ;
+	.
+
+lifecycle:DataShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ThingShape ;
+        sh:targetClass lifecycle:Data ;
+        sh:property lifecycle:drivesRecordLifecycleShape ;
+	.
+
+lifecycle:Record_LifecycleShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ThingShape ;
+        sh:targetClass lifecycle:Record_Lifecycle ;
+        sh:property lifecycle:drivenByDataShape ;
+	.
+
+lifecycle:ProcessShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:Record_LifecycleShape ;
+        sh:targetClass lifecycle:Process ;
+        sh:property lifecycle:createsStatisticShape ;
+	.
+
+lifecycle:ArchiveShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Archive ;
+	.
+
+lifecycle:ClassifyShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Classify ;
+	.
+
+lifecycle:IndexShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Index ;
+	.
+
+lifecycle:MeasureShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Measure ;
+	.
+
+lifecycle:MetricShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Metric ;
+	.
+
+lifecycle:MonitorShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Monitor ;
+	.
+
+lifecycle:RetainShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Retain ;
+	.
+
+lifecycle:SearchShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Search ;
+	.
+
+lifecycle:SecureShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ProcessShape ;
+        sh:targetClass lifecycle:Secure ;
+	.
+
+lifecycle:ServiceShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:Record_LifecycleShape ;
+        sh:targetClass lifecycle:Service ;
+	.
+
+lifecycle:AccessShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Access ;
+	.
+
+lifecycle:FindShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Find ;
+	.
+
+lifecycle:RenderingShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Rendering ;
+	.
+
+lifecycle:RetrieveShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Retrieve ;
+	.
+
+lifecycle:Service_SearchShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Service_Search ;
+	.
+
+lifecycle:SessionShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Session ;
+	.
+
+lifecycle:SubmissionShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ServiceShape ;
+        sh:targetClass lifecycle:Submission ;
+	.
+
+lifecycle:ReportingShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ThingShape ;
+        sh:targetClass lifecycle:Reporting ;
+        sh:property lifecycle:producedByStatisticShape ;
+        sh:property lifecycle:scopeShape ;
+	.
+
+lifecycle:StatisticShape
+    a sh:NodeShape ;
+        rdfs:subClassOf lifecycle:ThingShape ;
+        sh:targetClass lifecycle:Statistic ;
+        sh:property lifecycle:createdByProcessShape ;
+        sh:property lifecycle:producesReportingShape ;
+        sh:property lifecycle:scopeShape ;
+	.
+
+############################################
+######### Object Property Shapes ###########
+############################################
+
+lifecycle:createdByShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:createdBy ;
+        sh:minCount 1 ;
+	.
+
+lifecycle:createdByProcessShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:createdByProcess ;
+        rdfs:subClassOf lifecycle:createdByShape ;
+	.
+
+lifecycle:createsShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:creates ;
+        sh:minCount 1 ;
+	.
+
+lifecycle:createsStatisticShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:createsStatistic ;
+        rdfs:subClassOf lifecycle:createsShape ;
+	.
+
+lifecycle:drivenByShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:drivenBy ;
+        sh:minCount 1 ;
+	.
+
+lifecycle:drivenByDataShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:drivenByData ;
+        rdfs:subClassOf lifecycle:drivenByShape ;
+	.
+
+lifecycle:drivesShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:drives ;
+        sh:minCount 1 ;
+	.
+
+lifecycle:drivesRecordLifecycleShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:drivesRecordLifecycle ;
+        rdfs:subClassOf lifecycle:drivesShape ;
+	.
+
+lifecycle:producedByShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:producedBy ;
+        sh:minCount 1 ;
+	.
+
+lifecycle:producedByStatisticShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:producedByStatistic ;
+        rdfs:subClassOf lifecycle:producedByShape ;
+	.
+
+lifecycle:producesShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:produces;
+        sh:minCount 1 ;
+	.
+
+lifecycle:producesReportingShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:producesReporing ;
+        rdfs:subClassOf lifecycle:producesShape ;
+	.
+
+############################################
+######## Datatype Property Shapes ##########
+############################################
+
+lifecycle:descriptionShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:description ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+lifecycle:nameShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:name ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+lifecycle:endDateShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:endDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+lifecycle:scopeShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:scope ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
+
+lifecycle:startDateShape
+	a sh:PropertyShape ;
+		sh:path lifecycle:startDate ;
+		shacl:maxCount 1 ;
+   		shacl:minCount 1 ;
+	.
