@@ -139,6 +139,11 @@ igso-ddy:abstract rdf:type owl:AnnotationProperty ;
                   rdfs:subPropertyOf igso-ddy:description .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#adapted_from
+igso-ddy:adapted_from rdf:type owl:AnnotationProperty ;
+                      rdfs:subPropertyOf skos:note .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#change_note
 igso-ddy:change_note rdf:type owl:AnnotationProperty ;
                      rdfs:subPropertyOf igso-ddy:note .
@@ -741,6 +746,18 @@ igso-ddy:hasImportance rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf igso-ddy:has .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasLocation
+igso-ddy:hasLocation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf igso-ddy:has ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain igso-ddy:Location ;
+                     rdfs:range [ rdf:type owl:Restriction ;
+                                  owl:onProperty igso-ddy:locationID ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:positiveInteger
+                                ] .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#hasMaturity
 igso-ddy:hasMaturity rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf igso-ddy:has .
@@ -1014,6 +1031,16 @@ igso-ddy:limitsStoragePeriod rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf igso-ddy:limits .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#locationProject
+igso-ddy:locationProject rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         owl:inverseOf igso-ddy:projectLocation ;
+                         rdf:type owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain gr:Location ;
+                         rdfs:range igso-ddy:Project .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#maintains
 igso-ddy:maintains rdf:type owl:ObjectProperty .
 
@@ -1074,6 +1101,13 @@ igso-ddy:produces rdf:type owl:ObjectProperty .
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#profile
 igso-ddy:profile rdf:type owl:ObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#projectLocation
+igso-ddy:projectLocation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain igso-ddy:Project ;
+                         rdfs:range gr:Location .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#promotes
@@ -1343,6 +1377,35 @@ dct:title rdf:type owl:DatatypeProperty .
 dct:type rdf:type owl:DatatypeProperty .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#LocationName
+igso-ddy:LocationName rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain gr:Location ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjID
+igso-ddy:ProjID rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain igso-ddy:Project ;
+                rdfs:range xsd:positiveInteger .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjName
+igso-ddy:ProjName rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain igso-ddy:Project ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjNumber
+igso-ddy:ProjNumber rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain igso-ddy:Project ;
+                    rdfs:range xsd:positiveInteger ,
+                               xsd:string .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#age
 igso-ddy:age rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf igso-ddy:metrics .
@@ -1427,6 +1490,10 @@ igso-ddy:isexpired rdf:type owl:DatatypeProperty ;
 ###  http://www.example.org/cm/igso/2023/igso-ddy#lawfulBasis
 igso-ddy:lawfulBasis rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#locationID
+igso-ddy:locationID rdf:type owl:DatatypeProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#maturityLevel
@@ -1750,14 +1817,80 @@ igso-ddy:IRS rdf:type owl:Class ;
              rdfs:subClassOf igso-ddy:Acronym .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#Location
+igso-ddy:Location rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Location
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty igso-ddy:LocationName ;
+                                                               owl:allValuesFrom xsd:string
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf gr:Location .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#OU
 igso-ddy:OU rdf:type owl:Class ;
             rdfs:subClassOf igso-ddy:Acronym .
 
 
+###  http://www.example.org/cm/igso/2023/igso-ddy#Project
+igso-ddy:Project rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Project
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty igso-ddy:ProjName ;
+                                                              owl:allValuesFrom xsd:string
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf igso-ddy:DataDictionary ,
+                                 [ owl:intersectionOf ( igso-ddy:Project
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty igso-ddy:ProjNumber ;
+                                                          owl:allValuesFrom xsd:positiveInteger
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( igso-ddy:Project
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty igso-ddy:ProjID ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                            owl:intersectionOf ( rdfs:Literal
+                                                                                                 xsd:positiveInteger
+                                                                                               )
+                                                                          ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 rdfs:label "Project" .
+
+
 ###  http://www.example.org/cm/igso/2023/igso-ddy#RedHatCloud
 igso-ddy:RedHatCloud rdf:type owl:Class ;
                      rdfs:subClassOf igso-ddy:Acronym .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Restriction
+igso-ddy:Restriction rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Restriction
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty igso-ddy:hasLocation ;
+                                                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf igso-ddy:DataDictionary ;
+                     igso-ddy:adapted_from <https://www.tandfonline.com/doi/full/10.1080/24751839.2019.1686681> ;
+                     rdfs:label "Restriction" ;
+                     rdfs:seeAlso """Transformation of UML class diagram into OWL Ontology
+https://orcid.org/0000-0002-1533-3647
+https://doi.org/10.1080/24751839.2019.1686681""" .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
@@ -2336,6 +2469,10 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
    foaf:name "Cataldo Mega"
  ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
@@ -2362,8 +2499,8 @@ dct:issued cmns-av:usageNote "This annotation is typically used to describe an a
            rdfs:label "issued" .
 
 
-dct:modified rdfs:label "modified" ;
-             rdfs:isDefinedBy dct: ;
+dct:modified rdfs:isDefinedBy dct: ;
+             rdfs:label "modified" ;
              skos:definition "date on which the resource was most recently revised" .
 
 
