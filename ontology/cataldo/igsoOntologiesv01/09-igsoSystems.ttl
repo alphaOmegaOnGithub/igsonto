@@ -34,13 +34,8 @@
 <http://www.example.org/cm/igso/2023/igso-sys#> a owl:Ontology ;
 	owl:imports <http://www.example.org/cm/igso/2023/igso-impl#> ;
 	dct:created "2010-05-28"^^xsd:date ;
-	dct:creator _:genid1 .
-
-_:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-<http://www.example.org/cm/igso/2023/igso-sys#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:label "Core igso organization ontology"@en ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
 	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
 	owl:versionInfo "0.8" .
 # 
@@ -154,6 +149,9 @@ _:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 
 _:genid4 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
+
+_:genid5 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
 # 
 # 
 # #################################################################
@@ -191,62 +189,62 @@ igso-arc:eDiscoverySolution rdfs:label "eDiscoverySolution" .
 # 
 # 
 
-_:genid5 a owl:AllDisjointClasses ;
-	owl:members _:genid19 .
+_:genid6 a owl:AllDisjointClasses ;
+	owl:members _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first igso-ddy:InformationRetrievalSystem ;
+	rdf:rest _:genid19 .
 
 _:genid19 a rdf:List ;
-	rdf:first igso-ddy:InformationRetrievalSystem ;
+	rdf:first :ArchiveSystem ;
 	rdf:rest _:genid18 .
 
 _:genid18 a rdf:List ;
-	rdf:first :ArchiveSystem ;
+	rdf:first :CaseManagementSystem ;
 	rdf:rest _:genid17 .
 
 _:genid17 a rdf:List ;
-	rdf:first :CaseManagementSystem ;
+	rdf:first :CommunicationSystem ;
 	rdf:rest _:genid16 .
 
 _:genid16 a rdf:List ;
-	rdf:first :CommunicationSystem ;
+	rdf:first :DocumentManagementSystem ;
 	rdf:rest _:genid15 .
 
 _:genid15 a rdf:List ;
-	rdf:first :DocumentManagementSystem ;
+	rdf:first :EnterpriseContentManagementSystem ;
 	rdf:rest _:genid14 .
 
 _:genid14 a rdf:List ;
-	rdf:first :EnterpriseContentManagementSystem ;
+	rdf:first :NetworkSystem ;
 	rdf:rest _:genid13 .
 
 _:genid13 a rdf:List ;
-	rdf:first :NetworkSystem ;
+	rdf:first :RDBMSystem ;
 	rdf:rest _:genid12 .
 
 _:genid12 a rdf:List ;
-	rdf:first :RDBMSystem ;
+	rdf:first :RecordsManagementSystem ;
 	rdf:rest _:genid11 .
 
 _:genid11 a rdf:List ;
-	rdf:first :RecordsManagementSystem ;
+	rdf:first :RenderingSystem ;
 	rdf:rest _:genid10 .
 
 _:genid10 a rdf:List ;
-	rdf:first :RenderingSystem ;
+	rdf:first :StorageSystem ;
 	rdf:rest _:genid9 .
 
 _:genid9 a rdf:List ;
-	rdf:first :StorageSystem ;
+	rdf:first :SystemPattern ;
 	rdf:rest _:genid8 .
 
 _:genid8 a rdf:List ;
-	rdf:first :SystemPattern ;
+	rdf:first :TransferSystem ;
 	rdf:rest _:genid7 .
 
 _:genid7 a rdf:List ;
-	rdf:first :TransferSystem ;
-	rdf:rest _:genid6 .
-
-_:genid6 a rdf:List ;
 	rdf:first :eDiscoveryManagementSystem ;
 	rdf:rest rdf:nil .
 # 
