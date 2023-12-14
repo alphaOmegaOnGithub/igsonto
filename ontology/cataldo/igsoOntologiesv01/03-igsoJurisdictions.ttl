@@ -34,15 +34,13 @@
 @base <http://www.example.org/cm/igso/2023/igso-jur#> .
 
 <http://www.example.org/cm/igso/2023/igso-jur#> rdf:type owl:Ontology ;
-                                                 owl:imports igso-ddy: ;
+                                                 owl:imports igso-data: ;
                                                  dct:created "2010-05-28"^^xsd:date ;
                                                  dct:creator :Cataldo_Mega ,
                                                              [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
                                                                foaf:name "Cataldo Mega"
                                                              ] ;
                                                  dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-                                                 dct:modified "2014-04-12"^^xsd:date ;
-                                                 rdfs:comment "Regulatory vocabulary for describing information governance services types ."@en ;
                                                  rdfs:label "An ontology on jurisdictions related to Information Governance Services (IGS)"@en ;
                                                  rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
                                                  owl:versionInfo "0.8" .
@@ -57,10 +55,6 @@ dc:publisher rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/abstract
 dct:abstract rdf:type owl:AnnotationProperty ;
-             rdfs:isDefinedBy dct: ;
-             rdfs:label "abstract" ;
-             skos:definition "summary of the resource" ;
-             cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
              rdfs:subPropertyOf dct:description .
 
 
@@ -417,14 +411,6 @@ igso-ddy:InformationRetrievalSystem rdf:type owl:ObjectProperty ;
                                     rdfs:subPropertyOf igso-ddy:I .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#J
-igso-ddy:J rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#K
-igso-ddy:K rdf:type owl:ObjectProperty .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#L
 igso-ddy:L rdf:type owl:ObjectProperty .
 
@@ -536,67 +522,12 @@ igso-ddy:PurposeOfProcessing rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf igso-ddy:P .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#Q
-igso-ddy:Q rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#R
-igso-ddy:R rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RecordsCategory
-igso-ddy:RecordsCategory rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf igso-ddy:R .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Remedy
-igso-ddy:Remedy rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf igso-ddy:R .
+igso-ddy:Remedy rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#RetentionPeriod
-igso-ddy:RetentionPeriod rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf igso-ddy:R .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightRegardingAutomatedProfiling
-igso-ddy:RightRegardingAutomatedProfiling rdf:type owl:ObjectProperty ;
-                                          rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToAccess
-igso-ddy:RightToAccess rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToDataPortability
-igso-ddy:RightToDataPortability rdf:type owl:ObjectProperty ;
-                                rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToErasure
-igso-ddy:RightToErasure rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToObject
-igso-ddy:RightToObject rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightToRectification
-igso-ddy:RightToRectification rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf igso-ddy:Rights .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Rights
-igso-ddy:Rights rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf igso-ddy:R .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#RightsRegardingAutomatedDecision
-igso-ddy:RightsRegardingAutomatedDecision rdf:type owl:ObjectProperty ;
-                                          rdfs:subPropertyOf igso-ddy:Rights .
+igso-ddy:RetentionPeriod rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#S
@@ -637,38 +568,12 @@ igso-ddy:Taxonomy rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf igso-ddy:T .
 
 
-###  http://www.example.org/cm/igso/2023/igso-ddy#U
-igso-ddy:U rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#V
-igso-ddy:V rdf:type owl:ObjectProperty .
-
-
 ###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
-igso-ddy:Violation rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:Violation rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
-igso-ddy:VitalInterest rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf igso-ddy:V .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#W
-igso-ddy:W rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#X
-igso-ddy:X rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Y
-igso-ddy:Y rdf:type owl:ObjectProperty .
-
-
-###  http://www.example.org/cm/igso/2023/igso-ddy#Z
-igso-ddy:Z rdf:type owl:ObjectProperty .
+igso-ddy:VitalInterest rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#align
@@ -961,8 +866,7 @@ igso-ddy:fullfills rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#handles
-igso-ddy:handles rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf igso-ddy:H .
+igso-ddy:handles rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#has
@@ -1397,13 +1301,11 @@ igso-ddy:providesSearchService rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#referentialIntegrity
-igso-ddy:referentialIntegrity rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf igso-ddy:R .
+igso-ddy:referentialIntegrity rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
-igso-ddy:requiresCompliaenceWith rdf:type owl:ObjectProperty ;
-                                 rdfs:subPropertyOf igso-ddy:R .
+igso-ddy:requiresCompliaenceWith rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
@@ -1447,18 +1349,15 @@ igso-ddy:tests rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
-igso-ddy:validateAuthenticity rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:validateAuthenticity rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompleteness
-igso-ddy:validateCompleteness rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:validateCompleteness rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateCompliance
-igso-ddy:validateCompliance rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:validateCompliance rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateComplianceLevel
@@ -1467,13 +1366,11 @@ igso-ddy:validateComplianceLevel rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateConsistency
-igso-ddy:validateConsistency rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:validateConsistency rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#validateProvenance
-igso-ddy:validateProvenance rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf igso-ddy:V .
+igso-ddy:validateProvenance rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#hasSynonym
@@ -1492,13 +1389,11 @@ igso-ddy:validateProvenance rdf:type owl:ObjectProperty ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#regulates
-:regulates rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf igso-ddy:R .
+:regulates rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Goal
-igso-org:Goal rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf igso-ddy:G .
+igso-org:Goal rdf:type owl:ObjectProperty .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-org#Objective
@@ -1514,6 +1409,10 @@ igso-org:Strategy rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.org/dc/terms/abstract
+dct:abstract rdf:type owl:DatatypeProperty .
+
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#age
 igso-ddy:age rdf:type owl:DatatypeProperty ;
@@ -1648,6 +1547,10 @@ skos:notation rdf:type owl:DatatypeProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-data#DataDomain
+igso-data:DataDomain rdf:type owl:Class .
+
 
 ###  http://www.example.org/cm/igso/2023/igso-jur#Article04GDPR
 :Article04GDPR rdf:type owl:Class ;
@@ -2859,12 +2762,30 @@ igso-org:Transformational rdf:type owl:NamedIndividual ;
   foaf:name "Cataldo Mega"
 ] .
 
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
 #################################################################
 #    Annotations
 #################################################################
 
+dct:abstract skos:definition "summary of the resource" ;
+              cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+              rdfs:label "abstract" ;
+              rdfs:isDefinedBy dct: .
+
+
 :GDPR rdfs:isDefinedBy <https://gdpr-info.eu/> ;
-       rdfs:comment """Chapter 1  – 1  2  3  4
+      rdfs:comment """Chapter 1  – 1  2  3  4
 Chapter 2  – 5  6  7  8  9  10  11
 Chapter 3  – 12  13  14  15  16  17  18  19  20  21  22  23
 Chapter 4  – 24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
