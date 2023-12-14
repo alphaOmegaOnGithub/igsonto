@@ -307,6 +307,26 @@ type
 ### Annotation Properties
 ###################################################
 dc:creator
+###################################################	
+### Dublin Core  Index of Terms
+###################################################
+Classes: 
+Agent, AgentClass, FileFormat, Frequency, Jurisdiction, Location, LocationPeriodOrJurisdiction, MediaType, MediaTypeOrExtent, MethodOfAccrual, MethodOfInstruction, PeriodOfTime, PhysicalMedium, PhysicalResource, Policy, ProvenanceStatement, RightsStatement, SizeOrDuration, Standard
+
+Properties in the /terms/ namespace: 
+Object properties:  accrualMethod, accrualPeriodicity, accrualPolicy, available, conformsTo, created, dateAccepted, dateCopyrighted, dateSubmitted,  hasFormat, hasPart, hasVersion, isFormatOf, isPartOf, isReferencedBy, isReplacedBy, isRequiredBy, issued, isVersionOf,  replaces, requires, 
+
+Data properties: abstract, accessRights, contributor, coverage, alternative, audience, creator, date, description, educationLevel, extent, format, identifier, instructionalMethod, language, license, mediator, medium, modified, provenance, publisher, references, relation, rights, rightsHolder, source, spatial, subject, tableOfContents, temporal, title, type, valid
+
+Properties in the /elements/1.1/ namespace: 
+contributor, coverage, creator, date, description, format, identifier, language, publisher, relation, rights, source, subject, title, type
+
+Vocabulary Encoding Schemes: 	DCMIType, DDC, IMT, LCC, LCSH, MESH, NLM, TGN, UDC
+Syntax Encoding Schemes: 	Box, ISO3166, ISO639-2, ISO639-3, Period, Point, RFC1766, RFC3066, RFC4646, RFC5646, URI, W3CDTF
+
+DCMI Type Vocabulary: 	Collection, Dataset, Event, Image, InteractiveResource, MovingImage, PhysicalObject, Service, Software, Sound, StillImage, Text
+Terms for vocabulary description: 	domainIncludes, memberOf, rangeIncludes, VocabularyEncodingScheme
+
 
 #######################################################################	
 ### DCAT Ontology  https://www.w3.org/TR/2023/WD-vocab-dcat-3-20230307/
@@ -431,3 +451,73 @@ Class: Checksum
 	Property: checksum value
 
 Examples: 
+
+
+#######################################################################	
+### ORG Ontology  https://www.w3.org/TR/vocab-org/
+########################################################################
+5. Ontology Reference
+    5.1 Index of classes and properties
+    5.2 Organizational structure
+        5.2.1 Class: Organization
+        5.2.2 Class: FormalOrganization
+        5.2.3 Class: OrganizationalUnit
+    5.3 Membership, roles, posts and reporting
+        5.3.1 Property: memberOf
+        5.3.2 Property: hasMember
+        5.3.3 Property: headOf
+        5.3.4 Class: Membership
+        5.3.5 Class: Role
+        5.3.6 Class: Post
+        5.3.7 Property: reportsTo
+    5.4 Location
+        5.4.1 Class: Site
+        5.4.2 Property: location
+    5.5 Projects and other activities
+        5.5.1 Class: OrganizationalCollaboration
+		
+		
+https://www.w3.org/TR/vocab-org/#org:hasMember 
+https://www.w3.org/TR/vocab-org/#org:ChangeEvent
+
+Index of classes and properties
+
+Classes: | ChangeEvent | FormalOrganization | Membership | OrganizationalCollaboration | OrganizationalUnit | Organization | Post | Role | Site |
+
+Properties: | basedAt | changedBy | classification | hasMember | hasMembership | hasPost | hasPrimarySite | hasRegisteredSite | hasSite | hasSubOrganization | hasUnit | headOf | heldBy | holds | identifier | linkedTo | location | memberDuring | memberOf | member | organization | originalOrganization | postIn | purpose | remuneration | reportsTo | resultedFrom | resultingOrganization | role | roleProperty | siteAddress | siteOf | subOrganizationOf | transitiveSubOrganizationOf | unitOf | 
+
+example:
+<http://example.com/org#id> a org:FormalOrganization;
+    skos:prefLabel "Example Ltd".
+
+eg:ctoRole a org:Role;
+    skos:prefLabel "CTO".
+        
+[] a org:Membership;
+    org:member <http://example.com/people#jo>;
+    org:organization <http://example.com/org#id>;
+    org:role eg:ctoRole;
+    org:memberDuring [a time:Interval; time:hasBeginning [
+                      time:inXSDDateTime "2009-11-01T09:00:00Z"^^xsd:dateTime]].
+
+eg:ctoRole a org:Role;
+    org:roleProperty eg:ctoOf.
+    
+eg:ctoOf a owl:ObjectProperty, rdf:Property;
+    skos:prefLabel "CTO";
+    rdfs:subPropertyOf org:memberOf.
+        
+<http://example.com/people#jo> 
+  eg:ctoOf <http://example.com/org#id>. 
+  
+   <http://example.com/DfE> a org:Organization;
+        skos:prefLabel  "Department for Education"@en .
+
+    <http://example.com/DCSF> a org:Organization;
+        skos:prefLabel  "Department for Children Schools and Family"@en .
+
+    <http://example.com/regorgMay2010> a org:ChangeEvent;
+        rdfs:comment "Post-election re-organization and rebranding"@en ;
+        org:originalOrganization  <http://example.com/DfE> ;
+	org:resultingOrganization <http://example.com/DCSF> .
+	
