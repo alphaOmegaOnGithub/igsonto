@@ -41,8 +41,7 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
 <http://www.example.org/cm/igso/2023/igso-jur#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
-	owl:versionInfo "0.8" .
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 # 
 # 
 # #################################################################
@@ -361,10 +360,6 @@ xsd:date a rdfs:Datatype .
 
 igso-ddy:Consistency a owl:ObjectProperty .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#ContractualRelationship
-
-igso-ddy:ContractualRelationship a owl:ObjectProperty .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#Cooperation
 
 igso-ddy:Cooperation a owl:ObjectProperty .
@@ -397,197 +392,33 @@ igso-ddy:DesirableBevavior a owl:ObjectProperty .
 
 igso-ddy:EnhancedProtection a owl:ObjectProperty .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#G
-
-igso-ddy:G a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#GDPRViolation
-
-igso-ddy:GDPRViolation a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Violation .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#H
-
-igso-ddy:H a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#I
-
-igso-ddy:I a owl:ObjectProperty .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrieval
 
-igso-ddy:InformationRetrieval a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+igso-ddy:InformationRetrieval a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
 
-igso-ddy:InformationRetrievalSystem a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#L
-
-igso-ddy:L a owl:ObjectProperty .
+igso-ddy:InformationRetrievalSystem a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#LawfulBasis
 
-igso-ddy:LawfulBasis a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
+igso-ddy:LawfulBasis a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#LegalInterest
 
-igso-ddy:LegalInterest a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#LegalObligation
-
-igso-ddy:LegalObligation a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#LegalRecourse
-
-igso-ddy:LegalRecourse a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Liability
-
-igso-ddy:Liability a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#M
-
-igso-ddy:M a owl:ObjectProperty .
+igso-ddy:LegalInterest a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
 
-igso-ddy:MaturityLevel a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Measure
-
-igso-ddy:Measure a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasurePrivacy
-
-igso-ddy:MeasurePrivacy a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnical
-
-igso-ddy:MeasureTechnical a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnicalOrganizational
-
-igso-ddy:MeasureTechnicalOrganizational a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MesureSecurity
-
-igso-ddy:MesureSecurity a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#O
-
-igso-ddy:O a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#P
-
-igso-ddy:P a owl:ObjectProperty .
+igso-ddy:MaturityLevel a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#PersonalDataTransfer
 
-igso-ddy:PersonalDataTransfer a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Privacy-friendlySettings
-
-igso-ddy:Privacy-friendlySettings a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#PrivacyBreaches
-
-igso-ddy:PrivacyBreaches a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Procedure
-
-igso-ddy:Procedure a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#ProcesseingPurpose
-
-igso-ddy:ProcesseingPurpose a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Progress
-
-igso-ddy:Progress a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#PublicTask
-
-igso-ddy:PublicTask a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#PurposeOfProcessing
-
-igso-ddy:PurposeOfProcessing a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:PersonalDataTransfer a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#Remedy
 
 igso-ddy:Remedy a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#RetentionPeriod
-
-igso-ddy:RetentionPeriod a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#S
-
-igso-ddy:S a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Security
-
-igso-ddy:Security a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
-
-igso-ddy:SecurityMeasure a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:Security .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
-
-igso-ddy:SensitiveData a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
-
-igso-ddy:SpecialCategory a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
-
-igso-ddy:SubProcessor a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#T
-
-igso-ddy:T a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
-
-igso-ddy:Taxonomy a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:T .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Violation
-
-igso-ddy:Violation a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
-
-igso-ddy:VitalInterest a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#align
 
@@ -948,13 +779,11 @@ igso-ddy:hasmaturityLevel a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#implementsAppropriate
 
-igso-ddy:implementsAppropriate a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+igso-ddy:implementsAppropriate a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#implies
 
-igso-ddy:implies a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+igso-ddy:implies a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#impliesImplementationOf
 
@@ -968,13 +797,11 @@ igso-ddy:impliesRequirements a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#includes
 
-igso-ddy:includes a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+igso-ddy:includes a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#is
 
-igso-ddy:is a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:I .
+igso-ddy:is a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#isAdministeredBy
 
@@ -1158,8 +985,7 @@ igso-ddy:isUsedBy a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#limits
 
-igso-ddy:limits a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:L .
+igso-ddy:limits a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#limitsArchivePeriod
 
@@ -1178,43 +1004,35 @@ igso-ddy:limitsStoragePeriod a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#maintains
 
-igso-ddy:maintains a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:maintains a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#manages
 
-igso-ddy:manages a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:manages a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#mandates
 
-igso-ddy:mandates a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:mandates a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#mayInvolve
 
-igso-ddy:mayInvolve a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:mayInvolve a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#measures
 
-igso-ddy:measures a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:measures a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#minizeAmountOf
 
-igso-ddy:minizeAmountOf a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:minizeAmountOf a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#monitors
 
-igso-ddy:monitors a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:M .
+igso-ddy:monitors a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#perform
 
-igso-ddy:perform a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:perform a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#performIimpactAssessment
 
@@ -1228,43 +1046,35 @@ igso-ddy:performs a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#persues
 
-igso-ddy:persues a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:persues a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#plans
 
-igso-ddy:plans a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:plans a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#processes
 
-igso-ddy:processes a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:processes a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#produces
 
-igso-ddy:produces a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:produces a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#profile
 
-igso-ddy:profile a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:profile a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#promotes
 
-igso-ddy:promotes a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:promotes a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#protects
 
-igso-ddy:protects a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:protects a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#provides
 
-igso-ddy:provides a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:P .
+igso-ddy:provides a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#providesCatalogService
 
@@ -1315,10 +1125,6 @@ igso-ddy:providesSearchService a owl:ObjectProperty ;
 
 igso-ddy:referentialIntegrity a owl:ObjectProperty .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
-
-igso-ddy:requiresCompliaenceWith a owl:ObjectProperty .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
 
 igso-ddy:requiresReferentialIntegrity a owl:ObjectProperty ;
@@ -1326,38 +1132,31 @@ igso-ddy:requiresReferentialIntegrity a owl:ObjectProperty ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#satisfies
 
-igso-ddy:satisfies a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:satisfies a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#serves
 
-igso-ddy:serves a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:serves a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#specifies
 
-igso-ddy:specifies a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:specifies a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#subjectTo
 
-igso-ddy:subjectTo a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:subjectTo a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#submitts
 
-igso-ddy:submitts a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:submitts a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#supports
 
-igso-ddy:supports a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
+igso-ddy:supports a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#tests
 
-igso-ddy:tests a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:T .
+igso-ddy:tests a owl:ObjectProperty .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
 
@@ -1408,20 +1207,6 @@ igso-ddy:validateProvenance a owl:ObjectProperty .
 # http://www.example.org/cm/igso/2023/igso-jur#regulates
 
 :regulates a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Goal
-
-igso-org:Goal a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Objective
-
-igso-org:Objective a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:O .
-# 
-# http://www.example.org/cm/igso/2023/igso-org#Strategy
-
-igso-org:Strategy a owl:ObjectProperty ;
-	rdfs:subPropertyOf igso-ddy:S .
 # 
 # 
 # 
@@ -1696,8 +1481,6 @@ _:genid10 a owl:Restriction ;
 _:genid11 a owl:Restriction ;
 	owl:onProperty :definesPrinciplesFor ;
 	owl:someValuesFrom igso-req:PersonalDataProcessing .
-
-igso-req:PersonalDataProcessing a owl:Class .
 
 :Article05GDPR rdfs:comment """Article 5 - Principles relating to processing of personal data:
 - Lawfulness, fairness, and transparency
@@ -2467,6 +2250,8 @@ _:genid22 a owl:Restriction ;
 	rdfs:subClassOf :Duty .
 # 
 # http://www.example.org/cm/igso/2023/igso-req#PersonalDataProcessing
+
+igso-req:PersonalDataProcessing a owl:Class .
 # 
 # 
 # 
