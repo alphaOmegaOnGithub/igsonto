@@ -36,7 +36,6 @@
 	dct:created "2010-05-28"^^xsd:date ;
 	dct:creator _:genid1 ;
 	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:comment "Vocabulary for describing information governance services types ."@en ;
 	rdfs:label "IGSO vendor ontology"@en ;
 	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
 	owl:versionInfo "0.8" .
@@ -126,11 +125,99 @@ igso-ddy:GCP rdfs:subClassOf :Google .
 
 :VendorDomain a owl:Class .
 # 
+# http://www.example.org/cm/igso/2023/igso-vend#Vendors
 
-_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+:Vendors a owl:Class ;
+	owl:equivalentClass _:genid2 .
+
+_:genid2 a owl:Class ;
+	owl:oneOf _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :Alfresco ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :Amazon ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :Google ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :IBM ;
+	rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :Microsoft ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first :Opentext ;
+	rdf:rest _:genid4 .
+
+_:genid4 a rdf:List ;
+	rdf:first :Oracle ;
+	rdf:rest _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first :Redhat ;
+	rdf:rest rdf:nil .
+
+:Vendors rdfs:subClassOf :VendorDomain ;
+	rdfs:label "Vendor" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Alfresco
+
+:Alfresco a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Amazon
+
+:Amazon a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Google
+
+:Google a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#IBM
+
+:IBM a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Microsoft
+
+:Microsoft a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Miscrosoft
+
+:Miscrosoft a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Opentext
+
+:Opentext a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Oracle
+
+:Oracle a owl:NamedIndividual , :Vendors .
+# 
+# http://www.example.org/cm/igso/2023/igso-vend#Redhat
+
+:Redhat a owl:NamedIndividual , :Vendors .
+# 
+
+_:genid11 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid12 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -142,42 +229,42 @@ _:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # 
 # 
 
-_:genid4 a owl:AllDisjointClasses ;
-	owl:members _:genid13 .
+_:genid13 a owl:AllDisjointClasses ;
+	owl:members _:genid22 .
 
-_:genid13 a rdf:List ;
+_:genid22 a rdf:List ;
 	rdf:first :Alfresco ;
-	rdf:rest _:genid12 .
+	rdf:rest _:genid21 .
 
-_:genid12 a rdf:List ;
+_:genid21 a rdf:List ;
 	rdf:first :Amazon ;
-	rdf:rest _:genid11 .
+	rdf:rest _:genid20 .
 
-_:genid11 a rdf:List ;
+_:genid20 a rdf:List ;
 	rdf:first :CloudNativeFoundationComputingFoundation ;
-	rdf:rest _:genid10 .
+	rdf:rest _:genid19 .
 
-_:genid10 a rdf:List ;
+_:genid19 a rdf:List ;
 	rdf:first :Google ;
-	rdf:rest _:genid9 .
+	rdf:rest _:genid18 .
 
-_:genid9 a rdf:List ;
+_:genid18 a rdf:List ;
 	rdf:first :IBM ;
-	rdf:rest _:genid8 .
+	rdf:rest _:genid17 .
 
-_:genid8 a rdf:List ;
+_:genid17 a rdf:List ;
 	rdf:first :Microsoft ;
-	rdf:rest _:genid7 .
+	rdf:rest _:genid16 .
 
-_:genid7 a rdf:List ;
+_:genid16 a rdf:List ;
 	rdf:first :Opentext ;
-	rdf:rest _:genid6 .
+	rdf:rest _:genid15 .
 
-_:genid6 a rdf:List ;
+_:genid15 a rdf:List ;
 	rdf:first :Oracle ;
-	rdf:rest _:genid5 .
+	rdf:rest _:genid14 .
 
-_:genid5 a rdf:List ;
+_:genid14 a rdf:List ;
 	rdf:first :Redhat ;
 	rdf:rest rdf:nil .
 # 

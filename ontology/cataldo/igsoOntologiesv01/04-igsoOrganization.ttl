@@ -820,8 +820,6 @@ _:genid50 a owl:Restriction ;
 	owl:onProperty <http://www.example.org/cm/igso/2023/igsonto#hasGoal> ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onClass :Goal .
-
-:Strategy rdfs:label "Strategy" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#SupervisoryAuthority
 

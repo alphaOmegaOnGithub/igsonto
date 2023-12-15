@@ -197,7 +197,7 @@ V
 	validateProvenance
 	validateCompleteness
 	validateCompliance
-		validateComplianceLevel
+	validateComplianceLevel
 
 ###################################################	
 ### Data Properties
@@ -367,3 +367,9 @@ eg:ctoOf a owl:ObjectProperty, rdf:Property;
         org:originalOrganization  <http://example.com/DfE> ;
 	org:resultingOrganization <http://example.com/DCSF> .
 	
+##############################################################################
+DataValue {HighValue,MediumValue,LowValue,NoValue}
+DataRisk  {HighRisk,MediumRisk,LowRisk,NoRisk}
+DataCost  {HighCost,MediumCost,LowCost,NoCost}
+DataObject {DataObjectUnstructured,DataObjectStructured,DataObjectSemistructured}
+##############################################################################

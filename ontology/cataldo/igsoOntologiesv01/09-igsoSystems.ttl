@@ -36,8 +36,7 @@
 	dct:created "2010-05-28"^^xsd:date ;
 	dct:creator _:genid1 ;
 	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
-	owl:versionInfo "0.8" .
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 # 
 # 
 # #################################################################

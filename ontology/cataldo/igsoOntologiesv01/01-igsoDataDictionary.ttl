@@ -398,51 +398,6 @@ xsd:date a rdfs:Datatype .
 
 :MaturityLevel a owl:ObjectProperty .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#Measure
-
-:Measure a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasurePrivacy
-
-:MeasurePrivacy a owl:ObjectProperty ;
-	rdfs:subPropertyOf :Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnical
-
-:MeasureTechnical a owl:ObjectProperty ;
-	rdfs:subPropertyOf :Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MeasureTechnicalOrganizational
-
-:MeasureTechnicalOrganizational a owl:ObjectProperty ;
-	rdfs:subPropertyOf :Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#MesureSecurity
-
-:MesureSecurity a owl:ObjectProperty ;
-	rdfs:subPropertyOf :Measure .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Progress
-
-:Progress a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Security
-
-:Security a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
-
-:SecurityMeasure a owl:ObjectProperty ;
-	rdfs:subPropertyOf :Security .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
-
-:SensitiveData a owl:ObjectProperty .
-# 
-# http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
-
-:Taxonomy a owl:ObjectProperty .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#align
 
 :align a owl:ObjectProperty .
@@ -577,6 +532,12 @@ xsd:date a rdfs:Datatype .
 # http://www.example.org/cm/igso/2023/igso-ddy#consistsOf
 
 :consistsOf a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#contentIsReferencedBy
+
+:contentIsReferencedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity ;
+	owl:inverseOf :referencesContentObject .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#controls
 
@@ -1081,6 +1042,25 @@ _:genid2 a owl:Restriction ;
 
 :monitors a owl:ObjectProperty .
 # 
+# http://www.example.org/cm/igso/2023/igso-ddy#offers
+
+:offers a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersPlatform
+
+:offersPlatform a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersProduct
+
+:offersProduct a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersService
+
+:offersService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
 # http://www.example.org/cm/igso/2023/igso-ddy#perform
 
 :perform a owl:ObjectProperty .
@@ -1191,18 +1171,43 @@ _:genid2 a owl:Restriction ;
 :providesSearchService a owl:ObjectProperty ;
 	rdfs:subPropertyOf :provides .
 # 
+# http://www.example.org/cm/igso/2023/igso-ddy#referencesContentObject
+
+:referencesContentObject a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity .
+# 
 # http://www.example.org/cm/igso/2023/igso-ddy#referentialIntegrity
 
 :referentialIntegrity a owl:ObjectProperty .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#requiresCompliaenceWith
+# http://www.example.org/cm/igso/2023/igso-ddy#requires
 
-:requiresCompliaenceWith a owl:ObjectProperty .
+:requires a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresComplianceLevel
+
+:requiresComplianceLevel a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresComplianceWith
+
+:requiresComplianceWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresDatabase
+
+:requiresDatabase a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
 
 :requiresReferentialIntegrity a owl:ObjectProperty ;
 	rdfs:subPropertyOf :referentialIntegrity .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresRelationalSchema
+
+:requiresRelationalSchema a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#satisfies
 
@@ -1234,15 +1239,18 @@ _:genid2 a owl:Restriction ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
 
-:validateAuthenticity a owl:ObjectProperty .
+:validateAuthenticity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateCompleteness
 
-:validateCompleteness a owl:ObjectProperty .
+:validateCompleteness a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateCompliance
 
-:validateCompliance a owl:ObjectProperty .
+:validateCompliance a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateComplianceLevel
 
@@ -1251,15 +1259,17 @@ _:genid2 a owl:Restriction ;
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateConsistency
 
-:validateConsistency a owl:ObjectProperty .
+:validateConsistency a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#validateProvenance
 
-:validateProvenance a owl:ObjectProperty .
+:validateProvenance a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
 # 
-# http://www.example.org/cm/igso/2023/igso-org#Goal
+# http://www.example.org/cm/igso/2023/igso-ddy#validates
 
-igso-org:Goal a owl:ObjectProperty .
+:validates a owl:ObjectProperty .
 # 
 # http://www.w3.org/ns/dcat#catalog
 
@@ -1877,24 +1887,39 @@ _:genid3 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-ddy#Project
 
 :Project a owl:Class ;
-	rdfs:subClassOf _:genid7 .
+	owl:equivalentClass _:genid7 .
 
-_:genid7 a owl:Restriction ;
+_:genid7 owl:intersectionOf _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first _:genid13 .
+
+_:genid13 a owl:Restriction ;
 	owl:onProperty :ProjName ;
 	owl:someValuesFrom rdfs:Literal .
 
-:Project rdfs:subClassOf _:genid8 .
+_:genid12 rdf:rest _:genid10 .
 
-_:genid8 a owl:Restriction ;
+_:genid10 a rdf:List ;
+	rdf:first _:genid11 .
+
+_:genid11 a owl:Restriction ;
 	owl:onProperty :ProjNumber ;
 	owl:someValuesFrom xsd:positiveInteger .
 
-:Project rdfs:subClassOf _:genid9 .
+_:genid10 rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first _:genid9 .
 
 _:genid9 a owl:Restriction ;
 	owl:onProperty :ProjID ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:positiveInteger .
+
+_:genid8 rdf:rest rdf:nil .
+
+_:genid7 a owl:Class .
 
 :Project rdfs:label "Project" .
 # 
@@ -1906,24 +1931,24 @@ _:genid9 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-ddy#Restriction
 
 :Restriction a owl:Class ;
-	owl:equivalentClass _:genid10 .
+	owl:equivalentClass _:genid14 .
 
-_:genid10 owl:intersectionOf _:genid13 .
+_:genid14 owl:intersectionOf _:genid17 .
 
-_:genid13 a rdf:List ;
+_:genid17 a rdf:List ;
 	rdf:first :Restriction ;
-	rdf:rest _:genid11 .
+	rdf:rest _:genid15 .
 
-_:genid11 a rdf:List ;
-	rdf:first _:genid12 .
+_:genid15 a rdf:List ;
+	rdf:first _:genid16 .
 
-_:genid12 a owl:Restriction ;
+_:genid16 a owl:Restriction ;
 	owl:onProperty :hasLocation ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-_:genid11 rdf:rest rdf:nil .
+_:genid15 rdf:rest rdf:nil .
 
-_:genid10 a owl:Class .
+_:genid14 a owl:Class .
 
 :Restriction rdfs:subClassOf :DataDictionary ;
 	:adapted_from <https://www.tandfonline.com/doi/full/10.1080/24751839.2019.1686681> ;
@@ -2495,19 +2520,19 @@ igso-org:Transformational a owl:NamedIndividual ;
 	rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> .
 # 
 
-_:genid14 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-_:genid15 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-_:genid16 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
-_:genid17 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-
 _:genid18 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid19 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid20 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid21 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid22 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -2524,8 +2549,8 @@ dct:Standard rdfs:label "Standard" ;
 	:definition "A reference point against which other things can be evaluated or compared." .
 # 
 
-dct:abstract cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
-	skos:definition "summary of the resource" ;
+dct:abstract skos:definition "summary of the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	rdfs:label "abstract" ;
 	rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 # 
@@ -2541,8 +2566,8 @@ dct:issued cmns-av:usageNote "This annotation is typically used to describe an a
 	rdfs:label "issued" .
 # 
 
-dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-	rdfs:label "modified" ;
+dct:modified rdfs:label "modified" ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "date on which the resource was most recently revised" .
 # 
 
@@ -2558,50 +2583,50 @@ dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 # 
 # 
 
-_:genid19 a owl:AllDisjointClasses ;
-	owl:members _:genid30 .
+_:genid23 a owl:AllDisjointClasses ;
+	owl:members _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first :ACL ;
+	rdf:rest _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :AWS ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first :Azure ;
+	rdf:rest _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first :CCS ;
+	rdf:rest _:genid30 .
 
 _:genid30 a rdf:List ;
-	rdf:first :ACL ;
+	rdf:first :DPO ;
 	rdf:rest _:genid29 .
 
 _:genid29 a rdf:List ;
-	rdf:first :AWS ;
+	rdf:first :ECS ;
 	rdf:rest _:genid28 .
 
 _:genid28 a rdf:List ;
-	rdf:first :Azure ;
+	rdf:first :GCP ;
 	rdf:rest _:genid27 .
 
 _:genid27 a rdf:List ;
-	rdf:first :CCS ;
+	rdf:first :IAS ;
 	rdf:rest _:genid26 .
 
 _:genid26 a rdf:List ;
-	rdf:first :DPO ;
+	rdf:first :IRS ;
 	rdf:rest _:genid25 .
 
 _:genid25 a rdf:List ;
-	rdf:first :ECS ;
+	rdf:first :OU ;
 	rdf:rest _:genid24 .
 
 _:genid24 a rdf:List ;
-	rdf:first :GCP ;
-	rdf:rest _:genid23 .
-
-_:genid23 a rdf:List ;
-	rdf:first :IAS ;
-	rdf:rest _:genid22 .
-
-_:genid22 a rdf:List ;
-	rdf:first :IRS ;
-	rdf:rest _:genid21 .
-
-_:genid21 a rdf:List ;
-	rdf:first :OU ;
-	rdf:rest _:genid20 .
-
-_:genid20 a rdf:List ;
 	rdf:first :RedHatCloud ;
 	rdf:rest rdf:nil .
 # 
