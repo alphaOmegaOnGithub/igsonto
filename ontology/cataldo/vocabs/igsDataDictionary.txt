@@ -1,30 +1,11 @@
 ### Classes
 A
 	Acronym
-		ACL
-		AWS
-		Azure
-		CCS
-		DPO
-		ECS
-		GCP
-		IRS
-		OU
-		RedHat
+		ACL, 		AWS 		Azure 		CCS 		DPO 		ECS 		GCP 		IRS 		OU 		RedHat
 C
-	Company
-	Compensation
-	Consistency
-	ContractualRelationship
-	Cooperation
-	CorporateRule
-	CorporatePolicy
+	Company 	Compensation 	Consistency 	ContractualRelationship 	Cooperation 	CorporateRule 	CorporatePolicy
 D
-	DataErasure
-	DataRetentionDuration
-	DataSubjectConsent
-	DataSubjectRight
-	DesirableBehavior
+	DataErasure 	DataRetentionDuration 	DataSubjectConsent 	DataSubjectRight 	DesirableBehavior
 E
 	EnhancedProtection
 G
@@ -32,60 +13,24 @@ G
 I
 	InformationRetrievalSystem
 L
-	LawfulBasis
-	LegalObligation
-	LegalRecourse
-	LegitimateInterest	
-	Liability
+	LawfulBasis 	LegalObligation 	LegalRecourse 	LegitimateInterest	 	Liability
 M
 	MaturityLevel
-		MaturityLevel1
-		MaturityLevel2
-		MaturityLevel3
-		MaturityLevel4
-		MaturityLevel5
-	Measure
-		MeasureOrganizational
-		MeasureTechnical
-		MeasureLegal
-		MeasureFunctional
-		MeasureSecurity
-		MeasurePrivacy
+		MaturityLevel1 		MaturityLevel2 		MaturityLevel3 		MaturityLevel4 		MaturityLevel5 	
+		Measure 		MeasureOrganizational 		MeasureTechnical 		MeasureLegal 		MeasureFunctional 		MeasureSecurity 		MeasurePrivacy
 O
 	Objectives
 P
-	PersonalDataTransfer
-	Privacy-friendlySetting
-	PrivacyBreaches
-	Procedure
-	ProcessingPurpose
-	Progress
-	PurposeOfProcessing
-R
+	PersonalDataTransfer 	Privacy-friendlySetting 	PrivacyBreaches 	Procedure 	ProcessingPurpose 	Progress 	PurposeOfProcessing
 	Record
-		RecordsCategory
-		RecordsTaxonomy
-		Remedy
+		RecordsCategory 		RecordsTaxonomy 
+	Remedy
 	Right
-		RightsRegardingAutomatedDecisions
-		RightsRegardingAutomatedProfiling
-		RightToAccess
-		RightToDataPortability
-		RightToErasure
-		RightObject
-		RightToRectification
-		RightToRestrictprocessing
-S
-	SecurityMeasure
-	SensitiveData
-	SpecialCategory
-	Strategy
-	SubProcessor
-T
+		RightsRegardingAutomatedDecisions 		RightsRegardingAutomatedProfiling 		RightToAccess 		RightToDataPortability 		RightToErasure 		RightObject 		RightToRectification 		RightToRestrictprocessing 
+	ProcessingWithAccuracy ProcessingWithIntegriry ProcessingWithConfidentiality ProcessingWithDataMinimization ProcessingWithFairness ProcessingWithTransparency ProcessingWithLawfulness ProcessingWithStorageLimitation		 
+	SecurityMeasure 	SensitiveData 	SpecialCategory 	Strategy 	SubProcessor
 	Taxonomy
-V
-	Violation
-	VitalInterest
+	Violation  	VitalInterest
 
 ###################################################	
 ### Object Properties
@@ -137,6 +82,7 @@ D
 		definesDesignOf
 		definesDesirable
 		definesMaturity
+		definesProcessingprinciplesFor 
 	dependsOn
 	develops
 	discloses
@@ -185,7 +131,7 @@ I
 		impliesRequirements
 	includes
 	is
-		isClassifiedAs	
+		isClassifiedAs	 
 		isAdministeredBy
 		isAnExpense
 		isCategorizedBy
@@ -222,29 +168,13 @@ I
 		isUsedBy
 L
 	limits
-		limitsPurpose
-		limitsStoragePeriod
-		limitsArchivePeriod
+		limitsPurpose 		limitsStoragePeriod 		limitsArchivePeriod
 M	
-	maintains
-	manages
-	mandates
-	measures
-	mandates
-	mayInvolve
-	minizeAmountOf
-	monitors	
+	maintains 	manages 	mandates 	measures 	mandates 	mayInvolve 	minizeAmountOf 	monitors	
 P		
 	perform
-		performs
-		performIimpactAssessment
-	persues
-	plans
-	processes
-	produces
-	profile
-	promotes
-	protects
+		performs 		performIimpactAssessment
+	persues 	plans 	processes 	produces 	profile 	promotes 	protects
 	provides
 		providesCatalogService
 		providesDatabaseService
@@ -255,17 +185,10 @@ P
 			providesRelationalIndexService
 			providesFulltextIndexService	
 R
-	referentialIntegrity
-		providesReferentialIntegrity
-		requiresReferentialIntegrity
+	referentialIntegrity 		providesReferentialIntegrity 		requiresReferentialIntegrity
 	requiresCompliaenceWith	
 S
-	satisfies
-	serves
-	specifies
-	subjectTo
-	submitts
-	supports
+	satisfies 	serves 	specifies 	subjectTo 	submitts 	supports
 T	
 	tests
 V
@@ -308,7 +231,7 @@ type
 ###################################################
 dc:creator
 ###################################################	
-### Dublin Core  Index of Terms
+### Dublin Core  Index of Terms 
 ###################################################
 Classes: 
 Agent, AgentClass, FileFormat, Frequency, Jurisdiction, Location, LocationPeriodOrJurisdiction, MediaType, MediaTypeOrExtent, MethodOfAccrual, MethodOfInstruction, PeriodOfTime, PhysicalMedium, PhysicalResource, Policy, ProvenanceStatement, RightsStatement, SizeOrDuration, Standard
