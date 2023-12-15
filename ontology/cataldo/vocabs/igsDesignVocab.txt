@@ -1,10 +1,11 @@
 ### Classes
-
-Repository
+Repository    a repository constsis of (domain: catalog; Range: Catalog) at least one BusinessObjectCatalog some catalog  
 Catalog
+	LibraryCatalog equevalent to BusinessObjectCatalog
 	ContentCatalog
 	RecordsCatalog
 	ContentObjectCatalog
+
 TransactionManagementComponent
 StorageManagementComponent
 ClassificationComponent
@@ -14,39 +15,13 @@ TransformationComponent
 IndexingComponent
 
 ### Architecture Design Domain
-Methods/Functions ( from Functioanl Requirements)
+Methods/Functions ( from Functioanl Requirements) Postefix: Method or alt:Function
 ComponentPattern
-Access
-Administer
-Archive
-Audit
-Classify
-Collect
-Control
-Dispose
-eDiscover
-Hold
-Load
-Manage
-Protect
-Privacy
-Query
-Record
-Retain
-Search
-Secure
-Store
-Transfer
-TwoPhaseCommitFunction
+Access, Administer Archive Audit Classify  Collect Control Dispose eDiscover Hold Load Manage Protect Privacy Query Record Retain Search Secure Store Transfer TwoPhaseCommitFunction
 
 ### Solutions
 Solutionpattern
-ArchiveSolution
-ECMSolution
-eDiscoverySolution
-RIMSolution
-InformationGovernanceSolution
-
+ArchiveSolution , ECMSolution eDiscoverySolution RIMSolution InformationGovernanceSolution
 
 ## ImplementationDomain
 ImplementationPattern
