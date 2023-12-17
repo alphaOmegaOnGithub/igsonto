@@ -41,8 +41,7 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
 <http://www.example.org/cm/igso/2023/igso-data#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
-	owl:versionInfo "0.8" .
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 # 
 # 
 # #################################################################
@@ -129,6 +128,11 @@ cmns-av:synonym a owl:AnnotationProperty .
 # #################################################################
 # 
 # 
+# http://www.example.org/cm/igso/2023/igso-data#isIndexOf
+
+:isIndexOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf igso-ddy:is .
+# 
 # http://www.example.org/cm/igso/2023/igso-data#isIndexedBy
 
 :isIndexedBy a owl:ObjectProperty ;
@@ -205,6 +209,12 @@ dct:Policy a owl:Class ;
 	rdfs:subClassOf :MetadataType ;
 	rdfs:label "AccessControlList" ;
 	cmns-av:synonym "ACL" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#AccessManagement.RC
+
+:AccessManagement.RC a owl:Class ;
+	rdfs:subClassOf :RecordsCategory ;
+	rdfs:label "010/-AccessManagement.RC" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#AssetType
 
@@ -345,12 +355,22 @@ _:genid22 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#BusinessData
 
 :BusinessData a owl:Class ;
-	rdfs:subClassOf :DataType .
+	rdfs:subClassOf :DataType , _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty igso-ddy:isClassifiedBy ;
+	owl:allValuesFrom :ClassificationScheme .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#BusinessPartnerData
 
 :BusinessPartnerData a owl:Class ;
 	rdfs:subClassOf :BusinessData .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#CategoryType
+
+:CategoryType a owl:Class ;
+	rdfs:subClassOf :DataType ;
+	rdfs:label "CategoryType" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#ClassificationScheme
 
@@ -367,7 +387,37 @@ _:genid22 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#ContentCatalog
 
 :ContentCatalog a owl:Class ;
-	rdfs:subClassOf :DataType .
+	rdfs:subClassOf :DataType , dcat:Catalog , _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty igso-ddy:ensuresReferentialIntegrityWith ;
+	owl:someValuesFrom :ObjectCatalog .
+
+:ContentCatalog rdfs:subClassOf _:genid31 .
+
+_:genid31 a owl:Restriction ;
+	owl:onProperty igso-ddy:impliesImplementationOf ;
+	owl:someValuesFrom :RelationalSchema .
+
+:ContentCatalog rdfs:subClassOf _:genid32 .
+
+_:genid32 a owl:Restriction ;
+	owl:onProperty igso-ddy:requiresDatabase ;
+	owl:someValuesFrom :RelationalDatabase .
+
+:ContentCatalog rdfs:subClassOf _:genid33 .
+
+_:genid33 a owl:Restriction ;
+	owl:onProperty igso-ddy:requiresRelationalSchema ;
+	owl:someValuesFrom :RelationalSchema .
+
+:ContentCatalog rdfs:subClassOf _:genid34 .
+
+_:genid34 a owl:Restriction ;
+	owl:onProperty :isIndexOf ;
+	owl:allValuesFrom :ContentObject .
+
+:ContentCatalog rdfs:label "ContentCatalog" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#ContentLifecycle
 
@@ -377,27 +427,27 @@ _:genid22 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#ContentObject
 
 :ContentObject a owl:Class ;
-	rdfs:subClassOf :BusinessData , _:genid29 .
+	rdfs:subClassOf :BusinessData , _:genid35 .
 
-_:genid29 owl:intersectionOf _:genid33 .
+_:genid35 owl:intersectionOf _:genid39 .
 
-_:genid33 a rdf:List ;
+_:genid39 a rdf:List ;
 	rdf:first :ObjectType ;
-	rdf:rest _:genid30 .
+	rdf:rest _:genid36 .
 
-_:genid30 a rdf:List ;
-	rdf:first _:genid31 .
+_:genid36 a rdf:List ;
+	rdf:first _:genid37 .
 
-_:genid31 a owl:Class ;
-	owl:oneOf _:genid32 .
+_:genid37 a owl:Class ;
+	owl:oneOf _:genid38 .
 
-_:genid32 a rdf:List ;
+_:genid38 a rdf:List ;
 	rdf:first :DataObjectUnstructured ;
 	rdf:rest rdf:nil .
 
-_:genid30 rdf:rest rdf:nil .
+_:genid36 rdf:rest rdf:nil .
 
-_:genid29 a owl:Class .
+_:genid35 a owl:Class .
 
 :ContentObject rdfs:comment "A content object represents an electronic data object like office, PDF/A , images, audio and video files." ;
 	rdfs:label "ContentObject" .
@@ -425,7 +475,8 @@ _:genid29 a owl:Class .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#DataDomain
 
-:DataDomain a owl:Class .
+:DataDomain a owl:Class ;
+	rdfs:label "DataDomain" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#DataLifecycle
 
@@ -435,24 +486,24 @@ _:genid29 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#DataRisk
 
 :DataRisk a owl:Class ;
-	owl:equivalentClass _:genid34 .
+	owl:equivalentClass _:genid40 .
 
-_:genid34 a owl:Class ;
-	owl:oneOf _:genid38 .
+_:genid40 a owl:Class ;
+	owl:oneOf _:genid44 .
 
-_:genid38 a rdf:List ;
+_:genid44 a rdf:List ;
 	rdf:first :HighRisk ;
-	rdf:rest _:genid37 .
+	rdf:rest _:genid43 .
 
-_:genid37 a rdf:List ;
+_:genid43 a rdf:List ;
 	rdf:first :LowRisk ;
-	rdf:rest _:genid36 .
+	rdf:rest _:genid42 .
 
-_:genid36 a rdf:List ;
+_:genid42 a rdf:List ;
 	rdf:first :MediumRisk ;
-	rdf:rest _:genid35 .
+	rdf:rest _:genid41 .
 
-_:genid35 a rdf:List ;
+_:genid41 a rdf:List ;
 	rdf:first :NoRisk ;
 	rdf:rest rdf:nil .
 
@@ -467,24 +518,24 @@ _:genid35 a rdf:List ;
 # http://www.example.org/cm/igso/2023/igso-data#DataValue
 
 :DataValue a owl:Class ;
-	owl:equivalentClass _:genid39 .
+	owl:equivalentClass _:genid45 .
 
-_:genid39 a owl:Class ;
-	owl:oneOf _:genid43 .
+_:genid45 a owl:Class ;
+	owl:oneOf _:genid49 .
 
-_:genid43 a rdf:List ;
+_:genid49 a rdf:List ;
 	rdf:first :HighValue ;
-	rdf:rest _:genid42 .
+	rdf:rest _:genid48 .
 
-_:genid42 a rdf:List ;
+_:genid48 a rdf:List ;
 	rdf:first :LowValue ;
-	rdf:rest _:genid41 .
+	rdf:rest _:genid47 .
 
-_:genid41 a rdf:List ;
+_:genid47 a rdf:List ;
 	rdf:first :MediumValue ;
-	rdf:rest _:genid40 .
+	rdf:rest _:genid46 .
 
-_:genid40 a rdf:List ;
+_:genid46 a rdf:List ;
 	rdf:first :NoValue ;
 	rdf:rest rdf:nil .
 
@@ -539,31 +590,50 @@ _:genid40 a rdf:List ;
 # http://www.example.org/cm/igso/2023/igso-data#Document
 
 :Document a owl:Class ;
-	rdfs:subClassOf :BusinessData , _:genid44 .
+	rdfs:subClassOf :BusinessData , _:genid50 .
 
-_:genid44 owl:intersectionOf _:genid47 .
+_:genid50 owl:intersectionOf _:genid53 .
 
-_:genid47 a rdf:List ;
+_:genid53 a rdf:List ;
 	rdf:first :ContentObject ;
-	rdf:rest _:genid45 .
+	rdf:rest _:genid51 .
 
-_:genid45 a rdf:List ;
-	rdf:first _:genid46 .
+_:genid51 a rdf:List ;
+	rdf:first _:genid52 .
 
-_:genid46 a owl:Restriction ;
+_:genid52 a owl:Restriction ;
 	owl:onProperty igso-ddy:consistsOf ;
 	owl:someValuesFrom :MetadataType .
 
-_:genid45 rdf:rest rdf:nil .
+_:genid51 rdf:rest rdf:nil .
 
-_:genid44 a owl:Class .
+_:genid50 a owl:Class .
 
 :Document rdfs:label "Document" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#DocumentModel
+
+:DocumentModel a owl:Class ;
+	rdfs:subClassOf :ClassificationScheme ;
+	rdfs:isDefinedBy "href:tbd" ;
+	rdfs:label "DocumentModel" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#EvaluationAndDisposal.RC
+
+:EvaluationAndDisposal.RC a owl:Class ;
+	rdfs:subClassOf :RecordsCategory ;
+	rdfs:label "010/300/-EvaluationAndDisposal.RC" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#FulltextIndex
 
 :FulltextIndex a owl:Class ;
 	rdfs:subClassOf :Database .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#GovernmentRelation.RC
+
+:GovernmentRelation.RC a owl:Class ;
+	rdfs:subClassOf :RecordsCategory ;
+	rdfs:label "160/-GovernmentRelation.RC" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#HRAsset
 
@@ -606,6 +676,13 @@ _:genid44 a owl:Class .
 
 :InformationLifecycle a owl:Class ;
 	rdfs:subClassOf :LifecycleType .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#InformationManagement.RC
+
+:InformationManagement.RC a owl:Class ;
+	rdfs:subClassOf :RecordsCategory ;
+	rdfs:label "180/-InformationManagement.RC" ;
+	rdfs:seeAlso "href: tbd" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#KeyValueStorage
 
@@ -652,7 +729,7 @@ _:genid44 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#ObjectCatalog
 
 :ObjectCatalog a owl:Class ;
-	rdfs:subClassOf :DataType .
+	rdfs:subClassOf :DataType , dcat:Catalog .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#ObjectStore
 
@@ -662,20 +739,20 @@ _:genid44 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#ObjectType
 
 :ObjectType a owl:Class ;
-	owl:equivalentClass _:genid48 .
+	owl:equivalentClass _:genid54 .
 
-_:genid48 a owl:Class ;
-	owl:oneOf _:genid51 .
+_:genid54 a owl:Class ;
+	owl:oneOf _:genid57 .
 
-_:genid51 a rdf:List ;
+_:genid57 a rdf:List ;
 	rdf:first :DataObjectSemistructured ;
-	rdf:rest _:genid50 .
+	rdf:rest _:genid56 .
 
-_:genid50 a rdf:List ;
+_:genid56 a rdf:List ;
 	rdf:first :DataObjectStructured ;
-	rdf:rest _:genid49 .
+	rdf:rest _:genid55 .
 
-_:genid49 a rdf:List ;
+_:genid55 a rdf:List ;
 	rdf:first :DataObjectUnstructured ;
 	rdf:rest rdf:nil .
 
@@ -697,7 +774,41 @@ _:genid49 a rdf:List ;
 # http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
 
 :RecordsCatalog a owl:Class ;
-	rdfs:subClassOf :DataType .
+	rdfs:subClassOf :DataType , dcat:Catalog , _:genid58 .
+
+_:genid58 a owl:Restriction ;
+	owl:onProperty igso-ddy:clasifies ;
+	owl:someValuesFrom :BusinessData .
+
+:RecordsCatalog rdfs:subClassOf _:genid59 .
+
+_:genid59 a owl:Restriction ;
+	owl:onProperty igso-ddy:isComposedOf ;
+	owl:someValuesFrom :RecordsCategory .
+
+:RecordsCatalog rdfs:subClassOf _:genid60 .
+
+_:genid60 a owl:Restriction ;
+	owl:onProperty igso-ddy:isSearchable ;
+	owl:allValuesFrom :RelationalSchema .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#RecordsCategory
+
+:RecordsCategory a owl:Class ;
+	rdfs:subClassOf :CategoryType , _:genid61 .
+
+_:genid61 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Collections/isDirectPartOf> ;
+	owl:someValuesFrom :RecordsCatalog .
+
+:RecordsCategory rdfs:label "RecordsCategory" ;
+	rdfs:seeAlso "href: tbd" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#RecordsPlan
+
+:RecordsPlan a owl:Class ;
+	rdfs:subClassOf :ClassificationScheme ;
+	rdfs:label "RecordsPlan" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#RefenceDocument
 
@@ -714,24 +825,24 @@ _:genid49 a rdf:List ;
 # http://www.example.org/cm/igso/2023/igso-data#RelationalDatabase
 
 :RelationalDatabase a owl:Class ;
-	owl:equivalentClass _:genid52 .
+	owl:equivalentClass _:genid62 .
 
-_:genid52 owl:intersectionOf _:genid55 .
+_:genid62 owl:intersectionOf _:genid65 .
 
-_:genid55 a rdf:List ;
+_:genid65 a rdf:List ;
 	rdf:first :Database ;
-	rdf:rest _:genid53 .
+	rdf:rest _:genid63 .
 
-_:genid53 a rdf:List ;
-	rdf:first _:genid54 .
+_:genid63 a rdf:List ;
+	rdf:first _:genid64 .
 
-_:genid54 a owl:Restriction ;
+_:genid64 a owl:Restriction ;
 	owl:onProperty igso-ddy:isComposedOf ;
 	owl:someValuesFrom :RelationalSchema .
 
-_:genid53 rdf:rest rdf:nil .
+_:genid63 rdf:rest rdf:nil .
 
-_:genid52 a owl:Class .
+_:genid62 a owl:Class .
 
 :RelationalDatabase rdfs:subClassOf :Database .
 # 
@@ -748,9 +859,9 @@ _:genid52 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#RetensionRecord
 
 :RetensionRecord a owl:Class ;
-	rdfs:subClassOf :RetentionType , _:genid56 .
+	rdfs:subClassOf :RetentionType , _:genid66 .
 
-_:genid56 a owl:Restriction ;
+_:genid66 a owl:Restriction ;
 	owl:onProperty igso-ddy:consistsOf ;
 	owl:someValuesFrom :RetentionPolicy .
 # 
@@ -763,23 +874,23 @@ _:genid56 a owl:Restriction ;
 # http://www.example.org/cm/igso/2023/igso-data#RetentionPolicy
 
 :RetentionPolicy a owl:Class ;
-	rdfs:subClassOf :Policy , _:genid57 .
+	rdfs:subClassOf :Policy , _:genid67 .
 
-_:genid57 a owl:Restriction ;
+_:genid67 a owl:Restriction ;
 	owl:onProperty igso-ddy:consistsOf ;
-	owl:someValuesFrom _:genid58 .
+	owl:someValuesFrom _:genid68 .
 
-_:genid58 owl:intersectionOf _:genid60 .
+_:genid68 owl:intersectionOf _:genid70 .
 
-_:genid60 a rdf:List ;
+_:genid70 a rdf:List ;
 	rdf:first :RetentionRule ;
-	rdf:rest _:genid59 .
+	rdf:rest _:genid69 .
 
-_:genid59 a rdf:List ;
+_:genid69 a rdf:List ;
 	rdf:first :RetentionSchedule ;
 	rdf:rest rdf:nil .
 
-_:genid58 a owl:Class .
+_:genid68 a owl:Class .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#RetentionRule
 
@@ -789,24 +900,24 @@ _:genid58 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-data#RetentionSchedule
 
 :RetentionSchedule a owl:Class ;
-	rdfs:subClassOf :RetentionType , _:genid61 .
+	rdfs:subClassOf :RetentionType , _:genid71 .
 
-_:genid61 owl:intersectionOf _:genid64 .
+_:genid71 owl:intersectionOf _:genid74 .
 
-_:genid64 a rdf:List ;
+_:genid74 a rdf:List ;
 	rdf:first :Schedule ;
-	rdf:rest _:genid62 .
+	rdf:rest _:genid72 .
 
-_:genid62 a rdf:List ;
-	rdf:first _:genid63 .
+_:genid72 a rdf:List ;
+	rdf:first _:genid73 .
 
-_:genid63 a owl:Restriction ;
+_:genid73 a owl:Restriction ;
 	owl:onProperty igso-ddy:includes ;
 	owl:someValuesFrom :RetentionPeriod .
 
-_:genid62 rdf:rest rdf:nil .
+_:genid72 rdf:rest rdf:nil .
 
-_:genid61 a owl:Class .
+_:genid71 a owl:Class .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#RetentionTrigger
 
@@ -836,6 +947,12 @@ _:genid61 a owl:Class .
 :Schedule a owl:Class ;
 	rdfs:subClassOf :DataType ;
 	rdfs:label "Schedule" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#SensitiveData
+
+:SensitiveData a owl:Class ;
+	rdfs:subClassOf :DataType ;
+	rdfs:label "SensitiveData" .
 # 
 # http://www.example.org/cm/igso/2023/igso-data#StorageInformation
 
@@ -1431,19 +1548,19 @@ igso-org:Transformational a owl:NamedIndividual ;
 	rdfs:label "Transformational"@en .
 # 
 
-_:genid65 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid75 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid66 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid76 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid67 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid77 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid68 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid78 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid69 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid79 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -1467,111 +1584,71 @@ igso-ddy:ACL cmns-av:synonym "Synonym of Access Control List" .
 # 
 # 
 
-_:genid70 a owl:AllDisjointClasses ;
-	owl:members _:genid77 .
+_:genid80 a owl:AllDisjointClasses ;
+	owl:members _:genid84 .
 
-_:genid77 a rdf:List ;
+_:genid84 a rdf:List ;
+	rdf:first :AccessManagement.RC ;
+	rdf:rest _:genid83 .
+
+_:genid83 a rdf:List ;
+	rdf:first :EvaluationAndDisposal.RC ;
+	rdf:rest _:genid82 .
+
+_:genid82 a rdf:List ;
+	rdf:first :GovernmentRelation.RC ;
+	rdf:rest _:genid81 .
+
+_:genid81 a rdf:List ;
+	rdf:first :InformationManagement.RC ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid85 a owl:AllDisjointClasses ;
+	owl:members _:genid92 .
+
+_:genid92 a rdf:List ;
 	rdf:first :BusinessAsset ;
-	rdf:rest _:genid76 .
+	rdf:rest _:genid91 .
 
-_:genid76 a rdf:List ;
+_:genid91 a rdf:List ;
 	rdf:first :ContentAsset ;
-	rdf:rest _:genid75 .
+	rdf:rest _:genid90 .
 
-_:genid75 a rdf:List ;
+_:genid90 a rdf:List ;
 	rdf:first :DataAsset ;
-	rdf:rest _:genid74 .
+	rdf:rest _:genid89 .
 
-_:genid74 a rdf:List ;
+_:genid89 a rdf:List ;
 	rdf:first :DesignAsset ;
-	rdf:rest _:genid73 .
+	rdf:rest _:genid88 .
 
-_:genid73 a rdf:List ;
+_:genid88 a rdf:List ;
 	rdf:first :HRAsset ;
-	rdf:rest _:genid72 .
+	rdf:rest _:genid87 .
 
-_:genid72 a rdf:List ;
+_:genid87 a rdf:List ;
 	rdf:first :IPAsset ;
-	rdf:rest _:genid71 .
+	rdf:rest _:genid86 .
 
-_:genid71 a rdf:List ;
+_:genid86 a rdf:List ;
 	rdf:first :ITAsset ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid78 a owl:AllDisjointClasses ;
-	owl:members _:genid81 .
-
-_:genid81 a rdf:List ;
-	rdf:first :ContentCatalog ;
-	rdf:rest _:genid80 .
-
-_:genid80 a rdf:List ;
-	rdf:first :ObjectCatalog ;
-	rdf:rest _:genid79 .
-
-_:genid79 a rdf:List ;
-	rdf:first :RecordsCatalog ;
-	rdf:rest rdf:nil .
-# 
-
-_:genid82 a owl:AllDisjointClasses ;
-	owl:members _:genid86 .
-
-_:genid86 a rdf:List ;
-	rdf:first :ContentLifecycle ;
-	rdf:rest _:genid85 .
-
-_:genid85 a rdf:List ;
-	rdf:first :DataLifecycle ;
-	rdf:rest _:genid84 .
-
-_:genid84 a rdf:List ;
-	rdf:first :InformationLifecycle ;
-	rdf:rest _:genid83 .
-
-_:genid83 a rdf:List ;
-	rdf:first :StorageLifecycle ;
-	rdf:rest rdf:nil .
-# 
-
-_:genid87 a owl:AllDisjointClasses ;
-	owl:members _:genid91 .
-
-_:genid91 a rdf:List ;
-	rdf:first :DispositionTrigger ;
-	rdf:rest _:genid90 .
-
-_:genid90 a rdf:List ;
-	rdf:first :RetentionTrigger ;
-	rdf:rest _:genid89 .
-
-_:genid89 a rdf:List ;
-	rdf:first :StorageMigrationTrigger ;
-	rdf:rest _:genid88 .
-
-_:genid88 a rdf:List ;
-	rdf:first :TransferTrigger ;
-	rdf:rest rdf:nil .
-# 
-
-_:genid92 a owl:AllDisjointClasses ;
+_:genid93 a owl:AllDisjointClasses ;
 	owl:members _:genid96 .
 
 _:genid96 a rdf:List ;
-	rdf:first :LegalDocument ;
+	rdf:first :ContentCatalog ;
 	rdf:rest _:genid95 .
 
 _:genid95 a rdf:List ;
-	rdf:first :Notice ;
+	rdf:first :ObjectCatalog ;
 	rdf:rest _:genid94 .
 
 _:genid94 a rdf:List ;
-	rdf:first :RefenceDocument ;
-	rdf:rest _:genid93 .
-
-_:genid93 a rdf:List ;
-	rdf:first :Report ;
+	rdf:first :RecordsCatalog ;
 	rdf:rest rdf:nil .
 # 
 
@@ -1579,19 +1656,19 @@ _:genid97 a owl:AllDisjointClasses ;
 	owl:members _:genid101 .
 
 _:genid101 a rdf:List ;
-	rdf:first :NewSQLDatabase ;
+	rdf:first :ContentLifecycle ;
 	rdf:rest _:genid100 .
 
 _:genid100 a rdf:List ;
-	rdf:first :NoSQLDatabase ;
+	rdf:first :DataLifecycle ;
 	rdf:rest _:genid99 .
 
 _:genid99 a rdf:List ;
-	rdf:first :RelationalSchema ;
+	rdf:first :InformationLifecycle ;
 	rdf:rest _:genid98 .
 
 _:genid98 a rdf:List ;
-	rdf:first :SQLDatabase ;
+	rdf:first :StorageLifecycle ;
 	rdf:rest rdf:nil .
 # 
 
@@ -1599,34 +1676,94 @@ _:genid102 a owl:AllDisjointClasses ;
 	owl:members _:genid106 .
 
 _:genid106 a rdf:List ;
-	rdf:first :StorageInformation ;
+	rdf:first :DispositionTrigger ;
 	rdf:rest _:genid105 .
 
 _:genid105 a rdf:List ;
-	rdf:first :StorageLocation ;
+	rdf:first :RetentionTrigger ;
 	rdf:rest _:genid104 .
 
 _:genid104 a rdf:List ;
-	rdf:first :StoragePolicy ;
+	rdf:first :StorageMigrationTrigger ;
 	rdf:rest _:genid103 .
 
 _:genid103 a rdf:List ;
-	rdf:first :StorageRule ;
+	rdf:first :TransferTrigger ;
 	rdf:rest rdf:nil .
 # 
 
 _:genid107 a owl:AllDisjointClasses ;
-	owl:members _:genid110 .
+	owl:members _:genid111 .
+
+_:genid111 a rdf:List ;
+	rdf:first :LegalDocument ;
+	rdf:rest _:genid110 .
 
 _:genid110 a rdf:List ;
-	rdf:first :TranferRecord ;
+	rdf:first :Notice ;
 	rdf:rest _:genid109 .
 
 _:genid109 a rdf:List ;
-	rdf:first :TransferPolicy ;
+	rdf:first :RefenceDocument ;
 	rdf:rest _:genid108 .
 
 _:genid108 a rdf:List ;
+	rdf:first :Report ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid112 a owl:AllDisjointClasses ;
+	owl:members _:genid116 .
+
+_:genid116 a rdf:List ;
+	rdf:first :NewSQLDatabase ;
+	rdf:rest _:genid115 .
+
+_:genid115 a rdf:List ;
+	rdf:first :NoSQLDatabase ;
+	rdf:rest _:genid114 .
+
+_:genid114 a rdf:List ;
+	rdf:first :RelationalSchema ;
+	rdf:rest _:genid113 .
+
+_:genid113 a rdf:List ;
+	rdf:first :SQLDatabase ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid117 a owl:AllDisjointClasses ;
+	owl:members _:genid121 .
+
+_:genid121 a rdf:List ;
+	rdf:first :StorageInformation ;
+	rdf:rest _:genid120 .
+
+_:genid120 a rdf:List ;
+	rdf:first :StorageLocation ;
+	rdf:rest _:genid119 .
+
+_:genid119 a rdf:List ;
+	rdf:first :StoragePolicy ;
+	rdf:rest _:genid118 .
+
+_:genid118 a rdf:List ;
+	rdf:first :StorageRule ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid122 a owl:AllDisjointClasses ;
+	owl:members _:genid125 .
+
+_:genid125 a rdf:List ;
+	rdf:first :TranferRecord ;
+	rdf:rest _:genid124 .
+
+_:genid124 a rdf:List ;
+	rdf:first :TransferPolicy ;
+	rdf:rest _:genid123 .
+
+_:genid123 a rdf:List ;
 	rdf:first :TransferRule ;
 	rdf:rest rdf:nil .
 # 

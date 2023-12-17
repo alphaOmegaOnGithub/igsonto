@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1702464987038" name="http://www.w3.org/ns/prov" uri="prov-o-20130430.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1702464987038" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBODev/" uri="AboutFIBODev.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1702464987038" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd-IncludingReferenceData/" uri="AboutFIBOProd-IncludingReferenceData.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1702464987038" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd-TBoxOnly/" uri="AboutFIBOProd-TBoxOnly.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1702464987038" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd/" uri="AboutFIBOProd.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="http://www.w3.org/ns/prov" uri="prov-o-20130430.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBODev/" uri="AboutFIBODev.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd-IncludingReferenceData/" uri="AboutFIBOProd-IncludingReferenceData.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd-TBoxOnly/" uri="AboutFIBOProd-TBoxOnly.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="https://spec.edmcouncil.org/fibo/ontology/AboutFIBOProd/" uri="AboutFIBOProd.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1702820406594" name="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/" uri="Agents.rdf"/>
     </group>
 </catalog>

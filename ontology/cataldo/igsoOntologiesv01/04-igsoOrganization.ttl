@@ -688,7 +688,8 @@ _:genid29 a owl:Class .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OrganizationDomain
 
-:OrganizationDomain a owl:Class .
+:OrganizationDomain a owl:Class ;
+	rdfs:label "OrganizationDomain" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OrganizationalUnit
 

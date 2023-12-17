@@ -1,0 +1,125 @@
+Define PersonalDataStructure --- DataModel (MasterDataManageement) Schema, Databasem DBMS, .... 
+
+BindingCorporateRules  --- Rule, Coprorate Rules, Rules Engine, to enforce  personal data protection policies by controller and processors that apply to personal data transfers 
+
+Consent of the DataSubject  op: isConsentOf means freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;
+
+Controller  -> means determines ProcessingPurpose
+
+Enterprise means a natural or legal person engaged in an economic activity 
+	MainEstablishment isMainSiteOf
+FilingSystem -> Personal Data {Content, Metadata, Records, Assets}
+GroupOfUndertakings 
+InformationSocietyService 
+InternationalOrganisation
+PersonalData
+	GeneticData 
+	HealthData  	DataConcerningHealth 
+	BiometricData 
+PersonalDataBreach 
+Processing PersonalDataProcessing - monitoring / auditing / 
+	Cross-borderProcessing 
+	RestrictionOfProcessing, ProcessingRestriction   .. Consent, process supervision  
+Processor 
+Profiling 	->  
+Pseudonymisation  ->
+RelevantAndReasonedObjection 
+Representative 
+SupervisoryAuthority  
+SupervisoryAuthorityConcerned  
+ThirdParty 
+###########################
+## Regulatory Requirements
+#########################################
+Implement 
+	ImplementSecurityMeasure
+	ImplementManageDataSubjectConsent
+	ImplementDataProcessingRestrictionMeasure
+	AllowLegalRecourse 
+	Support Enterprise with MainEstablishment and Remote Locations, Storage Location, BackupLocation
+	Cross-borderDataTransfer
+	CooperateWithSupervisoryAuthority
+	EnsureAccountabilityOfDataController
+	EnsureAccountabilityOfDataProcessor
+	EnsureAccuracyOfData
+	EnsureConfidentialityOfData
+	EnsureIntegrityOfData
+	FulfillConsentRequirement
+	LimitPurposeDataProcessing
+	LimitStoragePeriod
+	MinimizeData
+	CaptureRecordsOfDataProcessingActivity
+	FairnessDataProcessing
+	LawfulnessDataProcessing
+	TransparencyOfDataProcessing
+	DesirableBehavior
+	AppointDataProtectionOfficer
+	NotifyOfPersonalDataBreach
+	PerformDataProtectionImpactAssessment
+	LegitimateInterest
+	RightRelatedToAutomatedDecision-making
+	RightRelatedToAutomatedProfiling
+	RightToAccess
+	RightToBeForgotten
+	RightToBeInformed
+	RightToDataPortability
+	RightToErasure
+	RightToObject
+	RightToRectification
+	RightToRestrictProcessing
+
+###########################
+## Functional Requirements
+#########################################
+	ImplementSecurityMeasure
+	ImplementManageDataSubjectConsent
+	ImplementDataProcessingRestrictionMeasure
+	AllowLegalRecourse 
+	Support Enterprise with MainEstablishment and Remote Locations, Storage Location, BackupLocation
+	Cross-borderDataTransfer
+	CooperateWithSupervisoryAuthority
+	EnsureAccountabilityOfDataController
+	EnsureAccountabilityOfDataProcessor
+	EnsureAccuracyOfData
+	EnsureConfidentialityOfData
+	EnsureIntegrityOfData
+	FulfillConsentRequirement
+	LimitPurposeDataProcessing
+	LimitStoragePeriod
+	MinimizeData
+	CaptureRecordsOfDataProcessingActivity
+	FairnessDataProcessing
+	LawfulnessDataProcessing
+	TransparencyOfDataProcessing
+	DesirableBehavior
+	AppointDataProtectionOfficer
+	NotifyOfPersonalDataBreach
+	PerformDataProtectionImpactAssessment
+	LegitimateInterest
+	RightRelatedToAutomatedDecision-making
+	RightRelatedToAutomatedProfiling
+	RightToAccess
+	RightToBeForgotten
+	RightToBeInformed
+	RightToDataPortability
+	RightToErasure
+	RightToObject
+	RightToRectification
+	RightToRestrictProcessing
+
+###########################
+## Non-Functional Requirements
+#########################################	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
