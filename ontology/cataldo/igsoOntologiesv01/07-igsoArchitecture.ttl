@@ -64,7 +64,8 @@
 # 
 # http://www.example.org/cm/igso/2023/igso-arc#ArchitectureDesignDomain
 
-:ArchitectureDesignDomain a owl:Class .
+:ArchitectureDesignDomain a owl:Class ;
+	rdfs:label "ArchitectureDesignDomain" .
 # 
 # http://www.example.org/cm/igso/2023/igso-arc#ArchiveMethod
 

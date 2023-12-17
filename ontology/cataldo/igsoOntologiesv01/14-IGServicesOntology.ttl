@@ -305,8 +305,7 @@ igso-ddy:SecurityMeasure rdf:type owl:Class ;
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
-igso-ddy:SensitiveData rdf:type owl:Class ;
-                       rdfs:subClassOf igso-jur:RegulatoryDomain .
+igso-ddy:SensitiveData rdf:type owl:Class .
 
 
 ###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
@@ -629,6 +628,10 @@ igso-org:SmallCompany rdf:type owl:NamedIndividual ,
 [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
   foaf:name "Cataldo Mega"
 ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
 
 [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
    foaf:name "Cataldo Mega"
