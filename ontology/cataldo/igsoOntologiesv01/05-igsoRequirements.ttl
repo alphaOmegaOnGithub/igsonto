@@ -31,95 +31,385 @@
 @prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
 @prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+@base <http://www.example.org/cm/igso/2023/igso-req#> .
 
-<http://www.example.org/cm/igso/2023/igso-req#> a owl:Ontology ;
-	owl:imports <http://www.example.org/cm/igso/2023/igso-ddy#> , <http://www.example.org/cm/igso/2023/igso-org#> ;
-	dct:created "2010-05-28"^^xsd:date ;
-	dct:creator _:genid1 ;
-	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
-	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
-# 
-# 
-# #################################################################
-# #
-# #    Classes
-# #
-# #################################################################
-# 
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Administration
+<http://www.example.org/cm/igso/2023/igso-req#> rdf:type owl:Ontology ;
+                                                 owl:imports igso-ddy: ,
+                                                             igso-org: ;
+                                                 dct:created "2010-05-28"^^xsd:date ;
+                                                 dct:creator [ ] ;
+dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
 
-:Administration a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Disposision
+#################################################################
+#    Classes
+#################################################################
 
-:Disposision a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#FunctionalRequirement
+###  http://www.example.org/cm/igso/2023/igso-jur#RegulatoryRequirementType
+igso-jur:RegulatoryRequirementType owl:equivalentClass :RegulatoryRequirement .
 
-:FunctionalRequirement a owl:Class ;
-	rdfs:subClassOf :RequirementDomain .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#LoadBalancing
 
-:LoadBalancing a owl:Class ;
-	rdfs:subClassOf :Non-FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Management
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Access
+:FR.Access rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty igso-ddy:isRelatedTo ;
+                             owl:someValuesFrom igso-jur:RR.RightToAccess
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty igso-ddy:isRelatedTo ;
+                             owl:someValuesFrom igso-jur:RR.RightToRectification
+                           ] ;
+           rdfs:label "FR.Access" .
 
-:Management a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Non-FunctionalRequirement
 
-:Non-FunctionalRequirement a owl:Class ;
-	rdfs:subClassOf :RequirementDomain .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#RegulatoryRequirement
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Administration
+:FR.Administration rdf:type owl:Class ;
+                   rdfs:subClassOf :FunctionalRequirement ;
+                   rdfs:label "FR.Administration" .
 
-:RegulatoryRequirement a owl:Class ;
-	rdfs:subClassOf :RequirementDomain .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#RequirementDomain
 
-:RequirementDomain a owl:Class .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Retaintion
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Archive
+:FR.Archive rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Archive" .
 
-:Retaintion a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Security
 
-:Security a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#Transfer
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Audit
+:FR.Audit rdf:type owl:Class ;
+          rdfs:subClassOf :FunctionalRequirement ;
+          rdfs:label "FR.Audit" .
 
-:Transfer a owl:Class ;
-	rdfs:subClassOf :FunctionalRequirement .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#UseCase
 
-:UseCase a owl:Class ;
-	rdfs:subClassOf :UseCaseScenario .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#UseCaseScenario
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Classify
+:FR.Classify rdf:type owl:Class ;
+             rdfs:subClassOf :FunctionalRequirement ;
+             rdfs:label "FR.Classify" .
 
-:UseCaseScenario a owl:Class ;
-	rdfs:subClassOf :RequirementDomain .
-# 
-# http://www.example.org/cm/igso/2023/igso-req#UserStory
 
-:UserStory a owl:Class ;
-	rdfs:subClassOf :RequirementDomain .
-# 
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Collect
+:FR.Collect rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Collect" .
 
-_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
 
-_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
-# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Control
+:FR.Control rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Control" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Dispose
+:FR.Dispose rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Dispose" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Hold
+:FR.Hold rdf:type owl:Class ;
+         rdfs:subClassOf :FunctionalRequirement ;
+         rdfs:label "FR.Hold" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Load
+:FR.Load rdf:type owl:Class ;
+         rdfs:subClassOf :FunctionalRequirement ;
+         rdfs:label "FR.Load" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Manage
+:FR.Manage rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ;
+           rdfs:label "FR.Manage" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Privacy
+:FR.Privacy rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Privacy" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Protect
+:FR.Protect rdf:type owl:Class ;
+            rdfs:subClassOf :FunctionalRequirement ;
+            rdfs:label "FR.Protect" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Query
+:FR.Query rdf:type owl:Class ;
+          rdfs:subClassOf :FunctionalRequirement ;
+          rdfs:label "FR.Query" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Record
+:FR.Record rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ;
+           rdfs:label "FR.Record" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.ReferentialIntegrity
+:FR.ReferentialIntegrity rdf:type owl:Class ;
+                         rdfs:subClassOf :FunctionalRequirement ;
+                         rdfs:label "FR.ReferentialIntegrity" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Replicate
+:FR.Replicate rdf:type owl:Class ;
+              rdfs:subClassOf :FunctionalRequirement ;
+              rdfs:label "FR.Replicate" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Retain
+:FR.Retain rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ;
+           rdfs:label "FR.Retain" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Search
+:FR.Search rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ;
+           rdfs:label "FR.Search" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Secure
+:FR.Secure rdf:type owl:Class ;
+           rdfs:subClassOf :FunctionalRequirement ;
+           rdfs:label "FR.Secure" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Store
+:FR.Store rdf:type owl:Class ;
+          rdfs:subClassOf :FunctionalRequirement ;
+          rdfs:label "FR.Store" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.TransactionSupport
+:FR.TransactionSupport rdf:type owl:Class ;
+                       rdfs:subClassOf :FunctionalRequirement ;
+                       rdfs:label "FR.TransactionSupport" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.Transfer
+:FR.Transfer rdf:type owl:Class ;
+             rdfs:subClassOf :FunctionalRequirement ;
+             rdfs:label "FR.Transfer" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FR.eDiscover
+:FR.eDiscover rdf:type owl:Class ;
+              rdfs:subClassOf :FunctionalRequirement ;
+              rdfs:label "FR.eDiscover" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#FunctionalRequirement
+:FunctionalRequirement rdf:type owl:Class ;
+                       rdfs:subClassOf :RequirementDomain ;
+                       rdfs:label "FunctionalRequirement" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Availability
+:NFR.Availability rdf:type owl:Class ;
+                  rdfs:subClassOf :Non-FunctionalRequirement ;
+                  rdfs:label "NFR.Availability" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Backup
+:NFR.Backup rdf:type owl:Class ;
+            rdfs:subClassOf :Non-FunctionalRequirement ;
+            rdfs:label "NFR.Backup" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.DisasterRecovery
+:NFR.DisasterRecovery rdf:type owl:Class ;
+                      rdfs:subClassOf :Non-FunctionalRequirement ;
+                      rdfs:label "NFR.DisasterRecovery" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.DynamicScale
+:NFR.DynamicScale rdf:type owl:Class ;
+                  rdfs:subClassOf :NFR.Scale ;
+                  rdfs:label "NFR.DynamicScale" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Elasticity
+:NFR.Elasticity rdf:type owl:Class ;
+                rdfs:subClassOf :Non-FunctionalRequirement ;
+                rdfs:label "NFR.Elasticity" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.HighAvailability
+:NFR.HighAvailability rdf:type owl:Class ;
+                      rdfs:subClassOf :NFR.Availability ;
+                      rdfs:label "NFR.HighAvailability" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.LoadbBalacing
+:NFR.LoadbBalacing rdf:type owl:Class ;
+                   rdfs:subClassOf :Non-FunctionalRequirement ;
+                   rdfs:label "NFR.LoadbBalacing" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Recovery
+:NFR.Recovery rdf:type owl:Class ;
+              rdfs:subClassOf :Non-FunctionalRequirement ;
+              rdfs:label "NFR.Recovery" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.ReferentialIntegrity
+:NFR.ReferentialIntegrity rdf:type owl:Class ;
+                          rdfs:subClassOf :NFR.TransactionSupport ;
+                          rdfs:label "NFR.ReferentialIntegrity" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Resiliency
+:NFR.Resiliency rdf:type owl:Class ;
+                rdfs:subClassOf :Non-FunctionalRequirement ;
+                rdfs:label "NFR.Resiliency" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Restore
+:NFR.Restore rdf:type owl:Class ;
+             rdfs:subClassOf :Non-FunctionalRequirement ;
+             rdfs:label "NFR.Restore" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.Scale
+:NFR.Scale rdf:type owl:Class ;
+           rdfs:subClassOf :Non-FunctionalRequirement ;
+           rdfs:label "NFR.Scale" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.ServiceLevelAgreement
+:NFR.ServiceLevelAgreement rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                 owl:oneOf ( :Bronze
+                                                             :Gold
+                                                             :Platinum
+                                                             :Silver
+                                                           )
+                                               ] ;
+                           rdfs:subClassOf :NFR.ServiceQuality ;
+                           rdfs:label "NFR.ServiceLevelAgreement" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.ServiceQuality
+:NFR.ServiceQuality rdf:type owl:Class ;
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:oneOf ( :Basic
+                                                      :Enterprise
+                                                      :Free
+                                                      :SME
+                                                    )
+                                        ] ;
+                    rdfs:subClassOf :Non-FunctionalRequirement ;
+                    rdfs:label "NFR.ServiceQuality" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.TransactionSupport
+:NFR.TransactionSupport rdf:type owl:Class ;
+                        rdfs:subClassOf :Non-FunctionalRequirement ;
+                        rdfs:label "NFR.TransactionSupport" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#NFR.TwoPhaseCommit
+:NFR.TwoPhaseCommit rdf:type owl:Class ;
+                    rdfs:subClassOf :NFR.TransactionSupport ;
+                    rdfs:label "NFR.TwoPhaseCommit" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Non-FunctionalRequirement
+:Non-FunctionalRequirement rdf:type owl:Class ;
+                           rdfs:subClassOf :RequirementDomain ;
+                           rdfs:label "Non-FunctionalRequirement" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#RegulatoryRequirement
+:RegulatoryRequirement rdf:type owl:Class ;
+                       rdfs:subClassOf :RequirementDomain ;
+                       rdfs:label "RegulatoryRequirement" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#RequirementDomain
+:RequirementDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#UseCase
+:UseCase rdf:type owl:Class ;
+         rdfs:subClassOf :UseCaseScenario ;
+         rdfs:label "UseCase" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#UseCaseScenario
+:UseCaseScenario rdf:type owl:Class ;
+                 rdfs:subClassOf :RequirementDomain ;
+                 rdfs:label "UseCaseScenario" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#UserStory
+:UserStory rdf:type owl:Class ;
+           rdfs:subClassOf :UseCaseScenario ;
+           rdfs:label "UserStory" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-req#Basic
+:Basic rdf:type owl:NamedIndividual ,
+                :NFR.ServiceQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Bronze
+:Bronze rdf:type owl:NamedIndividual ,
+                 :NFR.ServiceLevelAgreement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Enterprise
+:Enterprise rdf:type owl:NamedIndividual ,
+                     :NFR.ServiceQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Free
+:Free rdf:type owl:NamedIndividual ,
+               :NFR.ServiceQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Gold
+:Gold rdf:type owl:NamedIndividual ,
+               :NFR.ServiceLevelAgreement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Platinum
+:Platinum rdf:type owl:NamedIndividual ,
+                   :NFR.ServiceLevelAgreement .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Prefessional
+:Prefessional rdf:type owl:NamedIndividual ,
+                       :NFR.ServiceQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#SME
+:SME rdf:type owl:NamedIndividual ,
+              :NFR.ServiceQuality .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Silber
+:Silber rdf:type owl:NamedIndividual .
+
+
+###  http://www.example.org/cm/igso/2023/igso-req#Silver
+:Silver rdf:type owl:NamedIndividual ,
+                 :NFR.ServiceLevelAgreement .
+
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+  foaf:name "Cataldo Mega"
+] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

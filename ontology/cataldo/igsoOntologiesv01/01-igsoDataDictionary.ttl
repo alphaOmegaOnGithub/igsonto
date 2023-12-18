@@ -921,6 +921,10 @@ _:genid2 a owl:Restriction ;
 :isOwnedBy a owl:ObjectProperty ;
 	rdfs:subPropertyOf :is .
 # 
+# http://www.example.org/cm/igso/2023/igso-ddy#isRelatedTo
+
+:isRelatedTo a owl:ObjectProperty .
+# 
 # http://www.example.org/cm/igso/2023/igso-ddy#isRequiredBy
 
 :isRequiredBy a owl:ObjectProperty ;
@@ -3096,8 +3100,8 @@ dct:Standard rdfs:label "Standard" ;
 	:definition "A reference point against which other things can be evaluated or compared." .
 # 
 
-dct:abstract cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
-	skos:definition "summary of the resource" ;
+dct:abstract skos:definition "summary of the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	rdfs:label "abstract" ;
 	rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 # 
@@ -3113,8 +3117,8 @@ dct:issued cmns-av:usageNote "This annotation is typically used to describe an a
 	rdfs:label "issued" .
 # 
 
-dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-	rdfs:label "modified" ;
+dct:modified rdfs:label "modified" ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	skos:definition "date on which the resource was most recently revised" .
 # 
 
