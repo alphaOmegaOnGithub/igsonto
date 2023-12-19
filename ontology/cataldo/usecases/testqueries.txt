@@ -1,0 +1,46 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX igso-ddy:  <http://www.example.org/cm/igso/2023/igso-ddy#>
+PREFIX igso-data: <http://www.example.org/cm/igso/2023/igso-data#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?x (STR(?lab) AS ?label) WHERE {
+	?x rdf:type owl:Class . 
+	OPTIONAL {?x rdfs:label ?lab}
+}
+ORDER BY ?label
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX igso-ddy:  <http://www.example.org/cm/igso/2023/igso-ddy#>
+PREFIX igso-data: <http://www.example.org/cm/igso/2023/igso-data#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?report
+WHERE {
+  ?report dc:title ?title .
+  ?report dc:creator ?creator .
+}
+
+
+
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?book
+WHERE {
+  ?book dc:title ?title .
+  ?book dc:creator ?author .
+  ?author foaf:name "J.K. Rowling" .
+  ?book dc:date ?date .
+  FILTER (year(?date) > 2000)
+} 
