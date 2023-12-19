@@ -31,10 +31,15 @@
 @prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
 
 <http://www.example.org/cm/igso/2023/igso-ddy#> a owl:Ontology ;
-	dct:created "2010-05-28"^^xsd:date ;
-	dct:creator _:genid1 .
+	<http://ainf.aau.at/ontodebug#testCase> _:genid1 .
 
-_:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid1 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+<http://www.example.org/cm/igso/2023/igso-ddy#> dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid2 .
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
 <http://www.example.org/cm/igso/2023/igso-ddy#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
@@ -51,6 +56,20 @@ _:genid1 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 # #
 # #################################################################
 # 
+# 
+# http://ainf.aau.at/ontodebug#axiom
+
+<http://ainf.aau.at/ontodebug#axiom> a owl:AnnotationProperty ;
+	rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
+# 
+# http://ainf.aau.at/ontodebug#testCase
+
+<http://ainf.aau.at/ontodebug#testCase> a owl:AnnotationProperty .
+# 
+# http://ainf.aau.at/ontodebug#type
+
+<http://ainf.aau.at/ontodebug#type> a owl:AnnotationProperty ;
+	rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
 # 
 # http://purl.org/dc/elements/1.1/publisher
 
@@ -732,9 +751,9 @@ xsd:date a rdfs:Datatype .
 	rdfs:subPropertyOf :has ;
 	a owl:FunctionalProperty ;
 	rdfs:domain :Location ;
-	rdfs:range _:genid2 .
+	rdfs:range _:genid3 .
 
-_:genid2 a owl:Restriction ;
+_:genid3 a owl:Restriction ;
 	owl:onProperty :locationID ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:positiveInteger .
@@ -1660,7 +1679,7 @@ dct:type a owl:DatatypeProperty .
 
 :ProjNumber a owl:DatatypeProperty , owl:FunctionalProperty ;
 	rdfs:domain :Project ;
-	rdfs:range xsd:positiveInteger , xsd:string .
+	rdfs:range xsd:positiveInteger .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#age
 
@@ -1794,7 +1813,8 @@ dct:type a owl:DatatypeProperty .
 # 
 # http://www.w3.org/2004/02/skos/core#notation
 
-skos:notation a owl:DatatypeProperty .
+skos:notation a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :isexpired .
 # 
 # http://www.w3.org/ns/dcat#theme
 
@@ -1960,7 +1980,8 @@ dct:LocationPeriodOrJurisdiction a owl:Class ;
 # http://purl.org/dc/terms/MediaType
 
 dct:MediaType a owl:Class ;
-	rdfs:subClassOf :DataDictionary .
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:label "dcterms:MediaType" .
 # 
 # http://purl.org/dc/terms/Period
 
@@ -2063,7 +2084,8 @@ https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
 # http://www.example.org/cm/igso/2023/igso-ddy#AWS
 
 :AWS a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "AWS" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#Acronym
 
@@ -2074,7 +2096,8 @@ https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
 # http://www.example.org/cm/igso/2023/igso-ddy#Azure
 
 :Azure a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "Azure" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#BusinessClassificationScheme
 
@@ -2085,7 +2108,8 @@ https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
 # http://www.example.org/cm/igso/2023/igso-ddy#CCS
 
 :CCS a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "CCS" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#CEORole
 
@@ -2114,7 +2138,8 @@ https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
 # http://www.example.org/cm/igso/2023/igso-ddy#DPO
 
 :DPO a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "DPO" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#DataDictionary
 
@@ -2138,88 +2163,94 @@ see also: https://www.cms.gov/research-statistics-data-systems/DataArchitectureE
 # http://www.example.org/cm/igso/2023/igso-ddy#ECS
 
 :ECS a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "ECS" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#GCP
 
 :GCP a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "GCP" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#IAS
 
 :IAS a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "IAS" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#IRS
 
 :IRS a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "IRS" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#Location
 
 :Location a owl:Class ;
-	owl:equivalentClass _:genid3 .
+	owl:equivalentClass _:genid4 .
 
-_:genid3 owl:intersectionOf _:genid6 .
+_:genid4 owl:intersectionOf _:genid7 .
 
-_:genid6 a rdf:List ;
+_:genid7 a rdf:List ;
 	rdf:first :Location ;
-	rdf:rest _:genid4 .
+	rdf:rest _:genid5 .
 
-_:genid4 a rdf:List ;
-	rdf:first _:genid5 .
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
 
-_:genid5 a owl:Restriction ;
+_:genid6 a owl:Restriction ;
 	owl:onProperty :LocationName ;
 	owl:allValuesFrom xsd:string .
 
-_:genid4 rdf:rest rdf:nil .
+_:genid5 rdf:rest rdf:nil .
 
-_:genid3 a owl:Class .
+_:genid4 a owl:Class .
 
-:Location rdfs:subClassOf gr:Location .
+:Location rdfs:subClassOf gr:Location ;
+	rdfs:label "Location" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#OU
 
 :OU a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "OU" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#Project
 
 :Project a owl:Class ;
-	owl:equivalentClass _:genid7 .
+	owl:equivalentClass _:genid8 .
 
-_:genid7 owl:intersectionOf _:genid12 .
+_:genid8 owl:intersectionOf _:genid13 .
 
-_:genid12 a rdf:List ;
-	rdf:first _:genid13 .
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
 
-_:genid13 a owl:Restriction ;
+_:genid14 a owl:Restriction ;
 	owl:onProperty :ProjName ;
 	owl:someValuesFrom rdfs:Literal .
 
-_:genid12 rdf:rest _:genid10 .
+_:genid13 rdf:rest _:genid11 .
 
-_:genid10 a rdf:List ;
-	rdf:first _:genid11 .
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
 
-_:genid11 a owl:Restriction ;
+_:genid12 a owl:Restriction ;
 	owl:onProperty :ProjNumber ;
 	owl:someValuesFrom xsd:positiveInteger .
 
-_:genid10 rdf:rest _:genid8 .
+_:genid11 rdf:rest _:genid9 .
 
-_:genid8 a rdf:List ;
-	rdf:first _:genid9 .
+_:genid9 a rdf:List ;
+	rdf:first _:genid10 .
 
-_:genid9 a owl:Restriction ;
+_:genid10 a owl:Restriction ;
 	owl:onProperty :ProjID ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onDataRange xsd:positiveInteger .
 
-_:genid8 rdf:rest rdf:nil .
+_:genid9 rdf:rest rdf:nil .
 
-_:genid7 a owl:Class .
+_:genid8 a owl:Class .
 
 :Project rdfs:subClassOf :DataDictionary ;
 	rdfs:label "Project" .
@@ -2227,29 +2258,30 @@ _:genid7 a owl:Class .
 # http://www.example.org/cm/igso/2023/igso-ddy#RedHatCloud
 
 :RedHatCloud a owl:Class ;
-	rdfs:subClassOf :Acronym .
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "RedHatCloud" .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#Restriction
 
 :Restriction a owl:Class ;
-	owl:equivalentClass _:genid14 .
+	owl:equivalentClass _:genid15 .
 
-_:genid14 owl:intersectionOf _:genid17 .
+_:genid15 owl:intersectionOf _:genid18 .
 
-_:genid17 a rdf:List ;
+_:genid18 a rdf:List ;
 	rdf:first :Restriction ;
-	rdf:rest _:genid15 .
+	rdf:rest _:genid16 .
 
-_:genid15 a rdf:List ;
-	rdf:first _:genid16 .
+_:genid16 a rdf:List ;
+	rdf:first _:genid17 .
 
-_:genid16 a owl:Restriction ;
+_:genid17 a owl:Restriction ;
 	owl:onProperty :hasLocation ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-_:genid15 rdf:rest rdf:nil .
+_:genid16 rdf:rest rdf:nil .
 
-_:genid14 a owl:Class .
+_:genid15 a owl:Class .
 
 :Restriction rdfs:subClassOf :DataDictionary ;
 	:adapted_from <https://www.tandfonline.com/doi/full/10.1080/24751839.2019.1686681> ;
@@ -2390,9 +2422,9 @@ foaf:Person a owl:Class ;
 # https://www.omg.org/spec/Commons/Classifiers/Aspect
 
 cmns-cls:Aspect a owl:Class ;
-	rdfs:subClassOf :DataDictionary , _:genid18 .
+	rdfs:subClassOf :DataDictionary , _:genid19 .
 
-_:genid18 a owl:Restriction ;
+_:genid19 a owl:Restriction ;
 	owl:onProperty cmns-cls:characterizes ;
 	owl:minCardinality "0"^^xsd:nonNegativeInteger .
 
@@ -2412,15 +2444,15 @@ cmns-cls:ClassificationScheme a owl:Class ;
 # https://www.omg.org/spec/Commons/Classifiers/Classifier
 
 cmns-cls:Classifier a owl:Class ;
-	rdfs:subClassOf cmns-cls:Aspect , _:genid19 .
+	rdfs:subClassOf cmns-cls:Aspect , _:genid20 .
 
-_:genid19 a owl:Restriction ;
+_:genid20 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/Designators/isDefinedIn> ;
 	owl:allValuesFrom cmns-cls:ClassificationScheme .
 
-cmns-cls:Classifier rdfs:subClassOf _:genid20 .
+cmns-cls:Classifier rdfs:subClassOf _:genid21 .
 
-_:genid20 a owl:Restriction ;
+_:genid21 a owl:Restriction ;
 	owl:onProperty cmns-cls:classifies ;
 	owl:minCardinality "0"^^xsd:nonNegativeInteger .
 
@@ -2433,9 +2465,9 @@ cmns-cls:Classifier dct:source "ISO/IEC 11179-3 Information technology - Metadat
 # https://www.omg.org/spec/Commons/Collections/Arrangement
 
 <https://www.omg.org/spec/Commons/Collections/Arrangement> a owl:Class ;
-	rdfs:subClassOf :DataDictionary , _:genid21 .
+	rdfs:subClassOf :DataDictionary , _:genid22 .
 
-_:genid21 a owl:Restriction ;
+_:genid22 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/Collections/hasMethod> ;
 	owl:minCardinality "0"^^xsd:nonNegativeInteger .
 
@@ -2462,9 +2494,9 @@ _:genid21 a owl:Restriction ;
 # https://www.omg.org/spec/Commons/Collections/StructuredCollection
 
 <https://www.omg.org/spec/Commons/Collections/StructuredCollection> a owl:Class ;
-	rdfs:subClassOf <https://www.omg.org/spec/Commons/Collections/Collection> , _:genid22 .
+	rdfs:subClassOf <https://www.omg.org/spec/Commons/Collections/Collection> , _:genid23 .
 
-_:genid22 a owl:Restriction ;
+_:genid23 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/Collections/hasArrangement> ;
 	owl:allValuesFrom <https://www.omg.org/spec/Commons/Collections/Arrangement> .
 
@@ -2476,15 +2508,15 @@ _:genid22 a owl:Restriction ;
 # https://www.omg.org/spec/Commons/Designators/Designation
 
 <https://www.omg.org/spec/Commons/Designators/Designation> a owl:Class ;
-	rdfs:subClassOf :DataDictionary , _:genid23 .
+	rdfs:subClassOf :DataDictionary , _:genid24 .
 
-_:genid23 a owl:Restriction ;
+_:genid24 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/Designators/denotes> ;
 	owl:someValuesFrom owl:Thing .
 
-<https://www.omg.org/spec/Commons/Designators/Designation> rdfs:subClassOf _:genid24 .
+<https://www.omg.org/spec/Commons/Designators/Designation> rdfs:subClassOf _:genid25 .
 
-_:genid24 a owl:Restriction ;
+_:genid25 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/TextDatatype/hasTextValue> ;
 	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
 	owl:onDataRange <https://www.omg.org/spec/Commons/TextDatatype/Text> .
@@ -2498,9 +2530,9 @@ _:genid24 a owl:Restriction ;
 # https://www.omg.org/spec/Commons/Designators/Name
 
 <https://www.omg.org/spec/Commons/Designators/Name> a owl:Class ;
-	rdfs:subClassOf :DataDictionary , <https://www.omg.org/spec/Commons/Designators/Designation> , _:genid25 .
+	rdfs:subClassOf :DataDictionary , <https://www.omg.org/spec/Commons/Designators/Designation> , _:genid26 .
 
-_:genid25 a owl:Restriction ;
+_:genid26 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/Commons/Designators/isNameOf> ;
 	owl:someValuesFrom owl:Thing .
 
@@ -2521,15 +2553,15 @@ _:genid25 a owl:Restriction ;
 # https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement
 
 <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> a owl:Class ;
-	rdfs:subClassOf :DataDictionary , _:genid26 .
+	rdfs:subClassOf :DataDictionary , _:genid27 .
 
-_:genid26 a owl:Restriction ;
+_:genid27 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/denotes> ;
 	owl:cardinality "1"^^xsd:nonNegativeInteger .
 
-<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> rdfs:subClassOf _:genid27 .
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> rdfs:subClassOf _:genid28 .
 
-_:genid27 a owl:Restriction ;
+_:genid28 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/isMemberOf> ;
 	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
 	owl:onClass <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet> .
@@ -2542,9 +2574,9 @@ _:genid27 a owl:Restriction ;
 # https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet
 
 <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet> a owl:Class ;
-	rdfs:subClassOf <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement> , _:genid28 .
+	rdfs:subClassOf <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement> , _:genid29 .
 
-_:genid28 a owl:Restriction ;
+_:genid29 a owl:Restriction ;
 	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasMember> ;
 	owl:allValuesFrom <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> .
 
@@ -2574,29 +2606,11 @@ _:genid28 a owl:Restriction ;
 # https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language
 
 <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> a owl:Class ;
-	rdfs:subClassOf :DataDictionary , _:genid29 .
-
-_:genid29 a owl:Restriction ;
-	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasEnglishName> ;
-	owl:someValuesFrom rdfs:Literal .
-
-<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> rdfs:subClassOf _:genid30 .
+	rdfs:subClassOf :DataDictionary , _:genid30 .
 
 _:genid30 a owl:Restriction ;
-	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasFrenchName> ;
+	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasEnglishName> ;
 	owl:someValuesFrom rdfs:Literal .
-
-<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> rdfs:subClassOf _:genid31 .
-
-_:genid31 a owl:Restriction ;
-	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasGermanName> ;
-	owl:minCardinality "0"^^xsd:nonNegativeInteger .
-
-<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> rdfs:subClassOf _:genid32 .
-
-_:genid32 a owl:Restriction ;
-	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasIndigenousName> ;
-	owl:minCardinality "0"^^xsd:nonNegativeInteger .
 
 <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> dct:source "Section 3.6, ISO 639-4"^^xsd:string ;
 	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
@@ -2649,12 +2663,6 @@ gr:ProvideService a owl:NamedIndividual .
 
 :ACL a owl:NamedIndividual .
 # 
-# http://www.example.org/cm/igso/2023/igso-ddy#ARMA
-
-:ARMA a owl:NamedIndividual ;
-	rdfs:comment "ARMA International is the community of records and  information management and governance professionals. RIM is the combination Records and Information Management. ARMA International Information Governance Maturity Model©ARMA International, 2013 Note: Records management terms used in the Generally Accepted Recordkeeping Principles® Information Governance Maturity Model (IGMM) are defined in the Glossary of  Records and Information Management Terms,3rd Edition (ARMA International, 2007). Data Governance is a subset of IT governance that focuses on establishing processes  and policies around managing data as a corporate asset. More ovber data governance refers to the overall management of the availability, usability, integrity and security of the data employed in an enterprise. And data governance provides the infrastructure,  resources and processes necessary to manage data with the big picture in mind. Regulatory compliance - Sarbanes-Oxley, etc.: \"Where management has outsourced…functions to third party service provider(s), management maintains a responsibility to assess the controls over the outsourced operations.” The business drivers for managing data as a corporate asset are:- Competitiveness- Regulatory compliance- Realizing the benefit of investments in BI and other Information-based initiatives Establishment of a modeling strategy which includes:" ;
-	rdfs:label "ARMA"@en .
-# 
 # http://www.example.org/cm/igso/2023/igso-ddy#CEO
 
 :CEO a owl:NamedIndividual ;
@@ -2679,24 +2687,11 @@ igso-org:Ad-Hoc a owl:NamedIndividual ;
 # http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
 
 igso-org:AlfrescoContentManagement a owl:NamedIndividual ;
-	rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" ;
-	rdfs:label "Alfresco Content Management"@en .
+	rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
 
-igso-org:AlfrescoGovernanceServices a owl:NamedIndividual ;
-	rdfs:comment """1. Data Classification and Management: Alfresco enables organizations to classify and organize their data through metadata management, tagging, and categorization. This helps in identifying and managing personal data and sensitive information according to GDPR requirements.
-
-2. Access Control and Permissions: Alfresco offers robust access control mechanisms, allowing organizations to define and enforce granular permissions for data access. This helps ensure that personal data is accessed only by authorized individuals or roles.
-
-3. Document and Records Management: Alfresco provides features for document and records management, enabling organizations to maintain a central repository for storing and managing data. This helps ensure proper data governance, retention, and disposal in accordance with GDPR guidelines.
-
-4. Workflow and Process Automation: Alfresco's BPM capabilities allow organizations to design and automate workflows, ensuring that data processing activities are executed in a structured and compliant manner. This can include workflows for data subject requests, consent management, and data breach notifications.
-
-5. Security and Auditing: Alfresco offers security features such as encryption, secure file transfer, and activity logging. These help protect personal data and enable organizations to track and audit data access and modifications for compliance purposes.
-
-While Alfresco provides a solid foundation for managing data and supporting GDPR compliance, it's important to note that achieving full compliance requires a holistic approach that encompasses people, processes, and technology. Organizations should assess their specific GDPR requirements, align Alfresco's capabilities with those requirements, and potentially complement the solution with additional tools or practices as needed.""" ;
-	rdfs:label "AlfrescoGovernanceServices"@en .
+igso-org:AlfrescoGovernanceServices a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
 
@@ -2804,8 +2799,7 @@ igso-org:HRAssets a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMCloud
 
-igso-org:IBMCloud a owl:NamedIndividual ;
-	rdfs:label "IBMCloud"@en .
+igso-org:IBMCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
 
@@ -2953,7 +2947,7 @@ igso-org:Optimized a owl:NamedIndividual ;
 igso-org:OwnCloud a owl:NamedIndividual ;
 	rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
 	rdfs:label "OwnCloud" ;
-	cmns-av:directSource <https://nextcloud.com/> , <https://owncloud.com/> .
+	cmns-av:directSource <https://nextcloud.com/> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Permission
 
@@ -3065,8 +3059,14 @@ igso-org:Transformational a owl:NamedIndividual ;
 	rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> .
 # 
 
-_:genid33 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+_:genid31 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
+
+_:genid32 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid33 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
 
 _:genid34 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
@@ -3084,6 +3084,12 @@ _:genid38 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
 _:genid39 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid40 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid41 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -3117,8 +3123,8 @@ dct:issued cmns-av:usageNote "This annotation is typically used to describe an a
 	rdfs:label "issued" .
 # 
 
-dct:modified rdfs:label "modified" ;
-	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "modified" ;
 	skos:definition "date on which the resource was most recently revised" .
 # 
 
@@ -3134,78 +3140,78 @@ dct:modified rdfs:label "modified" ;
 # 
 # 
 
-_:genid40 a owl:AllDisjointClasses ;
-	owl:members _:genid51 .
+_:genid42 a owl:AllDisjointClasses ;
+	owl:members _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :ACL ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :AWS ;
+	rdf:rest _:genid51 .
 
 _:genid51 a rdf:List ;
-	rdf:first :ACL ;
+	rdf:first :Azure ;
 	rdf:rest _:genid50 .
 
 _:genid50 a rdf:List ;
-	rdf:first :AWS ;
+	rdf:first :CCS ;
 	rdf:rest _:genid49 .
 
 _:genid49 a rdf:List ;
-	rdf:first :Azure ;
+	rdf:first :DPO ;
 	rdf:rest _:genid48 .
 
 _:genid48 a rdf:List ;
-	rdf:first :CCS ;
+	rdf:first :ECS ;
 	rdf:rest _:genid47 .
 
 _:genid47 a rdf:List ;
-	rdf:first :DPO ;
+	rdf:first :GCP ;
 	rdf:rest _:genid46 .
 
 _:genid46 a rdf:List ;
-	rdf:first :ECS ;
+	rdf:first :IAS ;
 	rdf:rest _:genid45 .
 
 _:genid45 a rdf:List ;
-	rdf:first :GCP ;
+	rdf:first :IRS ;
 	rdf:rest _:genid44 .
 
 _:genid44 a rdf:List ;
-	rdf:first :IAS ;
+	rdf:first :OU ;
 	rdf:rest _:genid43 .
 
 _:genid43 a rdf:List ;
-	rdf:first :IRS ;
-	rdf:rest _:genid42 .
-
-_:genid42 a rdf:List ;
-	rdf:first :OU ;
-	rdf:rest _:genid41 .
-
-_:genid41 a rdf:List ;
 	rdf:first :RedHatCloud ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid52 a owl:AllDisjointClasses ;
-	owl:members _:genid58 .
+_:genid54 a owl:AllDisjointClasses ;
+	owl:members _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first :BusinessClassificationScheme ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :CommonFunctionVocabularyAndKeyword ;
+	rdf:rest _:genid58 .
 
 _:genid58 a rdf:List ;
-	rdf:first :BusinessClassificationScheme ;
+	rdf:first :CoreAgencyFunction ;
 	rdf:rest _:genid57 .
 
 _:genid57 a rdf:List ;
-	rdf:first :CommonFunctionVocabularyAndKeyword ;
+	rdf:first :CoreBusinessFunction ;
 	rdf:rest _:genid56 .
 
 _:genid56 a rdf:List ;
-	rdf:first :CoreAgencyFunction ;
+	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> ;
 	rdf:rest _:genid55 .
 
 _:genid55 a rdf:List ;
-	rdf:first :CoreBusinessFunction ;
-	rdf:rest _:genid54 .
-
-_:genid54 a rdf:List ;
-	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> ;
-	rdf:rest _:genid53 .
-
-_:genid53 a rdf:List ;
 	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module> ;
 	rdf:rest rdf:nil .
 # 
