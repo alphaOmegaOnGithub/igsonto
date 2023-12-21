@@ -17,11 +17,39 @@ IndexingComponent
 ### Architecture Design Domain
 Methods/Functions ( from Functioanl Requirements) Postefix: Method or alt:Function
 ComponentPattern
-Access, Administer Archive Audit Classify  Collect Control Dispose eDiscover Hold Load Manage Protect Privacy Query Record Retain Search Secure Store Transfer TwoPhaseCommitFunction
+Access, Administration Archive Audit Classify Collect Control Dispose eDiscover Hold Load Manage Protect Privacy Query Record Replicate Retain Search Secure Store Transfer
+ReferentialIntegrity TransactionSupport TwoPhaseCommitFunction
+
+## Non-functional requirements
+ServiceQuality ( from Non-Functioanl Requirements)
+
+NFRE.Availability
+Backup
+DisasterRecovery
+DynamicScale
+Elasticity
+HighAvailability
+LoadbBalacing
+Recovery
+Resiliency
+Restore
+TransactionSupport 
+TwoPhaseCommit
+Scale
+ReferentialIntegrity 
+ServiceQuality
+ServiceLevelAgreement
+	Bronze
+	Silber
+	Gold
+	Platinum
+	Archive
+
+
 
 ### Solutions
 Solutionpattern
-ArchiveSolution , ECMSolution eDiscoverySolution RIMSolution InformationGovernanceSolution
+ArchiveSolution ECMSolution eDiscoverySolution RIMSolution InformationGovernanceSolution
 
 ## ImplementationDomain
 ImplementationPattern
@@ -63,8 +91,8 @@ System
 
 ## ServicesDomain
 ServicePattern
+
 ServiceQuality ( from Non-Functioanl Requirements)
-ServiceQuality
 	arc:Availability
 	arc:Backup
 	arc:DisasterRecovery
@@ -76,12 +104,16 @@ ServiceQuality
 	arc:Resiliency
 	arc:Restore
 	arc:Scale
+ReferentialIntegrity TransactionSupport TwoPhaseCommit
+ServiceQuality
 ServiceLevelAgreement
 	Bronze
 	Silber
 	Gold
 	Platinum
 	Archive
+
+## IG core services 
 LegalCaseManagementService
 DocumentManagementService
 RecordsManagementService
