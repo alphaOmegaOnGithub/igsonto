@@ -4,7 +4,8 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/igsonto/igsonto-complete> .
+@prefix igsonto-complete: <http://www.semanticweb.org/igsonto/igsonto-complete#> .
+@base <http://www.semanticweb.org/igsonto/igsonto-complete#> .
 
 <http://www.semanticweb.org/igsonto/igsonto-complete> rdf:type owl:Ontology ;
                                                        <http://purl.org/dc/terms/created> "2010-05-28"^^xsd:date ;
@@ -2134,6 +2135,13 @@ xsd:date rdf:type rdfs:Datatype .
                                                                       rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#articleInvolvesObligation
+<http://www.semanticweb.org/igonto/jurisdiction#articleInvolvesObligation> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesObligation> ;
+                                                                           rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> ;
+                                                                           rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#belongsTo
 <http://www.semanticweb.org/igonto/jurisdiction#belongsTo> rdf:type owl:ObjectProperty .
 
@@ -2155,10 +2163,32 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle
 <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> rdf:type owl:ObjectProperty ;
-                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ;
+                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ,
+                                                                                              <http://www.semanticweb.org/igonto/jurisdiction#involvesArticle> ;
                                                                            owl:inverseOf <http://www.semanticweb.org/igonto/jurisdiction#involvedInCapabilities> ;
                                                                            rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract> ;
                                                                            rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesObligation
+<http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesObligation> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesObligation> ;
+                                                                              rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract> ;
+                                                                              rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRequirement
+<http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRequirement> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesRequirement> ;
+                                                                               rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract> ;
+                                                                               rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRight
+<http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRight> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesRight> ;
+                                                                         rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract> ;
+                                                                         rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Right> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#chapterIncludesArticles
@@ -2250,12 +2280,59 @@ xsd:date rdf:type rdfs:Datatype .
                                                                 rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Tools> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#involves
+<http://www.semanticweb.org/igonto/jurisdiction#involves> rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesArticle
+<http://www.semanticweb.org/igonto/jurisdiction#involvesArticle> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involves> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesObligation
+<http://www.semanticweb.org/igonto/jurisdiction#involvesObligation> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involves> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesRequirement
+<http://www.semanticweb.org/igonto/jurisdiction#involvesRequirement> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involves> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#involvesRight
+<http://www.semanticweb.org/igonto/jurisdiction#involvesRight> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involves> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy
 <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy> rdf:type owl:ObjectProperty ;
                                                                rdfs:subPropertyOf owl:topObjectProperty ;
                                                                owl:inverseOf <http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry> ;
                                                                rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Country> ;
                                                                rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Regulation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#isRegulatedByRegulation
+<http://www.semanticweb.org/igonto/jurisdiction#isRegulatedByRegulation> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy> ;
+                                                                         owl:inverseOf <http://www.semanticweb.org/igonto/jurisdiction#regulatesCountry> ;
+                                                                         rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Country> ;
+                                                                         rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Regulation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle
+<http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> rdf:type owl:ObjectProperty ;
+                                                                           rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesArticle> ;
+                                                                           rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Obligation> ;
+                                                                           rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesRequirement
+<http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesRequirement> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesRequirement> ;
+                                                                               owl:inverseOf <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> ;
+                                                                               rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Obligation> ;
+                                                                               rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#operatesIn
@@ -2304,6 +2381,21 @@ xsd:date rdf:type rdfs:Datatype .
                                                                        rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#requiredFor> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation
+<http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> rdf:type owl:ObjectProperty ;
+                                                                               rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesObligation> ;
+                                                                               rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Requirement> ;
+                                                                               rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight
+<http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesRight> ;
+                                                                          owl:inverseOf <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesRequirement> ;
+                                                                          rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Requirement> ;
+                                                                          rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Right> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#requires
 <http://www.semanticweb.org/igonto/jurisdiction#requires> rdf:type owl:ObjectProperty .
 
@@ -2323,6 +2415,20 @@ xsd:date rdf:type rdfs:Datatype .
                                                                   rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle
+<http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesArticle> ;
+                                                                      rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Right> ;
+                                                                      rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesRequirement
+<http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesRequirement> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#involvesRequirement> ;
+                                                                          rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Right> ;
+                                                                          rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#Requirement> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation
 <http://www.semanticweb.org/igonto/jurisdiction#strategyRequiredForRegulation> rdf:type owl:ObjectProperty ;
                                                                                rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#requiredForRegulation> ;
@@ -2332,7 +2438,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle
 <http://www.semanticweb.org/igonto/jurisdiction#toolInvolvesArticle> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ;
+                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ,
+                                                                                        <http://www.semanticweb.org/igonto/jurisdiction#involvesArticle> ;
                                                                      rdfs:domain <http://www.semanticweb.org/igonto/jurisdiction#Tools> ;
                                                                      rdfs:range <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
 
@@ -3112,7 +3219,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#needsSolution
-:needsSolution rdf:type owl:ObjectProperty .
+igsonto-complete:needsSolution rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/dcat#catalog
@@ -3446,7 +3553,8 @@ The instance that uses this vocabulary will constrain the range of org:purpose. 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#name
 <http://www.semanticweb.org/igonto/jurisdiction#name> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf <http://www.semanticweb.org/igonto/igonto#name> .
+                                                      rdfs:subPropertyOf <http://www.semanticweb.org/igonto/igonto#name> ,
+                                                                         owl:topDataProperty .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#description
@@ -7592,6 +7700,16 @@ Information security management systems - Requirements""" ;
                                                         rdfs:label "Version" .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#Administration
+<http://www.semanticweb.org/igonto/jurisdiction#Administration> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Auditability
+<http://www.semanticweb.org/igonto/jurisdiction#Auditability> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract
 <http://www.semanticweb.org/igonto/jurisdiction#Capability_Abstract> rdf:type owl:Class ;
                                                                      owl:equivalentClass <http://www.semanticweb.org/igonto/organization#Capability> ;
@@ -7603,6 +7721,11 @@ Information security management systems - Requirements""" ;
                                                                                      ] ;
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "The abstract class of organization:Capability. This class includes capabilities originating from the frameworks ARMA, CGOC and partly DAMA." ;
                                                                      rdfs:label "Capability (Abstract)" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Content_Management
+<http://www.semanticweb.org/igonto/jurisdiction#Content_Management> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Country
@@ -7622,8 +7745,54 @@ Information security management systems - Requirements""" ;
                                                                            owl:onProperty <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy> ;
                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                                            owl:onClass <http://www.semanticweb.org/igonto/jurisdiction#Regulation>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedByRegulation> ;
+                                                                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                           owl:onClass <http://www.semanticweb.org/igonto/jurisdiction#Regulation>
                                                                          ] ;
-                                                         <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass representing countries in which the Enterprise operates." .
+                                                         <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass representing countries in which the Enterprise operates." ;
+                                                         rdfs:label "Country" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation
+<http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation
+<http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight
+<http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Right> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Minimization
+<http://www.semanticweb.org/igonto/jurisdiction#Data_Minimization> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Quality
+<http://www.semanticweb.org/igonto/jurisdiction#Data_Quality> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Data_Subject_Rights_Fullfillment
+<http://www.semanticweb.org/igonto/jurisdiction#Data_Subject_Rights_Fullfillment> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DesirableBehavior
+<http://www.semanticweb.org/igonto/jurisdiction#DesirableBehavior> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Disposition
+<http://www.semanticweb.org/igonto/jurisdiction#Disposition> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#EU
@@ -7647,6 +7816,11 @@ Information security management systems - Requirements""" ;
 ###  http://www.semanticweb.org/igonto/jurisdiction#European_Union
 <http://www.semanticweb.org/igonto/jurisdiction#European_Union> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Regulation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement
+<http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#GDPR
@@ -7747,6 +7921,16 @@ Information security management systems - Requirements""" ;
                                                                              rdfs:subClassOf <http://www.semanticweb.org/igonto/igonto#IgontoTopDomain> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment
+<http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Incident_Response_And_Breach_Notification
+<http://www.semanticweb.org/igonto/jurisdiction#Incident_Response_And_Breach_Notification> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction
 <http://www.semanticweb.org/igonto/jurisdiction#Jurisdiction> rdf:type owl:Class ;
                                                               rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#IgontoTopJurisdictionDomain> ,
@@ -7762,6 +7946,116 @@ Information security management systems - Requirements""" ;
                                                                               ] ;
                                                               <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "This class represents the jurisdiction of a certain country. It is responsible for encompassing rules and regulations for the governning the collection, processing, storage and the sharing of information withing the corresponding country." ;
                                                               rdfs:label "Jurisdiction" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#LoadBalancing
+<http://www.semanticweb.org/igonto/jurisdiction#LoadBalancing> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Management
+<http://www.semanticweb.org/igonto/jurisdiction#Management> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement
+<http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Obligation
+<http://www.semanticweb.org/igonto/jurisdiction#Obligation> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#IgontoTopJurisdictionDomain> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransfer
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransfer> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficer
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficer> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivity
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivity> rdf:type owl:Class ;
+                                                                                                    rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthority
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthority> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataController
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataController> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessor
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessor> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfData
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfData> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfData
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfData> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfData
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfData> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessing
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessing> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirement
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirement> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessing
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessing> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessing
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessing> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriod
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriod> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeData
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeData> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataControllerObligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreach
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreach> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessment
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessment> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Obligation> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessing
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessing> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataProcessorObligation> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Program_Abstract
@@ -7780,7 +8074,93 @@ Information security management systems - Requirements""" ;
 ###  http://www.semanticweb.org/igonto/jurisdiction#Regulation
 <http://www.semanticweb.org/igonto/jurisdiction#Regulation> rdf:type owl:Class ;
                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#IgontoTopJurisdictionDomain> ;
-                                                            <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass representing regulations in the EU and US." .
+                                                            <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass representing regulations in the EU and US." ;
+                                                            rdfs:label "Regulation" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Reliability
+<http://www.semanticweb.org/igonto/jurisdiction#Reliability> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Requirement
+<http://www.semanticweb.org/igonto/jurisdiction#Requirement> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#IgontoTopJurisdictionDomain> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Retention
+<http://www.semanticweb.org/igonto/jurisdiction#Retention> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Right
+<http://www.semanticweb.org/igonto/jurisdiction#Right> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#IgontoTopJurisdictionDomain> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-making
+<http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-making> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfiling
+<http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfiling> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToAccess
+<http://www.semanticweb.org/igonto/jurisdiction#RightToAccess> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgotten
+<http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgotten> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformed
+<http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformed> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToComplain
+<http://www.semanticweb.org/igonto/jurisdiction#RightToComplain> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortability
+<http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortability> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToErasure
+<http://www.semanticweb.org/igonto/jurisdiction#RightToErasure> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToObject
+<http://www.semanticweb.org/igonto/jurisdiction#RightToObject> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToRectification
+<http://www.semanticweb.org/igonto/jurisdiction#RightToRectification> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessing
+<http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessing> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRight> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Scalability
+<http://www.semanticweb.org/igonto/jurisdiction#Scalability> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Non_Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Security
+<http://www.semanticweb.org/igonto/jurisdiction#Security> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Strategy_Abstract
@@ -7806,7 +8186,18 @@ Information security management systems - Requirements""" ;
                                                                          owl:onClass <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles>
                                                                        ] ;
                                                        <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Abstract class for an abstract view of technical requirements, needed to ensrue compliance. It is implemented here to guarantee a connection to GDPR_Articles." ;
-                                                       rdfs:label "Tools" .
+                                                       rdfs:label "Tools" ,
+                                                                  "Tools (Abstract)" .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Training_And_Awareness
+<http://www.semanticweb.org/igonto/jurisdiction#Training_And_Awareness> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Transfer
+<http://www.semanticweb.org/igonto/jurisdiction#Transfer> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.semanticweb.org/igonto/jurisdiction#Functional_Requirement> .
 
 
 ###  http://www.semanticweb.org/igonto/lifecycle#Access
@@ -9238,6 +9629,14 @@ owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.semanticweb.org/igonto/igonto#name> ;
                             owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.semanticweb.org/igonto/jurisdiction#description> ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.semanticweb.org/igonto/jurisdiction#name> ;
+                            owl:someValuesFrom xsd:string
                           ] .
 
 
@@ -10166,6 +10565,14 @@ SELECT * WHERE {
                                                                  <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#AdministrationInstance
+<http://www.semanticweb.org/igonto/jurisdiction#AdministrationInstance> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#Administration> ;
+                                                                        <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance> ,
+                                                                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> ,
+                                                                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Archieving
 <http://www.semanticweb.org/igonto/jurisdiction#Archieving> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
@@ -10914,6 +11321,14 @@ SELECT * WHERE {
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Articles> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#AuditabilityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#AuditabilityInstance> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.semanticweb.org/igonto/jurisdiction#Auditability> ;
+                                                                      <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> ,
+                                                                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> ;
+                                                                      <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight> <http://www.semanticweb.org/igonto/jurisdiction#RightToComplainInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Certification
 <http://www.semanticweb.org/igonto/jurisdiction#Certification> rdf:type owl:NamedIndividual ,
                                                                         <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
@@ -10959,6 +11374,13 @@ SELECT * WHERE {
                                                                       <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#ContentManagementInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ContentManagementInstance> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#Content_Management> ;
+                                                                           <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirementInstance> ,
+                                                                                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Controller
 <http://www.semanticweb.org/igonto/jurisdiction#Controller> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
@@ -10972,6 +11394,24 @@ SELECT * WHERE {
 ###  http://www.semanticweb.org/igonto/jurisdiction#Data
 <http://www.semanticweb.org/igonto/jurisdiction#Data> rdf:type owl:NamedIndividual ,
                                                                <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataMinimizationInstance
+<http://www.semanticweb.org/igonto/jurisdiction#DataMinimizationInstance> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#Data_Minimization> ;
+                                                                          <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeDataInstance> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataQualityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#DataQualityInstance> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#Data_Quality> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfDataInstance> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight> <http://www.semanticweb.org/igonto/jurisdiction#RightToRectificationInstance> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRightsFullfillmentInstance
+<http://www.semanticweb.org/igonto/jurisdiction#DataSubjectRightsFullfillmentInstance> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#Data_Subject_Rights_Fullfillment> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Data_Breach
@@ -10997,6 +11437,18 @@ SELECT * WHERE {
 ###  http://www.semanticweb.org/igonto/jurisdiction#Delegation
 <http://www.semanticweb.org/igonto/jurisdiction#Delegation> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DesirableBehaviorInstance
+<http://www.semanticweb.org/igonto/jurisdiction#DesirableBehaviorInstance> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#DesirableBehavior> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#DispositionInstance
+<http://www.semanticweb.org/igonto/jurisdiction#DispositionInstance> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#Disposition> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight> <http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Documents
@@ -11198,12 +11650,25 @@ SELECT * WHERE {
 <http://www.semanticweb.org/igonto/jurisdiction#Germany> rdf:type owl:NamedIndividual ,
                                                                   <http://www.semanticweb.org/igonto/jurisdiction#EU> ;
                                                          <http://www.semanticweb.org/igonto/jurisdiction#belongsToJurisdiction> <http://www.semanticweb.org/igonto/jurisdiction#EU> ;
-                                                         <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy> <http://www.semanticweb.org/igonto/jurisdiction#GDPR> .
+                                                         <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedBy> <http://www.semanticweb.org/igonto/jurisdiction#GDPR> ;
+                                                         <http://www.semanticweb.org/igonto/jurisdiction#isRegulatedByRegulation> <http://www.semanticweb.org/igonto/jurisdiction#GDPR> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ImpactAssessmentInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ImpactAssessmentInstance> rdf:type owl:NamedIndividual ,
+                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment> ;
+                                                                          <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessmentInstance> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment
 <http://www.semanticweb.org/igonto/jurisdiction#Impact_Assessment> rdf:type owl:NamedIndividual ,
                                                                             <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#IncidentResponseAndBreachNotificationInstance
+<http://www.semanticweb.org/igonto/jurisdiction#IncidentResponseAndBreachNotificationInstance> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/igonto/jurisdiction#Incident_Response_And_Breach_Notification> ;
+                                                                                               <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Independence
@@ -11226,6 +11691,20 @@ SELECT * WHERE {
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#LoadBalancingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#LoadBalancingInstance> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/igonto/jurisdiction#LoadBalancing> ;
+                                                                       <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> ,
+                                                                                                                                                      <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ManagementInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ManagementInstance> rdf:type owl:NamedIndividual ,
+                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Management> ;
+                                                                    <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance> ,
+                                                                                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Monitoring
 <http://www.semanticweb.org/igonto/jurisdiction#Monitoring> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
@@ -11234,6 +11713,416 @@ SELECT * WHERE {
 ###  http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number
 <http://www.semanticweb.org/igonto/jurisdiction#National_ID_Number> rdf:type owl:NamedIndividual ,
                                                                              <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransferInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransferInstance> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransfer> ;
+                                                                                              <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_44> ,
+                                                                                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#Article_45> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransferInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_44> ;
+   rdfs:comment "\"Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organization shall take place only if, subject to the other provisions of this Regulation, the conditions laid down in this Chapter are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organization to another third country or to another international organization.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransferInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_45> ;
+   rdfs:comment "\"The Commission shall, on an ongoing basis, monitor developments in third countries and international organizations that could affect the functioning of decisions adopted pursuant to paragraph 2 of this Article and decisions adopted on the basis of Article 25(6) of Directive 95/46/EC.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficer> ;
+                                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_37> ,
+                                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_38> ,
+                                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_39> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_37> ;
+   rdfs:comment "\"The controller and the processor shall designate a data protection officer in any case where: ... .\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_38> ;
+   rdfs:comment "Outlines the position and tasks of the DPO"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToAppointDataProtectionOfficerInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_39> ;
+   rdfs:comment "Outlines the position and tasks of the DPO"
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance> rdf:type owl:NamedIndividual ,
+                                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivity> ;
+                                                                                                            <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_28> ,
+                                                                                                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#Article_30> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_28> ;
+   rdfs:comment "Outlines the responsibilities of data processors, including the use of processors that provide guarantees to implement appropriate measures, which indirectly supports the obligation to capture records."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_30> ;
+   rdfs:comment "\"Each controller and, where applicable, the controller’s representative, shall maintain a record of processing activities under its responsibility.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthorityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthorityInstance> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthority> ;
+                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_31> ,
+                                                                                                                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#Article_57> ,
+                                                                                                                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#Article_58> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthorityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_31> ;
+   rdfs:comment "\"The controller and the processor and, where applicable, their representatives, shall cooperate, on request, with the supervisory authority in the performance of its tasks.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthorityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_57> ;
+   rdfs:comment "\"Without prejudice to other tasks set out under this Regulation, each supervisory authority shall on its territory monitor and enforce the application of this Regulation.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCooperateWithSupervisoryAuthorityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_58> ;
+   rdfs:comment ": \"Each supervisory authority shall have all of the following powers: ....\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> rdf:type owl:NamedIndividual ,
+                                                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataController> ;
+                                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_24> ,
+                                                                                                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_24> ;
+   rdfs:comment "\"The controller shall implement appropriate technical and organizational measures to ensure and to be able to demonstrate that processing is performed in accordance with this Regulation.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability').\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> rdf:type owl:NamedIndividual ,
+                                                                                                              <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessor> ;
+                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_28> ,
+                                                                                                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#Article_29> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_28> ;
+   rdfs:comment "\"Where processing is to be carried out on behalf of a controller, the controller shall use only processors providing sufficient guarantees to implement appropriate technical and organizational measures in such a manner that processing will meet the requirements of this Regulation and ensure the protection of the rights of the data subject.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_29> ;
+   rdfs:comment "\"The processor and any person acting under the authority of the controller or of the processor, who has access to personal data, shall not process those data except on instructions from the controller, unless required to do so by Union or Member State law.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfDataInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfDataInstance> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfData> ;
+                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_16> ,
+                                                                                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_16> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccuracyOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay ('accuracy').\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfData> ;
+                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_32> ,
+                                                                                                                                                                            <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_32> ;
+   rdfs:comment "\"The controller and the processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including...the ability to ensure the ongoing confidentiality of processing systems and services.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures ('integrity and confidentiality').\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfData> ;
+                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_32> ,
+                                                                                                                                                                      <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_32> ;
+   rdfs:comment "\"The controller and the processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including...the ability to ensure the ongoing confidentiality of processing systems and services.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures ('integrity and confidentiality').\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessing> ;
+                                                                                            <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_22> ,
+                                                                                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_22> ;
+   rdfs:comment "Deals with the fairness of processing in the context of automated decision-making and profiling."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFairnessDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be processed lawfully, fairly and in a transparent manner in relation to the data subject.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirementInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirementInstance> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirement> ;
+                                                                                               <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_4> ,
+                                                                                                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#Article_7> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirementInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_4> ;
+   rdfs:comment "\"‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject's wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToFulfillConsentRequirementInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_7> ;
+   rdfs:comment "\"Where processing is based on consent, the controller shall be able to demonstrate that the data subject has consented to processing of his or her personal data.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessing> ;
+                                                                                              <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_10> ,
+                                                                                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#Article_6> ,
+                                                                                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#Article_9> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_10> ;
+   rdfs:comment "Provides specific conditions for processing special categories of personal data and personal data relating to criminal convictions and offenses."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_6> ;
+   rdfs:comment "\"Processing shall be lawful only if and to the extent that at least one of the following applies: ... .\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLawfulnessDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_9> ;
+   rdfs:comment "Provides specific conditions for processing special categories of personal data and personal data relating to criminal convictions and offenses."
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessing> ;
+                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ,
+                                                                                                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#Article_6> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitPurposeDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_6> ;
+   rdfs:comment "\"Where the processing for a purpose other than that for which the personal data have been collected is not based on the data subject's consent or on Union or Member State law...the controller shall, in order to ascertain whether processing for another purpose is compatible with the purpose for which the personal data are initially collected, take into account, inter alia:....\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriod> ;
+                                                                                        <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ,
+                                                                                                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the following grounds applies: ... \""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeDataInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeDataInstance> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeData> ;
+                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_25> ,
+                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_5> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_25> ;
+   rdfs:comment "\"Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of the processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organizational measures, such as pseudonymisation, which are designed to implement data-protection principles, such as data minimisation, in an effective way and to integrate the necessary safeguards into the processing in order to meet the requirements of this Regulation and protect the rights of data subjects.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToMinimizeDataInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_5> ;
+   rdfs:comment "\"Personal data shall be...adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation').\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreach> ;
+                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_33> ,
+                                                                                                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#Article_34> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_33> ;
+   rdfs:comment "\"In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_34> ;
+   rdfs:comment "\"When the personal data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall communicate the personal data breach to the data subject without undue delay.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessmentInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessmentInstance> rdf:type owl:NamedIndividual ,
+                                                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessment> ;
+                                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_35> ,
+                                                                                                                                                                                      <http://www.semanticweb.org/igonto/jurisdiction#Article_36> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessmentInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_35> ;
+   rdfs:comment "\"Where a type of processing in particular using new technologies...is likely to result in a high risk to the rights and freedoms of natural persons, the controller shall, prior to the processing, carry out an assessment of the impact of the envisaged processing operations on the protection of personal data.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToPerformDataProtectionImpactAssessmentInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_36> ;
+   rdfs:comment "\"The controller shall consult the supervisory authority prior to processing where a data protection impact assessment under Article 35 indicates that the processing would result in a high risk in the absence of measures taken by the controller to mitigate the risk.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessing> ;
+                                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ,
+                                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ,
+                                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_14> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ;
+   rdfs:comment "\"The controller shall take appropriate measures to provide any information referred to in Articles 13 and 14 and any communication under Articles 15 to 22 and 34 relating to processing to the data subject in a concise, transparent, intelligible and easily accessible form.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ;
+   rdfs:comment "Specifies the information to be provided to data subjects"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_14> ;
+   rdfs:comment "Specifies the information to be provided to data subjects"
+ ] .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Penalties
@@ -11286,6 +12175,13 @@ SELECT * WHERE {
                                                                         <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#ReliabilityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ReliabilityInstance> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#Reliability> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> ,
+                                                                                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Reports
 <http://www.semanticweb.org/igonto/jurisdiction#Reports> rdf:type owl:NamedIndividual ,
                                                                   <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
@@ -11301,9 +12197,270 @@ SELECT * WHERE {
                                                                        <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#RetentionInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RetentionInstance> rdf:type owl:NamedIndividual ,
+                                                                            <http://www.semanticweb.org/igonto/jurisdiction#Retention> ;
+                                                                   <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToLimitStoragePeriodInstance> ;
+                                                                   <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesRight> <http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Right
 <http://www.semanticweb.org/igonto/jurisdiction#Right> rdf:type owl:NamedIndividual ,
                                                                 <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-makingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-makingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-making> ;
+                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_15> ,
+                                                                                                                                                                      <http://www.semanticweb.org/igonto/jurisdiction#Article_22> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-makingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_15> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller the following information: [...] (h) the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4) and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedDecision-makingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_22> ;
+   rdfs:comment "\"The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfilingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfilingInstance> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfiling> ;
+                                                                                          <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ,
+                                                                                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#Article_14> ,
+                                                                                                                                                                <http://www.semanticweb.org/igonto/jurisdiction#Article_22> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfilingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ;
+   rdfs:comment "\"Where personal data relating to a data subject are collected from the data subject, the controller shall, at the time when personal data are obtained, provide the data subject with the following further information necessary to ensure fair and transparent processing: [...] (f) the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4), and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfilingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_14> ;
+   rdfs:comment "Similar to Article 13(2)(f) but applies in situations where personal data have not been obtained from the data subject."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightRelatedToAutomatedProfilingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_22> ;
+   rdfs:comment "\"The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToAccessInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToAccessInstance> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/igonto/jurisdiction#RightToAccess> ;
+                                                                       <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ,
+                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_15> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToAccessInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ;
+   rdfs:comment "\"The controller shall take appropriate measures to provide any information referred to in Articles 13 and 14 and any communication under Articles 15 to 22 and 34 relating to processing to the data subject in a concise, transparent, intelligible and easily accessible form, using clear and plain language, particularly for any information addressed specifically to a child.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToAccessInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_15> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data...\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgottenInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgottenInstance> rdf:type owl:NamedIndividual ,
+                                                                                     <http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgotten> ;
+                                                                            <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ,
+                                                                                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#Article_21> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgottenInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay...\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToBeForgottenInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_21> ;
+   rdfs:comment "\"The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to processing of personal data concerning him or her which is based on point (e) or (f) of Article 6(1), including profiling based on those provisions.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformedInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformedInstance> rdf:type owl:NamedIndividual ,
+                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformed> ;
+                                                                           <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ,
+                                                                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ,
+                                                                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#Article_14> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformedInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ;
+   rdfs:comment "\"The controller shall take appropriate measures to provide any information referred to in Articles 13 and 14 and any communication under Articles 15 to 22 and 34 relating to processing to the data subject in a concise, transparent, intelligible and easily accessible form, using clear and plain language, particularly for any information addressed specifically to a child.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformedInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_13> ;
+   rdfs:comment ": \"Where personal data relating to a data subject are collected from the data subject, the controller shall, at the time when personal data are obtained, provide the data subject with the following further information necessary to ensure fair and transparent processing: [...] (f) the existence of automated decision-making, including profiling, referred to in Article 22(1) and (4), and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToBeInformedInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_14> ;
+   rdfs:comment "Similar to Article 13(2)(f) but applies in situations where personal data have not been obtained from the data subject."
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToComplainInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToComplainInstance> rdf:type owl:NamedIndividual ,
+                                                                                  <http://www.semanticweb.org/igonto/jurisdiction#RightToComplain> ;
+                                                                         <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_77> ,
+                                                                                                                                               <http://www.semanticweb.org/igonto/jurisdiction#Article_78> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToComplainInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_77> ;
+   rdfs:comment "\"Without prejudice to any other administrative or judicial remedy, every data subject shall have the right to lodge a complaint with a supervisory authority, in particular in the Member State of his or her habitual residence, place of work or place of the alleged infringement if the data subject considers that the processing of personal data relating to him or her infringes this Regulation.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToComplainInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_78> ;
+   rdfs:comment "\"Without prejudice to any other administrative or non-judicial remedy, each natural or legal person shall have the right to an effective judicial remedy against a legally binding decision of a supervisory authority concerning them.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortabilityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortabilityInstance> rdf:type owl:NamedIndividual ,
+                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortability> ;
+                                                                                <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ,
+                                                                                                                                                      <http://www.semanticweb.org/igonto/jurisdiction#Article_20> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortabilityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_12> ;
+   rdfs:comment "\"The controller shall facilitate the exercise of data subject rights under Articles 15 to 22. In the cases referred to in Article 11(2), the controller shall not refuse to act on the request of the data subject for exercising his or her rights under Articles 15 to 22, unless the controller demonstrates that it is not in a position to identify the data subject.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToDataPortabilityInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_20> ;
+   rdfs:comment "\"The data subject shall have the right to receive the personal data concerning him or her, which he or she has provided to a controller, in a structured, commonly used and machine-readable format...\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance> rdf:type owl:NamedIndividual ,
+                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#RightToErasure> ;
+                                                                        <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ,
+                                                                                                                                              <http://www.semanticweb.org/igonto/jurisdiction#Article_7> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_17> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay...\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToErasureInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_7> ;
+   rdfs:comment "\"The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal. Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToObjectInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToObjectInstance> rdf:type owl:NamedIndividual ,
+                                                                                <http://www.semanticweb.org/igonto/jurisdiction#RightToObject> ;
+                                                                       <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_19> ,
+                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#Article_21> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToObjectInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_19> ;
+   rdfs:comment "\"The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Article 16, Article 17(1) and Article 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The controller shall inform the data subject about those recipients if the data subject requests it.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToObjectInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_21> ;
+   rdfs:comment "\"The data subject shall have the right to object, on grounds relating to his or her particular situation, at any time to processing of personal data concerning him or her...\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToRectificationInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToRectificationInstance> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#RightToRectification> ;
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_16> ,
+                                                                                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#Article_19> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToRectificationInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_16> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller without undue delay the rectification of inaccurate personal data concerning him or her.\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToRectificationInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_19> ;
+   rdfs:comment "\"The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Article 16, Article 17(1) and Article 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The controller shall inform the data subject about those recipients if the data subject requests it.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessingInstance
+<http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessingInstance> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessing> ;
+                                                                                   <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> <http://www.semanticweb.org/igonto/jurisdiction#Article_18> ,
+                                                                                                                                                         <http://www.semanticweb.org/igonto/jurisdiction#Article_19> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_18> ;
+   rdfs:comment "\"The data subject shall have the right to obtain from the controller restriction of processing where one of the following applies: ... .\""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://www.semanticweb.org/igonto/jurisdiction#RightToRestrictProcessingInstance> ;
+   owl:annotatedProperty <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+   owl:annotatedTarget <http://www.semanticweb.org/igonto/jurisdiction#Article_19> ;
+   rdfs:comment "\"The controller shall communicate any rectification or erasure of personal data or restriction of processing carried out in accordance with Article 16, Article 17(1) and Article 18 to each recipient to whom the personal data have been disclosed, unless this proves impossible or involves disproportionate effort. The controller shall inform the data subject about those recipients if the data subject requests it.\""
+ ] .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#ScalabilityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#ScalabilityInstance> rdf:type owl:NamedIndividual ,
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#Scalability> ;
+                                                                     <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToCaptureRecordsOfDataProcessingActivityInstance> ,
+                                                                                                                                                    <http://www.semanticweb.org/igonto/jurisdiction#ObligationToTransparencyOfDataProcessingInstance> .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Secretariat
@@ -11311,9 +12468,21 @@ SELECT * WHERE {
                                                                       <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#SecurityInstance
+<http://www.semanticweb.org/igonto/jurisdiction#SecurityInstance> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/igonto/jurisdiction#Security> ;
+                                                                  <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureConfidentialityOfDataInstance> ,
+                                                                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureIntegrityOfDataInstance> ,
+                                                                                                                                                 <http://www.semanticweb.org/igonto/jurisdiction#ObligationToNotifyOfPersonalDataBreachInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Supervisor
 <http://www.semanticweb.org/igonto/jurisdiction#Supervisor> rdf:type owl:NamedIndividual ,
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#Supervisor_Authority_1
+<http://www.semanticweb.org/igonto/jurisdiction#Supervisor_Authority_1> rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/igonto/jurisdiction#Suspension
@@ -11321,9 +12490,22 @@ SELECT * WHERE {
                                                                      <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
 
 
+###  http://www.semanticweb.org/igonto/jurisdiction#TrainingAndAwarenessInstance
+<http://www.semanticweb.org/igonto/jurisdiction#TrainingAndAwarenessInstance> rdf:type owl:NamedIndividual ,
+                                                                                       <http://www.semanticweb.org/igonto/jurisdiction#Training_And_Awareness> ;
+                                                                              <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfDataControllerInstance> ,
+                                                                                                                                                             <http://www.semanticweb.org/igonto/jurisdiction#ObligationToEnsureAccountabilityOfProcessorInstance> .
+
+
 ###  http://www.semanticweb.org/igonto/jurisdiction#Transfer
 <http://www.semanticweb.org/igonto/jurisdiction#Transfer> rdf:type owl:NamedIndividual ,
                                                                    <http://www.semanticweb.org/igonto/jurisdiction#GDPR_Keywords> .
+
+
+###  http://www.semanticweb.org/igonto/jurisdiction#TransferInstance
+<http://www.semanticweb.org/igonto/jurisdiction#TransferInstance> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.semanticweb.org/igonto/jurisdiction#Transfer> ;
+                                                                  <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> <http://www.semanticweb.org/igonto/jurisdiction#ObligationOfCross-borderDataTransferInstance> .
 
 
 ###  http://www.semanticweb.org/igonto/organization#AC_1_1_3
@@ -19310,33 +20492,33 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#ArchiveSolutionInstance
-:ArchiveSolutionInstance rdf:type owl:NamedIndividual ,
-                                  <http://www.example.org/cm/igso/2023/igso-arc#ArchiveSolution> .
+igsonto-complete:ArchiveSolutionInstance rdf:type owl:NamedIndividual ,
+                                                  <http://www.example.org/cm/igso/2023/igso-arc#ArchiveSolution> .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#ECMSolutionInstance
-:ECMSolutionInstance rdf:type owl:NamedIndividual ,
-                              <http://www.example.org/cm/igso/2023/igso-arc#ECMSolution> .
+igsonto-complete:ECMSolutionInstance rdf:type owl:NamedIndividual ,
+                                              <http://www.example.org/cm/igso/2023/igso-arc#ECMSolution> .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#InformationGovernanceSolutionInstance
-:InformationGovernanceSolutionInstance rdf:type owl:NamedIndividual ,
-                                                <http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution> .
+igsonto-complete:InformationGovernanceSolutionInstance rdf:type owl:NamedIndividual ,
+                                                                <http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution> .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#RIMSOlutionInstance
-:RIMSOlutionInstance rdf:type owl:NamedIndividual ,
-                              <http://www.example.org/cm/igso/2023/igso-arc#RIMSolution> .
+igsonto-complete:RIMSOlutionInstance rdf:type owl:NamedIndividual ,
+                                              <http://www.example.org/cm/igso/2023/igso-arc#RIMSolution> .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#SolutionPatternInstance
-:SolutionPatternInstance rdf:type owl:NamedIndividual ,
-                                  <http://www.example.org/cm/igso/2023/igso-arc#SolutionPattern> .
+igsonto-complete:SolutionPatternInstance rdf:type owl:NamedIndividual ,
+                                                  <http://www.example.org/cm/igso/2023/igso-arc#SolutionPattern> .
 
 
 ###  http://www.semanticweb.org/igsonto/igsonto-complete#eDiscoverySolutionInstance
-:eDiscoverySolutionInstance rdf:type owl:NamedIndividual ,
-                                     <http://www.example.org/cm/igso/2023/igso-arc#eDiscoverySolution> .
+igsonto-complete:eDiscoverySolutionInstance rdf:type owl:NamedIndividual ,
+                                                     <http://www.example.org/cm/igso/2023/igso-arc#eDiscoverySolution> .
 
 
 ###  https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser
@@ -19344,84 +20526,10 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
                                                                    rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> .
 
 
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-  <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+[ rdfs:comment ""
 ] .
 
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
- ] .
-
-[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
-   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+[ rdfs:comment ""
  ] .
 
 [ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
@@ -19437,33 +20545,110 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
 [ rdfs:comment ""
  ] .
 
-[ rdfs:comment ""
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
+ ] .
+
+[ <http://xmlns.com/foaf/0.1/mbox> "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   <http://xmlns.com/foaf/0.1/name> "Cataldo Mega"
  ] .
 
 #################################################################
 #    Annotations
 #################################################################
 
-<http://purl.org/dc/terms/Standard> rdfs:label "Standard" ;
+<http://purl.org/dc/terms/Standard> <http://www.example.org/cm/igso/2023/igso-ddy#definition> "A reference point against which other things can be evaluated or compared." ;
                                      rdfs:isDefinedBy <http://purl.org/dc/terms/Standard> ;
-                                     <http://www.example.org/cm/igso/2023/igso-ddy#definition> "A reference point against which other things can be evaluated or compared." .
+                                     rdfs:label "Standard" .
 
 
-<http://purl.org/dc/terms/abstract> <http://www.w3.org/2004/02/skos/core#definition> "summary of the resource" ;
-                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+<http://purl.org/dc/terms/abstract> rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
                                     rdfs:label "abstract" ;
-                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+                                    <http://www.w3.org/2004/02/skos/core#definition> "summary of the resource" ;
+                                    <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
 
 
 <http://purl.org/dc/terms/description> rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "account of the resource" ;
-                                       rdfs:label "description" .
+                                       rdfs:label "description" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "account of the resource" .
 
 
-<http://purl.org/dc/terms/issued> <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+<http://purl.org/dc/terms/issued> rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "issued" ;
                                   <http://www.w3.org/2004/02/skos/core#definition> "date of formal issuance of the resource" ;
-                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-                                  rdfs:label "issued" .
+                                  <https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote> "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
 
 
 <http://purl.org/dc/terms/modified> rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
@@ -19471,12 +20656,11 @@ Continuous learning and assessment ensure that transparency concepts are reinfor
                                     <http://www.w3.org/2004/02/skos/core#definition> "date on which the resource was most recently revised" .
 
 
-<http://www.example.org/cm/igso/2023/igso-ddy#ACL> <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> "Synonym of Access Control List" ;
-                                                   rdfs:label "ACL" .
+<http://www.example.org/cm/igso/2023/igso-ddy#ACL> rdfs:label "ACL" ;
+                                                   <https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym> "Synonym of Access Control List" .
 
 
-<http://www.example.org/cm/igso/2023/igso-jur#GDPR> rdfs:isDefinedBy <https://gdpr-info.eu/> ;
-                                                    rdfs:comment """Chapter 1  – 1  2  3  4
+<http://www.example.org/cm/igso/2023/igso-jur#GDPR> rdfs:comment """Chapter 1  – 1  2  3  4
 Chapter 2  – 5  6  7  8  9  10  11
 Chapter 3  – 12  13  14  15  16  17  18  19  20  21  22  23
 Chapter 4  – 24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43
@@ -19486,18 +20670,20 @@ Chapter 7  – 60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  7
 Chapter 8  – 77  78  79  80  81  82  83  84
 Chapter 9  – 85  86  87  88  89  90  91
 Chapter 10 – 92  93
-Chapter 11 – 94  95  96  97  98  99""" .
+Chapter 11 – 94  95  96  97  98  99""" ;
+                                                    rdfs:isDefinedBy <https://gdpr-info.eu/> .
 
 
-<http://www.semanticweb.org/igonto/jurisdiction#EU> <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass for countries in the EU." .
+<http://www.semanticweb.org/igonto/jurisdiction#EU> <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass for countries in the EU." ;
+                                                    rdfs:label "European Union" .
 
 
 <http://www.semanticweb.org/igonto/jurisdiction#European_Union> <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Superclass for the regulation of the european union." ;
                                                                 rdfs:label "European Union" .
 
 
-<http://www.semanticweb.org/igonto/jurisdiction#GDPR> rdfs:label "GDPR (General Data Protection Regulation)" ;
-                                                      <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Class that represents the GDPR." .
+<http://www.semanticweb.org/igonto/jurisdiction#GDPR> <http://www.semanticweb.org/igonto/jurisdiction#classDescription> "Class that represents the GDPR." ;
+                                                      rdfs:label "GDPR (General Data Protection Regulation)" .
 
 
 <http://www.semanticweb.org/igonto/organization#Automated_Data_Collection> rdfs:label "Automated Data Collection" .
@@ -20310,21 +21496,21 @@ Chapter 11 – 94  95  96  97  98  99""" .
 #    Rules
 #################################################################
 
-<enterprise> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/enterprise> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<rim> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/rim> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<ecm> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/ecm> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<rimSol> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/rimSol> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<infog> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/infog> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<edisco> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/edisco> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<archive> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/archive> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<pattern> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/igsonto/pattern> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
 <http://www.semanticweb.org/igonto/capability> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
@@ -20342,49 +21528,59 @@ Chapter 11 – 94  95  96  97  98  99""" .
 
 <http://www.semanticweb.org/igonto/pas> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
+igsonto-complete:cap rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igsonto-complete:article rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igsonto-complete:obligation rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igsonto-complete:right rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+igsonto-complete:req rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S2"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S2" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/igonto/organization#Large_Enterprise> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <enterprise>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/igonto/organization#Records_And_Information_Management> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <rim>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/rim>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#ECMSolution> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <ecm>
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/ecm>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#RIMSolution> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <rimSol>
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/rimSol>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <infog>
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/infog>
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#eDiscoverySolution> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <edisco>
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/edisco>
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                                          <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#ArchiveSolution> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <archive>
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/archive>
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                                                     <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#SolutionPattern> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <pattern>
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/pattern>
                                                                                                                                   ] ;
                                                                                                                         rdf:rest rdf:nil
                                                                                                                       ]
@@ -20398,38 +21594,38 @@ Chapter 11 – 94  95  96  97  98  99""" .
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/igonto#enterpriseDoesNotNeed> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <rim>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/rim>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <ecm>
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/ecm>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <infog>
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/infog>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <edisco>
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/edisco>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <archive>
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/archive>
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <rimSol>
+                                                                                                              <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/rimSol>
                                                                                                             ] ;
                                                                                                   rdf:rest rdf:nil
                                                                                                 ]
@@ -20441,48 +21637,48 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S6"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S6" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/igonto/organization#Small_Enterprise> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <enterprise>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/igonto/organization#Records_And_Information_Management> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <rim>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/rim>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#ECMSolution> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <ecm>
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/ecm>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                         <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <infog>
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/infog>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                    <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#eDiscoverySolution> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <edisco>
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/edisco>
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                               <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#ArchiveSolution> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <archive>
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/archive>
                                                                                                             ] ;
                                                                                                   rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                              rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                                          <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#RIMSolution> ;
-                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <rimSol>
+                                                                                                                         <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/rimSol>
                                                                                                                        ] ;
                                                                                                              rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                                         rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
                                                                                                                                     <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.example.org/cm/igso/2023/igso-arc#SolutionPattern> ;
-                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <pattern>
+                                                                                                                                    <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/pattern>
                                                                                                                                   ] ;
                                                                                                                         rdf:rest rdf:nil
                                                                                                                       ]
@@ -20496,38 +21692,38 @@ Chapter 11 – 94  95  96  97  98  99""" .
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/igonto#enterpriseDoesNotNeed> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <rim>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/rim>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <ecm>
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/ecm>
                                                                 ] ;
                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <infog>
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/infog>
                                                                            ] ;
                                                                  rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                             rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <edisco>
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/edisco>
                                                                                       ] ;
                                                                             rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                        rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> :needsSolution ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <archive>
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> igsonto-complete:needsSolution ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/archive>
                                                                                                  ] ;
                                                                                        rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                                                                   rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                                                               <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/igonto#enterpriseDoesNotNeed> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <enterprise> ;
-                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <rimSol>
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/igsonto/enterprise> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/igsonto/rimSol>
                                                                                                             ] ;
                                                                                                   rdf:rest rdf:nil
                                                                                                 ]
@@ -20539,8 +21735,8 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S1"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S1" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -20573,8 +21769,8 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S7"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S7" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -20640,8 +21836,8 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S4"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S4" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
@@ -20681,8 +21877,8 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S3"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S3" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -20722,8 +21918,8 @@ Chapter 11 – 94  95  96  97  98  99""" .
  ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
-   rdfs:comment ""^^xsd:string ;
-   rdfs:label "S5"^^xsd:string ;
+   rdfs:comment "" ;
+   rdfs:label "S5" ;
    rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
@@ -20762,4 +21958,91 @@ Chapter 11 – 94  95  96  97  98  99""" .
                                          ]
  ] .
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S8" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:article
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#obligationInvolvesArticle> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:obligation ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:article
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesObligation> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:obligation
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S9" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesArticle> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:article
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#rightInvolvesArticle> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:right ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:article
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRight> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:right
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "S10" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesObligation> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:obligation
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#requirementInvolvesObligation> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:req ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:obligation
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/igonto/jurisdiction#capabilityInvolvesRequirement> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> igsonto-complete:cap ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> igsonto-complete:req
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
