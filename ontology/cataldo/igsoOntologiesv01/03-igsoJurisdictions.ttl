@@ -3418,7 +3418,6 @@ igso-org:Ad-Hoc a owl:NamedIndividual ;
 # http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
 
 igso-org:AlfrescoContentManagement a owl:NamedIndividual ;
-	rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" ;
 	rdfs:label "Alfresco Content Management"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
@@ -3845,8 +3844,8 @@ _:genid98 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 dctype:Collection rdfs:label "Collection" .
 # 
 
-dct:abstract skos:definition "summary of the resource" ;
-	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+dct:abstract cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+	skos:definition "summary of the resource" ;
 	rdfs:label "abstract" ;
 	rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 # 
@@ -3857,7 +3856,6 @@ dct:description rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 # 
 
 :GDPR rdfs:isDefinedBy <https://gdpr-info.eu/> ;
-	rdfs:label "GDPR" ;
 	rdfs:comment """Chapter 1  – 1  2  3  4
 Chapter 2  – 5  6  7  8  9  10  11
 Chapter 3  – 12  13  14  15  16  17  18  19  20  21  22  23
@@ -3868,7 +3866,8 @@ Chapter 7  – 60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  7
 Chapter 8  – 77  78  79  80  81  82  83  84
 Chapter 9  – 85  86  87  88  89  90  91
 Chapter 10 – 92  93
-Chapter 11 – 94  95  96  97  98  99""" .
+Chapter 11 – 94  95  96  97  98  99""" ;
+	rdfs:label "GDPR" .
 # 
 # 
 # 
