@@ -1,0 +1,893 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"
+     xml:base="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:cmns-av="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+     xmlns:cmns-dt="https://www.omg.org/spec/Commons/DatesAndTimes/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:cmns-cls="https://www.omg.org/spec/Commons/Classifiers/"
+     xmlns:cmns-col="https://www.omg.org/spec/Commons/Collections/"
+     xmlns:cmns-cxtdsg="https://www.omg.org/spec/Commons/ContextualDesignators/"
+     xmlns:fibo-be-ge-ge="https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/"
+     xmlns:fibo-be-le-lp="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/"
+     xmlns:fibo-fnd-dt-fd="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"
+     xmlns:fibo-ind-ei-ei="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"
+     xmlns:fibo-be-fct-fct="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/"
+     xmlns:fibo-be-fct-pub="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/"
+     xmlns:fibo-fnd-org-fm="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/"
+     xmlns:fibo-fnd-qt-qtu="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/"
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:fibo-fnd-aap-ppl="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/"
+     xmlns:fibo-fnd-arr-cls="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/"
+     xmlns:fibo-fnd-arr-doc="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/"
+     xmlns:fibo-fnd-pas-pas="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/"
+     xmlns:fibo-fnd-plc-adr="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/"
+     xmlns:fibo-fnd-plc-loc="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/"
+     xmlns:fibo-fnd-pty-pty="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"
+     xmlns:fibo-fnd-rel-rel="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"
+     xmlns:fibo-fnd-utl-alx="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"
+     xmlns:fibo-fbc-pas-fpas="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/"
+     xmlns:IdentifiersAndIndices="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/">
+        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/IND/EconomicIndicators/EconomicIndicators/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/FunctionalEntities/FunctionalEntities/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/FunctionalEntities/Publishers/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/GovernmentEntities/GovernmentEntities/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/BE/LegalEntities/LegalPersons/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FBC/FinancialInstruments/FinancialInstruments/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FBC/FunctionalEntities/RegistrationAuthorities/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FBC/ProductsAndServices/FinancialProductsAndServices/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Accounting/CurrencyAmount/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/AgentsAndPeople/People/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Arrangements/ClassificationSchemes/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Arrangements/Documents/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/DatesAndTimes/BusinessDates/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/DatesAndTimes/FinancialDates/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Organizations/FormalOrganizations/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Parties/Parties/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Parties/Roles/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Addresses/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Places/Locations/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/ProductsAndServices/ProductsAndServices/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Quantities/QuantitiesAndUnits/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Relations/Relations/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/Analytics/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/AnnotationVocabulary/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/IND/Indicators/Indicators/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/Commons/AnnotationVocabulary/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/Commons/Classifiers/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/Commons/Collections/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/"/>
+        <owl:imports rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/"/>
+        <dcterms:abstract>This ontology provides the parameters which make up the various types of market economic indicators, along with basic facts about these such as the economies or countries they apply to.</dcterms:abstract>
+        <dcterms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensource.org/licenses/MIT</dcterms:license>
+        <rdfs:label>Economic Indicators Ontology</rdfs:label>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of the ontology was modified to use the Commons Ontology Library (Commons) Annotation Vocabulary rather than the OMG&apos;s Specification Metadata vocabulary.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified per the FIBO 2.0 RFC. Primary changes include the addition of a number of statistical measures (mean, total, etc.) and their use in existing and new indicators, and the addition of several more economic indicators.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified per the issue resolutions identified in the FIBO IND 1.0 FTF 1 report.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified per the issue resolutions identified in the FIBO IND 1.0 FTF 3 report.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to add definitions for alternative unemployment calculations and correct a circular property definition.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to address text formatting hygiene issues and clean up external links.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to eliminate deprecated elements.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to eliminate duplicatation with concepts in LCC and merge countries with locations in FND.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to eliminate references to external dictionary sites that no longer resolve, added a synonym to fixed basket and eliminated the restriction with respect to date period, which is not the primary concern of a fixed basket, revised the name of the &apos;goods or services population&apos; to &apos;goods population&apos; to eliminate a hygiene issue and reflect the synonym of &apos;basket of goods&apos;, and merged the statistical information publisher class from economic indicator publishers into this ontology.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to eliminate the restriction on economic indicator (and its subclasses) that it has an indicator value - the restriction should be on the quantity value such that the value refers to the indicator it represents, and to revise the definition of civilian non-institutional population to correctly represent civilian non-institutional person (added).</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to fix spelling errors.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to reflect the change in name and definition of numeric index to numeric index value in FND.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to use hasCoverageArea rather than appliesTo in the restriction on an economic indicator relating it to a statistical area, to reflect use of actualExpression as an annotation rather than datatype property, and to migrate the general statistics concepts to FND (deprecated herein).</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to use natural person rather than legally capable person.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators.rdf version of this ontology was modified to use the Commons Ontology Library (Commons) rather than the OMG&apos;s Languages, Countries and Codes (LCC), eliminating redundancies in FIBO as appropriate.</skos:changeNote>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Release"/>
+        <cmns-av:copyright>Copyright (c) 2014-2023 EDM Council, Inc.</cmns-av:copyright>
+        <cmns-av:copyright>Copyright (c) 2014-2023 Object Management Group, Inc.</cmns-av:copyright>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasDurationOfUnemployment -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasDurationOfUnemployment">
+        <rdfs:subPropertyOf rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/hasDuration"/>
+        <rdfs:range rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/Duration"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>has duration of unemployment</rdfs:label>
+        <skos:definition>specifies the length of time, typically in weeks, that people classified as unemployed have been continuously looking for work</skos:definition>
+        <cmns-av:adaptedFrom rdf:resource="https://www.bls.gov/cps/definitions.htm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasIndicatorValue -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasIndicatorValue">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasQuantityValue"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/QuantityValue"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>has indicator value</rdfs:label>
+        <skos:definition>specifies a quantity value for a given indicator</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasSeriesOrigin -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasSeriesOrigin">
+        <rdfs:subPropertyOf rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/hasStartDate"/>
+        <rdfs:range rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/Date"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>has series origin</rdfs:label>
+        <skos:definition>specifies the original starting date for the time series for a given economic indicator</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/excludesEnergyAndFood -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/excludesEnergyAndFood">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>excludes energy and food</rdfs:label>
+        <skos:definition>indicates whether the calculation of the index includes energy and food prices or not</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/isSeasonallyAdjusted -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/isSeasonallyAdjusted">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>is seasonally adjusted</rdfs:label>
+        <skos:definition>a predicate indicating whether some published formal method is applied that compensates for seasonal variations in the population or index value</skos:definition>
+        <cmns-av:explanatoryNote>Example explanation from the US Bureau of Labor Statistics: Because price data are used for different purposes by different groups, the Bureau of Labor Statistics publishes seasonally adjusted as well as unadjusted changes each month. ... Seasonal factors used in computing the seasonally adjusted indexes are derived by the X-13ARIMA-SEATS Seasonal Adjustment Method. Seasonally adjusted indexes and seasonal factors are computed annually. Each year, the last five years of seasonally adjusted data are revised.</cmns-av:explanatoryNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Consumer -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Consumer"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Civilian -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Civilian">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/LegallyCompetentNaturalPerson"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MilitaryPerson"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>civilian</rdfs:label>
+        <skos:definition>a person that is not a member of the military (i.e., that is not on active duty)</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianLaborForce -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianLaborForce">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPopulation"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/PopulationNotInLaborForce"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>civilian labor force</rdfs:label>
+        <skos:definition>subset of the civilian, non-institutional population considered to be part of the labor force during a given reporting period</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPerson -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPerson">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/LegalWorkingAgePerson"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Civilian"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalPerson"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>civilian non-institutional person</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.investopedia.com/terms/w/working-age-population.asp"/>
+        <skos:definition>legal working-age person that does not live in an institution (for example, a correctional facility, long-term care hospital, or nursing home), and is not on active military duty</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>The working-age population is the total population in a region, within a set range of ages, that is considered to be able and likely to work. The working-age population measure is used to give an estimate of the total number of potential workers within an economy. For example, in the U.S., it is 16, whereas in Canada it is 15.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/StatisticalUniverse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>civilian non-institutional population</rdfs:label>
+        <skos:definition>statistical universe consisting of people of a certain age who reside in a given region, do not live in institutions (for example, correctional facilities, long-term care hospitals, and nursing homes), and are not on active military duty</skos:definition>
+        <skos:scopeNote>The civilian non-institutional population is typically reported in thousands.</skos:scopeNote>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CombinedStatisticalArea -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CombinedStatisticalArea">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/comprises"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>combined statistical area</rdfs:label>
+        <skos:definition>combination of adjacent metropolitan and micropolitan areas with economic ties measured by commuting patterns</skos:definition>
+        <cmns-av:abbreviation>CSA</cmns-av:abbreviation>
+        <cmns-av:adaptedFrom rdf:resource="https://en.wikipedia.org/wiki/Combined_statistical_area"/>
+        <cmns-av:adaptedFrom rdf:resource="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf"/>
+        <cmns-av:adaptedFrom rdf:resource="https://www.federalregister.gov/documents/2021/07/16/2021-15159/2020-standards-for-delineating-core-based-statistical-areas"/>
+        <cmns-av:explanatoryNote>These areas that combine retain their own designations as metropolitan or micropolitan statistical areas within the larger combined statistical area.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/DiscouragedWorkerPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/DiscouragedWorkerPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MarginallyAttachedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>discouraged worker population</rdfs:label>
+        <skos:definition>subset of the marginally attached population that have given a job-market related reason for not currently looking for work</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/news.release/empsit.t15.htm</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EconomicIndicator -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EconomicIndicator">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/ScopedMeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/hasReportingPeriod"/>
+                <owl:someValuesFrom rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/ExplicitDatePeriod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/hasCoverageArea"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasSeriesOrigin"/>
+                <owl:allValuesFrom rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/Date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/hasReleaseDate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/Date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/isSeasonallyAdjusted"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/hasReleaseDateTime"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/CombinedDateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>economic indicator</rdfs:label>
+        <skos:definition>statistical measure of economic activity that is regular and comparable in the context of a statistical area (region), used for analysis of economic performance and predictions of future performance</skos:definition>
+        <skos:example>Example indicators include the average work week, weekly claims for unemployment insurance, new orders, vendor performance, stock prices, and changes in the money supply.</skos:example>
+        <cmns-av:adaptedFrom>Barron&apos;s Dictionary of Business and Economic Terms, Fifth Edition, 2012</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>The two main features of any indicator are the regularity with which they are measured and published, and the fact that they are comparable from one release to the next.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianLaborForce"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnemployedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>employed population</rdfs:label>
+        <skos:definition>a subset of the civilian labor force considered to be employed during the reporting period</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>There are a number of distinctions with respect to how individuals are counted from country to country, including whether or not they are considered employed if they are on unpaid leave for some reason, and whether or not they are counted multiple times if they have more than one paying job.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTime -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTime">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>employed population part-time</rdfs:label>
+        <skos:definition>subset of the employed population that includes persons that are working fewer than 30 to 35 hours per week based on usual working hours</skos:definition>
+        <cmns-av:adaptedFrom>https://stats.oecd.org/Index.aspx?DatasetCode=STLABOUR</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>In the U.S., part-time workers are those who usually work fewer than 35 hours per week. See https://www.bls.gov/cps/definitions.htm for additional details.</cmns-av:explanatoryNote>
+        <cmns-av:explanatoryNote>The definition of part-time varies considerably from country to country according to the OECD. Classification may be based on (1) employee perception, (2) usual working hours, which is the most reliable measure, or (3) actual working hours, which varies due to holidays, illness, etc.</cmns-av:explanatoryNote>
+        <cmns-av:synonym>population employed part-time</cmns-av:synonym>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTimeForEconomicReasons -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTimeForEconomicReasons">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTime"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulation"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTimeForNonEconomicReasons"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>employed population part-time for economic reasons</rdfs:label>
+        <skos:definition>subset of the employed population that includes persons that are working fewer than 30 to 35 hours per week due to slack work, unfavorable business conditions, inability to find full-time work, and seasonal declines in demand</skos:definition>
+        <cmns-av:adaptedFrom>https://stats.oecd.org/Index.aspx?DatasetCode=STLABOUR</cmns-av:adaptedFrom>
+        <cmns-av:adaptedFrom>https://www.bls.gov/cps/definitions.htm</cmns-av:adaptedFrom>
+        <cmns-av:synonym>involuntary part-time population</cmns-av:synonym>
+        <cmns-av:synonym>population employed part-time for economic reasons</cmns-av:synonym>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTimeForNonEconomicReasons -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTimeForNonEconomicReasons">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationPartTime"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>employed population part-time for non-economic reasons</rdfs:label>
+        <skos:definition>subset of the employed population that includes persons that are working fewer than 30 to 35 hours per week due to illness or other health or medical limitations, childcare problems, family or personal obligations, being in school or training, retirement or Social Security limits on earnings, and having a job where full-time work is less than 35 hours</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/cps/definitions.htm</cmns-av:adaptedFrom>
+        <cmns-av:synonym>population employed part-time for non-economic reasons</cmns-av:synonym>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationTemporarilyNotAtWork -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulationTemporarilyNotAtWork">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>employed population temporarily not at work</rdfs:label>
+        <skos:definition>subset of the employed population that includes persons that are temporarily absent from work for various reasons</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/news.release/empsit.t15.htm</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>This includes persons temporarily not at work because of illness or injury, holiday or vacation, strike or lockout, educational or training leave, maternity or parental leave, reduction in economic activity, temporary disorganisation or suspension of work due to such reasons as bad weather, mechanical or electrical breakdown, or shortage of raw materials or fuels, or other temporary absence with or without leave should be considered as in paid employment provided they had a formal job attachment.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Enterprise -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Enterprise">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalBusinessEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/hasIdentity"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/LegalPerson"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/IndustrySectorClassifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Establishment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/ContextualDesignators/appliesTo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>enterprise</rdfs:label>
+        <skos:definition>a functional business entity that produces and/or sells goods or services</skos:definition>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.bls.gov/opub/hom/glossary.htm#E</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>An enterprise (a private firm, government, or nonprofit organization) can consist of a single establishment or multiple establishments. All establishments in an enterprise may be classified in one industry (e.g., a chain), or they may be classified in different industries (e.g., a conglomerate).</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EnterprisePopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EnterprisePopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/StatisticalUniverse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Enterprise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>enterprise population</rdfs:label>
+        <skos:definition>a statistical universe consisting of enterprises designed for the purposes of supporting surveys such as those used as the basis for employment and producer price indices</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Establishment -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Establishment">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/isConstituentOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Enterprise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>establishment</rdfs:label>
+        <skos:definition>an enterprise (or part of an enterprise) that operates from a single physical location</skos:definition>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://stats.oecd.org/glossary/detail.asp?ID=857</cmns-av:adaptedFrom>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.bls.gov/opub/hom/glossary.htm#E</cmns-av:adaptedFrom>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.statcan.gc.ca/eng/concepts/units</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>The physical location of a certain economic activity - for example, a factory, mine, store, or office. An individual establishment is generally classified by having one NAICS code associated with it for statistical purposes, whereas an enterprise may be classified by multiple NAICS codes. The statistical structure is defined based on the operating structure and the accounting data produced by that entity. A given location may only need to publish revenues, whereas an operating unit (establishment) has employment statistics, etc. An establishment is defined as a producing unit at a single geographical location at which or from which economic activity is conducted and for which, at a minimum, employment data are available. In the case of a home-based business, the actual physical location would be specified as two distinct institutional units - as a household from a personal living and consumer perspective and as an establishment / operating unit due to the statistics required of the business.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EstablishmentPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EstablishmentPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EnterprisePopulation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Establishment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>establishment population</rdfs:label>
+        <skos:definition>a subset of the enterprise population focused on establishments</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/FixedBasketConstituent -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/FixedBasketConstituent">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/BasketConstituent"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/DatedCollectionConstituent"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>fixed basket constituent</rdfs:label>
+        <skos:definition>component of a fixed basket</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/FixedBasketPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/FixedBasketPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/StatisticalUniverse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasConstituent"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>fixed basket population</rdfs:label>
+        <skos:definition>statistical universe consisting of specific goods and/or services designed for the purposes of supporting surveys such as those used as the basis for price indices</skos:definition>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.imf.org/external/pubs/ft/ppi/2010/manual/ppi.pdf</cmns-av:adaptedFrom>
+        <cmns-av:synonym>goods and services population</cmns-av:synonym>
+        <cmns-av:synonym>goods and/or services population</cmns-av:synonym>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/StatisticalArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isGovernedBy"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/GovernmentBody"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>government-specified statistical area</rdfs:label>
+        <skos:definition>statistical area defined by a government agency</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Household -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Household">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalUnit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://www.omg.org/spec/Commons/Collections/hasMember"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/isLocatedAt"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/HousingUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>household</rdfs:label>
+        <skos:definition>individual or small group of persons who occupy a housing unit (such as a house or apartment) as their usual place of residence, who pool some, or all, of their income and wealth and who consume certain types of goods and services collectively, mainly housing and food</skos:definition>
+        <cmns-av:adaptedFrom rdf:resource="http://stats.oecd.org/glossary/detail.asp?ID=1255"/>
+        <cmns-av:explanatoryNote>A household may be either (a) a one-person household, that is to say, a person who makes provision for his or her own food or other essentials for living without combining with any other person to form part of a multi-person household or (b) a multi-person household, that is to say, a group of two or more persons living together who make common provision for food or other essentials for living. The persons in the group may pool their incomes and may, to a greater or lesser extent, have a common budget; they may be related or unrelated persons or constitute a combination of persons both related and unrelated.
+
+A household may be located in a housing unit or in a set of collective living quarters such as a boarding house, a hotel or a camp, or may comprise the administrative personnel in an institution. The household may also be homeless.</cmns-av:explanatoryNote>
+        <cmns-av:explanatoryNote>From the perspective of the U.S Census Bureau, a household includes the related family members and all the unrelated people, if any, such as lodgers, foster children, wards, or employees who share the housing unit. A person living alone in a housing unit, or a group of unrelated people sharing a housing unit such as partners or roomers, is also counted as a household. The count of households excludes group quarters [such as institutional facilities]. There are two major categories of households, &apos;family&apos; and &apos;nonfamily&apos;.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/HousingUnit -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/HousingUnit">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Locations/PhysicalLocation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/hasAddress"/>
+                <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/PhysicalAddress"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>housing unit</rdfs:label>
+        <skos:definition>house, an apartment, a mobile home or trailer, a group of rooms, or a single room occupied as separate living quarters, or if vacant, intended for occupancy as separate living quarters</skos:definition>
+        <cmns-av:explanatoryNote>Separate living quarters are those in which the occupants live separately from any other individuals in the building and which have direct access from outside the building or through a common hall. For vacant units, the criteria of separateness and direct access are applied to the intended occupants whenever possible.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalPerson -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalPerson">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>institutional person</rdfs:label>
+        <skos:definition>person that resides in an institution for some reason, due, for example, to hospitalization, rehabilitation, or incarceration</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalUnit -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/InstitutionalUnit">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/FunctionalEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/PartyInRole"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>institutional unit</rdfs:label>
+        <skos:definition>party that is capable, in its own right, of owning assets, incurring liabilities, and engaging in economic activities and in transactions with other parties</skos:definition>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://stats.oecd.org/glossary/detail.asp?ID=1415</cmns-av:adaptedFrom>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.statcan.gc.ca/eng/concepts/units</cmns-av:adaptedFrom>
+        <cmns-av:adaptedFrom rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.statcan.gc.ca/en/concepts/ccius/intro</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>There is a hierarchical relationship between institutional units and establishments. An institutional unit contains one or more entire establishment(s); an establishment belongs to one and only one institutional unit. There are two main types of units in the real world that may qualify as institutional units, namely persons or groups of persons in the form of households, and legal or social entities.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MarginallyAttachedPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MarginallyAttachedPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/PopulationNotInLaborForce"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>marginally attached population</rdfs:label>
+        <skos:definition>subset of the population that includes people who currently are neither working nor looking for work but indicate that they want and are available for a job and have looked for work sometime in the past 12 months</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/news.release/empsit.t15.htm</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MetropolitanStatisticalArea -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MetropolitanStatisticalArea">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>metropolitan statistical area</rdfs:label>
+        <skos:definition>one or more adjacent counties or county equivalents that have at least one urban core area of at least 50,000 population, plus adjacent territory that has a high degree of social and economic integration with the core as measured by commuting ties</skos:definition>
+        <cmns-av:abbreviation>MSA</cmns-av:abbreviation>
+        <cmns-av:adaptedFrom rdf:resource="https://en.wikipedia.org/wiki/List_of_Metropolitan_Statistical_Areas"/>
+        <cmns-av:adaptedFrom rdf:resource="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf"/>
+        <cmns-av:adaptedFrom rdf:resource="https://www.federalregister.gov/documents/2021/07/16/2021-15159/2020-standards-for-delineating-core-based-statistical-areas"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MicropolitanStatisticalArea -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MicropolitanStatisticalArea">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/GovernmentSpecifiedStatisticalArea"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>micropolitan statistical area</rdfs:label>
+        <skos:definition>one or more adjacent counties or county equivalents that have at least one urban core area of at least 10,000 population but less than 50,000, plus adjacent territory that has a high degree of social and economic integration with the core as measured by commuting ties</skos:definition>
+        <cmns-av:abbreviation>μSA</cmns-av:abbreviation>
+        <cmns-av:adaptedFrom rdf:resource="https://en.wikipedia.org/wiki/List_of_micropolitan_statistical_areas"/>
+        <cmns-av:adaptedFrom rdf:resource="https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/fedreg_2010/06282010_metro_standards-Complete.pdf"/>
+        <cmns-av:adaptedFrom rdf:resource="https://www.federalregister.gov/documents/2021/07/16/2021-15159/2020-standards-for-delineating-core-based-statistical-areas"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MilitaryPerson -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MilitaryPerson">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/LegallyCompetentNaturalPerson"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>military person</rdfs:label>
+        <skos:definition>a person that is a member of the active duty military</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/PopulationNotInLaborForce -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/PopulationNotInLaborForce">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>population not in the labor force</rdfs:label>
+        <skos:definition>a subset of the civilian, noninstitutional population, that is considered neither employed nor unemployed by the reporting agency during the reporting period</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>There are a number of distinctions with respect to how individuals are counted from country to country, including whether or not they are considered employed if they are on unpaid leave for some reason, and whether or not they are counted multiple times if they have more than one paying job.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/StatisticalInformationPublisher -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/StatisticalInformationPublisher">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/Publisher"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/hasIdentity"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/FormalOrganization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>statistical information publisher</rdfs:label>
+        <skos:definition>publisher that packages and makes analytical and statistical data available</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UltimateConsumer -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UltimateConsumer">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Consumer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/hasIdentity"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>ultimate consumer</rdfs:label>
+        <skos:definition>a person that is the ultimate user of a good, product or service</skos:definition>
+        <cmns-av:explanatoryNote>For the purposes of the CPI and related statistics, the definition of consumer is limited to humans. In general, a consumer could include a pet, as the consumer of pet food, for example, although the pet owner would likely be the purchaser and target of advertising.</cmns-av:explanatoryNote>
+        <cmns-av:explanatoryNote>The consumer is not always the purchaser of the product. Consumers are considered to be the users of the final product. For example, purchasers of building products are interim users of these products while constructing the finished product, which then may be purchased by the consumer.</cmns-av:explanatoryNote>
+        <cmns-av:synonym>consumer as defined by the Consumer Price Index (CPI)</cmns-av:synonym>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/EmployedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>underemployed population</rdfs:label>
+        <skos:definition>subset of the employed population that includes persons employed part-time for economic reasons, who want and are available for full-time work but have had to settle for a part-time schedule</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/news.release/empsit.t15.htm</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulationWithRespectToOccupation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulationWithRespectToOccupation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>underemployed population with respect to occupation</rdfs:label>
+        <skos:definition>subset of the underemployed population that includes persons employed in a role that does not reflect their training and experience, excluding those that change careers</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderutilizedPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderutilizedPopulation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/MarginallyAttachedPopulation"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnderemployedPopulation"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnemployedPopulation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianNonInstitutionalPopulation"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>underutilized population</rdfs:label>
+        <skos:definition>subset of the civilian non-institutional population that includes persons employed part-time for economic reasons, persons that are marginally attached to the labor force, and persons that are identified as unemployed</skos:definition>
+        <cmns-av:adaptedFrom>https://www.bls.gov/news.release/empsit.t15.htm</cmns-av:adaptedFrom>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnemployedPopulation -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/UnemployedPopulation">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/CivilianLaborForce"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/hasDurationOfUnemployment"/>
+                <owl:someValuesFrom rdf:resource="https://www.omg.org/spec/Commons/DatesAndTimes/Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>unemployed population</rdfs:label>
+        <skos:definition>subset of the civilian labor force that is considered to have had no employment but was available for work, except for temporary illness, and had made specific efforts to find employment sometime during a specified period, during the reporting period</skos:definition>
+        <cmns-av:adaptedFrom>U.S. Bureau of Labor Statistics and Statistics Canada reference definitions - https://wiki.edmcouncil.org/pages/viewpage.action?pageId=6358041</cmns-av:adaptedFrom>
+        <cmns-av:explanatoryNote>Persons who were waiting to be recalled to a job from which they had been laid off need not have been looking for work to be classified as unemployed.</cmns-av:explanatoryNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Daily -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Daily">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/ExplicitRecurrenceInterval"/>
+        <cmns-dt:hasDurationValue>P1D</cmns-dt:hasDurationValue>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>daily</rdfs:label>
+        <skos:definition>an explicit recurrence interval of one day, or 24 hours</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Hourly -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Hourly">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/ExplicitRecurrenceInterval"/>
+        <cmns-dt:hasDurationValue>P1H</cmns-dt:hasDurationValue>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>hourly</rdfs:label>
+        <skos:definition>an explicit recurrence interval of one hour, or 60 minutes</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Monthly -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Monthly">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/ExplicitRecurrenceInterval"/>
+        <cmns-dt:hasDurationValue>P1M</cmns-dt:hasDurationValue>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>monthly</rdfs:label>
+        <skos:definition>an explicit recurrence interval of exactly one (1) month, regardless of the length in days of a given calendar month, but typically 30 days</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Weekly -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/Weekly">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/ExplicitRecurrenceInterval"/>
+        <cmns-dt:hasDurationValue>P7D</cmns-dt:hasDurationValue>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/"/>
+        <rdfs:label>weekly</rdfs:label>
+        <skos:definition>an explicit recurrence interval of one week, or 7 days</skos:definition>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
