@@ -2657,7 +2657,8 @@ gr:Dispose a owl:NamedIndividual ;
 # 
 # http://purl.org/goodrelations/v1#ProvideService
 
-gr:ProvideService a owl:NamedIndividual .
+gr:ProvideService a owl:NamedIndividual ;
+	rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProvideService> .
 # 
 # http://www.example.org/cm/igso/2023/igso-ddy#ACL
 
@@ -2667,7 +2668,13 @@ gr:ProvideService a owl:NamedIndividual .
 
 :CEO a owl:NamedIndividual ;
 	rdfs:label "CEO" ;
-	cmns-av:synonym "Synonym of Chief Executive Officer" .
+	cmns-av:synonym "Synonym for Chief Executive Officer" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ContentManagementSolution
+
+:ContentManagementSolution a owl:NamedIndividual ;
+	<https://www.omg.org/spec/Commons/Collections/isPartOf> :ContentManagementSolution ;
+	rdfs:label "ContentManagementSolution" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AWS
 
@@ -2677,7 +2684,7 @@ igso-org:AWS a owl:NamedIndividual ;
 # http://www.example.org/cm/igso/2023/igso-org#AccessControlList
 
 igso-org:AccessControlList a owl:NamedIndividual ;
-	rdfs:label "AccessControlList"@de .
+	rdfs:label "AccessControlList"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
 
@@ -2799,22 +2806,29 @@ igso-org:HRAssets a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMCloud
 
-igso-org:IBMCloud a owl:NamedIndividual .
+igso-org:IBMCloud a owl:NamedIndividual ;
+	rdfs:isDefinedBy <https://cloud.ibm.com/login> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
 
 igso-org:IBMContentServices a owl:NamedIndividual ;
-	rdfs:label "IBMContentServices"@en .
+	rdfs:isDefinedBy <https://www.ibm.com/cloud/architecture/architectures/contentManagementdomain/reference-architecture/> ;
+	rdfs:label "IBMContentServices"@en ;
+	cmns-av:logicalDefinition <https://www.ibm.com/cloud/architecture/images/architecture/dba-content-mgmt-diagram.svg> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
 
 igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual ;
-	rdfs:label "IBM Enterprise Content Management"@en .
+	rdfs:isDefinedBy <https://www.ibm.com/enterprise-content-management> ;
+	rdfs:label "IBM Enterprise Content Management"@en ;
+	rdfs:seeAlso <https://www.ibm.com/products/cloud-pak-for-business-automation> , <https://www.ibm.com/products/content-collector> , <https://www.ibm.com/products/enterprise-records> , <https://www.ibm.com/products/filenet-content-manager> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
 
 igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual ;
-	rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+	rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." ;
+	rdfs:isDefinedBy <https://www.ibm.com/docs/en/iis/11.7?topic=server-architecture-concepts> ;
+	cmns-av:logicalDefinition <https://www.ibm.com/docs/en/SSZJPZ_11.7.0/com.ibm.swg.im.iis.productization.iisinfsv.overview.doc/images/ii_arch.gif> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ISACA
 
@@ -2846,7 +2860,8 @@ igso-org:IntellectualAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Large
 
-igso-org:Large a owl:NamedIndividual .
+igso-org:Large a owl:NamedIndividual ;
+	rdfs:label "Large" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Lucene
 
@@ -2865,7 +2880,8 @@ igso-org:ManualUnstructured a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
 
-igso-org:MaturityLevel a owl:NamedIndividual .
+igso-org:MaturityLevel a owl:NamedIndividual ;
+	rdfs:label "MaturityLevel" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
 
@@ -2893,21 +2909,25 @@ igso-org:MaturityLevel-5 a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Medium
 
-igso-org:Medium a owl:NamedIndividual .
+igso-org:Medium a owl:NamedIndividual ;
+	rdfs:label "Medium" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Micro
 
-igso-org:Micro a owl:NamedIndividual .
+igso-org:Micro a owl:NamedIndividual ;
+	rdfs:label "Micro" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
 
 igso-org:MicrosoftCloud a owl:NamedIndividual ;
-	rdfs:label "GCP"@en , "MicrosoftCloud"@en .
+	rdfs:isDefinedBy <https://azure.microsoft.com/en-us/free> ;
+	rdfs:label "MicrosoftCloud"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#NextCloud
 
 igso-org:NextCloud a owl:NamedIndividual ;
 	rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements." ;
+	rdfs:isDefinedBy <https://nextcloud.com/> ;
 	rdfs:label "Nextcloud" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Non-Existent
@@ -2933,9 +2953,7 @@ igso-org:OpenKM a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
 
-igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual ;
-	rdfs:label """OpenSourceDokumentManagementSystems
-Open-source cloud-native solutions can serve as viable alternatives to proprietary systems, offering similar functionalities and capabilities for data management and collaboration. They provide the advantage of being customizable, extensible, and cost-effective. However, it's important to assess each solution based on your specific requirements, technical expertise, and support options before making a decision. Additionally, consider factors like community support, documentation, and compatibility with your existing IT infrastructure when evaluating open-source alternatives.""" .
+igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Optimized
 
@@ -2946,12 +2964,12 @@ igso-org:Optimized a owl:NamedIndividual ;
 
 igso-org:OwnCloud a owl:NamedIndividual ;
 	rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
-	rdfs:label "OwnCloud" ;
-	cmns-av:directSource <https://nextcloud.com/> .
+	rdfs:label "OwnCloud" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Permission
 
-igso-org:Permission a owl:NamedIndividual .
+igso-org:Permission a owl:NamedIndividual ;
+	rdfs:label "Permission" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
 
@@ -2965,7 +2983,8 @@ igso-org:PostgreSQL a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Privilege
 
-igso-org:Privilege a owl:NamedIndividual .
+igso-org:Privilege a owl:NamedIndividual ;
+	rdfs:label "Privilege" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Proactive
 
@@ -2990,6 +3009,7 @@ igso-org:RecordsCatalog a owl:NamedIndividual ;
 # http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
 
 igso-org:RedHatCloud a owl:NamedIndividual ;
+	rdfs:isDefinedBy <https://www.redhat.com/en/technologies/cloud-computing/openshift/cloud-services> ;
 	rdfs:label "RedHatCloud"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
@@ -3020,7 +3040,8 @@ igso-org:ResourceManager a owl:NamedIndividual ;
 # http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
 
 igso-org:SAPInformationSteward a owl:NamedIndividual ;
-	rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
+	rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." ;
+	rdfs:isDefinedBy <https://help.sap.com/docs/SUPPORT_CONTENT/eim/3361406006.html> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
 
@@ -3029,13 +3050,12 @@ igso-org:SemiAutomatedLocal a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Small
 
-igso-org:Small a owl:NamedIndividual .
+igso-org:Small a owl:NamedIndividual ;
+	rdfs:label "Small" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Solr
 
 igso-org:Solr a owl:NamedIndividual ;
-	rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/" ;
-	rdfs:isDefinedBy <https://solr.apache.org/features.html> ;
 	rdfs:label "Solr"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#StorageOffering
@@ -3065,8 +3085,8 @@ _:genid31 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 _:genid32 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
 	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
 
-_:genid33 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
-	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+_:genid33 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
 
 _:genid34 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
@@ -3083,13 +3103,19 @@ _:genid37 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 _:genid38 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
-_:genid39 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
+_:genid39 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
 
-_:genid40 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
-	foaf:name "Cataldo Mega" .
+_:genid40 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
 
 _:genid41 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid42 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid43 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -3140,78 +3166,78 @@ dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 # 
 # 
 
-_:genid42 a owl:AllDisjointClasses ;
-	owl:members _:genid53 .
+_:genid44 a owl:AllDisjointClasses ;
+	owl:members _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first :ACL ;
+	rdf:rest _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first :AWS ;
+	rdf:rest _:genid53 .
 
 _:genid53 a rdf:List ;
-	rdf:first :ACL ;
+	rdf:first :Azure ;
 	rdf:rest _:genid52 .
 
 _:genid52 a rdf:List ;
-	rdf:first :AWS ;
+	rdf:first :CCS ;
 	rdf:rest _:genid51 .
 
 _:genid51 a rdf:List ;
-	rdf:first :Azure ;
+	rdf:first :DPO ;
 	rdf:rest _:genid50 .
 
 _:genid50 a rdf:List ;
-	rdf:first :CCS ;
+	rdf:first :ECS ;
 	rdf:rest _:genid49 .
 
 _:genid49 a rdf:List ;
-	rdf:first :DPO ;
+	rdf:first :GCP ;
 	rdf:rest _:genid48 .
 
 _:genid48 a rdf:List ;
-	rdf:first :ECS ;
+	rdf:first :IAS ;
 	rdf:rest _:genid47 .
 
 _:genid47 a rdf:List ;
-	rdf:first :GCP ;
+	rdf:first :IRS ;
 	rdf:rest _:genid46 .
 
 _:genid46 a rdf:List ;
-	rdf:first :IAS ;
+	rdf:first :OU ;
 	rdf:rest _:genid45 .
 
 _:genid45 a rdf:List ;
-	rdf:first :IRS ;
-	rdf:rest _:genid44 .
-
-_:genid44 a rdf:List ;
-	rdf:first :OU ;
-	rdf:rest _:genid43 .
-
-_:genid43 a rdf:List ;
 	rdf:first :RedHatCloud ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid54 a owl:AllDisjointClasses ;
-	owl:members _:genid60 .
+_:genid56 a owl:AllDisjointClasses ;
+	owl:members _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :BusinessClassificationScheme ;
+	rdf:rest _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :CommonFunctionVocabularyAndKeyword ;
+	rdf:rest _:genid60 .
 
 _:genid60 a rdf:List ;
-	rdf:first :BusinessClassificationScheme ;
+	rdf:first :CoreAgencyFunction ;
 	rdf:rest _:genid59 .
 
 _:genid59 a rdf:List ;
-	rdf:first :CommonFunctionVocabularyAndKeyword ;
+	rdf:first :CoreBusinessFunction ;
 	rdf:rest _:genid58 .
 
 _:genid58 a rdf:List ;
-	rdf:first :CoreAgencyFunction ;
+	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> ;
 	rdf:rest _:genid57 .
 
 _:genid57 a rdf:List ;
-	rdf:first :CoreBusinessFunction ;
-	rdf:rest _:genid56 .
-
-_:genid56 a rdf:List ;
-	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> ;
-	rdf:rest _:genid55 .
-
-_:genid55 a rdf:List ;
 	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module> ;
 	rdf:rest rdf:nil .
 # 

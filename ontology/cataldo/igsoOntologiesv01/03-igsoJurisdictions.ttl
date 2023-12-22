@@ -3238,24 +3238,27 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 # 
 # http://purl.org/dc/terms/
 
-<http://purl.org/dc/terms/> a owl:NamedIndividual ;
-	rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
+<http://purl.org/dc/terms/> a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Adapt
 
-:Adapt a owl:NamedIndividual , :DataOperation .
+:Adapt a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Adapt" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Align
 
-:Align a owl:NamedIndividual , :DataOperation .
+:Align a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Align" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Alter
 
-:Alter a owl:NamedIndividual , :DataOperation .
+:Alter a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Alter" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Buy
 
-:Buy a owl:NamedIndividual , :EconomicActivity .
+:Buy a owl:NamedIndividual , :EconomicActivity ;
+	rdfs:label "Buy" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Cataldo_Mega
 
@@ -3264,51 +3267,63 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Categorize
 
-:Categorize a owl:NamedIndividual .
+:Categorize a owl:NamedIndividual ;
+	rdfs:label "Categorize" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Classify
 
-:Classify a owl:NamedIndividual , :LegalActivity .
+:Classify a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "Classify" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Collect
 
-:Collect a owl:NamedIndividual , :DataOperation .
+:Collect a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Collect" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Combine
 
-:Combine a owl:NamedIndividual , :DataOperation .
+:Combine a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Combine" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Consult
 
-:Consult a owl:NamedIndividual , :DataOperation , :EconomicActivity .
+:Consult a owl:NamedIndividual , :DataOperation , :EconomicActivity ;
+	rdfs:label "Consult" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#DataRequest
 
-:DataRequest a owl:NamedIndividual , :LegalActivity .
+:DataRequest a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "DataRequest" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#DataResponse
 
-:DataResponse a owl:NamedIndividual , :LegalActivity .
+:DataResponse a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "DataResponse" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Destruct
 
-:Destruct a owl:NamedIndividual , :DataOperation .
+:Destruct a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Destruct" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Disclose
 
-:Disclose a owl:NamedIndividual , :DataOperation .
+:Disclose a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Disclose" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Dispose
 
-:Dispose a owl:NamedIndividual , :LegalActivity .
+:Dispose a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "Dispose" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Disseminate
 
-:Disseminate a owl:NamedIndividual , :DataOperation .
+:Disseminate a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Disseminate" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Erase
 
-:Erase a owl:NamedIndividual , :DataOperation .
+:Erase a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Erase" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#GDPR
 
@@ -3316,83 +3331,99 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Hold
 
-:Hold a owl:NamedIndividual , :LegalActivity .
+:Hold a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "Hold" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#LegalCase
 
-:LegalCase a owl:NamedIndividual , :LegalActivity .
+:LegalCase a owl:NamedIndividual , :LegalActivity ;
+	rdfs:label "LegalCase" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Load
 
-:Load a owl:NamedIndividual , :DataOperation .
+:Load a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Load" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Offer
 
-:Offer a owl:NamedIndividual , :EconomicActivity .
+:Offer a owl:NamedIndividual , :EconomicActivity ;
+	rdfs:isDefinedBy gr:Offering ;
+	rdfs:label "Offer" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Organize
 
-:Organize a owl:NamedIndividual , :DataOperation .
+:Organize a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Organize" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Query
 
-:Query a owl:NamedIndividual , :DataOperation .
+:Query a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Query" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Record
 
-:Record a owl:NamedIndividual , :DataOperation .
+:Record a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Record" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Rent
 
-:Rent a owl:NamedIndividual , :EconomicActivity .
+:Rent a owl:NamedIndividual , :EconomicActivity ;
+	rdfs:label "Rent" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Replicate
 
-:Replicate a owl:NamedIndividual , :DataOperation .
+:Replicate a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Replicate" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Restrict
 
-:Restrict a owl:NamedIndividual , :DataOperation .
+:Restrict a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Restrict" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Retain
 
-:Retain a owl:NamedIndividual , :DataOperation .
+:Retain a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Retain" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Retrieve
 
-:Retrieve a owl:NamedIndividual .
+:Retrieve a owl:NamedIndividual ;
+	rdfs:label "Retrieve" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Search
 
-:Search a owl:NamedIndividual , :DataOperation .
+:Search a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Search" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Sell
 
-:Sell a owl:NamedIndividual , :EconomicActivity .
+:Sell a owl:NamedIndividual , :EconomicActivity ;
+	rdfs:label "Sell" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Store
 
-:Store a owl:NamedIndividual , :DataOperation .
+:Store a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Store" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Structure
 
-:Structure a owl:NamedIndividual , :DataOperation .
+:Structure a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Structure" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Transfer
 
-:Transfer a owl:NamedIndividual , :DataOperation .
+:Transfer a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Transfer" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Transmit
 
-:Transmit a owl:NamedIndividual , :DataOperation .
+:Transmit a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Transmit" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Use
 
-:Use a owl:NamedIndividual , :DataOperation .
-# 
-# http://www.example.org/cm/igso/2023/igso-org#ACL
-
-igso-org:ACL a owl:NamedIndividual .
+:Use a owl:NamedIndividual , :DataOperation ;
+	rdfs:label "Use" .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ARMA
 
@@ -3402,18 +3433,15 @@ igso-org:ARMA a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AWS
 
-igso-org:AWS a owl:NamedIndividual ;
-	rdfs:label "AWS"@en .
+igso-org:AWS a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AccessControlList
 
-igso-org:AccessControlList a owl:NamedIndividual ;
-	rdfs:label "AccessControlList"@de .
+igso-org:AccessControlList a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
 
-igso-org:Ad-Hoc a owl:NamedIndividual ;
-	rdfs:label "Ad-Hoc"@en .
+igso-org:Ad-Hoc a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
 
@@ -3438,63 +3466,51 @@ While Alfresco provides a solid foundation for managing data and supporting GDPR
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
 
-igso-org:AmazonCloud a owl:NamedIndividual ;
-	rdfs:label "Amazon Cloud (AWS)"@en .
+igso-org:AmazonCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#AutomatedOrganizationWide
 
-igso-org:AutomatedOrganizationWide a owl:NamedIndividual ;
-	rdfs:label "AutomatedOrganizationWide"@en .
+igso-org:AutomatedOrganizationWide a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Azure
 
-igso-org:Azure a owl:NamedIndividual ;
-	rdfs:label "Azure"@en .
+igso-org:Azure a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#CGOC
 
-igso-org:CGOC a owl:NamedIndividual ;
-	rdfs:label "CGOC"@en .
+igso-org:CGOC a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#CloudEnvironment
 
-igso-org:CloudEnvironment a owl:NamedIndividual ;
-	rdfs:label "CloudEnvironment"@en .
+igso-org:CloudEnvironment a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#CommunicationOffering
 
-igso-org:CommunicationOffering a owl:NamedIndividual ;
-	rdfs:label "CommunicationOffering"@en .
+igso-org:CommunicationOffering a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Consequences
 
-igso-org:Consequences a owl:NamedIndividual ;
-	rdfs:label "Consequences"@en .
+igso-org:Consequences a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ContentCatalog
 
-igso-org:ContentCatalog a owl:NamedIndividual ;
-	rdfs:label "ContentCatalog"@en .
+igso-org:ContentCatalog a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#DAM
 
-igso-org:DAM a owl:NamedIndividual ;
-	rdfs:label "DAM"@en .
+igso-org:DAM a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#DAMA
 
-igso-org:DAMA a owl:NamedIndividual ;
-	rdfs:label "DAMA"@en .
+igso-org:DAMA a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#DB2
 
-igso-org:DB2 a owl:NamedIndividual ;
-	rdfs:label "DB2"@en .
+igso-org:DB2 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Defined
 
-igso-org:Defined a owl:NamedIndividual ;
-	rdfs:label "Defined"@en .
+igso-org:Defined a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#EDRM
 
@@ -3502,52 +3518,42 @@ igso-org:EDRM a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Essential
 
-igso-org:Essential a owl:NamedIndividual ;
-	rdfs:label "Essential"@en .
+igso-org:Essential a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
 
-igso-org:FinancialAssets a owl:NamedIndividual ;
-	rdfs:label "FinancialAssets"@en .
+igso-org:FinancialAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#FulltextIndex
 
-igso-org:FulltextIndex a owl:NamedIndividual ;
-	rdfs:label "FulltextIndex"@en .
+igso-org:FulltextIndex a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Fulltext_Index_Service
 
-igso-org:Fulltext_Index_Service a owl:NamedIndividual ;
-	rdfs:label "Fulltext_Index_Service"@en .
+igso-org:Fulltext_Index_Service a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Fulltext_Search_Service
 
-igso-org:Fulltext_Search_Service a owl:NamedIndividual ;
-	rdfs:label "Fulltext_Search_Service"@en .
+igso-org:Fulltext_Search_Service a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#FullyAutomatedLocal
 
-igso-org:FullyAutomatedLocal a owl:NamedIndividual ;
-	rdfs:label "FullyAutomatedLocal"@en .
+igso-org:FullyAutomatedLocal a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#GoogleCloud
 
-igso-org:GoogleCloud a owl:NamedIndividual ;
-	rdfs:label "GoogleCloud"@en .
+igso-org:GoogleCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#HRAssets
 
-igso-org:HRAssets a owl:NamedIndividual ;
-	rdfs:label "HRAssets"@en .
+igso-org:HRAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Head
 
 igso-org:Head a owl:NamedIndividual ;
 	igso-org:roleProperty igso-org:headOf ;
-	rdfs:comment "A role corresponding to the `igso-org:headOf` property"@en , "Actividad correspondiente a la propiedad `igso-org:headOf`."@es , "Un ruolo corrispondente alla proprietà `igso-org:headOf`."@it , "Un rôle correspondant à la propriété `igso-org:headOf`"@fr ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
-	rdfs:label "director ejecutivo"@es , "directora ejecutiva"@es , "head"@en , "responsabile"@it , "responsable"@fr ;
-	skos:prefLabel "head"@en , "responsabile"@it , "responsable"@fr .
+	rdfs:label "head"@en .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMCloud
 
@@ -3556,18 +3562,15 @@ igso-org:IBMCloud a owl:NamedIndividual ;
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
 
-igso-org:IBMContentServices a owl:NamedIndividual ;
-	rdfs:label "IBMContentServices"@en .
+igso-org:IBMContentServices a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
 
-igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual ;
-	rdfs:label "IBM Enterprise Content Management"@en .
+igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
 
-igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual ;
-	rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ISACA
 
@@ -3575,23 +3578,19 @@ igso-org:ISACA a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ITAssets
 
-igso-org:ITAssets a owl:NamedIndividual ;
-	rdfs:label "ITAssets"@en .
+igso-org:ITAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Immaturity
 
-igso-org:Immaturity a owl:NamedIndividual ;
-	rdfs:label "Immaturity"@en .
+igso-org:Immaturity a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#In-Development
 
-igso-org:In-Development a owl:NamedIndividual ;
-	rdfs:label "In-Development"@en .
+igso-org:In-Development a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Initial
 
-igso-org:Initial a owl:NamedIndividual ;
-	rdfs:label "Initial"@en .
+igso-org:Initial a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
 
@@ -3599,23 +3598,19 @@ igso-org:IntellectualAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Large
 
-igso-org:Large a owl:NamedIndividual ;
-	rdfs:label "Large"@de .
+igso-org:Large a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Lucene
 
-igso-org:Lucene a owl:NamedIndividual ;
-	rdfs:label "Lucene"@en .
+igso-org:Lucene a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ManualStructured
 
-igso-org:ManualStructured a owl:NamedIndividual ;
-	rdfs:label "ManualStructured"@en .
+igso-org:ManualStructured a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ManualUnstructured
 
-igso-org:ManualUnstructured a owl:NamedIndividual ;
-	rdfs:label "ManualUnStructured"@en .
+igso-org:ManualUnstructured a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
 
@@ -3623,13 +3618,11 @@ igso-org:MaturityLevel a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
 
-igso-org:MaturityLevel-1 a owl:NamedIndividual ;
-	rdfs:label "MaturityLevel-1"@en .
+igso-org:MaturityLevel-1 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-2
 
-igso-org:MaturityLevel-2 a owl:NamedIndividual ;
-	rdfs:label "MaturityLevel-2"@en .
+igso-org:MaturityLevel-2 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-3
 
@@ -3637,44 +3630,35 @@ igso-org:MaturityLevel-3 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-4
 
-igso-org:MaturityLevel-4 a owl:NamedIndividual ;
-	rdfs:label "MaturityLevel-4"@en .
+igso-org:MaturityLevel-4 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-5
 
-igso-org:MaturityLevel-5 a owl:NamedIndividual ;
-	rdfs:label "MaturityLevel-5"@en .
+igso-org:MaturityLevel-5 a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Medium
 
-igso-org:Medium a owl:NamedIndividual ;
-	rdfs:label "Medium"@de .
+igso-org:Medium a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Micro
 
-igso-org:Micro a owl:NamedIndividual ;
-	rdfs:label "Micro"@de .
+igso-org:Micro a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
 
-igso-org:MicrosoftCloud a owl:NamedIndividual ;
-	rdfs:label "GCP"@en , "MicrosoftCloud"@en .
+igso-org:MicrosoftCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#NextCloud
 
-igso-org:NextCloud a owl:NamedIndividual ;
-	rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements." ;
-	rdfs:label "Nextcloud" .
+igso-org:NextCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Non-Existent
 
-igso-org:Non-Existent a owl:NamedIndividual ;
-	rdfs:label "Non-Existent"@en .
+igso-org:Non-Existent a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
 
-igso-org:ObjectCatalog a owl:NamedIndividual ;
-	rdfs:label "ObjectCatalog"@en .
+igso-org:ObjectCatalog a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ObjectServer
 
@@ -3682,28 +3666,20 @@ igso-org:ObjectServer a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OpenKM
 
-igso-org:OpenKM a owl:NamedIndividual ;
-	rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails." ;
-	rdfs:label "OpenKM" ;
-	cmns-av:directSource <https://www.openkm.com/> .
+igso-org:OpenKM a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
 
-igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual ;
-	rdfs:label """OpenSourceDokumentManagementSystems
-Open-source cloud-native solutions can serve as viable alternatives to proprietary systems, offering similar functionalities and capabilities for data management and collaboration. They provide the advantage of being customizable, extensible, and cost-effective. However, it's important to assess each solution based on your specific requirements, technical expertise, and support options before making a decision. Additionally, consider factors like community support, documentation, and compatibility with your existing IT infrastructure when evaluating open-source alternatives.""" .
+igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Optimized
 
-igso-org:Optimized a owl:NamedIndividual ;
-	rdfs:label "Optimized"@en .
+igso-org:Optimized a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#OwnCloud
 
 igso-org:OwnCloud a owl:NamedIndividual ;
-	rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
-	rdfs:label "OwnCloud" ;
-	cmns-av:directSource <https://nextcloud.com/> , <https://owncloud.com/> .
+	cmns-av:directSource <https://nextcloud.com/> .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Permission
 
@@ -3711,13 +3687,11 @@ igso-org:Permission a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
 
-igso-org:PhysicalAssets a owl:NamedIndividual ;
-	rdfs:label "PhysicalAssets"@en .
+igso-org:PhysicalAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#PostgreSQL
 
-igso-org:PostgreSQL a owl:NamedIndividual ;
-	rdfs:label "PostgreSQL"@en .
+igso-org:PostgreSQL a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Privilege
 
@@ -3725,90 +3699,71 @@ igso-org:Privilege a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Proactive
 
-igso-org:Proactive a owl:NamedIndividual ;
-	rdfs:label "Proactive"@en .
+igso-org:Proactive a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ProcessOffering
 
-igso-org:ProcessOffering a owl:NamedIndividual ;
-	rdfs:label "ProcessOffering"@en .
+igso-org:ProcessOffering a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ProcessRisk
 
-igso-org:ProcessRisk a owl:NamedIndividual ;
-	rdfs:label "ProcessRisk"@en .
+igso-org:ProcessRisk a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RecordsCatalog
 
-igso-org:RecordsCatalog a owl:NamedIndividual ;
-	rdfs:label "RecordsCatalog"@en .
+igso-org:RecordsCatalog a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
 
-igso-org:RedHatCloud a owl:NamedIndividual ;
-	rdfs:label "RedHatCloud"@en .
+igso-org:RedHatCloud a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
 
-igso-org:Relational_Index_Service a owl:NamedIndividual ;
-	rdfs:label "Relational_Index_Service"@en .
+igso-org:Relational_Index_Service a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
 
-igso-org:Relational_Search_Service a owl:NamedIndividual ;
-	rdfs:label "Relational_Search_Service"@en .
+igso-org:Relational_Search_Service a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
 
-igso-org:RelationsAssets a owl:NamedIndividual ;
-	rdfs:label "RelationsAssets"@en .
+igso-org:RelationsAssets a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Repeatable
 
-igso-org:Repeatable a owl:NamedIndividual ;
-	rdfs:label "Repeatable"@en .
+igso-org:Repeatable a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#ResourceManager
 
-igso-org:ResourceManager a owl:NamedIndividual ;
-	rdfs:label "ResourceManager"@en .
+igso-org:ResourceManager a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
 
-igso-org:SAPInformationSteward a owl:NamedIndividual ;
-	rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
+igso-org:SAPInformationSteward a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
 
-igso-org:SemiAutomatedLocal a owl:NamedIndividual ;
-	rdfs:label "SemiAutomatedLocal"@en .
+igso-org:SemiAutomatedLocal a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Small
 
-igso-org:Small a owl:NamedIndividual ;
-	rdfs:label "Small"@de .
+igso-org:Small a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Solr
 
-igso-org:Solr a owl:NamedIndividual ;
-	rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/" ;
-	rdfs:isDefinedBy <https://solr.apache.org/features.html> ;
-	rdfs:label "Solr"@en .
+igso-org:Solr a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#StorageOffering
 
-igso-org:StorageOffering a owl:NamedIndividual ;
-	rdfs:label "Storage Offering"@en .
+igso-org:StorageOffering a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Sub-Standard
 
-igso-org:Sub-Standard a owl:NamedIndividual ;
-	rdfs:label "Sub-Standard"@en .
+igso-org:Sub-Standard a owl:NamedIndividual .
 # 
 # http://www.example.org/cm/igso/2023/igso-org#Transformational
 
-igso-org:Transformational a owl:NamedIndividual ;
-	rdfs:label "Transformational"@en .
+igso-org:Transformational a owl:NamedIndividual .
 # 
 
 _:genid92 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
@@ -3830,6 +3785,9 @@ _:genid97 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 
 _:genid98 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid99 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 	foaf:name "Cataldo Mega" .
 # 
 # 
@@ -3855,7 +3813,11 @@ dct:description rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
 	rdfs:label "description" .
 # 
 
+igso-data:Book1 rdfs:label "Book1" .
+# 
+
 :GDPR rdfs:isDefinedBy <https://gdpr-info.eu/> ;
+	rdfs:label "GDPR" ;
 	rdfs:comment """Chapter 1  – 1  2  3  4
 Chapter 2  – 5  6  7  8  9  10  11
 Chapter 3  – 12  13  14  15  16  17  18  19  20  21  22  23
@@ -3866,8 +3828,7 @@ Chapter 7  – 60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  7
 Chapter 8  – 77  78  79  80  81  82  83  84
 Chapter 9  – 85  86  87  88  89  90  91
 Chapter 10 – 92  93
-Chapter 11 – 94  95  96  97  98  99""" ;
-	rdfs:label "GDPR" .
+Chapter 11 – 94  95  96  97  98  99""" .
 # 
 # 
 # 
@@ -3879,610 +3840,610 @@ Chapter 11 – 94  95  96  97  98  99""" ;
 # 
 # 
 
-_:genid99 a owl:AllDisjointClasses ;
-	owl:members _:genid111 .
+_:genid100 a owl:AllDisjointClasses ;
+	owl:members _:genid112 .
+
+_:genid112 a rdf:List ;
+	rdf:first :Article12GDPR ;
+	rdf:rest _:genid111 .
 
 _:genid111 a rdf:List ;
-	rdf:first :Article12GDPR ;
+	rdf:first :Article13GDPR ;
 	rdf:rest _:genid110 .
 
 _:genid110 a rdf:List ;
-	rdf:first :Article13GDPR ;
+	rdf:first :Article14GDPR ;
 	rdf:rest _:genid109 .
 
 _:genid109 a rdf:List ;
-	rdf:first :Article14GDPR ;
+	rdf:first :Article15GDPR ;
 	rdf:rest _:genid108 .
 
 _:genid108 a rdf:List ;
-	rdf:first :Article15GDPR ;
+	rdf:first :Article16GDPR ;
 	rdf:rest _:genid107 .
 
 _:genid107 a rdf:List ;
-	rdf:first :Article16GDPR ;
+	rdf:first :Article17GDPR ;
 	rdf:rest _:genid106 .
 
 _:genid106 a rdf:List ;
-	rdf:first :Article17GDPR ;
+	rdf:first :Article18GDPR ;
 	rdf:rest _:genid105 .
 
 _:genid105 a rdf:List ;
-	rdf:first :Article18GDPR ;
+	rdf:first :Article19GDPR ;
 	rdf:rest _:genid104 .
 
 _:genid104 a rdf:List ;
-	rdf:first :Article19GDPR ;
+	rdf:first :Article20GDPR ;
 	rdf:rest _:genid103 .
 
 _:genid103 a rdf:List ;
-	rdf:first :Article20GDPR ;
+	rdf:first :Article21GDPR ;
 	rdf:rest _:genid102 .
 
 _:genid102 a rdf:List ;
-	rdf:first :Article21GDPR ;
+	rdf:first :Article22GDPR ;
 	rdf:rest _:genid101 .
 
 _:genid101 a rdf:List ;
-	rdf:first :Article22GDPR ;
-	rdf:rest _:genid100 .
-
-_:genid100 a rdf:List ;
 	rdf:first :Article23GDPR ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid112 a owl:AllDisjointClasses ;
-	owl:members _:genid119 .
+_:genid113 a owl:AllDisjointClasses ;
+	owl:members _:genid120 .
+
+_:genid120 a rdf:List ;
+	rdf:first :Article24GDPR ;
+	rdf:rest _:genid119 .
 
 _:genid119 a rdf:List ;
-	rdf:first :Article24GDPR ;
+	rdf:first :Article28GDPR ;
 	rdf:rest _:genid118 .
 
 _:genid118 a rdf:List ;
-	rdf:first :Article28GDPR ;
+	rdf:first :Article30GDPR ;
 	rdf:rest _:genid117 .
 
 _:genid117 a rdf:List ;
-	rdf:first :Article30GDPR ;
+	rdf:first :Article32GDPR ;
 	rdf:rest _:genid116 .
 
 _:genid116 a rdf:List ;
-	rdf:first :Article32GDPR ;
+	rdf:first :Article33GDPR ;
 	rdf:rest _:genid115 .
 
 _:genid115 a rdf:List ;
-	rdf:first :Article33GDPR ;
+	rdf:first :Article35GDPR ;
 	rdf:rest _:genid114 .
 
 _:genid114 a rdf:List ;
-	rdf:first :Article35GDPR ;
-	rdf:rest _:genid113 .
-
-_:genid113 a rdf:List ;
 	rdf:first :Article37GDPR ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid120 a owl:AllDisjointClasses ;
-	owl:members _:genid123 .
+_:genid121 a owl:AllDisjointClasses ;
+	owl:members _:genid124 .
+
+_:genid124 a rdf:List ;
+	rdf:first :BackupLocation ;
+	rdf:rest _:genid123 .
 
 _:genid123 a rdf:List ;
-	rdf:first :BackupLocation ;
+	rdf:first :RemoteLocation ;
 	rdf:rest _:genid122 .
 
 _:genid122 a rdf:List ;
-	rdf:first :RemoteLocation ;
-	rdf:rest _:genid121 .
-
-_:genid121 a rdf:List ;
 	rdf:first :StorageLocation ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid124 a owl:AllDisjointClasses ;
-	owl:members _:genid148 .
+_:genid125 a owl:AllDisjointClasses ;
+	owl:members _:genid149 .
+
+_:genid149 a rdf:List ;
+	rdf:first :BindingCorporateRules.DEF ;
+	rdf:rest _:genid148 .
 
 _:genid148 a rdf:List ;
-	rdf:first :BindingCorporateRules.DEF ;
+	rdf:first :BiometricData.DEF ;
 	rdf:rest _:genid147 .
 
 _:genid147 a rdf:List ;
-	rdf:first :BiometricData.DEF ;
+	rdf:first :Consent.DEF ;
 	rdf:rest _:genid146 .
 
 _:genid146 a rdf:List ;
-	rdf:first :Consent.DEF ;
+	rdf:first :Controller.DEF ;
 	rdf:rest _:genid145 .
 
 _:genid145 a rdf:List ;
-	rdf:first :Controller.DEF ;
+	rdf:first :Cross-borderProcessing.DEF ;
 	rdf:rest _:genid144 .
 
 _:genid144 a rdf:List ;
-	rdf:first :Cross-borderProcessing.DEF ;
+	rdf:first :Enterprise.DEF ;
 	rdf:rest _:genid143 .
 
 _:genid143 a rdf:List ;
-	rdf:first :Enterprise.DEF ;
+	rdf:first :FilingSystem.DEF ;
 	rdf:rest _:genid142 .
 
 _:genid142 a rdf:List ;
-	rdf:first :FilingSystem.DEF ;
+	rdf:first :GeneticData.DEF ;
 	rdf:rest _:genid141 .
 
 _:genid141 a rdf:List ;
-	rdf:first :GeneticData.DEF ;
+	rdf:first :GroupOfUndertakings.DEF ;
 	rdf:rest _:genid140 .
 
 _:genid140 a rdf:List ;
-	rdf:first :GroupOfUndertakings.DEF ;
+	rdf:first :HealthData.DEF ;
 	rdf:rest _:genid139 .
 
 _:genid139 a rdf:List ;
-	rdf:first :HealthData.DEF ;
+	rdf:first :InformationSocietyService.DEF ;
 	rdf:rest _:genid138 .
 
 _:genid138 a rdf:List ;
-	rdf:first :InformationSocietyService.DEF ;
+	rdf:first :InternationalOrganisation.DEF ;
 	rdf:rest _:genid137 .
 
 _:genid137 a rdf:List ;
-	rdf:first :InternationalOrganisation.DEF ;
+	rdf:first :MainEstablishment.DEF ;
 	rdf:rest _:genid136 .
 
 _:genid136 a rdf:List ;
-	rdf:first :MainEstablishment.DEF ;
+	rdf:first :PersonalData.DEF ;
 	rdf:rest _:genid135 .
 
 _:genid135 a rdf:List ;
-	rdf:first :PersonalData.DEF ;
+	rdf:first :PersonalDataBreach.DEF ;
 	rdf:rest _:genid134 .
 
 _:genid134 a rdf:List ;
-	rdf:first :PersonalDataBreach.DEF ;
+	rdf:first :Processing.DEF ;
 	rdf:rest _:genid133 .
 
 _:genid133 a rdf:List ;
-	rdf:first :Processing.DEF ;
+	rdf:first :Processor.DEF ;
 	rdf:rest _:genid132 .
 
 _:genid132 a rdf:List ;
-	rdf:first :Processor.DEF ;
+	rdf:first :Profiling.DEF ;
 	rdf:rest _:genid131 .
 
 _:genid131 a rdf:List ;
-	rdf:first :Profiling.DEF ;
+	rdf:first :Pseudonymisation.DEF ;
 	rdf:rest _:genid130 .
 
 _:genid130 a rdf:List ;
-	rdf:first :Pseudonymisation.DEF ;
+	rdf:first :RelevantAndReasonedObjection.DEF ;
 	rdf:rest _:genid129 .
 
 _:genid129 a rdf:List ;
-	rdf:first :RelevantAndReasonedObjection.DEF ;
+	rdf:first :Representative.DEF ;
 	rdf:rest _:genid128 .
 
 _:genid128 a rdf:List ;
-	rdf:first :Representative.DEF ;
+	rdf:first :SupervisoryAuthority.DEF ;
 	rdf:rest _:genid127 .
 
 _:genid127 a rdf:List ;
-	rdf:first :SupervisoryAuthority.DEF ;
+	rdf:first :SupervisoryAuthorityConcerned.DEF ;
 	rdf:rest _:genid126 .
 
 _:genid126 a rdf:List ;
-	rdf:first :SupervisoryAuthorityConcerned.DEF ;
-	rdf:rest _:genid125 .
-
-_:genid125 a rdf:List ;
 	rdf:first :ThirdParty.DEF ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid149 a owl:AllDisjointClasses ;
-	owl:members _:genid169 .
+_:genid150 a owl:AllDisjointClasses ;
+	owl:members _:genid170 .
+
+_:genid170 a rdf:List ;
+	rdf:first :DataControllerObligation ;
+	rdf:rest _:genid169 .
 
 _:genid169 a rdf:List ;
-	rdf:first :DataControllerObligation ;
+	rdf:first :DataProcessorObligation ;
 	rdf:rest _:genid168 .
 
 _:genid168 a rdf:List ;
-	rdf:first :DataProcessorObligation ;
+	rdf:first :ObligationOfCross-borderDataTransfer ;
 	rdf:rest _:genid167 .
 
 _:genid167 a rdf:List ;
-	rdf:first :ObligationOfCross-borderDataTransfer ;
+	rdf:first :ObligationToAppointDataProtectionOfficer ;
 	rdf:rest _:genid166 .
 
 _:genid166 a rdf:List ;
-	rdf:first :ObligationToAppointDataProtectionOfficer ;
+	rdf:first :ObligationToCaptureRecordsOfDataProcessingActivity ;
 	rdf:rest _:genid165 .
 
 _:genid165 a rdf:List ;
-	rdf:first :ObligationToCaptureRecordsOfDataProcessingActivity ;
+	rdf:first :ObligationToCooperateWithSupervisoryAuthority ;
 	rdf:rest _:genid164 .
 
 _:genid164 a rdf:List ;
-	rdf:first :ObligationToCooperateWithSupervisoryAuthority ;
+	rdf:first :ObligationToEnsureAccountabilityOfDataController ;
 	rdf:rest _:genid163 .
 
 _:genid163 a rdf:List ;
-	rdf:first :ObligationToEnsureAccountabilityOfDataController ;
+	rdf:first :ObligationToEnsureAccountabilityOfProcessor ;
 	rdf:rest _:genid162 .
 
 _:genid162 a rdf:List ;
-	rdf:first :ObligationToEnsureAccountabilityOfProcessor ;
+	rdf:first :ObligationToEnsureAccuracyOfData ;
 	rdf:rest _:genid161 .
 
 _:genid161 a rdf:List ;
-	rdf:first :ObligationToEnsureAccuracyOfData ;
+	rdf:first :ObligationToEnsureConfidentialityOfData ;
 	rdf:rest _:genid160 .
 
 _:genid160 a rdf:List ;
-	rdf:first :ObligationToEnsureConfidentialityOfData ;
+	rdf:first :ObligationToEnsureIntegrityOfData ;
 	rdf:rest _:genid159 .
 
 _:genid159 a rdf:List ;
-	rdf:first :ObligationToEnsureIntegrityOfData ;
+	rdf:first :ObligationToFairnessDataProcessing ;
 	rdf:rest _:genid158 .
 
 _:genid158 a rdf:List ;
-	rdf:first :ObligationToFairnessDataProcessing ;
+	rdf:first :ObligationToFulfillConsentRequirement ;
 	rdf:rest _:genid157 .
 
 _:genid157 a rdf:List ;
-	rdf:first :ObligationToFulfillConsentRequirement ;
+	rdf:first :ObligationToLawfulnessDataProcessing ;
 	rdf:rest _:genid156 .
 
 _:genid156 a rdf:List ;
-	rdf:first :ObligationToLawfulnessDataProcessing ;
+	rdf:first :ObligationToLimitPurposeDataProcessing ;
 	rdf:rest _:genid155 .
 
 _:genid155 a rdf:List ;
-	rdf:first :ObligationToLimitPurposeDataProcessing ;
+	rdf:first :ObligationToLimitStoragePeriod ;
 	rdf:rest _:genid154 .
 
 _:genid154 a rdf:List ;
-	rdf:first :ObligationToLimitStoragePeriod ;
+	rdf:first :ObligationToMinimizeData ;
 	rdf:rest _:genid153 .
 
 _:genid153 a rdf:List ;
-	rdf:first :ObligationToMinimizeData ;
+	rdf:first :ObligationToNotifyOfPersonalDataBreach ;
 	rdf:rest _:genid152 .
 
 _:genid152 a rdf:List ;
-	rdf:first :ObligationToNotifyOfPersonalDataBreach ;
+	rdf:first :ObligationToPerformDataProtectionImpactAssessment ;
 	rdf:rest _:genid151 .
 
 _:genid151 a rdf:List ;
-	rdf:first :ObligationToPerformDataProtectionImpactAssessment ;
-	rdf:rest _:genid150 .
-
-_:genid150 a rdf:List ;
 	rdf:first :ObligationToTransparencyOfDataProcessing ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid170 a owl:AllDisjointClasses ;
-	owl:members _:genid188 .
+_:genid171 a owl:AllDisjointClasses ;
+	owl:members _:genid189 .
+
+_:genid189 a rdf:List ;
+	rdf:first :ObligationOfCross-borderDataTransfer ;
+	rdf:rest _:genid188 .
 
 _:genid188 a rdf:List ;
-	rdf:first :ObligationOfCross-borderDataTransfer ;
+	rdf:first :ObligationToAppointDataProtectionOfficer ;
 	rdf:rest _:genid187 .
 
 _:genid187 a rdf:List ;
-	rdf:first :ObligationToAppointDataProtectionOfficer ;
+	rdf:first :ObligationToCaptureRecordsOfDataProcessingActivity ;
 	rdf:rest _:genid186 .
 
 _:genid186 a rdf:List ;
-	rdf:first :ObligationToCaptureRecordsOfDataProcessingActivity ;
+	rdf:first :ObligationToCooperateWithSupervisoryAuthority ;
 	rdf:rest _:genid185 .
 
 _:genid185 a rdf:List ;
-	rdf:first :ObligationToCooperateWithSupervisoryAuthority ;
+	rdf:first :ObligationToEnsureAccountabilityOfDataController ;
 	rdf:rest _:genid184 .
 
 _:genid184 a rdf:List ;
-	rdf:first :ObligationToEnsureAccountabilityOfDataController ;
+	rdf:first :ObligationToEnsureAccountabilityOfProcessor ;
 	rdf:rest _:genid183 .
 
 _:genid183 a rdf:List ;
-	rdf:first :ObligationToEnsureAccountabilityOfProcessor ;
+	rdf:first :ObligationToEnsureAccuracyOfData ;
 	rdf:rest _:genid182 .
 
 _:genid182 a rdf:List ;
-	rdf:first :ObligationToEnsureAccuracyOfData ;
+	rdf:first :ObligationToEnsureConfidentialityOfData ;
 	rdf:rest _:genid181 .
 
 _:genid181 a rdf:List ;
-	rdf:first :ObligationToEnsureConfidentialityOfData ;
+	rdf:first :ObligationToEnsureIntegrityOfData ;
 	rdf:rest _:genid180 .
 
 _:genid180 a rdf:List ;
-	rdf:first :ObligationToEnsureIntegrityOfData ;
+	rdf:first :ObligationToFairnessDataProcessing ;
 	rdf:rest _:genid179 .
 
 _:genid179 a rdf:List ;
-	rdf:first :ObligationToFairnessDataProcessing ;
+	rdf:first :ObligationToFulfillConsentRequirement ;
 	rdf:rest _:genid178 .
 
 _:genid178 a rdf:List ;
-	rdf:first :ObligationToFulfillConsentRequirement ;
+	rdf:first :ObligationToLawfulnessDataProcessing ;
 	rdf:rest _:genid177 .
 
 _:genid177 a rdf:List ;
-	rdf:first :ObligationToLawfulnessDataProcessing ;
+	rdf:first :ObligationToLimitPurposeDataProcessing ;
 	rdf:rest _:genid176 .
 
 _:genid176 a rdf:List ;
-	rdf:first :ObligationToLimitPurposeDataProcessing ;
+	rdf:first :ObligationToLimitStoragePeriod ;
 	rdf:rest _:genid175 .
 
 _:genid175 a rdf:List ;
-	rdf:first :ObligationToLimitStoragePeriod ;
+	rdf:first :ObligationToMinimizeData ;
 	rdf:rest _:genid174 .
 
 _:genid174 a rdf:List ;
-	rdf:first :ObligationToMinimizeData ;
+	rdf:first :ObligationToNotifyOfPersonalDataBreach ;
 	rdf:rest _:genid173 .
 
 _:genid173 a rdf:List ;
-	rdf:first :ObligationToNotifyOfPersonalDataBreach ;
+	rdf:first :ObligationToPerformDataProtectionImpactAssessment ;
 	rdf:rest _:genid172 .
 
 _:genid172 a rdf:List ;
-	rdf:first :ObligationToPerformDataProtectionImpactAssessment ;
-	rdf:rest _:genid171 .
-
-_:genid171 a rdf:List ;
 	rdf:first :ObligationToTransparencyOfDataProcessing ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid189 a owl:AllDisjointClasses ;
-	owl:members _:genid200 .
+_:genid190 a owl:AllDisjointClasses ;
+	owl:members _:genid201 .
+
+_:genid201 a rdf:List ;
+	rdf:first :PersonalDataTransfer ;
+	rdf:rest _:genid200 .
 
 _:genid200 a rdf:List ;
-	rdf:first :PersonalDataTransfer ;
+	rdf:first :ProcessingPurpose ;
 	rdf:rest _:genid199 .
 
 _:genid199 a rdf:List ;
-	rdf:first :ProcessingPurpose ;
+	rdf:first :ProcessingWithAccuracy ;
 	rdf:rest _:genid198 .
 
 _:genid198 a rdf:List ;
-	rdf:first :ProcessingWithAccuracy ;
+	rdf:first :ProcessingWithConfidentiality ;
 	rdf:rest _:genid197 .
 
 _:genid197 a rdf:List ;
-	rdf:first :ProcessingWithConfidentiality ;
+	rdf:first :ProcessingWithDataMinimization ;
 	rdf:rest _:genid196 .
 
 _:genid196 a rdf:List ;
-	rdf:first :ProcessingWithDataMinimization ;
+	rdf:first :ProcessingWithFairness ;
 	rdf:rest _:genid195 .
 
 _:genid195 a rdf:List ;
-	rdf:first :ProcessingWithFairness ;
+	rdf:first :ProcessingWithIntegriry ;
 	rdf:rest _:genid194 .
 
 _:genid194 a rdf:List ;
-	rdf:first :ProcessingWithIntegriry ;
+	rdf:first :ProcessingWithLawfulness ;
 	rdf:rest _:genid193 .
 
 _:genid193 a rdf:List ;
-	rdf:first :ProcessingWithLawfulness ;
+	rdf:first :ProcessingWithStorageLimitation ;
 	rdf:rest _:genid192 .
 
 _:genid192 a rdf:List ;
-	rdf:first :ProcessingWithStorageLimitation ;
+	rdf:first :ProcessingWithTransparency ;
 	rdf:rest _:genid191 .
 
 _:genid191 a rdf:List ;
-	rdf:first :ProcessingWithTransparency ;
-	rdf:rest _:genid190 .
-
-_:genid190 a rdf:List ;
 	rdf:first :PurposeOfProcessing ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid201 a owl:AllDisjointClasses ;
-	owl:members _:genid239 .
+_:genid202 a owl:AllDisjointClasses ;
+	owl:members _:genid240 .
+
+_:genid240 a rdf:List ;
+	rdf:first :RR.AppointDataProtectionOfficer ;
+	rdf:rest _:genid239 .
 
 _:genid239 a rdf:List ;
-	rdf:first :RR.AppointDataProtectionOfficer ;
+	rdf:first :RR.CaptureRecordsOfDataProcessingActivity ;
 	rdf:rest _:genid238 .
 
 _:genid238 a rdf:List ;
-	rdf:first :RR.CaptureRecordsOfDataProcessingActivity ;
+	rdf:first :RR.CooperateWithSupervisoryAuthority ;
 	rdf:rest _:genid237 .
 
 _:genid237 a rdf:List ;
-	rdf:first :RR.CooperateWithSupervisoryAuthority ;
+	rdf:first :RR.Cross-borderDataTransfer ;
 	rdf:rest _:genid236 .
 
 _:genid236 a rdf:List ;
-	rdf:first :RR.Cross-borderDataTransfer ;
+	rdf:first :RR.EnforceDesirableBehavior ;
 	rdf:rest _:genid235 .
 
 _:genid235 a rdf:List ;
-	rdf:first :RR.EnforceDesirableBehavior ;
+	rdf:first :RR.EnsureAccountabilityOfDataController ;
 	rdf:rest _:genid234 .
 
 _:genid234 a rdf:List ;
-	rdf:first :RR.EnsureAccountabilityOfDataController ;
+	rdf:first :RR.EnsureAccountabilityOfDataProcessor ;
 	rdf:rest _:genid233 .
 
 _:genid233 a rdf:List ;
-	rdf:first :RR.EnsureAccountabilityOfDataProcessor ;
+	rdf:first :RR.EnsureAccuracyOfData ;
 	rdf:rest _:genid232 .
 
 _:genid232 a rdf:List ;
-	rdf:first :RR.EnsureAccuracyOfData ;
+	rdf:first :RR.EnsureConfidentialityOfData ;
 	rdf:rest _:genid231 .
 
 _:genid231 a rdf:List ;
-	rdf:first :RR.EnsureConfidentialityOfData ;
+	rdf:first :RR.EnsureFairnessDataProcessing ;
 	rdf:rest _:genid230 .
 
 _:genid230 a rdf:List ;
-	rdf:first :RR.EnsureFairnessDataProcessing ;
+	rdf:first :RR.EnsureIntegrityOfData ;
 	rdf:rest _:genid229 .
 
 _:genid229 a rdf:List ;
-	rdf:first :RR.EnsureIntegrityOfData ;
+	rdf:first :RR.EnsureLawfulnessDataProcessing ;
 	rdf:rest _:genid228 .
 
 _:genid228 a rdf:List ;
-	rdf:first :RR.EnsureLawfulnessDataProcessing ;
+	rdf:first :RR.EnsureTransparencyOfDataProcessing ;
 	rdf:rest _:genid227 .
 
 _:genid227 a rdf:List ;
-	rdf:first :RR.EnsureTransparencyOfDataProcessing ;
+	rdf:first :RR.FulfillConsentRequirement ;
 	rdf:rest _:genid226 .
 
 _:genid226 a rdf:List ;
-	rdf:first :RR.FulfillConsentRequirement ;
+	rdf:first :RR.ImplementDataProcessingRestrictionMeasure ;
 	rdf:rest _:genid225 .
 
 _:genid225 a rdf:List ;
-	rdf:first :RR.ImplementDataProcessingRestrictionMeasure ;
+	rdf:first :RR.ImplementLegalRecourse ;
 	rdf:rest _:genid224 .
 
 _:genid224 a rdf:List ;
-	rdf:first :RR.ImplementLegalRecourse ;
+	rdf:first :RR.ImplementManageDataSubjectConsent ;
 	rdf:rest _:genid223 .
 
 _:genid223 a rdf:List ;
-	rdf:first :RR.ImplementManageDataSubjectConsent ;
+	rdf:first :RR.ImplementSecurityMeasure ;
 	rdf:rest _:genid222 .
 
 _:genid222 a rdf:List ;
-	rdf:first :RR.ImplementSecurityMeasure ;
+	rdf:first :RR.LimitPurposeDataProcessing ;
 	rdf:rest _:genid221 .
 
 _:genid221 a rdf:List ;
-	rdf:first :RR.LimitPurposeDataProcessing ;
+	rdf:first :RR.LimitStoragePeriod ;
 	rdf:rest _:genid220 .
 
 _:genid220 a rdf:List ;
-	rdf:first :RR.LimitStoragePeriod ;
+	rdf:first :RR.MinimizeDataSubjectData ;
 	rdf:rest _:genid219 .
 
 _:genid219 a rdf:List ;
-	rdf:first :RR.MinimizeDataSubjectData ;
+	rdf:first :RR.NotifyOfPersonalDataBreach ;
 	rdf:rest _:genid218 .
 
 _:genid218 a rdf:List ;
-	rdf:first :RR.NotifyOfPersonalDataBreach ;
+	rdf:first :RR.PerformDataProtectionImpactAssessment ;
 	rdf:rest _:genid217 .
 
 _:genid217 a rdf:List ;
-	rdf:first :RR.PerformDataProtectionImpactAssessment ;
+	rdf:first :RR.RightRelatedToAutomatedDecision-making ;
 	rdf:rest _:genid216 .
 
 _:genid216 a rdf:List ;
-	rdf:first :RR.RightRelatedToAutomatedDecision-making ;
+	rdf:first :RR.RightRelatedToAutomatedProfiling ;
 	rdf:rest _:genid215 .
 
 _:genid215 a rdf:List ;
-	rdf:first :RR.RightRelatedToAutomatedProfiling ;
+	rdf:first :RR.RightToAccess ;
 	rdf:rest _:genid214 .
 
 _:genid214 a rdf:List ;
-	rdf:first :RR.RightToAccess ;
+	rdf:first :RR.RightToBeForgotten ;
 	rdf:rest _:genid213 .
 
 _:genid213 a rdf:List ;
-	rdf:first :RR.RightToBeForgotten ;
+	rdf:first :RR.RightToBeInformed ;
 	rdf:rest _:genid212 .
 
 _:genid212 a rdf:List ;
-	rdf:first :RR.RightToBeInformed ;
+	rdf:first :RR.RightToDataPortability ;
 	rdf:rest _:genid211 .
 
 _:genid211 a rdf:List ;
-	rdf:first :RR.RightToDataPortability ;
+	rdf:first :RR.RightToErasure ;
 	rdf:rest _:genid210 .
 
 _:genid210 a rdf:List ;
-	rdf:first :RR.RightToErasure ;
+	rdf:first :RR.RightToObject ;
 	rdf:rest _:genid209 .
 
 _:genid209 a rdf:List ;
-	rdf:first :RR.RightToObject ;
+	rdf:first :RR.RightToRectification ;
 	rdf:rest _:genid208 .
 
 _:genid208 a rdf:List ;
-	rdf:first :RR.RightToRectification ;
+	rdf:first :RR.RightToRestrictProcessing ;
 	rdf:rest _:genid207 .
 
 _:genid207 a rdf:List ;
-	rdf:first :RR.RightToRestrictProcessing ;
+	rdf:first :RR.SupportEnterpriseWithBackupLocation ;
 	rdf:rest _:genid206 .
 
 _:genid206 a rdf:List ;
-	rdf:first :RR.SupportEnterpriseWithBackupLocation ;
+	rdf:first :RR.SupportEnterpriseWithMainEstablishment ;
 	rdf:rest _:genid205 .
 
 _:genid205 a rdf:List ;
-	rdf:first :RR.SupportEnterpriseWithMainEstablishment ;
+	rdf:first :RR.SupportEnterpriseWithRemoteLocation ;
 	rdf:rest _:genid204 .
 
 _:genid204 a rdf:List ;
-	rdf:first :RR.SupportEnterpriseWithRemoteLocation ;
+	rdf:first :RR.SupportEnterpriseWithStorageLocation ;
 	rdf:rest _:genid203 .
 
 _:genid203 a rdf:List ;
-	rdf:first :RR.SupportEnterpriseWithStorageLocation ;
-	rdf:rest _:genid202 .
-
-_:genid202 a rdf:List ;
 	rdf:first :RR.SupportLegitimateInterest ;
 	rdf:rest rdf:nil .
 # 
 
-_:genid240 a owl:AllDisjointClasses ;
-	owl:members _:genid250 .
+_:genid241 a owl:AllDisjointClasses ;
+	owl:members _:genid251 .
+
+_:genid251 a rdf:List ;
+	rdf:first :RightRelatedToAutomatedDecision-making ;
+	rdf:rest _:genid250 .
 
 _:genid250 a rdf:List ;
-	rdf:first :RightRelatedToAutomatedDecision-making ;
+	rdf:first :RightRelatedToAutomatedProfiling ;
 	rdf:rest _:genid249 .
 
 _:genid249 a rdf:List ;
-	rdf:first :RightRelatedToAutomatedProfiling ;
+	rdf:first :RightToAccess ;
 	rdf:rest _:genid248 .
 
 _:genid248 a rdf:List ;
-	rdf:first :RightToAccess ;
+	rdf:first :RightToBeForgotten ;
 	rdf:rest _:genid247 .
 
 _:genid247 a rdf:List ;
-	rdf:first :RightToBeForgotten ;
+	rdf:first :RightToBeInformed ;
 	rdf:rest _:genid246 .
 
 _:genid246 a rdf:List ;
-	rdf:first :RightToBeInformed ;
+	rdf:first :RightToDataPortability ;
 	rdf:rest _:genid245 .
 
 _:genid245 a rdf:List ;
-	rdf:first :RightToDataPortability ;
+	rdf:first :RightToErasure ;
 	rdf:rest _:genid244 .
 
 _:genid244 a rdf:List ;
-	rdf:first :RightToErasure ;
+	rdf:first :RightToObject ;
 	rdf:rest _:genid243 .
 
 _:genid243 a rdf:List ;
-	rdf:first :RightToObject ;
+	rdf:first :RightToRectification ;
 	rdf:rest _:genid242 .
 
 _:genid242 a rdf:List ;
-	rdf:first :RightToRectification ;
-	rdf:rest _:genid241 .
-
-_:genid241 a rdf:List ;
 	rdf:first :RightToRestrictProcessing ;
 	rdf:rest rdf:nil .
 # 
