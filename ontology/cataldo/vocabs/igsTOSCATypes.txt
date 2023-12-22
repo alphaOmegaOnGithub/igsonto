@@ -1,0 +1,186 @@
+# TOSCA Types
+DataType
+		DataType.Root
+		DataType.JSON
+		DataType.XML
+		DataType.Credential
+		DataType.TimeInterval
+		DataType.Network.NetworkInfo
+		DataType.Network.PortInfo		
+		DataType.Network.PortDef
+		DataType.Network.PortSpec		
+##
+Artifact
+	Artifact.Root
+		Artifact.File
+		Artifact.Deployment
+		  Artifact.Deployment.Image
+		    Artifact:Deployment.Image.VM
+		Artifact.Implementation
+			Artifact.Implementation.Bash		
+			Artifact.Implementation.Python
+		Artifact.Template
+				Artifact.Template.Ansible
+				Artifact.Template.DockeCompose
+				Artifact.Template.Kubernetes
+				Artifact.Template.Helm				
+##
+Capability
+	Capability.Root
+	  Capability.Node
+	    Capability.Network.Bindable
+	  Capability.Container
+		Capability.Container.Compute
+	  Capability.Network
+	  Capability.Storage
+	  Capability.Endpoint
+		Capability.Endpoint.Public
+		Capability.Endpoint.Admin
+		Capability.Endpoint.Database
+	  Capability.Attachment
+	  Capability.OperatingSystem
+	  Capability.Scalable
+##
+Relationship
+	Relationship.Root
+	  Relationship.DependsOn
+	  Relationship.HostedOn
+	  Relationship.ConnectsTo
+	    Relationship.RoutesTo
+	  Relationship.AttachesTo
+##
+Interface
+	Interface.Root
+	  Interface.Node.Lifecycle.Standardard
+	  Interface.Relationship.Configure
+##
+Node
+	Node.Root
+	  Node.AbstractCompute
+	    Node.Compute
+	  Node.SoftwareComponent
+		Node.SoftwareComponent.WebServer
+		Node.SoftwareComponent.DBMS
+	    Node.SoftwareComponent.Container.Runtime
+	  Node.WebApplication
+	  Node.Database
+	  Node.AbstractStorage
+		Node.AbstractStorage.ObjectStorage
+		Node.AbstractStorage.BlockStorage
+	  Node.Application
+	  Node.LoadBalancer
+##
+Group
+	Group.Root
+Policy
+	Policy.Root
+		Policy.Placement
+		Policy.Scaling
+		Policy.Update
+		Policy.Performance		
+
+## Data Properties
+add_source
+add_target
+addresses
+addresses
+admin_credential
+admin_endpoint
+algorithm
+application
+architecture
+attachment
+attributes
+binding
+capabilities
+configure
+constrains
+cpu_frequency
+create
+credential
+data_endpoint
+database_endpoint
+default
+default_instances
+delete
+derived_from
+description
+device
+disk_size
+distribution
+dns_name
+end_time
+endpoint
+file_ext
+floating
+host
+in_range
+initiator
+interfaces
+ip_address
+keys
+listen_port
+location
+mac_address
+max_instances
+max_size
+mem_size
+mime_type
+min_instances
+name
+network_id
+network_name
+network_name
+networks
+node
+notes
+num_cpus
+occurrences
+os
+port
+port_id
+port_name
+port_name
+ports
+post_configure_source
+post_configure_target
+pre_configure_source
+pre_configure_target
+private_address
+protocol
+protocol
+public_address
+relationship 
+remove_target
+required
+required
+requirements
+scalable
+scalable
+secure
+size
+snapshot_id
+source
+source_range
+standard
+start
+start_time
+status
+stop
+storage_endpoint
+target
+target_changed
+target_range
+token
+token_type
+type
+url_path
+user
+valid_source_types
+valid_source_types
+valid_target_types
+version
+volume_id
+## #
+
+

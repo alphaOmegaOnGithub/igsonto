@@ -1,0 +1,695 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-svc#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-sys#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:label "Core igso organization ontology"@en ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#isProvidedby
+
+:isProvidedby a owl:ObjectProperty ;
+	rdfs:subPropertyOf igso-ddy:is .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#isProvisionedBy
+
+:isProvisionedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf igso-ddy:is .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#provisions
+
+:provisions a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#AccessService
+
+:AccessService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#AdministerService
+
+:AdministerService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Archive
+
+:Archive a owl:Class ;
+	rdfs:subClassOf :ServiceLevelAgreement .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ArchiveService
+
+:ArchiveService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#AuditService
+
+:AuditService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Bronze
+
+:Bronze a owl:Class ;
+	rdfs:subClassOf :ServiceLevelAgreement .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ClassifyService
+
+:ClassifyService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#CloudServiceProvider
+
+:CloudServiceProvider a owl:Class ;
+	rdfs:subClassOf :ServiceProvider .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#CollectService
+
+:CollectService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ContentManagementService
+
+:ContentManagementService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ControlService
+
+:ControlService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ControlType
+
+:ControlType a owl:Class ;
+	rdfs:subClassOf :UtilityService ;
+	owl:disjointWith :DataType .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataDiscoveryRequest
+
+:DataDiscoveryRequest a owl:Class ;
+	rdfs:subClassOf :DataDiscoveryService ;
+	owl:disjointWith :DataDiscoveryResult .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataDiscoveryResult
+
+:DataDiscoveryResult a owl:Class ;
+	rdfs:subClassOf :DataDiscoveryService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataDiscoveryService
+
+:DataDiscoveryService a owl:Class ;
+	rdfs:subClassOf :ServerDiscoveryService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataManagementSupervision
+
+:DataManagementSupervision a owl:Class ;
+	rdfs:subClassOf :DataService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataService
+
+:DataService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DataType
+
+:DataType a owl:Class ;
+	rdfs:subClassOf :UtilityService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DatabaseFunction
+
+:DatabaseFunction a owl:Class ;
+	rdfs:subClassOf :DataService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DatabaseOperation
+
+:DatabaseOperation a owl:Class ;
+	rdfs:subClassOf :DataService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DisposeService
+
+:DisposeService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#DocumentManagementService
+
+:DocumentManagementService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Gold
+
+:Gold a owl:Class ;
+	rdfs:subClassOf :ServiceLevelAgreement .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#HoldService
+
+:HoldService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#IGServicesDomain
+
+:IGServicesDomain a owl:Class .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#InformationManagementService
+
+:InformationManagementService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#InformationRetrievalService
+
+:InformationRetrievalService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#LegalCaseManagementService
+
+:LegalCaseManagementService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#LoadService
+
+:LoadService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ManageService
+
+:ManageService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ManagedRecordService
+
+:ManagedRecordService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Platinum
+
+:Platinum a owl:Class ;
+	rdfs:subClassOf :ServiceLevelAgreement .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#PrivacyService
+
+:PrivacyService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ProtectService
+
+:ProtectService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#QueryService
+
+:QueryService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#RecordsManagementService
+
+:RecordsManagementService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#RegulatoryService
+
+:RegulatoryService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#RenderingService
+
+:RenderingService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#RetainService
+
+:RetainService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#SearchService
+
+:SearchService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#SecureService
+
+:SecureService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServerDiscoveryService
+
+:ServerDiscoveryService a owl:Class ;
+	rdfs:subClassOf :eDiscoveryService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Service
+
+:Service a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain , _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :isProvisionedBy ;
+	owl:someValuesFrom :ServiceProvider .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServiceAgreement
+
+:ServiceAgreement a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServiceLevelAgreement
+
+:ServiceLevelAgreement a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServicePattern
+
+:ServicePattern a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServiceProvider
+
+:ServiceProvider a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain , _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty igso-ddy:provides ;
+	owl:someValuesFrom :Service .
+
+:ServiceProvider rdfs:subClassOf _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty :provisions ;
+	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+	owl:onClass :Service .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#ServiceQuality
+
+:ServiceQuality a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#Silber
+
+:Silber a owl:Class ;
+	rdfs:subClassOf :ServiceLevelAgreement .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#StorageService
+
+:StorageService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#StoreService
+
+:StoreService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#TransferService
+
+:TransferService a owl:Class ;
+	rdfs:subClassOf :ContentManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#UtilityService
+
+:UtilityService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#eDiscoverService
+
+:eDiscoverService a owl:Class ;
+	rdfs:subClassOf :RecordsManagementService .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#eDiscoveryService
+
+:eDiscoveryService a owl:Class ;
+	rdfs:subClassOf :IGServicesDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Availability
+
+:arc:Availability a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Backup
+
+:arc:Backup a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:DisasterRecovery
+
+:arc:DisasterRecovery a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:DynamicScale
+
+:arc:DynamicScale a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Elasticity
+
+:arc:Elasticity a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:HighAvailability
+
+:arc:HighAvailability a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:LoadbBalacing
+
+:arc:LoadbBalacing a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Recovery
+
+:arc:Recovery a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Resiliency
+
+:arc:Resiliency a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Restore
+
+:arc:Restore a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-svc#arc:Scale
+
+:arc:Scale a owl:Class ;
+	rdfs:subClassOf :ServiceQuality .
+# 
+
+_:genid5 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid6 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid7 a owl:AllDisjointClasses ;
+	owl:members _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first igso-ddy:DataDictionary ;
+	rdf:rest _:genid25 .
+
+_:genid25 a rdf:List ;
+	rdf:first :ContentManagementService ;
+	rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first :DataService ;
+	rdf:rest _:genid23 .
+
+_:genid23 a rdf:List ;
+	rdf:first :DocumentManagementService ;
+	rdf:rest _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first :InformationManagementService ;
+	rdf:rest _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first :InformationRetrievalService ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first :LegalCaseManagementService ;
+	rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first :RecordsManagementService ;
+	rdf:rest _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :RegulatoryService ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :RenderingService ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :Service ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :ServiceAgreement ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :ServiceLevelAgreement ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :ServicePattern ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :ServiceProvider ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :ServiceQuality ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :StorageService ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :UtilityService ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :eDiscoveryService ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid27 a owl:AllDisjointClasses ;
+	owl:members _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first :AccessService ;
+	rdf:rest _:genid39 .
+
+_:genid39 a rdf:List ;
+	rdf:first :AdministerService ;
+	rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first :ArchiveService ;
+	rdf:rest _:genid37 .
+
+_:genid37 a rdf:List ;
+	rdf:first :AuditService ;
+	rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first :CollectService ;
+	rdf:rest _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first :ControlService ;
+	rdf:rest _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first :LoadService ;
+	rdf:rest _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :ManageService ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first :QueryService ;
+	rdf:rest _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first :SearchService ;
+	rdf:rest _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :SecureService ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :StoreService ;
+	rdf:rest _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :TransferService ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid41 a owl:AllDisjointClasses ;
+	owl:members _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first :Archive ;
+	rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :Bronze ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :Gold ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first :Platinum ;
+	rdf:rest _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first :Silber ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid47 a owl:AllDisjointClasses ;
+	owl:members _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first :ClassifyService ;
+	rdf:rest _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first :DisposeService ;
+	rdf:rest _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :HoldService ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :ManagedRecordService ;
+	rdf:rest _:genid51 .
+
+_:genid51 a rdf:List ;
+	rdf:first :PrivacyService ;
+	rdf:rest _:genid50 .
+
+_:genid50 a rdf:List ;
+	rdf:first :ProtectService ;
+	rdf:rest _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first :RetainService ;
+	rdf:rest _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first :eDiscoverService ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid56 a owl:AllDisjointClasses ;
+	owl:members _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :DataManagementSupervision ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first :DatabaseFunction ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :DatabaseOperation ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid60 a owl:AllDisjointClasses ;
+	owl:members _:genid71 .
+
+_:genid71 a rdf:List ;
+	rdf:first :arc:Availability ;
+	rdf:rest _:genid70 .
+
+_:genid70 a rdf:List ;
+	rdf:first :arc:Backup ;
+	rdf:rest _:genid69 .
+
+_:genid69 a rdf:List ;
+	rdf:first :arc:DisasterRecovery ;
+	rdf:rest _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first :arc:DynamicScale ;
+	rdf:rest _:genid67 .
+
+_:genid67 a rdf:List ;
+	rdf:first :arc:Elasticity ;
+	rdf:rest _:genid66 .
+
+_:genid66 a rdf:List ;
+	rdf:first :arc:HighAvailability ;
+	rdf:rest _:genid65 .
+
+_:genid65 a rdf:List ;
+	rdf:first :arc:LoadbBalacing ;
+	rdf:rest _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first :arc:Recovery ;
+	rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first :arc:Resiliency ;
+	rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :arc:Restore ;
+	rdf:rest _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :arc:Scale ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

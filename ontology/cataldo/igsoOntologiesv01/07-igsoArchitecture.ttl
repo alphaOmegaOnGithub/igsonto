@@ -1,0 +1,762 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-arc#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-req#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent
+
+<http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> a owl:Class ;
+	rdfs:subClassOf :DesignComponent , dcat:Catalog ;
+	rdfs:label "CatalogComponent" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#AccessMethod
+
+:AccessMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#AdministerMethod
+
+:AdministerMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ArchitectureDesignDomain
+
+:ArchitectureDesignDomain a owl:Class ;
+	rdfs:label "ArchitectureDesignDomain" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ArchiveMethod
+
+:ArchiveMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ArchiveSolution
+
+:ArchiveSolution a owl:Class ;
+	rdfs:subClassOf :Solution ;
+	rdfs:label "ArchiveSolution" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#AuditMethod
+
+:AuditMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#BusinessObject
+
+:BusinessObject a owl:Class ;
+	rdfs:subClassOf igso-data:ObjectType ;
+	rdfs:label "BusinessObject"@de .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ClassificationComponent
+
+:ClassificationComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ClassifyMethod
+
+:ClassifyMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#CollectMethod
+
+:CollectMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentCatalog
+
+:ContentCatalog a owl:Class ;
+	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "ContentCatalog" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentManagementComponent
+
+:ContentManagementComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent ;
+	rdfs:label "ContentManagementComponent" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentManagmentPortal
+
+:ContentManagmentPortal a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentObjectCatalog
+
+:ContentObjectCatalog a owl:Class ;
+	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "ContentObjectCatalog" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentRepositorySolution
+
+:ContentRepositorySolution a owl:Class ;
+	owl:equivalentClass _:genid2 .
+
+_:genid2 owl:intersectionOf _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first :ContentRepositorySolution ;
+	rdf:rest _:genid3 .
+
+_:genid3 a rdf:List ;
+	rdf:first _:genid4 .
+
+_:genid4 a owl:Restriction ;
+	owl:onProperty igso-ddy:includes ;
+	owl:someValuesFrom :ArchiveSolution .
+
+_:genid3 rdf:rest rdf:nil .
+
+_:genid2 a owl:Class .
+
+:ContentRepositorySolution rdfs:subClassOf :Solution ;
+	rdfs:label "ContentRepositorySolution" ;
+	cmns-av:synonym "CMS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ControlComponent
+
+:ControlComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ControlMethod
+
+:ControlMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataArchitectureManagement
+
+:DataArchitectureManagement a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain ;
+	rdfs:label "DataArchitectureManagement" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQuality
+
+:DataQuality a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain ;
+	rdfs:label "DataQuality" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityAwerness
+
+:DataQualityAwerness a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityBusinessRule
+
+:DataQualityBusinessRule a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityDefect
+
+:DataQualityDefect a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityManagement
+
+:DataQualityManagement a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityMetrc
+
+:DataQualityMetrc a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityPerformance
+
+:DataQualityPerformance a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DataQualityServiceLevel
+
+:DataQualityServiceLevel a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DesignComponent
+
+:DesignComponent a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#DisposeMethod
+
+:DisposeMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ECMSolution
+
+:ECMSolution a owl:Class ;
+	rdfs:subClassOf :Solution , _:genid6 .
+
+_:genid6 owl:intersectionOf _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :ECMSolution ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first _:genid8 .
+
+_:genid8 a owl:Restriction ;
+	owl:onProperty igso-ddy:includes ;
+	owl:someValuesFrom :ContentRepositorySolution .
+
+_:genid7 rdf:rest rdf:nil .
+
+_:genid6 a owl:Class .
+
+:ECMSolution rdfs:label "ECMSolution" ;
+	skos:altLabel "Enterprise Content Management Solution (ECMS)" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#EndUserPortal
+
+:EndUserPortal a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#FulltextIndexServer
+
+:FulltextIndexServer a owl:Class ;
+	rdfs:subClassOf :FulltextServer ;
+	owl:disjointWith :FulltextSearchServer .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#FulltextSearchServer
+
+:FulltextSearchServer a owl:Class ;
+	rdfs:subClassOf :FulltextServer .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#FulltextServer
+
+:FulltextServer a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#Function
+
+:Function a owl:Class ;
+	owl:equivalentClass :Method ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#GorvernanceComponent
+
+:GorvernanceComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#GovernancePortal
+
+:GovernancePortal a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#HoldMethod
+
+:HoldMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#IMSComponent
+
+:IMSComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#IndexingComponent
+
+:IndexingComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#InformationGovernanceSolution
+
+:InformationGovernanceSolution a owl:Class ;
+	rdfs:subClassOf :Solution , _:genid10 .
+
+_:genid10 owl:intersectionOf _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :InformationRetrievalSolution ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :RIMSolution ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :eDiscoverySolution ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty igso-ddy:includes ;
+	owl:someValuesFrom :ContentRepositorySolution .
+
+_:genid11 rdf:rest rdf:nil .
+
+_:genid10 a owl:Class .
+
+:InformationGovernanceSolution rdfs:label "InformationGovernanceSolution" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#InformationLifecycle
+
+:InformationLifecycle a owl:Class ;
+	rdfs:subClassOf :Lifecycle ;
+	owl:disjointWith :LifecycleStage .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#InformationManagement
+
+:InformationManagement a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#InformationRetrievalSolution
+
+:InformationRetrievalSolution a owl:Class ;
+	rdfs:subClassOf :Solution ;
+	rdfs:label "InformationRetrievalSolution" ;
+	cmns-av:synonym "IRS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#LegalCaseManagementSolution
+
+:LegalCaseManagementSolution a owl:Class ;
+	rdfs:subClassOf :Solution .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#Lifecycle
+
+:Lifecycle a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#LifecycleStage
+
+:LifecycleStage a owl:Class ;
+	rdfs:subClassOf :Lifecycle .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#LoadMethod
+
+:LoadMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#LoadbBalacing
+
+:LoadbBalacing a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ManageMethod
+
+:ManageMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#Method
+
+:Method a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#OperationalDataQualityProcedure
+
+:OperationalDataQualityProcedure a owl:Class ;
+	rdfs:subClassOf :DataQuality .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#PrivacyMethod
+
+:PrivacyMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ProtectMethod
+
+:ProtectMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#QueryMethod
+
+:QueryMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#RIM
+
+:RIM a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#RIMSolution
+
+:RIMSolution a owl:Class ;
+	rdfs:subClassOf :Solution ;
+	rdfs:label "RIMSolution" ;
+	skos:altLabel "Records and Information Management  Solution" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#RecordMethod
+
+:RecordMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#RelationalDatabase
+
+:RelationalDatabase a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#Repository
+
+:Repository a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#RetainMethod
+
+:RetainMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#SearchMethod
+
+:SearchMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#SecureMethod
+
+:SecureMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#SoftwareComponentPattern
+
+:SoftwareComponentPattern a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#SoftwareDesignPattern
+
+:SoftwareDesignPattern a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#Solution
+
+:Solution a owl:Class ;
+	rdfs:subClassOf :ArchitectureDesignDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#SolutionPattern
+
+:SolutionPattern a owl:Class ;
+	rdfs:subClassOf :Solution ;
+	rdfs:label "SolutionPattern" .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#StorageManagementComponent
+
+:StorageManagementComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#StoreMethod
+
+:StoreMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#TransactionManagementComponent
+
+:TransactionManagementComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#TransferMethod
+
+:TransferMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#TransformationComponent
+
+:TransformationComponent a owl:Class ;
+	rdfs:subClassOf :DesignComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#TwoPhaseCommitFunctionMethod
+
+:TwoPhaseCommitFunctionMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#eDiscoverMethod
+
+:eDiscoverMethod a owl:Class ;
+	rdfs:subClassOf :Method .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#eDiscoverySolution
+
+:eDiscoverySolution a owl:Class ;
+	rdfs:subClassOf :Solution ;
+	rdfs:label "eDiscoverySolution" .
+# 
+# http://www.example.org/cm/igso/2023/igso-data#RecordsCatalog
+
+igso-data:RecordsCatalog a owl:Class ;
+	rdfs:subClassOf <http://www.example.org/cm/igso/2023/igso-Arc#CatalogComponent> ;
+	rdfs:label "RecordsCatalog" .
+# 
+
+_:genid16 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid17 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid18 a owl:AllDisjointClasses ;
+	owl:members _:genid40 .
+
+_:genid40 a rdf:List ;
+	rdf:first :AccessMethod ;
+	rdf:rest _:genid39 .
+
+_:genid39 a rdf:List ;
+	rdf:first :AdministerMethod ;
+	rdf:rest _:genid38 .
+
+_:genid38 a rdf:List ;
+	rdf:first :ArchiveMethod ;
+	rdf:rest _:genid37 .
+
+_:genid37 a rdf:List ;
+	rdf:first :AuditMethod ;
+	rdf:rest _:genid36 .
+
+_:genid36 a rdf:List ;
+	rdf:first :ClassifyMethod ;
+	rdf:rest _:genid35 .
+
+_:genid35 a rdf:List ;
+	rdf:first :CollectMethod ;
+	rdf:rest _:genid34 .
+
+_:genid34 a rdf:List ;
+	rdf:first :ControlMethod ;
+	rdf:rest _:genid33 .
+
+_:genid33 a rdf:List ;
+	rdf:first :DisposeMethod ;
+	rdf:rest _:genid32 .
+
+_:genid32 a rdf:List ;
+	rdf:first :HoldMethod ;
+	rdf:rest _:genid31 .
+
+_:genid31 a rdf:List ;
+	rdf:first :LoadMethod ;
+	rdf:rest _:genid30 .
+
+_:genid30 a rdf:List ;
+	rdf:first :ManageMethod ;
+	rdf:rest _:genid29 .
+
+_:genid29 a rdf:List ;
+	rdf:first :PrivacyMethod ;
+	rdf:rest _:genid28 .
+
+_:genid28 a rdf:List ;
+	rdf:first :ProtectMethod ;
+	rdf:rest _:genid27 .
+
+_:genid27 a rdf:List ;
+	rdf:first :QueryMethod ;
+	rdf:rest _:genid26 .
+
+_:genid26 a rdf:List ;
+	rdf:first :RecordMethod ;
+	rdf:rest _:genid25 .
+
+_:genid25 a rdf:List ;
+	rdf:first :RetainMethod ;
+	rdf:rest _:genid24 .
+
+_:genid24 a rdf:List ;
+	rdf:first :SearchMethod ;
+	rdf:rest _:genid23 .
+
+_:genid23 a rdf:List ;
+	rdf:first :SecureMethod ;
+	rdf:rest _:genid22 .
+
+_:genid22 a rdf:List ;
+	rdf:first :StoreMethod ;
+	rdf:rest _:genid21 .
+
+_:genid21 a rdf:List ;
+	rdf:first :TransferMethod ;
+	rdf:rest _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first :TwoPhaseCommitFunctionMethod ;
+	rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first :eDiscoverMethod ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid41 a owl:AllDisjointClasses ;
+	owl:members _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first :ArchiveSolution ;
+	rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :ECMSolution ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :InformationGovernanceSolution ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first :RIMSolution ;
+	rdf:rest _:genid42 .
+
+_:genid42 a rdf:List ;
+	rdf:first :eDiscoverySolution ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid47 a owl:AllDisjointClasses ;
+	owl:members _:genid50 .
+
+_:genid50 a rdf:List ;
+	rdf:first :ContentCatalog ;
+	rdf:rest _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first :ContentObjectCatalog ;
+	rdf:rest _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first igso-data:RecordsCatalog ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid51 a owl:AllDisjointClasses ;
+	owl:members _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :ContentManagementComponent ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first :ContentManagmentPortal ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :EndUserPortal ;
+	rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first :FulltextServer ;
+	rdf:rest _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first :GovernancePortal ;
+	rdf:rest _:genid54 .
+
+_:genid54 a rdf:List ;
+	rdf:first :InformationManagement ;
+	rdf:rest _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :RIM ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :RelationalDatabase ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid60 a owl:AllDisjointClasses ;
+	owl:members _:genid66 .
+
+_:genid66 a rdf:List ;
+	rdf:first :DataArchitectureManagement ;
+	rdf:rest _:genid65 .
+
+_:genid65 a rdf:List ;
+	rdf:first :DataQuality ;
+	rdf:rest _:genid64 .
+
+_:genid64 a rdf:List ;
+	rdf:first :DesignComponent ;
+	rdf:rest _:genid63 .
+
+_:genid63 a rdf:List ;
+	rdf:first :Lifecycle ;
+	rdf:rest _:genid62 .
+
+_:genid62 a rdf:List ;
+	rdf:first :SoftwareDesignPattern ;
+	rdf:rest _:genid61 .
+
+_:genid61 a rdf:List ;
+	rdf:first :Solution ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid67 a owl:AllDisjointClasses ;
+	owl:members _:genid75 .
+
+_:genid75 a rdf:List ;
+	rdf:first :DataQualityAwerness ;
+	rdf:rest _:genid74 .
+
+_:genid74 a rdf:List ;
+	rdf:first :DataQualityBusinessRule ;
+	rdf:rest _:genid73 .
+
+_:genid73 a rdf:List ;
+	rdf:first :DataQualityDefect ;
+	rdf:rest _:genid72 .
+
+_:genid72 a rdf:List ;
+	rdf:first :DataQualityManagement ;
+	rdf:rest _:genid71 .
+
+_:genid71 a rdf:List ;
+	rdf:first :DataQualityMetrc ;
+	rdf:rest _:genid70 .
+
+_:genid70 a rdf:List ;
+	rdf:first :DataQualityPerformance ;
+	rdf:rest _:genid69 .
+
+_:genid69 a rdf:List ;
+	rdf:first :DataQualityServiceLevel ;
+	rdf:rest _:genid68 .
+
+_:genid68 a rdf:List ;
+	rdf:first :OperationalDataQualityProcedure ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

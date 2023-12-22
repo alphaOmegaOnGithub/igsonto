@@ -1,0 +1,241 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix igso-ml: <http://www.example.org/cm/igso/2023/igso-ml#> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+@base <http://www.example.org/cm/igso/2023/igso-ass#> .
+
+<http://www.example.org/cm/igso/2023/igso-ass#> rdf:type owl:Ontology ;
+                                                 owl:imports igso-req: ;
+                                                 dct:created "2010-05-28"^^xsd:date ;
+                                                 dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+                                                               foaf:name "Cataldo Mega"
+                                                             ] ;
+                                                 dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+                                                 rdfs:comment "Vocabulary for describing information governance services types ."@en ;
+                                                 rdfs:label "IG practitioner  assosiation ontology"@en ;
+                                                 rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+                                                 owl:versionInfo "0.8" .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ass#ARMA
+:ARMA rdf:type owl:Class ;
+      rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Accountability
+:Accountability rdf:type owl:Class ;
+                rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Agency
+:Agency rdf:type owl:Class ;
+        rdfs:subClassOf :PractitionerDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Association
+:Association rdf:type owl:Class ;
+             rdfs:subClassOf :PractitionerDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Availability
+:Availability rdf:type owl:Class ;
+              rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#CGOC
+:CGOC rdf:type owl:Class ;
+      rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#CRL
+:CRL rdf:type owl:Class ;
+     rdfs:subClassOf :Agency .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Compliance
+:Compliance rdf:type owl:Class ;
+            rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#DAM
+:DAM rdf:type owl:Class ;
+     rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#DAMA
+:DAMA rdf:type owl:Class ;
+      rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Disposition
+:Disposition rdf:type owl:Class ;
+             rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#EDRM
+:EDRM rdf:type owl:Class ;
+      rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#ISACA
+:ISACA rdf:type owl:Class ;
+       rdfs:subClassOf :Association .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Integrity
+:Integrity rdf:type owl:Class ;
+           rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MI-Level-1
+:MI-Level-1 rdf:type owl:Class ;
+            rdfs:subClassOf :MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MI-Level-2
+:MI-Level-2 rdf:type owl:Class ;
+            rdfs:subClassOf :MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MI-Level-3
+:MI-Level-3 rdf:type owl:Class ;
+            rdfs:subClassOf :MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MI-Level-4
+:MI-Level-4 rdf:type owl:Class ;
+            rdfs:subClassOf :MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MI-Level-5
+:MI-Level-5 rdf:type owl:Class ;
+            rdfs:subClassOf :MaturityIndex .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#MaturityIndex
+:MaturityIndex rdf:type owl:Class ;
+               rdfs:subClassOf :PractitionerDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#NARA
+:NARA rdf:type owl:Class ;
+      rdfs:subClassOf :Agency .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#PROV
+:PROV rdf:type owl:Class ;
+      rdfs:subClassOf :Agency .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#PractitionerDomain
+:PractitionerDomain rdf:type owl:Class .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Protection
+:Protection rdf:type owl:Class ;
+            rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Retention
+:Retention rdf:type owl:Class ;
+           rdfs:subClassOf :ARMA .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#Transparency
+:Transparency rdf:type owl:Class ;
+              rdfs:subClassOf :ARMA .
+
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+  foaf:name "Cataldo Mega"
+] .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :ARMA
+                 :CGOC
+                 :CRL
+                 :DAM
+                 :DAMA
+                 :EDRM
+                 :ISACA
+                 :MaturityIndex
+                 :NARA
+                 :PROV
+               )
+ ] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ARMA
+                :CGOC
+                :CRL
+                :DAM
+                :DAMA
+                :EDRM
+                :ISACA
+                :NARA
+                :PROV
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Accountability
+                :Availability
+                :Compliance
+                :Disposition
+                :Integrity
+                :Protection
+                :Retention
+                :Transparency
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :MI-Level-1
+                :MI-Level-2
+                :MI-Level-3
+                :MI-Level-4
+                :MI-Level-5
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

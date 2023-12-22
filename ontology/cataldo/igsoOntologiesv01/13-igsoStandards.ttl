@@ -1,0 +1,213 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-stds#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+
+<http://www.example.org/cm/igso/2023/igso-stds#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-vend#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:label "IGSO vendor ontology"@en ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO14000
+
+:ISO14000 a owl:Class ;
+	rdfs:subClassOf :ISOStandards .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO14271
+
+:ISO14271 a owl:Class ;
+	rdfs:subClassOf :ISO14000 ;
+	rdfs:comment "OAIS - Open Archive Information System" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO15000
+
+:ISO15000 a owl:Class ;
+	rdfs:subClassOf :ISOStandards ;
+	rdfs:comment "Records Management and related standards" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO15489
+
+:ISO15489 a owl:Class ;
+	rdfs:subClassOf :ISO15000 ;
+	rdfs:comment """Records management — Part 1: Concepts and principles
+Policies, Procedures, and Practices for Records Management""" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO15939
+
+:ISO15939 a owl:Class ;
+	rdfs:subClassOf :ISO15000 ;
+	rdfs:comment "Measurement Process in Information Management Systems" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO17000
+
+:ISO17000 a owl:Class ;
+	rdfs:subClassOf :ISOStandards ;
+	rdfs:comment "Data security in Information Management Systems" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO20000
+
+:ISO20000 a owl:Class ;
+	rdfs:subClassOf :ISOStandards ;
+	rdfs:comment """ISO/IEC 20000-1:2018 Information technology
+Service management - Part 1: Service management system requirements""" ;
+	rdfs:isDefinedBy <https://www.iso.org/standard/70636.html> .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO23081
+
+:ISO23081 a owl:Class ;
+	rdfs:subClassOf :ISOStandards ;
+	rdfs:comment "Recordkeeping Metadata" .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO27000
+
+:ISO27000 a owl:Class ;
+	rdfs:subClassOf :ISOStandards ;
+	rdfs:comment "ISMS - Information Security Management Systems" , """ISO/IEC 27000:2018 - Information technology  Security techniques
+Information security management systems""" ;
+	rdfs:isDefinedBy <https://www.iso.org/standard/73906.html> .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISOStandards
+
+:ISOStandards a owl:Class ;
+	rdfs:subClassOf dct:Standard , :StandardsDomain ;
+	rdfs:isDefinedBy <https://www.iso.org/standards.html> .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#StandardsDomain
+
+:StandardsDomain a owl:Class .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO27001:2019
+
+:ISO27001:2019 a owl:Class ;
+	rdfs:subClassOf :ISO27000 ;
+	rdfs:comment "ISO/IEC 27701:2019  Security techniques — Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy information management — Requirements and guidelines" ;
+	rdfs:isDefinedBy <https://www.iso.org/standard/71670.html> .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO27013:2021
+
+:ISO27013:2021 a owl:Class ;
+	rdfs:subClassOf :ISO27000 ;
+	rdfs:comment """ISO/IEC 27013:2021 Information security, cybersecurity and privacy protection
+Guidance on the integrated implementation of ISO/IEC 27001 and ISO/IEC 20000-1""" ;
+	rdfs:isDefinedBy <https://www.iso.org/standard/78752.html> .
+# 
+# http://www.example.org/cm/igso/2023/igso-stds#ISO27701:2022
+
+:ISO27701:2022 a owl:Class ;
+	rdfs:subClassOf :ISO27000 ;
+	rdfs:comment """ISO/IEC 27001:2022 - Information security, cybersecurity and privacy protection
+Information security management systems - Requirements""" ;
+	rdfs:isDefinedBy <https://www.iso.org/standard/27001> .
+# 
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid4 a owl:AllDisjointClasses ;
+	owl:members _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :ISO14000 ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :ISO15000 ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :ISO17000 ;
+	rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :ISO20000 ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first :ISO27000 ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid10 a owl:AllDisjointClasses ;
+	owl:members _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :ISO15489 ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :ISO15939 ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :ISO23081 ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid14 a owl:AllDisjointClasses ;
+	owl:members _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :ISO27001:2019 ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :ISO27013:2021 ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :ISO27701:2022 ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

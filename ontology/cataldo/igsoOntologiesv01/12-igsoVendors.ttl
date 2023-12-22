@@ -1,0 +1,251 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-vend#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@base <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-vend#> rdf:type owl:Ontology ;
+                                                  owl:imports igso-plt: ;
+                                                  dct:created "2010-05-28"^^xsd:date ;
+                                                  dct:creator [ ] ;
+dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#AWS
+igso-ddy:AWS rdfs:subClassOf :Amazon ;
+             rdfs:label "AWS" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Azure
+igso-ddy:Azure rdfs:subClassOf :Microsoft ;
+               rdfs:label "Azure" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#GCP
+igso-ddy:GCP rdfs:subClassOf :Google ;
+             rdfs:label "GCP" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Alfresco
+:Alfresco rdf:type owl:Class ;
+          rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Amazon
+:Amazon rdf:type owl:Class ;
+        rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#CNCF
+:CNCF rdf:type owl:Class ;
+      rdfs:subClassOf :CloudNativeFoundationComputingFoundation ;
+      owl:disjointWith :Kubernetes ;
+      rdfs:label "CNCF" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#CloudNativeFoundationComputingFoundation
+:CloudNativeFoundationComputingFoundation rdf:type owl:Class ;
+                                          rdfs:subClassOf :VendorDomain ;
+                                          rdfs:label "CloudNativeFoundationComputingFoundation" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Google
+:Google rdf:type owl:Class ;
+        rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#IBM
+:IBM rdf:type owl:Class ;
+     rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Kubernetes
+:Kubernetes rdf:type owl:Class ;
+            rdfs:subClassOf :CloudNativeFoundationComputingFoundation ;
+            rdfs:label "Kubernetes" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Microsoft
+:Microsoft rdf:type owl:Class ;
+           rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Openshift
+:Openshift rdf:type owl:Class ;
+           rdfs:subClassOf :Redhat ;
+           rdfs:label "Openshift" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Opentext
+:Opentext rdf:type owl:Class ;
+          rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Oracle
+:Oracle rdf:type owl:Class ;
+        rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Redhat
+:Redhat rdf:type owl:Class ;
+        rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Vendor
+:Vendor rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:oneOf ( :Alfresco
+                                          :Amazon
+                                          :Google
+                                          :IBM
+                                          :Microsoft
+                                          :Opentext
+                                          :Oracle
+                                          :Redhat
+                                        )
+                            ] ;
+        rdfs:subClassOf :VendorDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#VendorDomain
+:VendorDomain rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Alfresco
+:Alfresco rdf:type owl:NamedIndividual ,
+                   :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Amazon
+:Amazon rdf:type owl:NamedIndividual ,
+                 :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Google
+:Google rdf:type owl:NamedIndividual ,
+                 :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#IBM
+:IBM rdf:type owl:NamedIndividual ,
+              :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Microsoft
+:Microsoft rdf:type owl:NamedIndividual ,
+                    :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Opentext
+:Opentext rdf:type owl:NamedIndividual ,
+                   :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Oracle
+:Oracle rdf:type owl:NamedIndividual ,
+                 :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#Redhat
+:Redhat rdf:type owl:NamedIndividual ,
+                 :Vendor .
+
+
+###  http://www.example.org/cm/igso/2023/igso-vend#SAP
+:SAP rdf:type owl:NamedIndividual ,
+              :Vendor .
+
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+  foaf:name "Cataldo Mega"
+] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Alfresco rdfs:label "Alfresco" ;
+           rdfs:seeAlso <https://www.hyland.com/en/products/alfresco-platform> .
+
+
+:Amazon rdfs:label "Amazon" .
+
+
+:Google rdfs:label "Google" .
+
+
+:IBM rdfs:seeAlso <https://www.ibm.com/enterprise-content-management> ;
+     rdfs:label "IBM" .
+
+
+:Microsoft rdfs:label "Microsoft" .
+
+
+:Opentext rdfs:label "Opentext" .
+
+
+:Oracle rdfs:label "Oracle" .
+
+
+:Redhat rdfs:label "Redhat" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alfresco
+                :Amazon
+                :CloudNativeFoundationComputingFoundation
+                :Google
+                :IBM
+                :Microsoft
+                :Opentext
+                :Oracle
+                :Redhat
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

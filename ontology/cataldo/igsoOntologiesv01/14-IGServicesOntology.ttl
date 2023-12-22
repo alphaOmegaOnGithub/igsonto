@@ -1,0 +1,696 @@
+@prefix : <http://www.example.org/cm/igso/2023/igsonto#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-stds: <http://www.example.org/cm/igso/2023/igso-stds#> .
+@base <http://www.example.org/cm/igso/2023/igsonto#> .
+
+<http://www.example.org/cm/igso/2023/igsonto#> rdf:type owl:Ontology ;
+                                                owl:imports igso-stds: ;
+                                                dct:created "2010-05-28"^^xsd:date ;
+                                                dct:creator [ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+                                                              foaf:name "Cataldo Mega"
+                                                            ] ;
+                                                dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+                                                rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#align
+igso-ddy:align rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#backups
+igso-ddy:backups rdfs:subPropertyOf igso-ddy:build .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#basedOn
+igso-ddy:basedOn rdfs:subPropertyOf igso-ddy:build .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#be_appointed
+igso-ddy:be_appointed rdfs:subPropertyOf igso-ddy:build .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#being_notified
+igso-ddy:being_notified rdfs:subPropertyOf igso-ddy:build .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#captureRecordsOf
+igso-ddy:captureRecordsOf rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#clasifies
+igso-ddy:clasifies rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#complies
+igso-ddy:complies rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#hasMember
+igso-ddy:hasMember rdfs:subPropertyOf igso-ddy:has .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#isRegulatedBy
+igso-jur:isRegulatedBy rdfs:domain igso-jur:Regulation ;
+                       rdfs:range igso-jur:Regulation .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#hasGoal
+:hasGoal rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf igso-ddy:has .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#hasName
+:hasName rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf igso-ddy:has .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf igso-ddy:has .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#isLargerCompanyThan
+:isLargerCompanyThan rdf:type owl:ObjectProperty ;
+                     owl:inverseOf :isSmallerCompanyThan ;
+                     rdf:type owl:TransitiveProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#isSmallerCompanyThan
+:isSmallerCompanyThan rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igsonto#companyName
+:companyName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf foaf:name .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#hasAnnualRevenue
+:hasAnnualRevenue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#hasNumberOfEmployees
+:hasNumberOfEmployees rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdf:type owl:FunctionalProperty ;
+                      rdfs:domain igso-org:Company ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#isOfType
+:isOfType rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#isRegulated
+:isRegulated rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#isRegulatedBy
+:isRegulatedBy rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#operatesInJurisdiction
+:operatesInJurisdiction rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#personFirstName
+:personFirstName rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf foaf:name .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#personLastName
+:personLastName rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf foaf:name .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/Subject
+dc:Subject rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/LocationPeriodOrJurisdiction
+dct:LocationPeriodOrJurisdiction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/MediaType
+dct:MediaType rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/Policy
+dct:Policy rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/dc/terms/Standard
+dct:Standard rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/goodrelations/v1#BusinesssFunction
+gr:BusinesssFunction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://purl.org/goodrelations/v1#Offering
+gr:Offering rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-arc#ContentCatalog
+igso-arc:ContentCatalog dct:title "A dataset structured to index content objects using a relational schema for managing unstructured data in the context of a content management system." ;
+                        rdfs:label "ContentCatalog" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ass#PractitionerDomain
+igso-ass:PractitionerDomain rdf:type owl:Class ;
+                            rdfs:label "PractitionerDomain" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Disposition
+igso-data:Disposition rdf:type owl:Class ;
+                      rdfs:label "Disposition" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-data#Retention
+igso-data:Retention rdf:type owl:Class ;
+                    rdfs:label "Retention" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Acronym
+igso-ddy:Acronym rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Capability
+igso-ddy:Capability rdf:type owl:Class ;
+                    rdfs:subClassOf igso-svc:IGServicesDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Compensation
+igso-ddy:Compensation rdf:type owl:Class ;
+                      rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Cooperation
+igso-ddy:Cooperation rdf:type owl:Class ;
+                     rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporatePolicy
+igso-ddy:CorporatePolicy rdf:type owl:Class ;
+                         rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#CorporateRule
+igso-ddy:CorporateRule rdf:type owl:Class ;
+                       rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
+igso-ddy:DataErasure rdf:type owl:Class ;
+                     rdfs:subClassOf igso-data:Disposition ;
+                     rdfs:label "DataErasure" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#DataRetentionDuration
+igso-ddy:DataRetentionDuration rdf:type owl:Class ;
+                               rdfs:subClassOf igso-data:Retention ;
+                               rdfs:label "DataRetentionDuration" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Goal
+igso-ddy:Goal rdf:type owl:Class ;
+              rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#InteractiveResource
+igso-ddy:InteractiveResource rdf:type owl:Class ;
+                             rdfs:subClassOf igso-impl:ImplementationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
+igso-ddy:MaturityLevel rdf:type owl:Class ;
+                       rdfs:subClassOf igso-ass:PractitionerDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Measure
+igso-ddy:Measure rdf:type owl:Class ;
+                 rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Objective
+igso-ddy:Objective rdf:type owl:Class ;
+                   rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Procedure
+igso-ddy:Procedure rdf:type owl:Class ;
+                   rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Progress
+igso-ddy:Progress rdf:type owl:Class ;
+                  rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SecurityMeasure
+igso-ddy:SecurityMeasure rdf:type owl:Class ;
+                         rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SensitiveData
+igso-ddy:SensitiveData rdf:type owl:Class ;
+                       rdfs:label "SensitiveData" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SpecialCategory
+igso-ddy:SpecialCategory rdf:type owl:Class ;
+                         rdfs:subClassOf igso-data:DataDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Strategy
+igso-ddy:Strategy rdf:type owl:Class ;
+                  rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#SubProcessor
+igso-ddy:SubProcessor rdf:type owl:Class ;
+                      rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Taxonomy
+igso-ddy:Taxonomy rdf:type owl:Class ;
+                  rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Violation
+igso-ddy:Violation rdf:type owl:Class ;
+                   rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#VitalInterest
+igso-ddy:VitalInterest rdf:type owl:Class ;
+                       rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dct:Jurisdiction
+igso-ddy:dct:Jurisdiction rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Collection
+igso-ddy:dctype:Collection rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Service
+igso-ddy:dctype:Service owl:equivalentClass igso-svc:Service ;
+                        rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Software
+igso-ddy:dctype:Software rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#dctype:Text
+igso-ddy:dctype:Text rdf:type owl:Class ;
+                     rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:DeliveryMethod
+igso-ddy:gr:DeliveryMethod rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:Location
+igso-ddy:gr:Location rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#gr:ProductOrServiceModel
+igso-ddy:gr:ProductOrServiceModel rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#org:Organization
+igso-ddy:org:Organization rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-impl#ImplementationDomain
+igso-impl:ImplementationDomain rdfs:label "ImplementationDomain" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Liability
+igso-jur:Liability rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Penalty
+igso-jur:Penalty rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Privacy-friendlySetting
+igso-jur:Privacy-friendlySetting rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#Regulation
+igso-jur:Regulation rdfs:subClassOf igso-jur:RegulatoryDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-jur#ddy:EU
+igso-jur:ddy:EU rdf:type owl:Class ;
+                rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Occurrence
+igso-org:Occurrence rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Organization
+igso-org:Organization rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty igso-ddy:hasMember ;
+                                        owl:someValuesFrom igso-org:OrganizationalUnit
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasPart ;
+                                        owl:allValuesFrom igso-org:Organization
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasGoal ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass igso-ddy:Goal
+                                      ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Person
+igso-org:Person owl:equivalentClass [ owl:intersectionOf ( igso-org:Person
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :personFirstName ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ,
+                                    [ owl:intersectionOf ( igso-org:Person
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :personLastName ;
+                                                             owl:allValuesFrom xsd:string
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasName ;
+                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                  owl:onClass org:PersonName
+                                ] .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Program
+igso-org:Program rdfs:subClassOf igso-org:OrganizationDomain .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#prov:Role
+igso-org:prov:Role rdf:type owl:Class ;
+                   rdfs:subClassOf igso-ddy:DataDictionary .
+
+
+###  http://www.example.org/cm/igso/2023/igso-svc#IGServicesDomain
+igso-svc:IGServicesDomain rdfs:label "IGServicesDomain" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-svc#Service
+igso-svc:Service rdfs:label "isProvisionedBy some ServiceProvider" .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#org:CompanyType
+:org:CompanyType rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:oneOf ( igso-org:LargeCompany
+                                                   igso-org:MediumCompany
+                                                   igso-org:MicroCompany
+                                                   igso-org:SmallCompany
+                                                 )
+                                     ] ;
+                 rdfs:subClassOf igso-org:FormalOrganization .
+
+
+###  http://www.w3.org/ns/org#GeographicRegion
+org:GeographicRegion rdf:type owl:Class ;
+                     rdfs:subClassOf igso-jur:Location .
+
+
+###  http://www.w3.org/ns/org#PersonName
+org:PersonName rdf:type owl:Class ;
+               rdfs:subClassOf igso-org:Person .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdfs:subClassOf igso-ddy:DataDictionary ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :personLastName ;
+                              owl:allValuesFrom xsd:string
+                            ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.example.org/cm/igso/2023/igso-org#Large
+igso-org:Large rdf:type igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#LargeCompany
+igso-org:LargeCompany rdf:type owl:NamedIndividual ,
+                               igso-org:Company .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Medium
+igso-org:Medium rdf:type :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MediumCompany
+igso-org:MediumCompany rdf:type owl:NamedIndividual ,
+                                :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Micro
+igso-org:Micro rdf:type :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#MicroCompany
+igso-org:MicroCompany rdf:type owl:NamedIndividual ,
+                               :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#Small
+igso-org:Small rdf:type :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igso-org#SmallCompany
+igso-org:SmallCompany rdf:type owl:NamedIndividual ,
+                               :org:CompanyType .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#AlfrescoContentCatalog
+:AlfrescoContentCatalog rdf:type owl:NamedIndividual ,
+                                 igso-arc:ContentCatalog .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#Europe
+:Europe rdf:type owl:NamedIndividual ,
+                 org:GeographicRegion ;
+        rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Countries/UN-M49-RegionCodes/> ;
+        rdfs:label "Europe" ;
+        foaf:name "Europe" .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#IBMECMLibraryServerCatalog
+:IBMECMLibraryServerCatalog rdf:type owl:NamedIndividual ,
+                                     igso-arc:ContentCatalog .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#IBMRecordsManagerCatalog
+:IBMRecordsManagerCatalog rdf:type owl:NamedIndividual ,
+                                   igso-arc:ContentCatalog .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm1
+:LargeFirm1 rdf:type owl:NamedIndividual ,
+                     igso-org:LargeCompany ;
+            :hasNumberOfEmployees 251 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm2
+:LargeFirm2 rdf:type owl:NamedIndividual ,
+                     igso-org:LargeCompany ;
+            :hasNumberOfEmployees 361 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#LargeFirm3
+:LargeFirm3 rdf:type owl:NamedIndividual ,
+                     igso-org:LargeCompany ;
+            :hasNumberOfEmployees 5555 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MYTinyCompany
+:MYTinyCompany rdf:type owl:NamedIndividual ,
+                        igso-org:MicroCompany ;
+               :hasNumberOfEmployees 1 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm1
+:MediumFirm1 rdf:type owl:NamedIndividual ,
+                      igso-org:MediumCompany ;
+             :hasNumberOfEmployees 111 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm2
+:MediumFirm2 rdf:type owl:NamedIndividual ,
+                      igso-org:MediumCompany ;
+             :hasNumberOfEmployees 141 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MediumFirm3
+:MediumFirm3 rdf:type owl:NamedIndividual ,
+                      igso-org:MediumCompany ;
+             :hasNumberOfEmployees 239 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm1
+:MicroFirm1 rdf:type owl:NamedIndividual ,
+                     igso-org:MicroCompany ;
+            :hasNumberOfEmployees 3 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm2
+:MicroFirm2 rdf:type owl:NamedIndividual ,
+                     igso-org:MicroCompany ;
+            :hasNumberOfEmployees 4 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#MicroFirm3
+:MicroFirm3 rdf:type owl:NamedIndividual ,
+                     igso-org:MicroCompany ;
+            :hasNumberOfEmployees 5 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm1
+:SmallFirm1 rdf:type owl:NamedIndividual ,
+                     igso-org:SmallCompany ;
+            :hasNumberOfEmployees 9 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm2
+:SmallFirm2 rdf:type owl:NamedIndividual ,
+                     igso-org:SmallCompany ;
+            :hasNumberOfEmployees 13 .
+
+
+###  http://www.example.org/cm/igso/2023/igsonto#SmallFirm3
+:SmallFirm3 rdf:type owl:NamedIndividual ,
+                     igso-org:SmallCompany ;
+            :hasNumberOfEmployees 17 .
+
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+  foaf:name "Cataldo Mega"
+] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+[ foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+   foaf:name "Cataldo Mega"
+ ] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+igso-arc:ECMSolution skos:altLabel "Enterprise Content Management Solution (ECM Solution)" .
+
+
+igso-jur:Jurisdiction cmns-av:adaptedFrom <https://www.law.cornell.edu/wex/jurisdiction> ;
+                      rdfs:label "Jurisdiction" .
+
+
+igso-plt:PlatformDomain rdfs:label "PlatformDomain" .
+
+
+igso-req:RequirementDomain rdfs:label "RequirementDomain" .
+
+
+igso-stds:StandardsDomain rdfs:label "StandardsDomain" .
+
+
+igso-sys:SystemsDomain rdfs:label "SystemsDomain" .
+
+
+<http://www.example.org/cm/igso/2023/igso-vend#VendorDomain> rdfs:label "VendorDomain" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

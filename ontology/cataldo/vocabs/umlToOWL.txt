@@ -1,0 +1,125 @@
+UML:: One Project (ProjName, ProjID, Number)  isLocatedAt (aggregation) many  Location (Name) 
+OWL: Project a owl:type 
+	  Functional Data Property: PrjName ;
+	  Functional Data Property: PrjID ;
+	  Functional Data Property: Number ; .
+
+OWL: Location a owl:type 
+	  Functional Data Property: PrjName ;
+	  Functional Data Property: PrjID ;
+	  Functional Data Property: Number ;	.
+	  
+	 
+	 
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Location
+igso-ddy:Location rdf:type owl:Class ;
+                  owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Location
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty igso-ddy:LocationName ;
+                                                               owl:allValuesFrom xsd:string
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                  rdfs:subClassOf gr:Location .
+
+	 
+	 
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Project
+igso-ddy:Project rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Project
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty igso-ddy:ProjName ;
+                                                              owl:allValuesFrom xsd:string
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf igso-ddy:DataDictionary ,
+                                 [ owl:intersectionOf ( igso-ddy:Project
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty igso-ddy:ProjNumber ;
+                                                          owl:allValuesFrom xsd:positiveInteger
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( igso-ddy:Project
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty igso-ddy:ProjID ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onDataRange [ rdf:type rdfs:Datatype ;
+                                                                            owl:intersectionOf ( rdfs:Literal
+                                                                                                 xsd:positiveInteger
+                                                                                               )
+                                                                          ]
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+                 rdfs:label "Project" .
+
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#Restriction
+igso-ddy:Restriction rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( igso-ddy:Restriction
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty igso-ddy:has ;
+                                                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf igso-ddy:DataDictionary ;
+                     rdfs:label "Restriction" .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#projectLocation
+igso-ddy:projectLocation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain igso-ddy:Project ;
+                         rdfs:range gr:Location .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#locationProject
+igso-ddy:locationProject rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         owl:inverseOf igso-ddy:projectLocation ;
+                         rdf:type owl:AsymmetricProperty ,
+                                  owl:IrreflexiveProperty ;
+                         rdfs:domain gr:Location ;
+                         rdfs:range igso-ddy:Project .
+
+
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#LocationName
+igso-ddy:LocationName rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain gr:Location ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjID
+igso-ddy:ProjID rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain igso-ddy:Project ;
+                rdfs:range xsd:positiveInteger .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjName
+igso-ddy:ProjName rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain igso-ddy:Project ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.example.org/cm/igso/2023/igso-ddy#ProjNumber
+igso-ddy:ProjNumber rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain igso-ddy:Project ;
+                    rdfs:range xsd:positiveInteger ,
+                               xsd:string .

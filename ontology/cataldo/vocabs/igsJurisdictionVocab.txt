@@ -1,0 +1,74 @@
+### Classes
+RegulatoryDomain
+	Country
+		EU
+			Germany
+			Italy
+		USA
+	Jurisdiction
+		EU
+		USA
+	Obligation	
+		ObligationToCaptureRecordsOfDataProcessingActivity
+		ObligationToLawfulnessDataProcessing
+		ObligationToFairnessDataProcessing
+		ObligationToTransparencyOfDataProcessing 
+		ObligationToLimitPurposeDataProcessing
+		ObligationToMinimizeData 
+		ObligationToEnsureAccuracyOfData
+		ObligationToLimitStoragePeriod
+		ObligationToEnsureIntegrityOfData 
+		ObligationToEnsureConfidentialityOfData
+		ObligationToEnsureAccountabilityOfDataController
+		ObligationToEnsureAccountabilityOfProcessor
+		ObligationToPerformDataProtectionImpactAssessment		
+		ObligationToAppointDataProtectionOfficer
+		ObligationToNotifyOfPersonalDataBreach
+		ObligationToCooperateWithSupervisoryAuthority
+		ObligationOfCross-borderDataTransfer
+		ObligationToRecordProcessingActivity
+		ObligationToFulfillConsentRequirement
+	Penalty
+	Regulation
+		GDPR
+		USPrivacyAct
+	Restriction
+	Right
+		DataSubjectRight
+			RightToBeInformed
+			RightOfAccess
+			RightToRectification
+			RightToErasure
+			RightToBeForgotten
+			RightToRestrictProcessing
+			RightToDataPortability
+			RightToObject
+			RightRelatedToAutomatedDecision-making
+			RightRelatedToAutomatedProfiling
+		
+
+### Offer Turtle Example
+foo:offer a gr:Offering;
+     gr:name "Hepp Personal SCSI Controller Card";
+     gr:description """The Hepp Personal SCSI is a 16-bit add-on card that allows 
+attaching up to seven SCSI devices to your computer.""";
+
+     gr:hasBusinessFunction gr:Sell;
+     gr:hasPriceSpecification [ a gr:UnitPriceSpecification;
+                                gr:hasCurrency "USD"^^xsd:string;
+                                gr:hasCurrencyValue "99.99"^^xsd:float;
+                                gr:validThrough "2012-11-30T23:59:59"^^xsd:dateTime ];
+     gr:condition "used";
+
+     gr:hasEAN_UCC-13 "1234567890123"^^xsd:string;
+     gr:hasMPN "PSCSI"^^xsd:string;
+     gr:hasStockKeepingUnit "123-456"^^xsd:string;
+     gr:hasInventoryLevel [ a gr:QuantitativeValue;
+                            gr:hasMinValue "1"^^xsd:float ];
+
+     s:aggregateRating [ a s:AggregateRating;
+                         s:ratingValue "4.9"^^xsd:float;
+                         s:reviewCount 99 ];
+
+     foaf:depiction <http://example.com/images/pscsi.jpg>;
+     foaf:page <http://example.com/products/pscsi> .

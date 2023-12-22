@@ -1,0 +1,250 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-sys#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-impl#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#requires
+
+:requires a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
+
+igso-ddy:InformationRetrievalSystem a owl:Class ;
+	rdfs:subClassOf :System ;
+	rdfs:label "InformationRetrievalSystem" .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#ArchiveSystem
+
+:ArchiveSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#CaseManagementSystem
+
+:CaseManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#CommunicationSystem
+
+:CommunicationSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#DocumentManagementSystem
+
+:DocumentManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#EnterpriseContentManagementSystem
+
+:EnterpriseContentManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#NetworkSystem
+
+:NetworkSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#RDBMSystem
+
+:RDBMSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#RecordsManagementSystem
+
+:RecordsManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#RenderingSystem
+
+:RenderingSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#StorageSystem
+
+:StorageSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#System
+
+:System a owl:Class ;
+	rdfs:subClassOf :SystemsDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#SystemPattern
+
+:SystemPattern a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#SystemsDomain
+
+:SystemsDomain a owl:Class .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#TransferSystem
+
+:TransferSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+# http://www.example.org/cm/igso/2023/igso-sys#eDiscoveryManagementSystem
+
+:eDiscoveryManagementSystem a owl:Class ;
+	rdfs:subClassOf :System .
+# 
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid4 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid5 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+igso-arc:ArchiveSolution rdfs:label "ArchiveSolution" .
+# 
+
+igso-arc:ECMSolution rdfs:label "ECMSolution" .
+# 
+
+igso-arc:InformationGovernanceSolution rdfs:label "InformationGovernanceSolution" .
+# 
+
+igso-arc:RIMSolution rdfs:label "RIMSolution" .
+# 
+
+igso-arc:SolutionPattern rdfs:label "SolutionPattern" .
+# 
+
+igso-arc:eDiscoverySolution rdfs:label "eDiscoverySolution" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid6 a owl:AllDisjointClasses ;
+	owl:members _:genid20 .
+
+_:genid20 a rdf:List ;
+	rdf:first igso-ddy:InformationRetrievalSystem ;
+	rdf:rest _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first :ArchiveSystem ;
+	rdf:rest _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :CaseManagementSystem ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :CommunicationSystem ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :DocumentManagementSystem ;
+	rdf:rest _:genid15 .
+
+_:genid15 a rdf:List ;
+	rdf:first :EnterpriseContentManagementSystem ;
+	rdf:rest _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first :NetworkSystem ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :RDBMSystem ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :RecordsManagementSystem ;
+	rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first :RenderingSystem ;
+	rdf:rest _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first :StorageSystem ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :SystemPattern ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :TransferSystem ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :eDiscoveryManagementSystem ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

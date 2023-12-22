@@ -1,0 +1,3218 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-impl: <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-ddy#> a owl:Ontology ;
+	<http://ainf.aau.at/ontodebug#testCase> _:genid1 .
+
+_:genid1 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+<http://www.example.org/cm/igso/2023/igso-ddy#> dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid2 .
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+<http://www.example.org/cm/igso/2023/igso-ddy#> dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	dct:modified "2014-04-12"^^xsd:date ;
+	rdfs:comment "Vocabulary for describing information governance services types ."@en ;
+	rdfs:label "Core igso organization ontology"@en ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://ainf.aau.at/ontodebug#axiom
+
+<http://ainf.aau.at/ontodebug#axiom> a owl:AnnotationProperty ;
+	rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
+# 
+# http://ainf.aau.at/ontodebug#testCase
+
+<http://ainf.aau.at/ontodebug#testCase> a owl:AnnotationProperty .
+# 
+# http://ainf.aau.at/ontodebug#type
+
+<http://ainf.aau.at/ontodebug#type> a owl:AnnotationProperty ;
+	rdfs:subPropertyOf <http://ainf.aau.at/ontodebug#testCase> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+
+dc:publisher a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/abstract
+
+dct:abstract a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/contributor
+
+dct:contributor a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "contributor" ;
+	skos:definition "party that has made contributions to the resource" .
+# 
+# http://purl.org/dc/terms/created
+
+dct:created a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/creator
+
+dct:creator a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "creator" ;
+	skos:definition "party that originated the resource" ;
+	rdfs:subPropertyOf dct:contributor .
+# 
+# http://purl.org/dc/terms/description
+
+dct:description a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:note ;
+	rdfs:range rdfs:Literal .
+# 
+# http://purl.org/dc/terms/issued
+
+dct:issued a owl:AnnotationProperty .
+# 
+# http://purl.org/dc/terms/license
+
+dct:license a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "license" ;
+	skos:definition "legal document giving official permission to do something with the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+# 
+# http://purl.org/dc/terms/modified
+
+dct:modified a owl:AnnotationProperty ;
+	rdfs:range rdfs:Literal .
+# 
+# http://purl.org/dc/terms/publisher
+
+dct:publisher a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "publisher" ;
+	skos:definition "primary party responsible for making the resource available" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+# 
+# http://purl.org/dc/terms/references
+
+dct:references a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "references" ;
+	skos:definition "indicates a related resource that is referenced, cited, or otherwise pointed to by the described resource" .
+# 
+# http://purl.org/dc/terms/rights
+
+dct:rights a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "rights" ;
+	skos:definition "provides nformation about rights held in and over the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." .
+# 
+# http://purl.org/dc/terms/source
+
+dct:source a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "source" ;
+	skos:definition "related resource from which the described resource is derived" ;
+	cmns-av:explanatoryNote "The intent is to provide a user with a reference as to how the thing being annotated was derived or arrived at. The source can be a URL to a standard, common dictionary (e.g., Collins, Merriam-Webster, Oxford), a formal reference such as an ISO standard, or similar reference. Or it can be a short description of a source from which the entity being annotated was derived." .
+# 
+# http://purl.org/dc/terms/title
+
+dct:title a owl:AnnotationProperty ;
+	rdfs:range rdfs:Literal .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#abstract
+
+:abstract a owl:AnnotationProperty ;
+	rdfs:subPropertyOf :description .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#adapted_from
+
+:adapted_from a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#change_note
+
+:change_note a owl:AnnotationProperty ;
+	rdfs:subPropertyOf :note .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#definition
+
+:definition a owl:AnnotationProperty ;
+	rdfs:subPropertyOf :note .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#description
+
+:description a owl:AnnotationProperty ;
+	rdfs:subPropertyOf :note .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#logical_definition
+
+:logical_definition a owl:AnnotationProperty ;
+	rdfs:subPropertyOf :definition .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#note
+
+:note a owl:AnnotationProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Publisher
+
+igso-org:Publisher a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:subPropertyOf dc:publisher .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#isReferencedBy
+
+igso-org:isReferencedBy a owl:AnnotationProperty ;
+	rdfs:label "igso:isReferencedBy"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#purpose
+
+igso-org:purpose a owl:AnnotationProperty ;
+	rdfs:comment "Indicates the purpose of this Organization. There can be many purposes at different levels of abstraction but the nature of an organization is to have a reason for existence and this property is a means to document that reason. An Organization may have multiple purposes. It is recommended that the purpose be denoted by a controlled term or code list, ideally a `skos:Concept`. However, the range is left open to allow for other types of descriptive schemes. It is expected that specializations or application profiles of this vocabulary will constrain the range of the purpose. Alternative names: _remit_ _responsibility_ (esp. if applied to OrganizationalUnits such as Government Departments)."@en ;
+	rdfs:label "purpose"@en ;
+	rdfs:domain igso-org:Organization .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#roleProperty
+
+igso-org:roleProperty a owl:AnnotationProperty ;
+	rdfs:comment "This is a metalevel property which is used to annotate an `igso-org:Role` instance with a sub-property of `igso-org:memberOf` that can be used to directly indicate the role for easy of query. The intended semantics is a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form:  `{ [] igso-org:member ?p; igso-org:organization ?o; igso-org:role [igso-org:roleProperty ?r] } -> {?p ?r ?o}`."@en ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+	rdfs:label "role (property)"@en ;
+	rdfs:range rdf:Property ;
+	rdfs:domain igso-org:Role .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#usage_scenario
+
+igso-org:usage_scenario a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#use_case
+
+igso-org:use_case a owl:AnnotationProperty ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+
+skos:altLabel a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "alternative label" ;
+	skos:definition "alternative lexical tag for a resource" ;
+	rdfs:subPropertyOf rdfs:label .
+# 
+# http://www.w3.org/2004/02/skos/core#changeNote
+
+skos:changeNote a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "change note" ;
+	skos:definition "note describing a modification to a resource" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+
+skos:definition a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "definition" ;
+	skos:definition "formal statement of the meaning of a resource" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/2004/02/skos/core#editorialNote
+
+skos:editorialNote a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "editorial note" ;
+	skos:definition "note for an editor, translator, or maintainer of the controlled vocabulary or ontology" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+
+skos:example a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "example" ;
+	skos:definition "illustration of the use of some resource" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/2004/02/skos/core#historyNote
+
+skos:historyNote a owl:AnnotationProperty .
+# 
+# http://www.w3.org/2004/02/skos/core#note
+
+skos:note a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "note" ;
+	skos:definition "general remark, for any purpose" .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+
+skos:prefLabel a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "preferred label" ;
+	skos:definition "preferred lexical label for a resource, in a given language" ;
+	rdfs:subPropertyOf rdfs:label .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+
+skos:scopeNote a owl:AnnotationProperty ;
+	rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+	rdfs:label "scope note" ;
+	skos:definition "note that helps to clarify the meaning of something within the context of the intended use of the resource" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# http://www.w3.org/ns/org#role
+
+org:role a owl:AnnotationProperty .
+# 
+# http://xmlns.com/foaf/0.1/mbox
+
+foaf:mbox a owl:AnnotationProperty .
+# 
+# http://xmlns.com/foaf/0.1/name
+
+foaf:name a owl:AnnotationProperty .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/adaptedFrom
+
+cmns-av:adaptedFrom a owl:AnnotationProperty ;
+	rdfs:label "adapted from" ;
+	skos:definition "document or other source from which a given term (or its definition) was adapted (i.e., is compatible with but not quoted); the range for this annotation can be a string, URI, or citation" ;
+	cmns-av:usageNote "This annotation should be used to indicate that a reference was used, for example, as input to the development of a definition or term but would not be considered infringing on a copyright." ;
+	rdfs:subPropertyOf dct:source .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright
+
+cmns-av:copyright a owl:AnnotationProperty ;
+	rdfs:label "copyright" ;
+	skos:definition "exclusive legal right, given to an originator or an assignee to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+	rdfs:subPropertyOf dct:rights .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/directSource
+
+cmns-av:directSource a owl:AnnotationProperty ;
+	rdfs:label "direct source" ;
+	skos:definition "quoted reference for the subject resource; the range for this annotation can be a string, URI, or bibliographic citation" ;
+	rdfs:subPropertyOf dct:source .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+
+cmns-av:explanatoryNote a owl:AnnotationProperty ;
+	rdfs:label "explanatory note" ;
+	skos:definition "note that provides additional explanatory material for a resource" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/logicalDefinition
+
+cmns-av:logicalDefinition a owl:AnnotationProperty ;
+	rdfs:label "logical definition" ;
+	skos:definition "definition in the form of a formal expression, such as the mathematical or logic representation, for the resource" ;
+	rdfs:subPropertyOf skos:definition .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/synonym
+
+cmns-av:synonym a owl:AnnotationProperty ;
+	rdfs:label "synonym" ;
+	skos:definition "designation that can be substituted for the primary representation of something" ;
+	cmns-av:adaptedFrom "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09" ;
+	rdfs:subPropertyOf skos:altLabel .
+# 
+# https://www.omg.org/spec/Commons/AnnotationVocabulary/usageNote
+
+cmns-av:usageNote a owl:AnnotationProperty ;
+	rdfs:label "usage note" ;
+	skos:definition "note that provides information about how a given resource is used or may be extended" ;
+	rdfs:subPropertyOf skos:note .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+
+xsd:date a rdfs:Datatype .
+# 
+# https://www.omg.org/spec/Commons/TextDatatype/Text
+
+<https://www.omg.org/spec/Commons/TextDatatype/Text> a rdfs:Datatype .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DataErasure
+
+:DataErasure a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DataRetentionDuration
+
+:DataRetentionDuration a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectConsent
+
+:DataSubjectConsent a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DataSubjectRight
+
+:DataSubjectRight a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DesirableBevavior
+
+:DesirableBevavior a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#EnhancedProtection
+
+:EnhancedProtection a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrieval
+
+:InformationRetrieval a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#InformationRetrievalSystem
+
+:InformationRetrievalSystem a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#MaturityLevel
+
+:MaturityLevel a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#align
+
+:align a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#aligns
+
+:aligns a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#analyze
+
+:analyze a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#analyzes
+
+:analyzes a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#applientTo
+
+:applientTo a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#applies
+
+:applies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#appliesTo
+
+:appliesTo a owl:ObjectProperty ;
+	rdfs:subPropertyOf :applies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#applyCorporateRule
+
+:applyCorporateRule a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#appoint
+
+:appoint a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#appointa
+
+:appointa a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#approve
+
+:approve a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#approves
+
+:approves a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#aquires
+
+:aquires a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#archives
+
+:archives a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#assess
+
+:assess a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#assignTo
+
+:assignTo a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#assignedTo
+
+:assignedTo a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#audit
+
+:audit a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#avoidsDanglingPointers
+
+:avoidsDanglingPointers a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#avoidsOrphanObjects
+
+:avoidsOrphanObjects a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#backups
+
+:backups a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#basedOn
+
+:basedOn a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#be_appointed
+
+:be_appointed a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#being_notified
+
+:being_notified a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#build
+
+:build a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#captureRecordsOf
+
+:captureRecordsOf a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#clasifies
+
+:clasifies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#classifiedAs
+
+:classifiedAs a owl:ObjectProperty ;
+	rdfs:subPropertyOf :clasifies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#communicates
+
+:communicates a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#complies
+
+:complies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#compliesWith
+
+:compliesWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :complies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#conductInventory
+
+:conductInventory a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#consistsOf
+
+:consistsOf a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#contentIsReferencedBy
+
+:contentIsReferencedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity ;
+	owl:inverseOf :referencesContentObject .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#controls
+
+:controls a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#converts
+
+:converts a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#cooperationWith
+
+:cooperationWith a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#coordinate
+
+:coordinate a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#correct
+
+:correct a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#create
+
+:create a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataTransfer
+
+:dataTransfer a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#defines
+
+:defines a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#definesAccessControl
+
+:definesAccessControl a owl:ObjectProperty ;
+	rdfs:subPropertyOf :defines .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#definesDesignOf
+
+:definesDesignOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :defines .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#definesDesirable
+
+:definesDesirable a owl:ObjectProperty ;
+	rdfs:subPropertyOf :defines .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#definesMaturity
+
+:definesMaturity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :defines .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dependsOn
+
+:dependsOn a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#develops
+
+:develops a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#discloses
+
+:discloses a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#distributes
+
+:distributes a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#enforces
+
+:enforces a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#engages
+
+:engages a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensure
+
+:ensure a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureAccountability
+
+:ensureAccountability a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureAccuracy
+
+:ensureAccuracy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureAppropriate
+
+:ensureAppropriate a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureApprovedCertification
+
+:ensureApprovedCertification a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureComplianceWith
+
+:ensureComplianceWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureFairProcessing
+
+:ensureFairProcessing a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureIntegrity
+
+:ensureIntegrity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensureLawfulnessProcessing
+
+:ensureLawfulnessProcessing a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensures
+
+:ensures a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ensuresReferentialIntegrityWith
+
+:ensuresReferentialIntegrityWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :ensure ;
+	rdfs:label "ensuresReferentialIntegrityWith" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#establish
+
+:establish a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#estimate
+
+:estimate a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#evaluate
+
+:evaluate a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#exercises
+
+:exercises a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#followsInstructionOf
+
+:followsInstructionOf a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#fullfills
+
+:fullfills a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#handles
+
+:handles a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#has
+
+:has a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasCapability
+
+:hasCapability a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasCost
+
+:hasCost a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasHalfTime
+
+:hasHalfTime a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasImportance
+
+:hasImportance a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasLocation
+
+:hasLocation a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has ;
+	a owl:FunctionalProperty ;
+	rdfs:domain :Location ;
+	rdfs:range _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :locationID ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:positiveInteger .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasMaturity
+
+:hasMaturity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasMember
+
+:hasMember a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasObligations
+
+:hasObligations a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasPrice
+
+:hasPrice a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasRegulatoryRequirements
+
+:hasRegulatoryRequirements a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasRisk
+
+:hasRisk a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasValue
+
+:hasValue a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#hasmaturityLevel
+
+:hasmaturityLevel a owl:ObjectProperty ;
+	rdfs:subPropertyOf :has .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#implementsAppropriate
+
+:implementsAppropriate a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#implies
+
+:implies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#impliesImplementationOf
+
+:impliesImplementationOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :implies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#impliesRequirements
+
+:impliesRequirements a owl:ObjectProperty ;
+	rdfs:subPropertyOf :implies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#includes
+
+:includes a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#is
+
+:is a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isAdministeredBy
+
+:isAdministeredBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isAnExpense
+
+:isAnExpense a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isCategorizedBy
+
+:isCategorizedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isClassifiedAs
+
+:isClassifiedAs a owl:ObjectProperty ;
+	rdfs:subPropertyOf :clasifies , :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isClassifiedBy
+
+:isClassifiedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :clasifies , :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isCompliantWith
+
+:isCompliantWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :complies .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isComposedOf
+
+:isComposedOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isDefinedBy
+
+:isDefinedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isDesignedBy
+
+:isDesignedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isDisposedBy
+
+:isDisposedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isEasyToCollect
+
+:isEasyToCollect a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isEasyToDigitize
+
+:isEasyToDigitize a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isGovernedBy
+
+:isGovernedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isGroupOf
+
+:isGroupOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is ;
+	rdfs:domain dctype:Collection .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isHardTo
+
+:isHardTo a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isHostedOn
+
+:isHostedOn a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isImplementedBy
+
+:isImplementedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isManagedBy
+
+:isManagedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isMemberOf
+
+:isMemberOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isMetadataOf
+
+:isMetadataOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isObligatedTo
+
+:isObligatedTo a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isObligatedToEnsure
+
+:isObligatedToEnsure a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isObligatedTo .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isOwnedBy
+
+:isOwnedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isRelatedTo
+
+:isRelatedTo a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isRequiredBy
+
+:isRequiredBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isResponsibleFor
+
+:isResponsibleFor a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isResponsibleForDesignOf
+
+:isResponsibleForDesignOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isResponsibleFor .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isRetrievable
+
+:isRetrievable a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isRetrievedBy
+
+:isRetrievedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isRetrievable .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isSearchable
+
+:isSearchable a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isSearchableBy
+
+:isSearchableBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isSearchable .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isSecured
+
+:isSecured a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isSecuredBy
+
+:isSecuredBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isSecured .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isStored
+
+:isStored a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isStoredBy
+
+:isStoredBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :isStored .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isTaggingOf
+
+:isTaggingOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isTaxonomyOf
+
+:isTaxonomyOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isUsedBy
+
+:isUsedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf :is .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#limits
+
+:limits a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#limitsArchivePeriod
+
+:limitsArchivePeriod a owl:ObjectProperty ;
+	rdfs:subPropertyOf :limits .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#limitsPurpose
+
+:limitsPurpose a owl:ObjectProperty ;
+	rdfs:subPropertyOf :limits .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#limitsStoragePeriod
+
+:limitsStoragePeriod a owl:ObjectProperty ;
+	rdfs:subPropertyOf :limits .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#locationProject
+
+:locationProject a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	owl:inverseOf :projectLocation ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain gr:Location ;
+	rdfs:range :Project .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#maintains
+
+:maintains a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#manages
+
+:manages a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#mandates
+
+:mandates a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#mayInvolve
+
+:mayInvolve a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#measures
+
+:measures a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#minizeAmountOf
+
+:minizeAmountOf a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#monitors
+
+:monitors a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offers
+
+:offers a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersPlatform
+
+:offersPlatform a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersProduct
+
+:offersProduct a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#offersService
+
+:offersService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :offers .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#perform
+
+:perform a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#performIimpactAssessment
+
+:performIimpactAssessment a owl:ObjectProperty ;
+	rdfs:subPropertyOf :perform .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#performs
+
+:performs a owl:ObjectProperty ;
+	rdfs:subPropertyOf :perform .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#persues
+
+:persues a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#plans
+
+:plans a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#processes
+
+:processes a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#produces
+
+:produces a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#profile
+
+:profile a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#projectID
+
+:projectID a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#projectLocation
+
+:projectLocation a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	rdfs:domain :Project ;
+	rdfs:range gr:Location .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#projectName
+
+:projectName a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#projectNumber
+
+:projectNumber a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#promotes
+
+:promotes a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#protects
+
+:protects a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#provides
+
+:provides a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesCatalogService
+
+:providesCatalogService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :provides .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesDatabaseService
+
+:providesDatabaseService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :provides .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesFulltextIndexService
+
+:providesFulltextIndexService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :providesIndexService .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesFulltextSearchService
+
+:providesFulltextSearchService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :providesSearchService .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesIndexService
+
+:providesIndexService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :provides .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesReferentialIntegrity
+
+:providesReferentialIntegrity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesRelationalIndexService
+
+:providesRelationalIndexService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :providesIndexService .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesRelationalSearchService
+
+:providesRelationalSearchService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :providesSearchService .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#providesSearchService
+
+:providesSearchService a owl:ObjectProperty ;
+	rdfs:subPropertyOf :provides .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#referencesContentObject
+
+:referencesContentObject a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#referentialIntegrity
+
+:referentialIntegrity a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requires
+
+:requires a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresComplianceLevel
+
+:requiresComplianceLevel a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresComplianceWith
+
+:requiresComplianceWith a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresDatabase
+
+:requiresDatabase a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresReferentialIntegrity
+
+:requiresReferentialIntegrity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :referentialIntegrity .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#requiresRelationalSchema
+
+:requiresRelationalSchema a owl:ObjectProperty ;
+	rdfs:subPropertyOf :requires .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#satisfies
+
+:satisfies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#serves
+
+:serves a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#specifies
+
+:specifies a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#subjectTo
+
+:subjectTo a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#submitts
+
+:submitts a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#supports
+
+:supports a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#tests
+
+:tests a owl:ObjectProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateAuthenticity
+
+:validateAuthenticity a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateCompleteness
+
+:validateCompleteness a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateCompliance
+
+:validateCompliance a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateComplianceLevel
+
+:validateComplianceLevel a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validateCompliance .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateConsistency
+
+:validateConsistency a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validateProvenance
+
+:validateProvenance a owl:ObjectProperty ;
+	rdfs:subPropertyOf :validates .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#validates
+
+:validates a owl:ObjectProperty .
+# 
+# http://www.w3.org/ns/dcat#catalog
+
+dcat:catalog a owl:ObjectProperty ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcat:Catalog .
+# 
+# http://www.w3.org/ns/dcat#record
+
+dcat:record a owl:ObjectProperty ;
+	rdfs:domain dcat:Catalog ;
+	rdfs:range dcat:CatalogRecord .
+# 
+# http://www.w3.org/ns/org#Objective
+
+org:Objective a owl:ObjectProperty .
+# 
+# http://www.w3.org/ns/org#classification
+
+org:classification a owl:ObjectProperty ;
+	rdfs:comment "Extension vocabularies may wish to specialize this property to have a range corresponding to a specific skos:ConceptScheme" ;
+	rdfs:isDefinedBy org:classification .
+# 
+# http://www.w3.org/ns/org#hasMember
+
+org:hasMember a owl:ObjectProperty ;
+	owl:inverseOf org:memberOf ;
+	rdfs:domain org:Organization ;
+	rdfs:range dct:Agent ;
+	rdfs:comment """Indicates an agent (person or other organization) who is a member of the subject Organization. Inverse of org:memberOf, see that property for further clarification.
+http://www.w3.org/ns/org#hasMember""" ;
+	rdfs:isDefinedBy org:hasMember .
+# 
+# http://www.w3.org/ns/org#hasMembership
+
+org:hasMembership a owl:ObjectProperty ;
+	owl:inverseOf org:member ;
+	rdfs:domain org:Membership ;
+	rdfs:range dct:Agent .
+# 
+# http://www.w3.org/ns/org#hasSubOrganization
+
+org:hasSubOrganization a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	owl:inverseOf org:subOrganizationOf ;
+	rdfs:domain org:Organization ;
+	rdfs:range org:Organization .
+# 
+# http://www.w3.org/ns/org#hasUnit
+
+org:hasUnit a owl:ObjectProperty ;
+	rdfs:subPropertyOf org:hasSubOrganization ;
+	rdfs:domain org:Organization ;
+	rdfs:range org:OrganizationalUnit .
+# 
+# http://www.w3.org/ns/org#member
+
+org:member a owl:ObjectProperty , owl:FunctionalProperty ;
+	rdfs:domain org:Membership ;
+	rdfs:range dct:Agent .
+# 
+# http://www.w3.org/ns/org#memberOf
+
+org:memberOf a owl:ObjectProperty ;
+	rdfs:domain org:Organization ;
+	rdfs:comment "Indicates that an agent (person or other organization) is a member of the Organization with no indication of the nature of that membership or the role played." .
+# 
+# http://www.w3.org/ns/org#purpose
+
+org:purpose a owl:ObjectProperty ;
+	rdfs:comment """Use a controlled term or code list, ideally a skos:Concept.
+
+The instance that uses this vocabulary will constrain the range of org:purpose. Alternative name is responsibility (esp. if applied to OrganizationalUnits such as Enterprise Departments).""" ;
+	rdfs:isDefinedBy org:purpose ;
+	skos:altLabel "responsibility" .
+# 
+# http://www.w3.org/ns/org#roleProperty
+
+org:roleProperty a owl:ObjectProperty ;
+	rdfs:domain org:Role ;
+	rdfs:range rdf:Property ;
+	rdfs:comment org:roleProperty .
+# 
+# http://www.w3.org/ns/org#subOrganizationOf
+
+org:subOrganizationOf a owl:ObjectProperty ;
+	rdfs:subPropertyOf owl:topObjectProperty ;
+	rdfs:domain org:Organization ;
+	rdfs:range org:Organization .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/characterizes
+
+cmns-cls:characterizes a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Designators/describes> ;
+	owl:inverseOf cmns-cls:isCharacterizedBy ;
+	rdfs:label "characterizes" ;
+	skos:definition "provides a discriminating feature or quality of" .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/classifies
+
+cmns-cls:classifies a owl:ObjectProperty ;
+	rdfs:subPropertyOf cmns-cls:characterizes ;
+	owl:inverseOf cmns-cls:isClassifiedBy ;
+	rdfs:label "classifies" ;
+	skos:definition "arranges in categories according to one or more shared characteristics" .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/isCharacterizedBy
+
+cmns-cls:isCharacterizedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Designators/isDescribedBy> ;
+	rdfs:label "is characterized by" ;
+	skos:definition "indicates a quality or feature of something, distinguishing it from something else" .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/isClassifiedBy
+
+cmns-cls:isClassifiedBy a owl:ObjectProperty ;
+	rdfs:subPropertyOf cmns-cls:isCharacterizedBy ;
+	rdfs:label "is classified by" ;
+	skos:definition "is systematically grouped based on characteristics by" .
+# 
+# https://www.omg.org/spec/Commons/Collections/compliesWith
+
+<https://www.omg.org/spec/Commons/Collections/compliesWith> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/hasArrangement> ;
+	rdfs:range <https://www.omg.org/spec/Commons/Collections/Arrangement> ;
+	rdfs:label "complies with" ;
+	skos:definition "adheres to policies or rules specified in" .
+# 
+# https://www.omg.org/spec/Commons/Collections/comprises
+
+<https://www.omg.org/spec/Commons/Collections/comprises> a owl:ObjectProperty ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Collections/isIncludedIn> ;
+	rdfs:label "comprises" ;
+	skos:definition "includes, consists of, or contains, especially within a particular scope" ;
+	skos:note "Note that something can be comprised of something(s) that may or may not be understood as separable parts. In other words, comprises does not imply countability or uniqueness. Whole-part relations are transitive, whereas comprises is not defined to be transitive, so this property is useful in cases where cardinality constraints are needed. comprises and hasPart are not explicitly declared as disjoint to avoid reasoning issues, but should be considered as such." .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasArrangement
+
+<https://www.omg.org/spec/Commons/Collections/hasArrangement> a owl:ObjectProperty ;
+	rdfs:range <https://www.omg.org/spec/Commons/Collections/Arrangement> ;
+	rdfs:label "has arrangement" ;
+	skos:definition "is structured or organized according to" .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasConstituent
+
+<https://www.omg.org/spec/Commons/Collections/hasConstituent> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/comprises> ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Collections/isConstituentOf> ;
+	owl:propertyDisjointWith <https://www.omg.org/spec/Commons/Collections/hasMember> ;
+	rdfs:label "has constituent" ;
+	skos:definition "consists of or contains" ;
+	cmns-av:usageNote "This property is disjoint with hasMember, and should be used in cases where the constituents of something are not considered discrete elements of whatever they are included in, such as a substance or composite." .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasDirectPart
+
+<https://www.omg.org/spec/Commons/Collections/hasDirectPart> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/hasPart> ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Collections/isDirectPartOf> ;
+	rdfs:label "has direct part" ;
+	skos:definition "indicates an immediate 'child' part of something" ;
+	cmns-av:usageNote "This property is useful in cases where one is interested in the direct relationships between parts of things, for example to build a tree view." .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasMember
+
+<https://www.omg.org/spec/Commons/Collections/hasMember> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/comprises> ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Collections/isMemberOf> ;
+	rdfs:label "has member" ;
+	skos:definition "includes, as a discrete element" ;
+	skos:note "Note that the domain of hasMember should be some sort of collection, aggregate, or group. In the Financial Industry Business Ontology (FIBO), hasMember is used in the case of parties (people and organizations), whereas comprises can have anything in its range." .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasPart
+
+<https://www.omg.org/spec/Commons/Collections/hasPart> a owl:ObjectProperty ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Collections/isPartOf> ;
+	a owl:TransitiveProperty ;
+	dct:source "Stanford Encyclopedia of Philosophy at http://plato.stanford.edu/entries/mereology/" ;
+	rdfs:label "has part" ;
+	skos:definition "indicates any portion of something, regardless of whether the portion itself is attached to the remainder or detached; cognitively salient or arbitrarily demarcated; self-connected or disconnected; homogeneous or gerrymandered; material or immaterial; extended or unextended; spatial or temporal" ;
+	skos:note "Note that 'has part' is not a subproperty of 'comprises' in order to enable transitivity for whole-part relationships without limiting the use of cardinality constraints on comprises and membership." .
+# 
+# https://www.omg.org/spec/Commons/Collections/isConstituentOf
+
+<https://www.omg.org/spec/Commons/Collections/isConstituentOf> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/isIncludedIn> ;
+	owl:propertyDisjointWith <https://www.omg.org/spec/Commons/Collections/isMemberOf> ;
+	rdfs:label "is constituent of" ;
+	skos:definition "is a component of something else" .
+# 
+# https://www.omg.org/spec/Commons/Collections/isDirectPartOf
+
+<https://www.omg.org/spec/Commons/Collections/isDirectPartOf> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/isPartOf> ;
+	rdfs:label "is direct part of" ;
+	skos:definition "indicates an immediate 'parent' of this part" ;
+	cmns-av:usageNote "This property is useful in cases where one is interested in the direct relationships between parts of things, for example to build a tree view." .
+# 
+# https://www.omg.org/spec/Commons/Collections/isIncludedIn
+
+<https://www.omg.org/spec/Commons/Collections/isIncludedIn> a owl:ObjectProperty ;
+	rdfs:label "is included in" ;
+	skos:definition "is contained in or an element of" ;
+	skos:note "Something that is included in something else may be an independently identifiable, discrete element or may be an indistinguishable element once it is combined with the target." .
+# 
+# https://www.omg.org/spec/Commons/Collections/isMemberOf
+
+<https://www.omg.org/spec/Commons/Collections/isMemberOf> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Collections/isIncludedIn> ;
+	rdfs:label "is member of" ;
+	skos:definition "is a discrete element of" .
+# 
+# https://www.omg.org/spec/Commons/Collections/isPartOf
+
+<https://www.omg.org/spec/Commons/Collections/isPartOf> a owl:ObjectProperty , owl:TransitiveProperty ;
+	dct:source "Stanford Encyclopedia of Philosophy at http://plato.stanford.edu/entries/mereology/" ;
+	rdfs:label "is part of" ;
+	skos:definition "relates something to another thing that it is some component or portion of, regardless of how that whole-part relationship is manifested" ;
+	skos:note "Note that 'is part of' is not a subproperty of 'isIncludedIn' in order to enable transitivity for whole-part relationships without limiting the use of cardinality constraints on inclusion and membership." .
+# 
+# https://www.omg.org/spec/Commons/Designators/defines
+
+<https://www.omg.org/spec/Commons/Designators/defines> a owl:ObjectProperty ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Designators/isDefinedIn> ;
+	rdfs:label "defines" ;
+	rdfs:seeAlso <https://plato.stanford.edu/entries/definitions/> ;
+	skos:definition "specifies the meaning of something in terms of one or more of its essential qualities" ;
+	skos:note "A quality is an elementary characteristic of something. An 'essential quality' is one that provides a necessary criteria for being that thing and differentiating criteria for not being something else." .
+# 
+# https://www.omg.org/spec/Commons/Designators/denotes
+
+<https://www.omg.org/spec/Commons/Designators/denotes> a owl:ObjectProperty ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Designators/isSignifiedBy> ;
+	rdfs:domain <https://www.omg.org/spec/Commons/Designators/Designation> ;
+	rdfs:label "denotes" ;
+	rdfs:seeAlso <http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#> , <https://www.w3.org/2016/05/ontolex/> ;
+	skos:definition "serves as a sign for something, or for a conceptualization thereof" ;
+	skos:note "Note that in some references, such as the semiotics ontology from Ontology Design Patterns,'denotes' can be used to talk about e.g. entities denoted by proper nouns: the proper noun 'Leonardo da Vinci' denotes the person Leonardo da Vinci; as well as to talk about sets of entities that can be described by a common noun: the common noun 'person' denotes the collection of all persons in a domain of discourse. Other references that may be useful for interpreting 'denotes' include OntoLex. The interpretation of 'denotes' in this context is more general, but intended to reflect its usage in the semiotic triangle." ;
+	skos:scopeNote "This property could be specialized to differentiate the notion of referring to something, i.e., a referent, from the notion of evoking a concept. Consider that in OntoLex, the term denotes is used to designate the sign referent relationship specifically, which in ISO 704:2022 is called 'refers to' in Figure 1. This definition is also meant to cover the OntoLex notion of evokes, which in ISO 704:2022 is called designates or represents." ;
+	cmns-av:adaptedFrom "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09, clause 3.4.1" , "ISO 704 Terminology work - Principles and methods, Fourth edition, 2022-07, Figure 1" .
+# 
+# https://www.omg.org/spec/Commons/Designators/describes
+
+<https://www.omg.org/spec/Commons/Designators/describes> a owl:ObjectProperty ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Designators/isDescribedBy> ;
+	rdfs:label "describes" ;
+	skos:definition "conveys the nature of" .
+# 
+# https://www.omg.org/spec/Commons/Designators/hasName
+
+<https://www.omg.org/spec/Commons/Designators/hasName> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Designators/isSignifiedBy> ;
+	owl:inverseOf <https://www.omg.org/spec/Commons/Designators/isNameOf> ;
+	rdfs:range <https://www.omg.org/spec/Commons/Designators/Name> ;
+	rdfs:label "has name" ;
+	skos:definition "is known by" .
+# 
+# https://www.omg.org/spec/Commons/Designators/isDefinedIn
+
+<https://www.omg.org/spec/Commons/Designators/isDefinedIn> a owl:ObjectProperty ;
+	rdfs:label "is defined in" ;
+	skos:definition "indicates something that specifies the meaning associated with the subject" ;
+	skos:note "Typically, a concept, such as a classifier or identifier, will be defined in terms of a scheme, contract, specification, standard, or other reference." .
+# 
+# https://www.omg.org/spec/Commons/Designators/isDescribedBy
+
+<https://www.omg.org/spec/Commons/Designators/isDescribedBy> a owl:ObjectProperty ;
+	rdfs:label "is described by" ;
+	skos:definition "has general nature or description of" .
+# 
+# https://www.omg.org/spec/Commons/Designators/isNameOf
+
+<https://www.omg.org/spec/Commons/Designators/isNameOf> a owl:ObjectProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/Designators/denotes> ;
+	rdfs:domain <https://www.omg.org/spec/Commons/Designators/Name> ;
+	rdfs:label "is name of" ;
+	skos:definition "denotes in some context" .
+# 
+# https://www.omg.org/spec/Commons/Designators/isSignifiedBy
+
+<https://www.omg.org/spec/Commons/Designators/isSignifiedBy> a owl:ObjectProperty ;
+	rdfs:range <https://www.omg.org/spec/Commons/Designators/Designation> ;
+	rdfs:label "is signified by" ;
+	skos:definition "has representation, denotation or sign of" .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/denotes
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/denotes> a owl:ObjectProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/has
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/has> a owl:ObjectProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasMember
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasMember> a owl:ObjectProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/identifies
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/identifies> a owl:ObjectProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/isMemberOf
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/isMemberOf> a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/Standard
+
+dct:Standard a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/abstract
+
+dct:abstract a owl:DatatypeProperty ;
+	rdfs:subPropertyOf dct:description .
+# 
+# http://purl.org/dc/terms/conformsTo
+
+dct:conformsTo a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/description
+
+dct:description a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/identifier
+
+dct:identifier a owl:DatatypeProperty ;
+	rdfs:domain dcat:Catalog .
+# 
+# http://purl.org/dc/terms/issued
+
+dct:issued a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/modified
+
+dct:modified a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/relation
+
+dct:relation a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/subject
+
+dct:subject a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/title
+
+dct:title a owl:DatatypeProperty .
+# 
+# http://purl.org/dc/terms/type
+
+dct:type a owl:DatatypeProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#LocationName
+
+:LocationName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain gr:Location ;
+	rdfs:range xsd:string .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ProjID
+
+:ProjID a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Project ;
+	rdfs:range xsd:positiveInteger .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ProjName
+
+:ProjName a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Project ;
+	rdfs:range xsd:string .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ProjNumber
+
+:ProjNumber a owl:DatatypeProperty , owl:FunctionalProperty ;
+	rdfs:domain :Project ;
+	rdfs:range xsd:positiveInteger .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#age
+
+:age a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :metrics .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#category
+
+:category a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#classification
+
+:classification a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#companyType
+
+:companyType a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#cost
+
+:cost a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :metrics .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataController
+
+:dataController a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataOwner
+
+:dataOwner a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataOwnerRights
+
+:dataOwnerRights a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataProcesssor
+
+:dataProcesssor a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataSubject
+
+:dataSubject a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#dataSubjectRights
+
+:dataSubjectRights a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#identifier
+
+:identifier a owl:DatatypeProperty ;
+	rdfs:subPropertyOf skos:notation ;
+	rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization." .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isAsset
+
+:isAsset a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isOnHold
+
+:isOnHold a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isclassified
+
+:isclassified a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#isexpired
+
+:isexpired a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :retentionPeriod .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#lawfulBasis
+
+:lawfulBasis a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#locationID
+
+:locationID a owl:DatatypeProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#maturityLevel
+
+:maturityLevel a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#metrics
+
+:metrics a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#processingPurpose
+
+:processingPurpose a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#retentionPeriod
+
+:retentionPeriod a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#risk
+
+:risk a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :metrics .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#specialcategory
+
+:specialcategory a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#type
+
+:type a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#value
+
+:value a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :metrics .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+
+skos:notation a owl:DatatypeProperty ;
+	rdfs:subPropertyOf :isexpired .
+# 
+# http://www.w3.org/ns/dcat#theme
+
+dcat:theme a owl:DatatypeProperty ;
+	rdfs:subPropertyOf dct:subject .
+# 
+# http://www.w3.org/ns/org#identifier
+
+org:identifier a owl:DatatypeProperty ;
+	rdfs:subPropertyOf owl:topDataProperty , skos:notation ;
+	rdfs:domain org:Organization ;
+	rdfs:comment "Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization."@en ;
+	rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
+	rdfs:label "identifier"@en .
+# 
+# http://www.w3.org/ns/org#organization
+
+org:organization a owl:DatatypeProperty .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/isExclusive
+
+cmns-cls:isExclusive a owl:DatatypeProperty ;
+	rdfs:domain cmns-cls:ClassificationScheme ;
+	rdfs:range xsd:boolean ;
+	rdfs:label "is exclusive" ;
+	skos:definition "indicates that the classifiers in the scheme are all disjoint and that only one classifier may be used to classify something" ;
+	cmns-av:usageNote "This does not exclude classification by other classifiers from other schemes. It is simply a hint to users that whatever is classified by a classifier in this scheme should be classified by at most one of the classifiers in the scheme." .
+# 
+# https://www.omg.org/spec/Commons/Collections/hasMethod
+
+<https://www.omg.org/spec/Commons/Collections/hasMethod> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/TextDatatype/hasTextValue> ;
+	rdfs:label "has method" ;
+	skos:definition "provides a text description of an approach or method used to accomplish something" ;
+	skos:example "This property can be used to describe an arrangement or ordering applied to a collection." .
+# 
+# https://www.omg.org/spec/Commons/Designators/hasDescription
+
+<https://www.omg.org/spec/Commons/Designators/hasDescription> a owl:DatatypeProperty ;
+	rdfs:subPropertyOf <https://www.omg.org/spec/Commons/TextDatatype/hasTextValue> ;
+	rdfs:label "has description" ;
+	skos:definition "provides a textual statement, picture in words, or account that describes something" ;
+	skos:note "Note that the hasDescription property defined herein has an implicit range of rdfs:Literal. This is purposeful, so that users can specify any element that has a name with or without a language tag without concern for conflicting datatypes (i.e., xsd:string vs. rdf:langString, which are logically disjoint)." .
+# 
+# https://www.omg.org/spec/Commons/TextDatatype/hasTextValue
+
+<https://www.omg.org/spec/Commons/TextDatatype/hasTextValue> a owl:DatatypeProperty ;
+	rdfs:label "has text value" ;
+	skos:definition "provides a string value for something, with or without a language tag" ;
+	skos:note "Note that although the intended range for this property is Text, we have left the range undefined so that it can be used with tools that do not support rdf:langString." .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasEnglishName
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasEnglishName> a owl:DatatypeProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasFrenchName
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasFrenchName> a owl:DatatypeProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasGermanName
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasGermanName> a owl:DatatypeProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasIndigenousName
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasIndigenousName> a owl:DatatypeProperty .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasTag> a owl:DatatypeProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/dcmitype/Collection
+
+dctype:Collection a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	:definition "An aggregation of resources." ;
+	rdfs:comment "A collection is described as a group; its parts may also be separately described." ;
+	rdfs:isDefinedBy dctype:Collection ;
+	rdfs:label "Collection" .
+# 
+# http://purl.org/dc/dcmitype/Service
+
+dctype:Service a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	dct:source dctype:Service ;
+	rdfs:comment """Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server.
+
+http://purl.org/dc/dcmitype/Service""" ;
+	rdfs:label "Service" .
+# 
+# http://purl.org/dc/dcmitype/Software
+
+dctype:Software a owl:Class ;
+	rdfs:subClassOf dct:Agent ;
+	:definition "A computer program in source or compiled form." ;
+	rdfs:comment "Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server." ;
+	rdfs:isDefinedBy dctype:Software ;
+	rdfs:label "Software" .
+# 
+# http://purl.org/dc/dcmitype/Text
+
+dctype:Text a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	:definition "A resource consisting primarily of words for reading." ;
+	rdfs:comment "Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. Note that facsimiles or images of texts are still of the genre Text." ;
+	rdfs:isDefinedBy dctype:Text ;
+	rdfs:label "Text" .
+# 
+# http://purl.org/dc/elements/1.1/Subject
+
+dc:Subject a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy dc:subject ;
+	rdfs:label "Subject" .
+# 
+# http://purl.org/dc/terms/Agent
+
+dct:Agent a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	:definition "A resource that acts or has the power to act." ;
+	rdfs:isDefinedBy dct:Agent ;
+	rdfs:label "Agent" .
+# 
+# http://purl.org/dc/terms/AgentClass
+
+dct:AgentClass a owl:Class ;
+	rdfs:subClassOf dct:Agent ;
+	:definition "A group of agents." ;
+	rdfs:label "AgentClass" .
+# 
+# http://purl.org/dc/terms/Jurisdiction
+
+dct:Jurisdiction a owl:Class ;
+	rdfs:subClassOf dct:LocationPeriodOrJurisdiction ;
+	rdfs:isDefinedBy dct:Jurisdiction ;
+	rdfs:label "dct:Jurisdiction" .
+# 
+# http://purl.org/dc/terms/Location
+
+dct:Location a owl:Class ;
+	rdfs:subClassOf dct:LocationPeriodOrJurisdiction ;
+	:definition "A spatial region or named place." ;
+	rdfs:isDefinedBy dct:Location ;
+	rdfs:label "Location" .
+# 
+# http://purl.org/dc/terms/LocationPeriodOrJurisdiction
+
+dct:LocationPeriodOrJurisdiction a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	:definition "A location, period of time, or jurisdiction." ;
+	rdfs:isDefinedBy dct:LocationPeriodOrJurisdiction ;
+	rdfs:label "Location, Period, or Jurisdiction" .
+# 
+# http://purl.org/dc/terms/MediaType
+
+dct:MediaType a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:label "dcterms:MediaType" .
+# 
+# http://purl.org/dc/terms/Period
+
+dct:Period a owl:Class ;
+	rdfs:subClassOf dct:LocationPeriodOrJurisdiction ;
+	:definition "An interval of time that is named or defined by its start and end dates." ;
+	rdfs:isDefinedBy dct:PeriodOfTime ;
+	rdfs:label "Period" .
+# 
+# http://purl.org/dc/terms/Policy
+
+dct:Policy a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	:definition "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters." ;
+	rdfs:isDefinedBy dct:Policy ;
+	rdfs:label "Policy" .
+# 
+# http://purl.org/dc/terms/Standard
+
+dct:Standard a owl:Class ;
+	rdfs:subClassOf :DataDictionary .
+# 
+# http://purl.org/goodrelations/v1#BusinessEntity
+
+gr:BusinessEntity a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:comment "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached." ;
+	rdfs:isDefinedBy gr:BusinessEntity ;
+	rdfs:label "BusinessEntity" .
+# 
+# http://purl.org/goodrelations/v1#BusinessFunction
+
+gr:BusinessFunction a owl:Class ;
+	rdfs:subClassOf :DataDictionary , org:FormalOrganization ;
+	rdfs:comment "The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation." ;
+	rdfs:isDefinedBy gr:BusinessFunction ;
+	rdfs:label "BusinessFunction" .
+# 
+# http://purl.org/goodrelations/v1#ContractualRelationship
+
+gr:ContractualRelationship a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:comment "http://purl.org/goodrelations/v1" ;
+	rdfs:isDefinedBy gr:ContractualRelationship .
+# 
+# http://purl.org/goodrelations/v1#DeliveryMethod
+
+gr:DeliveryMethod a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:comment """A delivery method is a standardized procedure for transferring the product or service to the destination of fulfilment chosen by the customer. 
+
+see also
+https://www.heppnetz.de/ontologies/goodrelations/v1.html#DeliveryMethod""" ;
+	rdfs:isDefinedBy gr:DeliveryMethod ;
+	rdfs:label "gr:DeliveryMethod" .
+# 
+# http://purl.org/goodrelations/v1#Location
+
+gr:Location a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:comment "A location is a point or area of interest from which a particular product or service is available,  Typical address standards (vcard) and location data (geo, WGC84) should be attached to a gr:Location node." ;
+	rdfs:isDefinedBy <http://purl.org/goodrelations/v1l#Location> ;
+	rdfs:label "Location" .
+# 
+# http://purl.org/goodrelations/v1#Offering
+
+gr:Offering a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy gr:Offering ;
+	rdfs:label "Offering" .
+# 
+# http://purl.org/goodrelations/v1#ProductOrService
+
+gr:ProductOrService a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:comment """The superclass of all classes describing products or services types, either by nature or purpose.
+Compatibility with schema.org: This class is (approximately) equivalent to http://schema.org/Product .
+
+Note: Your first choice for specializations of gr:ProductOrService should be http://www.productontology.org.""" ;
+	rdfs:isDefinedBy gr:ProductOrService ;
+	rdfs:label "ProductOrService" .
+# 
+# http://purl.org/goodrelations/v1#ProductOrServiceModel
+
+gr:ProductOrServiceModel a owl:Class ;
+	rdfs:subClassOf gr:ProductOrService ;
+	rdfs:comment """A product or service model is a intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype.
+
+Compatibility with schema.org: This class is (approximately) a subclass of http://schema.org/Product.""" ;
+	rdfs:isDefinedBy <https://www.heppnetz.de/ontologies/goodrelations/v1.html#ProductOrServiceModel> ;
+	rdfs:label "ProductOrServiceModel" ;
+	rdfs:seeAlso """GoodRelations ontology for E-Commenrce UML Class Diagram
+https://www.heppnetz.de/ontologies/goodrelations/goodrelations-UML.png""" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ACL
+
+:ACL a owl:Class ;
+	rdfs:subClassOf :Acronym .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#AWS
+
+:AWS a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "AWS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#Acronym
+
+:Acronym a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	cmns-av:adaptedFrom "Acronym" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#Azure
+
+:Azure a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "Azure" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#BusinessClassificationScheme
+
+:BusinessClassificationScheme a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:label "BusinessClassificationScheme" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CCS
+
+:CCS a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "CCS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CEORole
+
+:CEORole a owl:Class ;
+	rdfs:subClassOf org:Role ;
+	rdfs:label "CEO" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CommonFunctionVocabularyAndKeyword
+
+:CommonFunctionVocabularyAndKeyword a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:label "CommonFunctionVocabularyAndKeyword" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CoreAgencyFunction
+
+:CoreAgencyFunction a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:label "CoreAgencyFunction" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CoreBusinessFunction
+
+:CoreBusinessFunction a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:label "CoreBusinessFunction" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DPO
+
+:DPO a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "DPO" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#DataDictionary
+
+:DataDictionary a owl:Class ;
+	:definition """A data dictionary1 is a collection of descriptions of data objects or terms, definitions, and properties in a data asset. Data dictionaries provide information about the data.
+Data dictionaries are an essential communications tool for data modeling, curation, governance, and analytics, especially when dealing with datasets that have been collected, compiled, categorized, used, and reused by different internal and external data Consumers across the organization.
+A data dictionary consists of several data components, which contains multiple levels: data asset, entity, attribute, and value domain. Each level includes different components, but each component should be defined with the following properties:
+Data Component Name:   Data Component Name that represents a class of real-world entities or characteristics of those entities 
+
+Description:  A short description for the data component name
+
+Type:  Logical or physical data component
+Required: Required or optional data component
+Sample: A sample of the data component
+
+Note: The data asset level is composed of one line that contains a data asset profile, which includes the data asset name, description, type, version, and create and last update date.
+see also: https://www.cms.gov/research-statistics-data-systems/DataArchitectureEngineering/DataDescriptionGuidelines""" ;
+	rdfs:comment "A data dictionary1 is a collection of descriptions of data objects or terms, definitions, and properties in a data asset. Data dictionaries provide information about the data" ;
+	rdfs:label "DataDictionary" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ECS
+
+:ECS a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "ECS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#GCP
+
+:GCP a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "GCP" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#IAS
+
+:IAS a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "IAS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#IRS
+
+:IRS a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "IRS" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#Location
+
+:Location a owl:Class ;
+	owl:equivalentClass _:genid4 .
+
+_:genid4 owl:intersectionOf _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :Location ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first _:genid6 .
+
+_:genid6 a owl:Restriction ;
+	owl:onProperty :LocationName ;
+	owl:allValuesFrom xsd:string .
+
+_:genid5 rdf:rest rdf:nil .
+
+_:genid4 a owl:Class .
+
+:Location rdfs:subClassOf gr:Location ;
+	rdfs:label "Location" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#OU
+
+:OU a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "OU" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#Project
+
+:Project a owl:Class ;
+	owl:equivalentClass _:genid8 .
+
+_:genid8 owl:intersectionOf _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first _:genid14 .
+
+_:genid14 a owl:Restriction ;
+	owl:onProperty :ProjName ;
+	owl:someValuesFrom rdfs:Literal .
+
+_:genid13 rdf:rest _:genid11 .
+
+_:genid11 a rdf:List ;
+	rdf:first _:genid12 .
+
+_:genid12 a owl:Restriction ;
+	owl:onProperty :ProjNumber ;
+	owl:someValuesFrom xsd:positiveInteger .
+
+_:genid11 rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first _:genid10 .
+
+_:genid10 a owl:Restriction ;
+	owl:onProperty :ProjID ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onDataRange xsd:positiveInteger .
+
+_:genid9 rdf:rest rdf:nil .
+
+_:genid8 a owl:Class .
+
+:Project rdfs:subClassOf :DataDictionary ;
+	rdfs:label "Project" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#RedHatCloud
+
+:RedHatCloud a owl:Class ;
+	rdfs:subClassOf :Acronym ;
+	rdfs:label "RedHatCloud" .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#Restriction
+
+:Restriction a owl:Class ;
+	owl:equivalentClass _:genid15 .
+
+_:genid15 owl:intersectionOf _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :Restriction ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first _:genid17 .
+
+_:genid17 a owl:Restriction ;
+	owl:onProperty :hasLocation ;
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+_:genid16 rdf:rest rdf:nil .
+
+_:genid15 a owl:Class .
+
+:Restriction rdfs:subClassOf :DataDictionary ;
+	:adapted_from <https://www.tandfonline.com/doi/full/10.1080/24751839.2019.1686681> ;
+	rdfs:label "Restriction" ;
+	rdfs:seeAlso """Transformation of UML class diagram into OWL Ontology
+https://orcid.org/0000-0002-1533-3647
+https://doi.org/10.1080/24751839.2019.1686681""" .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+
+rdf:Property a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:label "Property" .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+
+skos:Concept a owl:Class ;
+	rdfs:subClassOf :DataDictionary .
+# 
+# http://www.w3.org/ns/dcat#Catalog
+
+dcat:Catalog a owl:Class ;
+	rdfs:subClassOf dcat:Dataset ;
+	rdfs:comment "A curated collection of metadata about resources." ;
+	rdfs:isDefinedBy dcat:Catalog ;
+	rdfs:label "dcat:Catalog" ;
+	cmns-av:usageNote "Datasets and data services are examples of resources in the context of a data catalog." .
+# 
+# http://www.w3.org/ns/dcat#CatalogRecord
+
+dcat:CatalogRecord a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	dct:title "title" ;
+	rdfs:comment "A record in a catalog, describing the registration of a single dcat:Resource." ;
+	rdfs:isDefinedBy dcat:CatalogRecord .
+# 
+# http://www.w3.org/ns/dcat#DataService
+
+dcat:DataService a owl:Class ;
+	rdfs:subClassOf dctype:Service , dcat:Resource ;
+	rdfs:label "dcat:DataService" ;
+	cmns-av:usageNote "If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property." .
+# 
+# http://www.w3.org/ns/dcat#Dataset
+
+dcat:Dataset a owl:Class ;
+	rdfs:subClassOf dcat:Resource ;
+	rdfs:isDefinedBy <https://w3c.github.io/dxwg/dcat/#Class:Dataset> ;
+	rdfs:label "dcat:Dataset" .
+# 
+# http://www.w3.org/ns/dcat#Resource
+
+dcat:Resource a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy dcat:Resource ;
+	rdfs:label "Resource" ;
+	cmns-av:usageNote """The class of all cataloged resources, the super-class of dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog.
+This class carries properties common to all cataloged resources, including datasets and data services.""" .
+# 
+# http://www.w3.org/ns/org#FormalOrganization
+
+org:FormalOrganization a owl:Class ;
+	rdfs:subClassOf org:Organization ;
+	rdfs:isDefinedBy org:FormalOrganization ;
+	rdfs:label "FormalOrganization" .
+# 
+# http://www.w3.org/ns/org#Membership
+
+org:Membership a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy org:Membership ;
+	rdfs:label "Membership" .
+# 
+# http://www.w3.org/ns/org#Organization
+
+org:Organization a owl:Class ;
+	rdfs:subClassOf dct:Agent , :DataDictionary ;
+	rdfs:comment """Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent.
+
+equivalentClass:  http://xmlns.com/foaf/0.1/Organization
+
+see also : http://www.w3.org/TR/vocab-org/ and""" ;
+	rdfs:isDefinedBy org:Organization ;
+	rdfs:label "Organization" .
+# 
+# http://www.w3.org/ns/org#OrganizationalUnit
+
+org:OrganizationalUnit a owl:Class ;
+	rdfs:subClassOf org:Organization ;
+	rdfs:comment """Units can be large and complex containing other Units. 
+Alternative names: Department""" ;
+	rdfs:isDefinedBy org:OrganizationalUnit ;
+	rdfs:label "OrganizationalUnit" ;
+	skos:altLabel "Department" .
+# 
+# http://www.w3.org/ns/org#Role
+
+org:Role a owl:Class ;
+	rdfs:subClassOf skos:Concept ;
+	rdfs:comment "Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of org:Membership." ;
+	rdfs:isDefinedBy org:Role ;
+	rdfs:label "Role" .
+# 
+# http://www.w3.org/ns/org#Site
+
+org:Site a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	dct:source org:Site ;
+	rdfs:comment """In most cases a Site will be a physical location with the possibility of non-physical sites such as a virtual office.
+
+From: http://www.w3.org/ns/org#Site""" ;
+	rdfs:label "Site" .
+# 
+# http://xmlns.com/foaf/0.1/Person
+
+foaf:Person a owl:Class ;
+	rdfs:subClassOf dct:Agent ;
+	rdfs:label "Person" .
+# 
+# https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+	rdfs:label "maturity level" ;
+	skos:definition "classifier used to indicate the state of an artifact with respect to its development lifecycle" ;
+	cmns-av:explanatoryNote "FIBO currently has three maturity levels: Informative, Provisional, and Release."@en .
+# 
+# https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module
+
+<https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module> a owl:Class ;
+	rdfs:subClassOf cmns-cls:Classifier ;
+	rdfs:isDefinedBy <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> ;
+	rdfs:label "module" ;
+	skos:definition "classifier used to indicate a category used to modularize something based on principles of the model driven architecture methodology (MDA), including but not limited to separation of concerns, coherence, and establishing clear logical boundaries in order to increase reusability and maintainability" ;
+	cmns-av:explanatoryNote "A module should be designed to reflect these principles, including a small number of models that have well-defined relationships with one another, that form a coherent and cohesive whole for some purpose, and that have clear boundaries or interfaces to other modules." .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/Aspect
+
+cmns-cls:Aspect a owl:Class ;
+	rdfs:subClassOf :DataDictionary , _:genid19 .
+
+_:genid19 a owl:Restriction ;
+	owl:onProperty cmns-cls:characterizes ;
+	owl:minCardinality "0"^^xsd:nonNegativeInteger .
+
+cmns-cls:Aspect rdfs:label "Aspect" ;
+	skos:definition "characteristic or feature that can be used to dimensionalize, filter, or subset something" ;
+	cmns-av:synonym "characteristic" .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/ClassificationScheme
+
+cmns-cls:ClassificationScheme a owl:Class ;
+	rdfs:subClassOf <https://www.omg.org/spec/Commons/Collections/Arrangement> ;
+	dct:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15" ;
+	rdfs:label "ClassificationScheme" ;
+	skos:definition "system for allocating classifiers to things" ;
+	skos:note "ISO 11179-3 defines a classification scheme as descriptive information for an arrangement or division of objects into groups based on criteria such as characteristics, which the objects have in common. A classification scheme may be a taxonomy, a network, an ontology, or any other terminological system. Such classification schemes are intended to permit the classification of arbitrary objects into hierarchies, or partial orders, as appropriate. The classification may also be just a list of controlled vocabulary of property words (or terms). The list might be taken from the 'leaf level' of a taxonomy." .
+# 
+# https://www.omg.org/spec/Commons/Classifiers/Classifier
+
+cmns-cls:Classifier a owl:Class ;
+	rdfs:subClassOf cmns-cls:Aspect , _:genid20 .
+
+_:genid20 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Designators/isDefinedIn> ;
+	owl:allValuesFrom cmns-cls:ClassificationScheme .
+
+cmns-cls:Classifier rdfs:subClassOf _:genid21 .
+
+_:genid21 a owl:Restriction ;
+	owl:onProperty cmns-cls:classifies ;
+	owl:minCardinality "0"^^xsd:nonNegativeInteger .
+
+cmns-cls:Classifier dct:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15" ;
+	rdfs:label "Classifier" ;
+	skos:definition "standardized classification or delineation for something, per some scheme for such delineation, within a specified context" ;
+	skos:example "The classifier 'color' embraces characteristics being red, blue, green, etc. The classifier 'material' embraces characteristics made of wood, metal, etc." ;
+	skos:note "In ISO 1087, classifiers form categories of characteristics that serve as the criterion of subdivision when establishing concept systems." .
+# 
+# https://www.omg.org/spec/Commons/Collections/Arrangement
+
+<https://www.omg.org/spec/Commons/Collections/Arrangement> a owl:Class ;
+	rdfs:subClassOf :DataDictionary , _:genid22 .
+
+_:genid22 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Collections/hasMethod> ;
+	owl:minCardinality "0"^^xsd:nonNegativeInteger .
+
+<https://www.omg.org/spec/Commons/Collections/Arrangement> rdfs:label "Arrangement" ;
+	skos:definition "systematic plan, manner, or method for making, doing, achieving, or organizing something" ;
+	skos:example "Examples include designs, schema, models, methodologies, alphabetical or numeric ordering, and the like." .
+# 
+# https://www.omg.org/spec/Commons/Collections/Collection
+
+<https://www.omg.org/spec/Commons/Collections/Collection> a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:label "collection" ;
+	skos:definition "grouping of things (may be zero) that have some shared significance" ;
+	cmns-av:usageNote "Users should use either comprises or hasPart, or one of their respective subproperties, to include things in a collection." .
+# 
+# https://www.omg.org/spec/Commons/Collections/Constituent
+
+<https://www.omg.org/spec/Commons/Collections/Constituent> a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:label "constituent" ;
+	skos:definition "component of a collection or combination of things" ;
+	cmns-av:usageNote "Users should use either isIncludedIn or isPartOf, or one of their respective subproperties, to include a constituent in a collection." .
+# 
+# https://www.omg.org/spec/Commons/Collections/StructuredCollection
+
+<https://www.omg.org/spec/Commons/Collections/StructuredCollection> a owl:Class ;
+	rdfs:subClassOf <https://www.omg.org/spec/Commons/Collections/Collection> , _:genid23 .
+
+_:genid23 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Collections/hasArrangement> ;
+	owl:allValuesFrom <https://www.omg.org/spec/Commons/Collections/Arrangement> .
+
+<https://www.omg.org/spec/Commons/Collections/StructuredCollection> rdfs:label "structured collection" ;
+	skos:definition "collection that has a clearly defined structure or organization" ;
+	skos:example "Examples include collections organized thematically, alphabetically, by method used to develop them, according to time and/or version, or based on encoding schemes such as the Dewey Decimal System or Library of Congress Subject Headings." ;
+	cmns-av:usageNote "Users should use the hasMethod property on arrangement to describe the methodology for structuring the collection." .
+# 
+# https://www.omg.org/spec/Commons/Designators/Designation
+
+<https://www.omg.org/spec/Commons/Designators/Designation> a owl:Class ;
+	rdfs:subClassOf :DataDictionary , _:genid24 .
+
+_:genid24 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Designators/denotes> ;
+	owl:someValuesFrom owl:Thing .
+
+<https://www.omg.org/spec/Commons/Designators/Designation> rdfs:subClassOf _:genid25 .
+
+_:genid25 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/TextDatatype/hasTextValue> ;
+	owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+	owl:onDataRange <https://www.omg.org/spec/Commons/TextDatatype/Text> .
+
+<https://www.omg.org/spec/Commons/Designators/Designation> rdfs:label "designation" ;
+	skos:definition "representation for something, or for a conceptualization thereof, that denotes it in a domain or subject" ;
+	skos:note "A designation can be a term including appellations, a proper name, or a symbol." , "A designation can be linguistic or non-linguistic. It can consist of various types of characters, but also punctuation marks such as hyphens and parentheses, governed by domain-, subject-, or language-specific conventions." , "Note that the use of the min 0 cardinality restriction in the definition of this class is provided as a reminder that designators are expected, in many cases, to have a text value associated with them. There are cases where this is not true, however, including symbols. And, there may be cases where the value is not known. Additionally, not all tools support rdf:langString, thus its use in the definition of the Text datatype may cause errors, for example in value and some number restrictions. Min 0 cardinality constraints are ignored by reasoners and other processors, so this allows us to say that the possible values for this property are likely either xsd:string or rdf:langString, but does not require it depending on the environment in which the ontology is deployed." ;
+	cmns-av:adaptedFrom "ISO 1087 Terminology work and terminology science - Vocabulary, Second edition, 2019-09, clause 3.4.1" , "ISO 704 Terminology work - Principles and methods, Fourth edition, 2022-07, Figure 1" ;
+	cmns-av:synonym "designator" .
+# 
+# https://www.omg.org/spec/Commons/Designators/Name
+
+<https://www.omg.org/spec/Commons/Designators/Name> a owl:Class ;
+	rdfs:subClassOf :DataDictionary , <https://www.omg.org/spec/Commons/Designators/Designation> , _:genid26 .
+
+_:genid26 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/Commons/Designators/isNameOf> ;
+	owl:someValuesFrom owl:Thing .
+
+<https://www.omg.org/spec/Commons/Designators/Name> rdfs:label "name" ;
+	skos:definition "designation for something by a linguistic expression" ;
+	skos:note "In ISO 1087, a name may be an appellation and is defined as a term that is applied to a group of objects whose relevant properties are identical, whereas a proper name is a designation that represents an individual object." ;
+	cmns-av:adaptedFrom "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Registry metamodel and basic attributes, Third edition, 2013-02-15, clause 3.2.83" ;
+	cmns-av:explanatoryNote "Note that unlike symbols and other designations, a name is explicitly not linguistically neutral." .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement> a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "Arrangement" ;
+	skos:definition "a structure or means of organizing information such as a schema, numbering system, organization scheme, measurement system, taxonomy, or language for organizing information"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> a owl:Class ;
+	rdfs:subClassOf :DataDictionary , _:genid27 .
+
+_:genid27 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/denotes> ;
+	owl:cardinality "1"^^xsd:nonNegativeInteger .
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> rdfs:subClassOf _:genid28 .
+
+_:genid28 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/isMemberOf> ;
+	owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+	owl:onClass <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet> .
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> dct:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15"^^xsd:string ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "code element" ;
+	skos:definition "a sequence of characters denoting something that it is associated with for some purpose, within a specified context, according to some rule set"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet> a owl:Class ;
+	rdfs:subClassOf <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement> , _:genid29 .
+
+_:genid29 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasMember> ;
+	owl:allValuesFrom <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeElement> .
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/CodeSet> dct:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15"^^xsd:string ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "CodeSet" ;
+	skos:altLabel "coding scheme"^^xsd:string ;
+	skos:definition "a system of alpha-numeric symbols, or combinations of symbols, that stand for specified values in some context"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection> a owl:Class ;
+	rdfs:subClassOf :DataDictionary ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "collection" ;
+	skos:definition "a grouping of some variable number of things (may be zero) that have some shared significance"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/IdentificationScheme
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/IdentificationScheme> a owl:Class ;
+	rdfs:subClassOf <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Arrangement> ;
+	dct:source "ISO/IEC 11179-3 Information technology - Metadata registries (MDR) - Part 3: Registry metamodel and basic attributes, Third edition, 2013-02-15"^^xsd:string ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "identificationScheme" ;
+	skos:definition "a system for allocating identifiers to objects"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> a owl:Class ;
+	rdfs:subClassOf :DataDictionary , _:genid30 .
+
+_:genid30 a owl:Restriction ;
+	owl:onProperty <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/hasEnglishName> ;
+	owl:someValuesFrom rdfs:Literal .
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Language> dct:source "Section 3.6, ISO 639-4"^^xsd:string ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "language" ;
+	skos:definition "a systematic use of sounds, characters, symbols or signs to communicate meaning"^^xsd:string .
+# 
+# https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Script
+
+<https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Script> a owl:Class ;
+	rdfs:subClassOf <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/Collection> ;
+	dct:source "Section 3.17, ISO 639-4"^^xsd:string ;
+	rdfs:isDefinedBy <https://www.omg.org/spec/LCC/Languages/LanguageRepresentation/> ;
+	rdfs:label "script" ;
+	skos:definition "a set of graphic characters used to represent one or more languages in writing"^^xsd:string ;
+	skos:note "Use of multiple writing systems does not mean that multiple language identifiers are necessary for a language. ISO 639 language identifiers may be combined with script identifiers from ISO 15924 (e.g., BCP 47)."^^xsd:string .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.com/people#jo
+
+<http://example.com/people#jo> a owl:NamedIndividual .
+# 
+# http://purl.org/dc/terms/
+
+<http://purl.org/dc/terms/> a owl:NamedIndividual ;
+	rdfs:isDefinedBy <http://purl.org/dc/aboutdcmi#DCMI> .
+# 
+# http://purl.org/goodrelations/v1#Business
+
+gr:Business a owl:NamedIndividual ;
+	rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Business> .
+# 
+# http://purl.org/goodrelations/v1#Dispose
+
+gr:Dispose a owl:NamedIndividual ;
+	rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Dispose> .
+# 
+# http://purl.org/goodrelations/v1#ProvideService
+
+gr:ProvideService a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#ACL
+
+:ACL a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-ddy#CEO
+
+:CEO a owl:NamedIndividual ;
+	rdfs:label "CEO" ;
+	cmns-av:synonym "Synonym of Chief Executive Officer" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AWS
+
+igso-org:AWS a owl:NamedIndividual ;
+	rdfs:label "AWS"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AccessControlList
+
+igso-org:AccessControlList a owl:NamedIndividual ;
+	rdfs:label "AccessControlList"@de .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Ad-Hoc
+
+igso-org:Ad-Hoc a owl:NamedIndividual ;
+	rdfs:label "Ad-Hoc"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AlfrescoContentManagement
+
+igso-org:AlfrescoContentManagement a owl:NamedIndividual ;
+	rdfs:comment "Alfresco is another platform that can contribute to fulfilling the requirements of data protection regulations like GDPR. Alfresco provides enterprise content management (ECM) and business process management (BPM) solutions that can assist organizations in managing their data and ensuring compliance. While Alfresco is primarily known for its ECM capabilities, it offers features that align with GDPR requirements. Here's how Alfresco can address some key requirements:" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AlfrescoGovernanceServices
+
+igso-org:AlfrescoGovernanceServices a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AmazonCloud
+
+igso-org:AmazonCloud a owl:NamedIndividual ;
+	rdfs:label "Amazon Cloud (AWS)"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#AutomatedOrganizationWide
+
+igso-org:AutomatedOrganizationWide a owl:NamedIndividual ;
+	rdfs:label "AutomatedOrganizationWide"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Azure
+
+igso-org:Azure a owl:NamedIndividual ;
+	rdfs:label "Azure"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#CGOC
+
+igso-org:CGOC a owl:NamedIndividual ;
+	rdfs:label "CGOC"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#CloudEnvironment
+
+igso-org:CloudEnvironment a owl:NamedIndividual ;
+	rdfs:label "CloudEnvironment"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#CommunicationOffering
+
+igso-org:CommunicationOffering a owl:NamedIndividual ;
+	rdfs:label "CommunicationOffering"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Consequences
+
+igso-org:Consequences a owl:NamedIndividual ;
+	rdfs:label "Consequences"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ContentCatalog
+
+igso-org:ContentCatalog a owl:NamedIndividual ;
+	rdfs:label "ContentCatalog"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#DAM
+
+igso-org:DAM a owl:NamedIndividual ;
+	rdfs:label "DAM"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#DAMA
+
+igso-org:DAMA a owl:NamedIndividual ;
+	rdfs:label "DAMA"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#DB2
+
+igso-org:DB2 a owl:NamedIndividual ;
+	rdfs:label "DB2"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Defined
+
+igso-org:Defined a owl:NamedIndividual ;
+	rdfs:label "Defined"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#EDRM
+
+igso-org:EDRM a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Essential
+
+igso-org:Essential a owl:NamedIndividual ;
+	rdfs:label "Essential"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#FinancialAssets
+
+igso-org:FinancialAssets a owl:NamedIndividual ;
+	rdfs:label "FinancialAssets"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#FulltextIndex
+
+igso-org:FulltextIndex a owl:NamedIndividual ;
+	rdfs:label "FulltextIndex"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Fulltext_Index_Service
+
+igso-org:Fulltext_Index_Service a owl:NamedIndividual ;
+	rdfs:label "Fulltext_Index_Service"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Fulltext_Search_Service
+
+igso-org:Fulltext_Search_Service a owl:NamedIndividual ;
+	rdfs:label "Fulltext_Search_Service"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#FullyAutomatedLocal
+
+igso-org:FullyAutomatedLocal a owl:NamedIndividual ;
+	rdfs:label "FullyAutomatedLocal"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#GoogleCloud
+
+igso-org:GoogleCloud a owl:NamedIndividual ;
+	rdfs:label "GoogleCloud"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#HRAssets
+
+igso-org:HRAssets a owl:NamedIndividual ;
+	rdfs:label "HRAssets"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IBMCloud
+
+igso-org:IBMCloud a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IBMContentServices
+
+igso-org:IBMContentServices a owl:NamedIndividual ;
+	rdfs:label "IBMContentServices"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IBMEnterpriseContentManagement
+
+igso-org:IBMEnterpriseContentManagement a owl:NamedIndividual ;
+	rdfs:label "IBM Enterprise Content Management"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IBMInfoSphereInformationGovernanceCatalog
+
+igso-org:IBMInfoSphereInformationGovernanceCatalog a owl:NamedIndividual ;
+	rdfs:comment "IBM InfoSphere Information Governance Catalog: IBM's Information Governance Catalog provides a comprehensive solution for managing and governing data assets. It offers capabilities for data classification, data lineage, data quality, and policy management, helping organizations ensure compliance with data protection regulations." .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ISACA
+
+igso-org:ISACA a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ITAssets
+
+igso-org:ITAssets a owl:NamedIndividual ;
+	rdfs:label "ITAssets"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Immaturity
+
+igso-org:Immaturity a owl:NamedIndividual ;
+	rdfs:label "Immaturity"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#In-Development
+
+igso-org:In-Development a owl:NamedIndividual ;
+	rdfs:label "In-Development"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Initial
+
+igso-org:Initial a owl:NamedIndividual ;
+	rdfs:label "Initial"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#IntellectualAssets
+
+igso-org:IntellectualAssets a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Large
+
+igso-org:Large a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Lucene
+
+igso-org:Lucene a owl:NamedIndividual ;
+	rdfs:label "Lucene"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ManualStructured
+
+igso-org:ManualStructured a owl:NamedIndividual ;
+	rdfs:label "ManualStructured"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ManualUnstructured
+
+igso-org:ManualUnstructured a owl:NamedIndividual ;
+	rdfs:label "ManualUnStructured"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel
+
+igso-org:MaturityLevel a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-1
+
+igso-org:MaturityLevel-1 a owl:NamedIndividual ;
+	rdfs:label "MaturityLevel-1"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-2
+
+igso-org:MaturityLevel-2 a owl:NamedIndividual ;
+	rdfs:label "MaturityLevel-2"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-3
+
+igso-org:MaturityLevel-3 a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-4
+
+igso-org:MaturityLevel-4 a owl:NamedIndividual ;
+	rdfs:label "MaturityLevel-4"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MaturityLevel-5
+
+igso-org:MaturityLevel-5 a owl:NamedIndividual ;
+	rdfs:label "MaturityLevel-5"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Medium
+
+igso-org:Medium a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Micro
+
+igso-org:Micro a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#MicrosoftCloud
+
+igso-org:MicrosoftCloud a owl:NamedIndividual ;
+	rdfs:label "GCP"@en , "MicrosoftCloud"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#NextCloud
+
+igso-org:NextCloud a owl:NamedIndividual ;
+	rdfs:comment "Nextcloud is a popular open-source cloud collaboration platform that includes features for file storage, sharing, synchronization, and collaboration. It provides robust security and encryption options, as well as add-ons for compliance and governance requirements." ;
+	rdfs:label "Nextcloud" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Non-Existent
+
+igso-org:Non-Existent a owl:NamedIndividual ;
+	rdfs:label "Non-Existent"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ObjectCatalog
+
+igso-org:ObjectCatalog a owl:NamedIndividual ;
+	rdfs:label "ObjectCatalog"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ObjectServer
+
+igso-org:ObjectServer a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#OpenKM
+
+igso-org:OpenKM a owl:NamedIndividual ;
+	rdfs:comment "OpenKM is an open-source document management system that allows organizations to manage and track their documents in a centralized repository. It offers features for document versioning, access control, workflow automation, and audit trails." ;
+	rdfs:label "OpenKM" ;
+	cmns-av:directSource <https://www.openkm.com/> .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#OpenSourceDokumentManagementSystems
+
+igso-org:OpenSourceDokumentManagementSystems a owl:NamedIndividual ;
+	rdfs:label """OpenSourceDokumentManagementSystems
+Open-source cloud-native solutions can serve as viable alternatives to proprietary systems, offering similar functionalities and capabilities for data management and collaboration. They provide the advantage of being customizable, extensible, and cost-effective. However, it's important to assess each solution based on your specific requirements, technical expertise, and support options before making a decision. Additionally, consider factors like community support, documentation, and compatibility with your existing IT infrastructure when evaluating open-source alternatives.""" .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Optimized
+
+igso-org:Optimized a owl:NamedIndividual ;
+	rdfs:label "Optimized"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#OwnCloud
+
+igso-org:OwnCloud a owl:NamedIndividual ;
+	rdfs:comment "OwnCloud is another open-source cloud content collaboration platform that offers similar functionalities to Nextcloud. It provides file syncing, sharing, versioning, and access control features. ownCloud also supports integration with various third-party services and offers options for data encryption and compliance." ;
+	rdfs:label "OwnCloud" ;
+	cmns-av:directSource <https://nextcloud.com/> .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Permission
+
+igso-org:Permission a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#PhysicalAssets
+
+igso-org:PhysicalAssets a owl:NamedIndividual ;
+	rdfs:label "PhysicalAssets"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#PostgreSQL
+
+igso-org:PostgreSQL a owl:NamedIndividual ;
+	rdfs:label "PostgreSQL"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Privilege
+
+igso-org:Privilege a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Proactive
+
+igso-org:Proactive a owl:NamedIndividual ;
+	rdfs:label "Proactive"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ProcessOffering
+
+igso-org:ProcessOffering a owl:NamedIndividual ;
+	rdfs:label "ProcessOffering"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ProcessRisk
+
+igso-org:ProcessRisk a owl:NamedIndividual ;
+	rdfs:label "ProcessRisk"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#RecordsCatalog
+
+igso-org:RecordsCatalog a owl:NamedIndividual ;
+	rdfs:label "RecordsCatalog"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#RedHatCloud
+
+igso-org:RedHatCloud a owl:NamedIndividual ;
+	rdfs:label "RedHatCloud"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Relational_Index_Service
+
+igso-org:Relational_Index_Service a owl:NamedIndividual ;
+	rdfs:label "Relational_Index_Service"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Relational_Search_Service
+
+igso-org:Relational_Search_Service a owl:NamedIndividual ;
+	rdfs:label "Relational_Search_Service"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#RelationsAssets
+
+igso-org:RelationsAssets a owl:NamedIndividual ;
+	rdfs:label "RelationsAssets"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Repeatable
+
+igso-org:Repeatable a owl:NamedIndividual ;
+	rdfs:label "Repeatable"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#ResourceManager
+
+igso-org:ResourceManager a owl:NamedIndividual ;
+	rdfs:label "ResourceManager"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#SAPInformationSteward
+
+igso-org:SAPInformationSteward a owl:NamedIndividual ;
+	rdfs:comment "SAP Information Steward: SAP Information Steward is an information governance and data quality solution that helps organizations manage their data assets and ensure compliance. It provides capabilities for data profiling, data quality monitoring, metadata management, and data lineage, supporting organizations in their data governance and regulatory compliance efforts." .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#SemiAutomatedLocal
+
+igso-org:SemiAutomatedLocal a owl:NamedIndividual ;
+	rdfs:label "SemiAutomatedLocal"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Small
+
+igso-org:Small a owl:NamedIndividual .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Solr
+
+igso-org:Solr a owl:NamedIndividual ;
+	rdfs:comment "Solr a Fulltext Index And Search Server  by the Apache Software Foundation https://apache.org/" ;
+	rdfs:isDefinedBy <https://solr.apache.org/features.html> ;
+	rdfs:label "Solr"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#StorageOffering
+
+igso-org:StorageOffering a owl:NamedIndividual ;
+	rdfs:label "Storage Offering"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Sub-Standard
+
+igso-org:Sub-Standard a owl:NamedIndividual ;
+	rdfs:label "Sub-Standard"@en .
+# 
+# http://www.example.org/cm/igso/2023/igso-org#Transformational
+
+igso-org:Transformational a owl:NamedIndividual ;
+	rdfs:label "Transformational"@en .
+# 
+# https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser
+
+<https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> a owl:NamedIndividual ;
+	rdfs:comment <https://www.heppnetz.de/ontologies/goodrelations/v1.html#Enduser> .
+# 
+
+_:genid31 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid32 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid33 <http://ainf.aau.at/ontodebug#axiom> "Project EquivalentTo (ProjName some Literal) and (ProjNumber some positiveInteger) and (ProjID exactly 1 positiveInteger)"^^xsd:string ;
+	<http://ainf.aau.at/ontodebug#type> "true"^^xsd:boolean .
+
+_:genid34 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid35 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid36 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid37 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid38 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid39 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid40 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid41 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+dct:Standard rdfs:label "Standard" ;
+	rdfs:isDefinedBy dct:Standard ;
+	:definition "A reference point against which other things can be evaluated or compared." .
+# 
+
+dct:abstract skos:definition "summary of the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+	rdfs:label "abstract" ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+# 
+
+dct:description rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	skos:definition "account of the resource" ;
+	rdfs:label "description" .
+# 
+
+dct:issued cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
+	skos:definition "date of formal issuance of the resource" ;
+	rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "issued" .
+# 
+
+dct:modified rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+	rdfs:label "modified" ;
+	skos:definition "date on which the resource was most recently revised" .
+# 
+
+:ACL rdfs:label "ACL" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid42 a owl:AllDisjointClasses ;
+	owl:members _:genid53 .
+
+_:genid53 a rdf:List ;
+	rdf:first :ACL ;
+	rdf:rest _:genid52 .
+
+_:genid52 a rdf:List ;
+	rdf:first :AWS ;
+	rdf:rest _:genid51 .
+
+_:genid51 a rdf:List ;
+	rdf:first :Azure ;
+	rdf:rest _:genid50 .
+
+_:genid50 a rdf:List ;
+	rdf:first :CCS ;
+	rdf:rest _:genid49 .
+
+_:genid49 a rdf:List ;
+	rdf:first :DPO ;
+	rdf:rest _:genid48 .
+
+_:genid48 a rdf:List ;
+	rdf:first :ECS ;
+	rdf:rest _:genid47 .
+
+_:genid47 a rdf:List ;
+	rdf:first :GCP ;
+	rdf:rest _:genid46 .
+
+_:genid46 a rdf:List ;
+	rdf:first :IAS ;
+	rdf:rest _:genid45 .
+
+_:genid45 a rdf:List ;
+	rdf:first :IRS ;
+	rdf:rest _:genid44 .
+
+_:genid44 a rdf:List ;
+	rdf:first :OU ;
+	rdf:rest _:genid43 .
+
+_:genid43 a rdf:List ;
+	rdf:first :RedHatCloud ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid54 a owl:AllDisjointClasses ;
+	owl:members _:genid60 .
+
+_:genid60 a rdf:List ;
+	rdf:first :BusinessClassificationScheme ;
+	rdf:rest _:genid59 .
+
+_:genid59 a rdf:List ;
+	rdf:first :CommonFunctionVocabularyAndKeyword ;
+	rdf:rest _:genid58 .
+
+_:genid58 a rdf:List ;
+	rdf:first :CoreAgencyFunction ;
+	rdf:rest _:genid57 .
+
+_:genid57 a rdf:List ;
+	rdf:first :CoreBusinessFunction ;
+	rdf:rest _:genid56 .
+
+_:genid56 a rdf:List ;
+	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/MaturityLevel> ;
+	rdf:rest _:genid55 .
+
+_:genid55 a rdf:List ;
+	rdf:first <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Module> ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

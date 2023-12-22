@@ -1,0 +1,272 @@
+### Classes
+Repository    a repository constsis of (domain: catalog; Range: Catalog) at least one BusinessObjectCatalog some catalog  
+Catalog
+	LibraryCatalog equevalent to BusinessObjectCatalog
+	ContentCatalog
+	RecordsCatalog
+	ContentObjectCatalog
+
+TransactionManagementComponent
+StorageManagementComponent
+ClassificationComponent
+GorvernanceComponent
+ControlComponent
+TransformationComponent
+IndexingComponent
+
+### Architecture Design Domain
+Methods/Functions ( from Functioanl Requirements) Postefix: Method or alt:Function
+ComponentPattern
+Access, Administration Archive Audit Classify Collect Control Dispose eDiscover Hold Load Manage Protect Privacy Query Record Replicate Retain Search Secure Store Transfer
+ReferentialIntegrity TransactionSupport TwoPhaseCommitFunction
+
+## Non-functional requirements
+ServiceQuality ( from Non-Functioanl Requirements)
+
+NFRE.Availability
+Backup
+DisasterRecovery
+DynamicScale
+Elasticity
+HighAvailability
+LoadbBalacing
+Recovery
+Resiliency
+Restore
+TransactionSupport 
+TwoPhaseCommit
+Scale
+ReferentialIntegrity 
+ServiceQuality
+ServiceLevelAgreement
+	Bronze
+	Silber
+	Gold
+	Platinum
+	Archive
+
+
+
+### Solutions
+Solutionpattern
+ArchiveSolution ECMSolution eDiscoverySolution RIMSolution InformationGovernanceSolution
+
+## ImplementationDomain
+ImplementationPattern
+InformationManagement
+	Analytics
+		AI
+		Machinelearning
+	BusinessIntelligence
+	BusinessIntelligenceManagement
+    InformationRetrieval 
+EnterpriseContentManagement
+	ContentManagement
+		MetadataManagement
+		RepositoryManagement
+		SearchAndRetrievalManagement
+		TransactionManagement
+	ArchiveManagement
+	CaseManagement
+ 	DocumentManagement
+	RecordsManagement
+	eDiscoveryManagement
+	
+## SystemDomain
+System
+	SystemPattern (System postfix)
+	Archive
+	CaseManagement
+ 	DocumentManagement
+	RecordsManagement
+	eDiscoveryManagement
+	Communication
+	EnterpriseContentManagement
+	InformationRetrieval
+	Network
+	RDBM
+	Rendering
+	Storage
+	Transfer
+
+## ServicesDomain
+ServicePattern
+
+ServiceQuality ( from Non-Functioanl Requirements)
+	arc:Availability
+	arc:Backup
+	arc:DisasterRecovery
+	arc:DynamicScale
+	arc:Elasticity
+	arc:HighAvailability
+	arc:LoadbBalacing
+	arc:Recovery
+	arc:Resiliency
+	arc:Restore
+	arc:Scale
+ReferentialIntegrity TransactionSupport TwoPhaseCommit
+ServiceQuality
+ServiceLevelAgreement
+	Bronze
+	Silber
+	Gold
+	Platinum
+	Archive
+
+## IG core services 
+LegalCaseManagementService
+DocumentManagementService
+RecordsManagementService
+	ClassifyService
+	DisposeService
+	eDiscoverService
+	HoldService
+	ProtectService
+	PrivacyService
+	ManagedRecordService
+	RetainService
+eDiscoveryService
+	ServerDiscoveryService
+			DataDiscoveryService
+				DataDiscoveryRequest
+				DataDiscoveryResult	
+ContentManagementService
+	AccessService
+	AdministerService	
+	ArchiveService
+	AuditService
+	CollectService
+	ControlService
+	LoadService
+	ManageService
+	QueryService
+	SearchService
+	SecureService
+	StoreService
+	TransferService
+InformationRetrievalService
+DataService
+	DatabaseFunction
+	DatabaseOperation
+	DataManagementSupervision
+RenderingService
+StorageService
+TransferService
+UtilityService
+	DataType
+     ControlType
+
+## PlatformDomain
+CloudComputingPattern
+	CloudApplicationArchitecturePattern
+		CloudApplicationComponent
+			BatchProcessingComponent
+			DataAbstractor
+			DataAccessComponent
+			IdempotentProcessor
+			Multi-ComponentImage
+			ProcessingComponent
+			StatefulComponent
+			Timeout-BasedMessageProcessor
+			Transaction-BasedProcessor
+			UserInterfaceComponent
+		CloudIntegration
+			ApplicationComponentProxy
+			CompliantDataReplication
+			Integrationprovider
+			MessageMover
+			RestrictedDataAccessComponent
+		FundamentalCloudArchitecture
+			DistributedApplication
+			LooseCoupling
+		Multi-Tenancy
+			LooseCoupling
+			SharedComponent
+			Tenant-IsolatedComponent
+	CloudApplicationManagementPattern
+		ManagementComponent
+			ElasticityManager
+			ElasticLoadBalancer
+			ElasticQueue
+			ManagedConfiguration
+			ProviderAdapter
+			Watchdog
+		ManagementProcess
+			ElasticityManagementProcess
+			FeatureFlagManagementProcess
+			ResiliencyManagementProcess
+			StandbyPoolingProcess
+			UpdateTransitionProcess
+	CloudComputingFundametal
+		ApplicationWorkload
+			ContinuouslyChangingWorkload
+			Once-in-a-LifetimeWorkload
+			PeriodicWorkload
+			StaticWorkload
+			UnpredictableWorkload
+		CloudDeploymentModel
+			CommunityCloud
+			HybridCloud
+			PrivateCloud
+			PublicCloud
+		CloudServiceModel
+			Infrastructure-as-a-Service
+			Platform-as-a-Service
+			Software-as-a-Service
+	CloudOfferingPattern
+		CloudEnvironment
+			ElasticInfrastructure
+			ElasticPlatform
+			EnvironmentBasedAvailability
+			Node-Based-Availability
+		CloudPlatformService			
+		CommuicationOffering
+			VirtualNetworking
+		ProcessingOffering
+			ExecutionEnvironment
+			Hypervisor
+			MapReduce
+		StorageOffering
+			BlobStorage
+				
+			BlockStorage
+			EventualConsistency
+			KeyValueStore
+			RelationalDataBase
+			StorageSystem
+			StrinctConsistency
+	CompositeCloudApplicationPattern
+		HybridCloudApplication
+			HybridApplicationFunction
+			HybridBackend
+			HybridBackup
+			HybridData
+			HybridProcessing
+			HybridUserInterface
+		NativeCloudApplication
+			ContentDistributionNetwork
+			Three-TierCloudApplication
+			Two-TierCloudApplication
+	KubernetesPattern		
+AmazonCloud
+GoogleCloud
+IBMCloud
+MicrosoftCloud
+RadhatCloud
+###############################
+## VendorsDomain
+Alfresco
+IBM
+Redhat
+	Openshift
+Microsoft 
+	Azure
+Amazon
+	AWS 
+Google
+	GCP
+Oracle
+Opentext
+CloudNativeFoundationComputingFoundation
+	CNCF
+	Kubernetes

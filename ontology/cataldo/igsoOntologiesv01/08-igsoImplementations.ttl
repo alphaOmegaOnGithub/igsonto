@@ -1,0 +1,231 @@
+@prefix : <http://www.example.org/cm/igso/2023/igso-impl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+@prefix igso-ml: <http://www.example.org/cm/igso/2023/igso-ml#> .
+@prefix owlTime: <http://www.w3.org/2006/time#> .
+@prefix cmns-cls: <https://www.omg.org/spec/Commons/Classifiers/> .
+@prefix igso-arc: <http://www.example.org/cm/igso/2023/igso-arc#> .
+@prefix igso-ass: <http://www.example.org/cm/igso/2023/igso-ass#> .
+@prefix igso-ddy: <http://www.example.org/cm/igso/2023/igso-ddy#> .
+@prefix igso-jur: <http://www.example.org/cm/igso/2023/igso-jur#> .
+@prefix igso-org: <http://www.example.org/cm/igso/2023/igso-org#> .
+@prefix igso-plt: <http://www.example.org/cm/igso/2023/igso-plt#> .
+@prefix igso-req: <http://www.example.org/cm/igso/2023/igso-req#> .
+@prefix igso-svc: <http://www.example.org/cm/igso/2023/igso-svc#> .
+@prefix igso-sys: <http://www.example.org/cm/igso/2023/igso-sys#> .
+@prefix igso-data: <http://www.example.org/cm/igso/2023/igso-data#> .
+@prefix igso-vend: <http://www.example.org/cm/igso/2023/igso-vend#> .
+
+<http://www.example.org/cm/igso/2023/igso-impl#> a owl:Ontology ;
+	owl:imports <http://www.example.org/cm/igso/2023/igso-arc#> ;
+	dct:created "2010-05-28"^^xsd:date ;
+	dct:creator _:genid1 ;
+	dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
+	rdfs:label "Core igso organization ontology"@en ;
+	rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
+	owl:versionInfo "0.8" .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#ContentManagementComponent
+
+igso-arc:ContentManagementComponent a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-arc#InformationManagement
+
+igso-arc:InformationManagement a owl:Class ;
+	rdfs:subClassOf :ImplementationDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#AI
+
+:AI a owl:Class ;
+	rdfs:subClassOf :AnalyticsImp ;
+	owl:disjointWith :Machinelearning .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#AnalyticsImp
+
+:AnalyticsImp a owl:Class ;
+	rdfs:subClassOf igso-arc:InformationManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#ArchiveManagement
+
+:ArchiveManagement a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#BusinessIntelligence
+
+:BusinessIntelligence a owl:Class ;
+	rdfs:subClassOf igso-arc:InformationManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#BusinessIntelligenceManagement
+
+:BusinessIntelligenceManagement a owl:Class ;
+	rdfs:subClassOf igso-arc:InformationManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#CaseManagement
+
+:CaseManagement a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#DocumentManagement
+
+:DocumentManagement a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#EnterpriseContentManagement
+
+:EnterpriseContentManagement a owl:Class ;
+	rdfs:subClassOf :ImplementationDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#ImplementationDomain
+
+:ImplementationDomain a owl:Class .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#ImplementationPattern
+
+:ImplementationPattern a owl:Class ;
+	rdfs:subClassOf :ImplementationDomain .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#InformationRetrieval
+
+:InformationRetrieval a owl:Class ;
+	rdfs:subClassOf igso-arc:InformationManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#Machinelearning
+
+:Machinelearning a owl:Class ;
+	rdfs:subClassOf :AnalyticsImp .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#MetadataManagement
+
+:MetadataManagement a owl:Class ;
+	rdfs:subClassOf igso-arc:ContentManagementComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#RecordsManagement
+
+:RecordsManagement a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#RepositoryManagement
+
+:RepositoryManagement a owl:Class ;
+	rdfs:subClassOf igso-arc:ContentManagementComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#SearchAndRetrievalManagement
+
+:SearchAndRetrievalManagement a owl:Class ;
+	rdfs:subClassOf igso-arc:ContentManagementComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#TransactionManagement
+
+:TransactionManagement a owl:Class ;
+	rdfs:subClassOf igso-arc:ContentManagementComponent .
+# 
+# http://www.example.org/cm/igso/2023/igso-impl#eDiscoveryManagement
+
+:eDiscoveryManagement a owl:Class ;
+	rdfs:subClassOf :EnterpriseContentManagement .
+# 
+
+_:genid2 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+
+_:genid3 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
+	foaf:name "Cataldo Mega" .
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+
+_:genid4 a owl:AllDisjointClasses ;
+	owl:members _:genid10 .
+
+_:genid10 a rdf:List ;
+	rdf:first igso-arc:ContentManagementComponent ;
+	rdf:rest _:genid9 .
+
+_:genid9 a rdf:List ;
+	rdf:first :ArchiveManagement ;
+	rdf:rest _:genid8 .
+
+_:genid8 a rdf:List ;
+	rdf:first :CaseManagement ;
+	rdf:rest _:genid7 .
+
+_:genid7 a rdf:List ;
+	rdf:first :DocumentManagement ;
+	rdf:rest _:genid6 .
+
+_:genid6 a rdf:List ;
+	rdf:first :RecordsManagement ;
+	rdf:rest _:genid5 .
+
+_:genid5 a rdf:List ;
+	rdf:first :eDiscoveryManagement ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid11 a owl:AllDisjointClasses ;
+	owl:members _:genid14 .
+
+_:genid14 a rdf:List ;
+	rdf:first igso-arc:InformationManagement ;
+	rdf:rest _:genid13 .
+
+_:genid13 a rdf:List ;
+	rdf:first :EnterpriseContentManagement ;
+	rdf:rest _:genid12 .
+
+_:genid12 a rdf:List ;
+	rdf:first :ImplementationPattern ;
+	rdf:rest rdf:nil .
+# 
+
+_:genid15 a owl:AllDisjointClasses ;
+	owl:members _:genid19 .
+
+_:genid19 a rdf:List ;
+	rdf:first :MetadataManagement ;
+	rdf:rest _:genid18 .
+
+_:genid18 a rdf:List ;
+	rdf:first :RepositoryManagement ;
+	rdf:rest _:genid17 .
+
+_:genid17 a rdf:List ;
+	rdf:first :SearchAndRetrievalManagement ;
+	rdf:rest _:genid16 .
+
+_:genid16 a rdf:List ;
+	rdf:first :TransactionManagement ;
+	rdf:rest rdf:nil .
+# 
+# Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
