@@ -1237,6 +1237,12 @@ igso-ddy:validateProvenance a owl:ObjectProperty .
 
 :processingAgreementBy a owl:ObjectProperty .
 # 
+# http://www.example.org/cm/igso/2023/igso-jur#providesPlatformService
+
+:providesPlatformService a owl:ObjectProperty ;
+	rdfs:subPropertyOf igso-ddy:provides ;
+	rdfs:comment "Bereitstellung der DV-Technik Server, Netzzugänge, Sicherheitsinfrastruktur"@de .
+# 
 # http://www.example.org/cm/igso/2023/igso-jur#regulates
 
 :regulates a owl:ObjectProperty .
@@ -3255,6 +3261,15 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 :Alter a owl:NamedIndividual , :DataOperation ;
 	rdfs:label "Alter" .
 # 
+# http://www.example.org/cm/igso/2023/igso-jur#BW.sLändle.Behörden.ServicePortal
+
+:BW.sLändle.Behörden.ServicePortal a owl:NamedIndividual , :DataController ;
+	rdfs:comment """Datenschutzerklärung für den Onlineantrag zur KFZ-Abmeldung.
+Das Land Baden-Württemberg, vertreten durch das Ministerium des Inneren, für Digitalisierung und Kommunen (Innenministerium) und die für die Bearbeitung Ihres Antrags zuständige Stelle (zuständige Stelle) arbeiten zusammen, um die nutzerfreundliche Stellung von Online-Anträgen zu ermöglichen.
+Das Innenministerium stellt der zuständigen Stelle den Online-Antrag „iKfz“ zur Nachnutzung bereit, um elektronische Verwaltungsleistungen rund um die Fahrzeugzulassung zentral anbieten können.""" ;
+	rdfs:isDefinedBy <https://www.behoerden-serviceportal.de/onlineantraege/onlineantrag/datenschutzerklaerung?processInstanceId=uN3D-0IE8vA4ITnoRPMGfg> , <https://www.ozg-hub.de/datenschutz> ;
+	rdfs:label "Behördenserviceportal" .
+# 
 # http://www.example.org/cm/igso/2023/igso-jur#Buy
 
 :Buy a owl:NamedIndividual , :EconomicActivity ;
@@ -3269,6 +3284,12 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 
 :Categorize a owl:NamedIndividual ;
 	rdfs:label "Categorize" .
+# 
+# http://www.example.org/cm/igso/2023/igso-jur#Civilent.GmbH
+
+:Civilent.GmbH a owl:NamedIndividual , :SubProcessor ;
+	rdfs:comment "Civillent GmbH für die Bereitstellung der DV-Technik (Server, Netzzugänge, Sicherheitsinfrastruktur)" ;
+	rdfs:label "Civilent.GMBH" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#Classify
 
@@ -3333,6 +3354,12 @@ igso-req:PersonalDataProcessing rdfs:comment "PersonalDataProcessing" .
 
 :Hold a owl:NamedIndividual , :LegalActivity ;
 	rdfs:label "Hold" .
+# 
+# http://www.example.org/cm/igso/2023/igso-jur#Komm.One
+
+:Komm.One a owl:NamedIndividual , :DataProcesssor ;
+	rdfs:comment "Komm.One als Auftragsverarbeiter i.S.v. Art. 28 DSGVO der Kfz-Zulassungsstelle Tübingen." ;
+	rdfs:label "Komm.One" .
 # 
 # http://www.example.org/cm/igso/2023/igso-jur#LegalCase
 
@@ -3802,8 +3829,8 @@ _:genid99 foaf:mbox "cataldo.mega@ipvs.uni-stuttgart.de" ;
 dctype:Collection rdfs:label "Collection" .
 # 
 
-dct:abstract cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
-	skos:definition "summary of the resource" ;
+dct:abstract skos:definition "summary of the resource" ;
+	cmns-av:usageNote "This annotation is typically used to describe an artifact such as a controlled vocabulary, ontology, or other similar resource." ;
 	rdfs:label "abstract" ;
 	rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 # 
